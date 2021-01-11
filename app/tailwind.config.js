@@ -1,5 +1,9 @@
 module.exports = {
-  purge: [],
+  purge: [
+    "./src/components/**/*.vue", 
+    "./src/plugins/**/*.ts",
+    "./src/views/**/*.vue"
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {

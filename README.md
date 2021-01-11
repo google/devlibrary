@@ -10,4 +10,18 @@
 
 ### Dev Server
 
-In the `app` diretory run `npm run serve`
+In the `app` diretory:
+
+```
+npm run serve
+```
+
+## Deployment
+
+### Hosting
+
+In the `app` directory:
+
+```
+npm run build && npm run deploy
+```
