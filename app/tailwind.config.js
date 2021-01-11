@@ -1,8 +1,9 @@
 module.exports = {
   purge: [
+    "./src/**/*.vue",
     "./src/components/**/*.vue", 
-    "./src/plugins/**/*.ts",
-    "./src/views/**/*.vue"
+    "./src/views/**/*.vue",
+    "./src/plugins/**/*.ts"
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
