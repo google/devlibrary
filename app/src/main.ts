@@ -6,6 +6,9 @@ import store from './store'
 // Tailwind CSS
 import '@/assets/css/tailwind.css'
 
+// Fonts
+import '@/assets/css/fonts.css'
+
 Vue.config.productionTip = false
 
 new Vue({
