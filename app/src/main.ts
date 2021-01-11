@@ -9,6 +9,9 @@ import '@/assets/css/tailwind.css'
 // Fonts
 import '@/assets/css/fonts.css'
 
+// Icons
+import '@/plugins/icons';
+
 Vue.config.productionTip = false
 
 new Vue({
