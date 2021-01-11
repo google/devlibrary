@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row items-center gap-8 px-8 py-4 bg-gray-50 shadow-md">
+  <div class="flex flex-row items-center gap-8 px-8 py-4 bg-white shadow-md">
     <span class="inline-flex flex-row items-center font-display text-xl">
       <font-awesome-icon icon="code" size="md" class="mr-2" />
       ugc.dev
