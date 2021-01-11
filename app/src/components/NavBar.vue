@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row items-center gap-8 px-8 py-4 bg-gray-100 shadow-md">
+  <div class="flex flex-row items-center gap-8 px-8 py-4 bg-gray-50 shadow-md">
     <span class="inline-flex flex-row items-center font-display text-xl">
       <font-awesome-icon icon="code" size="md" class="mr-2" />
       ugc.dev
@@ -7,6 +7,12 @@
     <a class="cursor-pointer hover:underline">Home</a>
     <a class="cursor-pointer hover:underline">About</a>
     <a class="cursor-pointer hover:underline">Products</a>
+    <span class="flex-grow"><!-- spacer --></span>
+
+    <div class="relative">
+      <font-awesome-icon icon="search" size="sm" class="text-gray-400 absolute top-2 left-2" />
+      <input type="text" class="bg-gray-100 text-gray-500 pl-8 pr-1 py-1 shadow-inner rounded" placeholder="Search" />
+    </div>
   </div>
 </template>
 

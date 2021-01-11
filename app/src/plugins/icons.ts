@@ -6,7 +6,8 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { 
   faStar, 
-  faCode 
+  faCode,
+  faSearch
 } from '@fortawesome/free-solid-svg-icons'
 import { 
   faGithub 
@@ -15,6 +16,7 @@ import {
 library.add(
   faStar, 
   faCode,
+  faSearch,
 
   faGithub
 );
