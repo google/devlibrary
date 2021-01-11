@@ -9,14 +9,14 @@
       <div class="flex flex-row items-baseline">
         <span class="flex-grow text-lg">flank</span>
         <span class="text-sm">123</span>
-        <font-awesome-icon icon="star" size="sm" class="ml-1" />
+        <font-awesome-icon icon="star" size="sm" class="ml-1 text-yellow-400" />
       </div>
       <div class="pt-1 pb-4">
         One line description...
       </div>
-      <div class="flex flex-row text-sm">
-        <span class="flex-grow">updated 8 hours ago</span>
-        <span>LEARN MORE</span>
+      <div class="flex flex-row">
+        <span class="flex-grow text-xs">updated 8 hours ago</span>
+        <span class="text-sm uppercase cursor-pointer hover:underline">Learn More</span>
       </div>
     </div>
   </div>

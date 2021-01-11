@@ -18,4 +18,7 @@ export default class App extends Vue {}
 </script>
 
 <style lang="postcss">
+body {
+  @apply text-gray-800;
+}
 </style>

@@ -11,7 +11,18 @@ module.exports = {
       sans: ['Roboto', 'ui-sans-serif', 'system-ui'],
       display: ['Google Sans', 'Roboto', 'ui-sans-serif', 'system-ui']
     },
-    extend: {},
+    extend: {
+      colors: {
+        firebase: {
+          accent: "#FFCA28",
+          bg: "#1A73E8"
+        },
+        ml: {
+          accent: "#4285F4",
+          bg: "#FFFFFF"
+        }
+      }
+    },
   },
   variants: {
     extend: {},
