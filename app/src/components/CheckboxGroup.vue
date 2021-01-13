@@ -8,7 +8,6 @@
       <input
         type="checkbox"
         :id="prefixedValue(value)"
-        :name="prefixedValue(value)"
       />
       <label :for="prefixedValue(value)" class="ml-2 text-sm">{{
         keys[i]

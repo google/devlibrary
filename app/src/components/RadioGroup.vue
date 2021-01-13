@@ -8,7 +8,7 @@
       <input
         type="radio"
         :id="prefixedValue(value)"
-        :name="prefixedValue(value)"
+        :name="prefix"
         :value="value"
       />
       <label :for="prefixedValue(value)" class="ml-2 text-sm">{{
