@@ -1,22 +1,20 @@
-import Vue from 'vue';
+import Vue from "vue";
 
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-Vue.component('font-awesome-icon', FontAwesomeIcon);
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+Vue.component("font-awesome-icon", FontAwesomeIcon);
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { 
-  faStar, 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faStar,
   faCode,
   faCodeBranch,
   faSearch,
-  faExternalLinkAlt
-} from '@fortawesome/free-solid-svg-icons'
-import { 
-  faGithub 
-} from '@fortawesome/free-brands-svg-icons'
+  faExternalLinkAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
-  faStar, 
+  faStar,
   faCode,
   faCodeBranch,
   faSearch,
@@ -24,4 +22,3 @@ library.add(
 
   faGithub
 );
-

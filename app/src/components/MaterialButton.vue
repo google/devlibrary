@@ -1,13 +1,14 @@
 <template>
   <button
-    :class="type" 
-    class="cursor-pointer rounded-sm uppercase text-sm p-3 shadow mr-2">
+    :class="type"
+    class="cursor-pointer rounded-sm uppercase text-sm p-3 shadow mr-2"
+  >
     <slot></slot>
   </button>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class MaterialButton extends Vue {
@@ -31,5 +32,4 @@ export default class MaterialButton extends Vue {
 .secondary:hover {
   @apply bg-gray-100;
 }
-
 </style>
