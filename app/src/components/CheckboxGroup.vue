@@ -5,10 +5,7 @@
       :key="value"
       class="flex flex-row items-center"
     >
-      <input
-        type="checkbox"
-        :id="prefixedValue(value)"
-      />
+      <input type="checkbox" :id="prefixedValue(value)" />
       <label :for="prefixedValue(value)" class="ml-2 text-sm">{{
         keys[i]
       }}</label>
