@@ -4,9 +4,9 @@
       <font-awesome-icon icon="code" size="md" class="mr-2" />
       ugc.dev
     </span>
-    <a class="cursor-pointer hover:underline">Home</a>
-    <a class="cursor-pointer hover:underline">About</a>
-    <a class="cursor-pointer hover:underline">Products</a>
+    <router-link to="/" class="cursor-pointer hover:underline">Home</router-link>
+    <router-link to="/" class="cursor-pointer hover:underline">About</router-link>
+    <router-link to="/" class="cursor-pointer hover:underline">Products</router-link>
     <span class="flex-grow"><!-- spacer --></span>
 
     <div class="relative">
