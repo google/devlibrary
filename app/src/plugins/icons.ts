@@ -7,7 +7,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { 
   faStar, 
   faCode,
-  faSearch
+  faCodeBranch,
+  faSearch,
+  faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons'
 import { 
   faGithub 
@@ -16,7 +18,9 @@ import {
 library.add(
   faStar, 
   faCode,
+  faCodeBranch,
   faSearch,
+  faExternalLinkAlt,
 
   faGithub
 );

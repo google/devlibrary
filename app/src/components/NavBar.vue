@@ -5,8 +5,8 @@
       ugc.dev
     </span>
     <router-link to="/" class="cursor-pointer hover:underline">Home</router-link>
-    <router-link to="/" class="cursor-pointer hover:underline">About</router-link>
-    <router-link to="/" class="cursor-pointer hover:underline">Products</router-link>
+    <router-link to="/about" class="cursor-pointer hover:underline">About</router-link>
+    <router-link to="/products/firebase" class="cursor-pointer hover:underline">Products</router-link>
     <span class="flex-grow"><!-- spacer --></span>
 
     <div class="relative">

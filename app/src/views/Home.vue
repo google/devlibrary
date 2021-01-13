@@ -10,8 +10,8 @@
         </div>
 
         <div class="mt-8">
-          <button class="cursor-pointer rounded-sm uppercase text-sm p-3 shadow bg-blue-500 hover:bg-blue-600 text-white mr-2">Explore</button>
-          <button class="cursor-pointer rounded-sm uppercase text-sm p-3 shadow bg-white hover:bg-gray-100">Submit</button>
+          <MaterialButton type="primary">Explore</MaterialButton>
+          <MaterialButton type="secondary">Submit</MaterialButton>
         </div>
       </div>
 
@@ -25,12 +25,12 @@
     <div class="grid grid-cols-12 gap-4 pt-4 py-20">
 
       <div class="flex flex-row-reverse col-start-1 col-span-1">
-        <div class="mt-4 w-12 h-12 p-1 border-firebase-accent border-4 rounded-full">
+        <div class="mt-8 w-12 h-12 p-1 border-firebase-accent border-4 rounded-full">
           <img src="@/assets/logos/firebase.png" />
         </div>
       </div>
 
-      <div class="mt-4 col-span-4">
+      <div class="mt-8 col-span-4">
         <p class="font-display text-2xl">Firebase</p>
         <p class="text-gray-500">Trending Now</p>
       </div>
@@ -41,12 +41,12 @@
       </div>
 
       <div class="flex flex-row-reverse col-start-1 col-span-1">
-        <div class="mt-4 w-12 h-12 p-1 border-ml-accent border-4 rounded-full">
+        <div class="mt-8 w-12 h-12 p-1 border-ml-accent border-4 rounded-full">
           <img src="@/assets/logos/ml.png" />
         </div>
       </div>
 
-      <div class="mt-4 col-span-4">
+      <div class="mt-8 col-span-4">
         <p class="font-display text-2xl">Machine Learning</p>
         <p class="text-gray-500">Trending Now</p>
       </div>
@@ -62,10 +62,12 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import MaterialButton from "@/components/MaterialButton.vue";
 import SmallProjectCard from "@/components/SmallProjectCard.vue";
 
 @Component({
   components: {
+    MaterialButton,
     SmallProjectCard
   },
 })
