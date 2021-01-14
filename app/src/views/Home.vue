@@ -47,6 +47,13 @@
         <SmallProjectCard />
         <SmallProjectCard />
       </div>
+      <div class="col-start-2 col-span-10 flex flex-row-reverse">
+        <router-link
+          to="/products/firebase"
+          class="uppercase cursor-pointer hover-underline"
+          >All Firebase Projects</router-link
+        >
+      </div>
 
       <div class="flex flex-row-reverse col-start-1 col-span-1">
         <div class="mt-8 w-12 h-12 p-1 border-ml-accent border-4 rounded-full">
@@ -62,6 +69,13 @@
       <div class="col-start-2 col-span-10 grid grid-cols-2 gap-4">
         <SmallProjectCard />
         <SmallProjectCard />
+      </div>
+      <div class="col-start-2 col-span-10 flex flex-row-reverse">
+        <router-link
+          to="/products/firebase"
+          class="uppercase cursor-pointer hover-underline"
+          >All ML Projects</router-link
+        >
       </div>
     </div>
   </div>

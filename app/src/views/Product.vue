@@ -58,7 +58,7 @@
     <!-- Body -->
     <div class="grid grid-cols-10 gap-4 mb-20">
       <div class="col-start-2 col-span-8">
-        <p class="font-display text-2xl mt-8">Open Source</p>
+        <h2 class="font-display text-2xl mt-8">Open Source</h2>
 
         <div class="grid grid-cols-2 gap-4">
           <LargeProjectCard class="mt-4" />
@@ -68,7 +68,7 @@
           <LargeProjectCard class="mt-4" />
         </div>
 
-        <p class="font-display text-2xl mt-8">Blog Posts</p>
+        <h2 class="font-display text-2xl mt-8">Blog Posts</h2>
 
         <div class="grid grid-cols-2 gap-4">
           <LargeProjectCard class="mt-4" />

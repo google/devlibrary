@@ -13,8 +13,10 @@
       <div class="pt-1 pb-4">One line description...</div>
       <div class="flex flex-row items-baseline">
         <span class="flex-grow text-xs">updated 8 hours ago</span>
-        <span class="text-sm uppercase cursor-pointer hover:underline"
-          >Learn More</span
+        <router-link
+          to="/projects/firebaseui-android"
+          class="text-sm uppercase cursor-pointer hover:underline"
+          >Learn More</router-link
         >
       </div>
     </div>

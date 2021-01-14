@@ -22,8 +22,10 @@
         </div>
         <div class="flex flex-row mt-6 text-sm">
           <span class="flex-grow text-gray-500">updated 8 days ago</span>
-          <span class="uppercase cursor-pointer hover:underline"
-            >Learn More</span
+          <router-link
+            to="/projects/firebaseui-android"
+            class="uppercase cursor-pointer hover:underline"
+            >Learn More</router-link
           >
         </div>
       </div>
