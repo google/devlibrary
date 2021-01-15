@@ -6,13 +6,17 @@
 
     <div class="flex-grow py-2 px-3">
       <div class="flex flex-row items-baseline">
-        <span class="flex-grow text-lg">flank</span>
-        <span class="text-sm">123</span>
+        <span class="flex-grow text-lg">{{ project.metadata.repo }}</span>
+        <span class="text-sm">{{ project.stats.stars }}</span>
         <font-awesome-icon icon="star" size="sm" class="ml-1 text-yellow-400" />
       </div>
-      <div class="pt-1 pb-4">One line description...</div>
+      <!-- TODO: This cutoff behavior is bad and looks ugly -->
+      <div class="pt-1 pb-4 overflow-ellipsis whitespace-nowrap">
+        {{ project.metadata.shortDescription }}
+      </div>
       <div class="flex flex-row items-baseline">
         <span class="flex-grow text-xs">updated 8 hours ago</span>
+        <!-- TODO: Link to the real project page -->
         <router-link
           to="/projects/firebaseui-android"
           class="text-sm uppercase cursor-pointer hover:underline"
@@ -24,10 +28,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { GitHubProject } from "@/model/project";
+import { Component, Vue, Prop } from "vue-property-decorator";
 
 @Component
-export default class SmallProjectCard extends Vue {}
+export default class SmallProjectCard extends Vue {
+  @Prop() project!: GitHubProject;
+}
 </script>
 
 <style scoped lang="postcss"></style>

@@ -44,8 +44,11 @@
       </div>
 
       <div class="col-start-2 col-span-10 grid grid-cols-2 gap-4">
-        <SmallProjectCard />
-        <SmallProjectCard />
+        <SmallProjectCard
+          v-for="project in projects"
+          :key="project.name"
+          :project="project"
+        />
       </div>
       <div class="col-start-2 col-span-10 flex flex-row-reverse">
         <router-link
@@ -67,8 +70,11 @@
       </div>
 
       <div class="col-start-2 col-span-10 grid grid-cols-2 gap-4">
-        <SmallProjectCard />
-        <SmallProjectCard />
+        <SmallProjectCard
+          v-for="project in projects"
+          :key="project.name"
+          :project="project"
+        />
       </div>
       <div class="col-start-2 col-span-10 flex flex-row-reverse">
         <router-link
@@ -83,8 +89,12 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import { getModule } from "vuex-module-decorators";
+
 import MaterialButton from "@/components/MaterialButton.vue";
 import SmallProjectCard from "@/components/SmallProjectCard.vue";
+
+import ProjectsModule from "@/store/project";
 
 @Component({
   components: {
@@ -92,7 +102,18 @@ import SmallProjectCard from "@/components/SmallProjectCard.vue";
     SmallProjectCard,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  private projectsModule = getModule(ProjectsModule, this.$store);
+
+  mounted() {
+    // Tell the store to load projects
+    this.projectsModule.fetchProjects();
+  }
+
+  get projects() {
+    return this.projectsModule.gitHubProjects;
+  }
+}
 </script>
 
 <style scoped lang="postcss"></style>

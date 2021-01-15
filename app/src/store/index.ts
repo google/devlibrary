@@ -3,9 +3,11 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+import ProjectModule from "./project";
+
 export default new Vuex.Store({
   state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  modules: {
+    project: ProjectModule,
+  },
 });
