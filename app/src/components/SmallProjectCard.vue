@@ -1,26 +1,34 @@
 <template>
   <div class="flex flex-row rounded overflow-hidden shadow">
+    <!-- GitHub Sidebar -->
     <div class="px-2 flex flex-col justify-center text-white bg-gray-900">
       <font-awesome-icon :icon="['fab', 'github']" size="lg" />
     </div>
 
-    <div class="flex-grow py-2 px-3">
-      <div class="flex flex-row items-baseline">
-        <span class="flex-grow text-lg">{{ project.metadata.repo }}</span>
-        <span class="text-sm">{{ project.stats.stars }}</span>
-        <font-awesome-icon icon="star" size="sm" class="ml-1 text-yellow-400" />
+    <div class="pt-1 flex-grow flex flex-col">
+      <!-- Top Section -->
+      <div class="flex-grow card-top-grid pl-3 pr-2 mb-4">
+        <!-- Title and Description -->
+        <div class="text-base">
+          <div class="font-medium">{{ project.metadata.repo }}</div>
+          <div class="wrap-lines-1">
+            {{ project.metadata.shortDescription }}
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="whitespace-nowrap">
+          <span class="text-sm">{{ project.stats.stars }}</span>
+          <font-awesome-icon icon="star" size="sm" class="ml-1" />
+        </div>
       </div>
-      <!-- TODO: This cutoff behavior is bad and looks ugly -->
-      <div class="pt-1 pb-4 overflow-ellipsis whitespace-nowrap">
-        {{ project.metadata.shortDescription }}
-      </div>
-      <div class="flex flex-row items-baseline">
-        <span class="flex-grow text-xs">updated 8 hours ago</span>
+
+      <!-- Timestamp and Buttons -->
+      <div class="flex flex-row pl-3 items-baseline">
+        <span class="flex-grow text-sm text-gray-500">updated 8 hours ago</span>
         <!-- TODO: Link to the real project page -->
-        <router-link
-          to="/projects/firebaseui-android"
-          class="text-sm uppercase cursor-pointer hover:underline"
-          >Learn More</router-link
+        <router-link to="/projects/firebaseui-android"
+          ><MaterialButton type="text">Learn More</MaterialButton></router-link
         >
       </div>
     </div>
@@ -28,13 +36,33 @@
 </template>
 
 <script lang="ts">
-import { GitHubProject } from "@/model/project";
 import { Component, Vue, Prop } from "vue-property-decorator";
 
-@Component
+import { GitHubProject } from "@/model/project";
+import MaterialButton from "@/components/MaterialButton.vue";
+
+@Component({
+  components: {
+    MaterialButton,
+  },
+})
 export default class SmallProjectCard extends Vue {
   @Prop() project!: GitHubProject;
 }
 </script>
 
-<style scoped lang="postcss"></style>
+<style scoped lang="postcss">
+.card-top-grid {
+  @apply gap-2;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+}
+
+.wrap-lines-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+</style>

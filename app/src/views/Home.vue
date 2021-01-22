@@ -17,7 +17,7 @@
         </div>
 
         <div class="mt-8">
-          <MaterialButton type="primary">Explore</MaterialButton>
+          <MaterialButton type="primary" class="mr-2">Explore</MaterialButton>
           <MaterialButton type="secondary">Submit</MaterialButton>
         </div>
       </div>
@@ -51,10 +51,10 @@
         />
       </div>
       <div class="col-start-2 col-span-10 flex flex-row-reverse">
-        <router-link
-          to="/products/firebase"
-          class="uppercase cursor-pointer hover-underline"
-          >All Firebase Projects</router-link
+        <router-link to="/products/firebase"
+          ><MaterialButton type="text"
+            >All Firebase Projects</MaterialButton
+          ></router-link
         >
       </div>
 
@@ -77,10 +77,10 @@
         />
       </div>
       <div class="col-start-2 col-span-10 flex flex-row-reverse">
-        <router-link
-          to="/products/firebase"
-          class="uppercase cursor-pointer hover-underline"
-          >All ML Projects</router-link
+        <router-link to="/products/ml"
+          ><MaterialButton type="text"
+            >All ML Projects</MaterialButton
+          ></router-link
         >
       </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <button
     :class="type"
-    class="cursor-pointer rounded-sm uppercase text-sm p-3 shadow mr-2"
+    class="cursor-pointer rounded-sm uppercase text-sm px-3 py-2 shadow"
   >
     <slot></slot>
   </button>
@@ -31,5 +31,14 @@ export default class MaterialButton extends Vue {
 
 .secondary:hover {
   @apply bg-gray-100;
+}
+
+.text {
+  @apply text-gray-800 bg-none;
+  @apply shadow-none;
+}
+
+.text:hover {
+  background-color: rgba(17, 24, 39, 0.1);
 }
 </style>

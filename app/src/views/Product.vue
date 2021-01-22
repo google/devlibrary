@@ -61,21 +61,23 @@
         <h2 class="font-display text-2xl mt-8">Open Source</h2>
 
         <div class="grid grid-cols-2 gap-4">
-          <LargeProjectCard class="mt-4" />
-          <LargeProjectCard class="mt-4" />
-
-          <LargeProjectCard class="mt-4" />
-          <LargeProjectCard class="mt-4" />
+          <LargeProjectCard
+            class="mt-4"
+            v-for="project in projects"
+            :key="project.name"
+            :project="project"
+          />
         </div>
 
         <h2 class="font-display text-2xl mt-8">Blog Posts</h2>
 
         <div class="grid grid-cols-2 gap-4">
-          <LargeProjectCard class="mt-4" />
-          <LargeProjectCard class="mt-4" />
-
-          <LargeProjectCard class="mt-4" />
-          <LargeProjectCard class="mt-4" />
+          <LargeProjectCard
+            class="mt-4"
+            v-for="project in projects"
+            :key="project.name"
+            :project="project"
+          />
         </div>
       </div>
     </div>
@@ -84,6 +86,10 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import { getModule } from "vuex-module-decorators";
+
+import ProjectsModule from "@/store/project";
+
 import MaterialButton from "@/components/MaterialButton.vue";
 import LargeProjectCard from "@/components/LargeProjectCard.vue";
 import RadioGroup from "@/components/RadioGroup.vue";
@@ -99,7 +105,18 @@ import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
     HeaderSidebarLayout,
   },
 })
-export default class Product extends Vue {}
+export default class Product extends Vue {
+  private projectsModule = getModule(ProjectsModule, this.$store);
+
+  mounted() {
+    // Tell the store to load projects
+    this.projectsModule.fetchProjects();
+  }
+
+  get projects() {
+    return this.projectsModule.gitHubProjects;
+  }
+}
 </script>
 
 <style scoped lang="postcss"></style>

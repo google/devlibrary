@@ -19,7 +19,8 @@ export default class ProjectModule extends VuexModule {
           repo: "fladle",
           shortDescription:
             "Easily scale your Android Instrumentation Tests across Firebase Test Lab with Flank.",
-          longDescription: "TODO",
+          longDescription:
+            "Fladle is the easiest way to scale your instrumentation tests using Firebase Test Lab. You can easily run many hours of instrumentation tests using hundreds of devices in Test Lab and get the results in just few minutes. Fladle simplifies the configuration necessary to scale your tests using Firebase Test Lab and Flank.",
           content: "README.md",
         },
         stats: {
@@ -32,8 +33,9 @@ export default class ProjectModule extends VuexModule {
           name: "Firebase Quickstarts for Android",
           owner: "firebase",
           repo: "quickstart-android",
-          shortDescription: "Samples to get started with Firebase on Android",
-          longDescription: "TODO",
+          shortDescription: "Samples to get started with Firebase on Android.",
+          longDescription:
+            "A collection of quickstart samples demonstrating the Firebase APIs on Android. Each sample is a ready-to-run app.",
           content: "README.md",
         },
         stats: {

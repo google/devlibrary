@@ -1,36 +1,43 @@
 <template>
-  <div>
-    <div class="rounded shadow-md overflow-hidden">
+  <div class="flex flex-col">
+    <!-- Card -->
+    <div class="flex-grow flex flex-col rounded shadow-md overflow-hidden">
+      <!-- GitHub Header -->
       <div class="bg-gray-900 text-white px-3 py-2">
         <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-2" />
-        <span>GitHub · fladle</span>
+        <span>GitHub · {{ project.metadata.owner }}</span>
       </div>
-      <div class="p-3">
-        <div class="flex flex-row">
-          <span class="text-lg flex-grow">flank</span>
-          <span class="ml-2"
-            >123 <font-awesome-icon class="ml-1" icon="star"
-          /></span>
-          <span class="ml-2"
-            >456 <font-awesome-icon class="ml-1" icon="code-branch"
-          /></span>
-        </div>
-        <div class="mt-2">
-          The best foo to bar your bazzes with! Check out this library if you
-          need to bar any bazzes. This will really solve the problem and there
-          is a lot more text on this form of the card
-        </div>
-        <div class="flex flex-row mt-6 text-sm">
-          <span class="flex-grow text-gray-500">updated 8 days ago</span>
-          <router-link
-            to="/projects/firebaseui-android"
-            class="uppercase cursor-pointer hover:underline"
-            >Learn More</router-link
-          >
-        </div>
+
+      <!-- Title and Stats -->
+      <div class="mt-2 px-3 flex flex-row items-center">
+        <span class="text-lg font-medium flex-grow">{{
+          project.metadata.repo
+        }}</span>
+        <span class="ml-2 text-sm"
+          >{{ project.stats.stars }}
+          <font-awesome-icon class="ml-1" icon="star"
+        /></span>
+        <span class="ml-2 text-sm"
+          >{{ project.stats.forks }}
+          <font-awesome-icon class="ml-1" icon="code-branch"
+        /></span>
+      </div>
+
+      <!-- Description -->
+      <div class="flex-grow mt-2 px-3 wrap-lines-3">
+        {{ project.metadata.longDescription }}
+      </div>
+
+      <!-- Timestamp and Button -->
+      <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
+        <span class="flex-grow text-gray-500">updated 8 days ago</span>
+        <router-link to="/projects/firebaseui-android"
+          ><MaterialButton type="text">Learn More</MaterialButton></router-link
+        >
       </div>
     </div>
 
+    <!-- Card tags -->
     <div class="mt-2 flex flex-row items-center text-gray-500">
       <div class="inline-block ml-3 h-3 w-3 bg-green-500 rounded-full"></div>
       <span class="ml-1">Android</span>
@@ -41,10 +48,28 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Prop } from "vue-property-decorator";
 
-@Component
-export default class SmallProjectCard extends Vue {}
+import { GitHubProject } from "@/model/project";
+import MaterialButton from "@/components/MaterialButton.vue";
+
+@Component({
+  components: {
+    MaterialButton,
+  },
+})
+export default class SmallProjectCard extends Vue {
+  @Prop() project!: GitHubProject;
+}
 </script>
 
-<style scoped lang="postcss"></style>
+<style scoped lang="postcss">
+/** See: https://stackoverflow.com/a/13924997/324977 */
+.wrap-lines-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+</style>
