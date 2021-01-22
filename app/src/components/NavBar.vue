@@ -4,15 +4,10 @@
       <font-awesome-icon icon="code" size="md" class="mr-2" />
       ugc.dev
     </span>
-    <router-link to="/" class="cursor-pointer hover:underline"
-      >Home</router-link
-    >
-    <router-link to="/about" class="cursor-pointer hover:underline"
-      >About</router-link
-    >
-    <router-link to="/products/firebase" class="cursor-pointer hover:underline"
-      >Products</router-link
-    >
+    <router-link to="/" class="nav-link">Home</router-link>
+    <router-link to="/about" class="nav-link">About</router-link>
+    <router-link to="/products/firebase" class="nav-link">Products</router-link>
+
     <span class="flex-grow"><!-- spacer --></span>
 
     <div class="relative">
@@ -37,4 +32,9 @@ import { Component, Vue } from "vue-property-decorator";
 export default class NavBar extends Vue {}
 </script>
 
-<style scoped lang="postcss"></style>
+<style scoped lang="postcss">
+.nav-link {
+  @apply cursor-pointer hover:underline;
+  @apply hidden lg:inline;
+}
+</style>
