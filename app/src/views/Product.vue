@@ -79,7 +79,6 @@
             :blog="blog"
           />
         </div>
-        
       </div>
     </div>
   </HeaderSidebarLayout>

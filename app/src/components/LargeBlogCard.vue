@@ -9,21 +9,27 @@
       </div>
 
       <!-- blog nam -->
-      
-        <div class="flex flex-row mt-2 px-3">
-          <span class="text-lg font-medium flex-grow wrap-lines-3">
-            {{ blog.metadata.title }}</span>
-        </div>
 
-          <!-- link and time to read -->
+      <div class="flex flex-row mt-2 px-3">
+        <span class="text-lg font-medium flex-grow wrap-lines-3">
+          {{ blog.metadata.title }}</span
+        >
+      </div>
 
-        <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
-          <span class="flex-grow text-gray-500"> {{ blog.stats.minutes}} mins Read</span>
-          <span><MaterialButton type="text">
-          <a v-bind:href="blog.metadata.link" target="blank">
-            Read more</a></MaterialButton></span>
-        </div>
-      
+      <!-- link and time to read -->
+
+      <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
+        <span class="flex-grow text-gray-500">
+          {{ blog.stats.minutes }} mins Read</span
+        >
+        <span
+          ><MaterialButton type="text">
+            <a v-bind:href="blog.metadata.link" target="blank">
+              Read more</a
+            ></MaterialButton
+          ></span
+        >
+      </div>
     </div>
 
     <div class="mt-2 flex flex-row items-center text-gray-500">
@@ -51,7 +57,6 @@ export default class LargeBlogCard extends Vue {
     MaterialButton,
   },
 })
-
 export default class LargeBlogCard extends Vue {
   @Prop() blog!: BlogData;
 }

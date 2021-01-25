@@ -15,31 +15,37 @@ export default class BlogModule extends VuexModule {
       {
         metadata: {
           author: "Roman Akhromieiev",
-          title: "Building a Telegram Bot With Firebase Cloud Functions and Telegraf.js",
-          link: "https://medium.com/firebase-developers/building-a-telegram-bot-with-firebase-cloud-functions-and-telegraf-js-5e5323068894",
+          title:
+            "Building a Telegram Bot With Firebase Cloud Functions and Telegraf.js",
+          link:
+            "https://medium.com/firebase-developers/building-a-telegram-bot-with-firebase-cloud-functions-and-telegraf-js-5e5323068894",
         },
         stats: {
-            minutes: 5,
+          minutes: 5,
         },
       },
       {
         metadata: {
           author: "David East",
-          title: "The comprehensive guide to GitHub Actions and Firebase Hosting",
-          link: "https://medium.com/firebase-developers/the-comprehensive-guide-to-github-actions-and-firebase-hosting-818502d86c31",
+          title:
+            "The comprehensive guide to GitHub Actions and Firebase Hosting",
+          link:
+            "https://medium.com/firebase-developers/the-comprehensive-guide-to-github-actions-and-firebase-hosting-818502d86c31",
         },
         stats: {
-            minutes: 7,
+          minutes: 7,
         },
       },
       {
         metadata: {
           author: "Paul Ruiz",
-          title: "A Practical Approach to Cloud Functions for Firebase: Direct Calls",
-          link: "https://medium.com/firebase-developers/a-practical-approach-to-cloud-functions-for-firebase-direct-calls-f38ec7f5981c",
+          title:
+            "A Practical Approach to Cloud Functions for Firebase: Direct Calls",
+          link:
+            "https://medium.com/firebase-developers/a-practical-approach-to-cloud-functions-for-firebase-direct-calls-f38ec7f5981c",
         },
         stats: {
-            minutes: 7,
+          minutes: 7,
         },
       },
     ];
