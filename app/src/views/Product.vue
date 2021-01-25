@@ -72,13 +72,14 @@
         <h2 class="font-display text-2xl mt-8">Blog Posts</h2>
 
         <div class="grid grid-cols-2 gap-4">
-          <LargeProjectCard
+          <LargeBlogCard
             class="mt-4"
-            v-for="project in projects"
-            :key="project.name"
-            :project="project"
+            v-for="blog in blogs"
+            :key="blog.title"
+            :blog="blog"
           />
         </div>
+        
       </div>
     </div>
   </HeaderSidebarLayout>
@@ -88,10 +89,12 @@
 import { Component, Vue } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
-import ProjectsModule from "@/store/project";
+import ProjectModule from "@/store/project";
+import BlogModule from "@/store/blog";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import LargeProjectCard from "@/components/LargeProjectCard.vue";
+import LargeBlogCard from "@/components/LargeBlogCard.vue";
 import RadioGroup from "@/components/RadioGroup.vue";
 import CheckboxGroup from "@/components/CheckboxGroup.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
@@ -100,21 +103,28 @@ import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
   components: {
     MaterialButton,
     LargeProjectCard,
+    LargeBlogCard,
     RadioGroup,
     CheckboxGroup,
     HeaderSidebarLayout,
   },
 })
 export default class Product extends Vue {
-  private projectsModule = getModule(ProjectsModule, this.$store);
+  private projectsModule = getModule(ProjectModule, this.$store);
+  private blogsModule = getModule(BlogModule, this.$store);
 
   mounted() {
     // Tell the store to load projects
     this.projectsModule.fetchProjects();
+    this.blogsModule.fetchBlogs();
   }
 
   get projects() {
     return this.projectsModule.gitHubProjects;
+  }
+
+  get blogs() {
+    return this.blogsModule.Blogs;
   }
 }
 </script>
