@@ -11,8 +11,7 @@ import {
   faSearch,
   faExternalLinkAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faMedium } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
   faStar,
