@@ -1,14 +1,14 @@
 <template>
   <div>
     <div
-      class="home-grid-base py-10 lg:py-20 bg-gray-50 border-b border-gray-100"
+      class="home-grid-base py-10 lg:py-10 bg-gray-50 border-b border-gray-100"
     >
-      <div class="col-span-8 lg:col-start-3 lg:col-span-4">
+      <div class="col-span-8 lg:col-start-3 lg:col-span-4 mt-10">
         <h1 class="text-2xl lg:text-3xl font-display font-semibold">
           What will <span class="underline">you</span> build?
         </h1>
 
-        <div class="mt-8 lg:text-lg">
+        <div class="mt-10 lg:text-lg">
           <p>
             Welcome to ugc.dev, a showcase of what developers like you have
             built with Google technologies
@@ -18,7 +18,9 @@
 
         <div class="mt-8">
           <MaterialButton type="primary" class="mr-2">Explore</MaterialButton>
-          <MaterialButton type="secondary">Submit</MaterialButton>
+          <MaterialButton type="secondary">
+          <a href="https://forms.gle/E54pxK3JzpXMGyqN7" target="blank">
+            SUBMIT</a></MaterialButton>
         </div>
       </div>
 
