@@ -41,16 +41,18 @@
 
         <CheckboxGroup
           prefix="type"
-          :keys="['All', 'Open Source', 'Blog Posts']"
-          :values="['all', 'open-source', 'blog']"
+          :keys="['Open Source', 'Blog Posts']"
+          :values="['open-source', 'blog']"
+          v-model="types"
         />
 
         <p class="uppercase font-medium mt-4 mb-2">Category</p>
 
         <CheckboxGroup
           prefix="category"
-          :keys="['All', 'Android', 'iOS', 'Web', 'Games', 'Admin']"
-          :values="['all', 'android', 'ios', 'web', 'games', 'admin']"
+          :keys="['Android', 'iOS', 'Web', 'Games', 'Node', 'Admin']"
+          :values="['android', 'ios', 'web', 'games', 'node', 'admin']"
+          v-model="categories"
         />
       </div>
     </template>
@@ -58,26 +60,40 @@
     <!-- Body -->
     <div class="grid grid-cols-10 gap-4 mb-20">
       <div class="col-start-2 col-span-8">
-        <h2 class="font-display text-2xl mt-8">Open Source</h2>
+        <!-- Open Source -->
+        <div v-if="showOpenSource">
+          <h2 class="font-display text-2xl mt-8">Open Source</h2>
 
-        <div class="grid grid-cols-2 gap-4">
-          <LargeProjectCard
-            class="mt-4"
-            v-for="project in projects"
-            :key="project.name"
-            :project="project"
-          />
+          <div v-if="projects.length === 0" class="mt-4">
+            No projects matching your filters...
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <LargeProjectCard
+              class="mt-4"
+              v-for="project in projects"
+              :key="project.name"
+              :project="project"
+            />
+          </div>
         </div>
 
-        <h2 class="font-display text-2xl mt-8">Blog Posts</h2>
+        <!-- Blog Posts -->
+        <div v-if="showBlogPosts">
+          <h2 class="font-display text-2xl mt-8">Blog Posts</h2>
 
-        <div class="grid grid-cols-2 gap-4">
-          <LargeBlogCard
-            class="mt-4"
-            v-for="blog in blogs"
-            :key="blog.title"
-            :blog="blog"
-          />
+          <div v-if="blogs.length === 0" class="mt-4">
+            No blog posts matching your filters...
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <LargeBlogCard
+              class="mt-4"
+              v-for="blog in blogs"
+              :key="blog.title"
+              :blog="blog"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -95,7 +111,9 @@ import MaterialButton from "@/components/MaterialButton.vue";
 import LargeProjectCard from "@/components/LargeProjectCard.vue";
 import LargeBlogCard from "@/components/LargeBlogCard.vue";
 import RadioGroup from "@/components/RadioGroup.vue";
-import CheckboxGroup from "@/components/CheckboxGroup.vue";
+import CheckboxGroup, {
+  CheckboxGroupEntry,
+} from "@/components/CheckboxGroup.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
 
 @Component({
@@ -112,18 +130,47 @@ export default class Product extends Vue {
   private projectsModule = getModule(ProjectModule, this.$store);
   private blogsModule = getModule(BlogModule, this.$store);
 
+  public types: CheckboxGroupEntry[] = [];
+  public categories: CheckboxGroupEntry[] = [];
+
   mounted() {
     // Tell the store to load projects
     this.projectsModule.fetchProjects();
     this.blogsModule.fetchBlogs();
   }
 
+  get showOpenSource(): boolean {
+    return this.types.some((t) => t.value === "open-source" && t.checked);
+  }
+
+  get showBlogPosts(): boolean {
+    return this.types.some((t) => t.value === "blog" && t.checked);
+  }
+
+  get selectedCategories(): Set<string> {
+    return new Set(
+      this.categories.filter((x) => x.checked).map((x) => x.value)
+    );
+  }
+
   get projects() {
-    return this.projectsModule.gitHubProjects;
+    // TODO: This filter should be done in the VueX module as a db query
+    return this.projectsModule.gitHubProjects.filter((x) => {
+      return (
+        x.metadata.tags &&
+        x.metadata.tags.some((t) => this.selectedCategories.has(t))
+      );
+    });
   }
 
   get blogs() {
-    return this.blogsModule.Blogs;
+    // TODO: This filter should be done in the VueX module as a db query
+    return this.blogsModule.Blogs.filter((x) => {
+      return (
+        x.metadata.tags &&
+        x.metadata.tags.some((t) => this.selectedCategories.has(t))
+      );
+    });
   }
 }
 </script>

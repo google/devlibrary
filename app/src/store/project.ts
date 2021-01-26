@@ -22,6 +22,7 @@ export default class ProjectModule extends VuexModule {
           longDescription:
             "Fladle is the easiest way to scale your instrumentation tests using Firebase Test Lab. You can easily run many hours of instrumentation tests using hundreds of devices in Test Lab and get the results in just few minutes. Fladle simplifies the configuration necessary to scale your tests using Firebase Test Lab and Flank.",
           content: "README.md",
+          tags: ["android"],
         },
         stats: {
           stars: 123,
@@ -37,6 +38,7 @@ export default class ProjectModule extends VuexModule {
           longDescription:
             "A collection of quickstart samples demonstrating the Firebase APIs on Android. Each sample is a ready-to-run app.",
           content: "README.md",
+          tags: ["android"],
         },
         stats: {
           stars: 9876,

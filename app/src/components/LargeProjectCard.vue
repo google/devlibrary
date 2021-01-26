@@ -38,11 +38,8 @@
     </div>
 
     <!-- Card tags -->
-    <div class="mt-2 flex flex-row items-center text-gray-500">
-      <div class="inline-block ml-3 h-3 w-3 bg-green-500 rounded-full"></div>
-      <span class="ml-1">Android</span>
-      <div class="inline-block ml-3 h-3 w-3 bg-purple-500 rounded-full"></div>
-      <span class="ml-1">Web</span>
+    <div class="mt-2 flex flex-row items-center">
+      <TagChip v-for="t in project.metadata.tags" :key="t" :name="t" />
     </div>
   </div>
 </template>
@@ -52,10 +49,12 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 
 import { GitHubProject } from "@/model/project";
 import MaterialButton from "@/components/MaterialButton.vue";
+import TagChip from "@/components/TagChip.vue";
 
 @Component({
   components: {
     MaterialButton,
+    TagChip,
   },
 })
 export default class SmallProjectCard extends Vue {

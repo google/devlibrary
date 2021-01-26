@@ -16,6 +16,9 @@ export interface GitHubProjectMetadata {
   // ex: README.md
   content: string;
 
+  // (optional) Product-specific tags
+  tags?: string[];
+
   // (optional) Information about additional content pages. These pages
   // will be presented in the order listed here but the hierarchy
   // is always flat (no nesting)

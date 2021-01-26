@@ -19,8 +19,10 @@
         <div class="mt-8">
           <MaterialButton type="primary" class="mr-2">Explore</MaterialButton>
           <MaterialButton type="secondary">
-          <a href="https://forms.gle/E54pxK3JzpXMGyqN7" target="blank">
-            SUBMIT</a></MaterialButton>
+            <a href="https://forms.gle/E54pxK3JzpXMGyqN7" target="blank">
+              SUBMIT</a
+            ></MaterialButton
+          >
         </div>
       </div>
 

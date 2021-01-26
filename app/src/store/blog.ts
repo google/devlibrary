@@ -19,6 +19,7 @@ export default class BlogModule extends VuexModule {
             "Building a Telegram Bot With Firebase Cloud Functions and Telegraf.js",
           link:
             "https://medium.com/firebase-developers/building-a-telegram-bot-with-firebase-cloud-functions-and-telegraf-js-5e5323068894",
+          tags: ["node"],
         },
         stats: {
           minutes: 5,
@@ -31,6 +32,7 @@ export default class BlogModule extends VuexModule {
             "The comprehensive guide to GitHub Actions and Firebase Hosting",
           link:
             "https://medium.com/firebase-developers/the-comprehensive-guide-to-github-actions-and-firebase-hosting-818502d86c31",
+          tags: ["web"],
         },
         stats: {
           minutes: 7,
@@ -43,6 +45,7 @@ export default class BlogModule extends VuexModule {
             "A Practical Approach to Cloud Functions for Firebase: Direct Calls",
           link:
             "https://medium.com/firebase-developers/a-practical-approach-to-cloud-functions-for-firebase-direct-calls-f38ec7f5981c",
+          tags: ["android", "node"],
         },
         stats: {
           minutes: 7,

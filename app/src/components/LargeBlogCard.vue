@@ -20,23 +20,23 @@
 
       <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
         <span class="flex-grow text-gray-500">
-          {{ blog.stats.minutes }} mins Read</span
+          {{ blog.stats.minutes }} mins read</span
         >
-        <span
+        <a :href="blog.metadata.link" target="blank"
           ><MaterialButton type="text">
-            <a v-bind:href="blog.metadata.link" target="blank">
-              Read more</a
-            ></MaterialButton
-          ></span
-        >
+            Read Post
+            <font-awesome-icon
+              icon="external-link-alt"
+              class="ml-1"
+              size="sm"
+            /> </MaterialButton
+        ></a>
       </div>
     </div>
 
-    <div class="mt-2 flex flex-row items-center text-gray-500">
-      <div class="inline-block ml-3 h-3 w-3 bg-green-500 rounded-full"></div>
-      <span class="ml-1">Android</span>
-      <div class="inline-block ml-3 h-3 w-3 bg-purple-500 rounded-full"></div>
-      <span class="ml-1">Web</span>
+    <!-- Card tags -->
+    <div class="mt-2 flex flex-row items-center">
+      <TagChip v-for="t in blog.metadata.tags" :key="t" :name="t" />
     </div>
   </div>
 </template>
@@ -44,17 +44,13 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import { BlogData } from "@/model/blog";
-// import { GitHubProject } from "@/model/project";
 import MaterialButton from "@/components/MaterialButton.vue";
-/*
-TODO: Add small project card if it needs to be displayed on home page
-export default class LargeBlogCard extends Vue {
-  @Prop() project!: Blog;
-}
-*/
+import TagChip from "@/components/TagChip.vue";
+
 @Component({
   components: {
     MaterialButton,
+    TagChip,
   },
 })
 export default class LargeBlogCard extends Vue {

@@ -4,6 +4,9 @@ export interface BlogMetadata {
   author: string;
   title: string;
   link: string;
+
+  // (optional) Product-specific tags
+  tags?: string[];
 }
 
 export interface BlogData {
