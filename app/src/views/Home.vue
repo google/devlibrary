@@ -41,7 +41,7 @@
           class="hidden lg:flex flex-row-reverse col-start-1 col-span-1"
         >
           <div
-            :class="[`border-${p.key}-accent`]"
+            :class="[p.classes.iconBorder]"
             class="mt-8 p-1 w-12 h-12 border-4 rounded-full"
           >
             <img :src="`/logos/${p.key}.png`" />

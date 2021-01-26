@@ -1,10 +1,13 @@
 module.exports = {
-  purge: [
-    "./src/**/*.vue",
-    "./src/components/**/*.vue",
-    "./src/views/**/*.vue",
-    "./src/plugins/**/*.ts",
-  ],
+  purge: {
+    enabled: process.env.NODE_ENV === "production",
+    content: [
+      "./src/**/*.vue",
+      "./src/components/**/*.vue",
+      "./src/views/**/*.vue",
+      "./src/**/*.ts",
+    ],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
