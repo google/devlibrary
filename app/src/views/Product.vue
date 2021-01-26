@@ -2,9 +2,9 @@
   <HeaderSidebarLayout>
     <template v-slot:header>
       <!-- Header -->
-      <div :class="[p.classes.bg]" class="py-20 grid grid-cols-10 gap-4">
+      <div :class="[product.classes.bg]" class="py-20 grid grid-cols-10 gap-4">
         <div
-          :class="[p.classes.text]"
+          :class="[product.classes.text]"
           class="col-start-2 col-span-5 text-white"
         >
           <h1 class="font-display text-3xl font-semibold">
@@ -21,7 +21,7 @@
 
         <div class="col-start-8 col-span-2">
           <div
-            :class="[p.classes.iconBorder]"
+            :class="[product.classes.iconBorder]"
             class="w-2/3 p-4 border-4 bg-white rounded-full"
           >
             <!-- TODO: Need to make sure these images are square! -->
