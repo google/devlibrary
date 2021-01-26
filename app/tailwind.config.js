@@ -16,10 +16,12 @@ module.exports = {
         firebase: {
           accent: "#FFCA28",
           bg: "#1A73E8",
+          text: "#FFFFFF",
         },
         ml: {
           accent: "#4285F4",
-          bg: "#FFFFFF",
+          bg: "#F1F3F4",
+          text: "#1F2937",
         },
       },
     },

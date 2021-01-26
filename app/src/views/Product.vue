@@ -2,25 +2,33 @@
   <HeaderSidebarLayout>
     <template v-slot:header>
       <!-- Header -->
-      <div class="bg-firebase-bg py-20 grid grid-cols-10 gap-4">
-        <div class="col-start-2 col-span-5 text-white">
-          <h1 class="font-display text-3xl font-semibold">Firebase</h1>
-          <p class="mt-2">Firebase helps you build and run successful apps.</p>
-          <p class="mt-2">
-            Backed by Google and loved by app development teams - from startups
-            to global enterprises.
-          </p>
-          <MaterialButton type="secondary" class="mt-8">
-            Official Docs
-            <font-awesome-icon icon="external-link-alt" class="ml-1" />
-          </MaterialButton>
+      <div
+        :class="[`bg-${product.key}-bg`]"
+        class="py-20 grid grid-cols-10 gap-4"
+      >
+        <div
+          :class="[`text-${product.key}-text`]"
+          class="col-start-2 col-span-5 text-white"
+        >
+          <h1 class="font-display text-3xl font-semibold">
+            {{ product.name }}
+          </h1>
+          <p class="mt-2">{{ product.description }}</p>
+          <a :href="product.docsUrl" target="blank">
+            <MaterialButton type="secondary" class="mt-8">
+              Official Docs
+              <font-awesome-icon icon="external-link-alt" class="ml-1" />
+            </MaterialButton>
+          </a>
         </div>
 
         <div class="col-start-8 col-span-2">
           <div
-            class="w-2/3 p-4 border-firebase-accent border-4 bg-white rounded-full"
+            :class="[`border-${product.key}-accent`]"
+            class="w-2/3 p-4 border-4 bg-white rounded-full"
           >
-            <img src="@/assets/logos/firebase.png" />
+            <!-- TODO: Need to make sure these images are square! -->
+            <img :src="`/logos/${product.key}.png`" />
           </div>
         </div>
       </div>
@@ -116,6 +124,8 @@ import CheckboxGroup, {
 } from "@/components/CheckboxGroup.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
 
+import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
+
 @Component({
   components: {
     MaterialButton,
@@ -137,6 +147,10 @@ export default class Product extends Vue {
     // Tell the store to load projects
     this.projectsModule.fetchProjects();
     this.blogsModule.fetchBlogs();
+  }
+
+  get product(): ProductConfig {
+    return ALL_PRODUCTS[this.$route.params["product"]];
   }
 
   get showOpenSource(): boolean {

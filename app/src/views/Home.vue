@@ -33,70 +33,49 @@
       <div class="col-span-2"><!-- Gutter --></div>
     </div>
 
-    <div class="home-grid-base pt-4 pb-10 lg:pb-20">
-      <!-- TODO: Make a component for this? -->
-      <div class="hidden lg:flex flex-row-reverse col-start-1 col-span-1">
+    <div class="pt-4 pb-10 lg:pb-20">
+      <!-- Iterate over each product -->
+      <div class="home-grid-base" v-for="p in products" :key="p.key">
         <div
-          class="mt-8 p-1 w-12 h-12 border-4 border-firebase-accent rounded-full"
+          :key="p.key"
+          class="hidden lg:flex flex-row-reverse col-start-1 col-span-1"
         >
-          <img src="@/assets/logos/firebase.png" />
+          <div
+            :class="[`border-${p.key}-accent`]"
+            class="mt-8 p-1 w-12 h-12 border-4 rounded-full"
+          >
+            <img :src="`/logos/${p.key}.png`" />
+          </div>
         </div>
-      </div>
 
-      <div class="mt-8 col-span-7 lg:col-span-11">
-        <p class="font-display text-2xl">Firebase</p>
-        <p class="text-gray-500">Trending Now</p>
-      </div>
-
-      <div class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10">
-        <div class="home-grid-projects">
-          <SmallProjectCard
-            v-for="project in projects"
-            :key="project.name"
-            :project="project"
-          />
+        <div :key="p.key" class="mt-8 col-span-7 lg:col-span-11">
+          <p class="font-display text-2xl">{{ p.name }}</p>
+          <p class="text-gray-500">Trending Now</p>
         </div>
-      </div>
 
-      <div
-        class="col-span-8 lg:col-start-2 lg:col-span-10 flex flex-row-reverse"
-      >
-        <router-link to="/products/firebase"
-          ><MaterialButton type="text"
-            >All Firebase Projects</MaterialButton
-          ></router-link
+        <div
+          :key="p.key"
+          class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10"
         >
-      </div>
-
-      <div class="hidden lg:flex flex-row-reverse col-start-1 col-span-1">
-        <div class="mt-8 w-12 h-12 p-1 border-ml-accent border-4 rounded-full">
-          <img src="@/assets/logos/ml.png" />
+          <div class="home-grid-projects">
+            <SmallProjectCard
+              v-for="project in projects"
+              :key="project.name"
+              :project="project"
+            />
+          </div>
         </div>
-      </div>
 
-      <div class="mt-8 col-span-7 lg:col-span-11">
-        <p class="font-display text-2xl">Machine Learning</p>
-        <p class="text-gray-500">Trending Now</p>
-      </div>
-
-      <div
-        class="home-grid-projects col-start-1 col-span-8 lg:col-start-2 lg:col-span-10"
-      >
-        <SmallProjectCard
-          v-for="project in projects"
-          :key="project.name"
-          :project="project"
-        />
-      </div>
-
-      <div
-        class="col-span-8 lg:col-start-2 lg:col-span-10 flex flex-row-reverse"
-      >
-        <router-link to="/products/ml"
-          ><MaterialButton type="text"
-            >All ML Projects</MaterialButton
-          ></router-link
+        <div
+          :key="p.key"
+          class="col-span-8 lg:col-start-2 lg:col-span-10 flex flex-row-reverse"
         >
+          <router-link :to="`/products/${p.key}`"
+            ><MaterialButton type="text"
+              >All {{ p.name }} Projects</MaterialButton
+            ></router-link
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -111,6 +90,8 @@ import SmallProjectCard from "@/components/SmallProjectCard.vue";
 
 import ProjectsModule from "@/store/project";
 
+import { ALL_PRODUCTS } from "@/model/product";
+
 @Component({
   components: {
     MaterialButton,
@@ -123,6 +104,10 @@ export default class Home extends Vue {
   mounted() {
     // Tell the store to load projects
     this.projectsModule.fetchProjects();
+  }
+
+  get products() {
+    return Object.values(ALL_PRODUCTS);
   }
 
   get projects() {
