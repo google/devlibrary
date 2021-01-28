@@ -1,0 +1,11 @@
+{
+  "version": 1.0,
+  "source": "github",
+  "owner": "firebase",
+  "repo": "quickstart-android",
+  "name": "Firebase Quickstarts for Android",
+  "shortDescription": "Samples to get started with Firebase on Android.",
+  "longDescription": "A collection of quickstart samples demonstrating the Firebase APIs on Android. Each sample is a ready-to-run app.",
+  "content": "README.md",
+  "tags": ["android"]
+}

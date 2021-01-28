@@ -1,4 +1,6 @@
 export interface GitHubProjectMetadata {
+  // TODO: Source and version
+
   // (required) GitHub owner and repo
   // ex: owner=firebase, repo=quickstart-android
   owner: string;
@@ -50,12 +52,32 @@ export interface GitHubProjectMetadata {
   related?: { type: string; id: string }[];
 }
 
+export interface GithubProjectStats {
+  stars: number;
+  forks: number;
+}
+
 export interface GitHubProject {
   metadata: GitHubProjectMetadata;
+  stats: GithubProjectStats;
+}
 
-  // TODO: Expand this to contain more information
-  stats: {
-    stars: number;
-    forks: number;
-  };
+export interface BlogMetadata {
+  // (required) Blog author and title of the blog
+  // ex: author=biswajeet, title="How to use firebase", link = "https://medium.com/xxx.html"
+  author: string;
+  title: string;
+  link: string;
+
+  // (optional) Product-specific tags
+  tags?: string[];
+}
+
+export interface BlogStats {
+  minutes: number;
+}
+
+export interface BlogData {
+  metadata: BlogMetadata;
+  stats: BlogStats;
 }

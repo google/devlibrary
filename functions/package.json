@@ -1,0 +1,23 @@
+{
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "emulate": "firebase emulators:start",
+    "serve": "concurrently 'npm run build:watch' 'npm run emulate'"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "lib/functions/src/index.js",
+  "dependencies": {
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "~3.9.3"
+  },
+  "private": true
+}

@@ -38,7 +38,7 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 
-import { GitHubProject } from "@/model/project";
+import { GitHubProject } from "../../../shared/types";
 import MaterialButton from "@/components/MaterialButton.vue";
 
 @Component({

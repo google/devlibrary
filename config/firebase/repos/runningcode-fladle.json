@@ -1,0 +1,11 @@
+{
+  "version": 1.0,
+  "source": "github",
+  "owner": "runningcode",
+  "repo": "fladle",
+  "name": "Fladle",
+  "shortDescription": "Easily scale your Android Instrumentation Tests across Firebase Test Lab with Flank.",
+  "longDescription": "Fladle is the easiest way to scale your instrumentation tests using Firebase Test Lab. You can easily run many hours of instrumentation tests using hundreds of devices in Test Lab and get the results in just few minutes. Fladle simplifies the configuration necessary to scale your tests using Firebase Test Lab and Flank.",
+  "content": "README.md",
+  "tags": ["android"]
+}
