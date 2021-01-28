@@ -4,7 +4,7 @@
       <!-- Header -->
       <div class="bg-firebase-bg py-20 grid grid-cols-10 gap-4">
         <div class="col-start-2 col-span-7 text-white">
-          <h1 class="font-display text-3xl font-semibold">
+          <h1 class="text-3xl font-semibold">
             Firebase Quickstarts for Android
           </h1>
           <p class="mt-2">
@@ -54,7 +54,7 @@
     <!-- Body -->
     <div class="grid grid-cols-10 gap-4 mb-20">
       <div class="col-start-2 col-span-8">
-        <h2 class="font-display text-2xl mt-8 mb-2">Section Header</h2>
+        <h2 class="text-2xl mt-8 mb-2">Section Header</h2>
         <div>
           <p class="my-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus
@@ -74,7 +74,7 @@ public static void main(String[] args) {
           >
         </div>
 
-        <h2 class="font-display text-2xl mt-8 mb-2">Bar Baz et Qux</h2>
+        <h2 class="text-2xl mt-8 mb-2">Bar Baz et Qux</h2>
         <div>
           <p class="my-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus

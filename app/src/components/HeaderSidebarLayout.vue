@@ -1,11 +1,11 @@
 <template>
-  <div class="grid grid-cols-12 gap-0">
+  <div class="relative lg:grid lg:grid-cols-12 gap-0">
     <!-- Side bar -->
-    <div class="col-span-2 bg-gray-50 py-10 px-10">
+    <div class="desktop-only lg:col-span-2 bg-gray-50 py-10 px-10">
       <slot name="sidebar"></slot>
     </div>
 
-    <div class="col-span-10">
+    <div class="lg:col-span-10">
       <!-- Header -->
       <div>
         <slot name="header"></slot>

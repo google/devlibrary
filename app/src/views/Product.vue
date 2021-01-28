@@ -1,31 +1,56 @@
 <template>
   <HeaderSidebarLayout>
     <template v-slot:header>
-      <!-- Header -->
-      <div :class="[product.classes.bg]" class="py-20 grid grid-cols-10 gap-4">
+      <!-- Header (Mobile) -->
+      <div class="mobile-only">
         <div
-          :class="[product.classes.text]"
-          class="col-start-2 col-span-5 text-white"
+          :class="[product.classes.bg]"
+          class="mobile-only flex flex-row items-center px-6 py-4"
         >
-          <h1 class="font-display text-3xl font-semibold">
-            {{ product.name }}
-          </h1>
-          <p class="mt-2">{{ product.description }}</p>
-          <a :href="product.docsUrl" target="blank">
-            <MaterialButton type="secondary" class="mt-8">
-              Official Docs
-              <font-awesome-icon icon="external-link-alt" class="ml-1" />
-            </MaterialButton>
-          </a>
-        </div>
-
-        <div class="col-start-8 col-span-2">
           <div
             :class="[product.classes.iconBorder]"
-            class="w-2/3 p-4 border-4 bg-white rounded-full"
+            class="p-1 w-10 h-10 border-4 bg-white rounded-full"
           >
             <!-- TODO: Need to make sure these images are square! -->
             <img :src="`/logos/${product.key}.png`" />
+          </div>
+
+          <h1 class="text-2xl ml-2" :class="[product.classes.text]">
+            {{ product.name }}
+          </h1>
+        </div>
+      </div>
+
+      <!-- Header (Desktop) -->
+      <div class="desktop-only">
+        <div
+          :class="[product.classes.bg]"
+          class="py-20 grid grid-cols-10 gap-4"
+        >
+          <div
+            :class="[product.classes.text]"
+            class="col-start-2 col-span-5 text-white"
+          >
+            <h1 class="text-3xl font-semibold">
+              {{ product.name }}
+            </h1>
+            <p class="mt-2">{{ product.description }}</p>
+            <a :href="product.docsUrl" target="blank">
+              <MaterialButton type="secondary" class="mt-8">
+                Official Docs
+                <font-awesome-icon icon="external-link-alt" class="ml-1" />
+              </MaterialButton>
+            </a>
+          </div>
+
+          <div class="col-start-8 col-span-2">
+            <div
+              :class="[product.classes.iconBorder]"
+              class="w-2/3 p-4 border-4 bg-white rounded-full"
+            >
+              <!-- TODO: Need to make sure these images are square! -->
+              <img :src="`/logos/${product.key}.png`" />
+            </div>
           </div>
         </div>
       </div>
@@ -64,16 +89,16 @@
 
     <!-- Body -->
     <div class="grid grid-cols-10 gap-4 mb-20">
-      <div class="col-start-2 col-span-8">
+      <div class="col-span-10 px-6 lg:px-0 lg:col-start-2 lg:col-span-8">
         <!-- Open Source -->
         <div v-if="showOpenSource">
-          <h2 class="font-display text-2xl mt-8">Open Source</h2>
+          <h2 class="text-2xl mt-8">Open Source</h2>
 
           <div v-if="projects.length === 0" class="mt-4">
             No projects matching your filters...
           </div>
 
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <LargeProjectCard
               class="mt-4"
               v-for="project in projects"
@@ -85,13 +110,13 @@
 
         <!-- Blog Posts -->
         <div v-if="showBlogPosts">
-          <h2 class="font-display text-2xl mt-8">Blog Posts</h2>
+          <h2 class="text-2xl mt-8">Blog Posts</h2>
 
           <div v-if="blogs.length === 0" class="mt-4">
             No blog posts matching your filters...
           </div>
 
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <LargeBlogCard
               class="mt-4"
               v-for="blog in blogs"

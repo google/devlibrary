@@ -21,4 +21,23 @@ export default class App extends Vue {}
 body {
   @apply text-gray-800;
 }
+
+.desktop-only {
+  @apply hidden;
+  @apply lg:block;
+}
+
+.mobile-only {
+  @apply block;
+  @apply lg:hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display;
+}
 </style>

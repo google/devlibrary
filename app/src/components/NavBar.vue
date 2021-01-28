@@ -1,9 +1,15 @@
 <template>
-  <div class="relative flex flex-row items-center px-8 bg-white shadow-md">
-    <span class="inline-flex flex-row items-center font-display text-xl mr-4">
+  <div
+    class="relative flex flex-row items-center px-4 lg:px-8 py-4 lg:py-0 bg-white shadow-md"
+  >
+    <router-link
+      tag="div"
+      to="/"
+      class="inline-flex flex-row items-center text-xl mr-4 cursor-pointer"
+    >
       <font-awesome-icon icon="code" size="md" class="mr-2" />
-      ugc.dev
-    </span>
+      <h1>ugc.dev</h1>
+    </router-link>
 
     <router-link tag="div" class="nav-item nav-item-link" to="/"
       ><span>Home</span></router-link

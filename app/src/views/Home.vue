@@ -5,7 +5,7 @@
       class="home-grid-base py-10 lg:py-10 bg-gray-50 border-b border-gray-100"
     >
       <div class="col-span-8 lg:col-start-3 lg:col-span-4 mt-10">
-        <h1 class="text-2xl lg:text-3xl font-display font-semibold">
+        <h1 class="text-2xl lg:text-3xl font-semibold">
           What will <span class="underline">you</span> build?
         </h1>
 
