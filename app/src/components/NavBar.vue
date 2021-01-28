@@ -1,12 +1,41 @@
 <template>
-  <div class="flex flex-row items-center gap-8 px-8 py-4 bg-white shadow-md">
-    <span class="inline-flex flex-row items-center font-display text-xl">
+  <div class="relative flex flex-row items-center px-8 bg-white shadow-md">
+    <span class="inline-flex flex-row items-center font-display text-xl mr-4">
       <font-awesome-icon icon="code" size="md" class="mr-2" />
       ugc.dev
     </span>
-    <router-link to="/" class="nav-link">Home</router-link>
-    <router-link to="/about" class="nav-link">About</router-link>
-    <router-link to="/products/firebase" class="nav-link">Products</router-link>
+
+    <router-link tag="div" class="nav-item nav-item-link" to="/"
+      ><span>Home</span></router-link
+    >
+    <router-link tag="div" class="nav-item nav-item-link" to="/about"
+      ><span>About</span></router-link
+    >
+
+    <div
+      class="nav-item relative z-10"
+      @mouseenter="showProductsDropdown = true"
+      @mouseleave="showProductsDropdown = false"
+      @click="showProductsDropdown = false"
+    >
+      <span>Products</span>
+      <font-awesome-icon
+        :icon="showProductsDropdown ? 'caret-up' : 'caret-down'"
+        class="ml-1"
+      />
+
+      <div class="nav-dropdown" v-show="showProductsDropdown">
+        <router-link
+          v-for="p in products"
+          :key="p.key"
+          :to="`/products/${p.key}`"
+          tag="div"
+          class="px-3 py-2 whitespace-nowrap hover:bg-gray-50"
+        >
+          {{ p.name }}
+        </router-link>
+      </div>
+    </div>
 
     <span class="flex-grow"><!-- spacer --></span>
 
@@ -28,13 +57,33 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
+import { ALL_PRODUCTS } from "@/model/product";
+
 @Component
-export default class NavBar extends Vue {}
+export default class NavBar extends Vue {
+  public showProductsDropdown = false;
+
+  get products() {
+    return Object.values(ALL_PRODUCTS);
+  }
+}
 </script>
 
 <style scoped lang="postcss">
-.nav-link {
-  @apply cursor-pointer hover:underline;
+.nav-dropdown {
+  @apply absolute top-full bg-white rounded-b shadow-md text-sm;
+  z-index: -1;
+  min-width: calc(100% + 1rem);
+  left: 0%;
+}
+
+.nav-item {
+  @apply py-4 px-4;
+  @apply cursor-pointer;
   @apply hidden lg:inline;
+}
+
+.nav-item-link {
+  @apply hover:bg-gray-100;
 }
 </style>

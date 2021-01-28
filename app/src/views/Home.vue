@@ -1,6 +1,7 @@
 <template>
   <div>
     <div
+      id="header"
       class="home-grid-base py-10 lg:py-10 bg-gray-50 border-b border-gray-100"
     >
       <div class="col-span-8 lg:col-start-3 lg:col-span-4 mt-10">
@@ -17,7 +18,12 @@
         </div>
 
         <div class="mt-8">
-          <MaterialButton type="primary" class="mr-2">Explore</MaterialButton>
+          <MaterialButton
+            type="primary"
+            class="mr-2"
+            @click.native="scrollToProducts()"
+            >Explore</MaterialButton
+          >
           <MaterialButton type="secondary">
             <a href="https://forms.gle/E54pxK3JzpXMGyqN7" target="blank">
               SUBMIT</a
@@ -36,10 +42,7 @@
     <div class="pt-4 pb-10 lg:pb-20">
       <!-- Iterate over each product -->
       <div class="home-grid-base" v-for="p in products" :key="p.key">
-        <div
-          :key="p.key"
-          class="hidden lg:flex flex-row-reverse col-start-1 col-span-1"
-        >
+        <div class="hidden lg:flex flex-row-reverse col-start-1 col-span-1">
           <div
             :class="[p.classes.iconBorder]"
             class="mt-8 p-1 w-12 h-12 border-4 rounded-full"
@@ -48,15 +51,12 @@
           </div>
         </div>
 
-        <div :key="p.key" class="mt-8 col-span-7 lg:col-span-11">
+        <div class="mt-8 col-span-7 lg:col-span-11">
           <p class="font-display text-2xl">{{ p.name }}</p>
           <p class="text-gray-500">Trending Now</p>
         </div>
 
-        <div
-          :key="p.key"
-          class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10"
-        >
+        <div class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10">
           <div class="home-grid-projects">
             <SmallProjectCard
               v-for="project in projects"
@@ -104,6 +104,14 @@ export default class Home extends Vue {
   mounted() {
     // Tell the store to load projects
     this.projectsModule.fetchProjects();
+  }
+
+  public scrollToProducts() {
+    const header = document.getElementById("header");
+    window.scrollTo({
+      behavior: "smooth",
+      top: header?.getBoundingClientRect().bottom,
+    });
   }
 
   get products() {

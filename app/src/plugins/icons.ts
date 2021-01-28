@@ -10,6 +10,8 @@ import {
   faCodeBranch,
   faSearch,
   faExternalLinkAlt,
+  faCaretDown,
+  faCaretUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
 
@@ -19,6 +21,8 @@ library.add(
   faCodeBranch,
   faSearch,
   faExternalLinkAlt,
+  faCaretDown,
+  faCaretUp,
 
   faGithub,
   faMedium
