@@ -128,7 +128,7 @@ import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
     HeaderSidebarLayout,
   },
 })
-export default class Project extends Vue {
+export default class Repo extends Vue {
   public product!: ProductConfig;
   public repo: GitHubProject | null = null;
 

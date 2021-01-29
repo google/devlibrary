@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
 import Product from "../views/Product.vue";
-import Project from "../views/Project.vue";
+import Repo from "../views/Repo.vue";
 
 Vue.use(VueRouter);
 
@@ -19,8 +19,8 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: "/products/:product/repos/:repo",
-    name: "Project",
-    component: Project,
+    name: "Repo",
+    component: Repo,
   },
   {
     path: "/about",
