@@ -1,20 +1,29 @@
-import { BlogMetadata, BlogStats, GitHubProjectMetadata, GithubProjectStats } from "../../shared/types";
+import {
+  BlogMetadata,
+  BlogStats,
+  GitHubProjectMetadata,
+  GithubProjectStats,
+} from "../../shared/types";
 
-export async function loadGithubStats(metadata: GitHubProjectMetadata): Promise<GithubProjectStats> {
+export async function loadGithubStats(
+  metadata: GitHubProjectMetadata
+): Promise<GithubProjectStats> {
   // TODO: Make this real
   return {
     stars: random(1000),
     forks: random(1000),
-    lastUpdated: randomTimestamp()
-  }
+    lastUpdated: randomTimestamp(),
+  };
 }
 
-export async function loadBlogStats(metadata: BlogMetadata): Promise<BlogStats> {
+export async function loadBlogStats(
+  metadata: BlogMetadata
+): Promise<BlogStats> {
   // TODO: Make this real
   return {
     minutes: random(30),
-    lastUpdated: randomTimestamp()
-  }
+    lastUpdated: randomTimestamp(),
+  };
 }
 
 function random(ceil: number) {
@@ -22,5 +31,5 @@ function random(ceil: number) {
 }
 
 function randomTimestamp() {
-  return (new Date()).getTime() - random(7 * 24 * 60 * 60 * 1000);
+  return new Date().getTime() - random(7 * 24 * 60 * 60 * 1000);
 }

@@ -3,6 +3,7 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc -w",
+    "format": "prettier --write src/**/*.ts",
     "emulate": "firebase emulators:start",
     "serve": "concurrently 'npm run build:watch' 'npm run emulate'"
   },
@@ -17,6 +18,7 @@
   "devDependencies": {
     "concurrently": "^5.3.0",
     "firebase-functions-test": "^0.2.0",
+    "prettier": "^2.2.1",
     "typescript": "~3.9.3"
   },
   "private": true
