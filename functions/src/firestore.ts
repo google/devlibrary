@@ -1,9 +1,9 @@
 import * as admin from "firebase-admin";
-import { BlogData, GitHubProject } from "../../shared/types";
+import { BlogData, RepoData } from "../../shared/types";
 
-export async function saveGitHubProject(
+export async function saveRepoData(
   product: string,
-  project: GitHubProject
+  project: RepoData
 ) {
   const db = admin.firestore();
   const ref = db

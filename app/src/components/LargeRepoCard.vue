@@ -49,7 +49,7 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 
-import { GitHubProject } from "../../../shared/types";
+import { RepoData } from "../../../shared/types";
 import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
 
@@ -63,7 +63,7 @@ import * as dates from "@/plugins/dates";
 })
 export default class LargeRepoCard extends Vue {
   @Prop() link!: string;
-  @Prop() project!: GitHubProject;
+  @Prop() project!: RepoData;
 
   public renderDaysAgo(lastUpdated: number) {
     return dates.renderDaysAgo(lastUpdated);

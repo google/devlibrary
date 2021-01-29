@@ -1,8 +1,8 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import { loadProjectMetadata } from "./metadata";
-import { loadBlogStats, loadGithubStats } from "./stats";
-import { saveBlogData, saveGitHubProject } from "./firestore";
+import { loadBlogStats, loadRepoStats } from "./stats";
+import { saveBlogData, saveRepoData } from "./firestore";
 
 admin.initializeApp();
 
@@ -12,7 +12,7 @@ export const refreshProjects = functions.https.onRequest(
     const { repos, blogs } = await loadProjectMetadata("firebase");
 
     for (const [id, metadata] of Object.entries(repos)) {
-      const stats = await loadGithubStats(metadata);
+      const stats = await loadRepoStats(metadata);
       const repo = {
         id,
         metadata,
@@ -20,7 +20,7 @@ export const refreshProjects = functions.https.onRequest(
       };
 
       // TODO: Batch this!
-      await saveGitHubProject("firebase", repo);
+      await saveRepoData("firebase", repo);
     }
 
     for (const [id, metadata] of Object.entries(blogs)) {

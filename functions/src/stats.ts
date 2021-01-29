@@ -1,13 +1,13 @@
 import {
   BlogMetadata,
   BlogStats,
-  GitHubProjectMetadata,
-  GithubProjectStats,
+  RepoMetadata,
+  RepoStats,
 } from "../../shared/types";
 
-export async function loadGithubStats(
-  metadata: GitHubProjectMetadata
-): Promise<GithubProjectStats> {
+export async function loadRepoStats(
+  metadata: RepoMetadata
+): Promise<RepoStats> {
   // TODO: Make this real
   return {
     stars: random(1000),

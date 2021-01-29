@@ -119,7 +119,7 @@ import { getModule } from "vuex-module-decorators";
 import ProjectsModule from "@/store/project";
 import MaterialButton from "@/components/MaterialButton.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
-import { GitHubProject } from "../../../shared/types";
+import { RepoData } from "../../../shared/types";
 import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 
 @Component({
@@ -130,7 +130,7 @@ import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 })
 export default class Repo extends Vue {
   public product!: ProductConfig;
-  public repo: GitHubProject | null = null;
+  public repo: RepoData | null = null;
 
   private productKey!: string;
   private id!: string;

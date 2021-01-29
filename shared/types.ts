@@ -1,4 +1,4 @@
-export interface GitHubProjectMetadata {
+export interface RepoMetadata {
   // TODO: Source and version
 
   // (required) GitHub owner and repo
@@ -52,16 +52,16 @@ export interface GitHubProjectMetadata {
   related?: { type: string; id: string }[];
 }
 
-export interface GithubProjectStats {
+export interface RepoStats {
   stars: number;
   forks: number;
   lastUpdated: number;
 }
 
-export interface GitHubProject {
+export interface RepoData {
   id: string;
-  metadata: GitHubProjectMetadata;
-  stats: GithubProjectStats;
+  metadata: RepoMetadata;
+  stats: RepoStats;
 }
 
 export interface BlogMetadata {

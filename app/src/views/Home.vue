@@ -92,7 +92,7 @@ import SmallRepoCard from "@/components/SmallRepoCard.vue";
 import ProjectsModule from "@/store/project";
 
 import { ALL_PRODUCTS, ProductConfig } from "@/model/product";
-import { GitHubProject } from "../../../shared/types";
+import { RepoData } from "../../../shared/types";
 
 @Component({
   components: {
@@ -116,7 +116,7 @@ export default class Home extends Vue {
     });
   }
 
-  public repoPath(product: ProductConfig, repo: GitHubProject) {
+  public repoPath(product: ProductConfig, repo: RepoData) {
     return `/products/${product.key}/repos/${repo.id}`;
   }
 

@@ -2,16 +2,17 @@ import Vue from "vue";
 import { Module, VuexModule, Mutation, Action } from "vuex-module-decorators";
 import { firestore } from "@/plugins/firebase";
 
-import { GitHubProject } from "../../../shared/types";
+import { RepoData } from "../../../shared/types";
 
 @Module({
   name: "project",
 })
 export default class ProjectModule extends VuexModule {
-  public gitHubProjects: GitHubProject[] = [];
+  // TODO: Remove this and unify with repos
+  public gitHubProjects: RepoData[] = [];
 
   // Repos by product and then by id
-  public repos: Record<string, Record<string, GitHubProject>> = {};
+  public repos: Record<string, Record<string, RepoData>> = {};
 
   @Action({ rawError: true })
   async fetchRepo(opts: { product: string; id: string }) {
@@ -25,7 +26,7 @@ export default class ProjectModule extends VuexModule {
       .doc(opts.id);
 
     const snap = await ref.get();
-    const repo = snap.data() as GitHubProject;
+    const repo = snap.data() as RepoData;
 
     this.context.commit("addRepos", { product: opts.product, repos: [repo] });
   }
@@ -35,13 +36,13 @@ export default class ProjectModule extends VuexModule {
     // TODO: This collectiongroup query should probably one query per product instead
     const db = firestore();
     const snap = await db.collectionGroup("repos").get();
-    const gh = snap.docs.map((doc) => doc.data() as GitHubProject);
+    const gh = snap.docs.map((doc) => doc.data() as RepoData);
 
-    this.context.commit("setGitHubProjects", gh);
+    this.context.commit("setRepoDatas", gh);
   }
 
   @Mutation
-  addRepos(opts: { product: string; repos: GitHubProject[] }) {
+  addRepos(opts: { product: string; repos: RepoData[] }) {
     // We need to use Vue.set because Vue can't react to new keys in a map
     // unless it's told abot them
     if (!this.repos[opts.product]) {
@@ -54,7 +55,7 @@ export default class ProjectModule extends VuexModule {
   }
 
   @Mutation
-  setGitHubProjects(gitHubProjects: GitHubProject[]) {
+  setRepoDatas(gitHubProjects: RepoData[]) {
     this.gitHubProjects = gitHubProjects;
   }
 

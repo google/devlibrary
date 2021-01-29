@@ -135,7 +135,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
-import { GitHubProject } from "../../../shared/types";
+import { RepoData } from "../../../shared/types";
 
 import ProjectModule from "@/store/project";
 import BlogModule from "@/store/blog";
@@ -174,7 +174,7 @@ export default class Product extends Vue {
     this.blogsModule.fetchBlogs();
   }
 
-  public repoPath(repo: GitHubProject) {
+  public repoPath(repo: RepoData) {
     return `/products/${this.product.key}/repos/${repo.id}`;
   }
 
