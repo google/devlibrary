@@ -10,6 +10,14 @@ export interface ProductConfig {
     text: string;
     iconBorder: string;
   };
+
+  tags: {
+    // The human-readable name (Android, Node.js)
+    key: string;
+
+    // The database value (android, node)
+    value: string;
+  }[];
 }
 
 export const ALL_PRODUCTS: Record<string, ProductConfig> = {
@@ -24,6 +32,32 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       text: "text-firebase-text",
       iconBorder: "border-firebase-accent",
     },
+    tags: [
+      {
+        key: "Android",
+        value: "android",
+      },
+      {
+        key: "iOS",
+        value: "ios",
+      },
+      {
+        key: "Web",
+        value: "web",
+      },
+      {
+        key: "Games",
+        value: "games",
+      },
+      {
+        key: "Node.js",
+        value: "node",
+      },
+      {
+        key: "Admin",
+        value: "admin",
+      },
+    ],
   },
   ml: {
     key: "ml",
@@ -36,5 +70,15 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       text: "text-ml-text",
       iconBorder: "border-ml-accent",
     },
+    tags: [
+      {
+        key: "Mobile",
+        value: "mobile",
+      },
+      {
+        key: "Cloud",
+        value: "cloud",
+      },
+    ],
   },
 };

@@ -80,8 +80,8 @@
 
         <CheckboxGroup
           prefix="category"
-          :keys="['Android', 'iOS', 'Web', 'Games', 'Node', 'Admin']"
-          :values="['android', 'ios', 'web', 'games', 'node', 'admin']"
+          :keys="product.tags.map((t) => t.key)"
+          :values="product.tags.map((t) => t.value)"
           v-model="categories"
         />
       </div>
