@@ -60,6 +60,7 @@
           <div class="home-grid-projects">
             <SmallProjectCard
               v-for="project in projects"
+              :link="repoPath(p, project)"
               :key="project.name"
               :project="project"
             />
@@ -90,7 +91,8 @@ import SmallProjectCard from "@/components/SmallProjectCard.vue";
 
 import ProjectsModule from "@/store/project";
 
-import { ALL_PRODUCTS } from "@/model/product";
+import { ALL_PRODUCTS, ProductConfig } from "@/model/product";
+import { GitHubProject } from "../../../shared/types";
 
 @Component({
   components: {
@@ -112,6 +114,10 @@ export default class Home extends Vue {
       behavior: "smooth",
       top: header?.getBoundingClientRect().bottom,
     });
+  }
+
+  public repoPath(product: ProductConfig, repo: GitHubProject) {
+    return `/products/${product.key}/repos/${repo.id}`;
   }
 
   get products() {

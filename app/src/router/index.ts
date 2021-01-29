@@ -18,7 +18,7 @@ const routes: Array<RouteConfig> = [
     component: Product,
   },
   {
-    path: "/projects/:project",
+    path: "/products/:product/repos/:repo",
     name: "Project",
     component: Project,
   },

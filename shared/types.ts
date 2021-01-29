@@ -59,6 +59,7 @@ export interface GithubProjectStats {
 }
 
 export interface GitHubProject {
+  id: string;
   metadata: GitHubProjectMetadata;
   stats: GithubProjectStats;
 }
@@ -80,6 +81,7 @@ export interface BlogStats {
 }
 
 export interface BlogData {
+  id: string;
   metadata: BlogMetadata;
   stats: BlogStats;
 }

@@ -8,12 +8,13 @@ admin.initializeApp();
 
 // TODO: This should not be a public HTTP function, should be a cron
 export const refreshProjects = functions.https.onRequest(async (request, response) => {
-  const metadata = await loadProjectMetadata("firebase");
+  const { repos, blogs } = await loadProjectMetadata("firebase");
   
-  for (const m of metadata.repos) {
-    const stats = await loadGithubStats(m);
+  for (const [id, metadata] of Object.entries(repos)) {
+    const stats = await loadGithubStats(metadata);
     const repo = {
-      metadata: m,
+      id,
+      metadata,
       stats
     };
 
@@ -21,10 +22,11 @@ export const refreshProjects = functions.https.onRequest(async (request, respons
     await saveGitHubProject("firebase", repo);
   }
 
-  for (const m of metadata.blogs) {
-    const stats = await loadBlogStats(m);
+  for (const [id, metadata] of Object.entries(blogs)) {
+    const stats = await loadBlogStats(metadata);
     const blog = {
-      metadata: m,
+      id,
+      metadata,
       stats
     };
 

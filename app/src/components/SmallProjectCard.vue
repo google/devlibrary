@@ -28,8 +28,7 @@
         <span class="flex-grow text-sm text-gray-500"
           >updated {{ renderDaysAgo(project.stats.lastUpdated) }}</span
         >
-        <!-- TODO: Link to the real project page -->
-        <router-link to="/projects/firebaseui-android"
+        <router-link :to="link"
           ><MaterialButton type="text">Learn More</MaterialButton></router-link
         >
       </div>
@@ -51,6 +50,7 @@ import * as dates from "@/plugins/dates";
   },
 })
 export default class SmallProjectCard extends Vue {
+  @Prop() link!: string;
   @Prop() project!: GitHubProject;
 
   public renderDaysAgo(lastUpdated: number) {

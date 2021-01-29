@@ -5,7 +5,7 @@
       <!-- GitHub Header -->
       <div class="bg-gray-900 text-white px-3 py-2">
         <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-2" />
-        <span>GitHub · {{ project.metadata.owner }}</span>
+        <span>{{ project.metadata.owner }}</span>
       </div>
 
       <!-- Title and Stats -->
@@ -33,7 +33,7 @@
         <span class="flex-grow text-gray-500"
           >updated {{ renderDaysAgo(project.stats.lastUpdated) }}</span
         >
-        <router-link to="/projects/firebaseui-android"
+        <router-link :to="link"
           ><MaterialButton type="text">Learn More</MaterialButton></router-link
         >
       </div>
@@ -62,6 +62,7 @@ import * as dates from "@/plugins/dates";
   },
 })
 export default class SmallProjectCard extends Vue {
+  @Prop() link!: string;
   @Prop() project!: GitHubProject;
 
   public renderDaysAgo(lastUpdated: number) {

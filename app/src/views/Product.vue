@@ -103,6 +103,7 @@
               class="mt-4"
               v-for="project in projects"
               :key="project.name"
+              :link="repoPath(project)"
               :project="project"
             />
           </div>
@@ -133,6 +134,8 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
+
+import { GitHubProject } from "../../../shared/types";
 
 import ProjectModule from "@/store/project";
 import BlogModule from "@/store/blog";
@@ -169,6 +172,10 @@ export default class Product extends Vue {
     // Tell the store to load projects
     this.projectsModule.fetchProjects();
     this.blogsModule.fetchBlogs();
+  }
+
+  public repoPath(repo: GitHubProject) {
+    return `/products/${this.product.key}/repos/${repo.id}`;
   }
 
   get product(): ProductConfig {

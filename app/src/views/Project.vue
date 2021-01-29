@@ -1,27 +1,34 @@
 <template>
-  <HeaderSidebarLayout>
+  <HeaderSidebarLayout v-if="this.repo != null">
     <template v-slot:header>
       <!-- Header -->
       <div class="bg-firebase-bg py-20 grid grid-cols-10 gap-4">
         <div class="col-start-2 col-span-7 text-white">
           <h1 class="text-3xl font-semibold">
-            Firebase Quickstarts for Android
+            {{ repo.metadata.name }}
           </h1>
           <p class="mt-2">
-            A collection of quickstart samples demonstrating the Firebase APIs
-            on Android. For more information, see https://firebase.google.com
+            {{ repo.metadata.longDescription }}
           </p>
 
-          <MaterialButton type="secondary" class="mt-8">
-            View on GitHub
-            <font-awesome-icon icon="external-link-alt" class="ml-1" />
-          </MaterialButton>
+          <a
+            target="blank"
+            :href="`https://github.com/${repo.metadata.owner}/${repo.metadata.repo}`"
+          >
+            <MaterialButton type="secondary" class="mt-8">
+              View on GitHub
+              <font-awesome-icon icon="external-link-alt" class="ml-1" />
+            </MaterialButton>
+          </a>
         </div>
 
         <div class="col-start-9 col-span-2 text-white">
-          <p class="pt-1">123 <font-awesome-icon fixed-width icon="star" /></p>
           <p class="pt-1">
-            456 <font-awesome-icon fixed-width icon="code-branch" />
+            {{ repo.stats.stars }} <font-awesome-icon fixed-width icon="star" />
+          </p>
+          <p class="pt-1">
+            {{ repo.stats.forks }}
+            <font-awesome-icon fixed-width icon="code-branch" />
           </p>
         </div>
       </div>
@@ -30,12 +37,14 @@
     <template v-slot:sidebar>
       <!-- Side bar -->
       <div>
-        <p class="uppercase font-medium mt-4 mb-2">Firebase</p>
+        <p class="uppercase font-medium mt-4 mb-2">{{ product.name }}</p>
+        <!-- TODO: This content needs to be real -->
         <ul class="text-sm">
           <li><a>All Projects</a></li>
           <li><a>Official Docs</a></li>
         </ul>
 
+        <!-- TODO: This content needs to be real -->
         <p class="uppercase font-medium mt-4 mb-2">Project</p>
         <ul class="text-sm">
           <li><a>Home</a></li>
@@ -43,6 +52,7 @@
           <li><a>Getting Started</a></li>
         </ul>
 
+        <!-- TODO: This content needs to be real -->
         <p class="uppercase font-medium mt-4 mb-2">Related</p>
         <ul class="text-sm">
           <li><a>firebase/quickstart-js</a></li>
@@ -104,8 +114,13 @@ public static void main(String[] args) {
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import { getModule } from "vuex-module-decorators";
+
+import ProjectsModule from "@/store/project";
 import MaterialButton from "@/components/MaterialButton.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
+import { GitHubProject } from "../../../shared/types";
+import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 
 @Component({
   components: {
@@ -113,7 +128,26 @@ import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
     HeaderSidebarLayout,
   },
 })
-export default class Project extends Vue {}
+export default class Project extends Vue {
+  public product!: ProductConfig;
+  public repo: GitHubProject | null = null;
+
+  private productKey!: string;
+  private id!: string;
+
+  private projectsModule = getModule(ProjectsModule, this.$store);
+
+  async mounted() {
+    this.productKey = this.$route.params["product"];
+    this.id = this.$route.params["repo"];
+
+    this.product = ALL_PRODUCTS[this.productKey];
+
+    const opts = { product: this.productKey, id: this.id };
+    await this.projectsModule.fetchRepo(opts);
+    this.repo = this.projectsModule.repoByProductAndId(opts);
+  }
+}
 </script>
 
 <style scoped lang="postcss"></style>
