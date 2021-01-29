@@ -30,7 +30,9 @@
 
       <!-- Timestamp and Button -->
       <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
-        <span class="flex-grow text-gray-500">updated 8 days ago</span>
+        <span class="flex-grow text-gray-500"
+          >updated {{ renderDaysAgo(project.stats.lastUpdated) }}</span
+        >
         <router-link to="/projects/firebaseui-android"
           ><MaterialButton type="text">Learn More</MaterialButton></router-link
         >
@@ -51,6 +53,8 @@ import { GitHubProject } from "../../../shared/types";
 import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
 
+import * as dates from "@/plugins/dates";
+
 @Component({
   components: {
     MaterialButton,
@@ -59,6 +63,10 @@ import TagChip from "@/components/TagChip.vue";
 })
 export default class SmallProjectCard extends Vue {
   @Prop() project!: GitHubProject;
+
+  public renderDaysAgo(lastUpdated: number) {
+    return dates.renderDaysAgo(lastUpdated);
+  }
 }
 </script>
 

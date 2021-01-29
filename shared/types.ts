@@ -55,6 +55,7 @@ export interface GitHubProjectMetadata {
 export interface GithubProjectStats {
   stars: number;
   forks: number;
+  lastUpdated: number;
 }
 
 export interface GitHubProject {
@@ -75,6 +76,7 @@ export interface BlogMetadata {
 
 export interface BlogStats {
   minutes: number;
+  lastUpdated: number;
 }
 
 export interface BlogData {

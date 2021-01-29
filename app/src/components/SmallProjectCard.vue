@@ -25,7 +25,9 @@
 
       <!-- Timestamp and Buttons -->
       <div class="flex flex-row pl-3 items-baseline">
-        <span class="flex-grow text-sm text-gray-500">updated 8 hours ago</span>
+        <span class="flex-grow text-sm text-gray-500"
+          >updated {{ renderDaysAgo(project.stats.lastUpdated) }}</span
+        >
         <!-- TODO: Link to the real project page -->
         <router-link to="/projects/firebaseui-android"
           ><MaterialButton type="text">Learn More</MaterialButton></router-link
@@ -41,6 +43,8 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 import { GitHubProject } from "../../../shared/types";
 import MaterialButton from "@/components/MaterialButton.vue";
 
+import * as dates from "@/plugins/dates";
+
 @Component({
   components: {
     MaterialButton,
@@ -48,6 +52,10 @@ import MaterialButton from "@/components/MaterialButton.vue";
 })
 export default class SmallProjectCard extends Vue {
   @Prop() project!: GitHubProject;
+
+  public renderDaysAgo(lastUpdated: number) {
+    return dates.renderDaysAgo(lastUpdated);
+  }
 }
 </script>
 
