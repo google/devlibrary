@@ -5,33 +5,32 @@
       <!-- GitHub Header -->
       <div class="bg-gray-900 text-white px-3 py-2">
         <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-2" />
-        <span>{{ project.metadata.owner }}</span>
+        <span>{{ repo.metadata.owner }}</span>
       </div>
 
       <!-- Title and Stats -->
       <div class="mt-2 px-3 flex flex-row items-center">
         <span class="text-lg font-medium flex-grow">{{
-          project.metadata.repo
+          repo.metadata.repo
         }}</span>
         <span class="ml-2 text-sm"
-          >{{ project.stats.stars }}
-          <font-awesome-icon class="ml-1" icon="star"
+          >{{ repo.stats.stars }} <font-awesome-icon class="ml-1" icon="star"
         /></span>
         <span class="ml-2 text-sm"
-          >{{ project.stats.forks }}
+          >{{ repo.stats.forks }}
           <font-awesome-icon class="ml-1" icon="code-branch"
         /></span>
       </div>
 
       <!-- Description -->
       <div class="flex-grow mt-2 px-3 wrap-lines-3">
-        {{ project.metadata.longDescription }}
+        {{ repo.metadata.longDescription }}
       </div>
 
       <!-- Timestamp and Button -->
       <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
         <span class="flex-grow text-gray-500"
-          >updated {{ renderDaysAgo(project.stats.lastUpdated) }}</span
+          >updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span
         >
         <router-link :to="link"
           ><MaterialButton type="text">Learn More</MaterialButton></router-link
@@ -41,7 +40,7 @@
 
     <!-- Card tags -->
     <div class="mt-2 flex flex-row items-center">
-      <TagChip v-for="t in project.metadata.tags" :key="t" :name="t" />
+      <TagChip v-for="t in repo.metadata.tags" :key="t" :name="t" />
     </div>
   </div>
 </template>
@@ -63,7 +62,7 @@ import * as dates from "@/plugins/dates";
 })
 export default class LargeRepoCard extends Vue {
   @Prop() link!: string;
-  @Prop() project!: RepoData;
+  @Prop() repo!: RepoData;
 
   public renderDaysAgo(lastUpdated: number) {
     return dates.renderDaysAgo(lastUpdated);

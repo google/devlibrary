@@ -94,17 +94,17 @@
         <div v-if="showOpenSource">
           <h2 class="text-2xl mt-8">Open Source</h2>
 
-          <div v-if="projects.length === 0" class="mt-4">
+          <div v-if="repos.length === 0" class="mt-4">
             No projects matching your filters...
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <LargeRepoCard
               class="mt-4"
-              v-for="project in projects"
-              :key="project.name"
-              :link="repoPath(project)"
-              :project="project"
+              v-for="repo in repos"
+              :key="repo.name"
+              :link="repoPath(repo)"
+              :repo="repo"
             />
           </div>
         </div>
@@ -196,7 +196,7 @@ export default class Product extends Vue {
     );
   }
 
-  get projects() {
+  get repos() {
     // TODO: This filter should be done in the VueX module as a db query
     return this.projectsModule.gitHubProjects.filter((x) => {
       return (

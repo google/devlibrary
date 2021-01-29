@@ -10,15 +10,15 @@
       <div class="flex-grow card-top-grid pl-3 pr-2 mb-4">
         <!-- Title and Description -->
         <div class="text-base">
-          <div class="font-medium">{{ project.metadata.repo }}</div>
+          <div class="font-medium">{{ repo.metadata.repo }}</div>
           <div class="wrap-lines-1">
-            {{ project.metadata.shortDescription }}
+            {{ repo.metadata.shortDescription }}
           </div>
         </div>
 
         <!-- Stats -->
         <div class="whitespace-nowrap">
-          <span class="text-sm">{{ project.stats.stars }}</span>
+          <span class="text-sm">{{ repo.stats.stars }}</span>
           <font-awesome-icon icon="star" size="sm" class="ml-1" />
         </div>
       </div>
@@ -26,7 +26,7 @@
       <!-- Timestamp and Buttons -->
       <div class="flex flex-row pl-3 items-baseline">
         <span class="flex-grow text-sm text-gray-500"
-          >updated {{ renderDaysAgo(project.stats.lastUpdated) }}</span
+          >updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span
         >
         <router-link :to="link"
           ><MaterialButton type="text">Learn More</MaterialButton></router-link
@@ -51,7 +51,7 @@ import * as dates from "@/plugins/dates";
 })
 export default class SmallRepoCard extends Vue {
   @Prop() link!: string;
-  @Prop() project!: RepoData;
+  @Prop() repo!: RepoData;
 
   public renderDaysAgo(lastUpdated: number) {
     return dates.renderDaysAgo(lastUpdated);

@@ -59,10 +59,10 @@
         <div class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10">
           <div class="home-grid-projects">
             <SmallRepoCard
-              v-for="project in projects"
-              :link="repoPath(p, project)"
-              :key="project.name"
-              :project="project"
+              v-for="repo in repos"
+              :link="repoPath(p, repo)"
+              :key="repo.name"
+              :repo="repo"
             />
           </div>
         </div>
@@ -124,7 +124,7 @@ export default class Home extends Vue {
     return Object.values(ALL_PRODUCTS);
   }
 
-  get projects() {
+  get repos() {
     return this.projectsModule.gitHubProjects;
   }
 }
