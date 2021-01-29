@@ -99,7 +99,7 @@
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <LargeProjectCard
+            <LargeRepoCard
               class="mt-4"
               v-for="project in projects"
               :key="project.name"
@@ -141,7 +141,7 @@ import ProjectModule from "@/store/project";
 import BlogModule from "@/store/blog";
 
 import MaterialButton from "@/components/MaterialButton.vue";
-import LargeProjectCard from "@/components/LargeProjectCard.vue";
+import LargeRepoCard from "@/components/LargeRepoCard.vue";
 import LargeBlogCard from "@/components/LargeBlogCard.vue";
 import RadioGroup from "@/components/RadioGroup.vue";
 import CheckboxGroup, {
@@ -154,7 +154,7 @@ import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 @Component({
   components: {
     MaterialButton,
-    LargeProjectCard,
+    LargeRepoCard,
     LargeBlogCard,
     RadioGroup,
     CheckboxGroup,

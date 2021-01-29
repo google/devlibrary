@@ -61,7 +61,7 @@ import * as dates from "@/plugins/dates";
     TagChip,
   },
 })
-export default class SmallProjectCard extends Vue {
+export default class LargeRepoCard extends Vue {
   @Prop() link!: string;
   @Prop() project!: GitHubProject;
 

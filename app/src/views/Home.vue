@@ -58,7 +58,7 @@
 
         <div class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10">
           <div class="home-grid-projects">
-            <SmallProjectCard
+            <SmallRepoCard
               v-for="project in projects"
               :link="repoPath(p, project)"
               :key="project.name"
@@ -87,7 +87,7 @@ import { Component, Vue } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
 import MaterialButton from "@/components/MaterialButton.vue";
-import SmallProjectCard from "@/components/SmallProjectCard.vue";
+import SmallRepoCard from "@/components/SmallRepoCard.vue";
 
 import ProjectsModule from "@/store/project";
 
@@ -97,7 +97,7 @@ import { GitHubProject } from "../../../shared/types";
 @Component({
   components: {
     MaterialButton,
-    SmallProjectCard,
+    SmallRepoCard,
   },
 })
 export default class Home extends Vue {

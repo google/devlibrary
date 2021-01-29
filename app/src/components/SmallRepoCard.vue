@@ -49,7 +49,7 @@ import * as dates from "@/plugins/dates";
     MaterialButton,
   },
 })
-export default class SmallProjectCard extends Vue {
+export default class SmallRepoCard extends Vue {
   @Prop() link!: string;
   @Prop() project!: GitHubProject;
 
