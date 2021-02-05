@@ -16,7 +16,7 @@ function gh(): Octokit {
 export async function getRepo(owner: string, repo: string) {
   const res = await gh().repos.get({
     owner,
-    repo
+    repo,
   });
 
   return res.data;
@@ -28,7 +28,7 @@ export async function getDefaultBranch(
 ): Promise<string> {
   const res = await gh().repos.get({
     owner,
-    repo
+    repo,
   });
 
   return res.data.default_branch;
@@ -65,4 +65,26 @@ export async function getFileContent(
     (res.data as any).encoding
   );
   return buffer.toString("utf-8");
+}
+
+export async function getDirectoryContent(
+  owner: string,
+  repo: string,
+  branch: string,
+  path: string
+): Promise<string[]> {
+  const res = await gh().repos.getContent({
+    owner,
+    repo,
+    path,
+    ref: branch,
+  });
+
+  if (!Array.isArray(res.data)) {
+    throw new Error(`Not a directory: ${JSON.stringify(res.data)}`);
+  }
+
+  return res.data.map((f) => {
+    return f.path;
+  });
 }

@@ -1,38 +1,63 @@
 import * as fs from "fs";
 import * as path from "path";
+
+import * as github from "./github";
+
 import { BlogMetadata, RepoMetadata } from "../../shared/types";
 
+async function listConfigFiles(
+  product: string,
+  type: string
+): Promise<string[]> {
+  if (process.env.FUNCTIONS_EMULATOR) {
+    const configPath = path.resolve(`../config/${product}`);
+    const typePath = path.join(configPath, type);
+
+    const typeFiles = fs.readdirSync(typePath);
+    return typeFiles.map((f) => path.join(typePath, f));
+  }
+
+  return await github.getDirectoryContent(
+    "FirebasePrivate",
+    "ugc.dev",
+    "main",
+    `config/${product}/${type}`
+  );
+}
+
+async function readConfigFile(filePath: string): Promise<string> {
+  if (process.env.FUNCTIONS_EMULATOR) {
+    return fs.readFileSync(filePath).toString();
+  }
+
+  return await github.getFileContent(
+    "FirebasePrivate",
+    "ugc.dev",
+    "main",
+    filePath
+  );
+}
+
 export async function loadProjectMetadata(product: string) {
-  // TODO: Load this using the GitHub API not from the local file system
-  const configPath = path.resolve(`../config/${product}`);
-  const reposPath = path.join(configPath, "repos");
-  const blogsPath = path.join(configPath, "blogs");
+  const repoFiles = await listConfigFiles(product, "repos");
+  const blogFiles = await listConfigFiles(product, "blogs");
 
   const repos: Record<string, RepoMetadata> = {};
-  const repoFiles = fs.readdirSync(reposPath);
+
   for (const f of repoFiles) {
-    const fpath = path.join(reposPath, f);
-
     // The file name (without.json) is the id
-    const id = f.split(".")[0];
-    const metadata = JSON.parse(
-      fs.readFileSync(fpath).toString()
-    ) as RepoMetadata;
-
+    const id = path.basename(f).split(".")[0];
+    const content = await readConfigFile(f);
+    const metadata = JSON.parse(content) as RepoMetadata;
     repos[id] = metadata;
   }
 
   const blogs: Record<string, BlogMetadata> = {};
-  const blogFiles = fs.readdirSync(blogsPath);
   for (const f of blogFiles) {
-    const fpath = path.join(blogsPath, f);
-
     // The file name (without.json) is the id
-    const id = f.split(".")[0];
-    const metadata = JSON.parse(
-      fs.readFileSync(fpath).toString()
-    ) as BlogMetadata;
-
+    const id = path.basename(f).split(".")[0];
+    const content = await readConfigFile(f);
+    const metadata = JSON.parse(content) as BlogMetadata;
     blogs[id] = metadata;
   }
 
