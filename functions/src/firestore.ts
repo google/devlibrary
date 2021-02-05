@@ -1,10 +1,7 @@
 import * as admin from "firebase-admin";
-import { BlogData, RepoData } from "../../shared/types";
+import { BlogData, RepoData, RepoPage } from "../../shared/types";
 
-export async function saveRepoData(
-  product: string,
-  project: RepoData
-) {
+export async function saveRepoData(product: string, project: RepoData) {
   const db = admin.firestore();
   const ref = db
     .collection("products")
@@ -13,6 +10,27 @@ export async function saveRepoData(
     .doc(project.id);
 
   await ref.set(project);
+}
+
+export async function saveRepoPage(
+  product: string,
+  project: RepoData,
+  page: string,
+  data: RepoPage
+) {
+  const db = admin.firestore();
+
+  const pageKey = Buffer.from(page).toString("base64");
+
+  const ref = db
+    .collection("products")
+    .doc(product)
+    .collection("repos")
+    .doc(project.id)
+    .collection("pages")
+    .doc(pageKey);
+
+  await ref.set(data);
 }
 
 export async function saveBlogData(product: string, blog: BlogData) {

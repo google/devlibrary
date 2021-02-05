@@ -63,50 +63,18 @@
 
     <!-- Body -->
     <div class="grid grid-cols-10 gap-4 mb-20">
-      <div class="col-start-2 col-span-8">
-        <h2 class="text-2xl mt-8 mb-2">Section Header</h2>
-        <div>
-          <p class="my-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus
-            nulla nec nunc gravida malesuada. Fusce vel ipsum in sem semper
-            pellentesque. Morbi pharetra sapien mi, et ornare purus elementum
-            sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nam scelerisque et mauris id consequat. Vestibulum eget finibus
-            augue. Quisque libero tortor, elementum eget maximus sit amet,
-            volutpat a metus. Curabitur volutpat ultricies tortor, a mollis odio
-            gravida non.
-          </p>
-
-          <pre class="bg-gray-100 my-2 py-2 px-4">
-public static void main(String[] args) {
-  System.out.println("Hello, World!");
-}</pre
-          >
-        </div>
-
-        <h2 class="text-2xl mt-8 mb-2">Bar Baz et Qux</h2>
-        <div>
-          <p class="my-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus
-            nulla nec nunc gravida malesuada. Fusce vel ipsum in sem semper
-            pellentesque. Morbi pharetra sapien mi, et ornare purus elementum
-            sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nam scelerisque et mauris id consequat. Vestibulum eget finibus
-            augue. Quisque libero tortor, elementum eget maximus sit amet,
-            volutpat a metus. Curabitur volutpat ultricies tortor, a mollis odio
-            gravida non.
-          </p>
-          <p class="my-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus
-            nulla nec nunc gravida malesuada. Fusce vel ipsum in sem semper
-            pellentesque. Morbi pharetra sapien mi, et ornare purus elementum
-            sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nam scelerisque et mauris id consequat. Vestibulum eget finibus
-            augue. Quisque libero tortor, elementum eget maximus sit amet,
-            volutpat a metus. Curabitur volutpat ultricies tortor, a mollis odio
-            gravida non.
-          </p>
-        </div>
+      <div v-if="content != null" class="col-start-2 col-span-8">
+        <template v-for="(s, i) in content.sections">
+          <h2 v-if="i > 0" class="text-2xl mt-8 mb-2" :key="`header-${s.path}`">
+            {{ s.name }}
+          </h2>
+          <!-- The 'prose' class comes from the Tailwind typography plugin -->
+          <div
+            class="prose my-4"
+            :key="`content-${s.path}`"
+            v-html="s.content"
+          ></div>
+        </template>
       </div>
     </div>
   </HeaderSidebarLayout>
@@ -116,11 +84,13 @@ public static void main(String[] args) {
 import { Component, Vue } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
-import ProjectsModule from "@/store/project";
 import MaterialButton from "@/components/MaterialButton.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
-import { RepoData } from "../../../shared/types";
 import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
+import ProjectsModule from "@/store/project";
+import { firestore } from "@/plugins/firebase";
+
+import { RepoData, RepoPage } from "../../../shared/types";
 
 @Component({
   components: {
@@ -131,6 +101,7 @@ import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 export default class Repo extends Vue {
   public product!: ProductConfig;
   public repo: RepoData | null = null;
+  public content: RepoPage | null = null;
 
   private productKey!: string;
   private id!: string;
@@ -146,6 +117,23 @@ export default class Repo extends Vue {
     const opts = { product: this.productKey, id: this.id };
     await this.projectsModule.fetchRepo(opts);
     this.repo = this.projectsModule.repoByProductAndId(opts);
+
+    if (this.repo === null) {
+      throw new Error("Could not load repo!");
+    }
+
+    // TODO: Where should this be done?
+    const pageKey = btoa(this.repo.metadata.content);
+    const pageRef = firestore()
+      .collection("products")
+      .doc(this.productKey)
+      .collection("repos")
+      .doc(this.repo.id)
+      .collection("pages")
+      .doc(pageKey);
+
+    const snap = await pageRef.get();
+    this.content = snap.data() as RepoPage;
   }
 }
 </script>

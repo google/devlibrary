@@ -64,6 +64,17 @@ export interface RepoData {
   stats: RepoStats;
 }
 
+export interface RepoPage {
+  name: string;
+  path: string;
+  sections: RepoPageSection[];
+}
+
+export interface RepoPageSection {
+  name: string;
+  content: string;
+}
+
 export interface BlogMetadata {
   // (required) Blog author and title of the blog
   // ex: author=biswajeet, title="How to use firebase", link = "https://medium.com/xxx.html"

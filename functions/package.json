@@ -12,12 +12,21 @@
   },
   "main": "lib/functions/src/index.js",
   "dependencies": {
+    "@octokit/rest": "^18.1.0",
+    "cheerio": "^1.0.0-rc.5",
     "firebase-admin": "^9.2.0",
-    "firebase-functions": "^3.11.0"
+    "firebase-functions": "^3.11.0",
+    "marked": "^1.2.9",
+    "url-join": "^4.0.1"
   },
   "devDependencies": {
+    "@octokit/types": "^6.8.2",
+    "@types/cheerio": "^0.22.23",
+    "@types/marked": "^1.2.2",
+    "@types/url-join": "^4.0.0",
     "concurrently": "^5.3.0",
     "firebase-functions-test": "^0.2.0",
+    "firebase-tools": "^9.3.0",
     "prettier": "^2.2.1",
     "typescript": "~3.9.3"
   },
