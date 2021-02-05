@@ -7,5 +7,67 @@
   "shortDescription": "Samples to get started with Firebase on Android.",
   "longDescription": "A collection of quickstart samples demonstrating the Firebase APIs on Android. Each sample is a ready-to-run app.",
   "content": "README.md",
+  "pages": [
+    { 
+      "path": "admob/README.md", 
+      "name": "Admob" 
+    },
+    { 
+      "path": "analytics/README.md", 
+      "name": "Analytics" 
+    },
+    { 
+      "path": "app-indexing/README.md", 
+      "name": "App Indexing" 
+    },
+    { 
+      "path": "auth/README.md", 
+      "name": "Authentication" 
+    },
+    { 
+      "path": "config/README.md", 
+      "name": "Remote Config" 
+    },
+    { 
+      "path": "crash/README.md", 
+      "name": "Crashlytics" 
+    },
+    { 
+      "path": "database/README.md", 
+      "name": "Realtime Database" 
+    },
+    { 
+      "path": "dynamiclinks/README.md", 
+      "name": "Dynamic Links" 
+    },
+    { 
+      "path": "firestore/README.md", 
+      "name": "Firestore" 
+    },
+    { 
+      "path": "functions/README.md", 
+      "name": "Cloud Functions" 
+    },
+    { 
+      "path": "inappmessaging/README.md", 
+      "name": "In App Messaging" 
+    },
+    { 
+      "path": "messaging/README.md", 
+      "name": "Cloud Messaging" 
+    },
+    { 
+      "path": "mlkit/README.md", 
+      "name": "ML Kit" 
+    },
+    { 
+      "path": "perf/README.md", 
+      "name": "Performance Monitoring" 
+    },
+    { 
+      "path": "storage/README.md", 
+      "name": "Cloud Storage" 
+    }
+  ],
   "tags": ["android"]
 }
