@@ -34,3 +34,15 @@ In the `app` directory:
 ```
 npm run build && npm run deploy
 ```
+
+### Functions
+
+In the `functions` directory:
+
+```
+npm run build && npm run deploy
+```
+
+Note that the Functions have the following required config keys:
+
+  * `github.token` - [value in valentine](https://valentine.corp.google.com/#/show/1612543501395716)
