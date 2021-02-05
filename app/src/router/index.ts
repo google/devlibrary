@@ -23,6 +23,11 @@ const routes: Array<RouteConfig> = [
     component: Repo,
   },
   {
+    path: "/products/:product/repos/:repo/pages/:page(.*)",
+    name: "RepoPage",
+    component: Repo,
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting

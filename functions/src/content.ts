@@ -5,6 +5,7 @@ import * as url from "url";
 import urljoin from "url-join";
 
 import { RepoData, RepoPageSection } from "../../shared/types";
+import { cleanPagePath } from "../../shared/util";
 
 const BADGE_PATTERNS = [
   "travis-ci.org",
@@ -72,8 +73,8 @@ function sanitizeHtml(
     }
   }
 
-  // URL path to this project on ugc.dev
-  const projectBaseUrl = `/products/${product}/repos/${repo.id}/`;
+  // URL path to this project pages on ugc.dev
+  const pagesBaseUrl = `/products/${product}/repos/${repo.id}/pages/`;
 
   // URL path to this project on github
   const renderedBaseUrl = `https://github.com/${repo.metadata.owner}/${repo.metadata.repo}/tree/${branch}/`;
@@ -120,23 +121,17 @@ function sanitizeHtml(
       if (isProjectPage) {
         modifyAttr(el, "href", (h: string) => {
           let res = h;
-          res = res.toLowerCase();
-          res = res.replace(/\.md/, "");
-          res = sanitizeRelativeLink(res, projectBaseUrl);
+          res = cleanPagePath(res);
+          res = urljoin(pagesBaseUrl, res);
 
           return res;
         });
-
-        let href = el.attribs["href"];
-        href = href.toLowerCase();
-        href = href.replace(/\.md/, "");
-        href = sanitizeRelativeLink(href, projectBaseUrl);
 
         console.log(
           `Sanitizing relative project link ${repoRelative} --> ${el.attribs["href"]}`
         );
       } else {
-        sanitizeRelativeLink(href, renderedBaseUrl);
+        modifyAttr(el, "href", (h) => urljoin(renderedBaseUrl, h));
         console.log(
           `Sanitizing relative GitHub link ${repoRelative} --> ${el.attribs["href"]}`
         );
@@ -159,15 +154,25 @@ function sanitizeHtml(
       return !!src.match(pattern);
     });
 
+    // Hide all known badges
     if (isBadge) {
-      // Mark Badges
-      $(el).addClass("img-badge");
-    } else {
-      // Add the image-parent class to the parent
-      $(el).parent().addClass("img-parent");
+      $(el).addClass("hidden");
     }
 
-    modifyAttr(el, "src", (s) => sanitizeRelativeLink(s, rawBaseUrl));
+    // Add the image-parent class to the parent
+    $(el).parent().addClass("img-parent");
+
+    // If the image link is relative, make sure it's pointing to GH
+    modifyAttr(el, "src", (s) => {
+      if (!isRelativeLink(s)) {
+        return s;
+      }
+
+      let res = s;
+      res = res.toLowerCase();
+      res = urljoin(rawBaseUrl, res);
+      return res;
+    });
   });
 
   return $.html();
@@ -180,15 +185,6 @@ function modifyAttr(
 ) {
   const val = el.attribs[attrib];
   el.attribs[attrib] = fn(val);
-}
-
-function sanitizeRelativeLink(link: string, base: string): string {
-  if (isRelativeLink(link)) {
-    const newVal = urljoin(base, link);
-    return newVal.toLowerCase();
-  }
-
-  return link;
 }
 
 /**

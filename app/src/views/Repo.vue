@@ -44,12 +44,14 @@
           <li><a>Official Docs</a></li>
         </ul>
 
-        <!-- TODO: This content needs to be real -->
         <p class="uppercase font-medium mt-4 mb-2">Project</p>
         <ul class="text-sm">
-          <li><a>Home</a></li>
-          <li><a>Installation</a></li>
-          <li><a>Getting Started</a></li>
+          <li><a class="hover:underline" :href="fullPagePath()">Home</a></li>
+          <li v-for="p in repo.metadata.pages" :key="p.path">
+            <a class="hover:underline" :href="fullPagePath(p.path)">{{
+              p.name
+            }}</a>
+          </li>
         </ul>
 
         <!-- TODO: This content needs to be real -->
@@ -65,13 +67,13 @@
     <div class="grid grid-cols-10 gap-4 mb-20">
       <div v-if="content != null" class="col-start-2 col-span-8">
         <template v-for="(s, i) in content.sections">
-          <h2 v-if="i > 0" class="text-2xl mt-8 mb-2" :key="`header-${s.path}`">
+          <h2 v-if="i > 0" class="text-2xl mt-8 mb-2" :key="`header-${s.name}`">
             {{ s.name }}
           </h2>
           <!-- The 'prose' class comes from the Tailwind typography plugin -->
           <div
             class="prose my-4"
-            :key="`content-${s.path}`"
+            :key="`content-${s.name}`"
             v-html="s.content"
           ></div>
         </template>
@@ -91,6 +93,7 @@ import ProjectsModule from "@/store/project";
 import { firestore } from "@/plugins/firebase";
 
 import { RepoData, RepoPage } from "../../../shared/types";
+import * as util from "../../../shared/util";
 
 @Component({
   components: {
@@ -122,8 +125,13 @@ export default class Repo extends Vue {
       throw new Error("Could not load repo!");
     }
 
+    const page =
+      this.$route.params["page"] ||
+      util.cleanPagePath(this.repo.metadata.content);
+    console.log("Loading content", page);
+
     // TODO: Where should this be done?
-    const pageKey = btoa(this.repo.metadata.content);
+    const pageKey = btoa(page);
     const pageRef = firestore()
       .collection("products")
       .doc(this.productKey)
@@ -134,6 +142,15 @@ export default class Repo extends Vue {
 
     const snap = await pageRef.get();
     this.content = snap.data() as RepoPage;
+  }
+
+  public fullPagePath(path?: string) {
+    const base = `/products/${this.productKey}/repos/${this.repo?.id}`;
+    if (!path) {
+      return base;
+    }
+
+    return `${base}/pages/${util.cleanPagePath(path)}`;
   }
 }
 </script>

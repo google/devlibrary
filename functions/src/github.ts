@@ -13,6 +13,15 @@ function gh(): Octokit {
   return _gh;
 }
 
+export async function getRepo(owner: string, repo: string) {
+  const res = await gh().repos.get({
+    owner,
+    repo
+  });
+
+  return res.data;
+}
+
 export async function getDefaultBranch(
   owner: string,
   repo: string

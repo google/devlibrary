@@ -5,14 +5,16 @@ import {
   RepoStats,
 } from "../../shared/types";
 
+import * as github from "./github";
+
 export async function loadRepoStats(
   metadata: RepoMetadata
 ): Promise<RepoStats> {
-  // TODO: Make this real
+  const repo = await github.getRepo(metadata.owner, metadata.repo);
   return {
-    stars: random(1000),
-    forks: random(1000),
-    lastUpdated: randomTimestamp(),
+    stars: repo.stargazers_count,
+    forks: repo.forks_count,
+    lastUpdated: Date.parse(repo.updated_at),
   };
 }
 

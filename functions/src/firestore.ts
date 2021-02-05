@@ -1,5 +1,6 @@
 import * as admin from "firebase-admin";
 import { BlogData, RepoData, RepoPage } from "../../shared/types";
+import { cleanPagePath } from "../../shared/util";
 
 export async function saveRepoData(product: string, project: RepoData) {
   const db = admin.firestore();
@@ -20,7 +21,7 @@ export async function saveRepoPage(
 ) {
   const db = admin.firestore();
 
-  const pageKey = Buffer.from(page).toString("base64");
+  const pageKey = Buffer.from(cleanPagePath(page)).toString("base64");
 
   const ref = db
     .collection("products")
