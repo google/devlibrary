@@ -1,7 +1,7 @@
 name: Deploy
 on: workflow_dispatch
 jobs:
-  build_and_preview:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,6 +27,6 @@ jobs:
             (cd app && npm run build)
 
       - name: Deploy
-        run: firebase deploy
+        run: firebase --project=prod deploy
         env:
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/google-application-credentials.json

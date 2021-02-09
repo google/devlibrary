@@ -1,6 +1,7 @@
 {
   "projects": {
     "dev": "ugc-site-dev",
+    "prod": "ugc-site-dev",
     "default": "ugc-site-dev"
   }
 }
