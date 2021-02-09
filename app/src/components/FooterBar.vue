@@ -5,7 +5,7 @@
     <div class="flex flex-row items-center">
       <router-link to="/about">About</router-link>
       <span class="mx-2">·</span>
-      <a href="https://developers.google.com/terms/site-terms">Terms</a> 
+      <a href="https://developers.google.com/terms/site-terms">Terms</a>
       <span class="mx-2">·</span>
       <a href="https://policies.google.com/privacy">Privacy</a>
     </div>
@@ -21,5 +21,4 @@ export default class FooterBar extends Vue {
 }
 </script>
 
-<style scoped lang="postcss">
-</style>
+<style scoped lang="postcss"></style>

@@ -58,8 +58,17 @@
 
         <div class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10">
           <div class="home-grid-projects">
+            <p
+              v-if="
+                recentRepos[p.key] === undefined ||
+                recentRepos[p.key].length === 0
+              "
+            >
+              No recent projects...
+            </p>
             <SmallRepoCard
-              v-for="repo in repos"
+              v-else
+              v-for="repo in recentRepos[p.key]"
               :link="repoPath(p, repo)"
               :key="repo.name"
               :repo="repo"
@@ -89,11 +98,12 @@ import { getModule } from "vuex-module-decorators";
 import MaterialButton from "@/components/MaterialButton.vue";
 import SmallRepoCard from "@/components/SmallRepoCard.vue";
 
-import ProjectsModule from "@/store/project";
 import UIModule from "@/store/ui";
 
 import { ALL_PRODUCTS, ProductConfig } from "@/model/product";
-import { RepoData } from "../../../shared/types";
+import { fetchBlogs, fetchRepos } from "@/plugins/data";
+
+import { BlogData, RepoData } from "../../../shared/types";
 
 @Component({
   components: {
@@ -102,13 +112,27 @@ import { RepoData } from "../../../shared/types";
   },
 })
 export default class Home extends Vue {
-  private projectsModule = getModule(ProjectsModule, this.$store);
   private uiModule = getModule(UIModule, this.$store);
 
+  public recentBlogs: Record<string, BlogData[]> = {};
+  public recentRepos: Record<string, RepoData[]> = {};
+
   mounted() {
-    // Tell the store to load projects
-    const p = this.projectsModule.fetchProjects();
-    this.uiModule.waitFor(p);
+    const promises: Promise<unknown>[] = [];
+
+    // For each product load 2 recent repos and 2 recent blogs
+    for (const product of Object.values(ALL_PRODUCTS)) {
+      const blogPromise = fetchBlogs(product.key, { limit: 2 }).then((data) =>
+        Vue.set(this.recentBlogs, product.key, data)
+      );
+      const repoPromise = fetchRepos(product.key, { limit: 2 }).then((data) =>
+        Vue.set(this.recentRepos, product.key, data)
+      );
+
+      promises.push(blogPromise, repoPromise);
+    }
+
+    this.uiModule.waitFor(Promise.all(promises));
   }
 
   public scrollToProducts() {
@@ -125,10 +149,6 @@ export default class Home extends Vue {
 
   get products() {
     return Object.values(ALL_PRODUCTS);
-  }
-
-  get repos() {
-    return this.projectsModule.gitHubProjects;
   }
 
   get loading() {

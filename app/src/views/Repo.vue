@@ -128,12 +128,11 @@ import { getModule } from "vuex-module-decorators";
 import MaterialButton from "@/components/MaterialButton.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
 import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
-import ProjectsModule from "@/store/project";
 import UIModule from "@/store/ui";
-import { firestore } from "@/plugins/firebase";
 
 import { RepoData, RepoPage } from "../../../shared/types";
 import * as util from "../../../shared/util";
+import { fetchRepo, fetchRepoPage } from "@/plugins/data";
 
 @Component({
   components: {
@@ -149,7 +148,6 @@ export default class Repo extends Vue {
   private productKey!: string;
   private id!: string;
 
-  private projectsModule = getModule(ProjectsModule, this.$store);
   private uiModule = getModule(UIModule, this.$store);
 
   async mounted() {
@@ -162,30 +160,14 @@ export default class Repo extends Vue {
   }
 
   async loadContent() {
-    const opts = { product: this.productKey, id: this.id };
-    await this.projectsModule.fetchRepo(opts);
-    this.repo = this.projectsModule.repoByProductAndId(opts);
+    this.repo = await fetchRepo(this.productKey, this.id);
 
-    if (this.repo === null) {
-      throw new Error("Could not load repo!");
-    }
-
-    const page =
+    const pagePath =
       this.$route.params["page"] ||
       util.cleanPagePath(this.repo.metadata.content);
+    const pageKey = btoa(pagePath);
 
-    // TODO: Where should this be done?
-    const pageKey = btoa(page);
-    const pageRef = firestore()
-      .collection("products")
-      .doc(this.productKey)
-      .collection("repos")
-      .doc(this.repo.id)
-      .collection("pages")
-      .doc(pageKey);
-
-    const snap = await pageRef.get();
-    this.content = snap.data() as RepoPage;
+    this.content = await fetchRepoPage(this.productKey, this.id, pageKey);
   }
 
   public fullPagePath(path?: string) {

@@ -63,8 +63,8 @@
 
         <RadioGroup
           prefix="sort"
-          :keys="['Recently Updated', 'Most Popular', 'Trending Now']"
-          :values="['updated', 'popular', 'trending']"
+          :keys="['Recently Added', 'Recently Updated']"
+          :values="['added', 'updated']"
         />
 
         <p class="uppercase font-medium mt-4 mb-2">Type</p>
@@ -135,10 +135,8 @@
 import { Component, Vue } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
-import { RepoData } from "../../../shared/types";
+import { BlogData, RepoData } from "../../../shared/types";
 
-import ProjectModule from "@/store/project";
-import BlogModule from "@/store/blog";
 import UIModule from "@/store/ui";
 
 import MaterialButton from "@/components/MaterialButton.vue";
@@ -151,6 +149,7 @@ import CheckboxGroup, {
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
 
 import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
+import { fetchBlogs, fetchRepos } from "@/plugins/data";
 
 @Component({
   components: {
@@ -163,19 +162,24 @@ import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
   },
 })
 export default class Product extends Vue {
-  private projectsModule = getModule(ProjectModule, this.$store);
-  private blogsModule = getModule(BlogModule, this.$store);
   private uiModule = getModule(UIModule, this.$store);
 
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
 
-  mounted() {
-    // Tell the store to load projects
-    const p1 = this.projectsModule.fetchProjects();
-    const p2 = this.blogsModule.fetchBlogs();
+  private allRepos: RepoData[] = [];
+  private allBlogs: BlogData[] = [];
 
-    this.uiModule.waitFor(Promise.all([p1, p2]));
+  mounted() {
+    const reposPromise = fetchRepos(this.product.key, {
+      limit: 10,
+    }).then((data) => this.allRepos.push(...data));
+
+    const blogsPromise = fetchBlogs(this.product.key, {
+      limit: 10,
+    }).then((data) => this.allBlogs.push(...data));
+
+    this.uiModule.waitFor(Promise.all([reposPromise, blogsPromise]));
   }
 
   public repoPath(repo: RepoData) {
@@ -202,7 +206,7 @@ export default class Product extends Vue {
 
   get repos() {
     // TODO: This filter should be done in the VueX module as a db query
-    return this.projectsModule.gitHubProjects.filter((x) => {
+    return this.allRepos.filter((x) => {
       return (
         x.metadata.tags &&
         x.metadata.tags.some((t) => this.selectedCategories.has(t))
@@ -212,7 +216,7 @@ export default class Product extends Vue {
 
   get blogs() {
     // TODO: This filter should be done in the VueX module as a db query
-    return this.blogsModule.Blogs.filter((x) => {
+    return this.allBlogs.filter((x) => {
       return (
         x.metadata.tags &&
         x.metadata.tags.some((t) => this.selectedCategories.has(t))
