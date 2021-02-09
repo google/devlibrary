@@ -53,7 +53,7 @@
 
         <div class="mt-8 col-span-7 lg:col-span-11">
           <p class="font-display text-2xl">{{ p.name }}</p>
-          <p class="text-gray-500">Trending Now</p>
+          <p class="text-gray-500">Recently Added</p>
         </div>
 
         <div class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10">
@@ -90,6 +90,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 import SmallRepoCard from "@/components/SmallRepoCard.vue";
 
 import ProjectsModule from "@/store/project";
+import UIModule from "@/store/ui";
 
 import { ALL_PRODUCTS, ProductConfig } from "@/model/product";
 import { RepoData } from "../../../shared/types";
@@ -102,10 +103,12 @@ import { RepoData } from "../../../shared/types";
 })
 export default class Home extends Vue {
   private projectsModule = getModule(ProjectsModule, this.$store);
+  private uiModule = getModule(UIModule, this.$store);
 
   mounted() {
     // Tell the store to load projects
-    this.projectsModule.fetchProjects();
+    const p = this.projectsModule.fetchProjects();
+    this.uiModule.waitFor(p);
   }
 
   public scrollToProducts() {
@@ -126,6 +129,10 @@ export default class Home extends Vue {
 
   get repos() {
     return this.projectsModule.gitHubProjects;
+  }
+
+  get loading() {
+    return this.uiModule.loading;
   }
 }
 </script>

@@ -43,13 +43,6 @@ export interface RepoMetadata {
   //    { title: "Donate", "https://patreon.com/whatever }
   // ]
   links?: { title: string; href: string }[];
-
-  // (optional) Related projects that are also on the UGC site
-  // ex: [
-  //    { type: "repo", id: "github/firebase/foo" },
-  //    { type: "blog", id: "medium/firebase/bar" }
-  // ]
-  related?: { type: string; id: string }[];
 }
 
 export interface RepoStats {

@@ -14,9 +14,6 @@
     <router-link tag="div" class="nav-item nav-item-link" to="/"
       ><span>Home</span></router-link
     >
-    <router-link tag="div" class="nav-item nav-item-link" to="/about"
-      ><span>About</span></router-link
-    >
 
     <div
       class="nav-item relative z-10"

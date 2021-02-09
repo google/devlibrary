@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <NavBar class="z-10 relative" />
-    <router-view class="z-0 relative" :key="$route.fullPath" />
+    <NavBar class="z-20 relative" />
+    <ProgressBar class="z-10" />
+    <router-view class="main-content z-0 relative" :key="$route.fullPath" />
+    <FooterBar class="z-0" />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import NavBar from "@/components/NavBar.vue";
+import ProgressBar from "@/components/ProgressBar.vue";
+import FooterBar from "@/components/FooterBar.vue";
 
 @Component({
   components: {
     NavBar,
+    ProgressBar,
+    FooterBar,
   },
 })
 export default class App extends Vue {}
@@ -39,5 +45,9 @@ h4,
 h5,
 h6 {
   @apply font-display;
+}
+
+.main-content {
+  min-height: 100vh;
 }
 </style>

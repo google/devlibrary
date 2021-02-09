@@ -139,6 +139,7 @@ import { RepoData } from "../../../shared/types";
 
 import ProjectModule from "@/store/project";
 import BlogModule from "@/store/blog";
+import UIModule from "@/store/ui";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import LargeRepoCard from "@/components/LargeRepoCard.vue";
@@ -164,14 +165,17 @@ import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 export default class Product extends Vue {
   private projectsModule = getModule(ProjectModule, this.$store);
   private blogsModule = getModule(BlogModule, this.$store);
+  private uiModule = getModule(UIModule, this.$store);
 
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
 
   mounted() {
     // Tell the store to load projects
-    this.projectsModule.fetchProjects();
-    this.blogsModule.fetchBlogs();
+    const p1 = this.projectsModule.fetchProjects();
+    const p2 = this.blogsModule.fetchBlogs();
+
+    this.uiModule.waitFor(Promise.all([p1, p2]));
   }
 
   public repoPath(repo: RepoData) {
