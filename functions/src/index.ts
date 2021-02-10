@@ -20,6 +20,17 @@ export const refreshProjects = functions.https.onRequest(
 
     const { repos, blogs } = await loadProjectMetadata(product);
 
+    for (const [id, metadata] of Object.entries(blogs)) {
+      const stats = await loadBlogStats(metadata);
+      const blog = {
+        id,
+        metadata,
+        stats,
+      };
+
+      await saveBlogData(product, blog);
+    }
+
     // TODO: This should probably fan out to another function
     for (const [id, metadata] of Object.entries(repos)) {
       // First save the repo metadata and stats
@@ -70,17 +81,6 @@ export const refreshProjects = functions.https.onRequest(
         };
         await saveRepoPage(product, repo, p.path, data);
       }
-    }
-
-    for (const [id, metadata] of Object.entries(blogs)) {
-      const stats = await loadBlogStats(metadata);
-      const blog = {
-        id,
-        metadata,
-        stats,
-      };
-
-      await saveBlogData(product, blog);
     }
 
     response.json({ status: "ok" });

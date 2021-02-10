@@ -81,6 +81,7 @@ export interface BlogMetadata {
 
 export interface BlogStats {
   minutes: number;
+  claps: number;
   lastUpdated: number;
 }
 

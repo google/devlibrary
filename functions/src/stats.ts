@@ -1,3 +1,4 @@
+import axios from "axios";
 import {
   BlogMetadata,
   BlogStats,
@@ -21,17 +22,38 @@ export async function loadRepoStats(
 export async function loadBlogStats(
   metadata: BlogMetadata
 ): Promise<BlogStats> {
-  // TODO: Make this real
-  return {
-    minutes: random(30),
-    lastUpdated: randomTimestamp(),
-  };
-}
+  // Medium has a secret JSON API
+  const url = `${metadata.link}?format=json`;
 
-function random(ceil: number) {
-  return Math.floor(Math.random() * ceil);
-}
+  console.log(url);
 
-function randomTimestamp() {
-  return new Date().getTime() - random(7 * 24 * 60 * 60 * 1000);
+  const res = await axios.get(url);
+
+  // Payloads start with something like this to prevent eval:
+  // ])}while(1);</x>{
+  // We just start at the first {
+  const payload = res.data as string;
+
+  try {
+    const data = JSON.parse(payload.substr(payload.indexOf("{")));
+
+    const minutes = Math.round(data.payload.value.virtuals.readingTime);
+    const claps = data.payload.value.virtuals.totalClapCount;
+    const lastUpdated = data.payload.value.latestPublishedAt;
+
+    return {
+      minutes,
+      claps,
+      lastUpdated,
+    };
+  } catch (e) {
+    console.error(`Could not get stats for ${metadata.link}`, e);
+
+    // By default we'll just say 10 minute read, 50 claps, 30 days ago.
+    return {
+      minutes: 10,
+      claps: 50,
+      lastUpdated: new Date().getTime() - 30 * 24 * 60 * 60 * 1000,
+    };
+  }
 }
