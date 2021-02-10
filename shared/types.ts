@@ -1,3 +1,8 @@
+export enum ProductKey {
+  FIREBASE = "firebase",
+  ML = "ml",
+}
+
 export interface RepoMetadata {
   // TODO: Source and version
 
@@ -57,15 +62,15 @@ export interface RepoData {
   stats: RepoStats;
 }
 
+export interface RepoPageSection {
+  name: string;
+  content: string;
+}
+
 export interface RepoPage {
   name: string;
   path: string;
   sections: RepoPageSection[];
-}
-
-export interface RepoPageSection {
-  name: string;
-  content: string;
 }
 
 export interface BlogMetadata {

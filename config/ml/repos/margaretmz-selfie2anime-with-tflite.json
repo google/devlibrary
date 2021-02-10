@@ -1,0 +1,11 @@
+{
+  "version": 1.0,
+  "source": "github",
+  "owner": "margaretmz",
+  "repo": "Selfie2Anime-with-TFLite",
+  "name": "Selfie2Anime with TensorFlow Lite",
+  "shortDescription": "End-to-end sample showing a TFLite-powered Android app for turning a selfie into anime.",
+  "longDescription": "End-to-end sample showing a TFLite-powered Android app for turning a selfie into anime. This is the GitHub repo which pairs with a three-part tutorial on Medium.",
+  "content": "README.md",
+  "tags": ["mobile"]
+}

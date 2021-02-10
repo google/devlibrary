@@ -1,5 +1,7 @@
+import { ProductKey } from "../../../shared/types";
+
 export interface ProductConfig {
-  key: string;
+  key: ProductKey;
   name: string;
   description: string;
   docsUrl: string;
@@ -22,7 +24,7 @@ export interface ProductConfig {
 
 export const ALL_PRODUCTS: Record<string, ProductConfig> = {
   firebase: {
-    key: "firebase",
+    key: ProductKey.FIREBASE,
     name: "Firebase",
     description:
       "Firebase helps you build and run successful apps. Backed by Google and loved by app development teams - from startups to global enterprises",
@@ -60,7 +62,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     ],
   },
   ml: {
-    key: "ml",
+    key: ProductKey.ML,
     name: "Machine Learning",
     description:
       "ML Kit brings Google’s machine learning expertise to mobile developers in a powerful and easy-to-use package. Make your iOS and Android apps more engaging, personalized, and helpful with solutions that are optimized to run on device.",
