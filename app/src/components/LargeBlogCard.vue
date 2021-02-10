@@ -36,7 +36,7 @@
 
     <!-- Card tags -->
     <div class="mt-2 flex flex-row items-center">
-      <TagChip v-for="t in blog.metadata.tags" :key="t" :name="t" />
+      <TagChip v-for="t in blog.metadata.tags" :key="t" :tag="getTag(t)" />
     </div>
   </div>
 </template>
@@ -46,6 +46,7 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 import { BlogData } from "../../../shared/types";
 import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
+import * as product from "@/model/product";
 
 @Component({
   components: {
@@ -54,7 +55,12 @@ import TagChip from "@/components/TagChip.vue";
   },
 })
 export default class LargeBlogCard extends Vue {
+  @Prop() product!: string;
   @Prop() blog!: BlogData;
+
+  public getTag(value: string) {
+    return product.getTag(this.product, value);
+  }
 }
 </script>
 

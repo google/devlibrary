@@ -40,7 +40,7 @@
 
     <!-- Card tags -->
     <div class="mt-2 flex flex-row items-center">
-      <TagChip v-for="t in repo.metadata.tags" :key="t" :name="t" />
+      <TagChip v-for="t in repo.metadata.tags" :key="t" :tag="getTag(t)" />
     </div>
   </div>
 </template>
@@ -53,6 +53,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
 
 import * as dates from "@/plugins/dates";
+import * as product from "@/model/product";
 
 @Component({
   components: {
@@ -61,11 +62,16 @@ import * as dates from "@/plugins/dates";
   },
 })
 export default class LargeRepoCard extends Vue {
-  @Prop() link!: string;
+  @Prop() product!: string;
   @Prop() repo!: RepoData;
+  @Prop() link!: string;
 
   public renderDaysAgo(lastUpdated: number) {
     return dates.renderDaysAgo(lastUpdated);
+  }
+
+  public getTag(value: string) {
+    return product.getTag(this.product, value);
   }
 }
 </script>

@@ -1,5 +1,17 @@
 import { ProductKey } from "../../../shared/types";
 
+export interface ProductTag {
+  // The human-readable name (Android, Node.js)
+  key: string;
+
+  // The database value (android, node)
+  value: string;
+
+  // The color to use, bg-{color}-{number}
+  // See: https://tailwindcss.com/docs/background-color
+  color: string;
+}
+
 export interface ProductConfig {
   key: ProductKey;
   name: string;
@@ -13,13 +25,7 @@ export interface ProductConfig {
     iconBorder: string;
   };
 
-  tags: {
-    // The human-readable name (Android, Node.js)
-    key: string;
-
-    // The database value (android, node)
-    value: string;
-  }[];
+  tags: ProductTag[];
 }
 
 export const ALL_PRODUCTS: Record<string, ProductConfig> = {
@@ -38,26 +44,32 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       {
         key: "Android",
         value: "android",
+        color: "bg-green-500",
       },
       {
         key: "iOS",
         value: "ios",
+        color: "bg-blue-500",
       },
       {
         key: "Web",
         value: "web",
+        color: "bg-purple-500",
       },
       {
         key: "Games",
         value: "games",
+        color: "bg-pink-500",
       },
       {
         key: "Node.js",
         value: "node",
+        color: "bg-yellow-500",
       },
       {
         key: "Admin",
         value: "admin",
+        color: "bg-gray-500",
       },
     ],
   },
@@ -76,11 +88,28 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       {
         key: "Mobile",
         value: "mobile",
+        color: "bg-blue-500",
       },
       {
         key: "Cloud",
         value: "cloud",
+        color: "bg-red-500",
       },
     ],
   },
 };
+
+export function getTag(product: string, value: string): ProductTag {
+  const p = ALL_PRODUCTS[product];
+  const t = p.tags.find((t) => t.value === value);
+  if (t) {
+    return t;
+  }
+
+  console.warn("Warning: unknown tag", value);
+  return {
+    value,
+    key: value.charAt(0).toUpperCase() + value.slice(1),
+    color: "bg-gray-500",
+  };
+}

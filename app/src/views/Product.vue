@@ -104,6 +104,7 @@
               v-for="repo in repos"
               :key="repo.name"
               :link="repoPath(repo)"
+              :product="product.key"
               :repo="repo"
             />
           </div>
@@ -122,6 +123,7 @@
               class="mt-4"
               v-for="blog in blogs"
               :key="blog.title"
+              :product="product.key"
               :blog="blog"
             />
           </div>
