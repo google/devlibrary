@@ -58,20 +58,17 @@
 
         <div class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10">
           <div class="home-grid-projects">
-            <p
-              v-if="
-                recentRepos[p.key] === undefined ||
-                recentRepos[p.key].length === 0
-              "
-            >
-              No recent projects...
-            </p>
             <SmallRepoCard
-              v-else
               v-for="repo in recentRepos[p.key]"
               :link="repoPath(p, repo)"
-              :key="repo.name"
+              :key="repo.id"
               :repo="repo"
+            />
+
+            <SmallBlogCard
+              v-for="blog in recentBlogs[p.key]"
+              :key="blog.id"
+              :blog="blog"
             />
           </div>
         </div>
@@ -97,6 +94,7 @@ import { getModule } from "vuex-module-decorators";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import SmallRepoCard from "@/components/SmallRepoCard.vue";
+import SmallBlogCard from "@/components/SmallBlogCard.vue";
 
 import UIModule from "@/store/ui";
 
@@ -109,6 +107,7 @@ import { BlogData, RepoData } from "../../../shared/types";
   components: {
     MaterialButton,
     SmallRepoCard,
+    SmallBlogCard,
   },
 })
 export default class Home extends Vue {

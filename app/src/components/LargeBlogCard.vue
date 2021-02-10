@@ -20,7 +20,7 @@
 
       <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
         <span class="flex-grow text-gray-500">
-          {{ blog.stats.minutes }} mins read</span
+          {{ blog.stats.minutes }} mins. read</span
         >
         <a :href="blog.metadata.link" target="blank"
           ><MaterialButton type="text">
