@@ -22,27 +22,15 @@ In a second terminal in the `functions` directory:
 npm run serve
 ```
 
-To see the Firestore emulator with some data, hit this endpoint in your browser:
+To seed the Firestore emulator with some data, hit this endpoint in your browser:
 http://localhost:5001/ugc-site-dev/us-central1/refreshProjects
 
 ## Deployment
 
-### Hosting
+To deploy:
+  * Navigate to the Actions page on GitHub: https://github.com/FirebasePrivate/ugc.dev/actions
+  * Select the **Deploy** action and click **Run workflow**
 
-In the `app` directory:
-
-```
-npm run build && npm run deploy
-```
-
-### Functions
-
-In the `functions` directory:
-
-```
-npm run build && npm run deploy
-```
-
-Note that the Functions have the following required config keys:
+Note that the Functions have the following required configuration (already set up):
 
   * `github.token` - [value in valentine](https://valentine.corp.google.com/#/show/1612543501395716)

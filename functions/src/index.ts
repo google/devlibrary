@@ -1,5 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
+import { PubSub } from "@google-cloud/pubsub";
 
 import { loadProjectMetadata } from "./metadata";
 import { loadBlogStats, loadRepoStats } from "./stats";
@@ -8,89 +9,133 @@ import { saveBlogData, saveRepoData, saveRepoPage } from "./firestore";
 import * as content from "./content";
 import * as github from "./github";
 
-import { ProductKey, RepoPage } from "../../shared/types";
+import {
+  BlogMetadata,
+  ProductKey,
+  RepoMetadata,
+  RepoPage,
+} from "../../shared/types";
 
 admin.initializeApp();
 
-// TODO: This should not be a public HTTP function, should be a cron
-export const refreshProjects = functions.https.onRequest(
-  async (request, response) => {
-    const products = Object.values(ProductKey);
+const pubsub = new PubSub();
 
-    for (const product of products) {
-      console.log("Refreshing product", product);
+async function refreshAll() {
+  const products = Object.values(ProductKey);
 
-      const { repos, blogs } = await loadProjectMetadata(product);
+  for (const product of products) {
+    console.log("Refreshing product", product);
 
-      // TODO: This should probably fan out to another function
+    const { repos, blogs } = await loadProjectMetadata(product);
 
-      for (const [id, metadata] of Object.entries(blogs)) {
-        console.log("Refreshing blog", product, id);
-
-        const stats = await loadBlogStats(metadata);
-        const blog = {
-          id,
-          metadata,
-          stats,
-        };
-
-        await saveBlogData(product, blog);
-      }
-
-      for (const [id, metadata] of Object.entries(repos)) {
-        console.log("Refreshing repo", product, id);
-
-        // First save the repo metadata and stats
-        const stats = await loadRepoStats(metadata);
-        const repo = {
-          id,
-          metadata,
-          stats,
-        };
-        await saveRepoData(product, repo);
-
-        // Then save a document for each page
-        const pages = [
-          {
-            name: "main",
-            path: metadata.content,
-          },
-          ...(metadata.pages || []),
-        ];
-
-        const branch = await github.getDefaultBranch(
-          metadata.owner,
-          metadata.repo
-        );
-
-        for (const p of pages) {
-          // Get Markdown from GitHub
-          const md = await github.getFileContent(
-            metadata.owner,
-            metadata.repo,
-            branch,
-            p.path
-          );
-
-          // Render into a series of HTML "sections"
-          const sections = content.renderContent(
-            product,
-            repo,
-            p.path,
-            md,
-            branch
-          );
-
-          const data: RepoPage = {
-            name: p.name,
-            path: p.path,
-            sections,
-          };
-          await saveRepoPage(product, repo, p.path, data);
-        }
-      }
+    for (const [id, metadata] of Object.entries(blogs)) {
+      await pubsub.topic("refresh-blog").publishJSON({
+        product,
+        id,
+        metadata,
+      });
     }
 
-    response.json({ status: "ok" });
+    for (const [id, metadata] of Object.entries(repos)) {
+      await pubsub.topic("refresh-repo").publishJSON({
+        product,
+        id,
+        metadata,
+      });
+    }
   }
-);
+}
+
+// Cron job to refresh all projects each day
+export const refreshProjectsCron = functions.pubsub
+  .schedule("every day")
+  .onRun(async (context) => {
+    await refreshAll();
+  });
+
+// When in the functions emulator we provide a simple webhook to refresh things
+if (process.env.FUNCTIONS_EMULATOR) {
+  exports.refreshProjects = functions.https.onRequest(
+    async (request, response) => {
+      await refreshAll();
+      response.json({ status: "ok" });
+    }
+  );
+}
+
+export const refreshBlog = functions.pubsub
+  .topic("refresh-blog")
+  .onPublish(async (message, context) => {
+    if (!(message.json.product && message.json.id && message.json.metadata)) {
+      throw new Error(`Invalid message: ${JSON.stringify(message.json)}`);
+    }
+
+    const product = message.json.product as string;
+    const id = message.json.id as string;
+    const metadata = message.json.metadata as BlogMetadata;
+
+    console.log("Refreshing blog", product, id);
+
+    const stats = await loadBlogStats(metadata);
+    const blog = {
+      id,
+      metadata,
+      stats,
+    };
+
+    await saveBlogData(product, blog);
+  });
+
+export const refreshRepo = functions.pubsub
+  .topic("refresh-repo")
+  .onPublish(async (message, context) => {
+    if (!(message.json.product && message.json.id && message.json.metadata)) {
+      throw new Error(`Invalid message: ${JSON.stringify(message.json)}`);
+    }
+
+    const product = message.json.product as string;
+    const id = message.json.id as string;
+    const metadata = message.json.metadata as RepoMetadata;
+
+    console.log("Refreshing repo", product, id);
+
+    // First save the repo metadata and stats
+    const stats = await loadRepoStats(metadata);
+    const repo = {
+      id,
+      metadata,
+      stats,
+    };
+    await saveRepoData(product, repo);
+
+    // Then save a document for each page
+    const pages = [
+      {
+        name: "main",
+        path: metadata.content,
+      },
+      ...(metadata.pages || []),
+    ];
+
+    const branch = await github.getDefaultBranch(metadata.owner, metadata.repo);
+
+    for (const p of pages) {
+      // Get Markdown from GitHub
+      const md = await github.getFileContent(
+        metadata.owner,
+        metadata.repo,
+        branch,
+        p.path
+      );
+
+      // Render into a series of HTML "sections"
+      const sections = content.renderContent(product, repo, p.path, md, branch);
+
+      const data: RepoPage = {
+        name: p.name,
+        path: p.path,
+        sections,
+      };
+      await saveRepoPage(product, repo, p.path, data);
+    }
+  });
