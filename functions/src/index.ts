@@ -9,12 +9,9 @@ import { saveBlogData, saveRepoData, saveRepoPage } from "./firestore";
 import * as content from "./content";
 import * as github from "./github";
 
-import {
-  BlogMetadata,
-  ProductKey,
-  RepoMetadata,
-  RepoPage,
-} from "../../shared/types";
+import { BlogMetadata } from "../../shared/types/BlogMetadata";
+import { RepoMetadata } from "../../shared/types/RepoMetadata";
+import { ProductKey, RepoPage } from "../../shared/types";
 
 admin.initializeApp();
 

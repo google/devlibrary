@@ -3,7 +3,8 @@ import * as path from "path";
 
 import * as github from "./github";
 
-import { BlogMetadata, RepoMetadata } from "../../shared/types";
+import { BlogMetadata } from "../../shared/types/BlogMetadata";
+import { RepoMetadata } from "../../shared/types/RepoMetadata";
 
 async function listConfigFiles(
   product: string,

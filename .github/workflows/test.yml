@@ -34,3 +34,6 @@ jobs:
 
       - name: Build Functions
         run: (cd functions && npm install && npm run build)
+
+      - name: Validate Schemas
+        run: (cd shared && npm run validate)

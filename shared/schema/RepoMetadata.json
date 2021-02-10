@@ -1,0 +1,76 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "RepoMetadata",
+  "type": "object",
+  "properties": {
+    "owner": {
+      "type": "string",
+      "description": "GitHub owner/organization"
+    },
+    "repo": {
+      "type": "string",
+      "description": "GitHub repo name"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name for the repo"
+    },
+    "shortDescription": {
+      "type": "string",
+      "description": "One line description"
+    },
+    "longDescription": {
+      "type": "string",
+      "description": "Two or three line description"
+    },
+    "content": {
+      "type": "string",
+      "description": "File name of the main markdown file in the repo (ex: README.md)"
+    },
+    "tags": {
+      "type": "array",
+      "description": "Array of product-specific tags",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pages": {
+      "type": "array",
+      "description": "Information about additional pages in the project other than the main page.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the page, ex: 'Installation"
+          },
+          "path": {
+            "type": "string",
+            "description": "Path to the markdown file defining the page, ex: 'docs/installing.md'"
+          }
+        },
+        "required": ["name", "path"]
+      }
+    },
+    "links": {
+      "type": "array",
+      "description": "Links to important external project resources",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Name of the link"
+          },
+          "href": {
+            "type": "string",
+            "description": "Full external link"
+          }
+        },
+        "required": ["title", "href"]
+      }
+    }
+  },
+  "required": [ "owner", "repo", "name", "shortDescription", "longDescription", "content" ]
+}

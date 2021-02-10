@@ -1,10 +1,8 @@
 import axios from "axios";
-import {
-  BlogMetadata,
-  BlogStats,
-  RepoMetadata,
-  RepoStats,
-} from "../../shared/types";
+
+import { BlogMetadata } from "../../shared/types/BlogMetadata";
+import { RepoMetadata } from "../../shared/types/RepoMetadata";
+import { BlogStats, RepoStats } from "../../shared/types";
 
 import * as github from "./github";
 

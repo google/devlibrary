@@ -1,0 +1,28 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "BlogMetadata",
+  "type": "object",
+  "properties": {
+    "author": {
+      "type": "string",
+      "description": "The name of the human author"
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the blog post"
+    },
+    "link": {
+      "type": "string",
+      "description": "Full external link to the post"
+    },
+    "tags": {
+      "type": "array",
+      "description": "Array of product-specific string tags",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [ "author", "title", "link" ]
+}
