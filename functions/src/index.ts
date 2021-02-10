@@ -48,7 +48,7 @@ async function refreshAll() {
 
 // Cron job to refresh all projects each day
 export const refreshProjectsCron = functions.pubsub
-  .schedule("every day")
+  .schedule("0 0 * * *")
   .onRun(async (context) => {
     await refreshAll();
   });
