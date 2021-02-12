@@ -11,10 +11,10 @@
 
         <div class="mt-10 lg:text-lg">
           <p>
-            Welcome to ugc.dev, a showcase of what developers like you have
-            built with Google technologies
+            Welcome to <strong>library.google.dev</strong>, a showcase of what
+            developers like you have built with Google technologies!
           </p>
-          <p class="mt-2">Browse and learn, or submit your own!</p>
+          <p class="mt-10">Browse and learn, or submit your own!</p>
         </div>
 
         <div class="mt-8">
