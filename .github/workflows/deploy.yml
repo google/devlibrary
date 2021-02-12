@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: |
             (cd functions && npm run build)
-            (cd app && npm run build)
+            (cd app && npm run build:staging)
 
       - name: Deploy
         run: |
