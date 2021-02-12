@@ -1,6 +1,8 @@
 export enum ProductKey {
   FIREBASE = "firebase",
   ML = "ml",
+  ANGULAR = "angular",
+  FLUTTER = "flutter"
 }
 
 /**
