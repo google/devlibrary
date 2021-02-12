@@ -104,9 +104,9 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       "Angular is an open-source framework for developing large-scale frontend applications.",
     docsUrl: "https://angular.io/",
     classes: {
-      bg: "bg-ml-bg",
-      text: "text-ml-text",
-      iconBorder: "border-ml-accent",
+      bg: "bg-angular-bg",
+      text: "text-angular-text",
+      iconBorder: "border-angular-accent",
     },
     tags: [
       {
@@ -138,9 +138,9 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       "An open-source UI toolkit that makes it easy and fast to build beautiful mobile apps. Flutter apps run natively on iOS and Android and are powered by the Dart language. ",
     docsUrl: "https://flutter.dev/",
     classes: {
-      bg: "bg-ml-bg",
-      text: "text-ml-text",
-      iconBorder: "border-ml-accent",
+      bg: "bg-flutter-bg",
+      text: "text-flutter-text",
+      iconBorder: "border-flutter-accent",
     },
     tags: [
       {

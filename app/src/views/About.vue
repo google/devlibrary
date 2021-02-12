@@ -4,7 +4,7 @@
       id="header"
       class="grid gap-4 grid-cols-6 py-10 lg:py-10 bg-gray-50 border-b border-gray-100"
     >
-      <div class="col-span-4 lg:col-start-2 lg:col-span-4 mt-10">
+      <div class="col-start-2 col-span-4 mt-10">
         <h1 class="text-2xl lg:text-3xl font-semibold">
           <span class="underline">About</span>
         </h1>

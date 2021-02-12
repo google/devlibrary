@@ -27,13 +27,13 @@ module.exports = {
           text: "#1F2937",
         },
         angular: {
-          accent: "#4285F4",
-          bg: "#F1F3F4",
-          text: "#1F2937",
+          accent: "#DD0031",
+          bg: "#1976D2",
+          text: "#F2F2F2",
         },
         flutter: {
-          accent: "#4285F4",
-          bg: "#F1F3F4",
+          accent: "#02569B",
+          bg: "#13B9FD",
           text: "#1F2937",
         },
       },
