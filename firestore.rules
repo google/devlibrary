@@ -5,10 +5,16 @@ service cloud.firestore {
       allow read: if true;
     }
 
-    match /{document=**} {
-      // TODO: More secure and specific rules
+    match /products/{product}/blogs/{blog} {
       allow read: if true;
-      allow write: if false;
+    }
+
+    match /products/{product}/repos/{repo} {
+      allow read: if true;
+    }
+
+    match /products/{product}/repos/{repo}/pages/{page} {
+      allow read: if true;
     }
   }
 }
