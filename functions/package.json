@@ -4,7 +4,6 @@
     "build": "tsc",
     "build:watch": "tsc -w",
     "format": "prettier --write src/**/*.ts",
-    "deploy": "firebase deploy --only functions",
     "emulate": "firebase emulators:start",
     "serve": "concurrently 'npm run build:watch' 'npm run emulate'"
   },

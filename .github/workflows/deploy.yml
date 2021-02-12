@@ -19,11 +19,11 @@ jobs:
       - name: Build
         run: |
             (cd functions && npm run build)
-            (cd app && npm run build)
+            (cd app && npm run build:staging)
 
       - name: Deploy
         run: |
           echo "${SERVICE_ACCOUNT}" > /tmp/google-application-credentials.json
-          GOOGLE_APPLICATION_CREDENTIALS=/tmp/google-application-credentials.json firebase --debug --project=prod deploy
+          GOOGLE_APPLICATION_CREDENTIALS=/tmp/google-application-credentials.json firebase --debug --project=dev deploy
         env:
           SERVICE_ACCOUNT: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_UGC_SITE_DEV }}"

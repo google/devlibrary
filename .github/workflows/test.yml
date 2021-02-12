@@ -30,7 +30,7 @@ jobs:
         run: (cd shared && npm install)
 
       - name: Build App
-        run: (cd app && npm install && npm run build)
+        run: (cd app && npm install && npm run build:production)
 
       - name: Build Functions
         run: (cd functions && npm install && npm run build)
