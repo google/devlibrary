@@ -26,6 +26,16 @@ module.exports = {
           bg: "#F1F3F4",
           text: "#1F2937",
         },
+        angular: {
+          accent: "#4285F4",
+          bg: "#F1F3F4",
+          text: "#1F2937",
+        },
+        flutter: {
+          accent: "#4285F4",
+          bg: "#F1F3F4",
+          text: "#1F2937",
+        },
       },
     },
   },

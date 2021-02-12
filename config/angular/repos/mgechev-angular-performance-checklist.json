@@ -1,0 +1,11 @@
+{
+  "version": 1.0,
+  "source": "github",
+  "owner": "mgechev",
+  "repo": "angular-performance-checklist",
+  "name": "angular-performance-checklist",
+  "shortDescription": "angular-performance-checklist",
+  "longDescription": "angular-performance-checklist",
+  "content": "README.md",
+  "tags": ["Components", "frameworks"]
+}

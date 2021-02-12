@@ -1,0 +1,11 @@
+{
+  "version": 1.0,
+  "source": "github",
+  "owner": "sudheerj",
+  "repo": "angular-interview-questions",
+  "name": "angular-interview-questions",
+  "shortDescription": "angular-interview-questions",
+  "longDescription": "angular-interview-questions",
+  "content": "README.md",
+  "tags": ["performance"]
+}

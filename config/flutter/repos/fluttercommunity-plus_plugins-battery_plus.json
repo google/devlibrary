@@ -1,0 +1,11 @@
+{
+  "version": 1.0,
+  "source": "github",
+  "owner": "fluttercommunity/plus_plugins/tree/main/packages",
+  "repo": "battery_plus",
+  "name": "battery_plus",
+  "shortDescription": "battery_plus",
+  "longDescription": "battery_plus",
+  "content": "README.md",
+  "tags": ["plugins"]
+}
