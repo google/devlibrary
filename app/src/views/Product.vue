@@ -11,7 +11,6 @@
             :class="[product.classes.iconBorder]"
             class="p-1 w-10 h-10 border-4 bg-white rounded-full"
           >
-            <!-- TODO: Need to make sure these images are square! -->
             <img :src="`/logos/${product.key}.png`" />
           </div>
 
