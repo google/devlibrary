@@ -107,6 +107,14 @@
               :repo="repo"
             />
           </div>
+
+          <!-- Next / Prev Buttons -->
+          <PaginationControls
+            class="mt-2"
+            :data="repoData"
+            @next="loadNext(repoData)"
+            @prev="loadPrev(repoData)"
+          />
         </div>
 
         <!-- Blog Posts -->
@@ -126,6 +134,13 @@
               :blog="blog"
             />
           </div>
+
+          <!-- Next / Prev Buttons -->
+          <PaginationControls
+            :data="blogData"
+            @next="loadNext(blogData)"
+            @prev="loadPrev(blogData)"
+          />
         </div>
       </div>
     </div>
@@ -133,7 +148,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
 import { BlogData, RepoData } from "../../../shared/types";
@@ -148,9 +163,17 @@ import CheckboxGroup, {
   CheckboxGroupEntry,
 } from "@/components/CheckboxGroup.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
+import PaginationControls from "@/components/PaginationControls.vue";
 
 import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
-import { fetchBlogs, fetchRepos } from "@/plugins/data";
+import {
+  PagedResponse,
+  blogsRef,
+  nextPage,
+  prevPage,
+  reposRef,
+  emptyPageResponse,
+} from "@/plugins/data";
 
 @Component({
   components: {
@@ -160,6 +183,7 @@ import { fetchBlogs, fetchRepos } from "@/plugins/data";
     RadioGroup,
     CheckboxGroup,
     HeaderSidebarLayout,
+    PaginationControls,
   },
 })
 export default class Product extends Vue {
@@ -168,19 +192,67 @@ export default class Product extends Vue {
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
 
-  private allRepos: RepoData[] = [];
-  private allBlogs: BlogData[] = [];
+  private perPage = 4;
+  public repoData: PagedResponse<RepoData> = emptyPageResponse(
+    reposRef(this.product.key),
+    this.perPage
+  );
+  public blogData: PagedResponse<BlogData> = emptyPageResponse(
+    blogsRef(this.product.key),
+    this.perPage
+  );
 
   mounted() {
-    const reposPromise = fetchRepos(this.product.key, {
-      limit: 10,
-    }).then((data) => this.allRepos.push(...data));
-
-    const blogsPromise = fetchBlogs(this.product.key, {
-      limit: 10,
-    }).then((data) => this.allBlogs.push(...data));
+    const reposPromise = this.loadNext(this.repoData);
+    const blogsPromise = this.loadNext(this.blogData);
 
     this.uiModule.waitFor(Promise.all([reposPromise, blogsPromise]));
+  }
+
+  @Watch("categories", { immediate: false, deep: true })
+  public async onCategoriesChanged(
+    val: CheckboxGroupEntry[],
+    oldVal: CheckboxGroupEntry[]
+  ) {
+    // Ignore the initial load
+    if (oldVal.length === 0) {
+      return;
+    }
+
+    const tags = val.filter((x) => x.checked).map((x) => x.value);
+
+    const reposQ = reposRef(this.product.key).where(
+      "metadata.tags",
+      "array-contains-any",
+      tags
+    );
+    const repoData = emptyPageResponse(reposQ, this.perPage);
+    const reposPromise = nextPage(repoData);
+
+    const blogsQ = blogsRef(this.product.key).where(
+      "metadata.tags",
+      "array-contains-any",
+      tags
+    );
+    const blogData = emptyPageResponse(blogsQ, this.perPage);
+    const blogsPromise = nextPage(blogData);
+
+    const reloadPromise = Promise.all([reposPromise, blogsPromise]).then(() => {
+      this.repoData = repoData;
+      this.blogData = blogData;
+    });
+
+    this.uiModule.waitFor(reloadPromise);
+  }
+
+  public async loadNext(data: PagedResponse<unknown>) {
+    // TODO: Loading
+    nextPage(data);
+  }
+
+  public async loadPrev(data: PagedResponse<unknown>) {
+    // TODO: Loading
+    prevPage(data);
   }
 
   public repoPath(repo: RepoData) {
@@ -206,23 +278,17 @@ export default class Product extends Vue {
   }
 
   get repos() {
-    // TODO: This filter should be done in the VueX module as a db query
-    return this.allRepos.filter((x) => {
-      return (
-        x.metadata.tags &&
-        x.metadata.tags.some((t) => this.selectedCategories.has(t))
-      );
-    });
+    if (this.repoData.currentPage < 0) {
+      return [];
+    }
+    return this.repoData.pages[this.repoData.currentPage] || [];
   }
 
   get blogs() {
-    // TODO: This filter should be done in the VueX module as a db query
-    return this.allBlogs.filter((x) => {
-      return (
-        x.metadata.tags &&
-        x.metadata.tags.some((t) => this.selectedCategories.has(t))
-      );
-    });
+    if (this.blogData.currentPage < 0) {
+      return [];
+    }
+    return this.blogData.pages[this.blogData.currentPage] || [];
   }
 }
 </script>

@@ -12,6 +12,8 @@ import {
   faExternalLinkAlt,
   faCaretDown,
   faCaretUp,
+  faAngleLeft,
+  faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
 
@@ -23,6 +25,8 @@ library.add(
   faExternalLinkAlt,
   faCaretDown,
   faCaretUp,
+  faAngleLeft,
+  faAngleRight,
 
   faGithub,
   faMedium

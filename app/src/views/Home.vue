@@ -99,7 +99,7 @@ import SmallBlogCard from "@/components/SmallBlogCard.vue";
 import UIModule from "@/store/ui";
 
 import { ALL_PRODUCTS, ProductConfig } from "@/model/product";
-import { fetchBlogs, fetchRepos } from "@/plugins/data";
+import { blogsRef, getDocs, reposRef } from "@/plugins/data";
 
 import { BlogData, RepoData } from "../../../shared/types";
 
@@ -120,18 +120,26 @@ export default class Home extends Vue {
     const promises: Promise<unknown>[] = [];
 
     // For each product load 2 recent repos and 2 recent blogs
+    // TODO: One day this should use Firestore bundles
     for (const product of Object.values(ALL_PRODUCTS)) {
-      const blogPromise = fetchBlogs(product.key, { limit: 2 }).then((data) =>
-        Vue.set(this.recentBlogs, product.key, data)
-      );
-      const repoPromise = fetchRepos(product.key, { limit: 2 }).then((data) =>
-        Vue.set(this.recentRepos, product.key, data)
-      );
-
+      const blogPromise = this.fetchRecentBlogs(product.key);
+      const repoPromise = this.fetchRecentRepos(product.key);
       promises.push(blogPromise, repoPromise);
     }
 
     this.uiModule.waitFor(Promise.all(promises));
+  }
+
+  public async fetchRecentRepos(product: string) {
+    const q = reposRef(product).limit(2);
+    const { data } = await getDocs(q);
+    Vue.set(this.recentRepos, product, data);
+  }
+
+  public async fetchRecentBlogs(product: string) {
+    const q = blogsRef(product).limit(2);
+    const { data } = await getDocs(q);
+    Vue.set(this.recentBlogs, product, data);
   }
 
   public scrollToProducts() {
