@@ -32,7 +32,8 @@
       "type": "array",
       "description": "Array of product-specific tags",
       "items": {
-        "type": "string"
+        "type": "string",
+        "pattern": "^[a-z]+$"
       }
     },
     "pages": {

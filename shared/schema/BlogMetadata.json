@@ -20,7 +20,8 @@
       "type": "array",
       "description": "Array of product-specific string tags",
       "items": {
-        "type": "string"
+        "type": "string",
+        "pattern": "[a-z]*"
       }
     }
   },
