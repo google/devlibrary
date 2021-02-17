@@ -8,16 +8,14 @@
         <span>{{ blog.metadata.author }}</span>
       </div>
 
-      <!-- blog nam -->
-
-      <div class="flex flex-row mt-2 px-3">
+      <!-- blog name -->
+      <div class="flex-grow flex flex-row mt-2 px-3">
         <span class="text-lg font-medium flex-grow wrap-lines-3">
           {{ blog.metadata.title }}</span
         >
       </div>
 
       <!-- link and time to read -->
-
       <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
         <span class="flex-grow text-gray-500">
           {{ blog.stats.minutes }} mins. read</span
