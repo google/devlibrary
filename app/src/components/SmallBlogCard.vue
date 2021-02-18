@@ -19,9 +19,7 @@
 
       <!-- Timestamp and Buttons -->
       <div class="flex flex-row pl-3 items-baseline">
-        <span class="flex-grow text-sm text-gray-500"
-          >{{ blog.stats.minutes }} min. read</span
-        >
+        <span class="flex-grow"><!-- spacer --></span>
         <a :href="blog.metadata.link" target="_blank"
           ><MaterialButton type="text"
             >Read Post

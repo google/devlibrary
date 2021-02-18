@@ -1,5 +1,3 @@
-import axios from "axios";
-
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { BlogData, BlogStats, RepoData, RepoStats } from "../../shared/types";
@@ -36,40 +34,12 @@ export async function loadBlogStats(
       ? existing.stats.dateAdded
       : new Date().getTime();
 
-  // Medium has a secret JSON API
-  const url = `${metadata.link}?format=json`;
-
-  console.log(url);
-
-  const res = await axios.get(url);
-
-  // Payloads start with something like this to prevent eval:
-  // ])}while(1);</x>{
-  // We just start at the first {
-  const payload = res.data as string;
-
-  try {
-    const data = JSON.parse(payload.substr(payload.indexOf("{")));
-
-    const minutes = Math.round(data.payload.value.virtuals.readingTime);
-    const claps = data.payload.value.virtuals.totalClapCount;
-    const lastUpdated = data.payload.value.latestPublishedAt;
-
+    // We are not allowed to use the Medium API for now
+    // See: https://github.com/FirebasePrivate/ugc.dev/issues/70
     return {
-      minutes,
-      claps,
+      minutes: 0,
+      claps: 0,
       dateAdded,
-      lastUpdated,
-    };
-  } catch (e) {
-    console.error(`Could not get stats for ${metadata.link}`, e);
-
-    // By default we'll just say 10 minute read, 50 claps, 30 days ago.
-    return {
-      minutes: 10,
-      claps: 50,
-      dateAdded,
-      lastUpdated: new Date().getTime() - 30 * 24 * 60 * 60 * 1000,
-    };
-  }
+      lastUpdated: dateAdded
+    }
 }
