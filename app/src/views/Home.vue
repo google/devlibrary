@@ -155,7 +155,17 @@ export default class Home extends Vue {
   }
 
   get products() {
-    return Object.values(ALL_PRODUCTS);
+    // Calculate the day of the year:
+    // https://stackoverflow.com/a/8619946/324977
+    const now = new Date();
+    const diff = now.getTime() - new Date(now.getFullYear(), 0, 0).getTime();
+    const day = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    const configs = Object.values(ALL_PRODUCTS);
+
+    // Use the day of the year to change the order of product display
+    const startInd = day % configs.length;
+    return [...configs.slice(startInd), ...configs.slice(0, startInd)];
   }
 
   get loading() {
