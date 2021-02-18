@@ -86,6 +86,7 @@
           <li v-for="p in repo.metadata.pages" :key="p.path">
             <router-link :to="fullPagePath(p.path)">{{ p.name }}</router-link>
           </li>
+          <li><router-link :to="fullPagePath('license')">License</router-link></li>
         </ul>
 
         <div v-if="repo.metadata.links">
