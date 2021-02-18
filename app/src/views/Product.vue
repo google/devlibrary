@@ -64,6 +64,7 @@
           prefix="sort"
           :keys="['Recently Added', 'Recently Updated']"
           :values="['added', 'updated']"
+          v-model="sort"
         />
 
         <p class="uppercase font-medium mt-4 mb-2">Type</p>
@@ -101,7 +102,7 @@
             <LargeRepoCard
               class="mt-4"
               v-for="repo in repos"
-              :key="repo.name"
+              :key="repo.id"
               :link="repoPath(repo)"
               :product="product.key"
               :repo="repo"
@@ -129,7 +130,7 @@
             <LargeBlogCard
               class="mt-4"
               v-for="blog in blogs"
-              :key="blog.title"
+              :key="blog.id"
               :product="product.key"
               :blog="blog"
             />
@@ -175,6 +176,11 @@ import {
   emptyPageResponse,
 } from "@/plugins/data";
 
+interface QueryParams {
+  tags: string[];
+  orderBy: string;
+}
+
 @Component({
   components: {
     MaterialButton,
@@ -189,10 +195,12 @@ import {
 export default class Product extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
+  public sort = "added";
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
 
   private perPage = 4;
+
   public repoData: PagedResponse<RepoData> = emptyPageResponse(
     reposRef(this.product.key),
     this.perPage
@@ -203,37 +211,25 @@ export default class Product extends Vue {
   );
 
   mounted() {
-    const reposPromise = this.loadNext(this.repoData);
-    const blogsPromise = this.loadNext(this.blogData);
-
-    this.uiModule.waitFor(Promise.all([reposPromise, blogsPromise]));
+    // Loading will be handled by the first "onQueryParamsChanged" firing
+    // which will happen when the page loads and the default values hit
   }
 
-  @Watch("categories", { immediate: false, deep: true })
-  public async onCategoriesChanged(
-    val: CheckboxGroupEntry[],
-    oldVal: CheckboxGroupEntry[]
-  ) {
-    // Ignore the initial load
-    if (oldVal.length === 0) {
-      return;
-    }
+  @Watch("queryParams")
+  public async onQueryParamsChanged(val: QueryParams) {
+    console.log("onQueryParamsChanged", val);
 
-    const tags = val.filter((x) => x.checked).map((x) => x.value);
+    const reposQ = reposRef(this.product.key)
+      .where("metadata.tags", "array-contains-any", val.tags)
+      .orderBy(val.orderBy, "desc");
 
-    const reposQ = reposRef(this.product.key).where(
-      "metadata.tags",
-      "array-contains-any",
-      tags
-    );
     const repoData = emptyPageResponse(reposQ, this.perPage);
     const reposPromise = nextPage(repoData);
 
-    const blogsQ = blogsRef(this.product.key).where(
-      "metadata.tags",
-      "array-contains-any",
-      tags
-    );
+    const blogsQ = blogsRef(this.product.key)
+      .where("metadata.tags", "array-contains-any", val.tags)
+      .orderBy(val.orderBy, "desc");
+
     const blogData = emptyPageResponse(blogsQ, this.perPage);
     const blogsPromise = nextPage(blogData);
 
@@ -243,6 +239,32 @@ export default class Product extends Vue {
     });
 
     this.uiModule.waitFor(reloadPromise);
+  }
+
+  get queryTags(): string[] {
+    return this.categories.filter((x) => x.checked).map((x) => x.value);
+  }
+
+  get queryOrderBy(): string {
+    if (this.sort === "added") {
+      return "stats.dateAdded";
+    }
+
+    if (this.sort === "updated") {
+      return "stats.lastUpdated";
+    }
+
+    return "stats.dateAdded";
+  }
+
+  get queryParams(): QueryParams {
+    const orderBy = this.queryOrderBy;
+    const tags = this.queryTags;
+
+    return {
+      tags,
+      orderBy,
+    };
   }
 
   public async loadNext(data: PagedResponse<unknown>) {
@@ -277,14 +299,14 @@ export default class Product extends Vue {
     );
   }
 
-  get repos() {
+  get repos(): RepoData[] {
     if (this.repoData.currentPage < 0) {
       return [];
     }
     return this.repoData.pages[this.repoData.currentPage] || [];
   }
 
-  get blogs() {
+  get blogs(): BlogData[] {
     if (this.blogData.currentPage < 0) {
       return [];
     }

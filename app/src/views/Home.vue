@@ -131,13 +131,13 @@ export default class Home extends Vue {
   }
 
   public async fetchRecentRepos(product: string) {
-    const q = reposRef(product).limit(2);
+    const q = reposRef(product).orderBy("stats.dateAdded", "desc").limit(2);
     const { data } = await getDocs(q);
     Vue.set(this.recentRepos, product, data);
   }
 
   public async fetchRecentBlogs(product: string) {
-    const q = blogsRef(product).limit(2);
+    const q = blogsRef(product).orderBy("stats.dateAdded", "desc").limit(2);
     const { data } = await getDocs(q);
     Vue.set(this.recentBlogs, product, data);
   }

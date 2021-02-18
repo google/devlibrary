@@ -2,24 +2,40 @@ import axios from "axios";
 
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
-import { BlogStats, RepoStats } from "../../shared/types";
+import { BlogData, BlogStats, RepoData, RepoStats } from "../../shared/types";
 
 import * as github from "./github";
 
 export async function loadRepoStats(
-  metadata: RepoMetadata
+  metadata: RepoMetadata,
+  existing: RepoData | undefined
 ): Promise<RepoStats> {
+  // Determine the date the content was added to the site
+  const dateAdded =
+    existing && existing.stats.dateAdded
+      ? existing.stats.dateAdded
+      : new Date().getTime();
+
   const repo = await github.getRepo(metadata.owner, metadata.repo);
+
   return {
     stars: repo.stargazers_count,
     forks: repo.forks_count,
+    dateAdded,
     lastUpdated: Date.parse(repo.updated_at),
   };
 }
 
 export async function loadBlogStats(
-  metadata: BlogMetadata
+  metadata: BlogMetadata,
+  existing: BlogData | undefined
 ): Promise<BlogStats> {
+  // Determine the date the content was added to the site
+  const dateAdded =
+    existing && existing.stats.dateAdded
+      ? existing.stats.dateAdded
+      : new Date().getTime();
+
   // Medium has a secret JSON API
   const url = `${metadata.link}?format=json`;
 
@@ -42,6 +58,7 @@ export async function loadBlogStats(
     return {
       minutes,
       claps,
+      dateAdded,
       lastUpdated,
     };
   } catch (e) {
@@ -51,6 +68,7 @@ export async function loadBlogStats(
     return {
       minutes: 10,
       claps: 50,
+      dateAdded,
       lastUpdated: new Date().getTime() - 30 * 24 * 60 * 60 * 1000,
     };
   }

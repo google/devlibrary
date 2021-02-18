@@ -4,7 +4,13 @@ import { PubSub } from "@google-cloud/pubsub";
 
 import { loadProjectMetadata } from "./metadata";
 import { loadBlogStats, loadRepoStats } from "./stats";
-import { saveBlogData, saveRepoData, saveRepoPage } from "./firestore";
+import {
+  getBlogData,
+  getRepoData,
+  saveBlogData,
+  saveRepoData,
+  saveRepoPage,
+} from "./firestore";
 
 import * as content from "./content";
 import * as github from "./github";
@@ -73,7 +79,8 @@ export const refreshBlog = functions.pubsub
 
     console.log("Refreshing blog", product, id);
 
-    const stats = await loadBlogStats(metadata);
+    const existing = await getBlogData(product, id);
+    const stats = await loadBlogStats(metadata, existing);
     const blog = {
       id,
       metadata,
@@ -97,7 +104,8 @@ export const refreshRepo = functions.pubsub
     console.log("Refreshing repo", product, id);
 
     // First save the repo metadata and stats
-    const stats = await loadRepoStats(metadata);
+    const existing = await getRepoData(product, id);
+    const stats = await loadRepoStats(metadata, existing);
     const repo = {
       id,
       metadata,

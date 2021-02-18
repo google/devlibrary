@@ -11,7 +11,7 @@
         :name="prefix"
         :value="entry.value"
         v-model="choice"
-        @input="emitValue"
+        @input="onInput"
       />
       <label :for="entry.id" class="ml-2 text-sm">{{ entry.key }}</label>
     </div>
@@ -50,15 +50,21 @@ export default class RadioGroup extends Vue {
 
     // Default is the first entry
     this.choice = this.entries[0].value;
+    this.emitValue(this.choice);
+  }
 
-    this.emitValue();
+  public onInput(e: InputEvent) {
+    const value = (e.target as HTMLInputElement).value;
+    if (value) {
+      this.emitValue(value);
+    }
   }
 
   /**
    * Emit the special 'input' event which allows us to use v-model on the group
    */
-  public emitValue() {
-    this.$emit("input", this.choice);
+  public emitValue(value: string) {
+    this.$emit("input", value);
   }
 
   public valueId(v: string) {

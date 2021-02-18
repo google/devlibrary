@@ -77,13 +77,22 @@ export async function nextPage<T>(res: PagedResponse<T>) {
   // is still more after this
   res.hasNext = data.length > res.perPage;
 
-  // Chop off the extra one we loaded (see above) and then add the data
-  if (snapshots.length > 1) {
+  if (res.hasNext) {
+    // If there are more pages after this then we need to
+    // chop off the extra one we loaded (see above) and then add the data
     const lastDoc = snapshots[snapshots.length - 2];
     const pageData = data.slice(0, data.length - 1);
 
     res.lastDoc = lastDoc;
     res.pages.push(pageData);
+  } else {
+    // If this is the last page, just add the data (if it exists)
+    // and accept the last snapshot
+    if (data.length > 0) {
+      res.pages.push(data);
+    }
+
+    res.lastDoc = snapshots[snapshots.length - 1];
   }
 
   // Finally increment the page
