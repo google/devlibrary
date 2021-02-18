@@ -31,6 +31,11 @@ export async function saveRepoData(product: string, project: RepoData) {
   await ref.set(project);
 }
 
+export async function deleteRepoData(product: string, id: string) {
+  const ref = repoRef(product, id);
+  await ref.delete();
+}
+
 export async function saveRepoPage(
   product: string,
   project: RepoData,

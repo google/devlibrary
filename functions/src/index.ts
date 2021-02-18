@@ -5,6 +5,7 @@ import { PubSub } from "@google-cloud/pubsub";
 import { loadProjectMetadata } from "./metadata";
 import { loadBlogStats, loadRepoStats } from "./stats";
 import {
+  deleteRepoData,
   getBlogData,
   getRepoData,
   saveBlogData,
@@ -103,8 +104,22 @@ export const refreshRepo = functions.pubsub
 
     console.log("Refreshing repo", product, id);
 
-    // First save the repo metadata and stats
+    // Get the existing repo
     const existing = await getRepoData(product, id);
+
+    // If the repo doesn't have the right license, exit early
+    const license = await github.getRepoLicense(metadata.owner, metadata.repo);
+    if (!(license.key === "mit" || license.key === "apache-2.0")) {
+      console.warn(
+        `Invalid license ${license.key} for repo ${metadata.owner}/${metadata.repo}`
+      );
+      if (existing) {
+        await deleteRepoData(product, id);
+        return;
+      }
+    }
+
+    // First save the repo's stats and metadata
     const stats = await loadRepoStats(metadata, existing);
     const repo = {
       id,
@@ -143,4 +158,18 @@ export const refreshRepo = functions.pubsub
       };
       await saveRepoPage(product, repo, p.path, data);
     }
+
+    // Save the licesne as a page
+    const licensePage: RepoPage = {
+      name: "License",
+      path: "license",
+      sections: [
+        {
+          name: "License",
+          content: `<pre>${license.content}</pre>`,
+        },
+      ],
+    };
+
+    await saveRepoPage(product, repo, licensePage.path, licensePage);
   });
