@@ -51,9 +51,10 @@ http://localhost:5001/ugc-site-dev/us-central1/refreshProjects
 
 ## Deployment
 
-To deploy:
-  * Navigate to the Actions page on GitHub: https://github.com/FirebasePrivate/ugc.dev/actions
-  * Select the **Deploy** action and click **Run workflow**
+To deploy the frontend and backend together, use Google Cloud Build to run `cloudbuild/deploy.yaml`.
+This will automatically deploy the correct configuration based on the environment.
+
+### Cloud Functions config
 
 Note that the Functions have the following required configuration (already set up):
 

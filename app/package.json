@@ -6,6 +6,8 @@
     "serve": "vue-cli-service serve --mode=development",
     "build:staging": "vue-cli-service build --mode=staging",
     "build:production": "vue-cli-service build --mode=production",
+    "build:ugc-site-dev": "npm run build:staging",
+    "build:ugc-site-prod": "npm run build:production",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

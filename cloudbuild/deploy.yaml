@@ -1,0 +1,21 @@
+steps:
+- name: 'node:12'
+  entrypoint: 'npm'
+  args: ['--prefix=shared', 'install']
+- name: 'node:12'
+  entrypoint: 'npm'
+  args: ['--prefix=app', 'install']
+- name: 'node:12'
+  entrypoint: 'npm'
+  args: ['--prefix=functions', 'install']
+- name: 'node:12'
+  entrypoint: 'npm'
+  args: ['--prefix=functions', 'run', 'build']
+- name: 'node:12'
+  entrypoint: 'npm'
+  args: ['--prefix=app', 'run', 'build:$PROJECT_ID']
+- name: 'node:12'
+  entrypoint: 'npm'
+  args: ['--prefix=shared', 'run', 'deploy']
+  env:
+    - 'FIREBASE_PROJECT=$PROJECT_ID'
