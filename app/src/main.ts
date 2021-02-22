@@ -18,7 +18,7 @@ import "@/plugins/icons";
 Vue.use(
   VueGtag,
   {
-    config: { id: "G-XYW79WW3XY" },
+    config: { id: "G-2BDY03FSVV" },
 
     // Disable until the user accepts cookies
     // https://matteo-gabriele.gitbook.io/vue-gtag/opt-in-out
