@@ -12,7 +12,7 @@
         <div class="mt-10 lg:text-lg">
           <p>
             Welcome to <strong>library.google.dev</strong>, a showcase of what
-            developers like you have built with Google technologies!
+            developers like you have built with Google technologies.
           </p>
           <p class="mt-10">Browse and learn, or submit your own!</p>
         </div>
