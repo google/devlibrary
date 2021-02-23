@@ -4,7 +4,7 @@
       id="header"
       class="home-grid-base py-10 lg:py-10 bg-gray-50 border-b border-gray-100"
     >
-      <div class="col-span-8 lg:col-start-3 lg:col-span-4 mt-10">
+      <div class="col-span-8 lg:col-start-2 lg:col-span-4 mt-10">
         <h1 class="text-2xl lg:text-3xl font-semibold">
           What will <span class="underline">you</span> build?
         </h1>
@@ -32,8 +32,12 @@
         </div>
       </div>
 
+      <div>
+        <!-- 1-col spacer -->
+      </div>
+
       <div class="col-span-4 hidden lg:block">
-        <img src="@/assets/undraw_connected_world_wuay.svg" />
+        <img src="@/assets/LibraryGoogleDev-Header.svg" />
       </div>
 
       <div class="col-span-2"><!-- Gutter --></div>

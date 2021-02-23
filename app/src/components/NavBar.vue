@@ -1,20 +1,27 @@
 <template>
   <div
-    class="relative flex flex-row items-center px-4 lg:px-8 py-4 lg:py-0 bg-white shadow-md"
+    class="relative flex flex-row items-center py-3 lg:py-0 px-4 text-nav bg-white shadow-md"
   >
     <router-link
       tag="div"
       to="/"
-      class="inline-flex flex-row items-center text-xl mr-4 cursor-pointer"
+      class="inline-flex flex-row items-center ml-2 mr-4 lg:mr-8 cursor-pointer"
     >
-      <font-awesome-icon icon="code" size="md" class="mr-2" />
-      <h1>ugc.dev</h1>
+      <img
+        src="@/assets/LibraryGoogleDev-Lockup.svg"
+        alt="library.google.dev"
+        class="h-6"
+      />
     </router-link>
 
+    <!-- Home -->
     <router-link tag="div" class="nav-item nav-item-link" to="/"
       ><span>Home</span></router-link
     >
 
+    <!-- TODO: Mobile hamburger menu -->
+
+    <!-- Products -->
     <div
       class="nav-item relative z-10"
       @mouseenter="showProductsDropdown = true"
@@ -42,7 +49,9 @@
 
     <span class="flex-grow"><!-- spacer --></span>
 
-    <div class="relative">
+    <!-- Search Bar -->
+    <!-- TODO: Show this when search is enabled -->
+    <div class="relative hidden">
       <font-awesome-icon
         icon="search"
         size="sm"
@@ -73,6 +82,11 @@ export default class NavBar extends Vue {
 </script>
 
 <style scoped lang="postcss">
+.text-nav {
+  @apply font-display text-base;
+  color: rgb(95, 99, 104);
+}
+
 .nav-dropdown {
   @apply absolute top-full bg-white rounded-b shadow-md text-sm;
   z-index: -1;
@@ -81,9 +95,10 @@ export default class NavBar extends Vue {
 }
 
 .nav-item {
-  @apply py-4 px-4;
+  @apply py-3 px-4;
   @apply cursor-pointer;
   @apply hidden lg:inline;
+  font-size: 0.875rem;
 }
 
 .nav-item-link {

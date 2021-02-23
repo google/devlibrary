@@ -11,19 +11,26 @@
 
         <div class="mt-10 lg:text-lg">
           <p>
-            <strong>Library.google.dev</strong> is a platform for developers to
-            find and submit technical content to a library of highly curated
-            open source content related to
-            <a href="https://developers.google.com/products/" target="blank">
-              Google’s products and platforms </a
+            <strong>library.google.dev</strong> is a curated platform for
+            technical content related to
+            <a
+              href="https://developers.google.com/products/"
+              class="underline cursor-pointer"
+              target="blank"
+            >
+              Google’s developer products and platforms </a
             >.
           </p>
+          <p class="mt-4">Currently we accept two kinds of content:</p>
+
+          <ul class="ml-6 mt-2 list-disc">
+            <li>GitHub repositories</li>
+            <li>Blog posts on Medium</li>
+          </ul>
+
           <p class="mt-4">
-            This platform is designed to be easy to use and will continually
-            evolve as more content submissions are made and accepted. Content
-            currently accepted onto the site is either Github Repo or a Medium
-            blog post. We are working to whitelist submissions from other
-            platforms as well. So, stay tuned!
+            This platform will evolve as we receive more submissions and we are
+            working to accept a wider range of content. So, stay tuned!
           </p>
         </div>
       </div>
@@ -31,27 +38,15 @@
     <div class="grid gap-4 grid-cols-6">
       <div class="col-start-2 col-span-4 mt-10">
         <h1 class="text-2xl lg:text-3xl font-semibold">
-          <span class="underline">Frequently Asked Questions:</span>
+          <span class="underline">Frequently Asked Questions</span>
         </h1>
 
         <div class="mt-10 lg:text-lg">
           <p class="mt-6 font-bold">What is the purpose of this site?</p>
           <p class="mt-4">
-            For developers to showcase their best examples of using Google
-            technologies and for all developers to find inspiration and code
-            samples they may want to reuse in their own projects, in the spirit
-            of an open source community.
-          </p>
-          <p class="mt-6 font-bold">
-            Why does Google care about curating this user generated content
-            rather than creating documents of their own?
-          </p>
-          <p class="mt-4">
-            Excellent question! We know there are excellent projects created by
-            developers around the world. We have seen creative use cases that we
-            had never imagined. This site therefore aims to surface those
-            interesting examples so more developers know these as well as get
-            inspired to share their own creation.
+            We want to enable developers all around the world to showcase their
+            use of Google technologies and for all developers to find
+            inspiration and tools to use in their own projects.
           </p>
           <p class="mt-6 font-bold">
             Does this replace Google’s technical documentation and guides?
@@ -71,8 +66,8 @@
           </p>
           <p class="mt-6 font-bold">How does a submission get selected?</p>
           <p class="mt-4">
-            An editorial committee made up of Googlers and external developer
-            experts select the submission if it meets the quality bar.
+            Each submission will be reviewed by Google product experts to
+            determine if it is high-quality, relevant, and unique.
           </p>
           <p class="mt-6 font-bold">
             How long does it take for content to be approved and appear on the
@@ -88,34 +83,31 @@
             Is there any reward or recognition for contributors?
           </p>
           <p class="mt-4">
-            First of all, if you’re submitting content, we want to say
-            <strong
-              >“thank you!” on behalf of the entire developer community
-            </strong>
-            we always appreciate and encourage developers helping each other. If
-            your content is selected, we hope that the increased visibility that
-            your content gets constitutes an extra token of appreciation.
+            If your content is selected, we hope that the increased visibility
+            that your content gets constitutes an extra token of appreciation.
           </p>
           <p class="mt-6 font-bold">
             How do you request for content to be removed?
           </p>
           <p class="mt-4">
-            Fill this
-            <a href="https://forms.gle/FPQg4s8DUjEdqyQR7" target="blank">
-              form </a
-            >, and we will get back to you in 48 hours for next steps.
+            Fill out
+            <a
+              href="https://forms.gle/FPQg4s8DUjEdqyQR7"
+              class="underline cursor-pointer"
+              target="blank"
+            >
+              this form
+            </a>
+            and we will get back to you in 48 hours for next steps.
           </p>
           <p class="mt-6 font-bold">
             How do you report an error in the technical documentation?
           </p>
           <p class="mt-4">
-            Thank you for your help in improving documentation and code. Each
-            project or content piece is created by a developer who can possibly
-            directly be reached out to on github or medium. The Google project
-            team who put this site together does not have the ability to modify
-            content. However, if the error pertains to {include different cases:
-            abuse, etc.}, please email us at {email e.g. abuse@} with the URL of
-            the content page for us to consider delisting it.
+            Each piece of content on this site is authored by a different
+            developer and hosted on an external platform (GitHub, Medium, etc).
+            Please use the feedback mechanisms available on those platforms in
+            order to help improve content directly.
           </p>
           <p class="mt-6 font-bold">
             I want to learn how to code, is this the right resource for me?
