@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "shared",
   "scripts": {
+    "addproject": "node scripts/addproject.js",
     "validate": "node scripts/validate.js",
     "build": "node scripts/generate.js",
     "deploy": "firebase --project=$FIREBASE_PROJECT deploy"
