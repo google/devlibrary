@@ -18,6 +18,7 @@
     },
     "tags": {
       "type": "array",
+      "minItems": 1,
       "description": "Array of product-specific string tags",
       "items": {
         "type": "string",
@@ -25,5 +26,5 @@
       }
     }
   },
-  "required": [ "author", "title", "link" ]
+  "required": [ "author", "title", "link", "tags" ]
 }

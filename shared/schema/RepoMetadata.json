@@ -30,6 +30,7 @@
     },
     "tags": {
       "type": "array",
+      "minItems": 1,
       "description": "Array of product-specific tags",
       "items": {
         "type": "string",
@@ -73,5 +74,5 @@
       }
     }
   },
-  "required": [ "owner", "repo", "name", "shortDescription", "longDescription", "content" ]
+  "required": [ "owner", "repo", "name", "shortDescription", "longDescription", "content", "tags" ]
 }
