@@ -34,12 +34,12 @@ export async function loadBlogStats(
       ? existing.stats.dateAdded
       : new Date().getTime();
 
-    // We are not allowed to use the Medium API for now
-    // See: https://github.com/FirebasePrivate/ugc.dev/issues/70
-    return {
-      minutes: 0,
-      claps: 0,
-      dateAdded,
-      lastUpdated: dateAdded
-    }
+  // We are not allowed to use the Medium API for now
+  // See: https://github.com/FirebasePrivate/ugc.dev/issues/70
+  return {
+    minutes: 0,
+    claps: 0,
+    dateAdded,
+    lastUpdated: dateAdded,
+  };
 }
