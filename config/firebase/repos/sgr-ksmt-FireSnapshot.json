@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "sgr-ksmt",
+  "repo": "FireSnapshot",
+  "name": "FireSnapshot",
+  "shortDescription": "A useful Cloud Firestore Wrapper with Codable.",
+  "longDescription": "A useful Cloud Firestore Wrapper with Codable.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["ios"]
+}

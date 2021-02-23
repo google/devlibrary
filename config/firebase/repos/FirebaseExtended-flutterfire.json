@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "FirebaseExtended",
+  "repo": "flutterfire",
+  "name": "FlutterFire",
+  "shortDescription": "A collection of Firebase plugins for Flutter apps.",
+  "longDescription": "A collection of Firebase plugins for Flutter apps.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["android", "ios", "web"]
+}

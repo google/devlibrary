@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "anishkny",
+  "repo": "integrify",
+  "name": "integrify",
+  "shortDescription": "Enforce referential and data integrity in Cloud Firestore using triggers.",
+  "longDescription": "Enforce referential and data integrity in Cloud Firestore using triggers.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["node", "admin"]
+}

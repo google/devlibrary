@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "FirebaseExtended",
+  "repo": "protobuf-rules-gen",
+  "name": "Firebase Rules Protobuf Validation",
+  "shortDescription": "Generate Firebase Rules based on Protocol Buffers",
+  "longDescription": "An experimental protoc plugin that generates Firebase Rules for Cloud Firestore based on Google's Protocol Buffer format. This allows you to easily validate your data in a platform independent manner.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["android", "ios", "web"]
+}
