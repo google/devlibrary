@@ -1,0 +1,11 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "diegoveloper",
+    "repo": "flutter-samples",
+    "name": "Flutter Samples",
+    "shortDescription": "Cool stuff with custom widgets and challenges specially for beginners",
+    "longDescription": "Cool stuff with custom widgets and challenges specially for beginners",
+    "content": "readme.md",
+    "tags":["mobile"]
+    }
