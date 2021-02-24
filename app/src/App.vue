@@ -53,4 +53,8 @@ h6 {
 .main-content {
   min-height: 100vh;
 }
+
+a {
+  @apply cursor-pointer;
+}
 </style>

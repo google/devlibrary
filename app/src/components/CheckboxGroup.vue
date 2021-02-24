@@ -1,16 +1,5 @@
 <template>
   <div>
-    <!-- Special "All" checkbox which controls the others -->
-    <div v-if="showAll" class="flex flex-row items-center">
-      <input
-        type="checkbox"
-        v-model="allChecked"
-        @input="emitValue"
-        :id="valueId('all')"
-      />
-      <label :for="valueId('all')" class="ml-2 text-sm">All</label>
-    </div>
-
     <div
       v-for="entry in entries"
       :key="entry.key"
@@ -20,7 +9,6 @@
         type="checkbox"
         v-model="entry.checked"
         @input="emitValue"
-        :disabled="allChecked"
         :id="entry.id"
       />
       <label :for="entry.id" class="ml-2 text-sm">{{ entry.key }}</label>
@@ -29,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
 
 export interface CheckboxGroupEntry {
   key: string;
@@ -40,9 +28,6 @@ export interface CheckboxGroupEntry {
 
 @Component
 export default class CheckboxGroup extends Vue {
-  /** Should the group have an "all" option */
-  @Prop({ default: true }) showAll!: boolean;
-
   /** Unique string prefix for this form group */
   @Prop() prefix!: string;
 
@@ -52,7 +37,6 @@ export default class CheckboxGroup extends Vue {
   /** Internal value for each key (ex: android, web) */
   @Prop() values!: string[];
 
-  public allChecked = true;
   public entries: CheckboxGroupEntry[] = [];
 
   mounted() {
@@ -64,7 +48,7 @@ export default class CheckboxGroup extends Vue {
         key,
         value,
         id: this.valueId(value),
-        checked: true,
+        checked: false,
       });
     }
 
@@ -80,15 +64,6 @@ export default class CheckboxGroup extends Vue {
    */
   public emitValue() {
     this.$emit("input", this.entries);
-  }
-
-  @Watch("allChecked")
-  public watchAllChecked() {
-    if (this.allChecked) {
-      for (const e of this.entries) {
-        e.checked = true;
-      }
-    }
   }
 }
 </script>

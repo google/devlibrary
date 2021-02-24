@@ -174,10 +174,12 @@ import {
   prevPage,
   reposRef,
   emptyPageResponse,
+  reposQuery,
+  blogsQuery,
 } from "@/plugins/data";
 
 interface QueryParams {
-  tags: string[];
+  tags: string[] | null;
   orderBy: string;
 }
 
@@ -219,16 +221,20 @@ export default class Product extends Vue {
   public async onQueryParamsChanged(val: QueryParams) {
     console.log("onQueryParamsChanged", val);
 
-    const reposQ = reposRef(this.product.key)
-      .where("metadata.tags", "array-contains-any", val.tags)
-      .orderBy(val.orderBy, "desc");
+    let reposQ = reposQuery(this.product.key);
+    if (val.tags) {
+      reposQ = reposQ.where("metadata.tags", "array-contains-any", val.tags);
+    }
+    reposQ = reposQ.orderBy(val.orderBy, "desc");
 
     const repoData = emptyPageResponse(reposQ, this.perPage);
     const reposPromise = nextPage(repoData);
 
-    const blogsQ = blogsRef(this.product.key)
-      .where("metadata.tags", "array-contains-any", val.tags)
-      .orderBy(val.orderBy, "desc");
+    let blogsQ = blogsQuery(this.product.key);
+    if (val.tags) {
+      blogsQ = blogsQ.where("metadata.tags", "array-contains-any", val.tags);
+    }
+    blogsQ = blogsQ.orderBy(val.orderBy, "desc");
 
     const blogData = emptyPageResponse(blogsQ, this.perPage);
     const blogsPromise = nextPage(blogData);
@@ -241,7 +247,13 @@ export default class Product extends Vue {
     this.uiModule.waitFor(reloadPromise);
   }
 
-  get queryTags(): string[] {
+  get queryTags(): string[] | null {
+    // If no selection, consider them all checked
+    const noneChecked = this.categories.every((c) => !c.checked);
+    if (noneChecked) {
+      return null;
+    }
+
     return this.categories.filter((x) => x.checked).map((x) => x.value);
   }
 
@@ -285,17 +297,22 @@ export default class Product extends Vue {
     return ALL_PRODUCTS[this.$route.params["product"]];
   }
 
+  get showAllTypes() {
+    // If nothing is checked, show them all
+    return this.types.every((t) => !t.checked);
+  }
+
   get showOpenSource(): boolean {
-    return this.types.some((t) => t.value === "open-source" && t.checked);
+    return (
+      this.showAllTypes ||
+      this.types.some((t) => t.value === "open-source" && t.checked)
+    );
   }
 
   get showBlogPosts(): boolean {
-    return this.types.some((t) => t.value === "blog" && t.checked);
-  }
-
-  get selectedCategories(): Set<string> {
-    return new Set(
-      this.categories.filter((x) => x.checked).map((x) => x.value)
+    return (
+      this.showAllTypes ||
+      this.types.some((t) => t.value === "blog" && t.checked)
     );
   }
 

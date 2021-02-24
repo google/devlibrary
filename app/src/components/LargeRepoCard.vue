@@ -1,7 +1,9 @@
 <template>
   <div class="flex flex-col">
     <!-- Card -->
-    <div class="flex-grow flex flex-col rounded shadow-md overflow-hidden">
+    <div
+      class="flex-grow flex flex-col rounded shadow transition-shadow hover:shadow-lg overflow-hidden"
+    >
       <!-- GitHub Header -->
       <div class="bg-gray-900 text-white px-3 py-2">
         <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-2" />
@@ -10,9 +12,9 @@
 
       <!-- Title and Stats -->
       <div class="mt-2 px-3 flex flex-row items-center">
-        <span class="text-lg font-medium flex-grow">{{
+        <router-link :to="link" class="text-lg font-medium flex-grow">{{
           repo.metadata.repo
-        }}</span>
+        }}</router-link>
         <span class="ml-2 text-sm"
           >{{ repo.stats.stars }} <font-awesome-icon class="ml-1" icon="star"
         /></span>

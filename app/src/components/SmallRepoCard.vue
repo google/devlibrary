@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-row rounded overflow-hidden shadow">
+  <div
+    class="flex flex-row rounded overflow-hidden border border-gray-50 shadow transition-shadow hover:shadow-lg"
+  >
     <!-- GitHub Sidebar -->
     <div class="px-2 flex flex-col justify-center text-white bg-gray-900">
       <font-awesome-icon :icon="['fab', 'github']" size="lg" />
@@ -9,12 +11,12 @@
       <!-- Top Section -->
       <div class="flex-grow card-top-grid pl-3 pr-2 mb-4">
         <!-- Title and Description -->
-        <div class="text-base">
+        <router-link :to="link" class="text-base">
           <div class="font-medium">{{ repo.metadata.repo }}</div>
           <div class="wrap-lines-1">
             {{ repo.metadata.shortDescription }}
           </div>
-        </div>
+        </router-link>
 
         <!-- Stats -->
         <div class="whitespace-nowrap">

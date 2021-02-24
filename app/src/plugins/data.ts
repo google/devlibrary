@@ -31,6 +31,10 @@ export function reposRef(product: string) {
     });
 }
 
+export function reposQuery(product: string) {
+  return reposRef(product) as firebase.firestore.Query<RepoData>;
+}
+
 export function blogsRef(product: string) {
   return firestore()
     .collection("products")
@@ -40,6 +44,10 @@ export function blogsRef(product: string) {
       toFirestore: (obj: BlogData) => obj,
       fromFirestore: (snap) => snap.data() as BlogData,
     });
+}
+
+export function blogsQuery(product: string) {
+  return blogsRef(product) as firebase.firestore.Query<BlogData>;
 }
 
 export function emptyPageResponse<T>(
