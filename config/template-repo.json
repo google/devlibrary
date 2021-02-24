@@ -1,0 +1,12 @@
+{
+  "version": 1.0,
+  "source": "github",
+  "owner": "TODO: github owner",
+  "repo": "TODO: github repo name",
+  "name": "TODO: human readable name",
+  "shortDescription": "TODO: ~10 words",
+  "longDescription": "TODO: ~2 sentences",
+  "content": "README.md",
+  "pages": [],
+  "tags": []
+}

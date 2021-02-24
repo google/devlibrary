@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "jsayol",
+  "repo": "vscode-firebase-explorer",
+  "name": "Firebase Explorer",
+  "shortDescription": "Visual Studio Code extension to explore and manage your Firebase projects.",
+  "longDescription": "Visual Studio Code extension to explore and manage your Firebase projects.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["admin"]
+}

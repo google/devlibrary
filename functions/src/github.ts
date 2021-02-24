@@ -22,6 +22,28 @@ export async function getRepo(owner: string, repo: string) {
   return res.data;
 }
 
+export async function getRepoLicense(owner: string, repo: string) {
+  try {
+    const res = await gh().licenses.getForRepo({
+      owner,
+      repo,
+    });
+
+    const content = Buffer.from(res.data.content, res.data.encoding).toString();
+
+    return {
+      key: res.data.license?.key,
+      content,
+    };
+  } catch (e) {
+    console.warn(`Failed to get license for ${owner}/${repo}`, e);
+    return {
+      key: undefined,
+      content: "",
+    };
+  }
+}
+
 export async function getDefaultBranch(
   owner: string,
   repo: string

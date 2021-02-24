@@ -24,6 +24,6 @@ export interface BlogMetadata {
   /**
    * Array of product-specific string tags
    */
-  tags?: string[];
+  tags: [string, ...string[]];
   [k: string]: unknown;
 }

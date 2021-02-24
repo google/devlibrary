@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "hukusuke1007",
+  "repo": "flamingo",
+  "name": "Flamingo",
+  "shortDescription": "A Firestore model framework library for Flutter",
+  "longDescription": "A Firestore model framework library for Flutter",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["android", "ios", "web"]
+}

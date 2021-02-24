@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "octabytes",
+  "repo": "fireo",
+  "name": "FireO",
+  "shortDescription": "Simple and convenient Python ORM for Firestore.",
+  "longDescription": "Simple and convenient Python ORM for Firestore.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["admin"]
+}

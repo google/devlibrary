@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "IjzerenHein",
+  "repo": "firestorter",
+  "name": "Firestorter",
+  "shortDescription": "Use Google Firestore in React with zero effort, using MobX.",
+  "longDescription": "Use Google Firestore in React with zero effort, using MobX.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["web"]
+}

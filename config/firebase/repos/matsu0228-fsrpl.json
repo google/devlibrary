@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "matsu0228",
+  "repo": "fsrpl",
+  "name": "fsrpl",
+  "shortDescription": "Cloud Firestore replication tool.",
+  "longDescription": "Cloud Firestore replication tool.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["admin"]
+}

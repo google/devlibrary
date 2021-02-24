@@ -14,6 +14,7 @@ import { RepoMetadata } from "./types/RepoMetadata";
 export interface RepoStats {
   stars: number;
   forks: number;
+  dateAdded: number;
   lastUpdated: number;
 }
 
@@ -37,6 +38,7 @@ export interface RepoPage {
 export interface BlogStats {
   minutes: number;
   claps: number;
+  dateAdded: number;
   lastUpdated: number;
 }
 

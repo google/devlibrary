@@ -11,7 +11,6 @@
             :class="[product.classes.iconBorder]"
             class="p-1 w-10 h-10 border-4 bg-white rounded-full"
           >
-            <!-- TODO: Need to make sure these images are square! -->
             <img :src="`/logos/${product.key}.png`" />
           </div>
 
@@ -65,6 +64,7 @@
           prefix="sort"
           :keys="['Recently Added', 'Recently Updated']"
           :values="['added', 'updated']"
+          v-model="sort"
         />
 
         <p class="uppercase font-medium mt-4 mb-2">Type</p>
@@ -102,12 +102,20 @@
             <LargeRepoCard
               class="mt-4"
               v-for="repo in repos"
-              :key="repo.name"
+              :key="repo.id"
               :link="repoPath(repo)"
               :product="product.key"
               :repo="repo"
             />
           </div>
+
+          <!-- Next / Prev Buttons -->
+          <PaginationControls
+            class="mt-2"
+            :data="repoData"
+            @next="loadNext(repoData)"
+            @prev="loadPrev(repoData)"
+          />
         </div>
 
         <!-- Blog Posts -->
@@ -122,11 +130,18 @@
             <LargeBlogCard
               class="mt-4"
               v-for="blog in blogs"
-              :key="blog.title"
+              :key="blog.id"
               :product="product.key"
               :blog="blog"
             />
           </div>
+
+          <!-- Next / Prev Buttons -->
+          <PaginationControls
+            :data="blogData"
+            @next="loadNext(blogData)"
+            @prev="loadPrev(blogData)"
+          />
         </div>
       </div>
     </div>
@@ -134,7 +149,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
 import { BlogData, RepoData } from "../../../shared/types";
@@ -149,9 +164,22 @@ import CheckboxGroup, {
   CheckboxGroupEntry,
 } from "@/components/CheckboxGroup.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
+import PaginationControls from "@/components/PaginationControls.vue";
 
 import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
-import { fetchBlogs, fetchRepos } from "@/plugins/data";
+import {
+  PagedResponse,
+  blogsRef,
+  nextPage,
+  prevPage,
+  reposRef,
+  emptyPageResponse,
+} from "@/plugins/data";
+
+interface QueryParams {
+  tags: string[];
+  orderBy: string;
+}
 
 @Component({
   components: {
@@ -161,27 +189,92 @@ import { fetchBlogs, fetchRepos } from "@/plugins/data";
     RadioGroup,
     CheckboxGroup,
     HeaderSidebarLayout,
+    PaginationControls,
   },
 })
 export default class Product extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
+  public sort = "added";
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
 
-  private allRepos: RepoData[] = [];
-  private allBlogs: BlogData[] = [];
+  private perPage = 4;
+
+  public repoData: PagedResponse<RepoData> = emptyPageResponse(
+    reposRef(this.product.key),
+    this.perPage
+  );
+  public blogData: PagedResponse<BlogData> = emptyPageResponse(
+    blogsRef(this.product.key),
+    this.perPage
+  );
 
   mounted() {
-    const reposPromise = fetchRepos(this.product.key, {
-      limit: 10,
-    }).then((data) => this.allRepos.push(...data));
+    // Loading will be handled by the first "onQueryParamsChanged" firing
+    // which will happen when the page loads and the default values hit
+  }
 
-    const blogsPromise = fetchBlogs(this.product.key, {
-      limit: 10,
-    }).then((data) => this.allBlogs.push(...data));
+  @Watch("queryParams")
+  public async onQueryParamsChanged(val: QueryParams) {
+    console.log("onQueryParamsChanged", val);
 
-    this.uiModule.waitFor(Promise.all([reposPromise, blogsPromise]));
+    const reposQ = reposRef(this.product.key)
+      .where("metadata.tags", "array-contains-any", val.tags)
+      .orderBy(val.orderBy, "desc");
+
+    const repoData = emptyPageResponse(reposQ, this.perPage);
+    const reposPromise = nextPage(repoData);
+
+    const blogsQ = blogsRef(this.product.key)
+      .where("metadata.tags", "array-contains-any", val.tags)
+      .orderBy(val.orderBy, "desc");
+
+    const blogData = emptyPageResponse(blogsQ, this.perPage);
+    const blogsPromise = nextPage(blogData);
+
+    const reloadPromise = Promise.all([reposPromise, blogsPromise]).then(() => {
+      this.repoData = repoData;
+      this.blogData = blogData;
+    });
+
+    this.uiModule.waitFor(reloadPromise);
+  }
+
+  get queryTags(): string[] {
+    return this.categories.filter((x) => x.checked).map((x) => x.value);
+  }
+
+  get queryOrderBy(): string {
+    if (this.sort === "added") {
+      return "stats.dateAdded";
+    }
+
+    if (this.sort === "updated") {
+      return "stats.lastUpdated";
+    }
+
+    return "stats.dateAdded";
+  }
+
+  get queryParams(): QueryParams {
+    const orderBy = this.queryOrderBy;
+    const tags = this.queryTags;
+
+    return {
+      tags,
+      orderBy,
+    };
+  }
+
+  public async loadNext(data: PagedResponse<unknown>) {
+    // TODO: Loading
+    nextPage(data);
+  }
+
+  public async loadPrev(data: PagedResponse<unknown>) {
+    // TODO: Loading
+    prevPage(data);
   }
 
   public repoPath(repo: RepoData) {
@@ -206,24 +299,18 @@ export default class Product extends Vue {
     );
   }
 
-  get repos() {
-    // TODO: This filter should be done in the VueX module as a db query
-    return this.allRepos.filter((x) => {
-      return (
-        x.metadata.tags &&
-        x.metadata.tags.some((t) => this.selectedCategories.has(t))
-      );
-    });
+  get repos(): RepoData[] {
+    if (this.repoData.currentPage < 0) {
+      return [];
+    }
+    return this.repoData.pages[this.repoData.currentPage] || [];
   }
 
-  get blogs() {
-    // TODO: This filter should be done in the VueX module as a db query
-    return this.allBlogs.filter((x) => {
-      return (
-        x.metadata.tags &&
-        x.metadata.tags.some((t) => this.selectedCategories.has(t))
-      );
-    });
+  get blogs(): BlogData[] {
+    if (this.blogData.currentPage < 0) {
+      return [];
+    }
+    return this.blogData.pages[this.blogData.currentPage] || [];
   }
 }
 </script>

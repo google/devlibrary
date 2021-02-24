@@ -4,7 +4,16 @@ import { PubSub } from "@google-cloud/pubsub";
 
 import { loadProjectMetadata } from "./metadata";
 import { loadBlogStats, loadRepoStats } from "./stats";
-import { saveBlogData, saveRepoData, saveRepoPage } from "./firestore";
+import {
+  deleteBlogData,
+  deleteRepoData,
+  getBlogData,
+  getRepoData,
+  listProjectIds,
+  saveBlogData,
+  saveRepoData,
+  saveRepoPage,
+} from "./firestore";
 
 import * as content from "./content";
 import * as github from "./github";
@@ -17,13 +26,22 @@ admin.initializeApp();
 
 const pubsub = new PubSub();
 
+/**
+ * Return elements of a that are not in b
+ */
+function getDiff<T>(a: T[], b: T[]): T[] {
+  const setB = new Set(b);
+  return a.filter((x) => !setB.has(x));
+}
+
 async function refreshAll() {
   const products = Object.values(ProductKey);
 
   for (const product of products) {
     console.log("Refreshing product", product);
 
-    const { repos, blogs } = await loadProjectMetadata(product);
+    // Refresh or create a blog/repo entry for each config JSON
+    const { blogs, repos } = await loadProjectMetadata(product);
 
     for (const [id, metadata] of Object.entries(blogs)) {
       await pubsub.topic("refresh-blog").publishJSON({
@@ -40,12 +58,34 @@ async function refreshAll() {
         metadata,
       });
     }
+
+    // List all of the existing blogs/repos and
+    // delete any entries where the JSON no longer exists
+    const existingIds = await listProjectIds(product);
+
+    const newBlogIds = Object.keys(blogs);
+    const blogsToDelete = getDiff(existingIds.blogs, newBlogIds);
+    for (const b of blogsToDelete) {
+      console.log(`Deleting ${product} blog ${b}`);
+      await deleteBlogData(product, b);
+    }
+
+    const newRepoIds = Object.keys(repos);
+    const reposToDelete = getDiff(existingIds.repos, newRepoIds);
+    for (const r of reposToDelete) {
+      console.log(`Deleting ${product} repo ${r}`);
+      await deleteRepoData(product, r);
+    }
   }
 }
 
 // Cron job to refresh all projects each day
-export const refreshProjectsCron = functions.pubsub
-  .schedule("0 0 * * *")
+export const refreshProjectsCron = functions
+  .runWith({
+    memory: "2GB",
+    timeoutSeconds: 540,
+  })
+  .pubsub.schedule("0 0 * * *")
   .onRun(async (context) => {
     await refreshAll();
   });
@@ -73,7 +113,8 @@ export const refreshBlog = functions.pubsub
 
     console.log("Refreshing blog", product, id);
 
-    const stats = await loadBlogStats(metadata);
+    const existing = await getBlogData(product, id);
+    const stats = await loadBlogStats(metadata, existing);
     const blog = {
       id,
       metadata,
@@ -96,8 +137,23 @@ export const refreshRepo = functions.pubsub
 
     console.log("Refreshing repo", product, id);
 
-    // First save the repo metadata and stats
-    const stats = await loadRepoStats(metadata);
+    // Get the existing repo
+    const existing = await getRepoData(product, id);
+
+    // If the repo doesn't have the right license, exit early
+    const license = await github.getRepoLicense(metadata.owner, metadata.repo);
+    if (!(license.key === "mit" || license.key === "apache-2.0")) {
+      console.warn(
+        `Invalid license ${license.key} for repo ${metadata.owner}/${metadata.repo}`
+      );
+      if (existing) {
+        await deleteRepoData(product, id);
+        return;
+      }
+    }
+
+    // First save the repo's stats and metadata
+    const stats = await loadRepoStats(metadata, existing);
     const repo = {
       id,
       metadata,
@@ -135,4 +191,18 @@ export const refreshRepo = functions.pubsub
       };
       await saveRepoPage(product, repo, p.path, data);
     }
+
+    // Save the licesne as a page
+    const licensePage: RepoPage = {
+      name: "License",
+      path: "license",
+      sections: [
+        {
+          name: "License",
+          content: `<pre>${license.content}</pre>`,
+        },
+      ],
+    };
+
+    await saveRepoPage(product, repo, licensePage.path, licensePage);
   });

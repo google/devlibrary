@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "FirebaseExtended",
+  "repo": "reactfire",
+  "name": "ReactFire",
+  "shortDescription": "Hooks, Context Providers, and Components that make it easy to interact with Firebase.",
+  "longDescription": "Hooks, Context Providers, and Components that make it easy to interact with Firebase.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["web"]
+}

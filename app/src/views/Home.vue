@@ -4,7 +4,7 @@
       id="header"
       class="home-grid-base py-10 lg:py-10 bg-gray-50 border-b border-gray-100"
     >
-      <div class="col-span-8 lg:col-start-3 lg:col-span-4 mt-10">
+      <div class="col-span-8 lg:col-start-2 lg:col-span-4 mt-10">
         <h1 class="text-2xl lg:text-3xl font-semibold">
           What will <span class="underline">you</span> build?
         </h1>
@@ -12,7 +12,7 @@
         <div class="mt-10 lg:text-lg">
           <p>
             Welcome to <strong>library.google.dev</strong>, a showcase of what
-            developers like you have built with Google technologies!
+            developers like you have built with Google technologies.
           </p>
           <p class="mt-10">Browse and learn, or submit your own!</p>
         </div>
@@ -32,8 +32,12 @@
         </div>
       </div>
 
+      <div>
+        <!-- 1-col spacer -->
+      </div>
+
       <div class="col-span-4 hidden lg:block">
-        <img src="@/assets/undraw_connected_world_wuay.svg" />
+        <img src="@/assets/LibraryGoogleDev-Header.svg" />
       </div>
 
       <div class="col-span-2"><!-- Gutter --></div>
@@ -99,7 +103,7 @@ import SmallBlogCard from "@/components/SmallBlogCard.vue";
 import UIModule from "@/store/ui";
 
 import { ALL_PRODUCTS, ProductConfig } from "@/model/product";
-import { fetchBlogs, fetchRepos } from "@/plugins/data";
+import { blogsRef, getDocs, reposRef } from "@/plugins/data";
 
 import { BlogData, RepoData } from "../../../shared/types";
 
@@ -120,18 +124,26 @@ export default class Home extends Vue {
     const promises: Promise<unknown>[] = [];
 
     // For each product load 2 recent repos and 2 recent blogs
+    // TODO: One day this should use Firestore bundles
     for (const product of Object.values(ALL_PRODUCTS)) {
-      const blogPromise = fetchBlogs(product.key, { limit: 2 }).then((data) =>
-        Vue.set(this.recentBlogs, product.key, data)
-      );
-      const repoPromise = fetchRepos(product.key, { limit: 2 }).then((data) =>
-        Vue.set(this.recentRepos, product.key, data)
-      );
-
+      const blogPromise = this.fetchRecentBlogs(product.key);
+      const repoPromise = this.fetchRecentRepos(product.key);
       promises.push(blogPromise, repoPromise);
     }
 
     this.uiModule.waitFor(Promise.all(promises));
+  }
+
+  public async fetchRecentRepos(product: string) {
+    const q = reposRef(product).orderBy("stats.dateAdded", "desc").limit(2);
+    const { data } = await getDocs(q);
+    Vue.set(this.recentRepos, product, data);
+  }
+
+  public async fetchRecentBlogs(product: string) {
+    const q = blogsRef(product).orderBy("stats.dateAdded", "desc").limit(2);
+    const { data } = await getDocs(q);
+    Vue.set(this.recentBlogs, product, data);
   }
 
   public scrollToProducts() {
@@ -147,7 +159,17 @@ export default class Home extends Vue {
   }
 
   get products() {
-    return Object.values(ALL_PRODUCTS);
+    // Calculate the day of the year:
+    // https://stackoverflow.com/a/8619946/324977
+    const now = new Date();
+    const diff = now.getTime() - new Date(now.getFullYear(), 0, 0).getTime();
+    const day = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    const configs = Object.values(ALL_PRODUCTS);
+
+    // Use the day of the year to change the order of product display
+    const startInd = day % configs.length;
+    return [...configs.slice(startInd), ...configs.slice(0, startInd)];
   }
 
   get loading() {

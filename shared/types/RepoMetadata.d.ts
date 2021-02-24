@@ -36,7 +36,7 @@ export interface RepoMetadata {
   /**
    * Array of product-specific tags
    */
-  tags?: string[];
+  tags: [string, ...string[]];
   /**
    * Information about additional pages in the project other than the main page.
    */

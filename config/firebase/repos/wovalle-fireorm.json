@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "wovalle",
+  "repo": "fireorm",
+  "name": "Fireorm",
+  "shortDescription": "TypeScript ORM for Firestore",
+  "longDescription": "TypeScript ORM for Firestore",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["admin", "node"]
+}

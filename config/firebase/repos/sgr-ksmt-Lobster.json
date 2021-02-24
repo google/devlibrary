@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "sgr-ksmt",
+  "repo": "Lobster",
+  "name": "Lobster",
+  "shortDescription": "Type-safe Remote Config helper library.",
+  "longDescription": "Type-safe Remote Config helper library.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["ios"]
+}

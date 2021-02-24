@@ -11,6 +11,11 @@ v.addSchema(RepoMetadataSchema, "RepoMetadata");
 
 function validateObj(fPath, schema) {
   const fContent = fs.readFileSync(fPath).toString();
+  if (fContent.includes("TODO")) {
+    console.warn(`  x ${fPath} contains a 'TODO', did you forget to fill in the template?`);
+    process.exit(1);
+  }
+
   const obj = JSON.parse(fContent);
   const res = v.validate(obj, schema);
 
@@ -31,6 +36,10 @@ async function main() {
 
   const productDirs = fs.readdirSync(configDir);
   for (const product of productDirs) {
+    if (!fs.lstatSync(path.join(configDir, product)).isDirectory()) {
+      continue;
+    }
+
     console.log(`\nValidating blogs for ${product}`);
     const productBlogsDir = path.join(configDir, product, "blogs");
     const productBlogFiles = fs.readdirSync(productBlogsDir);

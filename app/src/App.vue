@@ -3,6 +3,7 @@
     <NavBar class="z-20 relative" />
     <ProgressBar class="z-10" />
     <router-view class="main-content z-0 relative" :key="$route.fullPath" />
+    <CookieBar class="fixed z-10 bottom-0 left-0" />
     <FooterBar class="z-0" />
   </div>
 </template>
@@ -12,12 +13,14 @@ import { Component, Vue } from "vue-property-decorator";
 import NavBar from "@/components/NavBar.vue";
 import ProgressBar from "@/components/ProgressBar.vue";
 import FooterBar from "@/components/FooterBar.vue";
+import CookieBar from "@/components/CookieBar.vue";
 
 @Component({
   components: {
     NavBar,
     ProgressBar,
     FooterBar,
+    CookieBar,
   },
 })
 export default class App extends Vue {}

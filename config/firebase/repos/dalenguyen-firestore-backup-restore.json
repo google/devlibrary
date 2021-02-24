@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "dalenguyen",
+  "repo": "firestore-backup-restore",
+  "name": "firestore-export-import",
+  "shortDescription": "Backup and restore utility for Firestore.",
+  "longDescription": "Backup and restore utility for Firestore.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["admin", "node"]
+}
