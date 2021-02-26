@@ -6,6 +6,6 @@
     "name": "Flutter Samples",
     "shortDescription": "Cool stuff with custom widgets and challenges specially for beginners",
     "longDescription": "Cool stuff with custom widgets and challenges specially for beginners",
-    "content": "readme.md",
+    "content": "README.md",
     "tags":["mobile"]
     }
