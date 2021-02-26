@@ -1,0 +1,11 @@
+{
+    "version": 1.0,
+      "source": "github",
+      "owner": "xlayers",
+      "repo": "xlayers",
+      "name": "xLayers",
+      "shortDescription": "xLayers is an online app that allows designers and developers to collaborate and generate code from a UI design",
+    "longDescription": "xLayers is an online app that allows designers and developers to collaborate and generate code from a UI design",
+      "content": "README.md",
+      "tags": ["components", "frameworks"]
+    }
