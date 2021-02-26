@@ -33,7 +33,7 @@ module.exports = {
         },
         flutter: {
           accent: "#02569B",
-          bg: "#13B9FD",
+          bg: "#F1F3F4",
           text: "#1F2937",
         },
       },
