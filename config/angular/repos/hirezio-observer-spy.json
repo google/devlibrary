@@ -1,0 +1,12 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "hirezio",
+    "repo": "observer-spy",
+    "name": "Observer Spy",
+    "shortDescription": "A library for writing easy RxJS Observables tests",
+    "longDescription": "A library for writing easy RxJS Observables tests",
+    "content": "README.md",
+    "tags": ["frameworks"]
+    }
+    
