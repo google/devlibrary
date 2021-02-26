@@ -29,10 +29,10 @@ module.exports = {
         angular: {
           accent: "#DD0031",
           bg: "#1976D2",
-          text: "#F2F2F2",
+          text: "#FFFFFF",
         },
         flutter: {
-          accent: "#02569B",
+          accent: "#13B9FD",
           bg: "#F1F3F4",
           text: "#1F2937",
         },

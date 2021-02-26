@@ -7,12 +7,7 @@
           :class="[product.classes.bg]"
           class="mobile-only flex flex-row items-center px-6 py-4"
         >
-          <div
-            :class="[product.classes.iconBorder]"
-            class="p-1 w-10 h-10 border-4 bg-white rounded-full"
-          >
-            <img :src="`/logos/${product.key}.png`" />
-          </div>
+          <ProductLogo size="tiny" :productKey="product.key" />
 
           <h1 class="text-2xl ml-2" :class="[product.classes.text]">
             {{ product.name }}
@@ -43,13 +38,7 @@
           </div>
 
           <div class="col-start-8 col-span-2">
-            <div
-              :class="[product.classes.iconBorder]"
-              class="w-2/3 p-4 border-4 bg-white rounded-full"
-            >
-              <!-- TODO: Need to make sure these images are square! -->
-              <img :src="`/logos/${product.key}.png`" />
-            </div>
+            <ProductLogo size="large" :productKey="product.key" />
           </div>
         </div>
       </div>
@@ -89,9 +78,12 @@
 
     <!-- Body -->
     <div class="grid grid-cols-10 gap-4 mb-20">
-      <div class="col-span-10 px-6 lg:px-0 lg:col-start-2 lg:col-span-8">
+      <div
+        v-show="hasContent"
+        class="col-span-10 px-6 lg:px-0 lg:col-start-2 lg:col-span-8"
+      >
         <!-- Open Source -->
-        <div v-if="showOpenSource">
+        <div id="opensource" v-if="showOpenSource">
           <h2 class="text-2xl mt-8">Open Source</h2>
 
           <div v-if="repos.length === 0" class="mt-4">
@@ -113,13 +105,13 @@
           <PaginationControls
             class="mt-2"
             :data="repoData"
-            @next="loadNext(repoData)"
-            @prev="loadPrev(repoData)"
+            @next="loadNext(repoData, '#opensource')"
+            @prev="loadPrev(repoData, '#opensource')"
           />
         </div>
 
         <!-- Blog Posts -->
-        <div v-if="showBlogPosts">
+        <div id="blogposts" v-if="showBlogPosts">
           <h2 class="text-2xl mt-8">Blog Posts</h2>
 
           <div v-if="blogs.length === 0" class="mt-4">
@@ -138,9 +130,10 @@
 
           <!-- Next / Prev Buttons -->
           <PaginationControls
+            class="mt-2"
             :data="blogData"
-            @next="loadNext(blogData)"
-            @prev="loadPrev(blogData)"
+            @next="loadNext(blogData, '#blogposts')"
+            @prev="loadPrev(blogData, '#blogposts')"
           />
         </div>
       </div>
@@ -165,6 +158,7 @@ import CheckboxGroup, {
 } from "@/components/CheckboxGroup.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
 import PaginationControls from "@/components/PaginationControls.vue";
+import ProductLogo from "@/components/ProductLogo.vue";
 
 import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 import {
@@ -192,6 +186,7 @@ interface QueryParams {
     CheckboxGroup,
     HeaderSidebarLayout,
     PaginationControls,
+    ProductLogo,
   },
 })
 export default class Product extends Vue {
@@ -279,14 +274,30 @@ export default class Product extends Vue {
     };
   }
 
-  public async loadNext(data: PagedResponse<unknown>) {
-    // TODO: Loading
-    nextPage(data);
+  get hasContent() {
+    return this.blogData.currentPage >= 0 || this.repoData.currentPage >= 0;
   }
 
-  public async loadPrev(data: PagedResponse<unknown>) {
-    // TODO: Loading
-    prevPage(data);
+  public async loadNext(data: PagedResponse<unknown>, target: string) {
+    const p = nextPage(data).then(() => this.makeTopVisible(target));
+    this.uiModule.waitFor(p);
+  }
+
+  public async loadPrev(data: PagedResponse<unknown>, target: string) {
+    const p = prevPage(data).then(() => this.makeTopVisible(target));
+    this.uiModule.waitFor(p);
+  }
+
+  private makeTopVisible(target: string) {
+    const el = document.querySelector(target);
+    if (el) {
+      const { top } = el.getBoundingClientRect();
+      const scrollNeeded = Math.max(0, 100 - top);
+      scrollBy({
+        top: -1 * scrollNeeded,
+        behavior: "smooth",
+      });
+    }
   }
 
   public repoPath(repo: RepoData) {

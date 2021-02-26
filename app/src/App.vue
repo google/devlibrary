@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <NavBar class="z-20 relative" />
-    <ProgressBar class="z-10" />
+    <div id="header-bar" class="z-20 sticky top-0">
+      <NavBar class="z-20 relative" />
+      <ProgressBar class="z-10" />
+    </div>
     <router-view class="main-content z-0 relative" :key="$route.fullPath" />
     <CookieBar class="fixed z-10 bottom-0 left-0" />
     <FooterBar class="z-0" />

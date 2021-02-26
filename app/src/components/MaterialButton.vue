@@ -1,7 +1,8 @@
 <template>
   <button
-    :class="type"
-    class="cursor-pointer rounded-sm uppercase text-sm px-3 py-2 shadow transition-shadow"
+    :class="classObj"
+    :disabled="disable"
+    class="cursor-pointer whitespace-pre rounded-sm uppercase text-sm px-3 py-2 shadow transition-shadow"
   >
     <slot></slot>
   </button>
@@ -13,10 +14,33 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 @Component
 export default class MaterialButton extends Vue {
   @Prop() type!: string;
+  @Prop({ default: false }) disable!: boolean;
+
+  get classObj() {
+    const obj: Record<string, boolean> = {
+      disabled: this.disable,
+    };
+
+    obj[this.type] = true;
+
+    return obj;
+  }
 }
 </script>
 
 <style scoped lang="postcss">
+.disabled {
+  cursor: default !important;
+}
+
+.text.disabled {
+  @apply opacity-50 cursor-pointer;
+}
+
+.text.disabled:hover {
+  background-color: unset !important;
+}
+
 .primary {
   @apply text-white bg-blue-500;
 }

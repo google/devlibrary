@@ -2,19 +2,19 @@
   <div>
     <div
       id="header"
-      class="home-grid-base py-10 lg:py-10 bg-gray-50 border-b border-gray-100"
+      class="home-grid-base py-8 lg:py-10 bg-gray-50 border-b border-gray-100"
     >
-      <div class="col-span-8 lg:col-start-2 lg:col-span-4 mt-10">
+      <div class="col-span-8 lg:col-start-2 lg:col-span-4 lg:mt-10">
         <h1 class="text-2xl lg:text-3xl font-semibold">
           What will <span class="underline">you</span> build?
         </h1>
 
-        <div class="mt-10 lg:text-lg">
-          <p>
+        <div class="lg:text-lg">
+          <p class="mt-4 lg:mt-10">
             Welcome to <strong>library.google.dev</strong>, a showcase of what
             developers like you have built with Google technologies.
           </p>
-          <p class="mt-10">Browse and learn, or submit your own!</p>
+          <p class="mt-4 lg:mt-10">Browse and learn, or submit your own!</p>
         </div>
 
         <div class="mt-8">
@@ -45,19 +45,32 @@
 
     <div class="pt-4 pb-10 lg:pb-20">
       <!-- Iterate over each product -->
-      <div class="home-grid-base" v-for="p in products" :key="p.key">
-        <div class="hidden lg:flex flex-row-reverse col-start-1 col-span-1">
-          <div
-            :class="[p.classes.iconBorder]"
-            class="mt-8 p-1 w-12 h-12 border-4 rounded-full"
-          >
-            <img :src="`/logos/${p.key}.png`" />
-          </div>
+      <div
+        class="home-grid-base"
+        v-show="hasContent"
+        v-for="p in products"
+        :key="p.key"
+      >
+        <div
+          class="desktop-only lg:flex flex-row-reverse col-start-1 col-span-1"
+        >
+          <ProductLogo class="mt-8" size="small" :productKey="p.key" />
         </div>
 
-        <div class="mt-8 col-span-7 lg:col-span-11">
-          <p class="font-display text-2xl">{{ p.name }}</p>
-          <p class="text-gray-500">Recently Added</p>
+        <div class="flex flex-row mt-8 col-span-7 lg:col-span-11">
+          <ProductLogo
+            class="mobile-only mr-2"
+            size="small"
+            :productKey="p.key"
+          />
+          <div>
+            <router-link
+              :to="`/products/${p.key}`"
+              class="font-display text-2xl"
+              >{{ p.name }}</router-link
+            >
+            <p class="text-gray-500">Recently Added</p>
+          </div>
         </div>
 
         <div class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10">
@@ -99,6 +112,7 @@ import { getModule } from "vuex-module-decorators";
 import MaterialButton from "@/components/MaterialButton.vue";
 import SmallRepoCard from "@/components/SmallRepoCard.vue";
 import SmallBlogCard from "@/components/SmallBlogCard.vue";
+import ProductLogo from "@/components/ProductLogo.vue";
 
 import UIModule from "@/store/ui";
 
@@ -112,6 +126,7 @@ import { BlogData, RepoData } from "../../../shared/types";
     MaterialButton,
     SmallRepoCard,
     SmallBlogCard,
+    ProductLogo,
   },
 })
 export default class Home extends Vue {
@@ -156,6 +171,17 @@ export default class Home extends Vue {
 
   public repoPath(product: ProductConfig, repo: RepoData) {
     return `/products/${product.key}/repos/${repo.id}`;
+  }
+
+  get hasContent() {
+    const hasRepos = Object.values(this.recentRepos).some(
+      (arr) => arr.length > 0
+    );
+    const hasBlogs = Object.values(this.recentBlogs).some(
+      (arr) => arr.length > 0
+    );
+
+    return hasRepos || hasBlogs;
   }
 
   get products() {

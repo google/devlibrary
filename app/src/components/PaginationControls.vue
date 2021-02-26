@@ -1,17 +1,11 @@
 <template>
   <div class="flex">
     <span class="flex-grow"><!-- spacer --></span>
-    <MaterialButton
-      v-if="showPrev"
-      @click.native="() => $emit('prev')"
-      type="text"
+    <MaterialButton @click.native="maybePrev" :disable="!showPrev" type="text"
       ><font-awesome-icon icon="angle-left" class="mr-1" size="sm" />
       Prev
     </MaterialButton>
-    <MaterialButton
-      v-if="showNext"
-      @click.native="() => $emit('next')"
-      type="text"
+    <MaterialButton @click.native="maybeNext" :disable="!showNext" type="text"
       >Next<font-awesome-icon icon="angle-right" class="ml-1" size="sm" />
     </MaterialButton>
   </div>
@@ -30,6 +24,18 @@ import { PagedResponse } from "@/plugins/data";
 })
 export default class PaginationControls<T> extends Vue {
   @Prop() data!: PagedResponse<T>;
+
+  public maybeNext() {
+    if (this.showNext) {
+      this.$emit("next");
+    }
+  }
+
+  public maybePrev() {
+    if (this.showPrev) {
+      this.$emit("prev");
+    }
+  }
 
   get showNext() {
     return (
