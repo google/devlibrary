@@ -1,0 +1,11 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "kshitizrimal",
+    "repo": "tflite-realtime-flutter",
+    "name": "tflite-realtime-flutter",
+    "shortDescription": "A demo app which shows realtime Image segmentation using Flutter and Tensorflow Lite.",
+    "longDescription": "A demo app which shows realtime Image segmentation using Flutter and Tensorflow Lite.",
+    "content": "README.md",
+    "tags": ["mobile","tflite"]
+    }

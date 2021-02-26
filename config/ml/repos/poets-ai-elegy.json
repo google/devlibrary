@@ -1,0 +1,11 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "poets-ai",
+    "repo": "elegy",
+    "name": "Elegy",
+    "shortDescription": "Elegy is a framework-agnostic Trainer interface for the Jax ecosystem.",
+    "longDescription": "Elegy is a framework-agnostic Trainer interface for the Jax ecosystem.",
+    "content": "README.md",
+    "tags": ["jax","library"]
+    }
