@@ -1,11 +1,11 @@
 {
     "version": 1.0,
-      "source": "github",
-      "owner": "kshitizrimal",
-      "repo": "Classification-Flutter-TFlite",
-      "name": "Classification-Flutter-TFlite",
-      "shortDescription": "Demo app which shows on device image classification using TFLite and Flutter",
+    "source": "github",
+    "owner": "kshitizrimal",
+    "repo": "Classification-Flutter-TFlite",
+    "name": "Classification-Flutter-TFlite",
+    "shortDescription": "Demo app which shows on device image classification using TFLite and Flutter",
     "longDescription": "Demo app which shows on device image classification using TFLite and Flutter",
-      "content": "README.md",
-      "tags": ["mobile","tf-lite"]
+    "content": "README.md",
+    "tags": ["mobile","tflite"]
     }

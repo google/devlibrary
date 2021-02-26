@@ -1,11 +1,11 @@
 {
     "version": 1.0,
-      "source": "github",
-      "owner": "dimitreOliveira",
-      "repo": "Tweet-Sentiment-Extraction",
-      "name": "Tweet-Sentiment-Extraction",
-      "shortDescription": "I have created this GitHub repository to host all my relevant experiments and useful information related to the 'Tweet Sentiment Extraction' Kaggle competition.",
+    "source": "github",
+    "owner": "dimitreOliveira",
+    "repo": "Tweet-Sentiment-Extraction",
+    "name": "Tweet-Sentiment-Extraction",
+    "shortDescription": "I have created this GitHub repository to host all my relevant experiments and useful information related to the 'Tweet Sentiment Extraction' Kaggle competition.",
     "longDescription": "I have created this GitHub repository to host all my relevant experiments and useful information related to the 'Tweet Sentiment Extraction' Kaggle competition.",
-      "content": "README.md",
-      "tags": ["nlp","tf"]
+    "content": "README.md",
+    "tags": ["nlp","tf"]
     }

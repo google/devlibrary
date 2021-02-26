@@ -107,7 +107,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
       {
         key: "TensorFlow Lite",
-        value: "tf-lite",
+        value: "tflite",
         color: "bg-black-500",
       },
       {
@@ -127,7 +127,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
       {
         key: "ML Ops",
-        value: "ml-ops",
+        value: "mlops",
         color: "bg-maroon-500",
       },
       {

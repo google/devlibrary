@@ -1,11 +1,11 @@
 {
     "version": 1.0,
-      "source": "github",
-      "owner": "BrikerMan",
-      "repo": "Kashgari",
-      "name": "Kashgari",
-      "shortDescription": "Kashgari is a production-level NLP Transfer learning framework built on top of tf.keras for text-labeling and text-classification, includes Word2Vec, BERT, and GPT2 Language Embedding.",
+    "source": "github",
+    "owner": "BrikerMan",
+    "repo": "Kashgari",
+    "name": "Kashgari",
+    "shortDescription": "Kashgari is a production-level NLP Transfer learning framework built on top of tf.keras for text-labeling and text-classification, includes Word2Vec, BERT, and GPT2 Language Embedding.",
     "longDescription": "Kashgari is a production-level NLP Transfer learning framework built on top of tf.keras for text-labeling and text-classification, includes Word2Vec, BERT, and GPT2 Language Embedding.",
-      "content": "README.md",
-      "tags":["nlp"]
+    "content": "README.md",
+    "tags": ["nlp"]
     }
