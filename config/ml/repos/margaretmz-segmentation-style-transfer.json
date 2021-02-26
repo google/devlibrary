@@ -1,11 +1,11 @@
 {
     "version": 1.0,
-      "source": "github",
-      "owner": "margaretmz",
-      "repo": "segmentation-style-transfer",
-      "name": "Image Background Stylizer",
-      "shortDescription": "A background stylizer chaining 2 ML models: segmentation & style transfer.",
+    "source": "github",
+    "owner": "margaretmz",
+    "repo": "segmentation-style-transfer",
+    "name": "Image Background Stylizer",
+    "shortDescription": "A background stylizer chaining 2 ML models: segmentation & style transfer.",
     "longDescription": "A background stylizer chaining 2 ML models: segmentation & style transfer.",
-      "content": "README.md",
-      "tags": ["vision","tf-lite","mobile"]
+    "content": "README.md",
+    "tags": ["vision","tf-lite","mobile"]
     }
