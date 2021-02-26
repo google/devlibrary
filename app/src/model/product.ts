@@ -77,8 +77,8 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.ML,
     name: "Machine Learning",
     description:
-      "ML Kit brings Google’s machine learning expertise to mobile developers in a powerful and easy-to-use package. Make your iOS and Android apps more engaging, personalized, and helpful with solutions that are optimized to run on device.",
-    docsUrl: "https://developers.google.com/ml-kit",
+      "Machine Learning provides new ways of solving problems that are not solvable with traditional computational approaches. Google provides a wide range of Machine Learning technologies and products for developers to use and develop for their projects.",
+    docsUrl: "https://ai.google/tools/",
     classes: {
       bg: "bg-ml-bg",
       text: "text-ml-text",
