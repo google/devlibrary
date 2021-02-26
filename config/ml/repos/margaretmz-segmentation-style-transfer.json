@@ -7,5 +7,5 @@
     "shortDescription": "A background stylizer chaining 2 ML models: segmentation & style transfer.",
     "longDescription": "A background stylizer chaining 2 ML models: segmentation & style transfer.",
     "content": "README.md",
-    "tags": ["vision","tf-lite","mobile"]
+    "tags": ["vision","tflite","mobile"]
     }
