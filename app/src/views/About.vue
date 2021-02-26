@@ -15,7 +15,7 @@
             technical content related to
             <a
               href="https://developers.google.com/products/"
-              class="underline cursor-pointer"
+              class="underline"
               target="blank"
             >
               Google’s developer products and platforms </a
@@ -93,7 +93,7 @@
             Fill out
             <a
               href="https://forms.gle/FPQg4s8DUjEdqyQR7"
-              class="underline cursor-pointer"
+              class="underline"
               target="blank"
             >
               this form

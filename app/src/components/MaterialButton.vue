@@ -1,7 +1,7 @@
 <template>
   <button
     :class="type"
-    class="cursor-pointer rounded-sm uppercase text-sm px-3 py-2 shadow"
+    class="cursor-pointer rounded-sm uppercase text-sm px-3 py-2 shadow transition-shadow"
   >
     <slot></slot>
   </button>
@@ -22,7 +22,7 @@ export default class MaterialButton extends Vue {
 }
 
 .primary:hover {
-  @apply bg-blue-600;
+  @apply bg-blue-600 shadow-md;
 }
 
 .secondary {
@@ -30,7 +30,7 @@ export default class MaterialButton extends Vue {
 }
 
 .secondary:hover {
-  @apply bg-gray-100;
+  @apply bg-gray-100 shadow-md;
 }
 
 .text {

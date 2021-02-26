@@ -8,6 +8,8 @@
       <a href="https://developers.google.com/terms/site-terms">Terms</a>
       <span class="mx-2">·</span>
       <a href="https://policies.google.com/privacy">Privacy</a>
+      <span class="mx-2">·</span>
+      <a href="https://forms.gle/2JoN6csvyvnDC8Nd9">Feedback</a>
     </div>
   </div>
 </template>

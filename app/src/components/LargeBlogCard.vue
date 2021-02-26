@@ -1,7 +1,9 @@
 <template>
   <div class="flex flex-col">
     <!-- Card -->
-    <div class="flex-grow flex flex-col rounded shadow-md overflow-hidden">
+    <div
+      class="flex-grow flex flex-col rounded shadow transition-shadow hover:shadow-lg overflow-hidden"
+    >
       <!-- author / medium header -->
       <div class="bg-gray-200 text-black px-3 py-2">
         <font-awesome-icon :icon="['fab', 'medium']" size="lg" class="mr-2" />
@@ -10,15 +12,19 @@
 
       <!-- blog name -->
       <div class="flex-grow flex flex-row mt-2 px-3">
-        <span class="text-lg font-medium flex-grow wrap-lines-3">
-          {{ blog.metadata.title }}</span
+        <a
+          :href="blog.metadata.link"
+          target="_blank"
+          class="text-lg font-medium flex-grow wrap-lines-3"
+        >
+          {{ blog.metadata.title }}</a
         >
       </div>
 
       <!-- link and time to read -->
       <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
         <span class="flex-grow"><!-- spacer --></span>
-        <a :href="blog.metadata.link" target="blank"
+        <a :href="blog.metadata.link" target="_blank"
           ><MaterialButton type="text">
             Read Post
             <font-awesome-icon

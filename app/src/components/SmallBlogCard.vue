@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-row rounded overflow-hidden shadow">
+  <div
+    class="flex flex-row rounded overflow-hidden shadow transition-shadow hover:shadow-lg"
+  >
     <!-- Medium Sidebar -->
     <div class="px-2 flex flex-col justify-center bg-gray-200 text-black">
       <font-awesome-icon :icon="['fab', 'medium']" size="lg" />
@@ -9,12 +11,14 @@
       <!-- Top Section -->
       <div class="flex-grow px-3 mb-4">
         <!-- Title and Description -->
-        <div class="text-base">
-          <div class="font-medium">{{ blog.metadata.author }}</div>
-          <div class="wrap-lines-1">
-            {{ blog.metadata.title }}
+        <a :href="blog.metadata.link" target="_blank">
+          <div class="text-base">
+            <div class="font-medium">{{ blog.metadata.author }}</div>
+            <div class="wrap-lines-1">
+              {{ blog.metadata.title }}
+            </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <!-- Timestamp and Buttons -->

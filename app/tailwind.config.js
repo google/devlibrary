@@ -37,6 +37,21 @@ module.exports = {
           text: "#1F2937",
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            "blockquote p::before": {
+              display: "none",
+            },
+            "code::before": {
+              display: "none",
+            },
+            "code::after": {
+              display: "none",
+            },
+          },
+        },
+      },
     },
   },
   variants: {

@@ -23,7 +23,7 @@
 
     <!-- Products -->
     <div
-      class="nav-item relative z-10"
+      class="nav-item nav-item-link relative z-10"
       @mouseenter="showProductsDropdown = true"
       @mouseleave="showProductsDropdown = false"
       @click="showProductsDropdown = false"
@@ -46,6 +46,11 @@
         </router-link>
       </div>
     </div>
+
+    <!-- About -->
+    <router-link tag="div" class="nav-item nav-item-link" to="/about"
+      ><span>About</span></router-link
+    >
 
     <span class="flex-grow"><!-- spacer --></span>
 
