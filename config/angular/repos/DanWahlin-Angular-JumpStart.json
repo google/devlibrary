@@ -1,0 +1,11 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "DanWahlin",
+    "repo": "Angular-JumpStart",
+    "name": "Angular JumpStart",
+    "shortDescription": "The goal of this jumpstart app is to provide a simple way to get started with Angular while also showing several key Angular features and best practices. ",
+    "longDescription": "The goal of this jumpstart app is to provide a simple way to get started with Angular while also showing several key Angular features and best practices. ",
+    "content": "README.md",
+    "tags": ["gettingstarted"]
+    }

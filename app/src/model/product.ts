@@ -169,6 +169,11 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "performance",
         color: "bg-yellow-500",
       },
+      {
+        key: "Getting Started",
+        value: "gettingstarted",
+        color: "bg-green-500",
+      },
     ],
   },
   flutter: {
