@@ -1,0 +1,11 @@
+{
+"version": 1.0,
+"source": "github",
+"owner": "lohanidamodar",
+"repo": "flutter_ui_challenges",
+"name": "flutter_ui_challenges",
+"shortDescription": "100+ Professional UI implementations with Code in Flutter. Available in Android, iOS, Linux and Web",
+"longDescription": "100+ Professional UI implementations with Code in Flutter. Available in Android, iOS, Linux and Web",
+"content": "README.md",
+"tags":["mobile"]
+}
