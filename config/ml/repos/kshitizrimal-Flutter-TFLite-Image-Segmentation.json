@@ -7,5 +7,5 @@
     "shortDescription": "Flutter TF Segmentation is an example app that uses Flutter for the ios/android app and uses TensorFlow Lite for Image segmentation.",
     "longDescription": "Flutter TF Segmentation is an example app that uses Flutter for the ios/android app and uses TensorFlow Lite for Image segmentation.",
     "content": "README.md",
-    "tags": ["mobile","tf-lite"]
+    "tags": ["mobile","tflite"]
     }
