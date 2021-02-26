@@ -1,11 +1,11 @@
 {
     "version": 1.0,
-      "source": "github",
-      "owner": "Duan-JM",
-      "repo": "edge-brain",
-      "name": "edge-brain",
-      "shortDescription": "Help everyone who is interested in Edge ML/AI, and we make repo to help them build their applications with TFLite, which it maybe not friendly enough for most developers. So, we want to make things more easy to build.",
+    "source": "github",
+    "owner": "Duan-JM",
+    "repo": "edge-brain",
+    "name": "edge-brain",
+    "shortDescription": "Help everyone who is interested in Edge ML/AI, and we make repo to help them build their applications with TFLite, which it maybe not friendly enough for most developers. So, we want to make things more easy to build.",
     "longDescription": "Help everyone who is interested in Edge ML/AI, and we make repo to help them build their applications with TFLite, which it maybe not friendly enough for most developers. So, we want to make things more easy to build.",
-      "content": "README.md",
-      "tags": ["edge","tf-lite","ml-ops"]
+    "content": "README.md",
+    "tags": ["edge","tf-lite","ml-ops"]
     }
