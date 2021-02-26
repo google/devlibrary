@@ -118,7 +118,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       {
         key: "JAX",
         value: "jax",
-        color: "bg-grey-500",
+        color: "bg-gray-500",
       },
       {
         key: "Edge",

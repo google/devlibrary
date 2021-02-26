@@ -1,8 +1,7 @@
 <template>
   <button
-    :class="classObj"
-    :disabled="disable"
-    class="cursor-pointer whitespace-pre rounded-sm uppercase text-sm px-3 py-2 shadow transition-shadow"
+    :class="type"
+    class="materialbutton cursor-pointer whitespace-pre rounded-sm uppercase text-sm px-3 py-2 shadow transition-shadow"
   >
     <slot></slot>
   </button>
@@ -14,27 +13,12 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 @Component
 export default class MaterialButton extends Vue {
   @Prop() type!: string;
-  @Prop({ default: false }) disable!: boolean;
-
-  get classObj() {
-    const obj: Record<string, boolean> = {
-      disabled: this.disable,
-    };
-
-    obj[this.type] = true;
-
-    return obj;
-  }
 }
 </script>
 
 <style scoped lang="postcss">
-.disabled {
-  cursor: default !important;
-}
-
-.text.disabled {
-  @apply opacity-50 cursor-pointer;
+.materialbutton:focus {
+  outline: none;
 }
 
 .text.disabled:hover {
@@ -49,6 +33,10 @@ export default class MaterialButton extends Vue {
   @apply bg-blue-600 shadow-md;
 }
 
+.primary:active {
+  @apply bg-blue-700 shadow-sm;
+}
+
 .secondary {
   @apply text-gray-800 bg-white;
 }
@@ -57,12 +45,34 @@ export default class MaterialButton extends Vue {
   @apply bg-gray-100 shadow-md;
 }
 
+.secondary:active {
+  @apply bg-gray-200 shadow-sm;
+}
+
 .text {
   @apply text-gray-800 bg-none;
   @apply shadow-none;
 }
 
 .text:hover {
-  background-color: rgba(17, 24, 39, 0.1);
+  @apply bg-gray-900 bg-opacity-10;
+}
+
+.text:active {
+  @apply bg-gray-900 bg-opacity-20;
+}
+
+.outlined {
+  @apply text-blue-500 bg-none;
+  @apply rounded border-2 border-blue-500;
+  @apply shadow-none;
+}
+
+.outlined:hover {
+  @apply bg-opacity-10 bg-blue-500;
+}
+
+.outlined:active {
+  @apply bg-opacity-20 bg-blue-500;
 }
 </style>

@@ -101,13 +101,15 @@
             />
           </div>
 
-          <!-- Next / Prev Buttons -->
-          <PaginationControls
-            class="mt-2"
-            :data="repoData"
-            @next="loadNext(repoData, '#opensource')"
-            @prev="loadPrev(repoData, '#opensource')"
-          />
+          <div class="flex flex-row justify-center mt-4 lg:mt-6">
+            <MaterialButton
+              v-if="repoData.hasNext"
+              type="outlined"
+              @click.native="loadNext(repoData)"
+            >
+              Load More
+            </MaterialButton>
+          </div>
         </div>
 
         <!-- Blog Posts -->
@@ -128,13 +130,15 @@
             />
           </div>
 
-          <!-- Next / Prev Buttons -->
-          <PaginationControls
-            class="mt-2"
-            :data="blogData"
-            @next="loadNext(blogData, '#blogposts')"
-            @prev="loadPrev(blogData, '#blogposts')"
-          />
+          <div class="flex flex-row justify-center mt-4 lg:mt-6">
+            <MaterialButton
+              v-if="blogData.hasNext"
+              type="outlined"
+              @click.native="loadNext(blogData)"
+            >
+              Load More
+            </MaterialButton>
+          </div>
         </div>
       </div>
     </div>
@@ -157,7 +161,6 @@ import CheckboxGroup, {
   CheckboxGroupEntry,
 } from "@/components/CheckboxGroup.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
-import PaginationControls from "@/components/PaginationControls.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 
 import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
@@ -185,7 +188,6 @@ interface QueryParams {
     RadioGroup,
     CheckboxGroup,
     HeaderSidebarLayout,
-    PaginationControls,
     ProductLogo,
   },
 })
@@ -278,26 +280,14 @@ export default class Product extends Vue {
     return this.blogData.currentPage >= 0 || this.repoData.currentPage >= 0;
   }
 
-  public async loadNext(data: PagedResponse<unknown>, target: string) {
-    const p = nextPage(data).then(() => this.makeTopVisible(target));
+  public async loadNext(data: PagedResponse<unknown>) {
+    const p = nextPage(data);
     this.uiModule.waitFor(p);
   }
 
-  public async loadPrev(data: PagedResponse<unknown>, target: string) {
-    const p = prevPage(data).then(() => this.makeTopVisible(target));
+  public async loadPrev(data: PagedResponse<unknown>) {
+    const p = prevPage(data);
     this.uiModule.waitFor(p);
-  }
-
-  private makeTopVisible(target: string) {
-    const el = document.querySelector(target);
-    if (el) {
-      const { top } = el.getBoundingClientRect();
-      const scrollNeeded = Math.max(0, 100 - top);
-      scrollBy({
-        top: -1 * scrollNeeded,
-        behavior: "smooth",
-      });
-    }
   }
 
   public repoPath(repo: RepoData) {
@@ -328,17 +318,17 @@ export default class Product extends Vue {
   }
 
   get repos(): RepoData[] {
-    if (this.repoData.currentPage < 0) {
+    if (this.repoData.pages.length <= 0) {
       return [];
     }
-    return this.repoData.pages[this.repoData.currentPage] || [];
+    return this.repoData.pages.flatMap((p) => p);
   }
 
   get blogs(): BlogData[] {
-    if (this.blogData.currentPage < 0) {
+    if (this.blogData.pages.length <= 0) {
       return [];
     }
-    return this.blogData.pages[this.blogData.currentPage] || [];
+    return this.blogData.pages.flatMap((p) => p);
   }
 }
 </script>
