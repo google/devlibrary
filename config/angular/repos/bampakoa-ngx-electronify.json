@@ -1,0 +1,12 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "bampakoa",
+    "repo": "ngx-electronify",
+    "name": "ngx-electronify",
+    "shortDescription": "ngx-electronify is an Angular library that enables your Angular CLI application to run in the desktop using Electron",
+    "longDescription": "ngx-electronify is an Angular library that enables your Angular CLI application to run in the desktop using Electron",
+    "content": "README.md",
+    "tags": ["frameworks", "performance"]
+    }
+    

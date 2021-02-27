@@ -1,0 +1,12 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "TinkoffCreditSystems",
+    "repo": "ng-polymorpheus",
+    "name": "ng-polymorpheus",
+    "shortDescription": "Polymorpheus is a tiny Angular library, combining interpolation, templates and dynamic components under unified neat API to make view customisation a breeze.",
+    "longDescription": "Polymorpheus is a tiny Angular library, combining interpolation, templates and dynamic components under unified neat API to make view customisation a breeze.",
+    "content": "README.md",
+    "tags": ["components"]
+    }
+    
