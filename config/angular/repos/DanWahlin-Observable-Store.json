@@ -1,0 +1,11 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "DanWahlin",
+    "repo": "Observable-Store",
+    "name": "Observable Store",
+    "shortDescription": "Observable Store is a front-end state management library that provides a simple yet powerful way to manage state in front-end applications such as Angular, React, or Vue. Front-end state management has become so complex that many of us spend more hours working on the state management code than on the rest of the application. Observable Store has one overall goal - keep it simple.",
+    "longDescription": "Observable Store is a front-end state management library that provides a simple yet powerful way to manage state in front-end applications such as Angular, React, or Vue. Front-end state management has become so complex that many of us spend more hours working on the state management code than on the rest of the application. Observable Store has one overall goal - keep it simple.",
+    "content": "README.md",
+    "tags": ["frameworks", "router", "performance"]
+    }

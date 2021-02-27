@@ -1,0 +1,11 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "angular-schule",
+    "repo": "angular-cli-ghpages",
+    "name": "angular-cli-ghpages",
+    "shortDescription": "Deploy your Angular app to GitHub pages directly from the Angular CLI! 🚀",
+    "longDescription": "Deploy your Angular app to GitHub pages directly from the Angular CLI! 🚀",
+    "content": "README.md",
+    "tags": ["frameworks", "gettingstarted"]
+    }
