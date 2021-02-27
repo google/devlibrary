@@ -30,7 +30,13 @@
 
           <p class="mt-4">
             This platform will evolve as we receive more submissions and we are
-            working to accept a wider range of content. So, stay tuned!
+            working to accept a wider range of content, so stay tuned!
+            <br />
+            If your question is not answered below and you need to contact us,
+            you can email the team at
+            <a class="underline" href="mailto:library-google-dev@google.com"
+              >library-google-dev@google.com</a
+            >
           </p>
         </div>
       </div>
@@ -56,9 +62,7 @@
             documentation. We hope you’ll find inspiring and useful pieces of
             code built by developers worldwide.
           </p>
-          <p class="mt-6 font-bold">
-            How does a developer submit content to the site?
-          </p>
+          <p class="mt-6 font-bold">How do I submit content to the site?</p>
           <p class="mt-4">
             You can submit your content through this
             <a href="https://forms.gle/E54pxK3JzpXMGyqN7" target="blank">form</a
@@ -87,7 +91,7 @@
             that your content gets constitutes an extra token of appreciation.
           </p>
           <p class="mt-6 font-bold">
-            How do you request for content to be removed?
+            How do I request for content to be removed?
           </p>
           <p class="mt-4">
             Fill out
@@ -101,7 +105,7 @@
             and we will get back to you in 48 hours for next steps.
           </p>
           <p class="mt-6 font-bold">
-            How do you report an error in the technical documentation?
+            How do I report an error in the technical documentation?
           </p>
           <p class="mt-4">
             Each piece of content on this site is authored by a different

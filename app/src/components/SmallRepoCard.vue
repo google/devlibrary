@@ -27,7 +27,7 @@
 
       <!-- Timestamp and Buttons -->
       <div class="flex flex-row pl-3 items-baseline">
-        <span class="flex-grow text-sm text-gray-500"
+        <span class="flex-grow text-sm text-gray-500 wrap-lines-1"
           >updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span
         >
         <router-link :to="link"

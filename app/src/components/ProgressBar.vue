@@ -37,7 +37,7 @@ export default class ProgressBar extends Vue {
 
 .line {
   position: absolute;
-  opacity: 0.4;
+  opacity: 0.5;
   width: 150%;
   height: 5px;
   @apply bg-blue-400;
