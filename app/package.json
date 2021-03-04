@@ -17,6 +17,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "core-js": "^3.6.5",
     "firebase": "^8.2.4",
+    "lodash.get": "^4.4.2",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-gtag": "^1.11.0",

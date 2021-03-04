@@ -8,6 +8,14 @@
     ],
     "rewrites": [
       {
+        "source": "/api/docProxy",
+        "function": "docProxy"
+      },
+      {
+        "source": "/api/queryProxy",
+        "function": "queryProxy"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

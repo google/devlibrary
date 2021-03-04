@@ -117,9 +117,10 @@ import ProductLogo from "@/components/ProductLogo.vue";
 import UIModule from "@/store/ui";
 
 import { ALL_PRODUCTS, ProductConfig } from "@/model/product";
-import { blogsRef, getDocs, reposRef } from "@/plugins/data";
+import { queryRepos, queryBlogs } from "@/plugins/data";
 
 import { BlogData, RepoData } from "../../../shared/types";
+import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 
 @Component({
   components: {
@@ -134,6 +135,16 @@ export default class Home extends Vue {
 
   public recentBlogs: Record<string, BlogData[]> = {};
   public recentRepos: Record<string, RepoData[]> = {};
+
+  private RECENTLY_ADDED_QUERY: FirestoreQuery = {
+    orderBy: [
+      {
+        fieldPath: "stats.dateAdded",
+        direction: "desc",
+      },
+    ],
+    limit: 2,
+  };
 
   mounted() {
     const promises: Promise<unknown>[] = [];
@@ -150,15 +161,17 @@ export default class Home extends Vue {
   }
 
   public async fetchRecentRepos(product: string) {
-    const q = reposRef(product).orderBy("stats.dateAdded", "desc").limit(2);
-    const { data } = await getDocs(q);
-    Vue.set(this.recentRepos, product, data);
+    const res = await queryRepos(product, this.RECENTLY_ADDED_QUERY);
+    const docs = res.docs.map((d) => d.data);
+
+    Vue.set(this.recentRepos, product, docs);
   }
 
   public async fetchRecentBlogs(product: string) {
-    const q = blogsRef(product).orderBy("stats.dateAdded", "desc").limit(2);
-    const { data } = await getDocs(q);
-    Vue.set(this.recentBlogs, product, data);
+    const res = await queryBlogs(product, this.RECENTLY_ADDED_QUERY);
+    const docs = res.docs.map((d) => d.data);
+
+    Vue.set(this.recentBlogs, product, docs);
   }
 
   public scrollToProducts() {
@@ -181,7 +194,7 @@ export default class Home extends Vue {
       (arr) => arr.length > 0
     );
 
-    return hasRepos || hasBlogs;
+    return hasRepos && hasBlogs;
   }
 
   get products() {

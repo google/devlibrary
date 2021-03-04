@@ -166,19 +166,11 @@ import ProductLogo from "@/components/ProductLogo.vue";
 import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 import {
   PagedResponse,
-  blogsRef,
   nextPage,
   prevPage,
-  reposRef,
   emptyPageResponse,
-  reposQuery,
-  blogsQuery,
 } from "@/plugins/data";
-
-interface QueryParams {
-  tags: string[] | null;
-  orderBy: string;
-}
+import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 
 @Component({
   components: {
@@ -200,12 +192,14 @@ export default class Product extends Vue {
 
   private perPage = 4;
 
-  public repoData: PagedResponse<RepoData> = emptyPageResponse(
-    reposRef(this.product.key),
+  public repoData: PagedResponse<RepoData> = emptyPageResponse<RepoData>(
+    `/products/${this.product.key}/repos`,
+    {},
     this.perPage
   );
-  public blogData: PagedResponse<BlogData> = emptyPageResponse(
-    blogsRef(this.product.key),
+  public blogData: PagedResponse<BlogData> = emptyPageResponse<BlogData>(
+    `/products/${this.product.key}/blogs`,
+    {},
     this.perPage
   );
 
@@ -215,25 +209,21 @@ export default class Product extends Vue {
   }
 
   @Watch("queryParams")
-  public async onQueryParamsChanged(val: QueryParams) {
-    console.log("onQueryParamsChanged", val);
+  public async onQueryParamsChanged(q: FirestoreQuery) {
+    console.log("onQueryParamsChanged", q);
 
-    let reposQ = reposQuery(this.product.key);
-    if (val.tags) {
-      reposQ = reposQ.where("metadata.tags", "array-contains-any", val.tags);
-    }
-    reposQ = reposQ.orderBy(val.orderBy, "desc");
-
-    const repoData = emptyPageResponse(reposQ, this.perPage);
+    const repoData = emptyPageResponse<RepoData>(
+      `/products/${this.product.key}/repos`,
+      q,
+      this.perPage
+    );
     const reposPromise = nextPage(repoData);
 
-    let blogsQ = blogsQuery(this.product.key);
-    if (val.tags) {
-      blogsQ = blogsQ.where("metadata.tags", "array-contains-any", val.tags);
-    }
-    blogsQ = blogsQ.orderBy(val.orderBy, "desc");
-
-    const blogData = emptyPageResponse(blogsQ, this.perPage);
+    const blogData = emptyPageResponse<BlogData>(
+      `/products/${this.product.key}/blogs`,
+      q,
+      this.perPage
+    );
     const blogsPromise = nextPage(blogData);
 
     const reloadPromise = Promise.all([reposPromise, blogsPromise]).then(() => {
@@ -266,14 +256,30 @@ export default class Product extends Vue {
     return "stats.dateAdded";
   }
 
-  get queryParams(): QueryParams {
+  get queryParams(): FirestoreQuery {
     const orderBy = this.queryOrderBy;
     const tags = this.queryTags;
 
-    return {
-      tags,
-      orderBy,
+    const q: FirestoreQuery = {
+      orderBy: [
+        {
+          fieldPath: orderBy,
+          direction: "desc",
+        },
+      ],
     };
+
+    if (tags) {
+      q.where = [
+        {
+          fieldPath: "metadata.tags",
+          operator: "array-contains-any",
+          value: tags,
+        },
+      ];
+    }
+
+    return q;
   }
 
   get hasContent() {

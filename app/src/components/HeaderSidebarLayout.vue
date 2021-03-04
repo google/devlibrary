@@ -1,5 +1,5 @@
 <template>
-  <div class="relative lg:grid lg:grid-cols-12 gap-0">
+  <div class="relative fill-height lg:grid lg:grid-cols-12 gap-0">
     <!-- Side bar -->
     <div class="desktop-only lg:col-span-2 bg-gray-50 py-10 px-10">
       <slot name="sidebar"></slot>
@@ -28,4 +28,8 @@ import { Component, Vue } from "vue-property-decorator";
 export default class HeaderSidebarLayout extends Vue {}
 </script>
 
-<style scoped lang="postcss"></style>
+<style scoped lang="postcss">
+.fill-height {
+  min-height: 100vh;
+}
+</style>

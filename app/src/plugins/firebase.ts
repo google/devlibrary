@@ -1,8 +1,6 @@
 import firebase from "firebase/app";
-import "firebase/firestore";
 
-let _firestore: firebase.firestore.Firestore | null = null;
-
+// TODO: Do we need this at all anymore if we're not using Firestore on the frontend?
 export function app() {
   if (firebase.apps.length === 0) {
     if (process.env.VUE_APP_FIREBASE_PROJECT === "ugc-site-prod") {
@@ -29,15 +27,4 @@ export function app() {
   }
 
   return firebase.app();
-}
-
-export function firestore() {
-  if (_firestore === null) {
-    _firestore = app().firestore();
-    if (process.env.NODE_ENV !== "production") {
-      _firestore.useEmulator("localhost", 8001);
-    }
-  }
-
-  return _firestore;
 }

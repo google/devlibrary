@@ -1,60 +1,61 @@
 import { BlogData, RepoData, RepoPage } from "../../../shared/types";
-import { firestore } from "./firebase";
 
-import firebase from "firebase";
+import {
+  FirestoreQuery,
+  QueryResult,
+  QueryResultDocument,
+} from "../../../shared/types/FirestoreQuery";
+
+// eslint-disable-next-line
+const lodashGet = require("lodash.get");
 
 export interface PagedResponse<T> {
-  q: firebase.firestore.Query<T>;
+  collectionPath: string;
+  q: FirestoreQuery;
   perPage: number;
   pages: T[][];
   currentPage: number;
   hasNext: boolean;
-  lastDoc: firebase.firestore.QueryDocumentSnapshot | null;
+  lastDoc: QueryResultDocument<T> | null;
 }
 
-export async function getDocs<T>(query: firebase.firestore.Query<T>) {
-  const snap = await query.get();
-
-  const snapshots = snap.docs;
-  const data = snap.docs.map((d) => d.data());
-  return { snapshots, data };
+function getApiHost(): string {
+  // In development the hosting emulator runs at port 5000
+  // while the Vue dev server runs elsewhere. In prod this is
+  // not an issue
+  return window.location.hostname === "localhost"
+    ? `http://localhost:5000`
+    : "";
 }
 
-export function reposRef(product: string) {
-  return firestore()
-    .collection("products")
-    .doc(product)
-    .collection("repos")
-    .withConverter({
-      toFirestore: (obj: RepoData) => obj,
-      fromFirestore: (snap) => snap.data() as RepoData,
-    });
+async function fetchDoc(docPath: string) {
+  const params = new URLSearchParams({
+    path: docPath,
+  });
+
+  const res = await fetch(`${getApiHost()}/api/docProxy?${params.toString()}`);
+  return await res.json();
 }
 
-export function reposQuery(product: string) {
-  return reposRef(product) as firebase.firestore.Query<RepoData>;
-}
+async function fetchQuery(collectionPath: string, q: FirestoreQuery) {
+  const params = new URLSearchParams({
+    path: collectionPath,
+    q: btoa(JSON.stringify(q)),
+  });
 
-export function blogsRef(product: string) {
-  return firestore()
-    .collection("products")
-    .doc(product)
-    .collection("blogs")
-    .withConverter({
-      toFirestore: (obj: BlogData) => obj,
-      fromFirestore: (snap) => snap.data() as BlogData,
-    });
-}
-
-export function blogsQuery(product: string) {
-  return blogsRef(product) as firebase.firestore.Query<BlogData>;
+  const res = await fetch(
+    `${getApiHost()}/api/queryProxy?${params.toString()}`
+  );
+  return await res.json();
 }
 
 export function emptyPageResponse<T>(
-  q: firebase.firestore.Query<T>,
+  collectionPath: string,
+  q: FirestoreQuery,
   perPage: number
 ): PagedResponse<T> {
   return {
+    collectionPath,
     q,
     perPage,
     pages: [],
@@ -69,38 +70,60 @@ export async function prevPage<T>(res: PagedResponse<T>) {
 }
 
 export async function nextPage<T>(res: PagedResponse<T>) {
-  // Fetch the next page based on the limit and startAfter
-  let q = res.q;
-  if (res.lastDoc) {
-    q = q.startAfter(res.lastDoc);
+  // TODO: Make a proper deep copy
+  const q: FirestoreQuery = JSON.parse(JSON.stringify(res.q));
+
+  // Add orderBy
+  q.orderBy = q.orderBy || [];
+
+  // Add the startAfter clauses
+  if (res.lastDoc != null) {
+    // Add one startAfter per orderBy
+    // eslint-disable-next-line
+    const startAfter: any[] = [];
+    for (const ob of q.orderBy) {
+      const fieldVal = lodashGet(res.lastDoc.data, ob.fieldPath);
+      startAfter.push(fieldVal);
+    }
+
+    // Add a secondary order on name
+    q.orderBy.push({
+      fieldPath: "__name__",
+      direction: "desc",
+    });
+    startAfter.push(res.lastDoc.id);
+
+    q.startAfter = startAfter;
   }
 
   // Load one more than the limit to see if we have anything more
   // beyond the minimum
-  q = q.limit(res.perPage + 1);
+  q.limit = res.perPage + 1;
 
-  const { data, snapshots } = await getDocs(q);
+  const json = await fetchQuery(res.collectionPath, q);
+  const { docs } = json as QueryResult<T>;
 
   // If we were able to find more than the per-page minimum, there
   // is still more after this
-  res.hasNext = data.length > res.perPage;
+  res.hasNext = docs.length > res.perPage;
 
   if (res.hasNext) {
     // If there are more pages after this then we need to
     // chop off the extra one we loaded (see above) and then add the data
-    const lastDoc = snapshots[snapshots.length - 2];
-    const pageData = data.slice(0, data.length - 1);
+    const lastDoc = docs[docs.length - 2];
+    const pageData = docs.slice(0, docs.length - 1).map((d) => d.data);
 
     res.lastDoc = lastDoc;
     res.pages.push(pageData);
   } else {
     // If this is the last page, just add the data (if it exists)
     // and accept the last snapshot
-    if (data.length > 0) {
-      res.pages.push(data);
+    if (docs.length > 0) {
+      const pageData = docs.map((d) => d.data);
+      res.pages.push(pageData);
     }
 
-    res.lastDoc = snapshots[snapshots.length - 1];
+    res.lastDoc = docs[docs.length - 1];
   }
 
   // Finally increment the page
@@ -111,10 +134,10 @@ export async function fetchRepo(
   product: string,
   id: string
 ): Promise<RepoData> {
-  const ref = reposRef(product).doc(id);
+  const repoPath = `/products/${product}/repos/${id}`;
+  const json = await fetchDoc(repoPath);
 
-  const snap = await ref.get();
-  return snap.data() as RepoData;
+  return json as RepoData;
 }
 
 export async function fetchRepoPage(
@@ -122,8 +145,28 @@ export async function fetchRepoPage(
   id: string,
   pageKey: string
 ): Promise<RepoPage> {
-  const ref = reposRef(product).doc(id).collection("pages").doc(pageKey);
+  const pagePath = `/products/${product}/repos/${id}/pages/${pageKey}`;
+  const json = await fetchDoc(pagePath);
 
-  const snap = await ref.get();
-  return snap.data() as RepoPage;
+  return json as RepoPage;
+}
+
+export async function queryBlogs(
+  product: string,
+  q: FirestoreQuery
+): Promise<QueryResult<BlogData>> {
+  const collectionPath = `/products/${product}/blogs`;
+  const json = await fetchQuery(collectionPath, q);
+
+  return json as QueryResult<BlogData>;
+}
+
+export async function queryRepos(
+  product: string,
+  q: FirestoreQuery
+): Promise<QueryResult<RepoData>> {
+  const collectionPath = `/products/${product}/repos`;
+  const json = await fetchQuery(collectionPath, q);
+
+  return json as QueryResult<RepoData>;
 }

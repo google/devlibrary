@@ -1,20 +1,8 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-     match /{path=**}/repos/{repo} {
-      allow read: if true;
-    }
-
-    match /products/{product}/blogs/{blog} {
-      allow read: if true;
-    }
-
-    match /products/{product}/repos/{repo} {
-      allow read: if true;
-    }
-
-    match /products/{product}/repos/{repo}/pages/{page} {
-      allow read: if true;
+    match /{document=**} {
+      allow read, write: if false;
     }
   }
 }

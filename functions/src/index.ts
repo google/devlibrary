@@ -22,9 +22,15 @@ import { BlogMetadata } from "../../shared/types/BlogMetadata";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { ProductKey, RepoPage } from "../../shared/types";
 
+// See: https://firebase.google.com/docs/functions/writing-and-viewing-logs#console-log
+require("firebase-functions/lib/logger/compat");
+
 admin.initializeApp();
 
 const pubsub = new PubSub();
+
+/** Proxy functions */
+export { queryProxy, docProxy } from "./proxy";
 
 /**
  * Return elements of a that are not in b

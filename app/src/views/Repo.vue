@@ -1,6 +1,6 @@
 <template>
-  <HeaderSidebarLayout v-if="this.repo != null">
-    <template v-slot:header>
+  <HeaderSidebarLayout>
+    <template v-if="loaded" v-slot:header>
       <!-- TODO: Per-product styling! -->
 
       <!-- Header (Desktop) -->
@@ -67,7 +67,7 @@
       </div>
     </template>
 
-    <template v-slot:sidebar>
+    <template v-if="loaded" v-slot:sidebar>
       <!-- Side bar -->
       <div>
         <p class="uppercase font-medium mt-4 mb-2">{{ product.name }}</p>
@@ -180,6 +180,10 @@ export default class Repo extends Vue {
     }
 
     return `${base}/pages/${util.cleanPagePath(path)}`;
+  }
+
+  get loaded() {
+    return this.repo != null;
   }
 }
 </script>
