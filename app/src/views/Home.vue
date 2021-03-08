@@ -11,8 +11,8 @@
 
         <div class="lg:text-lg">
           <p class="mt-4 lg:mt-10">
-            Welcome to <strong>library.google.dev</strong>, a showcase of what
-            developers like you have built with Google technologies.
+            Welcome to <strong>devlibrary.withgoogle.com</strong>, a showcase of
+            what developers like you have built with Google technologies.
           </p>
           <p class="mt-4 lg:mt-10">Browse and learn, or submit your own!</p>
         </div>

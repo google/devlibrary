@@ -1,6 +1,6 @@
 # Config
 
-This directory contains the configuration for each project listed on `library.google.dev`.
+This directory contains the configuration for each project listed on `devlibrary.withgoogle.com`.
 
 ## Adding a project
 

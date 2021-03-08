@@ -8,9 +8,9 @@
       class="inline-flex flex-row items-center ml-2 mr-4 lg:mr-8 cursor-pointer"
     >
       <img
-        src="@/assets/LibraryGoogleDev-Lockup.svg"
-        alt="library.google.dev"
-        class="h-6"
+        src="@/assets/GoogleDevelopers-lockup.svg"
+        alt="devlibrary.withgoogle.com"
+        class="h-8 mr-4"
       />
     </router-link>
 

@@ -11,7 +11,7 @@
 
         <div class="mt-10 lg:text-lg">
           <p>
-            <strong>library.google.dev</strong> is a curated platform for
+            <strong>devlibrary.withgoogle.com</strong> is a curated platform for
             technical content related to
             <a
               href="https://developers.google.com/products/"
