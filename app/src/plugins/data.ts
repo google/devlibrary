@@ -5,6 +5,7 @@ import {
   QueryResult,
   QueryResultDocument,
 } from "../../../shared/types/FirestoreQuery";
+import { hostingRoot } from "./firebase";
 
 // eslint-disable-next-line
 const lodashGet = require("lodash.get");
@@ -25,7 +26,7 @@ function getApiHost(): string {
   // not an issue
   return window.location.hostname === "localhost"
     ? `http://localhost:5000`
-    : "";
+    : hostingRoot();
 }
 
 async function fetchDoc(docPath: string) {

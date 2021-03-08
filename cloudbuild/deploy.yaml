@@ -16,6 +16,9 @@ steps:
   args: ['--prefix=app', 'run', 'build:$PROJECT_ID']
 - name: 'node:12'
   entrypoint: 'npm'
-  args: ['--prefix=shared', 'run', 'deploy']
+  args: ['--prefix=shared', 'run', 'deploy:firebase']
   env:
     - 'FIREBASE_PROJECT=$PROJECT_ID'
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  dir: 'app'
+  args: ['gcloud', '--project=$PROJECT_ID', 'app', 'deploy']

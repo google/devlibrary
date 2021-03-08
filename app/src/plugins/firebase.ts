@@ -28,3 +28,7 @@ export function app() {
 
   return firebase.app();
 }
+
+export function hostingRoot() {
+  return `https://${process.env.VUE_APP_FIREBASE_PROJECT}.web.app`;
+}

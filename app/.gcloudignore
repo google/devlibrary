@@ -1,0 +1,18 @@
+# To test:
+# gcloud meta list-files-for-upload
+
+# Ignore src and public
+src
+public
+
+# Ignore node_modules, git, and dotfiles
+node_modules
+.git
+
+# Ignore dotfiles
+/.*
+
+# Ignore config files
+/*.json
+/*.js
+/*.md

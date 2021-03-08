@@ -6,7 +6,7 @@
     "addproject": "node scripts/addproject.js",
     "validate": "node scripts/validate.js",
     "build": "node scripts/generate.js",
-    "deploy": "firebase --project=$FIREBASE_PROJECT deploy"
+    "deploy:firebase": "firebase --project=$FIREBASE_PROJECT deploy"
   },
   "author": "",
   "license": "Apache-2.0",
