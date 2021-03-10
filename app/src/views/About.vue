@@ -4,7 +4,7 @@
       id="header"
       class="grid gap-4 grid-cols-6 py-10 lg:py-10 bg-gray-50 border-b border-gray-100"
     >
-      <div class="col-start-2 col-span-4 mt-10">
+      <div class="col-start-2 col-span-4">
         <h1 class="text-2xl lg:text-3xl font-semibold">
           <span class="underline">About</span>
         </h1>
@@ -13,11 +13,7 @@
           <p>
             <strong>devlibrary.withgoogle.com</strong> is a curated platform for
             technical content related to
-            <a
-              href="https://developers.google.com/products/"
-              class="underline"
-              target="blank"
-            >
+            <a href="https://developers.google.com/products/" target="blank">
               Google’s developer products and platforms </a
             >.
           </p>
@@ -34,7 +30,7 @@
             <br />
             If your question is not answered below and you need to contact us,
             you can email the team at
-            <a class="underline" href="mailto:library-google-dev@google.com"
+            <a href="mailto:library-google-dev@google.com"
               >library-google-dev@google.com</a
             >
           </p>
@@ -42,6 +38,45 @@
       </div>
     </div>
     <div class="grid gap-4 grid-cols-6">
+      <div class="col-start-2 col-span-4 mt-10">
+        <h1 class="text-2xl lg:text-3xl font-semibold">
+          <span class="underline">Policies</span>
+        </h1>
+
+        <div class="mt-10 lg:text-lg">
+          <p class="mt-6 font-bold">Terms of Service</p>
+          <p class="mt-4">
+            <a href="https://developers.google.com/terms/site-terms"
+              >https://developers.google.com/terms/site-terms</a
+            >
+          </p>
+          <p class="mt-6 font-bold">Privacy Policy</p>
+          <p class="mt-4">
+            <a href="https://policies.google.com/privacy"
+              >https://policies.google.com/privacy</a
+            >
+          </p>
+          <p class="mt-6 font-bold">Copyright Infringement</p>
+          <p class="mt-4">
+            If you think someone is infringing your intellectual property
+            rights, you can send a notice that complies with the listed
+            <a
+              href="https://support.google.com/legal/answer/3463239?hl=en&ref_topic=4558877"
+              >Copyright Infringement Notification</a
+            >
+            requirements to
+            <a href="mailto:dmca-agent@google.com">dmca-agent@google.com</a>,
+            and we’ll take appropriate action. For example, we suspend or close
+            the Google Accounts of repeat copyright infringers as described in
+            our
+            <a
+              href="https://support.google.com/legal/topic/4558877?hl=en&ref_topic=4556931"
+              >Copyright Help Center</a
+            >.
+          </p>
+        </div>
+      </div>
+
       <div class="col-start-2 col-span-4 mt-10">
         <h1 class="text-2xl lg:text-3xl font-semibold">
           <span class="underline">Frequently Asked Questions</span>
@@ -95,11 +130,7 @@
           </p>
           <p class="mt-4">
             Fill out
-            <a
-              href="https://forms.gle/FPQg4s8DUjEdqyQR7"
-              class="underline"
-              target="blank"
-            >
+            <a href="https://forms.gle/FPQg4s8DUjEdqyQR7" target="blank">
               this form
             </a>
             and we will get back to you in 48 hours for next steps.
@@ -130,3 +161,9 @@
     </div>
   </div>
 </template>
+
+<style scoped lang="postcss">
+a {
+  @apply underline;
+}
+</style>
