@@ -164,11 +164,16 @@ function sanitizeHtml(
 
     // If the image link is relative, make sure it's pointing to GH
     modifyAttr(el, "src", (s) => {
-      if (!isRelativeLink(s)) {
-        return s;
+      let res = s;
+
+      // Upgrade http:// images to https:// to avoid mixed content
+      // security issues
+      res = res.replace("http://", "https://");
+
+      if (!isRelativeLink(res)) {
+        return res;
       }
 
-      let res = s;
       res = res.toLowerCase();
       res = urljoin(rawBaseUrl, res);
       return res;
