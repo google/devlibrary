@@ -54,6 +54,15 @@
 
     <span class="flex-grow"><!-- spacer --></span>
 
+    <!-- Feedback -->
+    <a
+      href="https://forms.gle/2JoN6csvyvnDC8Nd9"
+      target="_blank"
+      class="block nav-item nav-item-link text-blue-500"
+      to="/about"
+      ><span>Feedback?</span></a
+    >
+
     <!-- Search Bar -->
     <!-- TODO: Show this when search is enabled -->
     <div class="relative hidden">

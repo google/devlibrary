@@ -27,12 +27,24 @@
           <p class="mt-4">
             This platform will evolve as we receive more submissions and we are
             working to accept a wider range of content, so stay tuned!
-            <br />
+          </p>
+          <p class="mt-4">
             If your question is not answered below and you need to contact us,
             you can email the team at
             <a href="mailto:library-google-dev@google.com"
               >library-google-dev@google.com</a
             >
+          </p>
+          <p class="mt-8 flex flex-wrap gap-4">
+            <MaterialButton type="primary">
+              <a href="https://forms.gle/2JoN6csvyvnDC8Nd9" target="_blank">
+                Send Feedback
+              </a>
+            </MaterialButton>
+
+            <MaterialButton type="secondary">
+              <a href="mailto:library-google-dev@google.com"> Contact Us </a>
+            </MaterialButton>
           </p>
         </div>
       </div>
@@ -162,7 +174,24 @@
   </div>
 </template>
 
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+
+import MaterialButton from "@/components/MaterialButton.vue";
+
+@Component({
+  components: {
+    MaterialButton,
+  },
+})
+export default class About extends Vue {}
+</script>
+
 <style scoped lang="postcss">
+.materialbutton a {
+  text-decoration: none;
+}
+
 a {
   @apply underline;
 }
