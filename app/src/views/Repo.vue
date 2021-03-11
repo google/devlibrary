@@ -120,6 +120,17 @@
           ></div>
         </template>
       </div>
+
+      <!-- For debugging only: refresh content button -->
+      <div v-if="showRefreshButton" class="fixed z-50 bottom-4 right-4">
+        <MaterialButton
+          type="primary"
+          class="mt-8"
+          @click.native="refreshContent()"
+        >
+          Refresh
+        </MaterialButton>
+      </div>
     </div>
   </HeaderSidebarLayout>
 </template>
@@ -180,6 +191,20 @@ export default class Repo extends Vue {
     }
 
     return `${base}/pages/${util.cleanPagePath(path)}`;
+  }
+
+  public async refreshContent() {
+    const res = fetch(
+      `http://localhost:5001/ugc-site-dev/us-central1/forceRefreshRepo?product=${this.productKey}&id=${this.id}`,
+      { mode: "no-cors" }
+    );
+
+    this.uiModule.waitFor(res);
+    res.then(() => location.reload());
+  }
+
+  get showRefreshButton() {
+    return process.env.NODE_ENV === "development";
   }
 
   get loaded() {

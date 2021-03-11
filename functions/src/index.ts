@@ -85,6 +85,83 @@ async function refreshAll() {
   }
 }
 
+async function refreshRepoInternal(
+  product: string,
+  id: string,
+  metadata: RepoMetadata
+) {
+  console.log("Refreshing repo", product, id);
+
+  // Get the existing repo
+  const existing = await getRepoData(product, id);
+
+  // If the repo doesn't have the right license, exit early
+  const license = await github.getRepoLicense(metadata.owner, metadata.repo);
+  if (!(license.key === "mit" || license.key === "apache-2.0")) {
+    console.warn(
+      `Invalid license ${license.key} for repo ${metadata.owner}/${metadata.repo}`
+    );
+    if (existing) {
+      await deleteRepoData(product, id);
+      return;
+    }
+  }
+
+  // First save the repo's stats and metadata
+  const stats = await loadRepoStats(metadata, existing);
+  const repo = {
+    id,
+    metadata,
+    stats,
+  };
+  await saveRepoData(product, repo);
+
+  // Then save a document for each page
+  const pages = [
+    {
+      name: "main",
+      path: metadata.content,
+    },
+    ...(metadata.pages || []),
+  ];
+
+  const branch = await github.getDefaultBranch(metadata.owner, metadata.repo);
+
+  for (const p of pages) {
+    // Get Markdown from GitHub
+    const md = await github.getFileContent(
+      metadata.owner,
+      metadata.repo,
+      branch,
+      p.path
+    );
+
+    // Render into a series of HTML "sections"
+    const sections = content.renderContent(product, repo, p.path, md, branch);
+
+    const data: RepoPage = {
+      name: p.name,
+      path: p.path,
+      sections,
+    };
+    await saveRepoPage(product, repo, p.path, data);
+  }
+
+  // Save the licesne as a page
+  const licensePage: RepoPage = {
+    name: "License",
+    path: "license",
+    sections: [
+      {
+        name: "License",
+        content: `<pre>${license.content}</pre>`,
+      },
+    ],
+  };
+
+  await saveRepoPage(product, repo, licensePage.path, licensePage);
+}
+
 // Cron job to refresh all projects each day
 export const refreshProjectsCron = functions
   .runWith({
@@ -96,12 +173,36 @@ export const refreshProjectsCron = functions
     await refreshAll();
   });
 
-// When in the functions emulator we provide a simple webhook to refresh things
+// When in the functions emulator we provide some simple webhooks to refresh things
 if (process.env.FUNCTIONS_EMULATOR) {
   exports.refreshProjects = functions.https.onRequest(
     async (request, response) => {
       await refreshAll();
       response.json({ status: "ok" });
+    }
+  );
+
+  exports.forceRefreshRepo = functions.https.onRequest(
+    async (request, response) => {
+      const product = request.query["product"] as string | undefined;
+      const id = request.query["id"] as string | undefined;
+
+      if (!(product && id)) {
+        response.status(400).send("Must include product and id query params");
+        return;
+      }
+
+      const { repos } = await loadProjectMetadata(product);
+      const metadata = repos[id];
+
+      if (!metadata) {
+        response
+          .status(404)
+          .send(`Repo /products/${product}/repos/${id} not found`);
+      }
+
+      await refreshRepoInternal(product, id, metadata);
+      response.status(200).send(`Refreshed /products/${product}/repos/${id}`);
     }
   );
 }
@@ -141,74 +242,5 @@ export const refreshRepo = functions.pubsub
     const id = message.json.id as string;
     const metadata = message.json.metadata as RepoMetadata;
 
-    console.log("Refreshing repo", product, id);
-
-    // Get the existing repo
-    const existing = await getRepoData(product, id);
-
-    // If the repo doesn't have the right license, exit early
-    const license = await github.getRepoLicense(metadata.owner, metadata.repo);
-    if (!(license.key === "mit" || license.key === "apache-2.0")) {
-      console.warn(
-        `Invalid license ${license.key} for repo ${metadata.owner}/${metadata.repo}`
-      );
-      if (existing) {
-        await deleteRepoData(product, id);
-        return;
-      }
-    }
-
-    // First save the repo's stats and metadata
-    const stats = await loadRepoStats(metadata, existing);
-    const repo = {
-      id,
-      metadata,
-      stats,
-    };
-    await saveRepoData(product, repo);
-
-    // Then save a document for each page
-    const pages = [
-      {
-        name: "main",
-        path: metadata.content,
-      },
-      ...(metadata.pages || []),
-    ];
-
-    const branch = await github.getDefaultBranch(metadata.owner, metadata.repo);
-
-    for (const p of pages) {
-      // Get Markdown from GitHub
-      const md = await github.getFileContent(
-        metadata.owner,
-        metadata.repo,
-        branch,
-        p.path
-      );
-
-      // Render into a series of HTML "sections"
-      const sections = content.renderContent(product, repo, p.path, md, branch);
-
-      const data: RepoPage = {
-        name: p.name,
-        path: p.path,
-        sections,
-      };
-      await saveRepoPage(product, repo, p.path, data);
-    }
-
-    // Save the licesne as a page
-    const licensePage: RepoPage = {
-      name: "License",
-      path: "license",
-      sections: [
-        {
-          name: "License",
-          content: `<pre>${license.content}</pre>`,
-        },
-      ],
-    };
-
-    await saveRepoPage(product, repo, licensePage.path, licensePage);
+    await refreshRepoInternal(product, id, metadata);
   });
