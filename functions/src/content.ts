@@ -23,7 +23,6 @@ const BADGE_PATTERNS = [
   /github\.com\/.*\/workflows\/.*\.svg/,
 ];
 
-// TODO: Use Prism to highlight code
 marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: true,

@@ -148,6 +148,10 @@ import { RepoData, RepoPage } from "../../../shared/types";
 import * as util from "../../../shared/util";
 import { fetchRepo, fetchRepoPage } from "@/plugins/data";
 
+// Global HLJS
+// eslint-disable-next-line
+declare const hljs: any;
+
 @Component({
   components: {
     MaterialButton,
@@ -170,7 +174,13 @@ export default class Repo extends Vue {
     this.product = ALL_PRODUCTS[this.productKey];
 
     const p = this.loadContent();
+
     this.uiModule.waitFor(p);
+
+    // After contetn has loaded, highlight all code blocks with HLJS
+    p.then(() => {
+      hljs && hljs.highlightAll();
+    });
   }
 
   async loadContent() {
