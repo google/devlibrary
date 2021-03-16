@@ -1,0 +1,11 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "jscutlery",
+    "repo": "test-utils/tree/main/packages/cypress-mount",
+    "name": "Cypress Mount",
+    "shortDescription": "Cypress is an end-to-end testing framework gaining traction which later added support for component testing, meaning that you can unit-test components directly in Cypress. This library adds Angular support to Cypress component testing.",
+    "longDescription": "Cypress is an end-to-end testing framework gaining traction which later added support for component testing, meaning that you can unit-test components directly in Cypress. This library adds Angular support to Cypress component testing.",
+    "content": "README.md",
+    "tags": ["components","performance","gettingstarted"]
+    }

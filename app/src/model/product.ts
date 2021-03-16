@@ -116,24 +116,24 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         color: "bg-pink-500",
       },
       {
-        key: "JAX",
-        value: "jax",
-        color: "bg-gray-500",
-      },
-      {
-        key: "Edge",
-        value: "edge",
-        color: "bg-indigo-500",
-      },
-      {
-        key: "ML Ops",
-        value: "mlops",
-        color: "bg-red-800",
-      },
-      {
         key: "Notebook",
         value: "notebook",
         color: "bg-black",
+      },
+      {
+        key: "Collection",
+        value: "collection",
+        color: "bg-indigo-500",
+      },
+      {
+        key: "Web",
+        value: "web",
+        color: "bg-red-700",
+      },
+      {
+        key: "Theory",
+        value: "theory",
+        color: "bg-gray-500",
       },
     ],
   },
