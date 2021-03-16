@@ -1,0 +1,12 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "howl-anderson",
+    "repo": "chinese-wikipedia-corpus-creator",
+    "name": "Chinese Wikipedia corpus creater",
+    "shortDescription": "Workflow and scripts that help user create Chinese Wikepedia corpus easily form scratch.",
+    "longDescription": "Workflow and scripts that help user create Chinese Wikepedia corpus easily form scratch.",
+    "content": "README.md",
+    "tags": ["nlp"]
+    }
+    

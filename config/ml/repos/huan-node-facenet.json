@@ -1,0 +1,11 @@
+{
+"version": 1.0,
+"source": "github",
+"owner": "huan",
+"repo": "node-facenet",
+"name": "Facenet",
+"shortDescription": "Solve face verification, recognition and clustering problems: A TensorFlow backed FaceNet implementation for Node.js.",
+"longDescription": "Solve face verification, recognition and clustering problems: A TensorFlow backed FaceNet implementation for Node.js.",
+"content": "README.md",
+"tags": ["web","library"]
+}

@@ -1,0 +1,12 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "howl-anderson",
+    "repo": "seq2annotation",
+    "name": "seq2annotation",
+    "shortDescription": "Based on TensorFlow's general sequence tagging algorithm library (currently including BiLSTM+CRF and IDCNN+CRF), it can achieve sequence tagging tasks such as Chinese word segmentation, part-of-speech tagging, and named entity recognition.",
+    "longDescription": "Based on TensorFlow's general sequence tagging algorithm library (currently including BiLSTM+CRF and IDCNN+CRF), it can achieve sequence tagging tasks such as Chinese word segmentation, part-of-speech tagging, and named entity recognition.",
+    "content": "README.md",
+    "tags": ["nlp","library"]
+    }
+    

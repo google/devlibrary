@@ -7,5 +7,5 @@
     "shortDescription": "TensorFlow's Go bindings are hard to use: tfgo makes it easy!",
     "longDescription": "TensorFlow's Go bindings are hard to use: tfgo makes it easy!\nNo more problems like:\n- Scoping: each new node will have a new and unique name\n- Typing: attributes are automatically converted to a supported type instead of throwing errors at runtime\nSupports TensorFlow  2.x and simplifies the deploy of trained models.",
     "content": "README.md",
-    "tags": ["tf","library"]
+    "tags": ["theory"]
     }

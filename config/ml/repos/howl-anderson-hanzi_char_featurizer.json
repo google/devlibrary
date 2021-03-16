@@ -1,0 +1,12 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "howl-anderson",
+    "repo": "hanzi_char_featurizer",
+    "name": "Hanzi Character Featurizer",
+    "shortDescription": "In deep learning, the characteristics of Chinese characters (pronunciation characteristics, font characteristics) need to be extracted in many cases. This project provides a general character feature extraction framework, and built-in pinyin, glyph (four-corner code) and radical disassembly features.",
+    "longDescription": "In deep learning, the characteristics of Chinese characters (pronunciation characteristics, font characteristics) need to be extracted in many cases. This project provides a general character feature extraction framework, and built-in pinyin, glyph (four-corner code) and radical disassembly features.",
+    "content": "README.md",
+    "tags": ["vision","nlp","library"]
+    }
+    
