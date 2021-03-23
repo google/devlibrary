@@ -7,5 +7,5 @@
     "shortDescription": "A simple real-time implementation of Google's Quick, Draw Project for humans. ",
     "longDescription": "A simple real-time implementation of Google's Quick, Draw Project for humans. ",
     "content": "README.md",
-    "tags": ["vision","tf"]
+    "tags": ["vision"]
     }
