@@ -91,11 +91,6 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         color: "bg-blue-500",
       },
       {
-        key: "TensorFlow",
-        value: "tf",
-        color: "bg-red-500",
-      },
-      {
         key: "NLP",
         value: "nlp",
         color: "bg-green-500",
@@ -104,11 +99,6 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         key: "Vision",
         value: "vision",
         color: "bg-yellow-500",
-      },
-      {
-        key: "TensorFlow Lite",
-        value: "tflite",
-        color: "bg-black",
       },
       {
         key: "Library",
