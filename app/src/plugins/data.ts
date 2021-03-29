@@ -187,3 +187,20 @@ export async function queryRepos(
 
   return json as QueryResult<RepoData>;
 }
+/**
+ * See: https://stackoverflow.com/a/2450976/324977
+ */
+export function shuffleArr<T>(arr: T[]): T[] {
+  let currentIndex = arr.length;
+
+  while (currentIndex !== 0) {
+    const randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    const tmp = arr[currentIndex];
+    arr[currentIndex] = arr[randomIndex];
+    arr[randomIndex] = tmp;
+  }
+
+  return arr;
+}

@@ -51,8 +51,8 @@
 
         <RadioGroup
           prefix="sort"
-          :keys="['Recently Added', 'Recently Updated']"
-          :values="['added', 'updated']"
+          :keys="['Recently Updated', 'Recently Added']"
+          :values="['updated', 'added']"
           v-model="sort"
         />
 
@@ -186,7 +186,7 @@ import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 export default class Product extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
-  public sort = "added";
+  public sort = "updated";
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
 

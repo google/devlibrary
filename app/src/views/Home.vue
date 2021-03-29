@@ -117,7 +117,7 @@ import ProductLogo from "@/components/ProductLogo.vue";
 import UIModule from "@/store/ui";
 
 import { ALL_PRODUCTS, ProductConfig } from "@/model/product";
-import { queryRepos, queryBlogs } from "@/plugins/data";
+import { queryRepos, queryBlogs, shuffleArr } from "@/plugins/data";
 
 import { BlogData, RepoData } from "../../../shared/types";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
@@ -143,7 +143,7 @@ export default class Home extends Vue {
         direction: "desc",
       },
     ],
-    limit: 2,
+    limit: 10,
   };
 
   mounted() {
@@ -164,14 +164,20 @@ export default class Home extends Vue {
     const res = await queryRepos(product, this.RECENTLY_ADDED_QUERY);
     const docs = res.docs.map((d) => d.data);
 
-    Vue.set(this.recentRepos, product, docs);
+    // We take the most recent 10, shuffle, and pick 2. That way the
+    // most recent additions don't get stuck on the homepage.
+    const recentRepos = shuffleArr(docs).slice(0, 2);
+    Vue.set(this.recentRepos, product, recentRepos);
   }
 
   public async fetchRecentBlogs(product: string) {
     const res = await queryBlogs(product, this.RECENTLY_ADDED_QUERY);
     const docs = res.docs.map((d) => d.data);
 
-    Vue.set(this.recentBlogs, product, docs);
+    // We take the most recent 10, shuffle, and pick 2. That way the
+    // most recent additions don't get stuck on the homepage.
+    const recentBlogs = shuffleArr(docs).slice(0, 2);
+    Vue.set(this.recentBlogs, product, recentBlogs);
   }
 
   public scrollToProducts() {
