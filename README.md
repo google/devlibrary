@@ -30,10 +30,11 @@ npx firebase use ugc-site-dev
 ```
 Then, make sure you have java installed in your machine, because the firebase emulator will need java runtime.
 
-Go to GitHub and get a personal access token:
-https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
+Now download the local configuration for the Functions emulator by running this command from inside the `functions` directory:
 
-And then set it in your environment as `GITHUB_TOKEN` wherever you're running the functions emulator
+```
+firebase functions:config:get > .runtimeconfig.json
+```
 
 In a second terminal in the `functions` directory which will build and run the emulator 
 
@@ -59,3 +60,6 @@ This will automatically deploy the correct configuration based on the environmen
 Note that the Functions have the following required configuration (already set up):
 
   * `github.token` - [value in valentine](https://valentine.corp.google.com/#/show/1612543501395716)
+  * `elastic.id` - TODO
+  * `elastic.username` - TODO
+  * `elastic.password` - TODO

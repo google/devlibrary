@@ -52,40 +52,31 @@
       ><span>About</span></router-link
     >
 
-    <span class="flex-grow"><!-- spacer --></span>
-
-    <!-- Feedback -->
     <a
+      class="nav-item nav-item-link"
       href="https://forms.gle/2JoN6csvyvnDC8Nd9"
       target="_blank"
-      class="block nav-item nav-item-link text-blue-500"
-      to="/about"
-      ><span>Feedback?</span></a
+      >Feedback</a
     >
 
+    <span class="flex-grow"><!-- spacer --></span>
+
     <!-- Search Bar -->
-    <!-- TODO: Show this when search is enabled -->
-    <div class="relative hidden">
-      <font-awesome-icon
-        icon="search"
-        size="sm"
-        class="text-gray-400 absolute top-2 left-2"
-      />
-      <input
-        type="text"
-        class="bg-gray-100 text-gray-500 pl-8 pr-1 py-1 shadow-inner rounded"
-        placeholder="Search"
-      />
-    </div>
+    <SearchBar />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
+import SearchBar from "@/components/SearchBar.vue";
 import { ALL_PRODUCTS } from "@/model/product";
 
-@Component
+@Component({
+  components: {
+    SearchBar,
+  },
+})
 export default class NavBar extends Vue {
   public showProductsDropdown = false;
 

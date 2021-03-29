@@ -21,6 +21,7 @@ import * as github from "./github";
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { ProductKey, RepoPage } from "../../shared/types";
+import { index } from "./search";
 
 // See: https://firebase.google.com/docs/functions/writing-and-viewing-logs#console-log
 require("firebase-functions/lib/logger/compat");
@@ -31,6 +32,9 @@ const pubsub = new PubSub();
 
 /** Proxy functions */
 export { queryProxy, docProxy } from "./proxy";
+
+/** Search functions */
+export { elasticSearch } from "./search";
 
 /**
  * Return elements of a that are not in b
@@ -64,6 +68,9 @@ async function refreshAll() {
         metadata,
       });
     }
+
+    // Update search indices
+    await index(product, repos, blogs);
 
     // List all of the existing blogs/repos and
     // delete any entries where the JSON no longer exists

@@ -14,6 +14,7 @@ import {
   faCaretUp,
   faAngleLeft,
   faAngleRight,
+  faTimesCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
 
@@ -27,6 +28,7 @@ library.add(
   faCaretUp,
   faAngleLeft,
   faAngleRight,
+  faTimesCircle,
 
   faGithub,
   faMedium

@@ -1,4 +1,9 @@
-import { BlogData, RepoData, RepoPage } from "../../../shared/types";
+import {
+  BlogData,
+  RepoData,
+  RepoPage,
+  SearchResult,
+} from "../../../shared/types";
 
 import {
   FirestoreQuery,
@@ -48,6 +53,17 @@ async function fetchQuery(collectionPath: string, q: FirestoreQuery) {
     `${getApiHost()}/api/queryProxy?${params.toString()}`
   );
   return await res.json();
+}
+
+export async function elasticSearch(q: string): Promise<SearchResult[]> {
+  const params = new URLSearchParams({
+    q,
+  });
+
+  const res = await fetch(
+    `${getApiHost()}/api/elasticSearch?${params.toString()}`
+  );
+  return (await res.json()) as SearchResult[];
 }
 
 export function emptyPageResponse<T>(

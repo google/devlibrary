@@ -16,6 +16,10 @@
         "function": "queryProxy"
       },
       {
+        "source": "/api/elasticSearch",
+        "function": "elasticSearch"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

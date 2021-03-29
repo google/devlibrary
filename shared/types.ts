@@ -47,3 +47,25 @@ export interface BlogData {
   metadata: BlogMetadata;
   stats: BlogStats;
 }
+
+export interface BlogSearchResult {
+  type: "blog";
+  score: number;
+  data: {
+    id: string;
+    product: string;
+    metadata: BlogMetadata;
+  };
+}
+
+export interface RepoSearchResult {
+  type: "repo";
+  score: number;
+  data: {
+    id: string;
+    product: string;
+    metadata: RepoMetadata;
+  };
+}
+
+export type SearchResult = BlogSearchResult | RepoSearchResult;

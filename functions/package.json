@@ -4,7 +4,7 @@
     "build": "tsc",
     "build:watch": "tsc -w",
     "format": "prettier --write src/**/*.ts",
-    "emulate": "firebase emulators:start",
+    "emulate": "firebase emulators:start --import=./emulator-data --export-on-exit",
     "serve": "concurrently 'npm run build:watch' 'npm run emulate'"
   },
   "engines": {
@@ -12,6 +12,7 @@
   },
   "main": "lib/functions/src/index.js",
   "dependencies": {
+    "@elastic/elasticsearch": "^7.12.0",
     "@google-cloud/pubsub": "^2.8.0",
     "@octokit/rest": "^18.1.0",
     "axios": "^0.21.1",
