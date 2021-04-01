@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "source": "medium",
+  "author": "Alex Mamo",
+  "title": "How to display data from Firestore using Jetpack Compose",
+  "link": "https://medium.com/firebase-developers/how-to-display-data-from-firestore-using-jetpack-compose-49ee736dc07d",
+  "tags": [
+    "android"
+  ]
+}

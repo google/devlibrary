@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "GodotNuts",
+  "repo": "GodotFirebase",
+  "name": "Godot Firebase",
+  "shortDescription": "Implementations of Firebase for Godot using GDScript",
+  "longDescription": "A Google Firebase SDK written in GDScript for use in Godot Engine projects.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "games"
+  ]
+}

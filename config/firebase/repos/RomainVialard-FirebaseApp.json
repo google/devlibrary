@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "RomainVialard",
+  "repo": "FirebaseApp",
+  "name": "FirebaseApp",
+  "shortDescription": "Google Apps Script binding for Firebase Realtime Database",
+  "longDescription": "Google Apps Script binding for Firebase Realtime Database",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "admin"
+  ]
+}
