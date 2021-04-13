@@ -6,11 +6,13 @@
   "properties": {
     "owner": {
       "type": "string",
-      "description": "GitHub owner/organization"
+      "description": "GitHub owner/organization",
+      "pattern": "^[^\/]+$"
     },
     "repo": {
       "type": "string",
-      "description": "GitHub repo name"
+      "description": "GitHub repo name",
+      "pattern": "^[^\/]+$"
     },
     "name": {
       "type": "string",

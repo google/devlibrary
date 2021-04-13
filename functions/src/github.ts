@@ -17,7 +17,9 @@ export async function getRepo(owner: string, repo: string) {
   const res = await gh().repos.get({
     owner,
     repo,
-  });
+  }).catch((e) => {
+    throw new Error(`Unable to get repo ${owner}/${repo}: ${JSON.stringify(e)}`);
+  })
 
   return res.data;
 }
@@ -67,6 +69,8 @@ export async function getFileContent(
     repo,
     path,
     ref: branch,
+  }).catch((e) => {
+    throw new Error(`Unable to fetch file "${path}@${branch}" from "${owner}/${repo}": ${JSON.stringify(e)}`);
   });
 
   if (Array.isArray(res.data)) {
