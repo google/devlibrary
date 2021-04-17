@@ -1,0 +1,11 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "huan",
+    "repo": "ng-plus-wechaty",
+    "name": "ng-plus-wechaty",
+    "shortDescription": "Conversational AI TensorFlow.js NLP examples with Wechaty SDK and Angular",
+    "longDescription": "Conversational AI TensorFlow.js NLP examples with Wechaty SDK and Angular",
+    "content": "README.md",
+    "tags": ["components", "frameworks"]
+    }
