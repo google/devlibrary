@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "github",
+  "owner": "jirawatee",
+  "repo": "LINE-Login-x-Firebase-Android",
+  "name": "LINE Login x Firebase for Android",
+  "shortDescription": "Code guideline in integrating LINE Login with Firebase for Android developers.",
+  "longDescription": "Code guideline in integrating LINE Login with Firebase for Android developers.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["android"]
+}
