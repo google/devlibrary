@@ -16,6 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "core-js": "^3.6.5",
+    "dompurify": "^2.2.7",
     "firebase": "^8.2.4",
     "lodash.get": "^4.4.2",
     "vue": "^2.6.11",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@tailwindcss/typography": "^0.4.0",
+    "@types/dompurify": "^2.2.1",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@vue/cli-plugin-babel": "~4.5.0",

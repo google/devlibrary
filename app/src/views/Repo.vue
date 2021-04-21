@@ -116,7 +116,7 @@
           <div
             class="prose mt-4 lg:mt-8"
             :key="`content-${s.name}`"
-            v-html="s.content"
+            v-html="sanitize(s.content)"
           ></div>
         </template>
       </div>
@@ -138,6 +138,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
+import DOMPurify from "dompurify";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
@@ -201,6 +202,11 @@ export default class Repo extends Vue {
     }
 
     return `${base}/pages/${util.cleanPagePath(path)}`;
+  }
+
+  public sanitize(dirty: string) {
+    // TODO: Should probably do this on the server for the best security
+    return DOMPurify.sanitize(dirty, { USE_PROFILES: { html: true } });
   }
 
   public async refreshContent() {
