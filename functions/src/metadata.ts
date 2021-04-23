@@ -5,6 +5,22 @@ import * as github from "./github";
 
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
+import { AuthorMetadata } from "../../shared/types/AuthorMetadata";
+
+async function listAuthorFiles(): Promise<string[]> {
+  if (process.env.FUNCTIONS_EMULATOR) {
+    const configPath = path.resolve(`../config/authors`);
+    const authorFiles = fs.readdirSync(configPath);
+    return authorFiles.map((f) => path.join(configPath, f));
+  }
+
+  return await github.getDirectoryContent(
+    "FirebasePrivate",
+    "ugc.dev",
+    "main",
+    `config/authors`
+  );
+}
 
 async function listConfigFiles(
   product: string,
@@ -37,6 +53,21 @@ async function readConfigFile(filePath: string): Promise<string> {
     "main",
     filePath
   );
+}
+
+export async function loadAuthorMetadata() {
+  const authorFiles = await listAuthorFiles();
+
+  const res: Record<string, AuthorMetadata> = {};
+  for (const f of authorFiles) {
+    // The file name (without.json) is the id
+    const id = path.basename(f).split(".")[0];
+    const content = await readConfigFile(f);
+    const metadata = JSON.parse(content) as AuthorMetadata;
+    res[id] = metadata;
+  }
+
+  return res;
 }
 
 export async function loadProjectMetadata(product: string) {

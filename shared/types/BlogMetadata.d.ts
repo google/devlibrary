@@ -10,6 +10,10 @@
  */
 export interface BlogMetadata {
   /**
+   * The Dev Library ID of the author(s)
+   */
+  authorIds?: string[];
+  /**
    * The name of the human author
    */
   author: string;

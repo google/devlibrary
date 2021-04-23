@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["jsayol"],
   "owner": "jsayol",
   "repo": "vscode-firebase-explorer",
   "name": "Firebase Explorer",

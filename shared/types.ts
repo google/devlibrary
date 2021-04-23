@@ -5,6 +5,7 @@ export enum ProductKey {
   FLUTTER = "flutter"
 }
 
+import { AuthorMetadata } from "./types/AuthorMetadata";
 /**
  * These two types are defined in JSON schema so that we can validate them easily.
  */
@@ -20,6 +21,7 @@ export interface RepoStats {
 
 export interface RepoData {
   id: string;
+  product: string;
   metadata: RepoMetadata;
   stats: RepoStats;
 }
@@ -44,8 +46,14 @@ export interface BlogStats {
 
 export interface BlogData {
   id: string;
+  product: string;
   metadata: BlogMetadata;
   stats: BlogStats;
+}
+
+export interface AuthorData {
+  id: string;
+  metadata: AuthorMetadata;
 }
 
 export interface BlogSearchResult {

@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["rosariopfernandes"],
   "owner": "rosariopfernandes",
   "repo": "firecoil",
   "name": "firecoil",

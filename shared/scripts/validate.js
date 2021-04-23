@@ -4,10 +4,12 @@ const Validator = require("jsonschema").Validator;
 
 const BlogMetadataSchema = require("../schema/BlogMetadata.json");
 const RepoMetadataSchema = require("../schema/RepoMetadata.json");
+const AuthorMetadataSchema = require("../schema/AuthorMetadata.json");
 
 const v = new Validator();
 v.addSchema(BlogMetadataSchema, "BlogMetadata");
 v.addSchema(RepoMetadataSchema, "RepoMetadata");
+v.addSchema(AuthorMetadataSchema, "AuthorMetadata");
 
 function validateObj(fPath, schema) {
   const fContent = fs.readFileSync(fPath).toString();
@@ -34,26 +36,38 @@ async function main() {
   const dir = path.dirname(__filename);
   const configDir = path.resolve(dir, "../../config");
 
+  const authorsDir = path.join(configDir, "authors");
+  console.log(`\nValidating authors`);
+  const authorFiles = fs.readdirSync(authorsDir);
+  for (const f of authorFiles) {
+    const fPath = path.join(authorsDir, f);
+    validateObj(fPath, AuthorMetadataSchema);
+  }
+
   const productDirs = fs.readdirSync(configDir);
   for (const product of productDirs) {
     if (!fs.lstatSync(path.join(configDir, product)).isDirectory()) {
       continue;
     }
-
-    console.log(`\nValidating blogs for ${product}`);
+   
     const productBlogsDir = path.join(configDir, product, "blogs");
-    const productBlogFiles = fs.readdirSync(productBlogsDir);
-    for (const f of productBlogFiles) {
-      const fPath = path.join(productBlogsDir, f);
-      validateObj(fPath, BlogMetadataSchema);
+    if (fs.existsSync(productBlogsDir)) {
+      console.log(`\nValidating blogs for ${product}`);
+      const productBlogFiles = fs.readdirSync(productBlogsDir);
+      for (const f of productBlogFiles) {
+        const fPath = path.join(productBlogsDir, f);
+        validateObj(fPath, BlogMetadataSchema);
+      }
     }
 
-    console.log(`\nValidating repos for ${product}`);
     const productReposDir = path.join(configDir, product, "repos");
-    const productRepoFiles = fs.readdirSync(productReposDir);
-    for (const f of productRepoFiles) {
-      const fPath = path.join(productReposDir, f);
-      validateObj(fPath, RepoMetadataSchema);
+    if (fs.existsSync(productReposDir)) {
+      console.log(`\nValidating repos for ${product}`);
+      const productRepoFiles = fs.readdirSync(productReposDir);
+      for (const f of productRepoFiles) {
+        const fPath = path.join(productReposDir, f);
+        validateObj(fPath, RepoMetadataSchema);
+      }
     }
   }
 }

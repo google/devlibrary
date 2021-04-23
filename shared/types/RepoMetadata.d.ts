@@ -10,6 +10,10 @@
  */
 export interface RepoMetadata {
   /**
+   * The Dev Library ID of the author(s)
+   */
+  authorIds?: string[];
+  /**
    * GitHub owner/organization
    */
   owner: string;

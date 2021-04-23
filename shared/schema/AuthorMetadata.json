@@ -1,0 +1,29 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "AuthorMetadata",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The author's name"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short author bio"
+    },
+    "photoURL": {
+      "type": "string",
+      "description": "Public URL to their profile photo"
+    },
+    "githubURL": {
+      "type": "string",
+      "description": "Public URL to their GitHub profile"
+    },
+    "mediumURL": {
+      "type": "string",
+      "description": "Public URL to their Medium profile"
+    }
+  },
+  "required": [ "name", "bio", "photoURL" ]
+}

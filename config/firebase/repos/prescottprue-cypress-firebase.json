@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["prescottprue"],
   "owner": "prescottprue",
   "repo": "cypress-firebase",
   "name": "cypress-firebase",

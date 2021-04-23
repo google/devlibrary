@@ -1,4 +1,5 @@
 export interface FirestoreQuery {
+  scope?: "COLLECTION" | "COLLECTION_GROUP";
   where?: {
     fieldPath: string;
     operator: string;
@@ -6,7 +7,7 @@ export interface FirestoreQuery {
   }[];
   orderBy?: {
     fieldPath: string;
-    direction: string;
+    direction: "asc" | "desc";
   }[];
   startAfter?: string[];
   limit?: number;

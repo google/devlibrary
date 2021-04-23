@@ -2,14 +2,17 @@ import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import { PubSub } from "@google-cloud/pubsub";
 
-import { loadProjectMetadata } from "./metadata";
+import { loadAuthorMetadata, loadProjectMetadata } from "./metadata";
 import { loadBlogStats, loadRepoStats } from "./stats";
 import {
+  deleteAuthorData,
   deleteBlogData,
   deleteRepoData,
   getBlogData,
   getRepoData,
+  listAuthorIds,
   listProjectIds,
+  saveAuthorData,
   saveBlogData,
   saveRepoData,
   saveRepoPage,
@@ -20,7 +23,7 @@ import * as github from "./github";
 
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
-import { ProductKey, RepoPage } from "../../shared/types";
+import { AuthorData, ProductKey, RepoPage } from "../../shared/types";
 import { index } from "./search";
 
 // See: https://firebase.google.com/docs/functions/writing-and-viewing-logs#console-log
@@ -44,7 +47,7 @@ function getDiff<T>(a: T[], b: T[]): T[] {
   return a.filter((x) => !setB.has(x));
 }
 
-async function refreshAll() {
+async function refreshAllProjects() {
   const products = Object.values(ProductKey);
 
   for (const product of products) {
@@ -92,6 +95,31 @@ async function refreshAll() {
   }
 }
 
+async function refreshAllAuthors() {
+  const authors = await loadAuthorMetadata();
+
+  for (const id in authors) {
+    const data: AuthorData = {
+      id,
+      metadata: authors[id]
+    };
+
+    await saveAuthorData(id, data);
+  }
+
+  // List all of the existing authors and
+  // delete any entries where the JSON no longer exists
+  const existingIds = await listAuthorIds();
+  const newAuthorIds = Object.keys(authors);
+  const authorsToDelete = getDiff(existingIds, newAuthorIds);
+  for (const a of authorsToDelete) {
+    console.log(`Deleting author ${a}`);
+    await deleteAuthorData(a);
+  }
+
+  // TODO: Author search indexing
+}
+
 async function refreshRepoInternal(
   product: string,
   id: string,
@@ -118,6 +146,7 @@ async function refreshRepoInternal(
   const stats = await loadRepoStats(metadata, existing);
   const repo = {
     id,
+    product,
     metadata,
     stats,
   };
@@ -177,14 +206,22 @@ export const refreshProjectsCron = functions
   })
   .pubsub.schedule("0 0 * * *")
   .onRun(async (context) => {
-    await refreshAll();
+    await refreshAllProjects();
+    await refreshAllAuthors();
   });
 
 // When in the functions emulator we provide some simple webhooks to refresh things
 if (process.env.FUNCTIONS_EMULATOR) {
   exports.refreshProjects = functions.https.onRequest(
     async (request, response) => {
-      await refreshAll();
+      await refreshAllProjects();
+      response.json({ status: "ok" });
+    }
+  );
+
+  exports.refreshAuthors = functions.https.onRequest(
+    async (request, response) => {
+      await refreshAllAuthors();
       response.json({ status: "ok" });
     }
   );
@@ -231,6 +268,7 @@ export const refreshBlog = functions.pubsub
     const stats = await loadBlogStats(metadata, existing);
     const blog = {
       id,
+      product,
       metadata,
       stats,
     };

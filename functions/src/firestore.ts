@@ -1,6 +1,11 @@
 import * as admin from "firebase-admin";
-import { BlogData, RepoData, RepoPage } from "../../shared/types";
+import { AuthorData, BlogData, RepoData, RepoPage } from "../../shared/types";
 import { cleanPagePath } from "../../shared/util";
+
+function authorRef(id: string) {
+  const db = admin.firestore();
+  return db.collection("authors").doc(id);
+}
 
 function repoRef(product: string, id: string) {
   const db = admin.firestore();
@@ -12,16 +17,22 @@ function blogRef(product: string, id: string) {
   return db.collection("products").doc(product).collection("blogs").doc(id);
 }
 
+async function getIdSet(ref: admin.firestore.Query) {
+  const snap = await ref.get();
+  const ids = snap.docs.map((d) => d.id);
+  return ids;
+};
+
+export async function listAuthorIds() {
+  const db = admin.firestore();
+  const authorsRef = db.collection("authors");
+  return await getIdSet(authorsRef);
+}
+
 export async function listProjectIds(product: string) {
   const db = admin.firestore();
   const blogsRef = db.collection("products").doc(product).collection("blogs");
   const reposRef = db.collection("products").doc(product).collection("repos");
-
-  const getIdSet = async (ref: admin.firestore.Query) => {
-    const snap = await ref.get();
-    const ids = snap.docs.map((d) => d.id);
-    return ids;
-  };
 
   const blogs = await getIdSet(blogsRef);
   const repos = await getIdSet(reposRef);
@@ -51,6 +62,11 @@ export async function saveRepoData(product: string, project: RepoData) {
   await ref.set(project);
 }
 
+export async function saveAuthorData(id: string, author: AuthorData) {
+  const ref = authorRef(id);
+  await ref.set(author);
+}
+
 async function deepDelete(ref: admin.firestore.DocumentReference) {
   const collections = await ref.listCollections();
   for (const collRef of collections) {
@@ -72,6 +88,11 @@ export async function deleteRepoData(product: string, id: string) {
 
 export async function deleteBlogData(product: string, id: string) {
   const ref = blogRef(product, id);
+  await deepDelete(ref);
+}
+
+export async function deleteAuthorData(id: string) {
+  const ref = authorRef(id);
   await deepDelete(ref);
 }
 

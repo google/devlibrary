@@ -4,6 +4,13 @@
   "description": "BlogMetadata",
   "type": "object",
   "properties": {
+    "authorIds": {
+      "type": "array",
+      "description": "The Dev Library ID of the author(s)",
+      "items": {
+        "type": "string"
+      }
+    },
     "author": {
       "type": "string",
       "description": "The name of the human author"

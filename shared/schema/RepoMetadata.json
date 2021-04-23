@@ -4,6 +4,13 @@
   "description": "RepoMetadata",
   "type": "object",
   "properties": {
+    "authorIds": {
+      "type": "array",
+      "description": "The Dev Library ID of the author(s)",
+      "items": {
+        "type": "string"
+      }
+    },
     "owner": {
       "type": "string",
       "description": "GitHub owner/organization",
