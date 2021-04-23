@@ -128,8 +128,8 @@ export const elasticSearch = functions.https.onRequest(async (req, res) => {
   // Allow CORS
   res.header("Access-Control-Allow-Origin", "*");
 
-  // Cache for 12 hours (43200 seconds)
-  res.set("Cache-Control", "public, max-age=43200, s-maxage=43200");
+  // Cache at browser for 10 minutes (600s) and on CDN for 12 hours (43200s)
+  res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
 
   // The "q" param is the search term
   const q = req.query.q as string;
