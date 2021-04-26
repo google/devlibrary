@@ -22,7 +22,7 @@
         <div
           class="mobile-only flex flex-row gap-4 items-center px-6 py-4 bg-gray-500"
         >
-          <CircleImage size="small" :src="author.metadata.photoURL" />
+          <CircleImage class="border-white" size="small" :src="author.metadata.photoURL" />
           <div class="text-white">
             <h1 class="text-2xl">
               {{ author.metadata.name }}
@@ -38,7 +38,7 @@
       <div class="desktop-only">
         <div class="py-20 grid grid-cols-10 bg-gray-500">
           <div class="col-start-2 col-span-8 flex flex-row gap-8 items-center">
-            <CircleImage size="large" :src="author.metadata.photoURL" />
+            <CircleImage class="border-white" size="large" :src="author.metadata.photoURL" />
             <div class="text-white">
               <h1 class="text-3xl font-semibold">
                 {{ author.metadata.name }}

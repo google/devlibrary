@@ -192,6 +192,15 @@ export async function fetchRepoPage(
   return json as RepoPage;
 }
 
+export async function queryAuthors(
+  q: FirestoreQuery
+): Promise<QueryResult<AuthorData>> {
+  const collectionPath = `/authors`;
+  const json = await fetchQuery(collectionPath, q);
+
+  return json as QueryResult<AuthorData>;
+}
+
 export async function queryBlogs(
   product: string,
   q: FirestoreQuery

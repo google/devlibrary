@@ -15,7 +15,7 @@
 -->
 
 <template>
-  <img :src="src" class="border-white" :class="[size]" />
+  <img :src="src" :class="[size]" />
 </template>
 
 <script lang="ts">
@@ -30,11 +30,11 @@ export default class CircleImage extends Vue {
 
 <style scoped lang="postcss">
 .tiny {
-  @apply object-contain w-10 h-10 border-2 bg-white rounded-full;
+  @apply object-contain w-10 h-10 border bg-white rounded-full;
 }
 
 .small {
-  @apply object-contain w-12 h-12 border-2 bg-white rounded-full;
+  @apply object-contain w-12 h-12 border bg-white rounded-full;
 }
 
 .large {
