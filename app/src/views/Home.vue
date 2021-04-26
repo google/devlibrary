@@ -77,7 +77,6 @@
           <div class="home-grid-projects">
             <SmallRepoCard
               v-for="repo in recentRepos[p.key]"
-              :link="repoPath(p, repo)"
               :key="repo.id"
               :repo="repo"
             />
@@ -116,7 +115,7 @@ import ProductLogo from "@/components/ProductLogo.vue";
 
 import UIModule from "@/store/ui";
 
-import { ALL_PRODUCTS, ProductConfig } from "@/model/product";
+import { ALL_PRODUCTS } from "@/model/product";
 import { queryRepos, queryBlogs, shuffleArr } from "@/plugins/data";
 
 import { BlogData, RepoData } from "../../../shared/types";
@@ -186,10 +185,6 @@ export default class Home extends Vue {
       behavior: "smooth",
       top: header?.getBoundingClientRect().bottom,
     });
-  }
-
-  public repoPath(product: ProductConfig, repo: RepoData) {
-    return `/products/${product.key}/repos/${repo.id}`;
   }
 
   get hasContent() {

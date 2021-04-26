@@ -52,11 +52,14 @@ import * as dates from "@/plugins/dates";
   },
 })
 export default class SmallRepoCard extends Vue {
-  @Prop() link!: string;
   @Prop() repo!: RepoData;
 
   public renderDaysAgo(lastUpdated: number) {
     return dates.renderDaysAgo(lastUpdated);
+  }
+
+  get link() {
+    return `/products/${this.repo.product}/repos/${this.repo.id}`;
   }
 }
 </script>

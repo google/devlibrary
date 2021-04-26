@@ -95,8 +95,6 @@
               class="mt-4"
               v-for="repo in repos"
               :key="repo.id"
-              :link="repoPath(repo)"
-              :product="product.key"
               :repo="repo"
             />
           </div>
@@ -125,7 +123,6 @@
               class="mt-4"
               v-for="blog in blogs"
               :key="blog.id"
-              :product="product.key"
               :blog="blog"
             />
           </div>
@@ -294,10 +291,6 @@ export default class Product extends Vue {
   public async loadPrev(data: PagedResponse<unknown>) {
     const p = prevPage(data);
     this.uiModule.waitFor(p);
-  }
-
-  public repoPath(repo: RepoData) {
-    return `/products/${this.product.key}/repos/${repo.id}`;
   }
 
   get product(): ProductConfig {

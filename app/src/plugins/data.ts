@@ -1,4 +1,5 @@
 import {
+  AuthorData,
   BlogData,
   RepoData,
   RepoPage,
@@ -147,6 +148,13 @@ export async function nextPage<T>(res: PagedResponse<T>) {
   res.currentPage = res.currentPage + 1;
 }
 
+export async function fetchAuthor(id: string): Promise<AuthorData> {
+  const repoPath = `/authors/${id}`;
+  const json = await fetchDoc(repoPath);
+
+  return json as AuthorData;
+}
+
 export async function fetchRepo(
   product: string,
   id: string
@@ -187,6 +195,34 @@ export async function queryRepos(
 
   return json as QueryResult<RepoData>;
 }
+
+export async function queryAuthorProjects(authorId: string) {
+  const q: FirestoreQuery = {
+    scope: "COLLECTION_GROUP",
+    where: [
+      {
+        fieldPath: "metadata.authorIds",
+        operator: "array-contains",
+        value: authorId,
+      },
+    ],
+    orderBy: [
+      {
+        fieldPath: "stats.lastUpdated",
+        direction: "desc",
+      },
+    ],
+  };
+
+  const blogs = (await fetchQuery("blogs", q)) as QueryResult<BlogData>;
+  const repos = (await fetchQuery("repos", q)) as QueryResult<RepoData>;
+
+  return {
+    blogs,
+    repos,
+  };
+}
+
 /**
  * See: https://stackoverflow.com/a/2450976/324977
  */

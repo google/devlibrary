@@ -64,16 +64,18 @@ import * as product from "@/model/product";
   },
 })
 export default class LargeRepoCard extends Vue {
-  @Prop() product!: string;
   @Prop() repo!: RepoData;
-  @Prop() link!: string;
 
   public renderDaysAgo(lastUpdated: number) {
     return dates.renderDaysAgo(lastUpdated);
   }
 
   public getTag(value: string) {
-    return product.getTag(this.product, value);
+    return product.getTag(this.repo.product, value);
+  }
+
+  get link() {
+    return `/products/${this.repo.product}/repos/${this.repo.id}`;
   }
 }
 </script>

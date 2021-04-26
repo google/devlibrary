@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Product from "../views/Product.vue";
 import Repo from "../views/Repo.vue";
+import Author from "../views/Author.vue";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes: Array<RouteConfig> = [
     path: "/products/:product/repos/:repo/pages/:page(.*)",
     name: "RepoPage",
     component: Repo,
+  },
+  {
+    path: "/authors/:author",
+    name: "Author",
+    component: Author,
   },
   {
     path: "/about",

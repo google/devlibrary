@@ -57,11 +57,10 @@ import * as product from "@/model/product";
   },
 })
 export default class LargeBlogCard extends Vue {
-  @Prop() product!: string;
   @Prop() blog!: BlogData;
 
   public getTag(value: string) {
-    return product.getTag(this.product, value);
+    return product.getTag(this.blog.product, value);
   }
 }
 </script>
