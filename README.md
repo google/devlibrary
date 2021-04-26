@@ -59,7 +59,9 @@ This will automatically deploy the correct configuration based on the environmen
 
 Note that the Functions have the following required configuration (already set up):
 
-  * `github.token` - [value in valentine](https://valentine.corp.google.com/#/show/1612543501395716)
-  * `elastic.id` - TODO
-  * `elastic.username` - TODO
-  * `elastic.password` - TODO
+  * `github.token
+  * `elastic.id
+  * `elastic.username
+  * `elastic.password
+
+All configuration values are stored in Valentine with the `[dev-ugc]` prefix.
