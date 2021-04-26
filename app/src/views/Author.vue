@@ -86,7 +86,14 @@
         <div id="blogposts" v-if="blogs.length > 0">
           <h2 class="text-2xl mt-8">Blog Posts</h2>
 
-          TODO
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <LargeBlogCard
+              class="mt-4"
+              v-for="blog in blogs"
+              :key="blog.id"
+              :blog="blog"
+            />
+          </div>
         </div>
       </div>
     </div>
