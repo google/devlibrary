@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "medium",
+  "authorIds": ["wajahatkarim"],
   "author": "Wajahat Karim",
   "title": "Realtime Database vs Firestore: 9 Major Differences",
   "link": "https://medium.com/android-news/realtime-database-vs-firestore-447b2d990599",

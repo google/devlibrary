@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "medium",
+  "authorIds": ["patilshreyas"],
   "author": "Shreyas Patil",
   "title": "Quickly distribute your app with Firebase App Distribution using GitHub Actions + Fastlane",
   "link": "https://medium.com/firebase-developers/quickly-distribute-app-with-firebase-app-distribution-using-github-actions-fastlane-c7d8eca18ee0",

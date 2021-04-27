@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "medium",
+  "authorIds": ["peterfriese"],
   "author": "Peter Friese",
   "title": "Sign in with Apple: Migrating User Data",
   "link": "https://medium.com/firebase-developers/sign-in-with-apple-migrating-user-data-50c8799703c7",

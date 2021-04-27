@@ -17,13 +17,41 @@
 const fs = require("fs");
 const path = require("path");
 const fetch = require("node-fetch");
+const ogs = require('open-graph-scraper');
 
 function getConfigDir() {
   const dir = path.dirname(__filename);
   return path.resolve(dir, "../../config");
 }
 
-async function addAuthor(username) {
+async function addMediumAuthor(username) {
+  const options = {
+    url: `https://medium.com/@${username}`
+  };
+  
+  const { result } = await ogs(options);
+  if (!result.success) {
+    console.warn("Could not add author!");
+    return;
+  }
+
+  const title = result.ogTitle;
+  const imageUrl = result.ogImage.url;
+
+  const author = {
+    name: title.split(" – ")[0].trim(),
+    bio: "",
+    photoURL: imageUrl,
+    mediumURL: options.url
+  };
+
+  const authorFilePath = path.join(getConfigDir(), 'authors', `${username}.json`);
+  
+  console.log(`Writing new file: ${authorFilePath}`);
+  fs.writeFileSync(authorFilePath, JSON.stringify(author, undefined, 2));
+}
+
+async function addGithubAuthor(username) {
   const res = await fetch(`https://api.github.com/users/${username}`);
   const { name, bio } = await res.json();
 
@@ -40,16 +68,24 @@ async function addAuthor(username) {
   fs.writeFileSync(authorFilePath, JSON.stringify(author, undefined, 2));
 }
 
-function main() {
-  if (process.argv.length < 3) {
-    console.error("Missing required arguments:\nnpm run addauthor <github username>");
+async function main() {
+  if (process.argv.length < 4) {
+    console.error("Missing required arguments:\nnpm run addauthor <medium | github> <username>");
     return;
   }
   
-  const username = process.argv[2];
+  const source = process.argv[2];
+  const username = process.argv[3];
 
-  console.log(`GitHub username: ${username}`);
-  addAuthor(username);
+  if (source === "github") {
+    console.log(`GitHub username: ${username}`);
+    await addGithubAuthor(username);
+  } else if (source === "medium") {
+    console.log(`Medium username: ${username}`);
+    await addMediumAuthor(username);
+  } else {
+    console.warn(`Unknown source: ${source}`);
+  }
 }
 
 main();
