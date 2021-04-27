@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["IjzerenHein"],
   "owner": "IjzerenHein",
   "repo": "firestorter",
   "name": "Firestorter",

@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["sgr-ksmt"],
   "owner": "sgr-ksmt",
   "repo": "Lobster",
   "name": "Lobster",

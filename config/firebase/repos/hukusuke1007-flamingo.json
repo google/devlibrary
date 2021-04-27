@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["hukusuke1007"],
   "owner": "hukusuke1007",
   "repo": "flamingo",
   "name": "Flamingo",

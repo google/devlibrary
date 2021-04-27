@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["dalenguyen"],
   "owner": "dalenguyen",
   "repo": "firestore-backup-restore",
   "name": "firestore-export-import",

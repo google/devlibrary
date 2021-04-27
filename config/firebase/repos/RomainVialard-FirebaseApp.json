@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["RomainVialard"],
   "owner": "RomainVialard",
   "repo": "FirebaseApp",
   "name": "FirebaseApp",

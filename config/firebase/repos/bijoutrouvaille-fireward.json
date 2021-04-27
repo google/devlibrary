@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["bijoutrouvaille"],
   "owner": "bijoutrouvaille",
   "repo": "fireward",
   "name": "Fireward",

@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["devskope"],
   "owner": "devskope",
   "repo": "apollo-firesource",
   "name": "Apollo Firesource",

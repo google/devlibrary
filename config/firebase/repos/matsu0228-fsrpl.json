@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["matsu0228"],
   "owner": "matsu0228",
   "repo": "fsrpl",
   "name": "fsrpl",

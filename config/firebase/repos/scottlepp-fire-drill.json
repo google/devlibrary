@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["scotlepp"],
   "owner": "scottlepp",
   "repo": "fire-drill",
   "name": "FireDrill",

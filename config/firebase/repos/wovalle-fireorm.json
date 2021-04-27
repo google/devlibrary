@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["wovalle"],
   "owner": "wovalle",
   "repo": "fireorm",
   "name": "Fireorm",

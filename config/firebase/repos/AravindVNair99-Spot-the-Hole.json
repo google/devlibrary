@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["AravindVNair99"],
   "owner": "AravindVNair99",
   "repo": "Spot-the-Hole",
   "name": "Spot the Hole",

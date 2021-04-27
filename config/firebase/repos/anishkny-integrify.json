@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["anishkny"],
   "owner": "anishkny",
   "repo": "integrify",
   "name": "integrify",

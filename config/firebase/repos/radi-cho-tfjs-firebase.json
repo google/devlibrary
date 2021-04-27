@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["radi-cho"],
   "owner": "radi-cho",
   "repo": "tfjs-firebase",
   "name": "tfjs-firebase",

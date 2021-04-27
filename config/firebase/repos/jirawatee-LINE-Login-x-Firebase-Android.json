@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": ["jirawatee"],
   "owner": "jirawatee",
   "repo": "LINE-Login-x-Firebase-Android",
   "name": "LINE Login x Firebase for Android",

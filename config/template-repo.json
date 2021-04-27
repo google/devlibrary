@@ -1,6 +1,7 @@
 {
   "version": 1.0,
   "source": "github",
+  "authorIds": [],
   "owner": "TODO: github owner",
   "repo": "TODO: github repo name",
   "name": "TODO: human readable name",
