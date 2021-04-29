@@ -22,7 +22,7 @@
     >
       <div class="col-start-2 col-span-4">
         <h1 class="text-2xl lg:text-3xl font-semibold">
-          <span class="underline">About</span>
+          <span class="underline">Test</span>
         </h1>
 
         <div class="mt-10 lg:text-lg">
