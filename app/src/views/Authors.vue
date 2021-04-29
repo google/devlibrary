@@ -28,13 +28,18 @@
     <!-- Author cards -->
     <div class="grid grid-cols-10 gap-4" v-if="loaded">
       <div class="col-start-2 col-span-8">
-        <div class="py-10 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div
+          class="py-10 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        >
           <div
             v-for="author in authors"
             :key="author.id"
             class="card px-3 py-3 flex flex-row items-center"
           >
-            <router-link :to="`/authors/${author.id}`" class="flex-shrink-0 mr-2">
+            <router-link
+              :to="`/authors/${author.id}`"
+              class="flex-shrink-0 mr-2"
+            >
               <CircleImage
                 :src="author.metadata.photoURL"
                 class="border-gray-200"

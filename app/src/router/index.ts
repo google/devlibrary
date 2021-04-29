@@ -18,6 +18,7 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
+import ContentPolicy from "../views/ContentPolicy.vue";
 import Product from "../views/Product.vue";
 import Repo from "../views/Repo.vue";
 import Authors from "../views/Authors.vue";
@@ -60,6 +61,11 @@ const routes: Array<RouteConfig> = [
     path: "/about",
     name: "About",
     component: About,
+  },
+  {
+    path: "/contentpolicy",
+    name: "ContentPolicy",
+    component: ContentPolicy,
   },
 ];
 
