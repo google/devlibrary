@@ -22,7 +22,7 @@ npm run serve
 If you face an error like: `Syntax Error: Error: error while parsing tsconfig.json`, then you must have some unsubmitted
 changes to the repo while figuring out other errors or installing anything in the node_modules, so discard those changes before running the run serve command
 
-Make sure you have access to the firebase account of ugc.dev, if you haven't contact Sam.
+Make sure you have access to the Firebase projects, if you haven't contact Sam.
 Once you have the access, you need to make sure your local environment is using the firebase project
 
 So try these commands:

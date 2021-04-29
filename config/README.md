@@ -24,12 +24,12 @@ $ cd shared
 # Syntax: npm run addproject <product> <url>
 $ npm run addproject firebase https://github.com/1amageek/Ballcap-iOS
 
-> shared@1.0.0 addproject /Users/samstern/Projects/ugc.dev/shared
+> shared@1.0.0 addproject /workspace/devlibrary/shared
 > node scripts/addproject.js "firebase" "https://github.com/1amageek/Ballcap-iOS"
 
 Product: firebase
 Project: https://github.com/1amageek/Ballcap-iOS
-Writing new file: /Users/samstern/Projects/ugc.dev/config/firebase/repos/1amageek-Ballcap-iOS.json
+Writing new file: /workspace/devlibrary/config/firebase/repos/1amageek-Ballcap-iOS.json
 ```
 
 ### Fill in details

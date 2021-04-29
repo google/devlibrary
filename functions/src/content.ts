@@ -88,7 +88,7 @@ function sanitizeHtml(
     }
   }
 
-  // URL path to this project pages on ugc.dev
+  // URL path to this project pages on devlibrary.withgoogle.com
   const pagesBaseUrl = `/products/${product}/repos/${repo.id}/pages/`;
 
   // URL path to this project on github

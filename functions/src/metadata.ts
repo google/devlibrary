@@ -31,8 +31,8 @@ async function listAuthorFiles(): Promise<string[]> {
   }
 
   return await github.getDirectoryContent(
-    "FirebasePrivate",
-    "ugc.dev",
+    "google",
+    "devlibrary",
     "main",
     `config/authors`
   );
@@ -51,8 +51,8 @@ async function listConfigFiles(
   }
 
   return await github.getDirectoryContent(
-    "FirebasePrivate",
-    "ugc.dev",
+    "google",
+    "devlibrary",
     "main",
     `config/${product}/${type}`
   );
@@ -64,8 +64,8 @@ async function readConfigFile(filePath: string): Promise<string> {
   }
 
   return await github.getFileContent(
-    "FirebasePrivate",
-    "ugc.dev",
+    "google",
+    "devlibrary",
     "main",
     filePath
   );
