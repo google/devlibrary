@@ -18,11 +18,21 @@
 name: Firebase Hosting Preview
 on: pull_request
 jobs:
-  build_and_preview:
-    if: ${{ env.SECRET_GITHUB_TOKEN != null }}
+  checksecret:
+    name: Check Secrets
     runs-on: ubuntu-latest
-    env:
-      SECRET_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    outputs:
+      SECRETS_SET: ${{ steps.checksecret_job.outputs.SECRETS_SET }}
+    steps:
+      - name: Check
+        id: checksecret_job
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "::set-output name=SECRETS_SET::${{ env.GITHUB_TOKEN != '' }}"
+  build_and_preview:
+    needs: [checksecret]
+    if: needs.checksecret.outputs.SECRETS_SET == 'true'
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
