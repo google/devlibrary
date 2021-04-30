@@ -1,6 +1,7 @@
 {
     "version": 1.0,
     "source": "github",
+    "authorIds": ["diegoveloper"],
     "owner": "diegoveloper",
     "repo": "flutter-samples",
     "name": "Flutter Samples",

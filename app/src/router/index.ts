@@ -23,6 +23,7 @@ import Product from "../views/Product.vue";
 import Repo from "../views/Repo.vue";
 import Authors from "../views/Authors.vue";
 import Author from "../views/Author.vue";
+import FourOhFour from "../views/FourOhFour.vue";
 
 Vue.use(VueRouter);
 
@@ -66,6 +67,11 @@ const routes: Array<RouteConfig> = [
     path: "/contentpolicy",
     name: "ContentPolicy",
     component: ContentPolicy,
+  },
+  {
+    path: "*",
+    name: "404",
+    component: FourOhFour,
   },
 ];
 
