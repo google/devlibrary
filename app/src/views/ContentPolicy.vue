@@ -179,7 +179,7 @@ import { Component, Vue } from "vue-property-decorator";
 @Component({
   components: {},
 })
-export default class Authors extends Vue {}
+export default class ContentPolicy extends Vue {}
 </script>
 
 <style scoped lang="postcss">

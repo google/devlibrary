@@ -15,12 +15,15 @@
 -->
 
 <template>
-  <div id="app">
+  <div id="app" class="flex flex-col">
     <div id="header-bar" class="z-20 sticky top-0">
       <NavBar class="z-20 relative" />
       <ProgressBar class="z-10" />
     </div>
-    <router-view class="main-content z-0 relative" :key="$route.fullPath" />
+    <router-view
+      class="main-content flex-grow z-0 relative"
+      :key="$route.fullPath"
+    />
     <CookieBar class="fixed z-10 bottom-0 left-0" />
     <FooterBar class="z-0" />
   </div>
@@ -45,6 +48,10 @@ export default class App extends Vue {}
 </script>
 
 <style lang="postcss">
+#app {
+  min-height: 100vh;
+}
+
 body {
   @apply text-gray-800;
 }
@@ -66,10 +73,6 @@ h4,
 h5,
 h6 {
   @apply font-display;
-}
-
-.main-content {
-  min-height: 100vh;
 }
 
 a {
