@@ -26,7 +26,7 @@ jobs:
           (cd shared && npm install)
           (cd app && npm install && npm run build:staging)
       - uses: FirebaseExtended/action-hosting-deploy@v0
-        if: env.CLEAN_MVN_REPO != null
+        if: env.SECRET_GITHUB_TOKEN != null
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_UGC_SITE_DEV }}'
