@@ -19,8 +19,10 @@ name: Firebase Hosting Preview
 on: pull_request
 jobs:
   build_and_preview:
-    if: ${{ github.repository == 'google/devlibrary' }}
+    if: ${{ env.SECRET_GITHUB_TOKEN != null }}
     runs-on: ubuntu-latest
+    env:
+      SECRET_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - run: |
