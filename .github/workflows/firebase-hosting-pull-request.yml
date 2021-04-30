@@ -19,7 +19,7 @@ name: Firebase Hosting Preview
 on: pull_request
 jobs:
   build_and_preview:
-    if: github.repository == "google/devlibrary"
+    if: ${{ github.repository == 'google/devlibrary' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
