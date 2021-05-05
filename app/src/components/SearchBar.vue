@@ -61,7 +61,7 @@
             class="flex flex-row items-center cursor-pointer hover:bg-gray-50 border-b border-gray-100"
           >
             <div class="pl-2">
-              <font-awesome-icon :icon="['fab', res.icon]" fixed-width />
+              <font-awesome-icon :icon="res.icon" fixed-width />
             </div>
             <div class="px-3 py-2">
               <p class="font-bold">{{ res.title }}</p>
@@ -131,17 +131,24 @@ export default class SearchBar extends Vue {
   public toDisplay(res: SearchResult) {
     if (res.type === "repo") {
       return {
-        icon: "github",
+        icon: ["fab", "github"],
         title: res.data.metadata.repo,
         description: res.data.metadata.shortDescription,
         link: `/products/${res.data.product}/repos/${res.data.id}`,
       };
-    } else {
+    } else if (res.type === "blog") {
       return {
-        icon: "medium",
+        icon: ["fab", "medium"],
         title: res.data.metadata.author,
         description: res.data.metadata.title,
         link: res.data.metadata.link,
+      };
+    } else {
+      return {
+        icon: "user",
+        title: res.data.metadata.name,
+        description: "DevLibrary Author",
+        link: `/authors/${res.data.id}`,
       };
     }
   }

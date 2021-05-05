@@ -20,7 +20,7 @@ import { Client } from "@elastic/elasticsearch";
 import * as config from "./config";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
-import { BlogSearchResult, RepoSearchResult, SearchResult } from "../../shared/types";
+import { AuthorData, AuthorSearchResult, BlogSearchResult, RepoSearchResult, SearchResult } from "../../shared/types";
 
 const client = new Client({
   cloud: {
@@ -73,6 +73,18 @@ export async function index(
   await client.indices.refresh({ index: "blogs" });
 }
 
+export async function indexAuthor(author: AuthorData) {
+  const { id, metadata } = author;
+  await client.index({
+    index: "authors",
+    id,
+    body: {
+      id,
+      metadata
+    },
+  });
+}
+
 export async function search(term: string, limit: number): Promise<SearchResult[]> {
   const reposRes = await client.search({
     index: "repos",
@@ -109,6 +121,20 @@ export async function search(term: string, limit: number): Promise<SearchResult[
     },
   });
 
+  const authorsRes = await client.search({
+    index: "authors",
+    body: {
+      query: {
+        query_string: {
+          query: `*${term}*`,
+          fields: [
+            "metadata.name", 
+          ],
+        },
+      },
+    },
+  });
+
   const repoResults = (reposRes.body.hits.hits as any[]).map((hit: any) => {
     return {
       type: "repo",
@@ -125,11 +151,20 @@ export async function search(term: string, limit: number): Promise<SearchResult[
     } as BlogSearchResult;
   });
 
+  const authorResults = (authorsRes.body.hits.hits as any[]).map((hit: any) => {
+    return {
+      type: "author",
+      score: hit["_score"],
+      data: hit["_source"],
+    } as AuthorSearchResult;
+  });
+
   // Sort and return the top {limit} results
   const halfLimit = Math.ceil(limit / 2);
   const topBlogs = blogResults.slice(0, halfLimit);
   const topRepos = repoResults.slice(0, halfLimit);
-  const topResults = [...topBlogs, ...topRepos];
+  const topAuthors = authorResults.slice(0, halfLimit);
+  const topResults = [...topBlogs, ...topRepos, ...topAuthors];
   const sorted = topResults.sort((a, b) => {
     if (a.score === b.score) {
       return b.data.id.localeCompare(a.data.id);

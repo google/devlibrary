@@ -63,6 +63,11 @@
       </div>
     </div>
 
+    <!-- Authors -->
+    <router-link tag="div" class="nav-item nav-item-link" to="/authors"
+      ><span>Authors</span></router-link
+    >
+
     <!-- About -->
     <router-link tag="div" class="nav-item nav-item-link" to="/about"
       ><span>About</span></router-link

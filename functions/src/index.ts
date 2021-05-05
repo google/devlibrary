@@ -40,7 +40,7 @@ import * as github from "./github";
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { AuthorData, ProductKey, RepoPage } from "../../shared/types";
-import { index } from "./search";
+import { index, indexAuthor } from "./search";
 
 // See: https://firebase.google.com/docs/functions/writing-and-viewing-logs#console-log
 require("firebase-functions/lib/logger/compat");
@@ -121,6 +121,7 @@ async function refreshAllAuthors() {
     };
 
     await saveAuthorData(id, data);
+    await indexAuthor(data);
   }
 
   // List all of the existing authors and

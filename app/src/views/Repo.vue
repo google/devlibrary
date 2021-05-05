@@ -29,8 +29,17 @@
             <h1 class="text-3xl font-semibold">
               {{ repo.metadata.name }}
             </h1>
-            <p class="mt-2">
+            <p class="opacity-80">
               {{ repo.metadata.longDescription }}
+            </p>
+
+            <p v-if="authors.length > 0" class="flex gap-2 mt-2">
+              <AuthorLink
+                v-for="author in authors"
+                :key="author.id"
+                :author="author"
+                class="opacity-80 hover:opacity-100"
+              />
             </p>
 
             <a
@@ -44,7 +53,7 @@
             </a>
           </div>
 
-          <div class="col-start-9 col-span-2e">
+          <div class="col-start-9 col-span-2">
             <p class="pt-1">
               {{ repo.stats.stars }}
               <font-awesome-icon fixed-width icon="star" />
@@ -66,18 +75,16 @@
           <h1 class="text-2xl font-semibold">
             {{ repo.metadata.name }}
           </h1>
-          <p class="mt-1">
+          <p class="opacity-80">
             {{ repo.metadata.shortDescription }}
           </p>
-          <p class="mt-1 text-sm">
-            <span class="mr-2">
-              {{ repo.stats.stars }}
-              <font-awesome-icon fixed-width size="sm" icon="star" />
-            </span>
-            <span>
-              {{ repo.stats.forks }}
-              <font-awesome-icon fixed-width size="sm" icon="code-branch" />
-            </span>
+          <p v-if="authors.length > 0" class="flex gap-2 mt-2">
+            <AuthorLink
+              v-for="author in authors"
+              :key="author.id"
+              :author="author"
+              class="opacity-80 hover:opacity-100"
+            />
           </p>
         </div>
       </div>
@@ -157,13 +164,14 @@ import { getModule } from "vuex-module-decorators";
 import DOMPurify from "dompurify";
 
 import MaterialButton from "@/components/MaterialButton.vue";
+import AuthorLink from "@/components/AuthorLink.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
 import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 import UIModule from "@/store/ui";
 
-import { RepoData, RepoPage } from "../../../shared/types";
+import { AuthorData, RepoData, RepoPage } from "../../../shared/types";
 import * as util from "../../../shared/util";
-import { fetchRepo, fetchRepoPage } from "@/plugins/data";
+import { fetchAuthor, fetchRepo, fetchRepoPage } from "@/plugins/data";
 
 // Global HLJS
 // eslint-disable-next-line
@@ -172,6 +180,7 @@ declare const hljs: any;
 @Component({
   components: {
     MaterialButton,
+    AuthorLink,
     HeaderSidebarLayout,
   },
 })
@@ -179,6 +188,7 @@ export default class Repo extends Vue {
   public product!: ProductConfig;
   public repo: RepoData | null = null;
   public content: RepoPage | null = null;
+  public authors: AuthorData[] = [];
 
   private productKey!: string;
   private id!: string;
@@ -202,6 +212,12 @@ export default class Repo extends Vue {
 
   async loadContent() {
     this.repo = await fetchRepo(this.productKey, this.id);
+
+    const authorIds = this.repo.metadata.authorIds || [];
+    for (const aid of authorIds) {
+      const data = await fetchAuthor(aid);
+      this.authors.push(data);
+    }
 
     const pagePath =
       this.$route.params["page"] ||

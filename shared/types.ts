@@ -92,4 +92,13 @@ export interface RepoSearchResult {
   };
 }
 
-export type SearchResult = BlogSearchResult | RepoSearchResult;
+export interface AuthorSearchResult {
+  type: "author";
+  score: number;
+  data: {
+    id: string;
+    metadata: AuthorMetadata;
+  };
+}
+
+export type SearchResult = BlogSearchResult | RepoSearchResult | AuthorSearchResult;
