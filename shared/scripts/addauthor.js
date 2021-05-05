@@ -17,18 +17,36 @@
 const fs = require("fs");
 const path = require("path");
 const fetch = require("node-fetch");
-const ogs = require('open-graph-scraper');
+const cheerio = require("cheerio");
+const ogs = require("open-graph-scraper");
 
-function getConfigDir() {
-  const dir = path.dirname(__filename);
-  return path.resolve(dir, "../../config");
+const { writeOrUpdateJSON, getConfigDir } = require("./util");
+
+async function getMediumPostAuthor(url) {
+  const res = await fetch(url);
+  const html = await res.text();
+  const $ = cheerio.load(html);
+
+  const authorLink = $.root().find('link[rel="author"]');
+  if (!authorLink) {
+    return;
+  }
+
+  const prefix = "https://medium.com/@";
+  const href = authorLink.attr("href");
+  if (!(href && href.startsWith(prefix))) {
+    return;
+  }
+
+  return href.replace("https://medium.com/@", "");
 }
 
 async function addMediumAuthor(username) {
   const options = {
-    url: `https://medium.com/@${username}`
+    url: `https://medium.com/@${username}`,
   };
-  
+
+  // TODO: See if we can replace this with Cheerio and drop the dependency
   const { result } = await ogs(options);
   if (!result.success) {
     console.warn("Could not add author!");
@@ -42,40 +60,62 @@ async function addMediumAuthor(username) {
     name: title.split(" – ")[0].trim(),
     bio: "",
     photoURL: imageUrl,
-    mediumURL: options.url
+    mediumURL: options.url,
   };
 
-  const authorFilePath = path.join(getConfigDir(), 'authors', `${username}.json`);
-  
-  console.log(`Writing new file: ${authorFilePath}`);
-  fs.writeFileSync(authorFilePath, JSON.stringify(author, undefined, 2));
+  const authorFilePath = path.join(
+    getConfigDir(),
+    "authors",
+    `${username}.json`
+  );
+  writeOrUpdateJSON(authorFilePath, author);
 }
 
 async function addGithubAuthor(username) {
-  const res = await fetch(`https://api.github.com/users/${username}`);
-  const { name, bio } = await res.json();
+  // If available, use a GitHub token from the environment
+  const headers = {
+    "Content-Type": "application/json",
+  };
+  if (process.env.GITHUB_TOKEN) {
+    headers["Authorization"] = `token ${process.env.GITHUB_TOKEN}`;
+  }
+
+  const res = await fetch(`https://api.github.com/users/${username}`, {
+    method: "get",
+    headers,
+  });
+  const { name, bio, type } = await res.json();
+
+  if (type === "Organization") {
+    console.log("Skipping organization", username);
+    return;
+  }
 
   const author = {
     name: name || username,
     bio: bio || "",
     photoURL: `https://avatars.githubusercontent.com/${username}`,
-    githubURL: `https://github.com/${username}`
-  }
+    githubURL: `https://github.com/${username}`,
+  };
 
-  const authorFilePath = path.join(getConfigDir(), 'authors', `${username}.json`);
-  
-  console.log(`Writing new file: ${authorFilePath}`);
-  fs.writeFileSync(authorFilePath, JSON.stringify(author, undefined, 2));
+  const authorFilePath = path.join(
+    getConfigDir(),
+    "authors",
+    `${username}.json`
+  );
+  writeOrUpdateJSON(authorFilePath, author);
 }
 
-async function main() {
-  if (process.argv.length < 4) {
-    console.error("Missing required arguments:\nnpm run addauthor <medium | github> <username>");
+async function main(args) {
+  if (args.length < 3) {
+    console.error(
+      "Missing required arguments:\nnpm run addauthor <medium | github> <username>"
+    );
     return;
   }
-  
-  const source = process.argv[2];
-  const username = process.argv[3];
+
+  const source = args[1];
+  const username = args[2];
 
   if (source === "github") {
     console.log(`GitHub username: ${username}`);
@@ -88,4 +128,9 @@ async function main() {
   }
 }
 
-main();
+module.exports = {
+  main,
+  addGithubAuthor,
+  addMediumAuthor,
+  getMediumPostAuthor,
+};

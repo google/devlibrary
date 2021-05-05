@@ -16,68 +16,110 @@
 
 const fs = require("fs");
 const path = require("path");
-const { URL } = require("url");
 
-function getConfigDir() {
-  const dir = path.dirname(__filename);
-  return path.resolve(dir, "../../config");
-}
+const {
+  addGithubAuthor,
+  addMediumAuthor,
+  getMediumPostAuthor,
+} = require("./addauthor");
+const { writeOrUpdateJSON, getConfigDir } = require("./util");
 
-function addBlog(product, projectUrl) {
-  const re = /medium.com\/([\w\-]+)\/([\w\-]+)/
+async function addBlog(product, projectUrl, projectId) {
+  const re = /\.com\/([\w\-]+)\/([\w\-]+)/;
   const m = projectUrl.match(re);
 
-  const slug = m[2];
-
-  const templateStr = fs.readFileSync(path.join(getConfigDir(), "template-blog.json")).toString();
+  const templateStr = fs
+    .readFileSync(path.join(getConfigDir(), "template-blog.json"))
+    .toString();
   const blogFileContent = JSON.parse(templateStr);
-
   blogFileContent.link = projectUrl;
 
-  const blogFilePath = path.join(getConfigDir(), product, 'blogs', `${slug}.json`);
-  
-  console.log(`Writing new file: ${blogFilePath}`);
-  fs.writeFileSync(blogFilePath, JSON.stringify(blogFileContent, undefined, 2));
+  // Add the author
+  // TODO: This doesn't work for proandroiodev, etc
+  const postAuthor = await getMediumPostAuthor(projectUrl);
+  if (postAuthor) {
+    const authorFilePath = path.join(getConfigDir(), `${postAuthor}.json`);
+    if (!fs.existsSync(authorFilePath)) {
+      await addMediumAuthor(postAuthor);
+    }
+  }
+  blogFileContent.authorIds = postAuthor ? [postAuthor] : [];
+
+  const blogId = projectId || m[2];
+  const blogFilePath = path.join(
+    getConfigDir(),
+    product,
+    "blogs",
+    `${blogId}.json`
+  );
+  writeOrUpdateJSON(blogFilePath, blogFileContent);
 }
 
-function addRepo(product, projectUrl) {
-  const re = /github.com\/([\w\-]+)\/([\w\-]+)/
+async function addRepo(product, projectUrl, projectId) {
+  const re = /github.com\/([\w\-]+)\/([\w\-]+)/;
   const m = projectUrl.match(re);
 
   const owner = m[1];
   const repo = m[2];
 
-  const templateStr = fs.readFileSync(path.join(getConfigDir(), "template-repo.json")).toString();
+  const templateStr = fs
+    .readFileSync(path.join(getConfigDir(), "template-repo.json"))
+    .toString();
   const repoFileContent = JSON.parse(templateStr);
-
   repoFileContent.owner = owner;
   repoFileContent.repo = repo;
 
-  const repoFilePath = path.join(getConfigDir(), product, 'repos', `${owner}-${repo}.json`);
-  
-  console.log(`Writing new file: ${repoFilePath}`);
-  fs.writeFileSync(repoFilePath, JSON.stringify(repoFileContent, undefined, 2));
+  // Check if we have a matching author aready
+  const authorFilePath = path.join(getConfigDir(), `${owner}.json`);
+  if (!fs.existsSync(authorFilePath)) {
+    await addGithubAuthor(owner);
+  }
+
+  // We check again to see if we skipped the author or not
+  if (fs.existsSync) {
+    repoFileContent.authorIds = [owner];
+  } else {
+    repoFileContent.authorIds = [];
+  }
+
+  const repoId = projectId || `${owner}-${repo}`;
+  const repoFilePath = path.join(
+    getConfigDir(),
+    product,
+    "repos",
+    `${repoId}.json`
+  );
+  writeOrUpdateJSON(repoFilePath, repoFileContent);
 }
 
-function main() {
-  if (process.argv.length < 4) {
-    console.error("Missing required arguments:\nnpm run addproject <product> <url>");
+async function main(args) {
+  if (args.length < 3) {
+    console.error(
+      "Missing required arguments:\nnpm run addproject <product> <url> [id]"
+    );
     return;
   }
-  
-  const product = process.argv[2];
-  const projectUrl = process.argv[3];
+
+  const product = args[1];
+  const projectUrl = args[2];
+  const projectId = args.length >= 4 ? args[3] : undefined;
 
   console.log(`Product: ${product}`);
   console.log(`Project: ${projectUrl}`);
 
   if (projectUrl.includes("github.com")) {
-    addRepo(product, projectUrl);
+    await addRepo(product, projectUrl, projectId);
   } else if (projectUrl.includes("medium.com")) {
-    addBlog(product, projectUrl);
+    await addBlog(product, projectUrl, projectId);
   } else {
-    console.error("Unknown project source, must be a GitHub repo or Medium post");
+    console.error(
+      "Unknown project source, must be a GitHub repo or Medium post"
+    );
   }
 }
 
-main();
+module.exports = {
+  main,
+  addBlog,
+  addRepo,
+};
