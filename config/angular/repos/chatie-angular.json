@@ -1,11 +1,16 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "chatie",
-    "repo": "angular",
-    "name": "Wechaty Angular Web Component",
-    "shortDescription": "Wechaty Web Component Powered By Angular NgModule",
-    "longDescription": "Wechaty Web Component Powered By Angular NgModule",
-    "content": "README.md",
-    "tags": ["components", "frameworks"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "chatie",
+  "repo": "angular",
+  "name": "Wechaty Angular Web Component",
+  "shortDescription": "Wechaty Web Component Powered By Angular NgModule",
+  "longDescription": "Wechaty Web Component Powered By Angular NgModule",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "components",
+    "frameworks"
+  ]
+}

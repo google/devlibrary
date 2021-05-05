@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["AravindVNair99"],
+  "authorIds": [
+    "AravindVNair99"
+  ],
   "owner": "AravindVNair99",
   "repo": "Spot-the-Hole",
   "name": "Spot the Hole",
@@ -9,5 +11,7 @@
   "longDescription": "Fully autonomous and intelligent platform to detect, monitor and manage potholes issues. An end-to-end system with a PWA front-end for users to report potholes and government authorities to track and manage them.",
   "content": "README.md",
   "pages": [],
-  "tags": ["web"]
+  "tags": [
+    "web"
+  ]
 }

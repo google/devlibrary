@@ -1,11 +1,15 @@
 {
-  "version": 1.0,
+  "version": 1,
   "source": "github",
+  "authorIds": [],
   "owner": "angular-vietnam",
   "repo": "100-days-of-angular",
   "name": "100-days-of-angular",
   "shortDescription": "100-days-of-angular",
   "longDescription": "100-days-of-angular",
   "content": "README.md",
-  "tags": ["components"]
+  "pages": [],
+  "tags": [
+    "components"
+  ]
 }

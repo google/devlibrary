@@ -54,7 +54,7 @@ async function addMediumAuthor(username) {
   }
 
   const title = result.ogTitle;
-  const imageUrl = result.ogImage.url;
+  const imageUrl = result.ogImage.url.replace("/max/2400/", "/max/512/");
 
   const author = {
     name: title.split(" – ")[0].trim(),
@@ -88,7 +88,7 @@ async function addGithubAuthor(username) {
 
   if (type === "Organization") {
     console.log("Skipping organization", username);
-    return;
+    return false;
   }
 
   const author = {
@@ -104,6 +104,8 @@ async function addGithubAuthor(username) {
     `${username}.json`
   );
   writeOrUpdateJSON(authorFilePath, author);
+
+  return true;
 }
 
 async function main(args) {

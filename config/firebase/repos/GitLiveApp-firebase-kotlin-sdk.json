@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": [],
   "owner": "GitLiveApp",
   "repo": "firebase-kotlin-sdk",
   "name": "Firebase Kotlin SDK",
@@ -8,5 +9,7 @@
   "longDescription": "A Kotlin-first SDK for Firebase.",
   "content": "README.md",
   "pages": [],
-  "tags": ["android"]
+  "tags": [
+    "android"
+  ]
 }

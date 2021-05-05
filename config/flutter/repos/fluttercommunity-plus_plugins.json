@@ -1,11 +1,15 @@
 {
-  "version": 1.0,
+  "version": 1,
   "source": "github",
+  "authorIds": [],
   "owner": "fluttercommunity",
   "repo": "plus_plugins",
   "name": "Flutter Community Plus Plugins",
   "shortDescription": "Flutter Community Plus Plugins",
   "longDescription": "Flutter Community Plus Plugins",
   "content": "README.md",
-  "tags": ["plugins"]
+  "pages": [],
+  "tags": [
+    "plugins"
+  ]
 }

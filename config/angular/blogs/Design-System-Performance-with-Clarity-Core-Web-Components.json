@@ -1,8 +1,14 @@
 {
-  "version": 1.0,
+  "version": 1,
   "source": "medium",
+  "authorIds": [
+    "coryrylan"
+  ],
   "author": "Cory Rylan",
   "title": "Design System Performance with Clarity Core Web Components",
   "link": "https://medium.com/claritydesignsystem/design-system-performance-with-clarity-core-web-components-fbab56516f30",
-  "tags": ["components", "performance"]
+  "tags": [
+    "components",
+    "performance"
+  ]
 }

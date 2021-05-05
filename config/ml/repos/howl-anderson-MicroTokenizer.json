@@ -1,12 +1,18 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "howl-anderson",
-    "repo": "MicroTokenizer",
-    "name": "MicroTokenizer",
-    "shortDescription": "A miniature & algorithmic comprehensive Chinese word segmentation engine. For educational purposes, it comes with algorithm visualization to help users understand the principle of the algorithm.",
-    "longDescription": "A miniature & algorithmic comprehensive Chinese word segmentation engine. For educational purposes, it comes with algorithm visualization to help users understand the principle of the algorithm.",
-    "content": "README.md",
-    "tags": ["nlp","library"]
-    }
-    
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "howl-anderson"
+  ],
+  "owner": "howl-anderson",
+  "repo": "MicroTokenizer",
+  "name": "MicroTokenizer",
+  "shortDescription": "A miniature & algorithmic comprehensive Chinese word segmentation engine. For educational purposes, it comes with algorithm visualization to help users understand the principle of the algorithm.",
+  "longDescription": "A miniature & algorithmic comprehensive Chinese word segmentation engine. For educational purposes, it comes with algorithm visualization to help users understand the principle of the algorithm.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "nlp",
+    "library"
+  ]
+}

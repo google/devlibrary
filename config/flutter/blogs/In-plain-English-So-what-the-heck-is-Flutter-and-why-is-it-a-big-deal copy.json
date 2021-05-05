@@ -1,8 +1,14 @@
 {
-  "version": 1.0,
+  "version": 1,
   "source": "medium",
+  "authorIds": [
+    "scottstoll2017"
+  ],
   "author": "Scott Stoll",
   "title": "In plain English: So what the heck is Flutter and why is it a big deal?",
   "link": "https://medium.com/flutter-community/in-plain-english-so-what-the-heck-is-flutter-and-why-is-it-a-big-deal-7a6dc926b34a",
-  "tags": ["mobile", "web"]
+  "tags": [
+    "mobile",
+    "web"
+  ]
 }

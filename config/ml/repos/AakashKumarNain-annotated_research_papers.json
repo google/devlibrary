@@ -1,12 +1,17 @@
 {
-   "version": 1.0,
-   "source": "github",
-   "owner": "AakashKumarNain",
-   "repo": "annotated_research_papers",
-   "name": "annotated_research_papers",
-   "shortDescription": "Reading research papers is a crucial part of work in machine learning. Annotating papers often helps to understand them better. This is an effort to make papers more accessible to a wider community",
-   "longDescription": "Reading research papers is a crucial part of work in machine learning. Annotating papers often helps to understand them better. This is an effort to make papers more accessible to a wider community",
-   "content": "README.md",
-   "tags": ["collection"]
-    }
-    
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "AakashKumarNain"
+  ],
+  "owner": "AakashKumarNain",
+  "repo": "annotated_research_papers",
+  "name": "annotated_research_papers",
+  "shortDescription": "Reading research papers is a crucial part of work in machine learning. Annotating papers often helps to understand them better. This is an effort to make papers more accessible to a wider community",
+  "longDescription": "Reading research papers is a crucial part of work in machine learning. Annotating papers often helps to understand them better. This is an effort to make papers more accessible to a wider community",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "collection"
+  ]
+}

@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["wovalle"],
+  "authorIds": [
+    "wovalle"
+  ],
   "owner": "wovalle",
   "repo": "fireorm",
   "name": "Fireorm",
@@ -9,5 +11,8 @@
   "longDescription": "TypeScript ORM for Firestore",
   "content": "README.md",
   "pages": [],
-  "tags": ["admin", "node"]
+  "tags": [
+    "admin",
+    "node"
+  ]
 }

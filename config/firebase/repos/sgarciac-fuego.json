@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["sgarciac"],
+  "authorIds": [
+    "sgarciac"
+  ],
   "owner": "sgarciac",
   "repo": "fuego",
   "name": "fuego",
@@ -9,5 +11,7 @@
   "longDescription": "A command-line Firestore client.",
   "content": "README.md",
   "pages": [],
-  "tags": ["admin"]
+  "tags": [
+    "admin"
+  ]
 }

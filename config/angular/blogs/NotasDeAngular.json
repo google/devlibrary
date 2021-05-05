@@ -1,8 +1,11 @@
 {
-    "version": 1.0,
-    "source": "medium",
-    "author": "Vanessa Marely Aristizabal Angel",
-    "title": "NotasDeAngular",
-    "link": "https://medium.com/notasdeangular",
-      "tags": ["components, frameworks, router, performance, gettingstarted"]
-    }
+  "version": 1,
+  "source": "medium",
+  "authorIds": [],
+  "author": "Vanessa Marely Aristizabal Angel",
+  "title": "NotasDeAngular",
+  "link": "https://medium.com/notasdeangular",
+  "tags": [
+    "components, frameworks, router, performance, gettingstarted"
+  ]
+}

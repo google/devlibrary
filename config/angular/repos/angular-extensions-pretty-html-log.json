@@ -1,12 +1,15 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "angular-extensions",
-    "repo": "pretty-html-log",
-    "name": "@angular-extensions/pretty-html-log",
-    "shortDescription": "A module that allows you to pretty print the inner HTML of ComponentFixtures, DebugElements, NativeElements or even plain HTML strings to the console. This is very useful for debugging Angular component tests in Jest",
-    "longDescription": "A module that allows you to pretty print the inner HTML of ComponentFixtures, DebugElements, NativeElements or even plain HTML strings to the console. This is very useful for debugging Angular component tests in Jest",
-    "content": "README.md",
-    "tags": ["frameworks"]
-    }
-    
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "angular-extensions",
+  "repo": "pretty-html-log",
+  "name": "@angular-extensions/pretty-html-log",
+  "shortDescription": "A module that allows you to pretty print the inner HTML of ComponentFixtures, DebugElements, NativeElements or even plain HTML strings to the console. This is very useful for debugging Angular component tests in Jest",
+  "longDescription": "A module that allows you to pretty print the inner HTML of ComponentFixtures, DebugElements, NativeElements or even plain HTML strings to the console. This is very useful for debugging Angular component tests in Jest",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "frameworks"
+  ]
+}
