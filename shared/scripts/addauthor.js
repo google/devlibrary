@@ -17,11 +17,31 @@
 const fs = require("fs");
 const path = require("path");
 const fetch = require("node-fetch");
-const ogs = require('open-graph-scraper');
+const cheerio = require("cheerio");
+const ogs = require("open-graph-scraper");
 
 function getConfigDir() {
   const dir = path.dirname(__filename);
   return path.resolve(dir, "../../config");
+}
+
+async function getMediumPostAuthor(url) {
+  const res = await fetch(url);
+  const html = await res.text();
+  const $ = cheerio.load(html);
+
+  const authorLink = $.root().find('link[rel="author"]');
+  if (!authorLink) {
+    return;
+  }
+
+  const prefix = "https://medium.com/@";
+  const href = authorLink.attr('href');
+  if (!(href && href.startsWith(prefix))) {
+    return;
+  }
+
+  return href.replace("https://medium.com/@", "");
 }
 
 async function addMediumAuthor(username) {
@@ -68,14 +88,14 @@ async function addGithubAuthor(username) {
   fs.writeFileSync(authorFilePath, JSON.stringify(author, undefined, 2));
 }
 
-async function main() {
-  if (process.argv.length < 4) {
+async function main(args) {
+  if (args.length < 3) {
     console.error("Missing required arguments:\nnpm run addauthor <medium | github> <username>");
     return;
   }
   
-  const source = process.argv[2];
-  const username = process.argv[3];
+  const source = args[1];
+  const username = args[2];
 
   if (source === "github") {
     console.log(`GitHub username: ${username}`);
@@ -88,4 +108,9 @@ async function main() {
   }
 }
 
-main();
+module.exports = {
+  main,
+  addGithubAuthor,
+  addMediumAuthor,
+  getMediumPostAuthor
+}

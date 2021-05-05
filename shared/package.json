@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "shared",
   "scripts": {
-    "addauthor": "node scripts/addauthor.js",
-    "addproject": "node scripts/addproject.js",
-    "validate": "node scripts/validate.js",
-    "build": "node scripts/generate.js",
+    "addauthor": "node -e \"require('./scripts/addauthor.js').main(process.argv)\"",
+    "addproject": "node -e \"require('./scripts/addproject.js').main(process.argv)\"",
+    "validate": "node -e \"require('./scripts/validate.js').main(process.argv)\"",
+    "build": "node -e \"require('./scripts/generate.js').main(process.argv)\"",
     "deploy:firebase": "firebase --project=$FIREBASE_PROJECT deploy"
   },
   "author": "",
@@ -14,6 +14,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
+    "cheerio": "^1.0.0-rc.6",
     "eslint": "^7.19.0",
     "firebase-tools": "9.3.0",
     "json-schema-to-typescript": "^10.1.3",

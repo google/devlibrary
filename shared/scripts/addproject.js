@@ -16,14 +16,31 @@
 
 const fs = require("fs");
 const path = require("path");
-const { URL } = require("url");
+
+const { addGithubAuthor, addMediumAuthor, getMediumPostAuthor } = require("./addauthor");
 
 function getConfigDir() {
   const dir = path.dirname(__filename);
   return path.resolve(dir, "../../config");
 }
 
-function addBlog(product, projectUrl) {
+function writeOrUpdateJSON(path, content) {
+  let newContent = content;
+  if (fs.existsSync(path)) {
+    console.log("Updating file:", path);
+    const existingContent = JSON.parse(fs.readFileSync(path, 'utf-8'));
+    newContent = {
+      ...newContent,
+      ...existingContent,
+    }
+  } else {
+    console.log("Writing new file:", path);
+  }
+
+  fs.writeFileSync(path, JSON.stringify(newContent, undefined, 2));
+}
+
+async function addBlog(product, projectUrl) {
   const re = /medium.com\/([\w\-]+)\/([\w\-]+)/
   const m = projectUrl.match(re);
 
@@ -31,16 +48,21 @@ function addBlog(product, projectUrl) {
 
   const templateStr = fs.readFileSync(path.join(getConfigDir(), "template-blog.json")).toString();
   const blogFileContent = JSON.parse(templateStr);
-
   blogFileContent.link = projectUrl;
 
+  // Add the author
+  const postAuthor = await getMediumPostAuthor(projectUrl);
+  const authorFilePath = path.join(getConfigDir(), `${postAuthor}.json`);
+  if (!fs.existsSync(authorFilePath)) {
+    await addMediumAuthor(postAuthor);
+  }
+  blogFileContent.authorIds = postAuthor ? [postAuthor] : [];
+
   const blogFilePath = path.join(getConfigDir(), product, 'blogs', `${slug}.json`);
-  
-  console.log(`Writing new file: ${blogFilePath}`);
-  fs.writeFileSync(blogFilePath, JSON.stringify(blogFileContent, undefined, 2));
+  writeOrUpdateJSON(blogFilePath, blogFileContent);
 }
 
-function addRepo(product, projectUrl) {
+async function addRepo(product, projectUrl) {
   const re = /github.com\/([\w\-]+)\/([\w\-]+)/
   const m = projectUrl.match(re);
 
@@ -49,35 +71,41 @@ function addRepo(product, projectUrl) {
 
   const templateStr = fs.readFileSync(path.join(getConfigDir(), "template-repo.json")).toString();
   const repoFileContent = JSON.parse(templateStr);
-
   repoFileContent.owner = owner;
   repoFileContent.repo = repo;
 
+  // Check if we have a matching author aready
+  const authorFilePath = path.join(getConfigDir(), `${owner}.json`);
+  if (!fs.existsSync(authorFilePath)) {
+    await addGithubAuthor(owner);
+  }
+  repoFileContent.authorIds = [owner];
+
   const repoFilePath = path.join(getConfigDir(), product, 'repos', `${owner}-${repo}.json`);
-  
-  console.log(`Writing new file: ${repoFilePath}`);
-  fs.writeFileSync(repoFilePath, JSON.stringify(repoFileContent, undefined, 2));
+  writeOrUpdateJSON(repoFilePath, repoFileContent);
 }
 
-function main() {
-  if (process.argv.length < 4) {
+async function main(args) {
+  if (args.length < 3) {
     console.error("Missing required arguments:\nnpm run addproject <product> <url>");
     return;
   }
   
-  const product = process.argv[2];
-  const projectUrl = process.argv[3];
+  const product = args[1];
+  const projectUrl = args[2];
 
   console.log(`Product: ${product}`);
   console.log(`Project: ${projectUrl}`);
 
   if (projectUrl.includes("github.com")) {
-    addRepo(product, projectUrl);
+    await addRepo(product, projectUrl);
   } else if (projectUrl.includes("medium.com")) {
-    addBlog(product, projectUrl);
+    await addBlog(product, projectUrl);
   } else {
     console.error("Unknown project source, must be a GitHub repo or Medium post");
   }
 }
 
-main();
+module.exports = {
+  main
+}
