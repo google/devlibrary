@@ -1,9 +1,14 @@
 {
-  "version": 1.0,
+  "version": 1,
   "source": "medium",
-  "authorIds": ["ptruiz"],
+  "authorIds": [
+    "ptruiz"
+  ],
   "author": "Paul Ruiz",
   "title": "A Practical Approach to Cloud Functions for Firebase: Direct Calls",
   "link": "https://medium.com/firebase-developers/a-practical-approach-to-cloud-functions-for-firebase-direct-calls-f38ec7f5981c",
-  "tags": ["android", "node"]
+  "tags": [
+    "android",
+    "node"
+  ]
 }

@@ -1,11 +1,17 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "dimitreOliveira",
-    "repo": "melanoma-classification",
-    "name": "melanoma-classification",
-    "shortDescription": "I have created this GitHub repository to host all my relevant experiments and useful information related to the 'Melanoma Classification' Kaggle competition.",
-    "longDescription": "I have created this GitHub repository to host all my relevant experiments and useful information related to the 'Melanoma Classification' Kaggle competition.",
-    "content": "README.md",
-    "tags": ["vision"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "dimitreOliveira"
+  ],
+  "owner": "dimitreOliveira",
+  "repo": "melanoma-classification",
+  "name": "melanoma-classification",
+  "shortDescription": "I have created this GitHub repository to host all my relevant experiments and useful information related to the 'Melanoma Classification' Kaggle competition.",
+  "longDescription": "I have created this GitHub repository to host all my relevant experiments and useful information related to the 'Melanoma Classification' Kaggle competition.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision"
+  ]
+}

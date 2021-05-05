@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["david-asher"],
+  "authorIds": [
+    "david-asher"
+  ],
   "owner": "david-asher",
   "repo": "electron-firebase",
   "name": "Electron-Firebase",
@@ -9,5 +11,7 @@
   "longDescription": "Quickstart integration between Electron app framework and Firebase.",
   "content": "README.md",
   "pages": [],
-  "tags": ["web"]
+  "tags": [
+    "web"
+  ]
 }

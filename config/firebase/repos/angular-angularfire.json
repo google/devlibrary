@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": [],
   "owner": "angular",
   "repo": "angularfire",
   "name": "AngularFire",
@@ -8,5 +9,7 @@
   "longDescription": "The official Angular library for Firebase.",
   "content": "README.md",
   "pages": [],
-  "tags": ["web"]
+  "tags": [
+    "web"
+  ]
 }

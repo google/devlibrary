@@ -1,11 +1,17 @@
 {
-  "version": 1.0,
+  "version": 1,
   "source": "github",
+  "authorIds": [
+    "PatrickJS"
+  ],
   "owner": "PatrickJS",
   "repo": "awesome-angular",
   "name": "Awesome Angular",
   "shortDescription": "Awesome Angular",
   "longDescription": "Awesome Angular",
   "content": "README.md",
-  "tags": ["components"]
+  "pages": [],
+  "tags": [
+    "components"
+  ]
 }

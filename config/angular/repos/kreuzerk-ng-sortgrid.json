@@ -1,11 +1,17 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "kreuzerk",
-    "repo": "ng-sortgrid",
-    "name": "ng-sortgrid",
-    "shortDescription": "🧐 A grid that allows you to sort all items via drag & drop. Items can be sorted in all directions (↕️ and ↔️). You can also select and sort multiple items at the same time by pressing ctrl and click on the item.",
-    "longDescription": "🧐 A grid that allows you to sort all items via drag & drop. Items can be sorted in all directions (↕️ and ↔️). You can also select and sort multiple items at the same time by pressing ctrl and click on the item.",
-    "content": "README.md",
-    "tags": ["components"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kreuzerk"
+  ],
+  "owner": "kreuzerk",
+  "repo": "ng-sortgrid",
+  "name": "ng-sortgrid",
+  "shortDescription": "🧐 A grid that allows you to sort all items via drag & drop. Items can be sorted in all directions (↕️ and ↔️). You can also select and sort multiple items at the same time by pressing ctrl and click on the item.",
+  "longDescription": "🧐 A grid that allows you to sort all items via drag & drop. Items can be sorted in all directions (↕️ and ↔️). You can also select and sort multiple items at the same time by pressing ctrl and click on the item.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "components"
+  ]
+}

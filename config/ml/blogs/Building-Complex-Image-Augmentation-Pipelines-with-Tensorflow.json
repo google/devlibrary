@@ -1,8 +1,11 @@
 {
-    "version": 1.0,
-      "source": "medium",
-      "author": "Dimitre Andrew Aires de Oliveira",
-      "title": "Building Complex Image Augmentation Pipelines with Tensorflow",
-      "link": "https://medium.com/towards-artificial-intelligence/building-complex-image-augmentation-pipelines-with-tensorflow-bed1914278d2",
-      "tags": ["vision"]
-    }
+  "version": 1,
+  "source": "medium",
+  "authorIds": [],
+  "author": "Dimitre Andrew Aires de Oliveira",
+  "title": "Building Complex Image Augmentation Pipelines with Tensorflow",
+  "link": "https://medium.com/towards-artificial-intelligence/building-complex-image-augmentation-pipelines-with-tensorflow-bed1914278d2",
+  "tags": [
+    "vision"
+  ]
+}

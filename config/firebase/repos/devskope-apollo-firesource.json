@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["devskope"],
+  "authorIds": [
+    "devskope"
+  ],
   "owner": "devskope",
   "repo": "apollo-firesource",
   "name": "Apollo Firesource",
@@ -9,5 +11,7 @@
   "longDescription": "Apollo server datasource wrapping Firestore REST APIs.",
   "content": "README.md",
   "pages": [],
-  "tags": ["admin"]
+  "tags": [
+    "admin"
+  ]
 }

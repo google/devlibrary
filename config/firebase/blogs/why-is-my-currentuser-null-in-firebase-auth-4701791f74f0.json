@@ -1,9 +1,14 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": ["CodingDoug"],
+  "authorIds": [
+    "CodingDoug"
+  ],
   "author": "Doug Stevenson",
   "title": "Why is my currentUser == null in Firebase Auth?",
   "link": "https://medium.com/firebase-developers/why-is-my-currentuser-null-in-firebase-auth-4701791f74f0",
-  "tags": ["ios", "android"]
+  "tags": [
+    "ios",
+    "android"
+  ]
 }

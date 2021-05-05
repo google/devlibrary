@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": [],
   "owner": "freshfox",
   "repo": "firestore-storage",
   "name": "Firestore Storage",
@@ -8,5 +9,8 @@
   "longDescription": "A typed wrapper around Firestore incluing a querybuilder and an in-memory implementation for testing.",
   "content": "README.md",
   "pages": [],
-  "tags": ["web", "node"]
+  "tags": [
+    "web",
+    "node"
+  ]
 }

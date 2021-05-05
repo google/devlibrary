@@ -1,8 +1,13 @@
 {
-    "version": 1.0,
-    "source": "medium",
-    "author": "Maksim Lin",
-    "title": "DIY DAP",
-    "link": "https://medium.com/flutter-community/diy-dap-1e73d42ce2b0",
-    "tags":["mobile"]
-    }
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "mksl"
+  ],
+  "author": "Maksim Lin",
+  "title": "DIY DAP",
+  "link": "https://medium.com/flutter-community/diy-dap-1e73d42ce2b0",
+  "tags": [
+    "mobile"
+  ]
+}

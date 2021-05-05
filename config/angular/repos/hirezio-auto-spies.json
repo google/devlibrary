@@ -1,12 +1,15 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "hirezio",
-    "repo": "auto-spies",
-    "name": "Auto Spies (Jasmine / Jest)",
-    "shortDescription": "The easiest way to create type safe spies for Angular tests - automatically",
-    "longDescription": "The easiest way to create type safe spies for Angular tests - automatically",
-    "content": "README.md",
-    "tags": ["frameworks"]
-    }
-    
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "hirezio",
+  "repo": "auto-spies",
+  "name": "Auto Spies (Jasmine / Jest)",
+  "shortDescription": "The easiest way to create type safe spies for Angular tests - automatically",
+  "longDescription": "The easiest way to create type safe spies for Angular tests - automatically",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "frameworks"
+  ]
+}
