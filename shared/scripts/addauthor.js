@@ -20,10 +20,7 @@ const fetch = require("node-fetch");
 const cheerio = require("cheerio");
 const ogs = require("open-graph-scraper");
 
-function getConfigDir() {
-  const dir = path.dirname(__filename);
-  return path.resolve(dir, "../../config");
-}
+const { writeOrUpdateJSON, getConfigDir } = require("./util");
 
 async function getMediumPostAuthor(url) {
   const res = await fetch(url);
@@ -67,9 +64,7 @@ async function addMediumAuthor(username) {
   };
 
   const authorFilePath = path.join(getConfigDir(), 'authors', `${username}.json`);
-  
-  console.log(`Writing new file: ${authorFilePath}`);
-  fs.writeFileSync(authorFilePath, JSON.stringify(author, undefined, 2));
+  writeOrUpdateJSON(authorFilePath, author);
 }
 
 async function addGithubAuthor(username) {
@@ -84,9 +79,7 @@ async function addGithubAuthor(username) {
   }
 
   const authorFilePath = path.join(getConfigDir(), 'authors', `${username}.json`);
-  
-  console.log(`Writing new file: ${authorFilePath}`);
-  fs.writeFileSync(authorFilePath, JSON.stringify(author, undefined, 2));
+  writeOrUpdateJSON(authorFilePath, author);
 }
 
 async function main(args) {

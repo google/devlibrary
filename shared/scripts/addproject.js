@@ -18,27 +18,7 @@ const fs = require("fs");
 const path = require("path");
 
 const { addGithubAuthor, addMediumAuthor, getMediumPostAuthor } = require("./addauthor");
-
-function getConfigDir() {
-  const dir = path.dirname(__filename);
-  return path.resolve(dir, "../../config");
-}
-
-function writeOrUpdateJSON(path, content) {
-  let newContent = content;
-  if (fs.existsSync(path)) {
-    console.log("Updating file:", path);
-    const existingContent = JSON.parse(fs.readFileSync(path, 'utf-8'));
-    newContent = {
-      ...newContent,
-      ...existingContent,
-    }
-  } else {
-    console.log("Writing new file:", path);
-  }
-
-  fs.writeFileSync(path, JSON.stringify(newContent, undefined, 2));
-}
+const { writeOrUpdateJSON, getConfigDir } = require("./util");
 
 async function addBlog(product, projectUrl, projectId) {
   const re = /\.com\/([\w\-]+)\/([\w\-]+)/

@@ -17,16 +17,11 @@
 const fs = require("fs");
 const path = require("path");
 const { addBlog, addRepo } = require("./addproject");
-
-function getConfigDir() {
-  const dir = path.dirname(__filename);
-  return path.resolve(dir, "../../config");
-}
+const { getConfigDir } = require("./util");
 
 async function main() {
   const products = fs.readdirSync(getConfigDir())
     .filter(f => f !== "authors")
-    .filter(f => f === "flutter") // TODO
     .filter(f => fs.statSync(path.join(getConfigDir(), f)).isDirectory());
 
   for (const p of products) {
