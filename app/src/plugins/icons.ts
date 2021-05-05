@@ -31,6 +31,7 @@ import {
   faAngleLeft,
   faAngleRight,
   faTimesCircle,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
 
@@ -45,6 +46,7 @@ library.add(
   faAngleLeft,
   faAngleRight,
   faTimesCircle,
+  faUser,
 
   faGithub,
   faMedium

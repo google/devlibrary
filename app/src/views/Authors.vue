@@ -21,15 +21,19 @@
       <div class="col-start-2 col-span-8">
         <div class="py-10">
           <h1 class="text-2xl lg:text-3xl font-semibold">Authors</h1>
+          <p class="mt-1">
+            All content on Dev Library is contributed by our incredible authors!
+          </p>
         </div>
       </div>
     </div>
 
-    <!-- Author cards -->
-    <div class="grid grid-cols-10 gap-4" v-if="loaded">
+    <!-- Body -->
+    <div class="grid grid-cols-10 gap-4 mb-8" v-if="loaded">
+      <!-- Author Cards -->
       <div class="col-start-2 col-span-8">
         <div
-          class="py-10 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          class="py-6 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
           <div
             v-for="author in authors"
@@ -75,6 +79,18 @@
           </div>
         </div>
       </div>
+
+      <!-- Link -->
+      <p class="text-sm col-start-2 col-span-8 opacity-50">
+        If you're listed on this page and would like to update your information,
+        open an Issue or send us a Pull Request
+        <a
+          href="https://github.com/google/devlibrary"
+          class="cursor-pointer underline"
+          target="_blank"
+          >here</a
+        >.
+      </p>
     </div>
   </div>
 </template>

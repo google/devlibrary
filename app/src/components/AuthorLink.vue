@@ -15,29 +15,31 @@
 -->
 
 <template>
-  <img :src="src" :class="[size]" class="bg-white overflow-hidden" />
+  <router-link
+    tag="span"
+    :to="`/authors/${author.id}`"
+    :key="author.id"
+    class="inline-flex gap-2 items-center cursor-pointer text-sm font-display pl-2 pr-2 py-1 border rounded-full hover:shadow"
+  >
+    <CircleImage size="xsmall" :src="author.metadata.photoURL" />
+    <span>{{ author.metadata.name }}</span>
+  </router-link>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
-@Component
-export default class CircleImage extends Vue {
-  @Prop() size!: string;
-  @Prop() src!: string;
+import CircleImage from "@/components/CircleImage.vue";
+import { AuthorData } from "../../../shared/types";
+
+@Component({
+  components: {
+    CircleImage,
+  },
+})
+export default class AuthorLink extends Vue {
+  @Prop() author!: AuthorData;
 }
 </script>
 
-<style scoped lang="postcss">
-.xsmall {
-  @apply object-contain w-5 h-5 rounded-full;
-}
-
-.small {
-  @apply object-contain w-12 h-12 border-2 rounded-full;
-}
-
-.large {
-  @apply object-contain w-36 h-36 border-4 rounded-full;
-}
-</style>
+<style scoped lang="postcss"></style>
