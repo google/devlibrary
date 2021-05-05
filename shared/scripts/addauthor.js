@@ -68,8 +68,24 @@ async function addMediumAuthor(username) {
 }
 
 async function addGithubAuthor(username) {
-  const res = await fetch(`https://api.github.com/users/${username}`);
-  const { name, bio } = await res.json();
+  // If available, use a GitHub token from the environment
+  const headers = {
+    'Content-Type': 'application/json'
+  };
+  if (process.env.GITHUB_TOKEN) {
+    headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
+  }
+
+  const res = await fetch(`https://api.github.com/users/${username}`, {
+    method: 'get',
+    headers
+  });
+  const { name, bio, type } = await res.json();
+
+  if (type === "Organization") {
+    console.log("Skipping organization", username);
+    return;
+  }
 
   const author = {
     name: name || username,

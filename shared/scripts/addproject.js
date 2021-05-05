@@ -61,7 +61,13 @@ async function addRepo(product, projectUrl, projectId) {
   if (!fs.existsSync(authorFilePath)) {
     await addGithubAuthor(owner);
   }
-  repoFileContent.authorIds = [owner];
+
+  // We check again to see if we skipped the author or not
+  if (fs.existsSync) {
+    repoFileContent.authorIds = [owner];
+  } else {
+    repoFileContent.authorIds = [];
+  }
 
   const repoId = projectId || `${owner}-${repo}`;
   const repoFilePath = path.join(getConfigDir(), product, 'repos', `${repoId}.json`);
