@@ -30,7 +30,9 @@ v.addSchema(AuthorMetadataSchema, "AuthorMetadata");
 function validateObj(fPath, schema) {
   const fContent = fs.readFileSync(fPath).toString();
   if (fContent.includes("TODO")) {
-    console.warn(`  x ${fPath} contains a 'TODO', did you forget to fill in the template?`);
+    console.warn(
+      `  x ${fPath} contains a 'TODO', did you forget to fill in the template?`
+    );
     process.exit(1);
   }
 
@@ -65,7 +67,7 @@ async function main() {
     if (!fs.lstatSync(path.join(configDir, product)).isDirectory()) {
       continue;
     }
-   
+
     const productBlogsDir = path.join(configDir, product, "blogs");
     if (fs.existsSync(productBlogsDir)) {
       console.log(`\nValidating blogs for ${product}`);
@@ -89,5 +91,5 @@ async function main() {
 }
 
 module.exports = {
-  main
-}
+  main,
+};

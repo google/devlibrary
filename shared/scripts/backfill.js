@@ -20,19 +20,22 @@ const { addBlog, addRepo } = require("./addproject");
 const { getConfigDir } = require("./util");
 
 async function main() {
-  const products = fs.readdirSync(getConfigDir())
-    .filter(f => f !== "authors")
-    .filter(f => fs.statSync(path.join(getConfigDir(), f)).isDirectory());
+  const products = fs
+    .readdirSync(getConfigDir())
+    .filter((f) => f !== "authors")
+    .filter((f) => fs.statSync(path.join(getConfigDir(), f)).isDirectory());
 
   for (const p of products) {
     const productDir = path.join(getConfigDir(), p);
-    const reposDir = path.join(productDir, 'repos');
-    const blogsDir = path.join(productDir, 'blogs');
+    const reposDir = path.join(productDir, "repos");
+    const blogsDir = path.join(productDir, "blogs");
 
     const repoFiles = fs.readdirSync(reposDir);
     for (const repoFile of repoFiles) {
       const repoId = repoFile.split(".json")[0];
-      const repoMetadata = JSON.parse(fs.readFileSync(path.join(reposDir, repoFile), 'utf-8'));
+      const repoMetadata = JSON.parse(
+        fs.readFileSync(path.join(reposDir, repoFile), "utf-8")
+      );
       const repoLink = `https://github.com/${repoMetadata.owner}/${repoMetadata.repo}`;
 
       await addRepo(p, repoLink, repoId);
@@ -41,7 +44,9 @@ async function main() {
     const blogFiles = fs.readdirSync(blogsDir);
     for (const blogFile of blogFiles) {
       const blogId = blogFile.split(".json")[0];
-      const blogMetadata = JSON.parse(fs.readFileSync(path.join(blogsDir, blogFile), 'utf-8'));
+      const blogMetadata = JSON.parse(
+        fs.readFileSync(path.join(blogsDir, blogFile), "utf-8")
+      );
       const blogLink = blogMetadata.link;
 
       await addBlog(p, blogLink, blogId);
@@ -50,5 +55,5 @@ async function main() {
 }
 
 module.exports = {
-  main
-}
+  main,
+};

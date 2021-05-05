@@ -10,11 +10,11 @@ function writeOrUpdateJSON(filePath, content) {
   let newContent = content;
   if (fs.existsSync(filePath)) {
     console.log("Updating file:", filePath);
-    const existingContent = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    const existingContent = JSON.parse(fs.readFileSync(filePath, "utf-8"));
     newContent = {
       ...newContent,
       ...existingContent,
-    }
+    };
   } else {
     console.log("Writing new file:", filePath);
   }
@@ -24,5 +24,5 @@ function writeOrUpdateJSON(filePath, content) {
 
 module.exports = {
   writeOrUpdateJSON,
-  getConfigDir
-}
+  getConfigDir,
+};

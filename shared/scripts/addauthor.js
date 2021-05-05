@@ -33,7 +33,7 @@ async function getMediumPostAuthor(url) {
   }
 
   const prefix = "https://medium.com/@";
-  const href = authorLink.attr('href');
+  const href = authorLink.attr("href");
   if (!(href && href.startsWith(prefix))) {
     return;
   }
@@ -43,9 +43,9 @@ async function getMediumPostAuthor(url) {
 
 async function addMediumAuthor(username) {
   const options = {
-    url: `https://medium.com/@${username}`
+    url: `https://medium.com/@${username}`,
   };
-  
+
   // TODO: See if we can replace this with Cheerio and drop the dependency
   const { result } = await ogs(options);
   if (!result.success) {
@@ -60,25 +60,29 @@ async function addMediumAuthor(username) {
     name: title.split(" – ")[0].trim(),
     bio: "",
     photoURL: imageUrl,
-    mediumURL: options.url
+    mediumURL: options.url,
   };
 
-  const authorFilePath = path.join(getConfigDir(), 'authors', `${username}.json`);
+  const authorFilePath = path.join(
+    getConfigDir(),
+    "authors",
+    `${username}.json`
+  );
   writeOrUpdateJSON(authorFilePath, author);
 }
 
 async function addGithubAuthor(username) {
   // If available, use a GitHub token from the environment
   const headers = {
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json",
   };
   if (process.env.GITHUB_TOKEN) {
-    headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
+    headers["Authorization"] = `token ${process.env.GITHUB_TOKEN}`;
   }
 
   const res = await fetch(`https://api.github.com/users/${username}`, {
-    method: 'get',
-    headers
+    method: "get",
+    headers,
   });
   const { name, bio, type } = await res.json();
 
@@ -91,19 +95,25 @@ async function addGithubAuthor(username) {
     name: name || username,
     bio: bio || "",
     photoURL: `https://avatars.githubusercontent.com/${username}`,
-    githubURL: `https://github.com/${username}`
-  }
+    githubURL: `https://github.com/${username}`,
+  };
 
-  const authorFilePath = path.join(getConfigDir(), 'authors', `${username}.json`);
+  const authorFilePath = path.join(
+    getConfigDir(),
+    "authors",
+    `${username}.json`
+  );
   writeOrUpdateJSON(authorFilePath, author);
 }
 
 async function main(args) {
   if (args.length < 3) {
-    console.error("Missing required arguments:\nnpm run addauthor <medium | github> <username>");
+    console.error(
+      "Missing required arguments:\nnpm run addauthor <medium | github> <username>"
+    );
     return;
   }
-  
+
   const source = args[1];
   const username = args[2];
 
@@ -122,5 +132,5 @@ module.exports = {
   main,
   addGithubAuthor,
   addMediumAuthor,
-  getMediumPostAuthor
-}
+  getMediumPostAuthor,
+};
