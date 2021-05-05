@@ -40,29 +40,31 @@ function writeOrUpdateJSON(path, content) {
   fs.writeFileSync(path, JSON.stringify(newContent, undefined, 2));
 }
 
-async function addBlog(product, projectUrl) {
-  const re = /medium.com\/([\w\-]+)\/([\w\-]+)/
+async function addBlog(product, projectUrl, projectId) {
+  const re = /\.com\/([\w\-]+)\/([\w\-]+)/
   const m = projectUrl.match(re);
-
-  const slug = m[2];
 
   const templateStr = fs.readFileSync(path.join(getConfigDir(), "template-blog.json")).toString();
   const blogFileContent = JSON.parse(templateStr);
   blogFileContent.link = projectUrl;
 
   // Add the author
+  // TODO: This doesn't work for proandroiodev, etc
   const postAuthor = await getMediumPostAuthor(projectUrl);
-  const authorFilePath = path.join(getConfigDir(), `${postAuthor}.json`);
-  if (!fs.existsSync(authorFilePath)) {
-    await addMediumAuthor(postAuthor);
+  if (postAuthor) {
+    const authorFilePath = path.join(getConfigDir(), `${postAuthor}.json`);
+    if (!fs.existsSync(authorFilePath)) {
+      await addMediumAuthor(postAuthor);
+    }
   }
   blogFileContent.authorIds = postAuthor ? [postAuthor] : [];
 
-  const blogFilePath = path.join(getConfigDir(), product, 'blogs', `${slug}.json`);
+  const blogId = projectId || m[2];
+  const blogFilePath = path.join(getConfigDir(), product, 'blogs', `${blogId}.json`);
   writeOrUpdateJSON(blogFilePath, blogFileContent);
 }
 
-async function addRepo(product, projectUrl) {
+async function addRepo(product, projectUrl, projectId) {
   const re = /github.com\/([\w\-]+)\/([\w\-]+)/
   const m = projectUrl.match(re);
 
@@ -81,31 +83,35 @@ async function addRepo(product, projectUrl) {
   }
   repoFileContent.authorIds = [owner];
 
-  const repoFilePath = path.join(getConfigDir(), product, 'repos', `${owner}-${repo}.json`);
+  const repoId = projectId || `${owner}-${repo}`;
+  const repoFilePath = path.join(getConfigDir(), product, 'repos', `${repoId}.json`);
   writeOrUpdateJSON(repoFilePath, repoFileContent);
 }
 
 async function main(args) {
   if (args.length < 3) {
-    console.error("Missing required arguments:\nnpm run addproject <product> <url>");
+    console.error("Missing required arguments:\nnpm run addproject <product> <url> [id]");
     return;
   }
   
   const product = args[1];
   const projectUrl = args[2];
+  const projectId = args.length >= 4 ? args[3] : undefined;
 
   console.log(`Product: ${product}`);
   console.log(`Project: ${projectUrl}`);
 
   if (projectUrl.includes("github.com")) {
-    await addRepo(product, projectUrl);
+    await addRepo(product, projectUrl, projectId);
   } else if (projectUrl.includes("medium.com")) {
-    await addBlog(product, projectUrl);
+    await addBlog(product, projectUrl, projectId);
   } else {
     console.error("Unknown project source, must be a GitHub repo or Medium post");
   }
 }
 
 module.exports = {
-  main
+  main,
+  addBlog,
+  addRepo
 }

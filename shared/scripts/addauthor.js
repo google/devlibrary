@@ -49,6 +49,7 @@ async function addMediumAuthor(username) {
     url: `https://medium.com/@${username}`
   };
   
+  // TODO: See if we can replace this with Cheerio and drop the dependency
   const { result } = await ogs(options);
   if (!result.success) {
     console.warn("Could not add author!");

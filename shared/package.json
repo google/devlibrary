@@ -5,6 +5,7 @@
   "scripts": {
     "addauthor": "node -e \"require('./scripts/addauthor.js').main(process.argv)\"",
     "addproject": "node -e \"require('./scripts/addproject.js').main(process.argv)\"",
+    "backfill": "node -e \"require('./scripts/backfill.js').main(process.argv)\"",
     "validate": "node -e \"require('./scripts/validate.js').main(process.argv)\"",
     "build": "node -e \"require('./scripts/generate.js').main(process.argv)\"",
     "deploy:firebase": "firebase --project=$FIREBASE_PROJECT deploy"
