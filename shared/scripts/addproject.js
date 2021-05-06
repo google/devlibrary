@@ -21,6 +21,8 @@ const {
   addGithubAuthor,
   addMediumAuthor,
   getMediumPostAuthor,
+  mediumAuthorExists,
+  githubAuthorExists,
 } = require("./addauthor");
 const { writeOrUpdateJSON, getConfigDir } = require("./util");
 
@@ -38,12 +40,11 @@ async function addBlog(product, projectUrl, projectId) {
   // TODO: This doesn't work for proandroiodev, etc
   const postAuthor = await getMediumPostAuthor(projectUrl);
   if (postAuthor) {
-    const authorFilePath = path.join(getConfigDir(), "authors", `${postAuthor}.json`);
-    if (!fs.existsSync(authorFilePath)) {
+    if (!mediumAuthorExists(postAuthor)) {
       await addMediumAuthor(postAuthor);
     }
   }
-  blogFileContent.authorIds = postAuthor ? [postAuthor] : [];
+  blogFileContent.authorIds = postAuthor ? [normalizeAuthorId(postAuthor)] : [];
 
   const blogId = projectId || m[2];
   const blogFilePath = path.join(
@@ -70,14 +71,13 @@ async function addRepo(product, projectUrl, projectId) {
   repoFileContent.repo = repo;
 
   // Check if we have a matching author aready
-  const authorFilePath = path.join(getConfigDir(), "authors", `${owner}.json`);
-  if (!fs.existsSync(authorFilePath)) {
+  if (!githubAuthorExists(owner)) {
     await addGithubAuthor(owner);
   }
 
   // We check again to see if we skipped the author or not
-  if (fs.existsSync(authorFilePath)) {
-    repoFileContent.authorIds = [owner];
+  if (githubAuthorExists(owner)) {
+    repoFileContent.authorIds = [normalizeAuthorId(owner)];
   } else {
     repoFileContent.authorIds = [];
   }

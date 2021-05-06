@@ -2,7 +2,7 @@
   "version": 1,
   "source": "medium",
   "authorIds": [
-    "alex.mamo"
+    "alex-mamo"
   ],
   "author": "Alex Mamo",
   "title": "How to display data from Firestore using Jetpack Compose",

@@ -22,6 +22,10 @@ import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
 import { AuthorData, AuthorSearchResult, BlogSearchResult, RepoSearchResult, SearchResult } from "../../shared/types";
 
+const INDEX_AUTHORS = "authors";
+const INDEX_REPOS = "repos";
+const INDEX_BLOGS = "blogs";
+
 const client = new Client({
   cloud: {
     id: config.get("elastic", "id"),
@@ -41,7 +45,7 @@ export async function index(
   //       ID this would be an issue.
   for (const [id, repo] of Object.entries(repos)) {
     const p = client.index({
-      index: "repos",
+      index: INDEX_REPOS,
       id,
       body: {
         id,
@@ -54,7 +58,7 @@ export async function index(
 
   for (const [id, blog] of Object.entries(blogs)) {
     const p = client.index({
-      index: "blogs",
+      index: INDEX_BLOGS,
       id,
       body: {
         id,
@@ -69,14 +73,14 @@ export async function index(
 
   // We need to force an index refresh at this point, otherwise we will not
   // get any result in the consequent search
-  await client.indices.refresh({ index: "repos" });
-  await client.indices.refresh({ index: "blogs" });
+  await client.indices.refresh({ index:INDEX_REPOS });
+  await client.indices.refresh({ index: INDEX_BLOGS });
 }
 
 export async function indexAuthor(author: AuthorData) {
   const { id, metadata } = author;
   await client.index({
-    index: "authors",
+    index: INDEX_AUTHORS,
     id,
     body: {
       id,
@@ -85,9 +89,30 @@ export async function indexAuthor(author: AuthorData) {
   });
 }
 
+export async function unIndexAuthor(id: string) {
+  await client.delete({
+    index: INDEX_AUTHORS,
+    id
+  });
+}
+
+export async function unIndexBlog(id: string) {
+  await client.delete({
+    index: INDEX_BLOGS,
+    id
+  });
+}
+
+export async function unIndexRepo(id: string) {
+  await client.delete({
+    index: INDEX_REPOS,
+    id
+  });
+}
+
 export async function search(term: string, limit: number): Promise<SearchResult[]> {
   const reposRes = await client.search({
-    index: "repos",
+    index: INDEX_REPOS,
     body: {
       query: {
         query_string: {
@@ -106,7 +131,7 @@ export async function search(term: string, limit: number): Promise<SearchResult[
   });
 
   const blogsRes = await client.search({
-    index: "blogs",
+    index: INDEX_BLOGS,
     body: {
       query: {
         query_string: {
@@ -122,7 +147,7 @@ export async function search(term: string, limit: number): Promise<SearchResult[
   });
 
   const authorsRes = await client.search({
-    index: "authors",
+    index: INDEX_AUTHORS,
     body: {
       query: {
         query_string: {
