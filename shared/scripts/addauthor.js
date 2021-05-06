@@ -22,6 +22,27 @@ const ogs = require("open-graph-scraper");
 
 const { writeOrUpdateJSON, getConfigDir } = require("./util");
 
+function normalizeAuthorId(id) {
+  // Replace all '.' with '-'
+  return id.split(".").join("-");
+}
+
+function authorFilePath(id) {
+  return path.join(getConfigDir(), "authors", `${id}.json`);
+}
+
+function authorExists(id) {
+  return fs.existsSync(authorFilePath(id));
+}
+
+function githubAuthorExists(owner) {
+  return authorExists(normalizeAuthorId(owner));;
+}
+
+function mediumAuthorExists(username) {
+  return authorExists(normalizeAuthorId(username));
+}
+
 async function getMediumPostAuthor(url) {
   const res = await fetch(url);
   const html = await res.text();
@@ -63,12 +84,9 @@ async function addMediumAuthor(username) {
     mediumURL: options.url,
   };
 
-  const authorFilePath = path.join(
-    getConfigDir(),
-    "authors",
-    `${username}.json`
-  );
-  writeOrUpdateJSON(authorFilePath, author);
+  const authorId = normalizeAuthorId(username);
+  const filePath = authorFilePath(authorId);
+  writeOrUpdateJSON(filePath, author);
 }
 
 async function addGithubAuthor(username) {
@@ -98,12 +116,9 @@ async function addGithubAuthor(username) {
     githubURL: `https://github.com/${username}`,
   };
 
-  const authorFilePath = path.join(
-    getConfigDir(),
-    "authors",
-    `${username}.json`
-  );
-  writeOrUpdateJSON(authorFilePath, author);
+  const authorId = normalizeAuthorId(username);
+  const filePath = authorFilePath(authorId);
+  writeOrUpdateJSON(filePath, author);
 
   return true;
 }
@@ -134,5 +149,8 @@ module.exports = {
   main,
   addGithubAuthor,
   addMediumAuthor,
+  normalizeAuthorId,
+  githubAuthorExists,
+  mediumAuthorExists,
   getMediumPostAuthor,
 };

@@ -40,7 +40,7 @@ import * as github from "./github";
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { AuthorData, ProductKey, RepoPage } from "../../shared/types";
-import { index, indexAuthor } from "./search";
+import { index, indexAuthor, unIndexAuthor, unIndexBlog, unIndexRepo } from "./search";
 
 // See: https://firebase.google.com/docs/functions/writing-and-viewing-logs#console-log
 require("firebase-functions/lib/logger/compat");
@@ -100,6 +100,7 @@ async function refreshAllProjects() {
     for (const b of blogsToDelete) {
       console.log(`Deleting ${product} blog ${b}`);
       await deleteBlogData(product, b);
+      await unIndexBlog(b);
     }
 
     const newRepoIds = Object.keys(repos);
@@ -107,6 +108,7 @@ async function refreshAllProjects() {
     for (const r of reposToDelete) {
       console.log(`Deleting ${product} repo ${r}`);
       await deleteRepoData(product, r);
+      await unIndexRepo(r);
     }
   }
 }
@@ -132,6 +134,7 @@ async function refreshAllAuthors() {
   for (const a of authorsToDelete) {
     console.log(`Deleting author ${a}`);
     await deleteAuthorData(a);
+    await unIndexAuthor(a);
   }
 
   // TODO: Author search indexing
