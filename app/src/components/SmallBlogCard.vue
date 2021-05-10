@@ -19,8 +19,8 @@
     class="flex flex-row rounded overflow-hidden shadow transition-shadow hover:shadow-lg"
   >
     <!-- Medium Sidebar -->
-    <div class="px-2 flex flex-col justify-center bg-gray-200 text-black">
-      <font-awesome-icon :icon="['fab', 'medium']" size="lg" />
+    <div class="px-1 flex flex-col justify-center bg-gray-200 text-black">
+      <font-awesome-icon :icon="['far', 'bookmark']" size="lg" fixed-width />
     </div>
 
     <div class="pt-1 flex-grow flex flex-col">

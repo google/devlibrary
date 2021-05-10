@@ -82,8 +82,9 @@
 
       <!-- Link -->
       <p class="text-sm col-start-2 col-span-8 opacity-50">
-        If you believe you should be on this page, or if you're on this page and would like to update your information,
-        open an Issue or send us a Pull Request
+        If you believe you should be on this page, or if you're on this page and
+        would like to update your information, open an Issue or send us a Pull
+        Request
         <a
           href="https://github.com/google/devlibrary"
           class="cursor-pointer underline"

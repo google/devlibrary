@@ -22,7 +22,7 @@
     >
       <!-- author / medium header -->
       <div class="bg-gray-200 text-black px-3 py-2">
-        <font-awesome-icon :icon="['fab', 'medium']" size="lg" class="mr-2" />
+        <font-awesome-icon :icon="['far', 'bookmark']" size="lg" class="mr-2" />
         <span>{{ blog.metadata.author }}</span>
       </div>
 
