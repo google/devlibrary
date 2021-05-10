@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "twenny"
+  ],
+  "author": "Aaron Wilson",
+  "title": "Exporting Cloud Logging logs to Elastic Cloud",
+  "link": "https://cloud.google.com/community/tutorials/exporting-stackdriver-elasticcloud",
+  "tags": [
+    "operations"
+  ]
+}

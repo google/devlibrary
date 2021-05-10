@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "brocaar"
+  ],
+  "author": "Orne Brocaar",
+  "title": "Setting up LoRa Server on Google Cloud",
+  "link": "https://cloud.google.com/community/tutorials/setting-up-loraserver",
+  "tags": [
+    "compute"
+  ]
+}

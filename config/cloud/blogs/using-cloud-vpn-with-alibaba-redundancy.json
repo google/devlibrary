@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "epluscloudservices",
+  "title": "Using Cloud VPN with Alibaba Cloud VPN Gateway with redundancy",
+  "link": "https://cloud.google.com/community/tutorials/using-cloud-vpn-with-alibaba-redundancy",
+  "tags": [
+    "networking"
+  ]
+}

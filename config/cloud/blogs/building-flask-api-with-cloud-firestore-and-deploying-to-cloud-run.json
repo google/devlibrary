@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "timtech4u"
+  ],
+  "author": "Timothy Olaleke",
+  "title": "Build and deploy a Flask CRUD API with Firestore and Cloud Run",
+  "link": "https://cloud.google.com/community/tutorials/building-flask-api-with-cloud-firestore-and-deploying-to-cloud-run",
+  "tags": [
+    "compute",
+    "databases"
+  ]
+}

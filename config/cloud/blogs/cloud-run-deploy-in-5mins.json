@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "timtech4u"
+  ],
+  "author": "Timothy Olaleke",
+  "title": "Deploy a container to Cloud Run in 5 minutes",
+  "link": "https://cloud.google.com/community/tutorials/cloud-run-deploy-in-5mins",
+  "tags": [
+    "serverless-computing"
+  ]
+}

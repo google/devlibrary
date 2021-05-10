@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "jfrogtw"
+  ],
+  "author": "Gianni Truzzi",
+  "title": "Using Cloud Storage with a JFrog Artifactory filestore",
+  "link": "https://cloud.google.com/community/tutorials/artifactory-gcs-setup",
+  "tags": [
+    "storag"
+  ]
+}

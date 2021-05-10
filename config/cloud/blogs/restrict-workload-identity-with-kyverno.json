@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "soeirosantos"
+  ],
+  "author": "Romulo Santos",
+  "title": "Restrict Google Kubernetes Engine Workload Identity with Kyverno",
+  "link": "https://cloud.google.com/community/tutorials/restrict-workload-identity-with-kyverno",
+  "tags": [
+    "containers"
+  ]
+}
