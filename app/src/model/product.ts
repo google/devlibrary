@@ -222,6 +222,14 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     // https://cloud.google.com/products
     tags: [
       {
+        key: "AI and Machine Learning",
+        value: "ai-ml",
+      },
+      {
+        key: "API Management",
+        value: "api-management",
+      },
+      {
         key: "Compute",
         value: "compute",
       },
@@ -230,16 +238,40 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "containers",
       },
       {
-        key: "Databases",
-        value: "databases",
-      },
-      {
         key: "Data Analytics",
         value: "data-analytics",
       },
       {
+        key: "Databases",
+        value: "databases",
+      },
+      {
+        key: "Developer Tools",
+        value: "developer-tools",
+      },
+      {
+        key: "Healthcare and Life Sciences",
+        value: "healthcare-life-sciences",
+      },
+      {
+        key: "Hybrid and Multicloud",
+        value: "hybrid-multicloud",
+      },
+      {
         key: "Internet of Things",
         value: "iot",
+      },
+      {
+        key: "Management Tools",
+        value: "management-tools",
+      },
+      {
+        key: "Media and Gaming",
+        value: "media-gaming",
+      },
+      {
+        key: "Migration",
+        value: "migration",
       },
       {
         key: "Networking",
@@ -250,8 +282,16 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "operations",
       },
       {
+        key: "Security and Identity",
+        value: "security-identity",
+      },
+      {
         key: "Serverless Computing",
         value: "serverless-computing",
+      },
+      {
+        key: "Storage",
+        value: "storage",
       },
     ],
   },

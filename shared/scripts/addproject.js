@@ -16,6 +16,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const ogs = require("open-graph-scraper");
 
 const {
   addGithubAuthor,
@@ -26,7 +27,39 @@ const {
 } = require("./addauthor");
 const { writeOrUpdateJSON, getConfigDir } = require("./util");
 
-async function addBlog(product, projectUrl, projectId) {
+async function addOtherBlog(product, projectUrl, projectId) {
+  const templateStr = fs
+    .readFileSync(path.join(getConfigDir(), "template-blog.json"))
+    .toString();
+  const blogFileContent = JSON.parse(templateStr);
+  blogFileContent.source = "other";
+  blogFileContent.link = projectUrl;
+
+  // Get the title from OpenGraph
+  const { result } = await ogs({
+    url: projectUrl,
+  });
+  if (result.success) {
+    blogFileContent.title = result.ogTitle;
+  }
+
+  // Make a slug ID from the URL
+  const u = new URL(projectUrl);
+  const segments = u.pathname.split("/");
+  const lastSegment = segments[segments.length - 1];
+  const slug = lastSegment.split(".")[0];
+
+  const blogId = projectId || slug;
+  const blogFilePath = path.join(
+    getConfigDir(),
+    product,
+    "blogs",
+    `${blogId}.json`
+  );
+  writeOrUpdateJSON(blogFilePath, blogFileContent);
+}
+
+async function addMediumBlog(product, projectUrl, projectId) {
   const re = /\.com\/([\w\-]+)\/([\w\-]+)/;
   const m = projectUrl.match(re);
 
@@ -110,16 +143,15 @@ async function main(args) {
   if (projectUrl.includes("github.com")) {
     await addRepo(product, projectUrl, projectId);
   } else if (projectUrl.includes("medium.com")) {
-    await addBlog(product, projectUrl, projectId);
+    await addMediumBlog(product, projectUrl, projectId);
   } else {
-    console.error(
-      "Unknown project source, must be a GitHub repo or Medium post"
-    );
+    await addOtherBlog(product, projectUrl, projectId);
   }
 }
 
 module.exports = {
   main,
-  addBlog,
+  addMediumBlog,
+  addOtherBlog,
   addRepo,
 };
