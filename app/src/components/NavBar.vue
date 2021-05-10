@@ -102,7 +102,9 @@ export default class NavBar extends Vue {
   public showProductsDropdown = false;
 
   get products() {
-    return Object.values(ALL_PRODUCTS);
+    return Object.values(ALL_PRODUCTS).sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
   }
 }
 </script>
