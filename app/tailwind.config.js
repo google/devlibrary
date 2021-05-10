@@ -52,6 +52,11 @@ module.exports = {
           bg: "#F1F3F4",
           text: "#1F2937",
         },
+        cloud: {
+          accent: "#EA4335",
+          bg: "#4285F4",
+          text: "#FFFFFF",
+        },
       },
       typography: {
         DEFAULT: {

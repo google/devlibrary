@@ -221,6 +221,62 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
     ],
   },
+  cloud: {
+    key: ProductKey.CLOUD,
+    name: "Google Cloud",
+    description:
+      "Meet your business challenges head on with cloud computing services from Google, including data management, hybrid & multi-cloud, and AI & ML.",
+    docsUrl: "https://cloud.google.com/docs",
+    classes: {
+      bg: "bg-cloud-bg",
+      text: "text-cloud-text",
+      iconBorder: "border-cloud-accent",
+    },
+    // Tags for Cloud are adapted as-needed from the "products" categories list on this page:
+    // https://cloud.google.com/products
+    tags: [
+      {
+        key: "Compute",
+        value: "compute",
+        color: "bg-blue-500",
+      },
+      {
+        key: "Containers",
+        value: "containers",
+        color: "bg-blue-500",
+      },
+      {
+        key: "Databases",
+        value: "databases",
+        color: "bg-red-500",
+      },
+      {
+        key: "Data Analytics",
+        value: "data-analytics",
+        color: "bg-gray-500",
+      },
+      {
+        key: "Internet of Things",
+        value: "iot",
+        color: "bg-gray-500",
+      },
+      {
+        key: "Networking",
+        value: "networking",
+        color: "bg-yellow-500",
+      },
+      {
+        key: "Operations",
+        value: "operations",
+        color: "bg-yellow-500",
+      },
+      {
+        key: "Serverless Computing",
+        value: "serverless-computing",
+        color: "bg-green-500",
+      },
+    ],
+  },
 };
 
 export function getTag(product: string, value: string): ProductTag {
