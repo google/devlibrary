@@ -27,7 +27,9 @@
         @input="emitValue"
         :id="entry.id"
       />
-      <label :for="entry.id" class="ml-2 text-sm">{{ entry.key }}</label>
+      <label :for="entry.id" class="ml-2 text-sm wrap-lines-1">{{
+        entry.key
+      }}</label>
     </div>
   </div>
 </template>

@@ -82,12 +82,4 @@ export default class SmallBlogCard extends Vue {
   display: grid;
   grid-template-columns: 1fr min-content;
 }
-
-.wrap-lines-1 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
 </style>
