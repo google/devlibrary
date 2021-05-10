@@ -16,7 +16,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { addBlog, addRepo } = require("./addproject");
+const { addMediumBlog, addOtherBlog, addRepo } = require("./addproject");
 const { getConfigDir } = require("./util");
 
 async function main() {
@@ -49,7 +49,11 @@ async function main() {
       );
       const blogLink = blogMetadata.link;
 
-      await addBlog(p, blogLink, blogId);
+      if (blogMetadata.source === "medium") {
+        await addMediumBlog(p, blogLink, blogId);
+      } else {
+        await addOtherBlog(p, blogLink, blogId);
+      }
     }
   }
 }
