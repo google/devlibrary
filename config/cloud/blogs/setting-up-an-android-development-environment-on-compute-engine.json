@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "Rishit-dagli"
+  ],
+  "author": "Rishit Dagli",
+  "title": "Set up an Android development environment on Compute Engine",
+  "link": "https://cloud.google.com/community/tutorials/setting-up-an-android-development-environment-on-compute-engine",
+  "tags": [
+    "compute"
+  ]
+}
