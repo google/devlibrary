@@ -1,0 +1,12 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "yogeshhk",
+    "repo": "FAQChatbot",
+    "name": "FAQs ChatBot",
+    "shortDescription": "Simple Question-Answer (atomic query) based chatbot framework. Uses similarity based on different vectorizers, to find the matching question then responds with its corresponding answer.",
+    "longDescription": "Simple Question-Answer (atomic query) based chatbot framework. Uses similarity based on different vectorizers, to find the matching question then responds with its corresponding answer.",
+    "content": "README.md",
+    "tags": ["nlp"]
+    }
+    

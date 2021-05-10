@@ -1,0 +1,12 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "arracinim",
+    "repo": "Sewers-Rover",
+    "name": "Sewers-ROver",
+    "shortDescription": "App for detection of failures in sewer systems of the city of Medellin - Colombia. Model implemented with YOLO v3. App created with Dash",
+    "longDescription": "App for detection of failures in sewer systems of the city of Medellin - Colombia. Model implemented with YOLO v3. App created with Dash",
+    "content": "README.md",
+    "tags": ["vision"]
+    }
+    

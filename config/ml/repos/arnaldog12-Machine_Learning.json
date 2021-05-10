@@ -1,0 +1,12 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "arnaldog12",
+    "repo": "Machine_Learning",
+    "name": "Machine Learning",
+    "shortDescription": "Implementation of the main ML algorithms using only numpy",
+    "longDescription": "Implementation of the main ML algorithms using only numpy",
+    "content": "README.md",
+    "tags": ["collection"]
+    }
+    

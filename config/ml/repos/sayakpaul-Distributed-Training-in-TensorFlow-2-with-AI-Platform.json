@@ -1,0 +1,14 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "authorIds": [
+        "sayakpaul"
+      ],
+    "owner": "sayakpaul",
+    "repo": "Distributed-Training-in-TensorFlow-2-with-AI-Platform",
+    "name": "Distributed-Training-in-TensorFlow-2-with-AI-Platform",
+    "shortDescription": "The repository provides code to train an image classifier using distributed training within a containerized environment. We use AI Platform and Docker to achieve this. ",
+    "longDescription": "The repository provides code to train an image classifier using distributed training within a containerized environment. We use AI Platform and Docker to achieve this. ",
+    "content": "README.md",
+    "tags": ["vision"]
+    }
