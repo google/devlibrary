@@ -21,14 +21,16 @@
     <router-link
       tag="div"
       to="/"
-      class="inline-flex flex-row items-center ml-2 mr-4 lg:mr-8 cursor-pointer"
+      class="inline-flex flex-row items-center ml-2 cursor-pointer"
     >
       <img
         src="@/assets/GoogleDevelopers-lockup.svg"
         alt="devlibrary.withgoogle.com"
-        class="h-8 mr-4"
+        class="h-8"
       />
     </router-link>
+
+    <span class="mr-4 lg:mr-8"><!-- spacer --></span>
 
     <!-- Home -->
     <router-link tag="div" class="nav-item nav-item-link" to="/"
@@ -63,12 +65,17 @@
       </div>
     </div>
 
-    <!-- Authors -->
     <router-link tag="div" class="nav-item nav-item-link" to="/authors"
       ><span>Authors</span></router-link
     >
 
-    <!-- About -->
+    <a
+      class="nav-item nav-item-link"
+      href="https://forms.gle/E54pxK3JzpXMGyqN7"
+      target="_blank"
+      >Submit</a
+    >
+
     <router-link tag="div" class="nav-item nav-item-link" to="/about"
       ><span>About</span></router-link
     >
