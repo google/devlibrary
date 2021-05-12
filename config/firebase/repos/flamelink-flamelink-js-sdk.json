@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "flamelink",
+  "repo": "flamelink-js-sdk",
+  "name": "Flamelink JavaScript SDK",
+  "shortDescription": "Official Flamelink JavaScript SDK for both the Firebase Realtime Database and Cloud Firestore",
+  "longDescription": "Official Flamelink JavaScript SDK for both the Firebase Realtime Database and Cloud Firestore. Connect to flamelink.io from a browser or Node.js environment",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web",
+    "node"
+  ]
+}
