@@ -19,6 +19,7 @@ const path = require("path");
 const ogs = require("open-graph-scraper");
 
 const {
+  normalizeAuthorId,
   addGithubAuthor,
   addMediumAuthor,
   getMediumPostAuthor,

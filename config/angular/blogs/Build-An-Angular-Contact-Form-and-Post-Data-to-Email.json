@@ -1,8 +1,14 @@
 {
-    "version": 1.0,
-    "source": "medium",
-    "author": "Babatunde Lamidi",
-    "title": "Build An Angular Contact Form and Post Data to Email",
-    "link": "https://medium.com/@babatundelamidi/build-an-angular-contact-form-and-post-data-to-email-7b7327e56ad3",
-    "tags": ["frameworks", "gettingstarted"]
-    }
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "babatundelmd"
+  ],
+  "author": "Babatunde Lamidi",
+  "title": "Build An Angular Contact Form and Post Data to Email",
+  "link": "https://medium.com/@babatundelamidi/build-an-angular-contact-form-and-post-data-to-email-7b7327e56ad3",
+  "tags": [
+    "frameworks",
+    "gettingstarted"
+  ]
+}

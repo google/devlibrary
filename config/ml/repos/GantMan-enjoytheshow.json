@@ -1,11 +1,17 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "GantMan",
-    "repo": "enjoytheshow",
-    "name": "Enjoying The Show",
-    "shortDescription": "Real-time AI facial expression gathering with Amplify GraphQL and TensorFlow.js. This app uses face-api to gauge your facial expression, and then sends all faces in a particular URL or (room) to a Watch page. The watch page summarizes all the faces to a single Victory Pie chart on https://enjoyingthe.show/",
-    "longDescription": "Real-time AI facial expression gathering with Amplify GraphQL and TensorFlow.js. This app uses face-api to gauge your facial expression, and then sends all faces in a particular URL or (room) to a Watch page. The watch page summarizes all the faces to a single Victory Pie chart on https://enjoyingthe.show/",
-    "content": "README.md",
-    "tags": ["vision"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "GantMan"
+  ],
+  "owner": "GantMan",
+  "repo": "enjoytheshow",
+  "name": "Enjoying The Show",
+  "shortDescription": "Real-time AI facial expression gathering with Amplify GraphQL and TensorFlow.js. This app uses face-api to gauge your facial expression, and then sends all faces in a particular URL or (room) to a Watch page. The watch page summarizes all the faces to a single Victory Pie chart on https://enjoyingthe.show/",
+  "longDescription": "Real-time AI facial expression gathering with Amplify GraphQL and TensorFlow.js. This app uses face-api to gauge your facial expression, and then sends all faces in a particular URL or (room) to a Watch page. The watch page summarizes all the faces to a single Victory Pie chart on https://enjoyingthe.show/",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision"
+  ]
+}

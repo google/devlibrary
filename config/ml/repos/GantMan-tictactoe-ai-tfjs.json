@@ -1,12 +1,17 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "GantMan",
-    "repo": "tictactoe-ai-tfjs",
-    "name": "Tic Tac Toe",
-    "shortDescription": "https://www.tensorflowtictactoe.co/",
-    "longDescription": "https://www.tensorflowtictactoe.co/",
-    "content": "README.md",
-    "tags": ["web"]
-    }
-    
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "GantMan"
+  ],
+  "owner": "GantMan",
+  "repo": "tictactoe-ai-tfjs",
+  "name": "Tic Tac Toe",
+  "shortDescription": "https://www.tensorflowtictactoe.co/",
+  "longDescription": "https://www.tensorflowtictactoe.co/",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web"
+  ]
+}
