@@ -15,7 +15,11 @@
 -->
 
 <template>
-  <img :src="src" :class="[size]" class="bg-white overflow-hidden" />
+  <img
+    :src="src"
+    :class="[size]"
+    class="flex-shrink-0 bg-white overflow-hidden object-contain rounded-full"
+  />
 </template>
 
 <script lang="ts">
@@ -30,14 +34,14 @@ export default class CircleImage extends Vue {
 
 <style scoped lang="postcss">
 .xsmall {
-  @apply object-contain w-5 h-5 rounded-full;
+  @apply w-5 h-5;
 }
 
 .small {
-  @apply object-contain w-12 h-12 border-2 rounded-full;
+  @apply w-12 h-12 border-2;
 }
 
 .large {
-  @apply object-contain w-36 h-36 border-4 rounded-full;
+  @apply w-36 h-36 border-4;
 }
 </style>
