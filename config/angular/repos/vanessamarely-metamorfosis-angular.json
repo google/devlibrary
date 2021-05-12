@@ -1,0 +1,12 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "vanessamarely",
+    "repo": "metamorfosis-angular",
+    "name": "metamorfosis-angular",
+    "shortDescription": "This repo is a guide to learn some baby steps in Angular for people who don't know about the web and people who know a little about basic concepts in web technologies. This guide is like a workshop and people can use it to make one or learn to create basic Angular applications follow the three levels there.",
+    "longDescription": "This repo is a guide to learn some baby steps in Angular for people who don't know about the web and people who know a little about basic concepts in web technologies. This guide is like a workshop and people can use it to make one or learn to create basic Angular applications follow the three levels there.",
+    "content": "README.md",
+    "tags": ["frameworks", "gettingstarted"]
+    }
+    
