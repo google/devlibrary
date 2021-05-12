@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "Santi"
+  ],
+  "author": "Santi M.A.",
+  "title": "How to use Firebase Cloud Functions and Yarn Workspaces",
+  "link": "https://medium.com/gdgeurope/how-to-use-firebase-cloud-functions-and-yarn-workspaces-24ca35e941eb",
+  "tags": [
+    "node"
+  ]
+}
