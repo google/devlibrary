@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "kishoreallwynraj"
+  ],
+  "author": "Kishore Allwynraj",
+  "title": "Provision Couchbase on Google Kubernetes Engine using Terraform",
+  "link": "https://cloud.google.com/community/tutorials/couchbase-on-google-kubernetes-engine-using-terraform",
+  "tags": [
+    "containers"
+  ]
+}

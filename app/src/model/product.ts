@@ -16,16 +16,26 @@
 
 import { ProductKey } from "../../../shared/types";
 
+const TAG_COLORS = [
+  "bg-blue-500",
+  "bg-green-500",
+  "bg-yellow-500",
+  "bg-indigo-500",
+  "bg-red-500",
+  "bg-purple-500",
+  "bg-pink-500",
+  "bg-blue-300",
+  "bg-green-300",
+  "bg-yellow-700",
+  "bg-gray-500",
+];
+
 export interface ProductTag {
   // The human-readable name (Android, Node.js)
   key: string;
 
   // The database value (android, node)
   value: string;
-
-  // The color to use, bg-{color}-{number}
-  // See: https://tailwindcss.com/docs/background-color
-  color: string;
 }
 
 export interface ProductConfig {
@@ -60,32 +70,26 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       {
         key: "Android",
         value: "android",
-        color: "bg-green-500",
       },
       {
         key: "iOS",
         value: "ios",
-        color: "bg-blue-500",
       },
       {
         key: "Web",
         value: "web",
-        color: "bg-purple-500",
       },
       {
         key: "Games",
         value: "games",
-        color: "bg-pink-500",
       },
       {
         key: "Node.js",
         value: "node",
-        color: "bg-yellow-500",
       },
       {
         key: "Admin",
         value: "admin",
-        color: "bg-gray-500",
       },
     ],
   },
@@ -104,42 +108,34 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       {
         key: "Mobile",
         value: "mobile",
-        color: "bg-blue-500",
       },
       {
         key: "NLP",
         value: "nlp",
-        color: "bg-green-500",
       },
       {
         key: "Vision",
         value: "vision",
-        color: "bg-yellow-500",
       },
       {
         key: "Library",
         value: "library",
-        color: "bg-pink-500",
       },
       {
         key: "Notebook",
         value: "notebook",
-        color: "bg-black",
       },
       {
         key: "Collection",
         value: "collection",
-        color: "bg-indigo-500",
       },
       {
         key: "Web",
         value: "web",
-        color: "bg-red-700",
       },
       {
         key: "Theory",
         value: "theory",
-        color: "bg-gray-500",
       },
     ],
   },
@@ -158,27 +154,22 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       {
         key: "Components",
         value: "components",
-        color: "bg-blue-500",
       },
       {
         key: "Frameworks",
         value: "frameworks",
-        color: "bg-red-500",
       },
       {
         key: "Router",
         value: "router",
-        color: "bg-gray-500",
       },
       {
         key: "Performance",
         value: "performance",
-        color: "bg-yellow-500",
       },
       {
         key: "Getting Started",
         value: "gettingstarted",
-        color: "bg-green-500",
       },
     ],
   },
@@ -197,43 +188,129 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       {
         key: "Mobile",
         value: "mobile",
-        color: "bg-blue-500",
       },
       {
         key: "Firebase",
         value: "firebase",
-        color: "bg-green-500",
       },
       {
         key: "Plugins",
         value: "plugins",
-        color: "bg-red-500",
       },
       {
         key: "Web",
         value: "web",
-        color: "bg-purple-500",
       },
       {
         key: "Widgets",
         value: "widgets",
-        color: "bg-gray-500",
+      },
+    ],
+  },
+  cloud: {
+    key: ProductKey.CLOUD,
+    name: "Google Cloud",
+    description:
+      "Meet your business challenges head on with cloud computing services from Google, including data management, hybrid & multi-cloud, and AI & ML.",
+    docsUrl: "https://cloud.google.com/docs",
+    classes: {
+      bg: "bg-cloud-bg",
+      text: "text-cloud-text",
+      iconBorder: "border-cloud-accent",
+    },
+    // Tags for Cloud are adapted as-needed from the "products" categories list on this page:
+    // https://cloud.google.com/products
+    tags: [
+      {
+        key: "AI and Machine Learning",
+        value: "ai-ml",
+      },
+      {
+        key: "API Management",
+        value: "api-management",
+      },
+      {
+        key: "Compute",
+        value: "compute",
+      },
+      {
+        key: "Containers",
+        value: "containers",
+      },
+      {
+        key: "Data Analytics",
+        value: "data-analytics",
+      },
+      {
+        key: "Databases",
+        value: "databases",
+      },
+      {
+        key: "Developer Tools",
+        value: "developer-tools",
+      },
+      {
+        key: "Healthcare and Life Sciences",
+        value: "healthcare-life-sciences",
+      },
+      {
+        key: "Hybrid and Multicloud",
+        value: "hybrid-multicloud",
+      },
+      {
+        key: "Internet of Things",
+        value: "iot",
+      },
+      {
+        key: "Management Tools",
+        value: "management-tools",
+      },
+      {
+        key: "Media and Gaming",
+        value: "media-gaming",
+      },
+      {
+        key: "Migration",
+        value: "migration",
+      },
+      {
+        key: "Networking",
+        value: "networking",
+      },
+      {
+        key: "Operations",
+        value: "operations",
+      },
+      {
+        key: "Security and Identity",
+        value: "security-identity",
+      },
+      {
+        key: "Serverless Computing",
+        value: "serverless-computing",
+      },
+      {
+        key: "Storage",
+        value: "storage",
       },
     ],
   },
 };
 
-export function getTag(product: string, value: string): ProductTag {
+export function getTag(product: string, value: string) {
   const p = ALL_PRODUCTS[product];
-  const t = p.tags.find((t) => t.value === value);
-  if (t) {
-    return t;
+  const ind = p.tags.findIndex((t) => t.value === value);
+
+  if (ind < 0) {
+    console.warn("Warning: unknown tag", value);
+    return {
+      label: value.charAt(0).toUpperCase() + value.slice(1),
+    };
   }
 
-  console.warn("Warning: unknown tag", value);
+  const t = p.tags[ind];
   return {
-    value,
-    key: value.charAt(0).toUpperCase() + value.slice(1),
-    color: "bg-gray-500",
+    label: t.key,
+    color: TAG_COLORS[ind % TAG_COLORS.length],
   };
 }

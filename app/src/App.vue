@@ -78,4 +78,12 @@ h6 {
 a {
   @apply cursor-pointer;
 }
+
+.wrap-lines-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
 </style>

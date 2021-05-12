@@ -82,8 +82,9 @@
 
       <!-- Link -->
       <p class="text-sm col-start-2 col-span-8 opacity-50">
-        If you believe you should be on this page, or if you're on this page and would like to update your information,
-        open an Issue or send us a Pull Request
+        If you believe you should be on this page, or if you're on this page and
+        would like to update your information, open an Issue or send us a Pull
+        Request
         <a
           href="https://github.com/google/devlibrary"
           class="cursor-pointer underline"
@@ -133,7 +134,13 @@ export default class Authors extends Vue {
       orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
     });
 
-    this.authors = res.docs.map((d) => d.data);
+    this.authors = res.docs
+      .map((d) => d.data)
+      .sort((a, b) => {
+        return a.metadata.name
+          .toLowerCase()
+          .localeCompare(b.metadata.name.toLowerCase());
+      });
   }
 }
 </script>
@@ -149,13 +156,5 @@ export default class Authors extends Vue {
 
 a {
   @apply cursor-pointer;
-}
-
-.wrap-lines-1 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
 }
 </style>

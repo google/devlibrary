@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "leozz37"
+  ],
+  "author": "Leonardo Lima",
+  "title": "Creating a CI/CD environment for serverless containers on Cloud Run with GitHub Actions",
+  "link": "https://cloud.google.com/community/tutorials/cicd-cloud-run-github-actions",
+  "tags": [
+    "serverless-computing"
+  ]
+}

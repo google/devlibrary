@@ -15,10 +15,11 @@
  */
 
 export enum ProductKey {
-  FIREBASE = "firebase",
-  ML = "ml",
   ANGULAR = "angular",
-  FLUTTER = "flutter"
+  FIREBASE = "firebase",
+  FLUTTER = "flutter",
+  CLOUD = "cloud",
+  ML = "ml",
 }
 
 import { AuthorMetadata } from "./types/AuthorMetadata";

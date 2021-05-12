@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "drit"
+  ],
+  "author": "Dritan Suljoti",
+  "title": "Catchpoint data pipeline to Grafana",
+  "link": "https://cloud.google.com/community/tutorials/catchpoint-to-grafana",
+  "tags": [
+    "operations"
+  ]
+}

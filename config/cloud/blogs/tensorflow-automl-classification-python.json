@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "harshithdwivedi"
+  ],
+  "author": "Harshit Dwivedi",
+  "title": "Using an AutoML single-label classification model with Python",
+  "link": "https://cloud.google.com/community/tutorials/tensorflow-automl-classification-python",
+  "tags": [
+    "ai-ml"
+  ]
+}

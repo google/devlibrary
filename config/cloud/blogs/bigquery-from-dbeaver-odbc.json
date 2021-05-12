@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "julzsam",
+  "title": "Connect DBeaver to BigQuery through ODBC",
+  "link": "https://cloud.google.com/community/tutorials/bigquery-from-dbeaver-odbc",
+  "tags": [
+    "data-analytics"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "gunnaraasen"
+  ],
+  "author": "Chris Hobbs",
+  "title": "Access time series data in InfluxDB Cloud with Google Data Studio",
+  "link": "https://cloud.google.com/community/tutorials/influxdb-google-data-studio",
+  "tags": [
+    "data-analytics",
+    "operations"
+  ]
+}

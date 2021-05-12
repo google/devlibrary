@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "timtech4u"
+  ],
+  "author": "Timothy Olaleke",
+  "title": "Automate building Android APK files with Cloud Build CI/CD and a Gradle Docker image",
+  "link": "https://cloud.google.com/community/tutorials/building-android-apk-with-cloud-build-gradle-docker-image",
+  "tags": [
+    "developer-tools"
+  ]
+}

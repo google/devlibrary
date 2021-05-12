@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "leozz37"
+  ],
+  "author": "Leonardo Lima",
+  "title": "Monitoring data from IoT devices with Go and Grafana",
+  "link": "https://cloud.google.com/community/tutorials/monitoring-iot-data-grafana",
+  "tags": [
+    "iot",
+    "operations"
+  ]
+}

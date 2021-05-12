@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "komlasapaty"
+  ],
+  "author": "Komla Seyram Sapaty",
+  "title": "Using Flask-Login with Firestore in Datastore mode",
+  "link": "https://cloud.google.com/community/tutorials/using-flask-login-with-cloud-datastore",
+  "tags": [
+    "databases"
+  ]
+}

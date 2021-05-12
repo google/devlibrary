@@ -58,7 +58,12 @@
 
     <!-- Card tags -->
     <div class="mt-2 flex flex-row items-center">
-      <TagChip v-for="t in repo.metadata.tags" :key="t" :tag="getTag(t)" />
+      <TagChip
+        v-for="t in repo.metadata.tags"
+        :key="t"
+        :label="getTag(t).label"
+        :color="getTag(t).color"
+      />
     </div>
   </div>
 </template>

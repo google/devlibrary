@@ -19,8 +19,8 @@
     class="flex flex-row rounded overflow-hidden border border-gray-50 shadow transition-shadow hover:shadow-lg"
   >
     <!-- GitHub Sidebar -->
-    <div class="px-2 flex flex-col justify-center text-white bg-gray-900">
-      <font-awesome-icon :icon="['fab', 'github']" size="lg" />
+    <div class="px-1 flex flex-col justify-center text-white bg-gray-900">
+      <font-awesome-icon :icon="['fab', 'github']" size="lg" fixed-width />
     </div>
 
     <div class="pt-1 flex-grow flex flex-col">
@@ -85,13 +85,5 @@ export default class SmallRepoCard extends Vue {
   @apply gap-2;
   display: grid;
   grid-template-columns: 1fr min-content;
-}
-
-.wrap-lines-1 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
 }
 </style>

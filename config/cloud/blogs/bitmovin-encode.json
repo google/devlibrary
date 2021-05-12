@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "Adrian-in-Aus"
+  ],
+  "author": "Adrian Britton",
+  "title": "Deploy Bitmovin Encoding on Compute Engine",
+  "link": "https://cloud.google.com/community/tutorials/bitmovin-encode",
+  "tags": [
+    "compute"
+  ]
+}

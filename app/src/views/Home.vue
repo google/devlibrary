@@ -27,24 +27,32 @@
 
         <div class="lg:text-lg">
           <p class="mt-4 lg:mt-10">
-            Welcome to <strong>devlibrary.withgoogle.com</strong>, a showcase of
-            what developers like you have built with Google technologies.
+            Welcome to Dev Library, a showcase of what developers like you have
+            built with Google technologies. Browse and learn, or
+            <a
+              class="underline"
+              href="https://forms.gle/E54pxK3JzpXMGyqN7"
+              target="_blanke"
+              >submit your own!</a
+            >
           </p>
-          <p class="mt-4 lg:mt-10">Browse and learn, or submit your own!</p>
         </div>
 
-        <div class="mt-8">
-          <MaterialButton
-            type="primary"
-            class="mr-2"
-            @click.native="scrollToProducts()"
-            >Explore</MaterialButton
-          >
-          <MaterialButton type="secondary">
-            <a href="https://forms.gle/E54pxK3JzpXMGyqN7" target="blank">
-              SUBMIT</a
-            ></MaterialButton
-          >
+        <div class="lg:text-lg">
+          <div class="mt-4 lg:mt-10">
+            Subscribe to our newsletter to stay up to date:
+            <div class="flex flex-row mt-2 text-base">
+              <input
+                class="flex-grow rounded shadow-inner border border-gray-200 px-2 mr-2"
+                type="email"
+                v-model="newsletterEmail"
+                placeholder="Enter your email address..."
+              />
+              <MaterialButton type="primary">
+                <a :href="newsletterLink" target="_blank"> Subscribe </a>
+              </MaterialButton>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -151,6 +159,8 @@ export default class Home extends Vue {
   public recentBlogs: Record<string, BlogData[]> = {};
   public recentRepos: Record<string, RepoData[]> = {};
 
+  public newsletterEmail = "";
+
   private RECENTLY_ADDED_QUERY: FirestoreQuery = {
     orderBy: [
       {
@@ -195,14 +205,6 @@ export default class Home extends Vue {
     Vue.set(this.recentBlogs, product, recentBlogs);
   }
 
-  public scrollToProducts() {
-    const header = document.getElementById("header");
-    window.scrollTo({
-      behavior: "smooth",
-      top: header?.getBoundingClientRect().bottom,
-    });
-  }
-
   get hasContent() {
     const hasRepos = Object.values(this.recentRepos).some(
       (arr) => arr.length > 0
@@ -230,6 +232,10 @@ export default class Home extends Vue {
 
   get loading() {
     return this.uiModule.loading;
+  }
+
+  get newsletterLink() {
+    return `https://docs.google.com/forms/d/e/1FAIpQLSemI2L4-6KCt0Pbze4sxBMLjXdo8Q3YukHg_dSEhdgb9njtgQ/viewform?usp=pp_url&entry.174388885=${this.newsletterEmail}`;
   }
 }
 </script>

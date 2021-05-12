@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "soeirosantos"
+  ],
+  "author": "Romulo Santos",
+  "title": "Connecting GKE workloads to services in different Google Cloud projects using Shared VPC",
+  "link": "https://cloud.google.com/community/tutorials/shared-vpc-gke-cloud-memorystore",
+  "tags": [
+    "containers",
+    "networking"
+  ]
+}

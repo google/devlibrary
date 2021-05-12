@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "livesankp"
+  ],
+  "author": "Sandeep Parmar",
+  "title": "App Engine deployment with Angular, Nginx, Docker, and Cloud Build",
+  "link": "https://cloud.google.com/community/tutorials/appengine-angular-nginx-docker",
+  "tags": [
+    "compute"
+  ]
+}

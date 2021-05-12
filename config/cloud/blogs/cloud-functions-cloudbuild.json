@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "montao"
+  ],
+  "author": "Niklas Rosencrantz",
+  "title": "Deploy a Cloud Function with Cloud Build",
+  "link": "https://cloud.google.com/community/tutorials/cloud-functions-cloudbuild",
+  "tags": [
+    "developer-tools",
+    "serverless-computing"
+  ]
+}

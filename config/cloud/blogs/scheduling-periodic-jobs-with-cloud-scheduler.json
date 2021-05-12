@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "timtech4u"
+  ],
+  "author": "Timothy Olaleke",
+  "title": "Schedule periodic jobs with Cloud Scheduler",
+  "link": "https://cloud.google.com/community/tutorials/scheduling-periodic-jobs-with-cloud-scheduler",
+  "tags": [
+    "developer-tools"
+  ]
+}

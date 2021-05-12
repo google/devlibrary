@@ -36,7 +36,14 @@ function validateObj(fPath, schema) {
     process.exit(1);
   }
 
-  const obj = JSON.parse(fContent);
+  let obj;
+  try {
+    obj = JSON.parse(fContent);
+  } catch (e) {
+    console.warn(`  x ${fPath} is not valid JSON!`);
+    process.exit(1);
+  }
+
   const res = v.validate(obj, schema);
 
   if (res.valid) {
@@ -71,7 +78,7 @@ async function main() {
     const productBlogsDir = path.join(configDir, product, "blogs");
     if (fs.existsSync(productBlogsDir)) {
       console.log(`\nValidating blogs for ${product}`);
-      const productBlogFiles = fs.readdirSync(productBlogsDir);
+      const productBlogFiles = fs.readdirSync(productBlogsDir).filter(f => f.endsWith(".json"));
       for (const f of productBlogFiles) {
         const fPath = path.join(productBlogsDir, f);
         validateObj(fPath, BlogMetadataSchema);
@@ -81,7 +88,7 @@ async function main() {
     const productReposDir = path.join(configDir, product, "repos");
     if (fs.existsSync(productReposDir)) {
       console.log(`\nValidating repos for ${product}`);
-      const productRepoFiles = fs.readdirSync(productReposDir);
+      const productRepoFiles = fs.readdirSync(productReposDir).filter(f => f.endsWith(".json"));
       for (const f of productRepoFiles) {
         const fPath = path.join(productReposDir, f);
         validateObj(fPath, RepoMetadataSchema);
