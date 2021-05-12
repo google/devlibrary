@@ -1,12 +1,17 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "yogeshhk",
-    "repo": "MidcurveNN",
-    "name": "MidcurveNN",
-    "shortDescription": "Goal: Given a 2D closed shape (closed polygon) find its midcurve (polyline, closed or open) Input: set of points or set of connected lines, non-intersecting, simple, convex, closed polygon Output: another set of points or set of connected lines, open/branched polygons possible",
-    "longDescription": "Goal: Given a 2D closed shape (closed polygon) find its midcurve (polyline, closed or open) Input: set of points or set of connected lines, non-intersecting, simple, convex, closed polygon Output: another set of points or set of connected lines, open/branched polygons possible",
-    "content": "README.md",
-    "tags": ["vision"]
-    }
-    
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "yogeshhk"
+  ],
+  "owner": "yogeshhk",
+  "repo": "MidcurveNN",
+  "name": "MidcurveNN",
+  "shortDescription": "Goal: Given a 2D closed shape (closed polygon) find its midcurve (polyline, closed or open) Input: set of points or set of connected lines, non-intersecting, simple, convex, closed polygon Output: another set of points or set of connected lines, open/branched polygons possible",
+  "longDescription": "Goal: Given a 2D closed shape (closed polygon) find its midcurve (polyline, closed or open) Input: set of points or set of connected lines, non-intersecting, simple, convex, closed polygon Output: another set of points or set of connected lines, open/branched polygons possible",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision"
+  ]
+}

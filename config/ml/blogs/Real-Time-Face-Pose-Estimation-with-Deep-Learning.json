@@ -1,9 +1,13 @@
 {
-    "version": 1.0,
-    "source": "medium",
-    "author": "Arnaldo Gualberto",
-    "title": "Real-Time Face Pose Estimation with Deep Learning",
-    "link": "https://medium.com/analytics-vidhya/face-pose-estimation-with-deep-learning-eebd0e62dbaf",
-    "tags": ["vision"]
-    }
-    
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "arnaldog12"
+  ],
+  "author": "Arnaldo Gualberto",
+  "title": "Real-Time Face Pose Estimation with Deep Learning",
+  "link": "https://medium.com/analytics-vidhya/face-pose-estimation-with-deep-learning-eebd0e62dbaf",
+  "tags": [
+    "vision"
+  ]
+}

@@ -1,8 +1,13 @@
 {
-    "version": 1.0,
-    "source": "medium",
-    "author": "Shuvam Manna",
-    "title": "Democratizing ML: Rise of the Teachable Machines",
-    "link": "https://medium.com/swlh/democratizing-ml-rise-of-the-teachable-machines-20dad067abae?source=friends_link&sk=c9f7286a8a520447aa01848beda16427",
-    "tags": ["theory"]
-    }
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "shuvam-manna"
+  ],
+  "author": "Shuvam Manna",
+  "title": "Democratizing ML: Rise of the Teachable Machines",
+  "link": "https://medium.com/swlh/democratizing-ml-rise-of-the-teachable-machines-20dad067abae?source=friends_link&sk=c9f7286a8a520447aa01848beda16427",
+  "tags": [
+    "theory"
+  ]
+}

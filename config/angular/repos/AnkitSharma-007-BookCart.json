@@ -1,12 +1,18 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "AnkitSharma-007",
-    "repo": "BookCart",
-    "name": "BookCart",
-    "shortDescription": "An e-commerce application for an online book store created with ASP.NET Core 5.0 and Angular 11, using SQL Server as database.",
-    "longDescription": "An e-commerce application for an online book store created with ASP.NET Core 5.0 and Angular 11, using SQL Server as database.",
-    "content": "README.md",
-    "tags": ["frameworks", "gettingstarted"]
-    }
-    
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "AnkitSharma-007"
+  ],
+  "owner": "AnkitSharma-007",
+  "repo": "BookCart",
+  "name": "BookCart",
+  "shortDescription": "An e-commerce application for an online book store created with ASP.NET Core 5.0 and Angular 11, using SQL Server as database.",
+  "longDescription": "An e-commerce application for an online book store created with ASP.NET Core 5.0 and Angular 11, using SQL Server as database.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "frameworks",
+    "gettingstarted"
+  ]
+}

@@ -1,12 +1,17 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "victordibia",
-    "repo": "handtrack.js",
-    "name": "Handtrack.js - Realtime handtracking in the browser",
-    "shortDescription": "A library for prototyping realtime hand detection (bounding box), directly in the browser.",
-    "longDescription": "A library for prototyping realtime hand detection (bounding box), directly in the browser.",
-    "content": "README.md",
-    "tags": ["web"]
-    }
-    
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "victordibia"
+  ],
+  "owner": "victordibia",
+  "repo": "handtrack.js",
+  "name": "Handtrack.js - Realtime handtracking in the browser",
+  "shortDescription": "A library for prototyping realtime hand detection (bounding box), directly in the browser.",
+  "longDescription": "A library for prototyping realtime hand detection (bounding box), directly in the browser.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web"
+  ]
+}
