@@ -18,14 +18,14 @@
   <div class="about">
     <div
       id="header"
-      class="grid gap-4 grid-cols-6 py-10 lg:py-10 bg-gray-50 border-b border-gray-100"
+      class="grid gap-4 grid-cols-6 py-6 lg:py-10 bg-gray-50 border-b border-gray-100"
     >
-      <div class="col-start-2 col-span-4">
+      <div class="section">
         <h1 class="text-2xl lg:text-3xl font-semibold">
           <span class="underline">About</span>
         </h1>
 
-        <div class="mt-10 lg:text-lg">
+        <div class="mt-6 lg:mt-10 lg:text-lg">
           <p>
             <strong>devlibrary.withgoogle.com</strong> is a curated platform for
             technical content related to
@@ -66,12 +66,12 @@
       </div>
     </div>
     <div class="grid gap-4 grid-cols-6">
-      <div class="col-start-2 col-span-4 mt-10">
+      <div class="section mt-6 lg:mt-10">
         <h1 class="text-2xl lg:text-3xl font-semibold">
           <span class="underline">Policies</span>
         </h1>
 
-        <div class="mt-10 lg:text-lg">
+        <div class="mt-6 lg:mt-10 lg:text-lg">
           <p class="mt-6 font-bold">Terms of Service</p>
           <p class="mt-4">
             <a href="https://developers.google.com/terms/site-terms"
@@ -105,12 +105,12 @@
         </div>
       </div>
 
-      <div class="col-start-2 col-span-4 mt-10">
+      <div class="section mt-6 lg:mt-10">
         <h1 class="text-2xl lg:text-3xl font-semibold">
           <span class="underline">Frequently Asked Questions</span>
         </h1>
 
-        <div class="mt-10 lg:text-lg">
+        <div class="mt-6 lg:mt-10 lg:text-lg">
           <p class="mt-6 font-bold">What is the purpose of this site?</p>
           <p class="mt-4">
             We want to enable developers all around the world to showcase their
@@ -210,5 +210,10 @@ export default class About extends Vue {}
 
 a {
   @apply underline;
+}
+
+.section {
+  @apply px-4 col-span-6;
+  @apply lg:px-0 lg:col-start-2 lg:col-span-4;
 }
 </style>

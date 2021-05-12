@@ -15,87 +15,151 @@
 -->
 
 <template>
-  <div
-    class="relative flex flex-row items-center py-3 lg:py-0 px-4 text-nav bg-white shadow-md"
-  >
-    <router-link
-      tag="div"
-      to="/"
-      class="inline-flex flex-row items-center ml-2 cursor-pointer"
-    >
-      <img
-        src="@/assets/GoogleDevelopers-lockup.svg"
-        alt="devlibrary.withgoogle.com"
-        class="h-8"
-      />
-    </router-link>
+  <div class="relative bg-white shadow-md">
+    <!-- Hamburger menu sidebar -->
+    <transition name="slide">
+      <div
+        v-if="showSideMenu"
+        class="side-menu mobile-only absolute top-0 left-0 bg-white text-base shadow-lg"
+        style="height: 100vh"
+      >
+        <div class="flex flex-col">
+          <div
+            class="py-2 lg:py-1 flex flex-row items-center px-4 border-b border-gray-200"
+          >
+            <font-awesome-icon
+              icon="times"
+              size="md"
+              class="mr-4 text-gray-400 hover:text-gray-600"
+              fixed-width
+              @click="showSideMenu = false"
+            />
 
-    <span class="mr-4 lg:mr-8"><!-- spacer --></span>
+            <img
+              src="@/assets/GoogleDevelopers-lockup.svg"
+              alt="devlibrary.withgoogle.com"
+              class="h-8 my-1"
+            />
+          </div>
 
-    <!-- Home -->
-    <router-link tag="div" class="nav-item nav-item-link" to="/"
-      ><span>Home</span></router-link
-    >
+          <router-link to="/" class="section">
+            <span class="header">Home</span>
+          </router-link>
 
-    <!-- TODO: Mobile hamburger menu -->
+          <div class="section">
+            <span class="header">Products</span>
+            <router-link
+              v-for="p in products"
+              :key="p.key"
+              :to="`/products/${p.key}`"
+              class="block cursor-pointer text-sm text-gray-500"
+            >
+              {{ p.name }}
+            </router-link>
+          </div>
 
-    <!-- Products -->
-    <div
-      class="nav-item nav-item-link relative z-10"
-      @mouseenter="showProductsDropdown = true"
-      @mouseleave="showProductsDropdown = false"
-      @click="showProductsDropdown = false"
-    >
-      <span>Products</span>
-      <font-awesome-icon
-        :icon="showProductsDropdown ? 'caret-up' : 'caret-down'"
-        class="ml-1"
-      />
+          <router-link to="/authors" class="section">
+            <span class="header">Authors</span>
+          </router-link>
 
-      <div class="nav-dropdown" v-show="showProductsDropdown">
-        <router-link
-          v-for="p in products"
-          :key="p.key"
-          :to="`/products/${p.key}`"
-          tag="div"
-          class="px-3 py-2 whitespace-nowrap hover:bg-gray-50"
-        >
-          {{ p.name }}
-        </router-link>
+          <a :href="submitLink" target="_blank" class="section">
+            <span class="header">Submit</span>
+          </a>
+
+          <router-link to="/about" class="section">
+            <span class="header">About</span>
+          </router-link>
+
+          <a :href="feedbackLink" target="_blank" class="section">
+            <span class="header">Feedback</span>
+          </a>
+        </div>
       </div>
+    </transition>
+
+    <!-- Nav row -->
+    <div class="flex flex-row items-center py-3 lg:py-0 px-4 text-nav">
+      <font-awesome-icon
+        icon="bars"
+        size="md"
+        class="mobile-only mr-2 text-gray-400 hover:text-gray-600"
+        fixed-width
+        @click="showSideMenu = true"
+      />
+
+      <router-link
+        tag="div"
+        to="/"
+        class="inline-flex flex-row items-center ml-2 cursor-pointer"
+      >
+        <img
+          src="@/assets/GoogleDevelopers-lockup.svg"
+          alt="devlibrary.withgoogle.com"
+          class="h-8"
+        />
+      </router-link>
+
+      <span class="mr-4 lg:mr-8"><!-- spacer --></span>
+
+      <!-- Home -->
+      <router-link tag="div" class="nav-item nav-item-link" to="/"
+        ><span>Home</span></router-link
+      >
+
+      <!-- TODO: Mobile hamburger menu -->
+
+      <!-- Products -->
+      <div
+        class="nav-item nav-item-link relative z-10"
+        @mouseenter="showProductsDropdown = true"
+        @mouseleave="showProductsDropdown = false"
+        @click="showProductsDropdown = false"
+      >
+        <span>Products</span>
+        <font-awesome-icon
+          :icon="showProductsDropdown ? 'caret-up' : 'caret-down'"
+          class="ml-1"
+        />
+
+        <div class="nav-dropdown" v-show="showProductsDropdown">
+          <router-link
+            v-for="p in products"
+            :key="p.key"
+            :to="`/products/${p.key}`"
+            tag="div"
+            class="px-3 py-2 whitespace-nowrap hover:bg-gray-50"
+          >
+            {{ p.name }}
+          </router-link>
+        </div>
+      </div>
+
+      <router-link tag="div" class="nav-item nav-item-link" to="/authors"
+        ><span>Authors</span></router-link
+      >
+
+      <a class="nav-item nav-item-link" :href="submitLink" target="_blank"
+        >Submit</a
+      >
+
+      <router-link tag="div" class="nav-item nav-item-link" to="/about"
+        ><span>About</span></router-link
+      >
+
+      <a class="nav-item nav-item-link" :href="feedbackLink" target="_blank"
+        >Feedback</a
+      >
+
+      <span class="flex-grow"><!-- spacer --></span>
+
+      <!-- Search Bar -->
+      <SearchBar />
     </div>
-
-    <router-link tag="div" class="nav-item nav-item-link" to="/authors"
-      ><span>Authors</span></router-link
-    >
-
-    <a
-      class="nav-item nav-item-link"
-      href="https://forms.gle/E54pxK3JzpXMGyqN7"
-      target="_blank"
-      >Submit</a
-    >
-
-    <router-link tag="div" class="nav-item nav-item-link" to="/about"
-      ><span>About</span></router-link
-    >
-
-    <a
-      class="nav-item nav-item-link"
-      href="https://forms.gle/2JoN6csvyvnDC8Nd9"
-      target="_blank"
-      >Feedback</a
-    >
-
-    <span class="flex-grow"><!-- spacer --></span>
-
-    <!-- Search Bar -->
-    <SearchBar />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 
 import SearchBar from "@/components/SearchBar.vue";
 import { ALL_PRODUCTS } from "@/model/product";
@@ -106,12 +170,21 @@ import { ALL_PRODUCTS } from "@/model/product";
   },
 })
 export default class NavBar extends Vue {
+  public showSideMenu = false;
   public showProductsDropdown = false;
+
+  public feedbackLink = "https://forms.gle/2JoN6csvyvnDC8Nd9";
+  public submitLink = "https://forms.gle/E54pxK3JzpXMGyqN7";
 
   get products() {
     return Object.values(ALL_PRODUCTS).sort((a, b) =>
       a.name.localeCompare(b.name)
     );
+  }
+
+  @Watch("$route")
+  onRouteChange() {
+    this.showSideMenu = false;
   }
 }
 </script>
@@ -138,5 +211,40 @@ export default class NavBar extends Vue {
 
 .nav-item-link {
   @apply hover:bg-gray-100;
+}
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: 0.33s;
+}
+.slide-enter-to {
+  transform: translate(0, 0);
+}
+.slide-enter,
+.slide-leave-to {
+  transform: translate(-100%, 0);
+}
+
+.side-menu .section {
+  @apply flex flex-col px-4 py-3 border-b border-gray-200;
+}
+
+.side-menu .section .header {
+  @apply text-sm font-bold text-gray-500;
+}
+
+.side-menu .section a {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+
+  @apply rounded-full;
+  margin-left: -100px;
+  padding-left: 100px;
+
+  transition: background 0.1s;
+}
+
+.side-menu .section a:active {
+  @apply bg-gray-200;
 }
 </style>
