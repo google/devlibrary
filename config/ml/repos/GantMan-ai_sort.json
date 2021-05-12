@@ -1,0 +1,12 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "owner": "GantMan",
+    "repo": "ai_sort",
+    "name": "AI Sorting Hat",
+    "shortDescription": "Draw animals and get sorted into your Hogwarts house.  This is the code powering http://aisortinghat.com/ Powered by TensorFlow.js this site uses drawings by Google's Quick, Draw! datacet to identify your drawings. Draw a Lion, Raven, Badger, or Serpent, but don't draw a skull ;)",
+    "longDescription": "Draw animals and get sorted into your Hogwarts house.  This is the code powering http://aisortinghat.com/ Powered by TensorFlow.js this site uses drawings by Google's Quick, Draw! datacet to identify your drawings. Draw a Lion, Raven, Badger, or Serpent, but don't draw a skull ;)",
+    "content": "README.md",
+    "tags": ["vision"]
+    }
+    
