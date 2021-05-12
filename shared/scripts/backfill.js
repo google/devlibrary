@@ -30,8 +30,10 @@ async function main() {
     const reposDir = path.join(productDir, "repos");
     const blogsDir = path.join(productDir, "blogs");
 
-    const repoFiles = fs.readdirSync(reposDir);
+    const repoFiles = fs.readdirSync(reposDir).filter(f => f.endsWith(".json"));
     for (const repoFile of repoFiles) {
+      console.log(`[${p}] ${repoFile}`);
+
       const repoId = repoFile.split(".json")[0];
       const repoMetadata = JSON.parse(
         fs.readFileSync(path.join(reposDir, repoFile), "utf-8")
@@ -41,8 +43,10 @@ async function main() {
       await addRepo(p, repoLink, repoId);
     }
 
-    const blogFiles = fs.readdirSync(blogsDir);
+    const blogFiles = fs.readdirSync(blogsDir).filter(f => f.endsWith(".json"));
     for (const blogFile of blogFiles) {
+      console.log(`[${p}] ${blogFile}`);
+
       const blogId = blogFile.split(".json")[0];
       const blogMetadata = JSON.parse(
         fs.readFileSync(path.join(blogsDir, blogFile), "utf-8")
