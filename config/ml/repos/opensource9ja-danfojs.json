@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": [
+    "risenW"
+  ],
   "owner": "opensource9ja",
   "repo": "danfojs",
   "name": "danfojs",
