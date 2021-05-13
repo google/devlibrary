@@ -48,9 +48,9 @@
                 v-model="newsletterEmail"
                 placeholder="Enter your email address..."
               />
-              <MaterialButton type="primary">
-                <a :href="newsletterLink" target="_blank"> Subscribe </a>
-              </MaterialButton>
+              <a :href="newsletterLink" target="_blank">
+                <MaterialButton type="primary"> Subscribe </MaterialButton>
+              </a>
             </div>
           </div>
         </div>
