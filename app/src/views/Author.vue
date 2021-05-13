@@ -92,6 +92,20 @@
     <!-- Body -->
     <div class="grid grid-cols-10 gap-4 mb-20">
       <div class="col-span-10 px-6 lg:px-0 lg:col-start-2 lg:col-span-8">
+        <div v-if="author.metadata.interviewVideoId">
+          <h2 class="text-2xl mt-8">Author Interview</h2>
+          <iframe
+            class="mt-4 max-w-full"
+            width="560"
+            height="315"
+            :src="`https://www.youtube.com/embed/${author.metadata.interviewVideoId}`"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
         <!-- Open Source -->
         <div id="opensource" v-if="repos.length > 0">
           <h2 class="text-2xl mt-8">Open Source</h2>
