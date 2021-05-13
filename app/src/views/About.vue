@@ -52,15 +52,13 @@
             >
           </p>
           <p class="mt-8 flex flex-wrap gap-4">
-            <MaterialButton type="primary">
-              <a href="https://forms.gle/2JoN6csvyvnDC8Nd9" target="_blank">
-                Send Feedback
-              </a>
-            </MaterialButton>
+            <a href="https://forms.gle/2JoN6csvyvnDC8Nd9" target="_blank">
+              <MaterialButton type="primary"> Send Feedback </MaterialButton>
+            </a>
 
-            <MaterialButton type="secondary">
-              <a href="mailto:library-google-dev@google.com"> Contact Us </a>
-            </MaterialButton>
+            <a href="mailto:library-google-dev@google.com">
+              <MaterialButton type="secondary"> Contact Us </MaterialButton>
+            </a>
           </p>
         </div>
       </div>

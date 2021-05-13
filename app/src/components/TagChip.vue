@@ -15,13 +15,10 @@
 -->
 
 <template>
-  <span>
-    <div
-      :class="[color]"
-      class="inline-block ml-3 mr-1 h-3 w-3 rounded-full"
-    ></div>
-    <span class="text-gray-500">{{ label }}</span>
-  </span>
+  <div class="flex flex-row items-center">
+    <div :class="[color]" class="block ml-3 mr-1 h-3 w-3 rounded-full"></div>
+    <span class="text-gray-500 whitespace-nowrap">{{ label }}</span>
+  </div>
 </template>
 
 <script lang="ts">
