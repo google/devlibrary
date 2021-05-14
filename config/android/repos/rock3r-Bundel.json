@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rock3r"
+  ],
+  "owner": "rock3r",
+  "repo": "Bundel",
+  "name": "Bundel",
+  "shortDescription": "A digital wellbeing Android app that helps minimise distractions when you don't want them.",
+  "longDescription": "Bundel is a digital wellbeing Android app, helping you to focus by grouping up notifications and only releasing them in batches, at set times. This minimises context switching and improves productivity, while decreasing the impulse to continuously check your phone.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "samples"
+  ]
+}

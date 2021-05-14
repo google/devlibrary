@@ -57,6 +57,11 @@ module.exports = {
           bg: "#4285F4",
           text: "#FFFFFF",
         },
+        android: {
+          accent: "#3FDC84",
+          bg: "#073042",
+          text: "#FFFFFF",
+        },
       },
       typography: {
         DEFAULT: {

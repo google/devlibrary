@@ -295,6 +295,40 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
     ],
   },
+  android: {
+    key: ProductKey.ANDROID,
+    name: "Android",
+    description:
+      "Modern tools and resources to help you build experiences that people love, faster and easier, across every Android device.",
+    docsUrl: "https://developer.android.com/",
+    classes: {
+      bg: "bg-android-bg",
+      text: "text-android-text",
+      iconBorder: "border-android-accent",
+    },
+    tags: [
+      {
+        key: "Build/Tools",
+        value: "build-tools",
+      },
+      {
+        key: "Compose",
+        value: "compose",
+      },
+      {
+        key: "Architecture",
+        value: "architecture",
+      },
+      {
+        key: "Kotlin",
+        value: "kotlin",
+      },
+      {
+        key: "Samples",
+        value: "samples",
+      },
+    ],
+  },
 };
 
 export function getTag(product: string, value: string) {
