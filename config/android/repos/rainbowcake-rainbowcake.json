@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "zsmb13"
+  ],
+  "owner": "rainbowcake",
+  "repo": "rainbowcake",
+  "name": "RainbowCake",
+  "shortDescription": "A modern Android architecture framework built on Jetpack & Kotlin.",
+  "longDescription": "RainbowCake is an Android architecture framework, providing tools and guidance for building modern Android applications. It builds on top of Jetpack, both in terms of code and ideas.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "architecture"
+  ]
+}
