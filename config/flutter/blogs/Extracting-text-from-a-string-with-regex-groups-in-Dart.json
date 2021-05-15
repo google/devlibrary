@@ -1,0 +1,11 @@
+{
+    "version": 1.0,
+    "source": "medium",
+    "authorIds": [
+        "suragch"
+      ],
+    "author": "Suragch",
+    "title": "Extracting text from a string with regex groups in Dart",
+    "link": "https://medium.com/flutter-community/extracting-text-from-a-string-with-regex-groups-in-dart-b6be604c8a69",
+    "tags": ["mobile"]
+    }

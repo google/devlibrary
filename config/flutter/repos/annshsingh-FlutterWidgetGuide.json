@@ -1,0 +1,14 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "authorIds": [
+        "annshsingh"
+      ],
+    "owner": "annshsingh",
+    "repo": "FlutterWidgetGuide",
+    "name": "Flutter Widget Guide",
+    "shortDescription": "A flutter application listing all the widgets covered in the official Flutter Widget of the Week playlist on YouTube. A total of 81 widgets have been covered till now, with 20 having a detailed medium article explaining them.",
+    "longDescription": "A flutter application listing all the widgets covered in the official Flutter Widget of the Week playlist on YouTube. A total of 81 widgets have been covered till now, with 20 having a detailed medium article explaining them.",
+    "content": "README.md",
+    "tags": ["mobile"]
+    }
