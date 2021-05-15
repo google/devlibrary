@@ -16,6 +16,10 @@
       "type": "string",
       "description": "Public URL to their profile photo"
     },
+    "interviewVideoId": {
+      "type": "string",
+      "description": "YouTube video id for their video interview"
+    },
     "githubURL": {
       "type": "string",
       "description": "Public URL to their GitHub profile"

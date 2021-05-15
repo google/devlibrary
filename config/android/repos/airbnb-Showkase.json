@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "vinaygaba"
+  ],
+  "owner": "airbnb",
+  "repo": "Showkase",
+  "name": "Showkase",
+  "shortDescription": "Showkase is an annotation-processor based Android library that helps you organize, discover, search and visualize Jetpack Compose UI elements",
+  "longDescription": "Showkase is an annotation-processor based Android library that helps you organize, discover, search and visualize Jetpack Compose UI elements. With minimal configuration it generates a UI browser that helps you easily find your components, colors & typography.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

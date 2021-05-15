@@ -15,10 +15,11 @@
  */
 
 export enum ProductKey {
+  ANDROID = "android",
   ANGULAR = "angular",
+  CLOUD = "cloud",
   FIREBASE = "firebase",
   FLUTTER = "flutter",
-  CLOUD = "cloud",
   ML = "ml",
 }
 

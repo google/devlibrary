@@ -57,7 +57,7 @@
     </div>
 
     <!-- Card tags -->
-    <div class="mt-2 flex flex-row items-center">
+    <div class="mt-2 flex flex-row overflow-hidden items-center">
       <TagChip
         v-for="t in repo.metadata.tags"
         :key="t"

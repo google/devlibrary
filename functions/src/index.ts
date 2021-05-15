@@ -156,10 +156,12 @@ async function refreshRepoInternal(
     console.warn(
       `Invalid license ${license.key} for repo ${metadata.owner}/${metadata.repo}`
     );
+
     if (existing) {
       await deleteRepoData(product, id);
-      return;
     }
+
+    return;
   }
 
   // First save the repo's stats and metadata
@@ -263,6 +265,7 @@ if (process.env.FUNCTIONS_EMULATOR) {
         response
           .status(404)
           .send(`Repo /products/${product}/repos/${id} not found`);
+        return;
       }
 
       await refreshRepoInternal(product, id, metadata);

@@ -36,6 +36,7 @@ async function main() {
     const fPath = path.join(schemaDir, f);
     const ts = await compileFromFile(fPath);
 
+    // TODO: This should add a license header, if possible
     console.log(`Writing class ${name}`);
     fs.writeFileSync(path.join(typesDir, `${name}.d.ts`), ts);
   }
