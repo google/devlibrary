@@ -1,0 +1,11 @@
+{
+    "version": 1.0,
+    "source": "medium",
+    "authorIds": [
+        "babinsamrat123"
+      ],
+    "author": "Atri Das",
+    "title": "Merge two API responses into a single Stream using Rx-Dart",
+    "link": "https://babinsamrat123.medium.com/merge-two-api-responses-into-a-single-stream-using-rx-dart-b92e48f84c90",
+    "tags": ["mobile"]
+    }

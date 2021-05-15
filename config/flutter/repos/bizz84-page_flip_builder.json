@@ -1,0 +1,14 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "authorIds": [
+        "bizz84"
+      ],
+    "owner": "bizz84",
+    "repo": "page_flip_builder",
+    "name": "Page Flip Builder",
+    "shortDescription": "A custom Flutter widget that enables interactive page-flip transitions inside Flutter apps. Can be used to to flip images, cards, or widgets of any size.",
+    "longDescription": "A custom Flutter widget that enables interactive page-flip transitions inside Flutter apps. Can be used to to flip images, cards, or widgets of any size.",
+    "content": "README.md",
+    "tags": ["mobile"]
+    }

@@ -1,0 +1,14 @@
+{
+    "version": 1.0,
+    "source": "github",
+    "authorIds": [
+        ""
+      ],
+    "owner": "dscnitrourkela",
+    "repo": "project-avocado",
+    "name": "project-avocado",
+    "shortDescription": "Cross-platform App built to ease the life of freshers. Developed by the students with near 100% crash-free stats and almost every fresher joining the University using the app to fullest, this project has been a gift to the community",
+    "longDescription": "Cross-platform App built to ease the life of freshers. Developed by the students with near 100% crash-free stats and almost every fresher joining the University using the app to fullest, this project has been a gift to the community",
+    "content": "README.md",
+    "tags": ["mobile"]
+    }
