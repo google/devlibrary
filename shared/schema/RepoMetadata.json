@@ -43,7 +43,7 @@
       "description": "Array of product-specific tags",
       "items": {
         "type": "string",
-        "pattern": "^[a-z]+$"
+        "pattern": "^[a-z-]+$"
       }
     },
     "pages": {
