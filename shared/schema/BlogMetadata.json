@@ -29,7 +29,7 @@
       "description": "Array of product-specific string tags",
       "items": {
         "type": "string",
-        "pattern": "[a-z]*"
+        "pattern": "^[a-z-]+$"
       }
     }
   },

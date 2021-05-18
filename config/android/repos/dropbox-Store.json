@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "digitalbuddha"
+  ],
+  "owner": "dropbox",
+  "repo": "Store",
+  "name": "Store",
+  "shortDescription": "Kotlin Library for Async Data Loading and Caching",
+  "longDescription": "Store is a Kotlin library for loading data from remote and local sources.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}
