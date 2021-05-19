@@ -153,7 +153,9 @@
       <span class="flex-grow"><!-- spacer --></span>
 
       <!-- Search Bar -->
-      <SearchBar />
+      <transition name="appear">
+        <SearchBar v-if="!showSideMenu" />
+      </transition>
     </div>
   </div>
 </template>
@@ -213,6 +215,8 @@ export default class NavBar extends Vue {
   @apply hover:bg-gray-100;
 }
 
+/** slide transition */
+
 .slide-leave-active,
 .slide-enter-active {
   transition: 0.33s;
@@ -222,7 +226,25 @@ export default class NavBar extends Vue {
 }
 .slide-enter,
 .slide-leave-to {
-  transform: translate(-100%, 0);
+  transform: translate(-120%, 0);
+}
+
+/** appear transition */
+
+.appear-leave-active,
+.appear-enter-active {
+  transition: 0.33s;
+}
+.appear-enter-to {
+  opacity: 1;
+}
+.appear-enter,
+.appear-leave-to {
+  opacity: 0;
+}
+
+.side-menu {
+  z-index: 100;
 }
 
 .side-menu .section {
