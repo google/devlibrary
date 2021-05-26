@@ -224,33 +224,81 @@ function htmlToSections(html: string): RepoPageSection[] {
   const $ = cheerio.load(html);
   const sections: RepoPageSection[] = [];
 
-  let $headerChildren = $("div", "<div></div>");
+  // TODO: Do we even need sections? Could we just do the following:
+  //  1) If there is exactly one h1 tag, delete it.
+  //  2) Render out $('body').html() as the content
 
-  let $h1 = $("h1").first();
-  $h1.nextUntil("h2").each((_: number, el: any) => {
-    $headerChildren = $headerChildren.append(el);
-  });
+  const $h1s = $("h1");
 
-  // The first section is the header
-  const header = {
-    name: $h1.text(),
-    content: $headerChildren.html()!,
-  };
-  sections.push(header);
+  // Determine what the highest subheader type is (h1, h2, h3, h4, h5, h6)
+  let highestSubheader: string = "h7";
+  if ($h1s.length > 1) {
+    // If there is more than one h1 tag, we use that as the section delimeter
+    highestSubheader = "h1";
+  } else {
+    const subheaderTypes = ["h2", "h3", "h4", "h5", "h6"];
+    for (const h of subheaderTypes) {
+      if ($(h).length > 0) {
+        highestSubheader = h;
+        break;
+      }
+    }
+  }
+  const $subheaders = $(highestSubheader);
 
-  $("h2").each((_: number, el: cheerio.Element) => {
+  // If there are no headers, return one big section
+  if ($h1s.length === 0 && $subheaders.length === 0) {
+    return [
+      {
+        name: "README",
+        content: $.html(),
+      },
+    ];
+  }
+
+  // If there is exactly one h1 tag, it represents the first section
+  // Otherwise we just push an empty section.
+  if ($h1s.length === 1) {
+    const $h1 = $h1s.first();
+    let $headerChildren = $("div", "<div></div>");
+
+    $h1.nextUntil(highestSubheader).each((_: number, el: any) => {
+      $headerChildren = $headerChildren.append(el);
+    });
+
+    const header = {
+      name: $h1.text(),
+      content: $headerChildren.html()!,
+    };
+    sections.push(header);
+  } else {
+    sections.push({
+      name: "",
+      content: "",
+    });
+  }
+
+  // Iterate through all subheaders and make a section
+  $subheaders.each((_: number, el: cheerio.Element) => {
+    const $sh = $(el);
     let $sibchils = $("div", "<div></div>");
 
-    $(el)
-      .nextUntil("h2")
-      .each((_: number, el: any) => {
-        $sibchils = $sibchils.append(el);
-      });
+    $sh.nextUntil(highestSubheader).each((_: number, el: any) => {
+      $sibchils = $sibchils.append(el);
+    });
 
     sections.push({
-      name: $(el).text(),
+      name: $sh.text(),
       content: $sibchils.html()!,
     });
+  });
+
+  // For debugging
+  console.log({
+    h1Count: $h1s.length,
+    highestSubheader,
+    subheaderCount: $subheaders.length,
+    sectionCount: sections.length,
   });
 
   return sections;

@@ -132,11 +132,16 @@
         class="col-span-10 px-8 lg:px-0 lg:col-start-2 lg:col-span-8"
       >
         <template v-for="(s, i) in content.sections">
-          <h2 v-if="i > 0" class="text-2xl mt-8 mb-2" :key="`header-${s.name}`">
+          <h2
+            v-if="i > 0 && s.name.length > 0"
+            class="text-2xl mt-8 mb-2"
+            :key="`header-${s.name}`"
+          >
             {{ s.name }}
           </h2>
           <!-- The 'prose' class comes from the Tailwind typography plugin -->
           <div
+            v-if="s.content.length > 0"
             class="prose mt-4 lg:mt-8"
             :key="`content-${s.name}`"
             v-html="sanitize(s.content)"
