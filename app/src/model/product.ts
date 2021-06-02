@@ -91,6 +91,10 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         key: "Admin",
         value: "admin",
       },
+      {
+        key: "Flutter",
+        value: "flutter",
+      },
     ],
   },
   ml: {
