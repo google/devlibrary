@@ -86,4 +86,21 @@ a {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
+
+.prose table {
+  width: max-content;
+}
+.prose table td,
+.prose table th {
+  @apply px-2 py-1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.prose .li-task::before {
+  display: none;
+}
+.prose ul li.li-task *:first-child {
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 </style>
