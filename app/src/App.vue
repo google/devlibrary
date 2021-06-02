@@ -88,12 +88,17 @@ a {
 }
 
 .prose table {
+  max-width: 100%;
   width: max-content;
 }
 .prose table td,
 .prose table th {
   @apply px-2 py-1;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.prose table img {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .prose .li-task::before {
   display: none;
