@@ -76,6 +76,9 @@ module.exports = {
             "code::after": {
               display: "none",
             },
+            "table": {
+              width: null
+            },
             "thead": null,
             "thead th": null,
             "thead th:first-child": null,

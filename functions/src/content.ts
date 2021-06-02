@@ -112,6 +112,22 @@ function sanitizeHtml(
     $(el).parent().addClass("li-task");
   });
 
+  // Workaround for:
+  // https://github.com/tailwindlabs/tailwindcss/issues/506
+  $('img[height]').each((_: number, el: cheerio.Element) => {
+    if (el.type === "text") {
+      return;
+    }
+
+    modifyAttr(el, 'style', (style) => {
+      let height = el.attribs['height'];
+      if (!height.endsWith('px')) {
+        height += 'px';
+      }
+      return `height: ${height};` + style;
+    });
+  });
+
   // Resolve all relative links to github
   $("a").each((_: number, el: cheerio.Element) => {
     if (el.type === "text") {
@@ -204,7 +220,7 @@ function modifyAttr(
   attrib: string,
   fn: (a: string) => string
 ) {
-  const val = el.attribs[attrib];
+  const val = el.attribs[attrib] || "";
   el.attribs[attrib] = fn(val);
 }
 
