@@ -66,6 +66,7 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            maxWidth: null,
             "blockquote p::before": {
               display: "none",
             },
@@ -75,6 +76,10 @@ module.exports = {
             "code::after": {
               display: "none",
             },
+            "thead": null,
+            "thead th": null,
+            "thead th:first-child": null,
+            "thead th:last-child": null
           },
         },
       },

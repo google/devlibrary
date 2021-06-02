@@ -107,6 +107,11 @@ function sanitizeHtml(
     $(el).addClass("prettyprint");
   });
 
+  // Fix checkbox lists by adding 'li-task' class to target
+  $('li > input[type="checkbox"]').each((_: number, el: cheerio.Element) => {
+    $(el).parent().addClass("li-task");
+  });
+
   // Resolve all relative links to github
   $("a").each((_: number, el: cheerio.Element) => {
     if (el.type === "text") {
@@ -174,9 +179,6 @@ function sanitizeHtml(
       $(el).addClass("hidden");
     }
 
-    // Add the image-parent class to the parent
-    $(el).parent().addClass("img-parent");
-
     // If the image link is relative, make sure it's pointing to GH
     modifyAttr(el, "src", (s) => {
       let res = s;
@@ -189,7 +191,6 @@ function sanitizeHtml(
         return res;
       }
 
-      res = res.toLowerCase();
       res = urljoin(rawBaseUrl, res);
       return res;
     });
