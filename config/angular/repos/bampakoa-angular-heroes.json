@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bampakoa"
+  ],
+  "owner": "bampakoa",
+  "repo": "angular-heroes",
+  "name": "angular-heroes",
+  "shortDescription": "An Angular application that uses Angular Material and interacts with the Marvel Comics API. The purpose of the application is educational and aims to demonstrate how to apply common Angular techniques such as HTTP interaction and unit testing as well as how to use some of the Angular Material components.",
+  "longDescription": "An Angular application that uses Angular Material and interacts with the Marvel Comics API. The purpose of the application is educational and aims to demonstrate how to apply common Angular techniques such as HTTP interaction and unit testing as well as how to use some of the Angular Material components.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

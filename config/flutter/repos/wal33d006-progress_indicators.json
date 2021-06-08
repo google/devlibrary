@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "wal33d006"
+  ],
+  "owner": "wal33d006",
+  "repo": "progress_indicators",
+  "name": "progress_indicators",
+  "shortDescription": "A repo which is also a published flutter package, which gives some cool animated loaders that can be used in Flutter apps to show loading states to the user when doing an asynchronous task.",
+  "longDescription": "A repo which is also a published flutter package, which gives some cool animated loaders that can be used in Flutter apps to show loading states to the user when doing an asynchronous task.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "Rishit-dagli"
+  ],
+  "owner": "Rishit-dagli",
+  "repo": "Gradient-Centralization-TensorFlow",
+  "name": "Gradient-Centralization-TensorFlow",
+  "shortDescription": "Use just 2 lines of code to instantly improve your model training performance on certain tasks by upto 70% and moderate training time and generalization improvements! Implements Gradient Centralization in TensorFlow and makes it availaible as a Python Package to easily use it.",
+  "longDescription": "Use just 2 lines of code to instantly improve your model training performance on certain tasks by upto 70% and moderate training time and generalization improvements! Implements Gradient Centralization in TensorFlow and makes it availaible as a Python Package to easily use it.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "theory"
+  ]
+}

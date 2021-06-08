@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akexorcist"
+  ],
+  "owner": "akexorcist",
+  "repo": "RoundCornerProgressBar",
+  "name": "Round Corner Progress Bar",
+  "shortDescription": "Round Corner Progress Bar Library for Android",
+  "longDescription": "Round Corner Progress Bar Library for Android",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

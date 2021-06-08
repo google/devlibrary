@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "a914-gowtham"
+  ],
+  "owner": "a914-gowtham",
+  "repo": "compose-ratingbar",
+  "name": "Compose-Ratingbar",
+  "shortDescription": "A Ratingbar composable for Jetpack compose",
+  "longDescription": "A Ratingbar composable for Jetpack compose",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

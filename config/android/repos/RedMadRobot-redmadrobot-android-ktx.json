@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "RedMadRobot",
+  "repo": "redmadrobot-android-ktx",
+  "name": "red_mad_robot Android KTX",
+  "shortDescription": "Missing Android KTX extensions.",
+  "longDescription": "Missing Android KTX extensions.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin"
+  ]
+}

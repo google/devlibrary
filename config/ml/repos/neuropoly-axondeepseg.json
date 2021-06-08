@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "neuropoly",
+  "repo": "axondeepseg",
+  "name": "axondeepseg",
+  "shortDescription": "Deep Learning based open source software to segment axon and myelin from microscopy data using Unet architecture. \n",
+  "longDescription": "Deep Learning based open source software to segment axon and myelin from microscopy data using Unet architecture. \n",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision"
+  ]
+}

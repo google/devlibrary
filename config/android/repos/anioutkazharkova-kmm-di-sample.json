@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "anioutkazharkova"
+  ],
+  "owner": "anioutkazharkova",
+  "repo": "kmm-di-sample",
+  "name": "kmm-di-sample",
+  "shortDescription": "\nSample demo app with integrated Multiplatform-DI. (https://github.com/anioutkazharkova/di-multiplatform-lib).Mobile client for Movies DB open API with common BL and architecture.",
+  "longDescription": "\nSample demo app with integrated Multiplatform-DI. (https://github.com/anioutkazharkova/di-multiplatform-lib).Mobile client for Movies DB open API with common BL and architecture.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin"
+  ]
+}

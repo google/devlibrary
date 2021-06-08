@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bohoffi"
+  ],
+  "owner": "bohoffi",
+  "repo": "ngx-localstorage",
+  "name": "ngx-localstorage",
+  "shortDescription": "An Angular wrapper for localstorage/sessionstorage access.\nAdditionally it's a simple example on how to work with Angulars DI (services, InjectionToken, etc) in combination with native APIs.",
+  "longDescription": "An Angular wrapper for localstorage/sessionstorage access.\nAdditionally it's a simple example on how to work with Angulars DI (services, InjectionToken, etc) in combination with native APIs.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "egorikftp"
+  ],
+  "owner": "egorikftp",
+  "repo": "Lady-happy-Android",
+  "name": "Lady-happy-Android",
+  "shortDescription": "Open Source multi-module app for Handmade Hats company with modern approaches under the hood.",
+  "longDescription": "Open Source multi-module app for Handmade Hats company with modern approaches under the hood.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern android development"
+  ]
+}

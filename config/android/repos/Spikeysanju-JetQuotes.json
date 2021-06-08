@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "Spikeysanju"
+  ],
+  "owner": "Spikeysanju",
+  "repo": "JetQuotes",
+  "name": "JetQuotes",
+  "shortDescription": "JetQuotes app is a minimal quotes app built to demonstrate the use of Modern Android Architecture components with Jetpack Compose Declarative UI.",
+  "longDescription": "JetQuotes app is a minimal quotes app built to demonstrate the use of Modern Android Architecture components with Jetpack Compose Declarative UI.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "LDRAlighieri"
+  ],
+  "owner": "LDRAlighieri",
+  "repo": "Corbind",
+  "name": "Corbind",
+  "shortDescription": "Kotlin Coroutines binding APIs for Android's UI widgets",
+  "longDescription": "Kotlin Coroutines binding APIs for Android's UI widgets",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui",
+    "kotlin"
+  ]
+}

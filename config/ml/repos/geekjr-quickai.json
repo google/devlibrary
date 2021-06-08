@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "geekjr"
+  ],
+  "owner": "geekjr",
+  "repo": "quickai",
+  "name": "quickai",
+  "shortDescription": "QuickAI is a Python library that makes it extremely easy to experiment with state-of-the-art Machine Learning models.",
+  "longDescription": "QuickAI is a Python library that makes it extremely easy to experiment with state-of-the-art Machine Learning models.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "theory"
+  ]
+}

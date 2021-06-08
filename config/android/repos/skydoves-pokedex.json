@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "pokedex",
+  "name": "Pokedex",
+  "shortDescription": "Pokedex is a demo application based on modern Android application tech-stacks and MVVM architecture.",
+  "longDescription": "Pokedex is a demo application based on modern Android application tech-stacks and MVVM architecture.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern android development"
+  ]
+}

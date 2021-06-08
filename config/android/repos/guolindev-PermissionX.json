@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "guolindev"
+  ],
+  "owner": "guolindev",
+  "repo": "PermissionX",
+  "name": "PermissionX",
+  "shortDescription": "An open source Android library that makes handling runtime permissions extremely easy.",
+  "longDescription": "An open source Android library that makes handling runtime permissions extremely easy.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "general"
+  ]
+}
