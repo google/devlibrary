@@ -7,11 +7,11 @@
   "owner": "PatilShreyas",
   "repo": "Covid19-Notifier-IN",
   "name": "COVID19 Notifier - India",
-  "shortDescription": "Covid19 Notifier India is a sample Android application built to demonstrate use of Modern Android development tools. Built with Kotlin, Coroutines, Flow, ViewModel, ViewBinding, Koin, WorkManager, Material Design and more modern development tools.",
-  "longDescription": "Covid19 Notifier India is a sample Android application built to demonstrate use of Modern Android development tools. Built with Kotlin, Coroutines, Flow, ViewModel, ViewBinding, Koin, WorkManager, Material Design and more modern development tools.",
+  "shortDescription": "Covid19 Notifier India is a sample Android application built to demonstrate use of modern-android-development tools. Built with Kotlin, Coroutines, Flow, ViewModel, ViewBinding, Koin, WorkManager, Material Design and more modern development tools.",
+  "longDescription": "Covid19 Notifier India is a sample Android application built to demonstrate use of modern-android-development tools. Built with Kotlin, Coroutines, Flow, ViewModel, ViewBinding, Koin, WorkManager, Material Design and more modern development tools.",
   "content": "README.md",
   "pages": [],
   "tags": [
-    "modern android development"
+    "modern-android-development"
   ]
 }

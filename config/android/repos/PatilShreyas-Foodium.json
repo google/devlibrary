@@ -7,11 +7,11 @@
   "owner": "PatilShreyas",
   "repo": "Foodium",
   "name": "Foodium",
-  "shortDescription": "Foodium is a sample food blog Android application built to demonstrate the use of Modern Android development tools - (Kotlin, Coroutines, Flow, Dagger 2/Hilt, Architecture Components, MVVM, Room, Retrofit, Moshi, Material Components)",
-  "longDescription": "Foodium is a sample food blog Android application built to demonstrate the use of Modern Android development tools - (Kotlin, Coroutines, Flow, Dagger 2/Hilt, Architecture Components, MVVM, Room, Retrofit, Moshi, Material Components)",
+  "shortDescription": "Foodium is a sample food blog Android application built to demonstrate the use of modern-android-development tools - (Kotlin, Coroutines, Flow, Dagger 2/Hilt, Architecture Components, MVVM, Room, Retrofit, Moshi, Material Components)",
+  "longDescription": "Foodium is a sample food blog Android application built to demonstrate the use of modern-android-development tools - (Kotlin, Coroutines, Flow, Dagger 2/Hilt, Architecture Components, MVVM, Room, Retrofit, Moshi, Material Components)",
   "content": "README.md",
   "pages": [],
   "tags": [
-    "modern android development"
+    "modern-android-development"
   ]
 }
