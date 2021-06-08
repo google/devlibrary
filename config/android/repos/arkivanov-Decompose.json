@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "arkivanov"
+  ],
+  "owner": "arkivanov",
+  "repo": "Decompose",
+  "name": "Decompose",
+  "shortDescription": "Decompose is a Kotlin Multiplatform lifecycle-aware business logic components (aka BLoCs) with routing functionality and pluggable UI (Android Views, Jetpack Compose, SwiftUI, JS React, etc.)",
+  "longDescription": "Decompose is a Kotlin Multiplatform lifecycle-aware business logic components (aka BLoCs) with routing functionality and pluggable UI (Android Views, Jetpack Compose, SwiftUI, JS React, etc.)",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin"
+  ]
+}

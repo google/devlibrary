@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "nhaancs"
+  ],
+  "owner": "nhaancs",
+  "repo": "ngx-scully-blog",
+  "name": "ngx-scully-blog",
+  "shortDescription": "A simple blog for developers that is easy to setup and SEO supported.",
+  "longDescription": "A simple blog for developers that is easy to setup and SEO supported.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

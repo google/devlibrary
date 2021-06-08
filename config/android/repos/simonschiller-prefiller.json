@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "simonschiller"
+  ],
+  "owner": "simonschiller",
+  "repo": "prefiller",
+  "name": "prefiller",
+  "shortDescription": "Prefiller is a Gradle plugin that generates pre-filled Room databases at compile time.",
+  "longDescription": "Prefiller is a Gradle plugin that generates pre-filled Room databases at compile time.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "tools"
+  ]
+}

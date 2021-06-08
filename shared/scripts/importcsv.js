@@ -10,6 +10,7 @@ async function addRepoFromCsv(record) {
     name: record.name,
     shortDescription: record.shortDescription,
     longDescription: record.longDescription,
+    content: record.content,
     tags: record.tags.split(",").map((t) => t.trim()),
   };
 

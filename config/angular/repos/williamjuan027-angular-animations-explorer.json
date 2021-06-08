@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "williamjuan027"
+  ],
+  "owner": "williamjuan027",
+  "repo": "angular-animations-explorer",
+  "name": "Angular Animations Explorer",
+  "shortDescription": "Live site: https://williamjuan027.github.io/angular-animations-explorer\n\nA reference with a live demo for various animation techniques you can use in Angular and Angular related technologies such as Ionic and Nativescript. Contains sections ranging from Angular Animations (basic to advanced use cases), CSS Animations, Web Animation APIs to third party integrations such as popmotion and tips on performance and reusability.",
+  "longDescription": "Live site: https://williamjuan027.github.io/angular-animations-explorer\n\nA reference with a live demo for various animation techniques you can use in Angular and Angular related technologies such as Ionic and Nativescript. Contains sections ranging from Angular Animations (basic to advanced use cases), CSS Animations, Web Animation APIs to third party integrations such as popmotion and tips on performance and reusability.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}
