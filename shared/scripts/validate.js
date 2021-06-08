@@ -78,7 +78,9 @@ async function main() {
     const productBlogsDir = path.join(configDir, product, "blogs");
     if (fs.existsSync(productBlogsDir)) {
       console.log(`\nValidating blogs for ${product}`);
-      const productBlogFiles = fs.readdirSync(productBlogsDir).filter(f => f.endsWith(".json"));
+      const productBlogFiles = fs
+        .readdirSync(productBlogsDir)
+        .filter((f) => f.endsWith(".json"));
       for (const f of productBlogFiles) {
         const fPath = path.join(productBlogsDir, f);
         validateObj(fPath, BlogMetadataSchema);
@@ -88,7 +90,9 @@ async function main() {
     const productReposDir = path.join(configDir, product, "repos");
     if (fs.existsSync(productReposDir)) {
       console.log(`\nValidating repos for ${product}`);
-      const productRepoFiles = fs.readdirSync(productReposDir).filter(f => f.endsWith(".json"));
+      const productRepoFiles = fs
+        .readdirSync(productReposDir)
+        .filter((f) => f.endsWith(".json"));
       for (const f of productRepoFiles) {
         const fPath = path.join(productReposDir, f);
         validateObj(fPath, RepoMetadataSchema);

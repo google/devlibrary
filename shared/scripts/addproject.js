@@ -28,13 +28,22 @@ const {
 } = require("./addauthor");
 const { writeOrUpdateJSON, getConfigDir } = require("./util");
 
-async function addOtherBlog(product, projectUrl, projectId) {
+/**
+ * @param {string} product
+ * @param {string} projectUrl
+ * @param {string | undefined} [projectId]
+ * @param {object | undefined} [overrides]
+ * @returns {string} the project ID
+ */
+async function addOtherBlog(product, projectUrl, projectId, overrides) {
   const templateStr = fs
     .readFileSync(path.join(getConfigDir(), "template-blog.json"))
     .toString();
   const blogFileContent = JSON.parse(templateStr);
   blogFileContent.source = "other";
   blogFileContent.link = projectUrl;
+
+  Object.assign(blogFileContent, overrides || {});
 
   // Get the title from OpenGraph
   const { result } = await ogs({
@@ -46,9 +55,11 @@ async function addOtherBlog(product, projectUrl, projectId) {
 
   // Make a slug ID from the URL
   const u = new URL(projectUrl);
-  const segments = u.pathname.split("/");
-  const lastSegment = segments[segments.length - 1];
-  const slug = lastSegment.split(".")[0];
+  const segments = u.pathname
+    .split("/")
+    .map((s) => s.split(".")[0])
+    .filter((s) => s.length > 0);
+  const slug = segments.join("-");
 
   const blogId = projectId || slug;
   const blogFilePath = path.join(
@@ -58,10 +69,19 @@ async function addOtherBlog(product, projectUrl, projectId) {
     `${blogId}.json`
   );
   writeOrUpdateJSON(blogFilePath, blogFileContent);
+
+  return blogId;
 }
 
-async function addMediumBlog(product, projectUrl, projectId) {
-  const re = /\.com\/([\w\-]+)\/([\w\-]+)/;
+/**
+ * @param {string} product
+ * @param {string} projectUrl
+ * @param {string | undefined} [projectId]
+ * @param {object | undefined} [overrides]
+ * @returns {string} the project ID
+ */
+async function addMediumBlog(product, projectUrl, projectId, overrides) {
+  const re = /\.com\/([\w\-\@\.]+)\/([\w\-]+)/;
   const m = projectUrl.match(re);
 
   const templateStr = fs
@@ -69,6 +89,8 @@ async function addMediumBlog(product, projectUrl, projectId) {
     .toString();
   const blogFileContent = JSON.parse(templateStr);
   blogFileContent.link = projectUrl;
+
+  Object.assign(blogFileContent, overrides || {});
 
   // Add the author
   // TODO: This doesn't work for proandroiodev, etc
@@ -80,6 +102,10 @@ async function addMediumBlog(product, projectUrl, projectId) {
   }
   blogFileContent.authorIds = postAuthor ? [normalizeAuthorId(postAuthor)] : [];
 
+  if (!(projectId || m)) {
+    throw new Error(`Could not parse Medium URL: ${projectUrl}`);
+  }
+
   const blogId = projectId || m[2];
   const blogFilePath = path.join(
     getConfigDir(),
@@ -88,9 +114,18 @@ async function addMediumBlog(product, projectUrl, projectId) {
     `${blogId}.json`
   );
   writeOrUpdateJSON(blogFilePath, blogFileContent);
+
+  return blogId;
 }
 
-async function addRepo(product, projectUrl, projectId) {
+/**
+ * @param {string} product
+ * @param {string} projectUrl
+ * @param {string | undefined} [projectId]
+ * @param {object | undefined} [overrides]
+ * @returns {string} the project ID
+ */
+async function addRepo(product, projectUrl, projectId, overrides) {
   const re = /github.com\/([\w\-]+)\/([\w\-]+)/;
   const m = projectUrl.match(re);
 
@@ -103,6 +138,8 @@ async function addRepo(product, projectUrl, projectId) {
   const repoFileContent = JSON.parse(templateStr);
   repoFileContent.owner = owner;
   repoFileContent.repo = repo;
+
+  Object.assign(repoFileContent, overrides || {});
 
   // Check if we have a matching author aready
   if (!githubAuthorExists(owner)) {
@@ -124,6 +161,8 @@ async function addRepo(product, projectUrl, projectId) {
     `${repoId}.json`
   );
   writeOrUpdateJSON(repoFilePath, repoFileContent);
+
+  return repoId;
 }
 
 async function main(args) {

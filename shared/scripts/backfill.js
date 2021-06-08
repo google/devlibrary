@@ -30,7 +30,9 @@ async function main() {
     const reposDir = path.join(productDir, "repos");
     const blogsDir = path.join(productDir, "blogs");
 
-    const repoFiles = fs.readdirSync(reposDir).filter(f => f.endsWith(".json"));
+    const repoFiles = fs
+      .readdirSync(reposDir)
+      .filter((f) => f.endsWith(".json"));
     for (const repoFile of repoFiles) {
       console.log(`[${p}] ${repoFile}`);
 
@@ -43,7 +45,9 @@ async function main() {
       await addRepo(p, repoLink, repoId);
     }
 
-    const blogFiles = fs.readdirSync(blogsDir).filter(f => f.endsWith(".json"));
+    const blogFiles = fs
+      .readdirSync(blogsDir)
+      .filter((f) => f.endsWith(".json"));
     for (const blogFile of blogFiles) {
       console.log(`[${p}] ${blogFile}`);
 
