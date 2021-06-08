@@ -36,7 +36,7 @@ function authorExists(id) {
 }
 
 function githubAuthorExists(owner) {
-  return authorExists(normalizeAuthorId(owner));;
+  return authorExists(normalizeAuthorId(owner));
 }
 
 function mediumAuthorExists(username) {

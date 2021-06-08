@@ -15,6 +15,17 @@ Although all curation can be done by hand, there are some scripts in this reposi
 
 After installing node, run `npm install` in the `shared` directory of this repository.
 
+## Bulk Import
+
+The easiest way to add the `.json` files needed is to bulk import from csv. Run the following script:
+
+```bash
+# <type> is either "blog" or "repo"
+npm run importcsv <type> <csvPath>
+```
+
+The final output will include a list of URLs (or errors) in the same order as the original sheet.
+
 ## Projects
 
 ### Location
