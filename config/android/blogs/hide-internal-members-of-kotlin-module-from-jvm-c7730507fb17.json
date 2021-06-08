@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "patilshreyas"
+  ],
+  "author": "Shreyas Patil",
+  "title": "Hide internl members of Kotlin Module from JVM ",
+  "link": "https://medium.com/scalereal/hide-internal-members-of-kotlin-module-from-jvm-c7730507fb17",
+  "tags": [
+    "kotlin"
+  ]
+}

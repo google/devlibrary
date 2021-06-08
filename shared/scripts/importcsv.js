@@ -19,6 +19,7 @@ async function addRepoFromCsv(record) {
     const id = await addRepo(product, projectUrl, undefined, overrides);
     return `https://devlibrary.withgoogle.com/products/${product}/repos/${id}`;
   } catch (e) {
+    console.warn(e);
     return "error";
   }
 }
@@ -43,6 +44,7 @@ async function addBlogFromCsv(record) {
     }
     return `https://devlibrary.withgoogle.com/products/${product}/blogs/${id}`;
   } catch (e) {
+    console.warn(e);
     return "error";
   }
 }
