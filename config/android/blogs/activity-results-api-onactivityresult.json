@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "source": "medium",
+    "authorIds": [
+      "wajahatkarim"
+    ],
+    "author": "Wajahat Karim",
+    "title": "Deep Dive into Activity Results API — No More onActivityResult()",
+    "link": "https://wajahatkarim.com/2020/05/activity-results-api-onactivityresult/",
+    "tags": [
+      "general"
+    ]
+  }

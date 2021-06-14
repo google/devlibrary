@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "source": "github",
+    "authorIds": [
+      "sbis04"
+    ],
+    "owner": "sbis04",
+    "repo": "video_trimmer",
+    "name": "Video Trimmer",
+    "shortDescription": "A Flutter package for trimming videos. This supports retrieving, trimming, and storage of trimmed video files to the file system. Also, can convert videos to GIF.",
+    "longDescription": "A Flutter package for trimming videos. This supports retrieving, trimming, and storage of trimmed video files to the file system. Also, can convert videos to GIF.",
+    "content": "README.md",
+    "pages": [],
+    "tags": [
+      ""
+    ]
+  }

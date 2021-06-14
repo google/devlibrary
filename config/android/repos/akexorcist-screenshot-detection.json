@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "source": "github",
+    "authorIds": [
+      "akexorcist"
+    ],
+    "owner": "akexorcist",
+    "repo": "ScreenshotDetection",
+    "name": "Screenshot Detection",
+    "shortDescription": "Screenshot detection while user using your app",
+    "longDescription": "Screenshot detection while user using your app",
+    "content": "README.md",
+    "pages": [],
+    "tags": [
+      "tools"
+    ]
+  }
