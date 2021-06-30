@@ -9,5 +9,7 @@
   "longDescription": "FireCMS is a headless CMS and admin panel built by developers for developers.",
   "content": "README.md",
   "pages": [],
-  "tags": []
+  "tags": [
+    "admin"
+  ]
 }
