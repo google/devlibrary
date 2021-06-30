@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "Camberi",
+  "repo": "firecms",
+  "name": "FireCMS",
+  "shortDescription": "Awesome Firestore based CMS",
+  "longDescription": "FireCMS is a headless CMS and admin panel built by developers for developers.",
+  "content": "README.md",
+  "pages": [],
+  "tags": []
+}

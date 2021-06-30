@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kafkas"
+  ],
+  "owner": "kafkas",
+  "repo": "firecode",
+  "name": "Firecode",
+  "shortDescription": "A Node.js library that lets you efficiently traverse Firestore collections.",
+  "longDescription": "A light, fast, and memory-efficient collection traversal library for Firestore and Node.js.",
+  "content": "README.md",
+  "pages": [],
+  "tags": []
+}
