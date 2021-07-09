@@ -332,7 +332,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "samples",
       },
       {
-        key: "Modern Android Development",
+        key: "modern-android-development",
         value: "modern-android-development",
       },
       {
