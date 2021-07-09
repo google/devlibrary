@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mayokunadeniyi"
+  ],
+  "owner": "mayokunadeniyi",
+  "repo": "Instant-Weather",
+  "name": "Instant Weather ",
+  "shortDescription": "An Android weather application implemented using the MVVM pattern, Retrofit2, Dagger2, LiveData, ViewModel, Coroutines, Room, Navigation Components, Data Binding and some other libraries from the Android Jetpack. ",
+  "longDescription": "An Android weather application implemented using the MVVM pattern, Retrofit2, Dagger2, LiveData, ViewModel, Coroutines, Room, Navigation Components, Data Binding and some other libraries from the Android Jetpack. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern android development"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "msasikanth"
+  ],
+  "owner": "msasikanth",
+  "repo": "pinnit",
+  "name": "Pinnit",
+  "shortDescription": "Pinnit is an app that let's users take small notes/reminders and pin it in the notifications shade. ",
+  "longDescription": "Pinnit is an app that let's users take small notes/reminders and pin it in the notifications shade. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern android development"
+  ]
+}

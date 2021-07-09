@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "teerasej"
+  ],
+  "owner": "teerasej",
+  "repo": "nextflow-dart-thai-citizen-personal-id-validator",
+  "name": "Thai citizen's personal id validator",
+  "shortDescription": "Validate the 13-digit of Thai people's national identity number with a single method. Designed to work both with TextField and pure method.",
+  "longDescription": "Validate the 13-digit of Thai people's national identity number with a single method. Designed to work both with TextField and pure method.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets"
+  ]
+}

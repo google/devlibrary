@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "Spikeysanju"
+  ],
+  "owner": "Spikeysanju",
+  "repo": "Expenso",
+  "name": "Expenso",
+  "shortDescription": "A Minimal Expense Tracker App built to demonstrate the use of modern android architecture component with MVVM Architecture",
+  "longDescription": "A Minimal Expense Tracker App built to demonstrate the use of modern android architecture component with MVVM Architecture",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern android development"
+  ]
+}

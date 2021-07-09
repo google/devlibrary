@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "TransformationLayout",
+  "name": "TransformationLayout",
+  "shortDescription": "Transform into a different view or activity using morphing animations.",
+  "longDescription": "Transform into a different view or activity using morphing animations.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

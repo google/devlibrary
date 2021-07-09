@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "Sandwich",
+  "name": "Sandwich",
+  "shortDescription": "A lightweight and standardized Android network response interface for handling successful data and error responses.",
+  "longDescription": "A lightweight and standardized Android network response interface for handling successful data and error responses.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "general"
+  ]
+}
