@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "zaninihugo"
+  ],
+  "author": "Hugo Zanini",
+  "title": "In browser workout performance measurement using Pose Estimation",
+  "link": "https://medium.com/data-hackers/pose-estimation-no-browser-utilizando-tensorflow-js-para-medir-seus-exerc%C3%ADcios-f%C3%ADsicos-b3a827240481",
+  "tags": [
+    "web"
+  ]
+}
