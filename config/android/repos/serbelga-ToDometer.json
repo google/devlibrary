@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "serbelga"
+  ],
+  "owner": "serbelga",
+  "repo": "ToDometer",
+  "name": "ToDometer",
+  "shortDescription": "An Android application to measure the tasks completed developed using Android Jetpack",
+  "longDescription": "An Android application to measure the tasks completed developed using Android Jetpack",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

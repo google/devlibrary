@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "JideGuru"
+  ],
+  "owner": "JideGuru",
+  "repo": "FlutterEbookApp",
+  "name": "FlutterEbookApp",
+  "shortDescription": "A simple Flutter app to Read and Download eBooks.\n",
+  "longDescription": "A simple Flutter app to Read and Download eBooks.\n",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "sample"
+  ]
+}

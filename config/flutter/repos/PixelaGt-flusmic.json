@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "PixelaGt",
+  "repo": "flusmic",
+  "name": "Flusmic",
+  "shortDescription": "A functional and kind of elegant Prismic.io integration for Dart and Flutter",
+  "longDescription": "A functional and kind of elegant Prismic.io integration for Dart and Flutter",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets"
+  ]
+}

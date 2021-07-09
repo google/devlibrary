@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "amanjeetsingh150"
+  ],
+  "owner": "amanjeetsingh150",
+  "repo": "dagger-track",
+  "name": "dagger-track",
+  "shortDescription": "A gradle plugin that automatically adds clock tracking for your dagger components and subcomponents.\n\nProject website: https://amanjeetsingh150.github.io/dagger-track/",
+  "longDescription": "A gradle plugin that automatically adds clock tracking for your dagger components and subcomponents.\n\nProject website: https://amanjeetsingh150.github.io/dagger-track/",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "tools"
+  ]
+}

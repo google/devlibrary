@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "l123456789jy"
+  ],
+  "owner": "l123456789jy",
+  "repo": "Lazy",
+  "name": "AndroidUtiles",
+  "shortDescription": "The android tools 自己整理的常用的工具类",
+  "longDescription": "The android tools 自己整理的常用的工具类",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

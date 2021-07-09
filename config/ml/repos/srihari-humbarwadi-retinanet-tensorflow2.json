@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "srihari-humbarwadi"
+  ],
+  "owner": "srihari-humbarwadi",
+  "repo": "retinanet-tensorflow2",
+  "name": "retinanet-tensorflow2.x",
+  "shortDescription": "Here is an implementation of the popular RetinaNet object detection model using TensorFlow 2.x. This supports training on Google Cloud TPU Pods, distributed training on multiple GPU with automatic mixed precision. ",
+  "longDescription": "Here is an implementation of the popular RetinaNet object detection model using TensorFlow 2.x. This supports training on Google Cloud TPU Pods, distributed training on multiple GPU with automatic mixed precision. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "OmriGM"
+  ],
+  "owner": "OmriGM",
+  "repo": "body-pose-beat-game",
+  "name": "body-pose-beat-game",
+  "shortDescription": "This game is an AI game based on TensorFlow.js (https://github.com/tensorflow/tfjs), using the Posenet pre-trained model.",
+  "longDescription": "This game is an AI game based on TensorFlow.js (https://github.com/tensorflow/tfjs), using the Posenet pre-trained model.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web"
+  ]
+}

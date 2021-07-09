@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "Rishit-dagli"
+  ],
+  "owner": "Rishit-dagli",
+  "repo": "GLOM-TensorFlow",
+  "name": "GLOM-TensorFlow",
+  "shortDescription": "This repo implements Geoffrey Hinton's latest paper GLOM in TensorFlow, which allows advances made by several different groups transformers, neural fields, contrastive representation learning, distillation and capsules to be combined.",
+  "longDescription": "This repo implements Geoffrey Hinton's latest paper GLOM in TensorFlow, which allows advances made by several different groups transformers, neural fields, contrastive representation learning, distillation and capsules to be combined.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "python",
+    "glom"
+  ]
+}

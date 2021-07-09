@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "Rishit-dagli"
+  ],
+  "owner": "Rishit-dagli",
+  "repo": "ML-with-Android-11",
+  "name": "ML-with-Android-11",
+  "shortDescription": "This repository demonstrates how you can get started with on-device ML with tools or plugins specifically launched with Android 11 with example Android Apps too!",
+  "longDescription": "This repository demonstrates how you can get started with on-device ML with tools or plugins specifically launched with Android 11 with example Android Apps too!",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}

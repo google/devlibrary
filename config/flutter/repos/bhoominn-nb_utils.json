@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bhoominn"
+  ],
+  "owner": "bhoominn",
+  "repo": "nb_utils",
+  "name": "nb_utils",
+  "shortDescription": "This package helps you daily usable function and ready made Widgets with ease.",
+  "longDescription": "This package helps you daily usable function and ready made Widgets with ease.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets"
+  ]
+}
