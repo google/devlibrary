@@ -27,6 +27,7 @@ const {
   githubAuthorExists,
 } = require("./addauthor");
 const { writeOrUpdateJSON, getConfigDir } = require("./util");
+const { parse } = require("path");
 
 /**
  * @param {string} product
@@ -73,6 +74,31 @@ async function addOtherBlog(product, projectUrl, projectId, overrides) {
   return blogId;
 }
 
+function parseMediumUrl(projectUrl) {
+  // Types of medium URL
+  // 1) https://medium.com/user/post-slug-12345abcde
+  // 2) https://user.medium.com/post-slug-12345abcde
+  const mainRe = /medium\.com\/([\w\-\@\.]+)\/([\w\-]+)/;
+  const mainMatch = projectUrl.match(mainRe);
+  if (mainMatch) {
+    return {
+      author: mainMatch[1],
+      slug: mainMatch[2]
+    }
+  }
+
+  const subdomainRe = /([\w\-\@\.]+)\.medium\.com\/([\w\-]+)/;
+  const subdomainMatch = projectUrl.match(subdomainRe);
+  if (subdomainMatch) {
+    return {
+      author: subdomainMatch[1],
+      slug: subdomainMatch[2]
+    }
+  }
+
+  return {};
+}
+
 /**
  * @param {string} product
  * @param {string} projectUrl
@@ -81,8 +107,7 @@ async function addOtherBlog(product, projectUrl, projectId, overrides) {
  * @returns {string} the project ID
  */
 async function addMediumBlog(product, projectUrl, projectId, overrides) {
-  const re = /\.com\/([\w\-\@\.]+)\/([\w\-]+)/;
-  const m = projectUrl.match(re);
+  const { slug } = parseMediumUrl(projectUrl);
 
   const templateStr = fs
     .readFileSync(path.join(getConfigDir(), "template-blog.json"))
@@ -102,11 +127,11 @@ async function addMediumBlog(product, projectUrl, projectId, overrides) {
   }
   blogFileContent.authorIds = postAuthor ? [normalizeAuthorId(postAuthor)] : [];
 
-  if (!(projectId || m)) {
+  const blogId = projectId || slug;
+  if (!blogId) {
     throw new Error(`Could not parse Medium URL: ${projectUrl}`);
   }
 
-  const blogId = projectId || m[2];
   const blogFilePath = path.join(
     getConfigDir(),
     product,
