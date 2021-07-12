@@ -224,13 +224,15 @@ export async function queryRepos(
 }
 
 export async function queryAuthorProjects(authorId: string) {
+  const normalizedId = authorId.toLowerCase();
+
   const q: FirestoreQuery = {
     scope: "COLLECTION_GROUP",
     where: [
       {
         fieldPath: "metadata.authorIds",
         operator: "array-contains",
-        value: authorId,
+        value: normalizedId,
       },
     ],
     orderBy: [
