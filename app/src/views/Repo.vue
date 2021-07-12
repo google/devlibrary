@@ -220,8 +220,13 @@ export default class Repo extends Vue {
 
     const authorIds = this.repo.metadata.authorIds || [];
     for (const aid of authorIds) {
-      const data = await fetchAuthor(aid);
-      this.authors.push(data);
+      // We don't want a failed author fetch to block the rest of the page rendering
+      try {
+        const data = await fetchAuthor(aid);
+        this.authors.push(data);
+      } catch (e) {
+        console.warn(`Failed to fetch author ${aid}`, e);
+      }
     }
 
     const pagePath =
