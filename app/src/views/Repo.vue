@@ -171,10 +171,10 @@ import DOMPurify from "dompurify";
 import MaterialButton from "@/components/MaterialButton.vue";
 import AuthorLink from "@/components/AuthorLink.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
-import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 import UIModule from "@/store/ui";
 
-import { AuthorData, RepoData, RepoPage } from "../../../shared/types";
+import { ALL_PRODUCTS } from "../../../shared/product";
+import { AuthorData, RepoData, RepoPage, ProductConfig } from "../../../shared/types";
 import * as util from "../../../shared/util";
 import { fetchAuthor, fetchRepo, fetchRepoPage } from "@/plugins/data";
 

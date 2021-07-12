@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { ALL_PRODUCTS } from "@/model/product";
+import { ALL_PRODUCTS } from "../../../shared/product";
 
 @Component
 export default class ProductLogo extends Vue {

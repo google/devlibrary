@@ -172,7 +172,7 @@
 import { Component, Vue, Watch } from "vue-property-decorator";
 
 import SearchBar from "@/components/SearchBar.vue";
-import { ALL_PRODUCTS } from "@/model/product";
+import { ALL_PRODUCTS } from "../../../shared/product";
 
 @Component({
   components: {

@@ -176,13 +176,15 @@ import CheckboxGroup, {
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 
-import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 import {
   PagedResponse,
   nextPage,
   prevPage,
   emptyPageResponse,
 } from "@/plugins/data";
+
+import { ProductConfig } from "../../../shared/types";
+import { ALL_PRODUCTS } from "../../../shared/product";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 
 @Component({

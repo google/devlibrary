@@ -139,9 +139,9 @@ import ProductLogo from "@/components/ProductLogo.vue";
 
 import UIModule from "@/store/ui";
 
-import { ALL_PRODUCTS } from "@/model/product";
 import { queryRepos, queryBlogs, shuffleArr } from "@/plugins/data";
 
+import { ALL_PRODUCTS } from "../../../shared/product";
 import { BlogData, RepoData } from "../../../shared/types";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 

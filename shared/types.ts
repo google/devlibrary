@@ -23,6 +23,30 @@ export enum ProductKey {
   ML = "ml",
 }
 
+export interface ProductTag {
+  // The human-readable name (Android, Node.js)
+  label: string;
+
+  // The database value (android, node)
+  value: string;
+}
+
+export interface ProductConfig {
+  key: ProductKey;
+  name: string;
+  description: string;
+  docsUrl: string;
+
+  // We need to explicitly list these so that PurgeCSS keeps them
+  classes: {
+    bg: string;
+    text: string;
+    iconBorder: string;
+  };
+
+  tags: ProductTag[];
+}
+
 import { AuthorMetadata } from "./types/AuthorMetadata";
 /**
  * These two types are defined in JSON schema so that we can validate them easily.
