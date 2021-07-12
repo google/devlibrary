@@ -15,6 +15,45 @@
  */
 import { ALL_PRODUCTS } from "../../../shared/product";
 
+export type ProductStyle = {
+  bg: string;
+  text: string;
+  iconBorder: string;
+};
+
+const styles: Record<string, ProductStyle> = {
+  android: {
+    bg: "bg-android-bg",
+    text: "text-android-text",
+    iconBorder: "border-android-accent"
+  },
+  angular: {
+    bg: "bg-angular-bg",
+    text: "text-angular-text",
+    iconBorder: "border-angular-accent"
+  },
+  cloud: {
+    bg: "bg-cloud-bg",
+    text: "text-cloud-text",
+    iconBorder: "border-cloud-accent"
+  },
+  firebase: {
+    bg: "bg-firebase-bg",
+    text: "text-firebase-text",
+    iconBorder: "border-firebase-accent"
+  },
+  flutter: {
+    bg: "bg-flutter-bg",
+    text: "text-flutter-text",
+    iconBorder: "border-flutter-accent"
+  },
+  ml: {
+    bg: "bg-ml-bg",
+    text: "text-ml-text",
+    iconBorder: "border-ml-accent"
+  }
+};
+
 // Listing these classes here means that PurgeCSS will not
 // drop them.
 const TAG_COLORS = [
@@ -30,6 +69,10 @@ const TAG_COLORS = [
   "bg-yellow-700",
   "bg-gray-500",
 ];
+
+export function getStyle(product: string) {
+  return styles[product];
+}
 
 export function getTag(product: string, value: string) {
   const p = ALL_PRODUCTS[product];

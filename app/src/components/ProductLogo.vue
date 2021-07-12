@@ -19,23 +19,23 @@
     tag="div"
     :to="`/products/${productKey}`"
     class="cursor-pointer"
-    :class="[product.classes.iconBorder, size]"
+    :class="[productStyle.iconBorder, size]"
   >
-    <img :src="`/logos/${product.key}.png`" />
+    <img :src="`/logos/${productKey}.png`" />
   </router-link>
 </template>
 
 <script lang="ts">
+import { getStyle } from "@/model/product";
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { ALL_PRODUCTS } from "../../../shared/product";
 
 @Component
 export default class ProductLogo extends Vue {
   @Prop() productKey!: string;
   @Prop() size!: string;
 
-  get product() {
-    return ALL_PRODUCTS[this.productKey];
+  get productStyle() {
+    return getStyle(this.productKey);
   }
 }
 </script>

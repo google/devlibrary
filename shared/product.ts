@@ -23,11 +23,6 @@
      description:
        "Firebase helps you build and run successful apps. Backed by Google and loved by app development teams - from startups to global enterprises",
      docsUrl: "https://firebase.google.com/docs/",
-     classes: {
-       bg: "bg-firebase-bg",
-       text: "text-firebase-text",
-       iconBorder: "border-firebase-accent",
-     },
      tags: [
        {
          label: "Android",
@@ -65,11 +60,6 @@
      description:
        "Machine Learning provides new ways of solving problems that are not solvable with traditional computational approaches. Google provides a wide range of Machine Learning technologies and products for developers to use and develop for their projects.",
      docsUrl: "https://ai.google/tools/",
-     classes: {
-       bg: "bg-ml-bg",
-       text: "text-ml-text",
-       iconBorder: "border-ml-accent",
-     },
      tags: [
        {
          label: "Mobile",
@@ -111,11 +101,6 @@
      description:
        "Angular is an open-source framework for developing large-scale frontend applications.",
      docsUrl: "https://angular.io/",
-     classes: {
-       bg: "bg-angular-bg",
-       text: "text-angular-text",
-       iconBorder: "border-angular-accent",
-     },
      tags: [
        {
          label: "Components",
@@ -153,11 +138,6 @@
      description:
        "An open-source UI toolkit that makes it easy and fast to build beautiful mobile apps. Flutter apps run natively on iOS and Android and are powered by the Dart language. ",
      docsUrl: "https://flutter.dev/",
-     classes: {
-       bg: "bg-flutter-bg",
-       text: "text-flutter-text",
-       iconBorder: "border-flutter-accent",
-     },
      tags: [
        {
          label: "Mobile",
@@ -195,11 +175,6 @@
      description:
        "Meet your business challenges head on with cloud computing services from Google, including data management, hybrid & multi-cloud, and AI & ML.",
      docsUrl: "https://cloud.google.com/docs",
-     classes: {
-       bg: "bg-cloud-bg",
-       text: "text-cloud-text",
-       iconBorder: "border-cloud-accent",
-     },
      // Tags for Cloud are adapted as-needed from the "products" categories list on this page:
      // https://cloud.google.com/products
      tags: [
@@ -283,11 +258,6 @@
      description:
        "Modern tools and resources to help you build experiences that people love, faster and easier, across every Android device.",
      docsUrl: "https://developer.android.com/",
-     classes: {
-       bg: "bg-android-bg",
-       text: "text-android-text",
-       iconBorder: "border-android-accent",
-     },
      tags: [
        {
          label: "Build/Tools",

@@ -20,12 +20,12 @@
       <!-- Header (Mobile) -->
       <div class="mobile-only">
         <div
-          :class="[product.classes.bg]"
+          :class="[productStyle.bg]"
           class="mobile-only flex flex-row items-center px-6 py-4"
         >
           <ProductLogo size="tiny" :productKey="product.key" />
 
-          <h1 class="text-2xl ml-2" :class="[product.classes.text]">
+          <h1 class="text-2xl ml-2" :class="[productStyle.text]">
             {{ product.name }}
           </h1>
         </div>
@@ -34,11 +34,11 @@
       <!-- Header (Desktop) -->
       <div class="desktop-only">
         <div
-          :class="[product.classes.bg]"
+          :class="[productStyle.bg]"
           class="py-20 grid grid-cols-10 gap-4"
         >
           <div
-            :class="[product.classes.text]"
+            :class="[productStyle.text]"
             class="col-start-2 col-span-5 text-white"
           >
             <h1 class="text-3xl font-semibold">
@@ -186,6 +186,7 @@ import {
 import { ProductConfig } from "../../../shared/types";
 import { ALL_PRODUCTS } from "../../../shared/product";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
+import { getStyle, ProductStyle } from "@/model/product";
 
 @Component({
   components: {
@@ -313,6 +314,10 @@ export default class Product extends Vue {
 
   get product(): ProductConfig {
     return ALL_PRODUCTS[this.$route.params["product"]];
+  }
+
+  get productStyle(): ProductStyle {
+    return getStyle(this.$route.params["product"]);
   }
 
   get showAllTypes() {

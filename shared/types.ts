@@ -36,14 +36,6 @@ export interface ProductConfig {
   name: string;
   description: string;
   docsUrl: string;
-
-  // We need to explicitly list these so that PurgeCSS keeps them
-  classes: {
-    bg: string;
-    text: string;
-    iconBorder: string;
-  };
-
   tags: ProductTag[];
 }
 
