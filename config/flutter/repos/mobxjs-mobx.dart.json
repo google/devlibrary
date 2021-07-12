@@ -11,6 +11,6 @@
   "longDescription": "MobX is a hassle free state management library for your Dart and Flutter apps. It relies on the power of observables, actions and reaction to create an automatic wiring of your data and the UI, keeping them in sync with almost no effort on part of the developer.",
   "content": "README.md",
   "tags": [
-    "packages"
+    "plugins"
   ]
 }
