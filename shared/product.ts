@@ -137,6 +137,14 @@
          label: "Getting Started",
          value: "gettingstarted",
        },
+       {
+        label: "Libraries",
+        value: "libraries",
+       },
+       {
+        label: "Demos",
+        value: "demos",
+       },
      ],
    },
    flutter: {
@@ -170,6 +178,14 @@
        {
          label: "Widgets",
          value: "widgets",
+       },
+       {
+        label: "General",
+        value: "general",
+       },
+       {
+        label: "Samples",
+        value: "samples",
        },
      ],
    },
