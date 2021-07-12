@@ -17,12 +17,10 @@
 <template>
   <HeaderSidebarLayout>
     <template v-if="loaded" v-slot:header>
-      <!-- TODO: Per-product styling! -->
-
       <!-- Header (Desktop) -->
       <div class="desktop-only">
         <div
-          :class="[product.classes.bg, product.classes.text]"
+          :class="[productStyle.bg, productStyle.text]"
           class="py-20 grid grid-cols-10 gap-4"
         >
           <div class="col-start-2 col-span-7">
@@ -69,7 +67,7 @@
       <!-- Header (Mobile) -->
       <div class="mobile-only">
         <div
-          :class="[product.classes.bg, product.classes.text]"
+          :class="[productStyle.bg, productStyle.text]"
           class="py-4 px-8"
         >
           <h1 class="text-2xl font-semibold">
@@ -171,12 +169,13 @@ import DOMPurify from "dompurify";
 import MaterialButton from "@/components/MaterialButton.vue";
 import AuthorLink from "@/components/AuthorLink.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
-import { ProductConfig, ALL_PRODUCTS } from "@/model/product";
 import UIModule from "@/store/ui";
 
-import { AuthorData, RepoData, RepoPage } from "../../../shared/types";
+import { ALL_PRODUCTS } from "../../../shared/product";
+import { AuthorData, RepoData, RepoPage, ProductConfig } from "../../../shared/types";
 import * as util from "../../../shared/util";
 import { fetchAuthor, fetchRepo, fetchRepoPage } from "@/plugins/data";
+import { getStyle, ProductStyle } from "@/model/product";
 
 // Global HLJS
 // eslint-disable-next-line
@@ -259,6 +258,10 @@ export default class Repo extends Vue {
 
     this.uiModule.waitFor(res);
     res.then(() => location.reload());
+  }
+
+  get productStyle(): ProductStyle {
+    return getStyle(this.productKey);
   }
 
   get showRefreshButton() {

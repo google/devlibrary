@@ -7,7 +7,7 @@
     "addproject": "node -e \"require('./scripts/addproject.js').main(process.argv)\"",
     "backfill": "node -e \"require('./scripts/backfill.js').main(process.argv)\"",
     "importcsv": "node -e \"require('./scripts/importcsv.js').main(process.argv)\"",
-    "validate": "node -e \"require('./scripts/validate.js').main(process.argv)\"",
+    "validate": "ts-node ./scripts/validate.ts",
     "build": "node -e \"require('./scripts/generate.js').main(process.argv)\"",
     "deploy:firebase": "firebase --project=$FIREBASE_PROJECT deploy"
   },
@@ -24,6 +24,7 @@
     "jsonschema": "^1.4.0",
     "node-fetch": "^2.6.1",
     "open-graph-scraper": "^4.8.2",
+    "ts-node": "^10.1.0",
     "typescript": "~3.9.3"
   }
 }

@@ -13,10 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import * as fs from "fs";
+import * as path from "path";
+import { Validator } from "jsonschema";
 
-const fs = require("fs");
-const path = require("path");
-const Validator = require("jsonschema").Validator;
+import { ALL_PRODUCTS } from "../product";
+import { ProductConfig } from "../types";
+
+import { AuthorMetadata } from "../types/AuthorMetadata";
+import { BlogMetadata } from "../types/BlogMetadata";
+import { RepoMetadata } from "../types/RepoMetadata";
 
 const BlogMetadataSchema = require("../schema/BlogMetadata.json");
 const RepoMetadataSchema = require("../schema/RepoMetadata.json");
@@ -27,7 +33,27 @@ v.addSchema(BlogMetadataSchema, "BlogMetadata");
 v.addSchema(RepoMetadataSchema, "RepoMetadata");
 v.addSchema(AuthorMetadataSchema, "AuthorMetadata");
 
-function validateObj(fPath, schema) {
+function validateTags(fPath: string, metadata: RepoMetadata | BlogMetadata, product: ProductConfig) {
+  const tags = product.tags.map(t => t.value);
+  const invalid = metadata.tags.filter(t => !tags.includes(t));
+
+  // If none of the tags are valid, we error out
+  if (invalid.length === metadata.tags.length) {
+    console.warn(
+      `  x ${fPath} does not have any valid tags. Valid tags for ${product.key} are: ${JSON.stringify(tags)}`
+    );
+    process.exit(1);
+  }
+
+  // If at least one tag is valid, we just warn
+  if (invalid.length > 0 && invalid.length < metadata.tags.length) {
+    console.warn(
+      `  ! ${fPath} has some invalid tags :${JSON.stringify(metadata.tags)}. Valid tags for ${product.key} are: ${JSON.stringify(tags)}`
+    );
+  }
+}
+
+function validateObj<T>(fPath: string, schema: any): T | undefined {
   const fContent = fs.readFileSync(fPath).toString();
   if (fContent.includes("TODO")) {
     console.warn(
@@ -45,16 +71,16 @@ function validateObj(fPath, schema) {
   }
 
   const res = v.validate(obj, schema);
-
-  if (res.valid) {
-    console.log(`  ✓ ${fPath}`);
-  } else {
+  if (!res.valid) {
     console.warn(`  x ${fPath} is not valid!`);
     for (const e of res.errors) {
       console.warn(`  ${e.property}: ${e.message}`);
     }
     process.exit(1);
   }
+
+  console.log(`  ✓ ${fPath}`);
+  return obj as T;
 }
 
 async function main() {
@@ -66,7 +92,7 @@ async function main() {
   const authorFiles = fs.readdirSync(authorsDir);
   for (const f of authorFiles) {
     const fPath = path.join(authorsDir, f);
-    validateObj(fPath, AuthorMetadataSchema);
+    validateObj<AuthorMetadata>(fPath, AuthorMetadataSchema);
   }
 
   const productDirs = fs.readdirSync(configDir);
@@ -74,6 +100,8 @@ async function main() {
     if (!fs.lstatSync(path.join(configDir, product)).isDirectory()) {
       continue;
     }
+
+    const productConfig = ALL_PRODUCTS[product];
 
     const productBlogsDir = path.join(configDir, product, "blogs");
     if (fs.existsSync(productBlogsDir)) {
@@ -83,7 +111,10 @@ async function main() {
         .filter((f) => f.endsWith(".json"));
       for (const f of productBlogFiles) {
         const fPath = path.join(productBlogsDir, f);
-        validateObj(fPath, BlogMetadataSchema);
+        const metadata = validateObj<BlogMetadata>(fPath, BlogMetadataSchema);
+        if (metadata) {
+          validateTags(fPath, metadata, productConfig)
+        }
       }
     }
 
@@ -95,12 +126,15 @@ async function main() {
         .filter((f) => f.endsWith(".json"));
       for (const f of productRepoFiles) {
         const fPath = path.join(productReposDir, f);
-        validateObj(fPath, RepoMetadataSchema);
+        const metadata = validateObj<RepoMetadata>(fPath, RepoMetadataSchema);
+        if (metadata) {
+          validateTags(fPath, metadata, productConfig)
+        }
       }
     }
   }
 }
 
-module.exports = {
-  main,
-};
+if (require.main === module) {
+  main();
+}
