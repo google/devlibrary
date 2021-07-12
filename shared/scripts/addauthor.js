@@ -22,17 +22,20 @@ const ogs = require("open-graph-scraper");
 
 const { writeOrUpdateJSON, getConfigDir } = require("./util");
 
+/**
+ * @param {string} id 
+ */
 function normalizeAuthorId(id) {
   // Replace all '.' with '-'
-  return id.split(".").join("-");
+  return id.split(".").join("-").toLowerCase();
 }
 
-function authorFilePath(id) {
-  return path.join(getConfigDir(), "authors", `${id}.json`);
+function authorFilePath(normalizedId) {
+  return path.join(getConfigDir(), "authors", `${normalizedId}.json`);
 }
 
-function authorExists(id) {
-  return fs.existsSync(authorFilePath(id));
+function authorExists(normalizedId) {
+  return fs.existsSync(authorFilePath(normalizedId));
 }
 
 function githubAuthorExists(owner) {
