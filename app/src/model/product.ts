@@ -16,6 +16,8 @@
 
 import { ProductKey } from "../../../shared/types";
 
+// Listing these classes here means that PurgeCSS will not
+// drop them.
 const TAG_COLORS = [
   "bg-blue-500",
   "bg-green-500",
@@ -32,7 +34,7 @@ const TAG_COLORS = [
 
 export interface ProductTag {
   // The human-readable name (Android, Node.js)
-  key: string;
+  label: string;
 
   // The database value (android, node)
   value: string;
@@ -68,31 +70,31 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     },
     tags: [
       {
-        key: "Android",
+        label: "Android",
         value: "android",
       },
       {
-        key: "iOS",
+        label: "iOS",
         value: "ios",
       },
       {
-        key: "Web",
+        label: "Web",
         value: "web",
       },
       {
-        key: "Games",
+        label: "Games",
         value: "games",
       },
       {
-        key: "Node.js",
+        label: "Node.js",
         value: "node",
       },
       {
-        key: "Admin",
+        label: "Admin",
         value: "admin",
       },
       {
-        key: "Flutter",
+        label: "Flutter",
         value: "flutter",
       },
     ],
@@ -110,35 +112,35 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     },
     tags: [
       {
-        key: "Mobile",
+        label: "Mobile",
         value: "mobile",
       },
       {
-        key: "NLP",
+        label: "NLP",
         value: "nlp",
       },
       {
-        key: "Vision",
+        label: "Vision",
         value: "vision",
       },
       {
-        key: "Library",
+        label: "Library",
         value: "library",
       },
       {
-        key: "Notebook",
+        label: "Notebook",
         value: "notebook",
       },
       {
-        key: "Collection",
+        label: "Collection",
         value: "collection",
       },
       {
-        key: "Web",
+        label: "Web",
         value: "web",
       },
       {
-        key: "Theory",
+        label: "Theory",
         value: "theory",
       },
     ],
@@ -156,23 +158,23 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     },
     tags: [
       {
-        key: "Components",
+        label: "Components",
         value: "components",
       },
       {
-        key: "Frameworks",
+        label: "Frameworks",
         value: "frameworks",
       },
       {
-        key: "Router",
+        label: "Router",
         value: "router",
       },
       {
-        key: "Performance",
+        label: "Performance",
         value: "performance",
       },
       {
-        key: "Getting Started",
+        label: "Getting Started",
         value: "gettingstarted",
       },
     ],
@@ -190,23 +192,23 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     },
     tags: [
       {
-        key: "Mobile",
+        label: "Mobile",
         value: "mobile",
       },
       {
-        key: "Firebase",
+        label: "Firebase",
         value: "firebase",
       },
       {
-        key: "Plugins",
+        label: "Plugins",
         value: "plugins",
       },
       {
-        key: "Web",
+        label: "Web",
         value: "web",
       },
       {
-        key: "Widgets",
+        label: "Widgets",
         value: "widgets",
       },
     ],
@@ -226,75 +228,75 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     // https://cloud.google.com/products
     tags: [
       {
-        key: "AI and Machine Learning",
+        label: "AI and Machine Learning",
         value: "ai-ml",
       },
       {
-        key: "API Management",
+        label: "API Management",
         value: "api-management",
       },
       {
-        key: "Compute",
+        label: "Compute",
         value: "compute",
       },
       {
-        key: "Containers",
+        label: "Containers",
         value: "containers",
       },
       {
-        key: "Data Analytics",
+        label: "Data Analytics",
         value: "data-analytics",
       },
       {
-        key: "Databases",
+        label: "Databases",
         value: "databases",
       },
       {
-        key: "Developer Tools",
+        label: "Developer Tools",
         value: "developer-tools",
       },
       {
-        key: "Healthcare and Life Sciences",
+        label: "Healthcare and Life Sciences",
         value: "healthcare-life-sciences",
       },
       {
-        key: "Hybrid and Multicloud",
+        label: "Hybrid and Multicloud",
         value: "hybrid-multicloud",
       },
       {
-        key: "Internet of Things",
+        label: "Internet of Things",
         value: "iot",
       },
       {
-        key: "Management Tools",
+        label: "Management Tools",
         value: "management-tools",
       },
       {
-        key: "Media and Gaming",
+        label: "Media and Gaming",
         value: "media-gaming",
       },
       {
-        key: "Migration",
+        label: "Migration",
         value: "migration",
       },
       {
-        key: "Networking",
+        label: "Networking",
         value: "networking",
       },
       {
-        key: "Operations",
+        label: "Operations",
         value: "operations",
       },
       {
-        key: "Security and Identity",
+        label: "Security and Identity",
         value: "security-identity",
       },
       {
-        key: "Serverless Computing",
+        label: "Serverless Computing",
         value: "serverless-computing",
       },
       {
-        key: "Storage",
+        label: "Storage",
         value: "storage",
       },
     ],
@@ -312,31 +314,31 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     },
     tags: [
       {
-        key: "Build/Tools",
+        label: "Build/Tools",
         value: "build-tools",
       },
       {
-        key: "Compose",
+        label: "Compose",
         value: "compose",
       },
       {
-        key: "Architecture",
+        label: "Architecture",
         value: "architecture",
       },
       {
-        key: "Kotlin",
+        label: "Kotlin",
         value: "kotlin",
       },
       {
-        key: "Samples",
+        label: "Samples",
         value: "samples",
       },
       {
-        key: "Modern Android Development",
+        label: "Modern Android Development",
         value: "modern-android-development",
       },
       {
-        key: "UI",
+        label: "UI",
         value: "ui",
       },
     ],
@@ -351,12 +353,13 @@ export function getTag(product: string, value: string) {
     console.warn("Warning: unknown tag", value);
     return {
       label: value.charAt(0).toUpperCase() + value.slice(1),
+      color: "bg-gray-500"
     };
   }
 
   const t = p.tags[ind];
   return {
-    label: t.key,
+    label: t.label,
     color: TAG_COLORS[ind % TAG_COLORS.length],
   };
 }

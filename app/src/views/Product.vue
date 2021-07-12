@@ -85,7 +85,7 @@
 
         <CheckboxGroup
           prefix="category"
-          :keys="product.tags.map((t) => t.key)"
+          :keys="product.tags.map((t) => t.label)"
           :values="product.tags.map((t) => t.value)"
           v-model="categories"
         />
