@@ -2,7 +2,7 @@
   "version": 1,
   "source": "medium",
   "authorIds": [
-    "CodingDoug"
+    "codingdoug"
   ],
   "author": "Doug Stevenson",
   "title": "Why is my currentUser == null in Firebase Auth?",

@@ -1,14 +1,16 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "authorIds": [
-        "happyharis"
-      ],
-    "owner": "happyharis",
-    "repo": "neumorphic",
-    "name": "Flutter Neumorphic Widgets",
-    "shortDescription": "Neumorphic designed user interface, screens and apps created using Flutter. Some examples are pie chart, login screens and a calculator app (with dark mode).",
-    "longDescription": "Neumorphic designed user interface, screens and apps created using Flutter. Some examples are pie chart, login screens and a calculator app (with dark mode).",
-    "content": "README.md",
-    "tags": ["mobile"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "happyharis"
+  ],
+  "owner": "happyharis",
+  "repo": "neumorphic",
+  "name": "Flutter Neumorphic Widgets",
+  "shortDescription": "Neumorphic designed user interface, screens and apps created using Flutter. Some examples are pie chart, login screens and a calculator app (with dark mode).",
+  "longDescription": "Neumorphic designed user interface, screens and apps created using Flutter. Some examples are pie chart, login screens and a calculator app (with dark mode).",
+  "content": "README.md",
+  "tags": [
+    "mobile"
+  ]
+}

@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": ["galeone"],
+  "authorIds": [
+    "galeone"
+  ],
   "author": "Paolo Galeone",
   "title": "Understanding Tensorflow's tensors shape: static and dynamic",
   "link": "https://pgaleone.eu/tensorflow/2018/07/28/understanding-tensorflow-tensors-shape-static-dynamic/",

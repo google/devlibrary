@@ -1,14 +1,16 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "authorIds": [
-        "pedromassango"
-      ],
-    "owner": "pedromassango",
-    "repo": "my_flutter_challenges",
-    "name": "My Flutter Challenges",
-    "shortDescription": "Flutter project containing some flutter UI challenges",
-    "longDescription": "Flutter project containing some flutter UI challenges",
-    "content": "README.md",
-    "tags": ["mobile"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pedromassango"
+  ],
+  "owner": "pedromassango",
+  "repo": "my_flutter_challenges",
+  "name": "My Flutter Challenges",
+  "shortDescription": "Flutter project containing some flutter UI challenges",
+  "longDescription": "Flutter project containing some flutter UI challenges",
+  "content": "README.md",
+  "tags": [
+    "mobile"
+  ]
+}

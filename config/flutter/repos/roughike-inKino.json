@@ -1,14 +1,17 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "authorIds": [
-        "roughike"
-      ],
-    "owner": "roughike",
-    "repo": "inKino",
-    "name": "inKino",
-    "shortDescription": "A multiplatform Dart movie app with 40% of code sharing between Flutter and the Web using AngularDart. Will be updated to 100% Flutter Web & all new stuff soon.",
-    "longDescription": "A multiplatform Dart movie app with 40% of code sharing between Flutter and the Web using AngularDart. Will be updated to 100% Flutter Web & all new stuff soon.",
-    "content": "README.md",
-    "tags": ["mobile","web"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "roughike"
+  ],
+  "owner": "roughike",
+  "repo": "inKino",
+  "name": "inKino",
+  "shortDescription": "A multiplatform Dart movie app with 40% of code sharing between Flutter and the Web using AngularDart. Will be updated to 100% Flutter Web & all new stuff soon.",
+  "longDescription": "A multiplatform Dart movie app with 40% of code sharing between Flutter and the Web using AngularDart. Will be updated to 100% Flutter Web & all new stuff soon.",
+  "content": "README.md",
+  "tags": [
+    "mobile",
+    "web"
+  ]
+}

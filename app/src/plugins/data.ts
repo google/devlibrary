@@ -165,8 +165,10 @@ export async function nextPage<T>(res: PagedResponse<T>) {
 }
 
 export async function fetchAuthor(id: string): Promise<AuthorData> {
-  const repoPath = `/authors/${id}`;
-  const json = await fetchDoc(repoPath);
+  // We are case insensitive on Author IDs in URL paths
+  const normalizedId = id.toLowerCase();
+  const authorPath = `/authors/${normalizedId}`;
+  const json = await fetchDoc(authorPath);
 
   return json as AuthorData;
 }
