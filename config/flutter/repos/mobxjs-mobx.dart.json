@@ -1,14 +1,16 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "authorIds": [
-        ""
-      ],
-    "owner": "mobxjs",
-    "repo": "mobx.dart",
-    "name": "MobX.dart",
-    "shortDescription": "MobX is a hassle free state management library for your Dart and Flutter apps. It relies on the power of observables, actions and reaction to create an automatic wiring of your data and the UI, keeping them in sync with almost no effort on part of the developer.",
-    "longDescription": "MobX is a hassle free state management library for your Dart and Flutter apps. It relies on the power of observables, actions and reaction to create an automatic wiring of your data and the UI, keeping them in sync with almost no effort on part of the developer.",
-    "content": "README.md",
-    "tags": ["packages"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    ""
+  ],
+  "owner": "mobxjs",
+  "repo": "mobx.dart",
+  "name": "MobX.dart",
+  "shortDescription": "MobX is a hassle free state management library for your Dart and Flutter apps. It relies on the power of observables, actions and reaction to create an automatic wiring of your data and the UI, keeping them in sync with almost no effort on part of the developer.",
+  "longDescription": "MobX is a hassle free state management library for your Dart and Flutter apps. It relies on the power of observables, actions and reaction to create an automatic wiring of your data and the UI, keeping them in sync with almost no effort on part of the developer.",
+  "content": "README.md",
+  "tags": [
+    "packages"
+  ]
+}

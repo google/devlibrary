@@ -1,11 +1,13 @@
 {
-    "version": 1.0,
-    "source": "medium",
-    "authorIds": [
-        "suragch"
-      ],
-    "author": "Suragch",
-    "title": "Flutter state management for minimalists",
-    "link": "https://suragch.medium.com/flutter-state-management-for-minimalists-4c71a2f2f0c1?sk=6f9cedfb550ca9cc7f88317e2e7055a0",
-    "tags": ["mobile"]
-    }
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "suragch"
+  ],
+  "author": "Suragch",
+  "title": "Flutter state management for minimalists",
+  "link": "https://suragch.medium.com/flutter-state-management-for-minimalists-4c71a2f2f0c1?sk=6f9cedfb550ca9cc7f88317e2e7055a0",
+  "tags": [
+    "mobile"
+  ]
+}

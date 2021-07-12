@@ -2,7 +2,7 @@
   "version": 1,
   "source": "other",
   "authorIds": [
-    "Adrian-in-Aus"
+    "adrian-in-aus"
   ],
   "author": "Adrian Britton",
   "title": "Deploy Bitmovin Encoding on Compute Engine",

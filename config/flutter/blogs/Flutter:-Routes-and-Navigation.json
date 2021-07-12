@@ -1,11 +1,13 @@
 {
-    "version": 1.0,
-    "source": "medium",
-    "authorIds": [
-        "Nash0x7E2"
-      ],
-    "author": "Neevash Ramdial",
-    "title": "Flutter: Routes and Navigation",
-    "link": "https://medium.com/flutter-community/flutter-routes-and-navigation-69f128a9ea8f",
-    "tags": ["mobile"]
-    }
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "nash0x7e2"
+  ],
+  "author": "Neevash Ramdial",
+  "title": "Flutter: Routes and Navigation",
+  "link": "https://medium.com/flutter-community/flutter-routes-and-navigation-69f128a9ea8f",
+  "tags": [
+    "mobile"
+  ]
+}

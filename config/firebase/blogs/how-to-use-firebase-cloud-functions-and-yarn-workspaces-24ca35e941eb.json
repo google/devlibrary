@@ -2,7 +2,7 @@
   "version": 1,
   "source": "medium",
   "authorIds": [
-    "Santi"
+    "santi"
   ],
   "author": "Santi M.A.",
   "title": "How to use Firebase Cloud Functions and Yarn Workspaces",

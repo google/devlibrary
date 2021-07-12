@@ -2,7 +2,7 @@
   "version": 1,
   "source": "other",
   "authorIds": [
-    "FelipeLujan"
+    "felipelujan"
   ],
   "author": "Juan Felipe Lujan",
   "title": "Deploy React and Nginx to Cloud Run",

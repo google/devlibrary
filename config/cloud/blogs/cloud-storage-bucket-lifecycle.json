@@ -2,7 +2,7 @@
   "version": 1,
   "source": "other",
   "authorIds": [
-    "Phuurl"
+    "phuurl"
   ],
   "author": "Phil Corbett",
   "title": "Add a lifecycle rule for a Cloud Storage bucket",
