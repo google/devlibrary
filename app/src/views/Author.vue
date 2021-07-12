@@ -173,6 +173,13 @@ export default class Author extends Vue {
 
   mounted() {
     this.id = this.$route.params["author"];
+
+    // Re-route to the lowercase author ID
+    if (this.id !== this.id.toLowerCase()) {
+      this.$router.push(`/authors/${this.id.toLowerCase()}`);
+      return;
+    }
+
     this.uiModule.waitFor(this.loadContent());
   }
 
