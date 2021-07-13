@@ -75,9 +75,10 @@ export async function addMediumAuthor(username: string) {
   }
 
   const title = result.ogTitle || "";
-  const photoURL = result.ogImage && 'url' in result.ogImage
-    ? result.ogImage.url.replace("/max/2400/", "/max/512/")
-    : undefined;
+  const photoURL =
+    result.ogImage && "url" in result.ogImage
+      ? result.ogImage.url.replace("/max/2400/", "/max/512/")
+      : undefined;
 
   const author = {
     name: title.split(" – ")[0].trim(),

@@ -66,10 +66,7 @@
 
       <!-- Header (Mobile) -->
       <div class="mobile-only">
-        <div
-          :class="[productStyle.bg, productStyle.text]"
-          class="py-4 px-8"
-        >
+        <div :class="[productStyle.bg, productStyle.text]" class="py-4 px-8">
           <h1 class="text-2xl font-semibold">
             {{ repo.metadata.name }}
           </h1>
@@ -172,7 +169,12 @@ import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
 import UIModule from "@/store/ui";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
-import { AuthorData, RepoData, RepoPage, ProductConfig } from "../../../shared/types";
+import {
+  AuthorData,
+  RepoData,
+  RepoPage,
+  ProductConfig,
+} from "../../../shared/types";
 import * as util from "../../../shared/util";
 import { fetchAuthor, fetchRepo, fetchRepoPage } from "@/plugins/data";
 import { getStyle, ProductStyle } from "@/model/product";

@@ -8,7 +8,8 @@
     "build:production": "vue-cli-service build --mode=production",
     "build:ugc-site-dev": "npm run build:staging",
     "build:ugc-site-prod": "npm run build:production",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "format": "vue-cli-service lint --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",

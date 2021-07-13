@@ -19,5 +19,5 @@ export function writeOrUpdateJSON(filePath: string, content: any) {
     console.log("Writing new file:", filePath);
   }
 
-  fs.writeFileSync(filePath, JSON.stringify(newContent, undefined, 2) + '\n');
+  fs.writeFileSync(filePath, JSON.stringify(newContent, undefined, 2) + "\n");
 }

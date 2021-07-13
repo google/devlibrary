@@ -76,13 +76,13 @@ module.exports = {
             "code::after": {
               display: "none",
             },
-            "table": {
-              width: null
+            table: {
+              width: null,
             },
-            "thead": null,
+            thead: null,
             "thead th": null,
             "thead th:first-child": null,
-            "thead th:last-child": null
+            "thead th:last-child": null,
           },
         },
       },

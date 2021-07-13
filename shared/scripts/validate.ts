@@ -33,14 +33,20 @@ v.addSchema(BlogMetadataSchema, "BlogMetadata");
 v.addSchema(RepoMetadataSchema, "RepoMetadata");
 v.addSchema(AuthorMetadataSchema, "AuthorMetadata");
 
-function validateTags(fPath: string, metadata: RepoMetadata | BlogMetadata, product: ProductConfig) {
-  const tags = product.tags.map(t => t.value);
-  const invalid = metadata.tags.filter(t => !tags.includes(t));
+function validateTags(
+  fPath: string,
+  metadata: RepoMetadata | BlogMetadata,
+  product: ProductConfig
+) {
+  const tags = product.tags.map((t) => t.value);
+  const invalid = metadata.tags.filter((t) => !tags.includes(t));
 
   // If none of the tags are valid, we error out
   if (invalid.length === metadata.tags.length) {
     console.warn(
-      `  x ${fPath} does not have any valid tags. Valid tags for ${product.key} are: ${JSON.stringify(tags)}`
+      `  x ${fPath} does not have any valid tags. Valid tags for ${
+        product.key
+      } are: ${JSON.stringify(tags)}`
     );
     process.exit(1);
   }
@@ -48,7 +54,9 @@ function validateTags(fPath: string, metadata: RepoMetadata | BlogMetadata, prod
   // If at least one tag is valid, we just warn
   if (invalid.length > 0 && invalid.length < metadata.tags.length) {
     console.warn(
-      `  ! ${fPath} has some invalid tags :${JSON.stringify(metadata.tags)}. Valid tags for ${product.key} are: ${JSON.stringify(tags)}`
+      `  ! ${fPath} has some invalid tags :${JSON.stringify(
+        metadata.tags
+      )}. Valid tags for ${product.key} are: ${JSON.stringify(tags)}`
     );
   }
 }
@@ -113,7 +121,7 @@ async function main() {
         const fPath = path.join(productBlogsDir, f);
         const metadata = validateObj<BlogMetadata>(fPath, BlogMetadataSchema);
         if (metadata) {
-          validateTags(fPath, metadata, productConfig)
+          validateTags(fPath, metadata, productConfig);
         }
       }
     }
@@ -128,7 +136,7 @@ async function main() {
         const fPath = path.join(productReposDir, f);
         const metadata = validateObj<RepoMetadata>(fPath, RepoMetadataSchema);
         if (metadata) {
-          validateTags(fPath, metadata, productConfig)
+          validateTags(fPath, metadata, productConfig);
         }
       }
     }
