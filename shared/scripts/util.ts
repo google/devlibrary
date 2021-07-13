@@ -1,12 +1,12 @@
-const fs = require("fs");
-const path = require("path");
+import * as fs from "fs";
+import * as path from "path";
 
-function getConfigDir() {
+export function getConfigDir(): string {
   const dir = path.dirname(__filename);
   return path.resolve(dir, "../../config");
 }
 
-function writeOrUpdateJSON(filePath, content) {
+export function writeOrUpdateJSON(filePath: string, content: any) {
   let newContent = content;
   if (fs.existsSync(filePath)) {
     console.log("Updating file:", filePath);
@@ -21,8 +21,3 @@ function writeOrUpdateJSON(filePath, content) {
 
   fs.writeFileSync(filePath, JSON.stringify(newContent, undefined, 2) + '\n');
 }
-
-module.exports = {
-  writeOrUpdateJSON,
-  getConfigDir,
-};

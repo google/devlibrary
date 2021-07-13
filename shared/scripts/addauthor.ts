@@ -14,39 +14,36 @@
  * limitations under the License.
  */
 
-const fs = require("fs");
-const path = require("path");
-const fetch = require("node-fetch");
-const cheerio = require("cheerio");
-const ogs = require("open-graph-scraper");
+import * as fs from "fs";
+import * as path from "path";
+import fetch from "node-fetch";
+import * as cheerio from "cheerio";
+import ogs from "open-graph-scraper";
 
-const { writeOrUpdateJSON, getConfigDir } = require("./util");
+import { writeOrUpdateJSON, getConfigDir } from "./util";
 
-/**
- * @param {string} id 
- */
-function normalizeAuthorId(id) {
+export function normalizeAuthorId(id: string) {
   // Replace all '.' with '-'
   return id.split(".").join("-").toLowerCase();
 }
 
-function authorFilePath(normalizedId) {
+function authorFilePath(normalizedId: string) {
   return path.join(getConfigDir(), "authors", `${normalizedId}.json`);
 }
 
-function authorExists(normalizedId) {
+function authorExists(normalizedId: string) {
   return fs.existsSync(authorFilePath(normalizedId));
 }
 
-function githubAuthorExists(owner) {
+export function githubAuthorExists(owner: string) {
   return authorExists(normalizeAuthorId(owner));
 }
 
-function mediumAuthorExists(username) {
+export function mediumAuthorExists(username: string) {
   return authorExists(normalizeAuthorId(username));
 }
 
-async function getMediumPostAuthor(url) {
+export async function getMediumPostAuthor(url: string) {
   const res = await fetch(url);
   const html = await res.text();
   const $ = cheerio.load(html);
@@ -65,7 +62,7 @@ async function getMediumPostAuthor(url) {
   return href.replace("https://medium.com/@", "");
 }
 
-async function addMediumAuthor(username) {
+export async function addMediumAuthor(username: string) {
   const options = {
     url: `https://medium.com/@${username}`,
   };
@@ -77,13 +74,15 @@ async function addMediumAuthor(username) {
     return;
   }
 
-  const title = result.ogTitle;
-  const imageUrl = result.ogImage.url.replace("/max/2400/", "/max/512/");
+  const title = result.ogTitle || "";
+  const photoURL = result.ogImage && 'url' in result.ogImage
+    ? result.ogImage.url.replace("/max/2400/", "/max/512/")
+    : undefined;
 
   const author = {
     name: title.split(" – ")[0].trim(),
     bio: "",
-    photoURL: imageUrl,
+    photoURL,
     mediumURL: options.url,
   };
 
@@ -92,9 +91,9 @@ async function addMediumAuthor(username) {
   writeOrUpdateJSON(filePath, author);
 }
 
-async function addGithubAuthor(username) {
+export async function addGithubAuthor(username: string) {
   // If available, use a GitHub token from the environment
-  const headers = {
+  const headers: Record<string, string> = {
     "Content-Type": "application/json",
   };
   if (process.env.GITHUB_TOKEN) {
@@ -126,16 +125,16 @@ async function addGithubAuthor(username) {
   return true;
 }
 
-async function main(args) {
-  if (args.length < 3) {
+export async function main(args: string[]) {
+  if (args.length < 4) {
     console.error(
       "Missing required arguments:\nnpm run addauthor <medium | github> <username>"
     );
     return;
   }
 
-  const source = args[1];
-  const username = args[2];
+  const source = args[2];
+  const username = args[3];
 
   if (source === "github") {
     console.log(`GitHub username: ${username}`);
@@ -148,12 +147,6 @@ async function main(args) {
   }
 }
 
-module.exports = {
-  main,
-  addGithubAuthor,
-  addMediumAuthor,
-  normalizeAuthorId,
-  githubAuthorExists,
-  mediumAuthorExists,
-  getMediumPostAuthor,
-};
+if (require.main === module) {
+  main(process.argv);
+}

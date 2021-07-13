@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-const fs = require("fs");
-const path = require("path");
+import * as fs from "fs";
+import * as path from "path";
 
-const { compileFromFile } = require("json-schema-to-typescript");
+import { compileFromFile } from "json-schema-to-typescript";
 
-async function main() {
+export async function main() {
   const dir = path.dirname(__filename);
 
   const schemaDir = path.resolve(dir, "../schema");
@@ -42,6 +42,6 @@ async function main() {
   }
 }
 
-module.exports = {
-  main,
-};
+if (require.main === module) {
+  main();
+}
