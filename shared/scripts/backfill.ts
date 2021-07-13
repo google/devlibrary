@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-const fs = require("fs");
-const path = require("path");
-const { addMediumBlog, addOtherBlog, addRepo } = require("./addproject");
-const { getConfigDir } = require("./util");
+import * as fs from "fs";
+import * as path from "path";
+import { addMediumBlog, addOtherBlog, addRepo } from "./addproject";
+import { getConfigDir } from "./util";
 
-async function main() {
+export async function main() {
   const products = fs
     .readdirSync(getConfigDir())
     .filter((f) => f !== "authors")
@@ -66,6 +66,6 @@ async function main() {
   }
 }
 
-module.exports = {
-  main,
-};
+if (require.main === module) {
+  main();
+}

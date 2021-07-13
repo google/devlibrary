@@ -1,9 +1,9 @@
-const fs = require("fs");
+import * as fs from "fs";
+import { addMediumBlog, addOtherBlog, addRepo } from "./addproject";
+
 const csvParse = require("csv-parse/lib/sync");
 
-const { addMediumBlog, addOtherBlog, addRepo } = require("./addproject");
-
-async function addRepoFromCsv(record) {
+async function addRepoFromCsv(record: any) {
   const product = record.product.toLowerCase();
 
   const overrides = {
@@ -11,7 +11,7 @@ async function addRepoFromCsv(record) {
     shortDescription: record.shortDescription,
     longDescription: record.longDescription,
     content: record.content,
-    tags: record.tags.split(",").map((t) => t.trim()),
+    tags: record.tags.split(",").map((t: string) => t.trim()),
   };
 
   const projectUrl = `https://github.com/${record.owner}/${record.repo}`;
@@ -25,13 +25,13 @@ async function addRepoFromCsv(record) {
   }
 }
 
-async function addBlogFromCsv(record) {
+async function addBlogFromCsv(record: any) {
   const product = record.product.toLowerCase();
 
   const overrides = {
     title: record.title,
     author: record.author,
-    tags: record.tags.split(",").map((t) => t.trim()),
+    tags: record.tags.split(",").map((t: string) => t.trim()),
   };
 
   try {
@@ -50,21 +50,21 @@ async function addBlogFromCsv(record) {
   }
 }
 
-async function main(args) {
-  if (args.length < 2) {
+export async function main(args: string[]) {
+  if (args.length < 3) {
     console.error(
       "Missing required arguments:\nnpm run importcsv <type> <csvPath>"
     );
     return;
   }
 
-  const type = args[1];
+  const type = args[2];
   if (!(type === "blog" || type === "repo")) {
     console.error(`Invalid type "${type}", must be one of "blog" or "repo"`);
     return;
   }
 
-  const csvPath = args[2];
+  const csvPath = args[3];
   const csvContent = fs.readFileSync(csvPath);
 
   const records = csvParse(csvContent, {
@@ -95,6 +95,6 @@ async function main(args) {
   }
 }
 
-module.exports = {
-  main,
-};
+if (require.main === module) {
+  main(process.argv);
+}

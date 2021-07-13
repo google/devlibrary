@@ -13,31 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import * as fs from "fs";
+import * as path from "path";
+import fetch from "node-fetch";
+import ogs from "open-graph-scraper";
+import { URL } from "url";
 
-const fs = require("fs");
-const fetch = require("node-fetch");
-const path = require("path");
-const ogs = require("open-graph-scraper");
-
-const {
+import {
   normalizeAuthorId,
   addGithubAuthor,
   addMediumAuthor,
   getMediumPostAuthor,
   mediumAuthorExists,
   githubAuthorExists,
-} = require("./addauthor");
-const { writeOrUpdateJSON, getConfigDir } = require("./util");
-const { parse } = require("path");
+} from "./addauthor";
+import { writeOrUpdateJSON, getConfigDir } from "./util";
 
 /**
- * @param {string} product
- * @param {string} projectUrl
- * @param {string | undefined} [projectId]
- * @param {object | undefined} [overrides]
- * @returns {string} the project ID
+ * @returns {Promise<string>} the project ID
  */
-async function addOtherBlog(product, projectUrl, projectId, overrides) {
+export async function addOtherBlog(product:string, projectUrl: string, projectId?: string, overrides?: object): Promise<string> {
   const templateStr = fs
     .readFileSync(path.join(getConfigDir(), "template-blog.json"))
     .toString();
@@ -75,7 +70,7 @@ async function addOtherBlog(product, projectUrl, projectId, overrides) {
   return blogId;
 }
 
-function parseMediumUrl(projectUrl) {
+function parseMediumUrl(projectUrl: string) {
   // Types of medium URL
   // 1) https://medium.com/user/post-slug-12345abcde
   // 2) https://user.medium.com/post-slug-12345abcde
@@ -101,13 +96,9 @@ function parseMediumUrl(projectUrl) {
 }
 
 /**
- * @param {string} product
- * @param {string} projectUrl
- * @param {string | undefined} [projectId]
- * @param {object | undefined} [overrides]
- * @returns {string} the project ID
+ * @returns {Promise<string>} the project ID
  */
-async function addMediumBlog(product, projectUrl, projectId, overrides) {
+export async function addMediumBlog(product: string, projectUrl: string, projectId?: string, overrides?: object): Promise<string> {
   const { slug } = parseMediumUrl(projectUrl);
 
   const templateStr = fs
@@ -144,9 +135,9 @@ async function addMediumBlog(product, projectUrl, projectId, overrides) {
   return blogId;
 }
 
-async function getRepoReadme(owner, repo) {
+async function getRepoReadme(owner: string, repo: string) {
   // If available, use a GitHub token from the environment
-  const headers = {
+  const headers: Record<string, string> = {
     "Content-Type": "application/json",
   };
   if (process.env.GITHUB_TOKEN) {
@@ -163,15 +154,15 @@ async function getRepoReadme(owner, repo) {
 }
 
 /**
- * @param {string} product
- * @param {string} projectUrl
- * @param {string | undefined} [projectId]
- * @param {object | undefined} [overrides]
- * @returns {string} the project ID
+ * @returns {Promise<string>} the project ID
  */
-async function addRepo(product, projectUrl, projectId, overrides) {
+export async function addRepo(product: string, projectUrl: string, projectId?: string, overrides?: object): Promise<string> {
   const re = /github.com\/([\w\-]+)\/([\w\-]+)/;
   const m = projectUrl.match(re);
+
+  if (!m) {
+    throw new Error(`Invalid GitHub URL: ${projectUrl}`);
+  }
 
   const owner = m[1];
   const repo = m[2];
@@ -213,17 +204,17 @@ async function addRepo(product, projectUrl, projectId, overrides) {
   return repoId;
 }
 
-async function main(args) {
-  if (args.length < 3) {
+export async function main(args: string[]) {
+  if (args.length < 4) {
     console.error(
       "Missing required arguments:\nnpm run addproject <product> <url> [id]"
     );
     return;
   }
 
-  const product = args[1];
-  const projectUrl = args[2];
-  const projectId = args.length >= 4 ? args[3] : undefined;
+  const product = args[2];
+  const projectUrl = args[3];
+  const projectId = args.length >= 5 ? args[4] : undefined;
 
   console.log(`Product: ${product}`);
   console.log(`Project: ${projectUrl}`);
@@ -237,9 +228,6 @@ async function main(args) {
   }
 }
 
-module.exports = {
-  main,
-  addMediumBlog,
-  addOtherBlog,
-  addRepo,
-};
+if (require.main === module) {
+  main(process.argv);
+}
