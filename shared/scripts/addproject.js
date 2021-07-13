@@ -15,6 +15,7 @@
  */
 
 const fs = require("fs");
+const fetch = require("node-fetch");
 const path = require("path");
 const ogs = require("open-graph-scraper");
 
@@ -143,6 +144,24 @@ async function addMediumBlog(product, projectUrl, projectId, overrides) {
   return blogId;
 }
 
+async function getRepoReadme(owner, repo) {
+  // If available, use a GitHub token from the environment
+  const headers = {
+    "Content-Type": "application/json",
+  };
+  if (process.env.GITHUB_TOKEN) {
+    headers["Authorization"] = `token ${process.env.GITHUB_TOKEN}`;
+  }
+
+  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/readme`, {
+    method: "get",
+    headers,
+  });
+  const { path } = await res.json();
+
+  return path;
+}
+
 /**
  * @param {string} product
  * @param {string} projectUrl
@@ -177,6 +196,10 @@ async function addRepo(product, projectUrl, projectId, overrides) {
   } else {
     repoFileContent.authorIds = [];
   }
+
+  // Get the name of the README file
+  const readmePath = await getRepoReadme(owner, repo);
+  repoFileContent.content = readmePath;
 
   const repoId = projectId || `${owner}-${repo}`;
   const repoFilePath = path.join(
