@@ -30,12 +30,16 @@ function gh(): Octokit {
 }
 
 export async function getRepo(owner: string, repo: string) {
-  const res = await gh().repos.get({
-    owner,
-    repo,
-  }).catch((e) => {
-    throw new Error(`Unable to get repo ${owner}/${repo}: ${JSON.stringify(e)}`);
-  })
+  const res = await gh()
+    .repos.get({
+      owner,
+      repo,
+    })
+    .catch((e) => {
+      throw new Error(
+        `Unable to get repo ${owner}/${repo}: ${JSON.stringify(e)}`
+      );
+    });
 
   return res.data;
 }
@@ -80,14 +84,20 @@ export async function getFileContent(
   branch: string,
   path: string
 ): Promise<string> {
-  const res = await gh().repos.getContent({
-    owner,
-    repo,
-    path,
-    ref: branch,
-  }).catch((e) => {
-    throw new Error(`Unable to fetch file "${path}@${branch}" from "${owner}/${repo}": ${JSON.stringify(e)}`);
-  });
+  const res = await gh()
+    .repos.getContent({
+      owner,
+      repo,
+      path,
+      ref: branch,
+    })
+    .catch((e) => {
+      throw new Error(
+        `Unable to fetch file "${path}@${branch}" from "${owner}/${repo}": ${JSON.stringify(
+          e
+        )}`
+      );
+    });
 
   if (Array.isArray(res.data)) {
     throw new Error(

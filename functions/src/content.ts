@@ -114,15 +114,15 @@ function sanitizeHtml(
 
   // Workaround for:
   // https://github.com/tailwindlabs/tailwindcss/issues/506
-  $('img[height]').each((_: number, el: cheerio.Element) => {
+  $("img[height]").each((_: number, el: cheerio.Element) => {
     if (el.type === "text") {
       return;
     }
 
-    modifyAttr(el, 'style', (style) => {
-      let height = el.attribs['height'];
-      if (!height.endsWith('px')) {
-        height += 'px';
+    modifyAttr(el, "style", (style) => {
+      let height = el.attribs["height"];
+      if (!height.endsWith("px")) {
+        height += "px";
       }
       return `height: ${height};` + style;
     });

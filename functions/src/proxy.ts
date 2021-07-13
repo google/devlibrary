@@ -51,9 +51,8 @@ export const queryProxy = functions.https.onRequest(async (req, res) => {
   const db = admin.firestore();
 
   const scope = qDecoded.scope || "COLLECTION";
-  let q: admin.firestore.Query = scope == "COLLECTION"
-    ? db.collection(path)
-    : db.collectionGroup(path);
+  let q: admin.firestore.Query =
+    scope == "COLLECTION" ? db.collection(path) : db.collectionGroup(path);
 
   if (qDecoded.where) {
     for (const w of qDecoded.where) {

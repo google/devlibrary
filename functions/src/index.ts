@@ -40,7 +40,13 @@ import * as github from "./github";
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { AuthorData, ProductKey, RepoPage } from "../../shared/types";
-import { index, indexAuthor, unIndexAuthor, unIndexBlog, unIndexRepo } from "./search";
+import {
+  index,
+  indexAuthor,
+  unIndexAuthor,
+  unIndexBlog,
+  unIndexRepo,
+} from "./search";
 
 // See: https://firebase.google.com/docs/functions/writing-and-viewing-logs#console-log
 require("firebase-functions/lib/logger/compat");
@@ -119,7 +125,7 @@ async function refreshAllAuthors() {
   for (const id in authors) {
     const data: AuthorData = {
       id,
-      metadata: authors[id]
+      metadata: authors[id],
     };
 
     await saveAuthorData(id, data);

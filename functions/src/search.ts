@@ -20,7 +20,13 @@ import { Client } from "@elastic/elasticsearch";
 import * as config from "./config";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
-import { AuthorData, AuthorSearchResult, BlogSearchResult, RepoSearchResult, SearchResult } from "../../shared/types";
+import {
+  AuthorData,
+  AuthorSearchResult,
+  BlogSearchResult,
+  RepoSearchResult,
+  SearchResult,
+} from "../../shared/types";
 
 const INDEX_AUTHORS = "authors";
 const INDEX_REPOS = "repos";
@@ -31,7 +37,7 @@ const client = new Client({
     id: config.get("elastic", "id"),
     username: config.get("elastic", "username"),
     password: config.get("elastic", "password"),
-  }
+  },
 });
 
 export async function index(
@@ -50,7 +56,7 @@ export async function index(
       body: {
         id,
         product,
-        metadata: repo
+        metadata: repo,
       },
     });
     promises.push(p);
@@ -63,7 +69,7 @@ export async function index(
       body: {
         id,
         product,
-        metadata: blog
+        metadata: blog,
       },
     });
     promises.push(p);
@@ -73,7 +79,7 @@ export async function index(
 
   // We need to force an index refresh at this point, otherwise we will not
   // get any result in the consequent search
-  await client.indices.refresh({ index:INDEX_REPOS });
+  await client.indices.refresh({ index: INDEX_REPOS });
   await client.indices.refresh({ index: INDEX_BLOGS });
 }
 
@@ -84,7 +90,7 @@ export async function indexAuthor(author: AuthorData) {
     id,
     body: {
       id,
-      metadata
+      metadata,
     },
   });
 }
@@ -92,25 +98,28 @@ export async function indexAuthor(author: AuthorData) {
 export async function unIndexAuthor(id: string) {
   await client.delete({
     index: INDEX_AUTHORS,
-    id
+    id,
   });
 }
 
 export async function unIndexBlog(id: string) {
   await client.delete({
     index: INDEX_BLOGS,
-    id
+    id,
   });
 }
 
 export async function unIndexRepo(id: string) {
   await client.delete({
     index: INDEX_REPOS,
-    id
+    id,
   });
 }
 
-export async function search(term: string, limit: number): Promise<SearchResult[]> {
+export async function search(
+  term: string,
+  limit: number
+): Promise<SearchResult[]> {
   const reposRes = await client.search({
     index: INDEX_REPOS,
     body: {
@@ -136,11 +145,7 @@ export async function search(term: string, limit: number): Promise<SearchResult[
       query: {
         query_string: {
           query: `*${term}*`,
-          fields: [
-            "metadata.author^0.5", 
-            "metadata.title^2", 
-            "metadata.tags"
-          ],
+          fields: ["metadata.author^0.5", "metadata.title^2", "metadata.tags"],
         },
       },
     },
@@ -152,9 +157,7 @@ export async function search(term: string, limit: number): Promise<SearchResult[
       query: {
         query_string: {
           query: `*${term}*`,
-          fields: [
-            "metadata.name", 
-          ],
+          fields: ["metadata.name"],
         },
       },
     },

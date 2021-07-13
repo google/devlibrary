@@ -32,7 +32,12 @@ import { writeOrUpdateJSON, getConfigDir } from "./util";
 /**
  * @returns {Promise<string>} the project ID
  */
-export async function addOtherBlog(product:string, projectUrl: string, projectId?: string, overrides?: object): Promise<string> {
+export async function addOtherBlog(
+  product: string,
+  projectUrl: string,
+  projectId?: string,
+  overrides?: object
+): Promise<string> {
   const templateStr = fs
     .readFileSync(path.join(getConfigDir(), "template-blog.json"))
     .toString();
@@ -79,8 +84,8 @@ function parseMediumUrl(projectUrl: string) {
   if (mainMatch) {
     return {
       author: mainMatch[1],
-      slug: mainMatch[2]
-    }
+      slug: mainMatch[2],
+    };
   }
 
   const subdomainRe = /([\w\-\@\.]+)\.medium\.com\/([\w\-]+)/;
@@ -88,8 +93,8 @@ function parseMediumUrl(projectUrl: string) {
   if (subdomainMatch) {
     return {
       author: subdomainMatch[1],
-      slug: subdomainMatch[2]
-    }
+      slug: subdomainMatch[2],
+    };
   }
 
   return {};
@@ -98,7 +103,12 @@ function parseMediumUrl(projectUrl: string) {
 /**
  * @returns {Promise<string>} the project ID
  */
-export async function addMediumBlog(product: string, projectUrl: string, projectId?: string, overrides?: object): Promise<string> {
+export async function addMediumBlog(
+  product: string,
+  projectUrl: string,
+  projectId?: string,
+  overrides?: object
+): Promise<string> {
   const { slug } = parseMediumUrl(projectUrl);
 
   const templateStr = fs
@@ -144,10 +154,13 @@ async function getRepoReadme(owner: string, repo: string) {
     headers["Authorization"] = `token ${process.env.GITHUB_TOKEN}`;
   }
 
-  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/readme`, {
-    method: "get",
-    headers,
-  });
+  const res = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/readme`,
+    {
+      method: "get",
+      headers,
+    }
+  );
   const { path } = await res.json();
 
   return path;
@@ -156,7 +169,12 @@ async function getRepoReadme(owner: string, repo: string) {
 /**
  * @returns {Promise<string>} the project ID
  */
-export async function addRepo(product: string, projectUrl: string, projectId?: string, overrides?: object): Promise<string> {
+export async function addRepo(
+  product: string,
+  projectUrl: string,
+  projectId?: string,
+  overrides?: object
+): Promise<string> {
   const re = /github.com\/([\w\-]+)\/([\w\-]+)/;
   const m = projectUrl.match(re);
 

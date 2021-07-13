@@ -33,10 +33,7 @@
 
       <!-- Header (Desktop) -->
       <div class="desktop-only">
-        <div
-          :class="[productStyle.bg]"
-          class="py-20 grid grid-cols-10 gap-4"
-        >
+        <div :class="[productStyle.bg]" class="py-20 grid grid-cols-10 gap-4">
           <div
             :class="[productStyle.text]"
             class="col-start-2 col-span-5 text-white"

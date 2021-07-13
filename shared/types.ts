@@ -119,4 +119,7 @@ export interface AuthorSearchResult {
   };
 }
 
-export type SearchResult = BlogSearchResult | RepoSearchResult | AuthorSearchResult;
+export type SearchResult =
+  | BlogSearchResult
+  | RepoSearchResult
+  | AuthorSearchResult;

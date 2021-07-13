@@ -9,7 +9,8 @@
     "importcsv": "ts-node ./scripts/importcsv.ts",
     "validate": "ts-node ./scripts/validate.ts",
     "build": "ts-node ./scripts/generate.ts",
-    "deploy:firebase": "firebase --project=$FIREBASE_PROJECT deploy"
+    "deploy:firebase": "firebase --project=$FIREBASE_PROJECT deploy",
+    "format": "prettier --write *.ts ./scripts/*.ts"
   },
   "author": "",
   "license": "Apache-2.0",
@@ -27,6 +28,7 @@
     "jsonschema": "^1.4.0",
     "node-fetch": "^2.6.1",
     "open-graph-scraper": "^4.8.2",
+    "prettier": "^2.3.2",
     "ts-node": "^10.1.0",
     "typescript": "~3.9.3"
   }
