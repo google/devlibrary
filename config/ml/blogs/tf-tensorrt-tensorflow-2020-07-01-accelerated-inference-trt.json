@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["sayakpaul"],
   "author": "Sayak Paul",
   "title": "Using TensorRT for accelerated deep learning inference",
   "link": "https://sayak.dev/tf.keras/tensorrt/tensorflow/2020/07/01/accelerated-inference-trt.html",
