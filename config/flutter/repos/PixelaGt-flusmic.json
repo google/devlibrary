@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["pablobautista"],
   "owner": "PixelaGt",
   "repo": "flusmic",
   "name": "Flusmic",
