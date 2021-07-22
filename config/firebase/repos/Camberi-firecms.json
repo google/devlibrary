@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["francesco"],
   "owner": "Camberi",
   "repo": "firecms",
   "name": "FireCMS",
