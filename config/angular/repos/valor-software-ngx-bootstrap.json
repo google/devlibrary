@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["dmitriyvalor"],
   "owner": "valor-software",
   "repo": "ngx-bootstrap",
   "name": "ngx-bootstrap",
