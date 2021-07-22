@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["kreuzerk"],
   "author": "Kevin Kreuzer",
   "title": "The ultimate guide to set up your Angular library project",
   "link": "https://medium.com/angular-in-depth/the-ultimate-guide-to-set-up-your-angular-library-project-399d95b63500",
