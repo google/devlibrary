@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["kyleszk"],
   "owner": "GodotNuts",
   "repo": "GodotFirebase",
   "name": "Godot Firebase",
