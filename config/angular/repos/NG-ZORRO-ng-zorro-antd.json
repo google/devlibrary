@@ -1,8 +1,8 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
-  "owner": "NG-ZORRO",
+  "authorIds": ["yadongxie"],
+  "owner": "Yadong Xie",
   "repo": "ng-zorro-antd",
   "name": "ng-zorro-antd",
   "shortDescription": "An enterprise-class Angular UI component library based on Ant Design, all components are open source and free to use under MIT license.",
