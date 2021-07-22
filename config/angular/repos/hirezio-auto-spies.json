@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["shaireznik"],
   "owner": "hirezio",
   "repo": "auto-spies",
   "name": "Auto Spies (Jasmine / Jest)",
