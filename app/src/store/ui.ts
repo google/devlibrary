@@ -18,6 +18,8 @@ import { Module, VuexModule, Mutation, Action } from "vuex-module-decorators";
 
 @Module({
   name: "ui",
+  stateFactory: true,
+  namespaced: true
 })
 export default class UIModule extends VuexModule {
   public loading = false;

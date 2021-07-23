@@ -17,6 +17,7 @@
 module.exports = {
   root: true,
   env: {
+    browser: true,
     node: true,
   },
   extends: [
@@ -24,6 +25,7 @@ module.exports = {
     "plugin:prettier/recommended",
     "eslint:recommended",
     "@vue/typescript/recommended",
+    'plugin:nuxt/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2020,

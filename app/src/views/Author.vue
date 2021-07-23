@@ -140,9 +140,8 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { getModule } from "vuex-module-decorators";
 
-import UIModule from "@/store/ui";
+import { uiModule } from "@/store";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import LargeRepoCard from "@/components/LargeRepoCard.vue";
@@ -163,7 +162,6 @@ import { AuthorData, BlogData, RepoData } from "../../../shared/types";
   },
 })
 export default class Author extends Vue {
-  private uiModule = getModule(UIModule, this.$store);
 
   public id!: string;
   public author: AuthorData | null = null;
@@ -180,7 +178,7 @@ export default class Author extends Vue {
       return;
     }
 
-    this.uiModule.waitFor(this.loadContent());
+    uiModule.waitFor(this.loadContent());
   }
 
   public async loadContent() {

@@ -24,18 +24,14 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { getModule } from "vuex-module-decorators";
-
-import UIModule from "@/store/ui";
+import { uiModule } from "@/store";
 
 @Component({
   components: {},
 })
 export default class ProgressBar extends Vue {
-  public uiModule = getModule(UIModule, this.$store);
-
   get loading() {
-    return this.uiModule.loading;
+    return uiModule.loading;
   }
 }
 </script>

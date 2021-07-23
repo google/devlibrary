@@ -160,13 +160,13 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { getModule } from "vuex-module-decorators";
 import DOMPurify from "dompurify";
+
+import { uiModule } from "@/store";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import AuthorLink from "@/components/AuthorLink.vue";
 import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
-import UIModule from "@/store/ui";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
 import {
@@ -199,8 +199,6 @@ export default class Repo extends Vue {
   private productKey!: string;
   private id!: string;
 
-  private uiModule = getModule(UIModule, this.$store);
-
   async mounted() {
     this.productKey = this.$route.params["product"];
     this.id = this.$route.params["repo"];
@@ -208,7 +206,7 @@ export default class Repo extends Vue {
 
     const p = this.loadContent();
 
-    this.uiModule.waitFor(p);
+    uiModule.waitFor(p);
 
     // After contetn has loaded, highlight all code blocks with HLJS
     p.then(() => {
@@ -258,7 +256,7 @@ export default class Repo extends Vue {
       { mode: "no-cors" }
     );
 
-    this.uiModule.waitFor(res);
+    uiModule.waitFor(res);
     res.then(() => location.reload());
   }
 

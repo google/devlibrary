@@ -98,9 +98,8 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { getModule } from "vuex-module-decorators";
 
-import UIModule from "@/store/ui";
+import { uiModule } from "@/store";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import CircleImage from "@/components/CircleImage.vue";
@@ -115,12 +114,11 @@ import { queryAuthors } from "@/plugins/data";
   },
 })
 export default class Authors extends Vue {
-  private uiModule = getModule(UIModule, this.$store);
 
   public authors: AuthorData[] = [];
 
   mounted() {
-    this.uiModule.waitFor(this.loadContent());
+    uiModule.waitFor(this.loadContent());
   }
 
   get loaded() {

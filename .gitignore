@@ -5,3 +5,5 @@ node_modules
 .DS_Store
 emulator-data
 .runtimeconfig.json
+
+.nuxt

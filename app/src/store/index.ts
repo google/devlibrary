@@ -14,16 +14,12 @@
  * limitations under the License.
  */
 
-import Vue from "vue";
-import Vuex from "vuex";
+// See:
+// https://github.com/championswimmer/vuex-module-decorators#accessing-modules-with-nuxtjs
 
-Vue.use(Vuex);
+import { Store } from 'vuex';
+import { initializeStores } from '@/utils/store-accessor';
 
-import UIModule from "./ui";
-
-export default new Vuex.Store({
-  state: {},
-  modules: {
-    ui: UIModule,
-  },
-});
+const initializer = (store: Store<any>) => initializeStores(store);
+export const plugins = [ initializer ];
+export * from '@/utils/store-accessor';

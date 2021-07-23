@@ -130,14 +130,13 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { getModule } from "vuex-module-decorators";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import SmallRepoCard from "@/components/SmallRepoCard.vue";
 import SmallBlogCard from "@/components/SmallBlogCard.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 
-import UIModule from "@/store/ui";
+import { uiModule } from "@/store";
 
 import { queryRepos, queryBlogs, shuffleArr } from "@/plugins/data";
 
@@ -154,8 +153,6 @@ import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
   },
 })
 export default class Home extends Vue {
-  private uiModule = getModule(UIModule, this.$store);
-
   public recentBlogs: Record<string, BlogData[]> = {};
   public recentRepos: Record<string, RepoData[]> = {};
 
@@ -182,7 +179,7 @@ export default class Home extends Vue {
       promises.push(blogPromise, repoPromise);
     }
 
-    this.uiModule.waitFor(Promise.all(promises));
+    uiModule.waitFor(Promise.all(promises));
   }
 
   public async fetchRecentRepos(product: string) {
@@ -231,7 +228,7 @@ export default class Home extends Vue {
   }
 
   get loading() {
-    return this.uiModule.loading;
+    return uiModule.loading;
   }
 
   get newsletterLink() {

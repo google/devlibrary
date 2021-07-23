@@ -14,6 +14,29 @@
  * limitations under the License.
  */
 
-module.exports = {
-  presets: ["@vue/cli-plugin-babel/preset"],
-};
+import Vue from "vue";
+import VueGtag from "vue-gtag";
+
+// Tailwind CSS
+import "@/assets/css/tailwind.css";
+
+// Fonts
+import "@/assets/css/fonts.css";
+
+// Icons
+import "@/plugins/icons";
+
+// Analytics
+// TODO(STOPSHIP): Get the router passed in
+Vue.use(
+  VueGtag,
+  {
+    config: { id: "G-2BDY03FSVV" },
+
+    // Disable until the user accepts cookies
+    // https://matteo-gabriele.gitbook.io/vue-gtag/opt-in-out
+    enabled: false,
+  }
+);
+
+Vue.config.productionTip = false;

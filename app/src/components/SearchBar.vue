@@ -98,7 +98,7 @@ export default class SearchBar extends Vue {
       };
 
       clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
+      timeout = setTimeout(later, wait) as any;
     };
   }
 

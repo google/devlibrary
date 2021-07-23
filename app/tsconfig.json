@@ -1,27 +1,30 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es2018",
     "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
     "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
     "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env"
+      "@nuxt/types",
+      "@types/node"
     ],
     "paths": {
       "@/*": [
         "src/*"
-      ]
+      ],
+      "~/*": [
+        "src/*"
+      ],
     },
     "lib": [
       "esnext",
+      "esnext.asynciterable",
       "dom",
       "dom.iterable",
       "scripthost"
@@ -37,6 +40,8 @@
   ],
   "exclude": [
     "node_modules",
+    ".nuxt",
+    "dist",
     "../shared/scripts/*.ts"
   ]
 }

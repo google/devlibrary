@@ -157,11 +157,10 @@
 
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
-import { getModule } from "vuex-module-decorators";
 
 import { BlogData, RepoData } from "../../../shared/types";
 
-import UIModule from "@/store/ui";
+import { uiModule } from "@/store";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import LargeRepoCard from "@/components/LargeRepoCard.vue";
@@ -197,8 +196,6 @@ import { getStyle, ProductStyle } from "@/model/product";
   },
 })
 export default class Product extends Vue {
-  private uiModule = getModule(UIModule, this.$store);
-
   public sort = "updated";
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
@@ -244,7 +241,7 @@ export default class Product extends Vue {
       this.blogData = blogData;
     });
 
-    this.uiModule.waitFor(reloadPromise);
+    uiModule.waitFor(reloadPromise);
   }
 
   get queryTags(): string[] | null {
@@ -301,12 +298,12 @@ export default class Product extends Vue {
 
   public async loadNext(data: PagedResponse<unknown>) {
     const p = nextPage(data);
-    this.uiModule.waitFor(p);
+    uiModule.waitFor(p);
   }
 
   public async loadPrev(data: PagedResponse<unknown>) {
     const p = prevPage(data);
-    this.uiModule.waitFor(p);
+    uiModule.waitFor(p);
   }
 
   get product(): ProductConfig {
