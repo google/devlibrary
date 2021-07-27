@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["spikeysanju"],
   "owner": "TheCodeMonks",
   "repo": "Notzz-App",
   "name": "Notzz-App",

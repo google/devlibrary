@@ -61,7 +61,7 @@
       </div>
 
       <div class="col-span-4 hidden lg:block">
-        <img src="@/assets/LibraryGoogleDev-Header.svg" />
+        <img src="/img/LibraryGoogleDev-Header.svg" />
       </div>
 
       <div class="col-span-2"><!-- Gutter --></div>
