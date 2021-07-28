@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gabriel-thecode"
+  ],
+  "owner": "gabriel-TheCode",
+  "repo": "Infotify",
+  "name": "Infotify",
+  "shortDescription": "A newsfeed app built in Kotlin to demonstrate the usage of MVVM with Clean Architecture and Android Architecture Components.",
+  "longDescription": "A newsfeed app built in Kotlin to demonstrate the usage of MVVM with Clean Architecture and Android Architecture Components.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

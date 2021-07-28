@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "abc873693"
+  ],
+  "owner": "abc873693",
+  "repo": "ap_common",
+  "name": "ap_common",
+  "shortDescription": "The school affairs(AP) series shares the engineering kit, rapid development of the school affairs series(AP) app",
+  "longDescription": "The school affairs(AP) series shares the engineering kit, rapid development of the school affairs series(AP) app",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}

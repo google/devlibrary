@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mkobuolys"
+  ],
+  "owner": "mkobuolys",
+  "repo": "flutter-design-patterns",
+  "name": "Flutter Design Patterns",
+  "shortDescription": "An open-source Flutter application that showcases all 23 designs patterns in Object-Oriented Programming described in the Gang of Four book \"Design Patterns: Elements of Reusable Object-Oriented Software\".",
+  "longDescription": "An open-source Flutter application that showcases all 23 designs patterns in Object-Oriented Programming described in the Gang of Four book \"Design Patterns: Elements of Reusable Object-Oriented Software\".",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}
