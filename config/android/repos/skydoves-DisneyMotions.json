@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "DisneyMotions",
+  "name": "DisneyMotions",
+  "shortDescription": "A Disney app using transformation motions based on MVVM (ViewModel, Coroutines, Flow, Room, Repository, Koin) architecture.",
+  "longDescription": "A Disney app using transformation motions based on MVVM (ViewModel, Coroutines, Flow, Room, Repository, Koin) architecture.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "vivien000"
+  ],
+  "owner": "vivien000",
+  "repo": "trompeloeil",
+  "name": "Trompeloeil",
+  "shortDescription": "Simulating 3D perception with face tracking in the browser",
+  "longDescription": "Simulating 3D perception with face tracking in the browser",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "tensorflow.js",
+    "javascript",
+    "web",
+    "parallax",
+    "face",
+    "3d",
+    "face-tracking",
+    "facemesh"
+  ]
+}

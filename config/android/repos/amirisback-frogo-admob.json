@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "amirisback"
+  ],
+  "owner": "amirisback",
+  "repo": "frogo-admob",
+  "name": "frogo-admob",
+  "shortDescription": "Frogo Admob -  Library Helper For Implementation All Admob Function",
+  "longDescription": "Frogo Admob -  Library Helper For Implementation All Admob Function",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "admob"
+  ]
+}

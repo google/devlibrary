@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gabriel-thecode"
+  ],
+  "owner": "gabriel-TheCode",
+  "repo": "OnboardingViewPagerExamples",
+  "name": "OnboardingViewPagerExamples",
+  "shortDescription": "Sweet Android Onboarding ViewPager2 Examples in Kotlin using Lottie Animations. ✨📲",
+  "longDescription": "Sweet Android Onboarding ViewPager2 Examples in Kotlin using Lottie Animations. ✨📲",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}
