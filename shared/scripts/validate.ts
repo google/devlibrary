@@ -54,17 +54,17 @@ class ErrorCollector {
   }
 
   public printSummary() {
-    console.warn("Warnings:");
-    console.warn("--------------------------");
+    console.log("Warnings:");
+    console.log("--------------------------");
     for (const msg of this.warnings) {
-      console.warn(`  ⚠ ${msg}`);
+      console.log(`  ⚠ ${msg}`);
     }
 
-    console.warn();
-    console.warn("Errors:");
-    console.warn("--------------------------");
+    console.log();
+    console.log("Errors:");
+    console.log("--------------------------");
     for (const msg of this.errors) {
-      console.warn(`  x ${msg}`);
+      console.log(`  x ${msg}`);
     }
   }
 }
