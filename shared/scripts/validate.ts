@@ -54,17 +54,22 @@ class ErrorCollector {
   }
 
   public printSummary() {
-    console.log("Warnings:");
-    console.log("--------------------------");
-    for (const msg of this.warnings) {
-      console.log(`  ⚠ ${msg}`);
+    if (this.warnings.length > 0) {
+      console.log(`Warnings (${this.warnings.length}):`);
+      console.log("--------------------------");
+      for (const msg of this.warnings) {
+        console.log(`  ⚠ ${msg}`);
+      }
+      console.log();
     }
 
-    console.log();
-    console.log("Errors:");
-    console.log("--------------------------");
-    for (const msg of this.errors) {
-      console.log(`  x ${msg}`);
+    if (this.errors.length > 0) {
+      console.log(`Errors (${this.errors.length}):`);
+      console.log("--------------------------");
+      for (const msg of this.errors) {
+        console.log(`  x ${msg}`);
+      }
+      console.log();
     }
   }
 }
