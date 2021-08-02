@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ezike"
+  ],
+  "owner": "Ezike",
+  "repo": "Baking-App-Kotlin",
+  "name": "Baking App - Kotlin",
+  "shortDescription": "Baking App project from the Android Nanodegree course, implemented with dynamic feature module, Kotlin coroutines and Flow, dagger hilt, and other Jetpack libraries. ",
+  "longDescription": "Baking App project from the Android Nanodegree course, implemented with dynamic feature module, Kotlin coroutines and Flow, dagger hilt, and other Jetpack libraries. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

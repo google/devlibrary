@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["kaspresso"],
   "owner": "KasperskyLab",
   "repo": "Kaspresso",
   "name": "Kaspresso",
@@ -10,7 +10,12 @@
   "content": "README.md",
   "pages": [],
   "tags": [
-    "tools",
+    "build-tools",
+    "compose",
+    "architecture",
+    "kotlin",
+    "samples",
+    "modern-android-development",
     "ui"
   ]
 }

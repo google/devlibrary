@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["ebrehault"],
   "owner": "guillotinaweb",
   "repo": "ngx-schema-form",
   "name": "ngx-schema-form",

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "powermenu",
+  "name": "PowerMenu",
+  "shortDescription": "The powerful and easiest way to implement modern material popup menu.",
+  "longDescription": "The powerful and easiest way to implement modern material popup menu.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

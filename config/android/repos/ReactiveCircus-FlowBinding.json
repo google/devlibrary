@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "ReactiveCircus",
+  "repo": "FlowBinding",
+  "name": "FlowBinding",
+  "shortDescription": "Kotlin Coroutines Flow binding APIs for Android's platform and unbundled UI widgets, inspired by RxBinding.",
+  "longDescription": "Kotlin Coroutines Flow binding APIs for Android's platform and unbundled UI widgets, inspired by RxBinding.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "ui"
+  ]
+}
