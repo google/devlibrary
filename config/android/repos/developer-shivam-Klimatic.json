@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "developer-shivam"
+  ],
+  "owner": "developer-shivam",
+  "repo": "Klimatic",
+  "name": "Klimatic",
+  "shortDescription": "Klimatic is a weather app made with kotlin to showcase latest technologies in android.",
+  "longDescription": "Klimatic is a weather app made with kotlin to showcase latest technologies in android.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

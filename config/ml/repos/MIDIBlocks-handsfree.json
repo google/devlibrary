@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "midiblocks"
+  ],
+  "owner": "MIDIBlocks",
+  "repo": "handsfree",
+  "name": "Handsfree.js",
+  "shortDescription": "Quickly integrate face, hand, and/or pose tracking to your frontend projects in a snap. Comes with a plugin system for easily toggling models/functionality, a gesture mapper for hands, and a browser extensions starter kit",
+  "longDescription": "Quickly integrate face, hand, and/or pose tracking to your frontend projects in a snap. Comes with a plugin system for easily toggling models/functionality, a gesture mapper for hands, and a browser extensions starter kit",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "javascript",
+    "web",
+    "hands",
+    "hand-tracking",
+    "hci",
+    "accessability",
+    "face",
+    "pose",
+    "gesture"
+  ]
+}
