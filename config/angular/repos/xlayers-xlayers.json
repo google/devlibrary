@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["manekinekko"],
   "owner": "xlayers",
   "repo": "xlayers",
   "name": "xLayers",
