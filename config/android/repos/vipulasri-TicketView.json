@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "vipulasri"
+  ],
+  "owner": "vipulasri",
+  "repo": "TicketView",
+  "name": "TicketView",
+  "shortDescription": "A custom-view to implement TicketView in android with normal, rounded and scallop corners. ",
+  "longDescription": "A custom-view to implement TicketView in android with normal, rounded and scallop corners. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

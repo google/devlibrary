@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["johanneshoppe"],
   "owner": "angular-schule",
   "repo": "angular-cli-ghpages",
   "name": "angular-cli-ghpages",

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["shairez"],
   "owner": "hirezio",
   "repo": "observer-spy",
   "name": "Observer Spy",

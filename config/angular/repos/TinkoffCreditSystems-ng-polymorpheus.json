@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["waterplea"],
   "owner": "TinkoffCreditSystems",
   "repo": "ng-polymorpheus",
   "name": "ng-polymorpheus",

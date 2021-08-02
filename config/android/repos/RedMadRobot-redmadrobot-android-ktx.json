@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["osipxd"],
   "owner": "RedMadRobot",
   "repo": "redmadrobot-android-ktx",
   "name": "red_mad_robot Android KTX",

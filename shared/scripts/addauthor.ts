@@ -31,16 +31,8 @@ function authorFilePath(normalizedId: string) {
   return path.join(getConfigDir(), "authors", `${normalizedId}.json`);
 }
 
-function authorExists(normalizedId: string) {
-  return fs.existsSync(authorFilePath(normalizedId));
-}
-
-export function githubAuthorExists(owner: string) {
-  return authorExists(normalizeAuthorId(owner));
-}
-
-export function mediumAuthorExists(username: string) {
-  return authorExists(normalizeAuthorId(username));
+export function authorExists(owner: string) {
+  return fs.existsSync(authorFilePath(normalizeAuthorId(owner)));
 }
 
 export async function getMediumPostAuthor(url: string) {

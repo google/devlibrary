@@ -8,7 +8,8 @@
       "type": "array",
       "description": "The Dev Library ID of the author(s)",
       "items": {
-        "type": "string"
+        "type": "string",
+        "pattern": "^[a-z0-9\\-_]+$"
       }
     },
     "author": {
