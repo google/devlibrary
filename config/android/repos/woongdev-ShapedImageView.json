@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "woongdev"
+  ],
+  "owner": "woongdev",
+  "repo": "ShapedImageView",
+  "name": "ShapedImageView",
+  "shortDescription": "Android library for using various shape image views easily.",
+  "longDescription": "Android library for using various shape image views easily.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

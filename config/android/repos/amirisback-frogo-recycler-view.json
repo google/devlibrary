@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "amirisback"
+  ],
+  "owner": "amirisback",
+  "repo": "frogo-recycler-view",
+  "name": "frogo-recycler-view",
+  "shortDescription": "Frogo RecyclerView - RecyclerView With No Adapter",
+  "longDescription": "Frogo RecyclerView - RecyclerView With No Adapter",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}
