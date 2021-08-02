@@ -23,6 +23,7 @@ import { ProductConfig } from "../types";
 import { AuthorMetadata } from "../types/AuthorMetadata";
 import { BlogMetadata } from "../types/BlogMetadata";
 import { RepoMetadata } from "../types/RepoMetadata";
+import { authorExists } from "./addauthor";
 
 const BlogMetadataSchema = require("../schema/BlogMetadata.json");
 const RepoMetadataSchema = require("../schema/RepoMetadata.json");
@@ -32,6 +33,48 @@ const v = new Validator();
 v.addSchema(BlogMetadataSchema, "BlogMetadata");
 v.addSchema(RepoMetadataSchema, "RepoMetadata");
 v.addSchema(AuthorMetadataSchema, "AuthorMetadata");
+
+class ErrorCollector {
+  constructor(private warnings: string[] = [], private errors: string[] = []) {}
+
+  public addWarning(message: string) {
+    this.warnings.push(message);
+  }
+
+  public addError(message: string) {
+    this.errors.push(message);
+  }
+
+  public hasErrors() {
+    return this.errors.length > 0;
+  }
+
+  public hasWarnings() {
+    return this.warnings.length > 0;
+  }
+
+  public printSummary() {
+    if (this.warnings.length > 0) {
+      console.log(`Warnings (${this.warnings.length}):`);
+      console.log("--------------------------");
+      for (const msg of this.warnings) {
+        console.log(`  ⚠ ${msg}`);
+      }
+      console.log();
+    }
+
+    if (this.errors.length > 0) {
+      console.log(`Errors (${this.errors.length}):`);
+      console.log("--------------------------");
+      for (const msg of this.errors) {
+        console.log(`  x ${msg}`);
+      }
+      console.log();
+    }
+  }
+}
+
+const collector = new ErrorCollector();
 
 function validateTags(
   fPath: string,
@@ -43,51 +86,62 @@ function validateTags(
 
   // If none of the tags are valid, we error out
   if (invalid.length === metadata.tags.length) {
-    console.warn(
-      `  x ${fPath} does not have any valid tags. Valid tags for ${
+    collector.addError(
+      `${fPath} does not have any valid tags. Valid tags for ${
         product.key
       } are: ${JSON.stringify(tags)}`
     );
-    process.exit(1);
   }
 
   // If at least one tag is valid, we just warn
   if (invalid.length > 0 && invalid.length < metadata.tags.length) {
-    console.warn(
-      `  ! ${fPath} has some invalid tags :${JSON.stringify(
+    collector.addWarning(
+      `${fPath} has some invalid tags :${JSON.stringify(
         metadata.tags
       )}. Valid tags for ${product.key} are: ${JSON.stringify(tags)}`
     );
   }
 }
 
+function validateAuthor(fPath: string, metadata: RepoMetadata | BlogMetadata) {
+  if (!metadata.authorIds) {
+    return;
+  }
+
+  for (const author of metadata.authorIds) {
+    if (!authorExists(author)) {
+      collector.addError(
+        `${fPath} has invalid authorId "${author}", no such .json file exists`
+      );
+    }
+  }
+}
+
 function validateObj<T>(fPath: string, schema: any): T | undefined {
   const fContent = fs.readFileSync(fPath).toString();
   if (fContent.includes("TODO")) {
-    console.warn(
-      `  x ${fPath} contains a 'TODO', did you forget to fill in the template?`
+    collector.addError(
+      `${fPath} contains a 'TODO', did you forget to fill in the template?`
     );
-    process.exit(1);
   }
 
   let obj;
   try {
     obj = JSON.parse(fContent);
   } catch (e) {
-    console.warn(`  x ${fPath} is not valid JSON!`);
-    process.exit(1);
+    collector.addError(`${fPath} is not valid JSON!`);
   }
 
   const res = v.validate(obj, schema);
   if (!res.valid) {
-    console.warn(`  x ${fPath} is not valid!`);
+    let msg = `${fPath} is not valid!`;
     for (const e of res.errors) {
-      console.warn(`  ${e.property}: ${e.message}`);
+      msg += `    ${e.property}: ${e.message}`;
     }
-    process.exit(1);
+    collector.addError(msg);
   }
 
-  console.log(`  ✓ ${fPath}`);
+  console.log(`  - ${fPath}`);
   return obj as T;
 }
 
@@ -122,6 +176,7 @@ async function main() {
         const metadata = validateObj<BlogMetadata>(fPath, BlogMetadataSchema);
         if (metadata) {
           validateTags(fPath, metadata, productConfig);
+          validateAuthor(fPath, metadata);
         }
       }
     }
@@ -137,9 +192,18 @@ async function main() {
         const metadata = validateObj<RepoMetadata>(fPath, RepoMetadataSchema);
         if (metadata) {
           validateTags(fPath, metadata, productConfig);
+          validateAuthor(fPath, metadata);
         }
       }
     }
+  }
+
+  if (collector.hasWarnings() || collector.hasErrors()) {
+    collector.printSummary();
+  }
+
+  if (collector.hasErrors()) {
+    process.exit(1);
   }
 }
 

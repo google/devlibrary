@@ -24,8 +24,7 @@ import {
   addGithubAuthor,
   addMediumAuthor,
   getMediumPostAuthor,
-  mediumAuthorExists,
-  githubAuthorExists,
+  authorExists,
 } from "./addauthor";
 import { writeOrUpdateJSON, getConfigDir } from "./util";
 
@@ -123,7 +122,7 @@ export async function addMediumBlog(
   // TODO: This doesn't work for proandroiodev, etc
   const postAuthor = await getMediumPostAuthor(projectUrl);
   if (postAuthor) {
-    if (!mediumAuthorExists(postAuthor)) {
+    if (!authorExists(postAuthor)) {
       await addMediumAuthor(postAuthor);
     }
   }
@@ -195,12 +194,12 @@ export async function addRepo(
   Object.assign(repoFileContent, overrides || {});
 
   // Check if we have a matching author aready
-  if (!githubAuthorExists(owner)) {
+  if (!authorExists(owner)) {
     await addGithubAuthor(owner);
   }
 
   // We check again to see if we skipped the author or not
-  if (githubAuthorExists(owner)) {
+  if (authorExists(owner)) {
     repoFileContent.authorIds = [normalizeAuthorId(owner)];
   } else {
     repoFileContent.authorIds = [];
