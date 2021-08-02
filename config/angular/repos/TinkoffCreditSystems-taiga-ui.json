@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["romansedov"],
+  "authorIds": ["waterplea"],
   "owner": "TinkoffCreditSystems",
   "repo": "taiga-ui",
   "name": "Taiga UI",

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["vasudevs"],
+  "authorIds": ["vasudev-sharma"],
   "owner": "neuropoly",
   "repo": "axondeepseg",
   "name": "axondeepseg",
