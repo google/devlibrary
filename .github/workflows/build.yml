@@ -16,15 +16,11 @@ name: Build
 
 on:
   push:
-    paths:
-      - 'app/**'
-      - 'functions/**'
-      - 'shared/**'
+    paths-ignore:
+      - 'config/**'
   pull_request:
-    paths:
-      - 'app/**'
-      - 'functions/**'
-      - 'shared/**'
+    paths-ignore:
+      - 'config/**'
 
 env:
   CI: true
