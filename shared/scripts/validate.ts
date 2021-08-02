@@ -104,7 +104,7 @@ function validateAuthor(fPath: string, metadata: RepoMetadata | BlogMetadata) {
   }
 
   for (const author of metadata.authorIds) {
-    if (!(authorExists(author) || authorExists(author))) {
+    if (!authorExists(author)) {
       collector.addError(
         `${fPath} has invalid authorId "${author}", no such .json file exists`
       );
