@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["santoshyadavdev"],
   "owner": "ngworker",
   "repo": "lumberjack",
   "name": "lumberjack",

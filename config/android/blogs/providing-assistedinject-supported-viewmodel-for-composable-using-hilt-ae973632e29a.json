@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "patilshreyas"
+  ],
+  "author": "Shreyas Patil",
+  "title": "Providing AssistedInject supported ViewModel for Composable using Hilt",
+  "link": "https://medium.com/scalereal/providing-assistedinject-supported-viewmodel-for-composable-using-hilt-ae973632e29a",
+  "tags": [
+    "modern-android-development"
+  ]
+}
