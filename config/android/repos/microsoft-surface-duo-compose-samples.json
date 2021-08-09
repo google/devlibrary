@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["joyl1216"],
   "owner": "microsoft",
   "repo": "surface-duo-compose-samples",
   "name": "TwoPaneLayout",
