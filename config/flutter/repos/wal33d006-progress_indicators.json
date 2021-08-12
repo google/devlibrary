@@ -2,9 +2,9 @@
   "version": 1,
   "source": "github",
   "authorIds": [
-    "wal33d006"
+    "wal33d"
   ],
-  "owner": "wal33d006",
+  "owner": "wal33d",
   "repo": "progress_indicators",
   "name": "progress_indicators",
   "shortDescription": "A repo which is also a published flutter package, which gives some cool animated loaders that can be used in Flutter apps to show loading states to the user when doing an asynchronous task.",
