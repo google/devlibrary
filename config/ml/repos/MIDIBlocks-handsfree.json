@@ -12,14 +12,13 @@
   "content": "README.md",
   "pages": [],
   "tags": [
-    "javascript",
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
     "web",
-    "hands",
-    "hand-tracking",
-    "hci",
-    "accessability",
-    "face",
-    "pose",
-    "gesture"
+    "theory"
   ]
 }
