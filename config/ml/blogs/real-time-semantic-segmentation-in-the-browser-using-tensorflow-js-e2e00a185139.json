@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["zaninihugo"],
   "author": "Hugo Zanini",
   "title": "Real-Time semantic segmentation in the browser using TensorFlow.js",
   "link": "https://towardsdatascience.com/real-time-semantic-segmentation-in-the-browser-using-tensorflow-js-e2e00a185139",

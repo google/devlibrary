@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["ebrehault"],
   "owner": "plone",
   "repo": "pastanaga-angular",
   "name": "pastanaga-angular",

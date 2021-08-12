@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["burhanrashid52"],
   "author": "Burhanuddin Rashid",
   "title": "Flutter For Android Developers : How to design LinearLayout in Flutter.",
   "link": "https://proandroiddev.com/flutter-for-android-developers-how-to-design-linearlayout-in-flutter-5d819c0ddf1a",

@@ -1,6 +1,7 @@
 {
   "name": "David East",
-  "bio": "",
+  "bio": "Developer Advocate at Google. Working on @firebase.",
   "photoURL": "https://miro.medium.com/max/512/2*OsqVORR0SS5thaShkj_oeg.jpeg",
-  "mediumURL": "https://medium.com/@davideast"
+  "mediumURL": "https://medium.com/@davideast",
+  "githubURL": "https://github.com/davideast"
 }

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["suragch"],
   "author": "Suragch",
   "title": "Splash screens for dark and light mode in Flutter",
   "link": "https://medium.com/flutter-community/splash-screens-for-dark-and-light-mode-in-flutter-eb85f1aa025?sk=1fd4cb35d58c25c058aab027c588f467",

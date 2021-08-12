@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["shivaylamba"],
   "owner": "mexili",
   "repo": "aiden",
   "name": "Aiden",

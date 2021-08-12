@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["kreuzerk"],
   "author": "Kevin Kreuzer",
   "title": "Test your components with Angular Material’s component harnesses!",
   "link": "https://kevinkreuzer.medium.com/test-your-components-using-angular-materials-component-harnesses-f9c1deebdf5d",

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["suragch"],
   "author": "Suragch",
   "title": "Working with Unicode and Grapheme Clusters in Dart",
   "link": "https://medium.com/flutter-community/working-with-unicode-and-grapheme-clusters-in-dart-b054faab5705?sk=8c45bac22915fbb732841b94d431624f",
