@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["nash0x7e2"],
   "owner": "fluttercommunity",
   "repo": "plus_plugins",
   "name": "Flutter Community Plus Plugins",

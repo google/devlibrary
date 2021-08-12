@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["d3lm"],
   "owner": "typebytes",
   "repo": "angular-checklist",
   "name": "angular-checklist",

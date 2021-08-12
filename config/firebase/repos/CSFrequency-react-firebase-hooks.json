@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["csfrequency"],
   "owner": "CSFrequency",
   "repo": "react-firebase-hooks",
   "name": "React Firebase Hooks",

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["suragch"],
   "author": "Suragch",
   "title": "Iterables and Iterators in Dart",
   "link": "https://medium.com/flutter-community/iterables-and-iterators-in-dart-e670b74c3ddf?sk=87a40550fc4a683b75953427d030a498",

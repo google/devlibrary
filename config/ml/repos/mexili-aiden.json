@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["shivaylamba"],
   "owner": "mexili",
   "repo": "aiden",
   "name": "Aiden",
@@ -10,11 +10,6 @@
   "content": "README.md",
   "pages": [],
   "tags": [
-    "javascript",
-    "web",
-    "exercise",
-    "fitness",
-    "health",
-    "pose"
+    "mobile","nlp","vision","library","notebook","collection","web","theory"
   ]
 }

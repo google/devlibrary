@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["dimitreoliveira"],
   "author": "Dimitre Andrew Aires de Oliveira",
   "title": "Supervised Contrastive Learning for Cassava Leaf Disease Classification",
   "link": "https://medium.com/towards-artificial-intelligence/supervised-contrastive-learning-for-cassava-leaf-disease-classification-9dd47779a966",

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["kaustubhpatange"],
   "author": "Kaustubh Shrikant Patange",
   "title": "Navigating with Animations in Jetpack Compose",
   "link": "https://kaustubhpatange.medium.com/navigating-with-animations-in-jetpack-compose-5655820dedb8",

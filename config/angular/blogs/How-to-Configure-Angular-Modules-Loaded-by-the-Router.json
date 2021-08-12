@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["ozak"],
   "author": "Levent Arman Özak",
   "title": "How to Configure Angular Modules Loaded by the Router",
   "link": "https://medium.com/volosoft/how-to-configure-angular-modules-loaded-by-the-router-9395fd91f522",

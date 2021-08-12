@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["suragch"],
   "author": "Suragch",
   "title": "How text editing works internally in Flutter",
   "link": "https://medium.com/flutter-community/how-text-editing-works-internally-in-flutter-45cde5df54b4?sk=1ce1d021848fdb1ce64af0d225bdd463",
