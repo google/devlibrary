@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "yogeshpaliyal"
+  ],
+  "owner": "yogeshpaliyal",
+  "repo": "KeyPass",
+  "name": "KeyPass",
+  "shortDescription": "Complete Encrypted Offline Password Manager",
+  "longDescription": "Complete Encrypted Offline Password Manager",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

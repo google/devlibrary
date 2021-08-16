@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "waynegakuo"
+  ],
+  "owner": "waynegakuo",
+  "repo": "weather-forecast",
+  "name": "weather-forecast",
+  "shortDescription": "A simple Weather Forecast app built using Angular, Tailwind CSS, OpenWeather API & HERE Geocoding API.",
+  "longDescription": "A simple Weather Forecast app built using Angular, Tailwind CSS, OpenWeather API & HERE Geocoding API.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

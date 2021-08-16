@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "AshwiniApp",
+  "repo": "Ashwini",
+  "name": "Ashwini",
+  "shortDescription": "Crowdsourcing platform for doctors treating Covid-19 patients. Any registered medical practitioner can logon to the app and search specific cases similar to theirs and impart the best treatment from others' experience.",
+  "longDescription": "Crowdsourcing platform for doctors treating Covid-19 patients. Any registered medical practitioner can logon to the app and search specific cases similar to theirs and impart the best treatment from others' experience.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

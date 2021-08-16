@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["alexv525"],
+  "authorIds": [
+    "alexv525"
+  ],
   "owner": "fluttercandies",
   "repo": "flutter_wechat_assets_picker",
   "name": "flutter_wechat_assets_picker",
