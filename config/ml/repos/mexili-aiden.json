@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["shivaylamba"],
+  "authorIds": [
+    "shivaylamba"
+  ],
   "owner": "mexili",
   "repo": "aiden",
   "name": "Aiden",
@@ -10,6 +12,13 @@
   "content": "README.md",
   "pages": [],
   "tags": [
-    "mobile","nlp","vision","library","notebook","collection","web","theory"
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web",
+    "theory"
   ]
 }

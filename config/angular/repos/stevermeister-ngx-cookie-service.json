@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "stevermeister"
+  ],
+  "owner": "stevermeister",
+  "repo": "ngx-cookie-service",
+  "name": "ngx-cookie-service",
+  "shortDescription": "Angular service to read, set and delete browser cookies. Originally based on the ng2-cookies library. The experienced team behind Studytube will take care of our cookie service from now on.",
+  "longDescription": "Angular service to read, set and delete browser cookies. Originally based on the ng2-cookies library. The experienced team behind Studytube will take care of our cookie service from now on.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}
