@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "swarup4741"
+  ],
+  "owner": "swarup4741",
+  "repo": "stacksense",
+  "name": "stacksense ",
+  "shortDescription": "Stacksense lets you be free of worries about carring your files and essential documents ",
+  "longDescription": "Stacksense lets you be free of worries about carring your files and essential documents ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web"
+  ]
+}

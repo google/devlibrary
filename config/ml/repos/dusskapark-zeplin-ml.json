@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "dusskapark"
+  ],
+  "owner": "dusskapark",
+  "repo": "zeplin-ml",
+  "name": "Zeplin ML",
+  "shortDescription": "A project using TensorFlowJS to create an assistant, that helps designers by keep-watching numerous design elements instead of humans. This project uses Zeplin API to fetch Zeplin screens and also uses Object Detection API of Tenserflow JS to detect UI objects inside the screens.",
+  "longDescription": "A project using TensorFlowJS to create an assistant, that helps designers by keep-watching numerous design elements instead of humans. This project uses Zeplin API to fetch Zeplin screens and also uses Object Detection API of Tenserflow JS to detect UI objects inside the screens.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","nlp","collection","web","theory"
+  ]
+}

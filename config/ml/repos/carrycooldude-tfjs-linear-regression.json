@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "carrycooldude"
+  ],
+  "owner": "carrycooldude",
+  "repo": "tfjs-linear-regression",
+  "name": "tfjs-linear-regression",
+  "shortDescription": "The Project is a visual representation of Linear Regression Model , built with Tensorflow.js\nUsing Libraries : p5.js and tf.js ",
+  "longDescription": "The Project is a visual representation of Linear Regression Model , built with Tensorflow.js\nUsing Libraries : p5.js and tf.js ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","nlp","vision","web","theory"
+  ]
+}

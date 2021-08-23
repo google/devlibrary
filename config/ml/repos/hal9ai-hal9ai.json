@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "hal9ai",
+  "repo": "hal9ai",
+  "name": "hal9ai",
+  "shortDescription": "hal9.js is an open source library and platform to compose web-based machine learning pipelines.",
+  "longDescription": "hal9.js is an open source library and platform to compose web-based machine learning pipelines.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+   "nlp","vision","library","web","theory"
+  ]
+}
