@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "nirmaljeffrey"
+  ],
+  "owner": "nirmaljeffrey",
+  "repo": "FlickVibes",
+  "name": "FlickVibes",
+  "shortDescription": "FlickVibes is an android application that suggests movies to users based on their feelings",
+  "longDescription": "FlickVibes is an android application that suggests movies to users based on their feelings",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

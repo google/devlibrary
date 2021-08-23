@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["immadisairaj"],
+  "author": "Sai Rajendra Immadi",
+  "title": "Google Analytics with Flutter Web",
+  "link": "https://immadisairaj.me/blog/2020/google-analytics-with-flutter-web/",
+  "tags": [
+    "mobile","plugins","web","widgets"
+  ]
+}

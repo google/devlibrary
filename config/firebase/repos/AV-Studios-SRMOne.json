@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "AV-Studios",
+  "repo": "SRMOne",
+  "name": "SRMOne",
+  "shortDescription": "SRM One is a Notes, PDFs, and Book viewer app that fetches and displays files from Firebase.",
+  "longDescription": "SRM One is a Notes, PDFs, and Book viewer app that fetches and displays files from Firebase.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "android",
+    "ios",
+    "web",
+    "flutter"
+  ]
+}
