@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "arteevraina"
+  ],
+  "owner": "arteevraina",
+  "repo": "KnowYourDonor",
+  "name": "KnowYourDonor",
+  "shortDescription": "KnowYourDonor is an Android application made for the purpose of connecting patients with blood donors and vice versa during the harsh times of Covid 19 pandemic.",
+  "longDescription": "KnowYourDonor is an Android application made for the purpose of connecting patients with blood donors and vice versa during the harsh times of Covid 19 pandemic.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","firebase","samples"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "iamsahdeep"
+  ],
+  "owner": "iamSahdeep",
+  "repo": "liquid_swipe_flutter",
+  "name": "Liquid Swipe  Flutter",
+  "shortDescription": "Liquid swipe is the revealing clipper to bring off amazing liquid like swipe to stacked Container or Widgets.",
+  "longDescription": "Liquid swipe is the revealing clipper to bring off amazing liquid like swipe to stacked Container or Widgets.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web","widgets","samples"
+  ]
+}

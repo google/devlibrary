@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akanksha1212"
+  ],
+  "owner": "Akanksha1212",
+  "repo": "Learnify",
+  "name": "Learnify",
+  "shortDescription": "Learnify is a mobile app that helps kids with dyslexia by helping them out in converting PDF/Image(Text) to Audio, font of PDFs to open dyslexic and voice to text notes. ",
+  "longDescription": "Learnify is a mobile app that helps kids with dyslexia by helping them out in converting PDF/Image(Text) to Audio, font of PDFs to open dyslexic and voice to text notes. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","widgets","samples"
+  ]
+}

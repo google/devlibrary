@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gnomeontherun"
+  ],
+  "owner": "gnomeontherun",
+  "repo": "clarity",
+  "name": "Clarity Design System ",
+  "shortDescription": "Clarity is a scalable, customizable, open source design system that works with Angular. It provides high quality UI components to build your own applications with ease.",
+  "longDescription": "Clarity is a scalable, customizable, open source design system that works with Angular. It provides high quality UI components to build your own applications with ease.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "frameworks",
+    "performance",
+    "gettingstarted"
+  ]
+}
