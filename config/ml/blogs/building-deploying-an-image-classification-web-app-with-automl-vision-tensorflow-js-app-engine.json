@@ -6,7 +6,6 @@
   "title": "Building & Deploying an Image Classification Web App with GCP AutoML Vision Edge, Tensorflow.js & GCP App Engine",
   "link": "https://towardsdatascience.com/building-deploying-an-image-classification-web-app-with-automl-vision-tensorflow-js-app-engine-08-3157958a3289",
   "tags": [
-    "automl",
-    "cloudai"
+    "collection","web","theory"
   ]
 }
