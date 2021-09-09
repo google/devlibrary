@@ -27,17 +27,23 @@
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p>
-            <strong>devlibrary.withgoogle.com</strong> is a curated platform for
-            technical content related to
-            <a href="https://developers.google.com/products/" target="blank">
-              Google’s developer products and platforms </a
-            >.
+            <strong>Dev Library</strong> is a curated platform for
+            technical content written or built using any of the following Google technologies:
+              <ul class="ml-6 mt-2 list-disc">
+            <li>Android</li>
+            <li>Angular</li>
+            <li>Flutter</li>
+            <li>Firebase</li>
+            <li>Google Cloud</li>
+            <li>Google Assistant</li>
+          </ul>
+          
           </p>
           <p class="mt-4">Currently we accept two kinds of content:</p>
 
           <ul class="ml-6 mt-2 list-disc">
             <li>GitHub repositories</li>
-            <li>Blog posts on Medium</li>
+            <li>Blog posts</li>
           </ul>
 
           <p class="mt-4">
@@ -127,7 +133,7 @@
           <p class="mt-4">
             You can submit your content through this
             <a href="https://forms.gle/E54pxK3JzpXMGyqN7" target="blank">form</a
-            >. We will take 2-4 weeks to revert back to you on the next steps.
+            >. We aim to reply within 2-4 weeks.
           </p>
           <p class="mt-6 font-bold">How does a submission get selected?</p>
           <p class="mt-4">
