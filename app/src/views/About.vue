@@ -133,7 +133,7 @@
           <p class="mt-4">
             You can submit your content through this
             <a href="https://forms.gle/E54pxK3JzpXMGyqN7" target="blank">form</a
-            >. We take 2-4 weeks to revert on the next steps.
+            >. We aim to reply within 2-4 weeks.
           </p>
           <p class="mt-6 font-bold">How does a submission get selected?</p>
           <p class="mt-4">

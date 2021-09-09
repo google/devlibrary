@@ -27,7 +27,7 @@
 
         <div class="lg:text-lg">
           <p class="mt-4 lg:mt-10">
-            Welcome to Dev Library, a platform to showcase the projects or articles you developers have
+            Welcome to Dev Library, a platform to showcase the projects and articles that developers have
             built with Google technologies. Browse, learn, or
             <a
               class="underline"
