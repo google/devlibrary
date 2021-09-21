@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kapilkumar2001"
+  ],
+  "owner": "kapilkumar2001",
+  "repo": "Arcadia-Auction",
+  "name": "CS:GO Tournament App",
+  "shortDescription": "An App where all the details about a tournament can be found. ",
+  "longDescription": "An App where all the details about a tournament can be found. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "mobile"
+  ]
+}

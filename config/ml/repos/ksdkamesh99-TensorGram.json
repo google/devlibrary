@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ksdkamesh99"
+  ],
+  "owner": "ksdkamesh99",
+  "repo": "TensorGram",
+  "name": "TensorGram",
+  "shortDescription": "A real-time remote service to get the tensorflow callbacks to the telegram including the details of metrics",
+  "longDescription": "A real-time remote service to get the tensorflow callbacks to the telegram including the details of metrics",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","nlp","vision","library"
+  ]
+}
