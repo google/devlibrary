@@ -1,11 +1,16 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": ["infiniteoverflow"],
+  "authorIds": [
+    "infiniteoverflow"
+  ],
   "author": "Aswin Gopinathan",
   "title": "HiveDB for Flutter",
   "link": "https://infiniteoverflow.hashnode.dev/hive-the-right-way",
   "tags": [
-    "mobile","plugins","web","widgets"
+    "mobile",
+    "plugins",
+    "web",
+    "widgets"
   ]
 }

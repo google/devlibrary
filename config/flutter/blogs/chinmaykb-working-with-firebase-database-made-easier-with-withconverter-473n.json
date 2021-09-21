@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["chinmaykb"],
+  "author": "Chinmay Kabi",
+  "title": "Working with Firebase Cloud Firestore made easier with \"withConverter()\"",
+  "link": "https://dev.to/chinmaykb/working-with-firebase-database-made-easier-with-withconverter-473n",
+  "tags": [
+    "mobile",
+    "firebase"
+  ]
+}
