@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "baimamboukar"
+  ],
+  "owner": "baimamboukar",
+  "repo": "voting_system_app",
+  "name": "voting_system_app",
+  "shortDescription": "Easy-to-use e-voting mobile application where you can run safe, secure & transparent elections. Users can cast their vote only once and then view the results in real-time",
+  "longDescription": "Easy-to-use e-voting mobile application where you can run safe, secure & transparent elections. Users can cast their vote only once and then view the results in real-time",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "mobile"
+  ]
+}

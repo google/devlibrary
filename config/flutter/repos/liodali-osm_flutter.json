@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "liodali"
+  ],
+  "owner": "liodali",
+  "repo": "osm_flutter",
+  "name": "liodali",
+  "shortDescription": "OpenStreetMap for Flutter",
+  "longDescription": "OpenStreetMap for Flutter",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile", "general", "samples"
+  ]
+}
