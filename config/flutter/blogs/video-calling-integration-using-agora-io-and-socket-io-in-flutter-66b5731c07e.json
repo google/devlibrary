@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "jaimil-dev8819"
+  ],
+  "author": "Jaimil Patel",
+  "title": "Video Calling Integration Using Agora IO and Socket IO in Flutter",
+  "link": "https://medium.com/geekculture/video-calling-integration-using-agora-io-and-socket-io-in-flutter-66b5731c07e",
+  "tags": [
+    "mobile",
+    "packages"
+  ]
+}
