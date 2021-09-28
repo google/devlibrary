@@ -35,7 +35,7 @@
             <li>Flutter</li>
             <li>Firebase</li>
             <li>Google Cloud</li>
-            <li>Google Assistant</li>
+       
           </ul>
           
           </p>
