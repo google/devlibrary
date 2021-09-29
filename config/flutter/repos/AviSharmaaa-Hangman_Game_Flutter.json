@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "avisharmaaa"
+  ],
+  "owner": "AviSharmaaa",
+  "repo": "Hangman_Game_Flutter",
+  "name": "Hangman_Game_Flutter",
+  "shortDescription": "A simple Hangman Game build using Flutter framework. It comes with 2 modes, an easy mode which has 5 lives per turn, and a timer mode with 60 secs of the time limit and 5 lives per turn.",
+  "longDescription": "A simple Hangman Game build using Flutter framework. It comes with 2 modes, an easy mode which has 5 lives per turn, and a timer mode with 60 secs of the time limit and 5 lives per turn.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "mobile"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "hi-dhl"
+  ],
+  "owner": "hi-dhl",
+  "repo": "AndroidX-Jetpack-Practice",
+  "name": "AndroidX-Jetpack-Practice",
+  "shortDescription": "致力于建立最全、最新的的 AndroidX Jetpack 相关组件的实践项目",
+  "longDescription": "致力于建立最全、最新的的 AndroidX Jetpack 相关组件的实践项目",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

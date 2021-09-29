@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bamblebam"
+  ],
+  "owner": "bamblebam",
+  "repo": "tensorflow-model-generator",
+  "name": "tensorflow-model-generator",
+  "shortDescription": "This is a web app which gives the user access to a custom formset which he can fill according to his needs and generate the respective tensorflow sequential API code.\nWe also provide an interface to store these models so that they can be used again or edited in the future.\nIt also serves as a PWA.\nLink to the website: https://tensorflow-model-generator-bamblebam.vercel.app/",
+  "longDescription": "This is a web app which gives the user access to a custom formset which he can fill according to his needs and generate the respective tensorflow sequential API code.\nWe also provide an interface to store these models so that they can be used again or edited in the future.\nIt also serves as a PWA.\nLink to the website: https://tensorflow-model-generator-bamblebam.vercel.app/",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","nlp","vision","library"
+  ]
+}

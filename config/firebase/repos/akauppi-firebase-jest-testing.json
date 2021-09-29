@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akauppi"
+  ],
+  "owner": "akauppi",
+  "repo": "firebase-jest-testing",
+  "name": "firebase-jest-testing",
+  "shortDescription": "Tools for testing Firebase back-end features, using Jest.\n\nThis repo provides a \"one stop\", opinionated, end-to-end approach to testing Firebase projects. Using it may save you from reading countless pages of documentation and evaluating different testing strategies and libraries, leaving you more time to focus on your application.",
+  "longDescription": "Tools for testing Firebase back-end features, using Jest.\n\nThis repo provides a \"one stop\", opinionated, end-to-end approach to testing Firebase projects. Using it may save you from reading countless pages of documentation and evaluating different testing strategies and libraries, leaving you more time to focus on your application.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web"
+  ]
+}

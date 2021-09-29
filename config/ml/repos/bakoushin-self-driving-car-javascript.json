@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bakoushin"
+  ],
+  "owner": "bakoushin",
+  "repo": "self-driving-car-javascript",
+  "name": "Run a self-driving car using JavaScript and TensorFlow.js",
+  "shortDescription": "Demonstration of how to train a self-driving car to steer and to drive autonomously in Udacity Self-Driving Car Simulator using TensorFlow.js.",
+  "longDescription": "Demonstration of how to train a self-driving car to steer and to drive autonomously in Udacity Self-Driving Car Simulator using TensorFlow.js.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","nlp","vision","library","notebook","collection","web"
+  ]
+}

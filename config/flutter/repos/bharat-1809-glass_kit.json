@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bharat-1809"
+  ],
+  "owner": "bharat-1809",
+  "repo": "glass_kit",
+  "name": "glass_kit",
+  "shortDescription": "A package containing widgets to implement glass morphism in flutter apps.",
+  "longDescription": "A package containing widgets to implement glass morphism in flutter apps.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets"
+  ]
+}

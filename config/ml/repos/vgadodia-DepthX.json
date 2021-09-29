@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "vgadodia"
+  ],
+  "owner": "vgadodia",
+  "repo": "DepthX",
+  "name": "DepthSense",
+  "shortDescription": "A mobile platform powered by Tensorflow.js to turn your smartphone into a gesture-based controller for music in the car.",
+  "longDescription": "A mobile platform powered by Tensorflow.js to turn your smartphone into a gesture-based controller for music in the car.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","nlp","vision"
+  ]
+}
