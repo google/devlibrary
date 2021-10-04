@@ -46,7 +46,7 @@
             <li>Blog posts</li>
           </ul>
 
-          <p class="mt-4">
+          <p class="mt-4"> 
             This platform will evolve as we receive more submissions and we are
             working to accept a wider range of content, so stay tuned!
           </p>
