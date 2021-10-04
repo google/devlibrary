@@ -2,13 +2,14 @@
   "version": 1,
   "source": "medium",
   "authorIds": [
-    "pr_mais"
+    "pr-mais"
   ],
   "author": "Mais Alheraki",
   "title": "Building a Realtime Cryptocurrency App with Flutter",
   "link": "https://medium.com/flutter-community/building-a-realtime-cryptocurrency-app-with-flutter-8c05522e8dcd",
   "tags": [
     "mobile",
-    "packages"
+    "plugins",
+    "samples"
   ]
 }
