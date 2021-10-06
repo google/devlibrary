@@ -23,13 +23,13 @@
       We serve cookies on this site to analyze traffic, remember your
       preferences, and optimize your experience.
     </p>
-    <div class="flex flex-row mt-2 text-blue-500">
+    <div class="flex flex-row mt-2 text-blue-600">
       <span class="flex-grow"><!-- spacer --></span>
       <a
         href="https://policies.google.com/technologies/cookies"
         target="_blank"
       >
-        <MaterialButton>More Details</MaterialButton>
+        <MaterialButton>More details</MaterialButton>
       </a>
       <MaterialButton @click.native="onAccepted">OK</MaterialButton>
     </div>

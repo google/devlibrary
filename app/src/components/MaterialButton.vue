@@ -17,7 +17,7 @@
 <template>
   <button
     :class="type"
-    class="materialbutton cursor-pointer whitespace-pre rounded-sm uppercase text-sm px-3 py-2 shadow transition-shadow"
+    class="materialbutton cursor-pointer whitespace-pre rounded font-display text-sm px-3 py-2 border border-gray-200 transition-colors"
   >
     <slot></slot>
   </button>
@@ -42,31 +42,32 @@ export default class MaterialButton extends Vue {
 }
 
 .primary {
-  @apply text-white bg-blue-500;
+  @apply text-white bg-blue-600;
 }
 
 .primary:hover {
-  @apply bg-blue-600 shadow-md;
+  @apply bg-blue-700;
 }
 
 .primary:active {
-  @apply bg-blue-700 shadow-sm;
+  @apply bg-blue-700;
 }
 
 .secondary {
-  @apply text-gray-800 bg-white;
+  @apply text-blue-600 bg-white;
 }
 
 .secondary:hover {
-  @apply bg-gray-100 shadow-md;
+  @apply bg-gray-100;
 }
 
 .secondary:active {
-  @apply bg-gray-200 shadow-sm;
+  @apply bg-gray-200;
 }
 
 .text {
-  @apply text-gray-800 bg-none;
+  @apply border-none;
+  @apply text-blue-600 bg-none;
   @apply shadow-none;
 }
 
@@ -76,19 +77,5 @@ export default class MaterialButton extends Vue {
 
 .text:active {
   @apply bg-gray-900 bg-opacity-20;
-}
-
-.outlined {
-  @apply text-blue-500 bg-none;
-  @apply rounded border-2 border-blue-500;
-  @apply shadow-none;
-}
-
-.outlined:hover {
-  @apply bg-opacity-10 bg-blue-500;
-}
-
-.outlined:active {
-  @apply bg-opacity-20 bg-blue-500;
 }
 </style>

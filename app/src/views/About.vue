@@ -62,11 +62,11 @@
           </p>
           <p class="mt-8 flex flex-wrap gap-4">
             <a href="https://forms.gle/2JoN6csvyvnDC8Nd9" target="_blank">
-              <MaterialButton type="primary"> Send Feedback </MaterialButton>
+              <MaterialButton type="primary"> Send feedback </MaterialButton>
             </a>
 
             <a href="mailto:library-google-dev@google.com">
-              <MaterialButton type="secondary"> Contact Us </MaterialButton>
+              <MaterialButton type="secondary"> Contact us </MaterialButton>
             </a>
           </p>
         </div>

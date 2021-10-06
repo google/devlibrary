@@ -278,7 +278,7 @@ export default class Repo extends Vue {
 
 <style scoped lang="postcss">
 .router-link-exact-active {
-  @apply font-bold text-blue-500;
+  @apply font-bold text-blue-600;
 }
 
 a {

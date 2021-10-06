@@ -67,14 +67,8 @@
       <!-- Button -->
       <div class="mt-6 flex flex-row-reverse">
         <a :href="blog.metadata.link" target="_blank"
-          ><MaterialButton type="text">
-            Read Post
-            <font-awesome-icon
-              icon="external-link-alt"
-              class="ml-1"
-              size="sm"
-            /> </MaterialButton
-        ></a>
+          ><MaterialButton type="secondary"> Read post </MaterialButton></a
+        >
       </div>
     </div>
   </div>

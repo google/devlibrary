@@ -66,7 +66,9 @@
       <!-- Button -->
       <div class="mt-6 flex flex-row-reverse">
         <router-link :to="link"
-          ><MaterialButton type="text">Learn More</MaterialButton></router-link
+          ><MaterialButton type="secondary"
+            >Learn more</MaterialButton
+          ></router-link
         >
       </div>
     </div>

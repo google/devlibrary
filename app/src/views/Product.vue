@@ -44,7 +44,7 @@
             <p class="mt-2">{{ product.description }}</p>
             <a :href="product.docsUrl" target="blank">
               <MaterialButton type="secondary" class="mt-8">
-                Official Docs
+                Official docs
                 <font-awesome-icon icon="external-link-alt" class="ml-1" />
               </MaterialButton>
             </a>
@@ -135,10 +135,10 @@
           <div class="flex flex-row justify-center mt-4 lg:mt-6">
             <MaterialButton
               v-if="canLoadMore"
-              type="outlined"
+              type="text"
               @click.native="loadMore"
             >
-              Load More
+              Load more
             </MaterialButton>
           </div>
         </div>

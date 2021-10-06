@@ -50,7 +50,7 @@
                 placeholder="Enter your email address..."
               />
               <a :href="newsletterLink" target="_blank">
-                <MaterialButton type="primary"> Subscribe </MaterialButton>
+                <MaterialButton type="primary">Subscribe</MaterialButton>
               </a>
             </div>
           </div>
@@ -122,7 +122,7 @@
         >
           <router-link :to="`/products/${p.key}`"
             ><MaterialButton type="text"
-              >All {{ p.name }} Projects</MaterialButton
+              >All {{ p.name }} projects</MaterialButton
             ></router-link
           >
         </div>
