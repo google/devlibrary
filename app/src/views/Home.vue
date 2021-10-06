@@ -100,14 +100,16 @@
 
         <div class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10">
           <div class="home-grid-projects">
-            <SmallRepoCard
+            <LargeRepoCard
               v-for="repo in recentRepos[p.key]"
+              :showTags="false"
               :key="repo.id"
               :repo="repo"
             />
 
-            <SmallBlogCard
+            <LargeBlogCard
               v-for="blog in recentBlogs[p.key]"
+              :showTags="false"
               :key="blog.id"
               :blog="blog"
             />
@@ -134,8 +136,8 @@ import { Component, Vue } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
 import MaterialButton from "@/components/MaterialButton.vue";
-import SmallRepoCard from "@/components/SmallRepoCard.vue";
-import SmallBlogCard from "@/components/SmallBlogCard.vue";
+import LargeRepoCard from "@/components/LargeRepoCard.vue";
+import LargeBlogCard from "@/components/LargeBlogCard.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 
 import UIModule from "@/store/ui";
@@ -149,8 +151,8 @@ import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 @Component({
   components: {
     MaterialButton,
-    SmallRepoCard,
-    SmallBlogCard,
+    LargeRepoCard,
+    LargeBlogCard,
     ProductLogo,
   },
 })

@@ -18,28 +18,54 @@
   <div class="flex flex-col">
     <!-- Card -->
     <div
-      class="flex-grow flex flex-col rounded shadow transition-shadow hover:shadow-lg overflow-hidden"
+      class="flex-grow flex flex-col rounded-lg border border-gray-200 transition-shadow hover:shadow overflow-hidden p-4"
     >
-      <!-- author / medium header -->
-      <div class="bg-gray-200 text-black px-3 py-2">
-        <font-awesome-icon :icon="['far', 'bookmark']" size="lg" class="mr-2" />
-        <span>{{ blog.metadata.author }}</span>
+      <!-- Author photo and name -->
+      <div class="mt-2 flex flex-row items-center">
+        <img
+          class="avatar mr-2 rounded-full"
+          :src="`https://avatars.githubusercontent.com/${blog.metadata.author}`"
+        />
+        <span class="font-display text-lg">{{ blog.metadata.author }}</span>
       </div>
 
-      <!-- blog name -->
-      <div class="flex-grow flex flex-row mt-2 px-3">
-        <a
-          :href="blog.metadata.link"
-          target="_blank"
-          class="text-lg font-medium flex-grow wrap-lines-3"
-        >
-          {{ blog.metadata.title }}</a
+      <!-- Title -->
+      <div class="mt-4 font-display text-2xl">
+        {{ blog.metadata.title }}
+      </div>
+
+      <!-- Tags -->
+      <div
+        v-if="showTags"
+        class="mt-4 flex flex-row gap-2 overflow-hidden items-center"
+      >
+        <TagChip
+          v-for="t in blog.metadata.tags"
+          :key="t"
+          :label="getTag(t).label"
+          :textColor="getTag(t).textColor"
+          :bgColor="getTag(t).bgColor"
+        />
+      </div>
+
+      <span class="flex-grow"><!-- Spacer --></span>
+
+      <!-- Timestamp -->
+      <div class="mt-4 flex flex-row text-sm items-center gap-1 text-gray-600">
+        <font-awesome-icon
+          :icon="['fas', 'book']"
+          size="lg"
+          class="mr-1 text-gray-500"
+        />
+        <span>Blog</span>
+        <span>•</span>
+        <span class="flex-grow"
+          >Updated {{ renderDaysAgo(blog.stats.lastUpdated) }}</span
         >
       </div>
 
-      <!-- link and time to read -->
-      <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
-        <span class="flex-grow"><!-- spacer --></span>
+      <!-- Button -->
+      <div class="mt-6 flex flex-row-reverse">
         <a :href="blog.metadata.link" target="_blank"
           ><MaterialButton type="text">
             Read Post
@@ -51,16 +77,6 @@
         ></a>
       </div>
     </div>
-
-    <!-- Card tags -->
-    <div class="mt-2 flex flex-row overflow-hidden items-center">
-      <TagChip
-        v-for="t in blog.metadata.tags"
-        :key="t"
-        :label="getTag(t).label"
-        :color="getTag(t).color"
-      />
-    </div>
   </div>
 </template>
 
@@ -69,6 +85,8 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 import { BlogData } from "../../../shared/types";
 import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
+
+import * as dates from "@/plugins/dates";
 import * as product from "@/model/product";
 
 @Component({
@@ -79,6 +97,11 @@ import * as product from "@/model/product";
 })
 export default class LargeBlogCard extends Vue {
   @Prop() blog!: BlogData;
+  @Prop({ default: true }) showTags!: boolean;
+
+  public renderDaysAgo(lastUpdated: number) {
+    return dates.renderDaysAgo(lastUpdated);
+  }
 
   public getTag(value: string) {
     return product.getTag(this.blog.product, value);
@@ -94,5 +117,10 @@ export default class LargeBlogCard extends Vue {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.avatar {
+  width: 26px;
+  height: 26px;
 }
 </style>

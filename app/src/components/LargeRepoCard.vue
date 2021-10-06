@@ -18,52 +18,57 @@
   <div class="flex flex-col">
     <!-- Card -->
     <div
-      class="flex-grow flex flex-col rounded shadow transition-shadow hover:shadow-lg overflow-hidden"
+      class="flex-grow flex flex-col rounded-lg border border-gray-200 transition-shadow hover:shadow overflow-hidden p-4"
     >
-      <!-- GitHub Header -->
-      <div class="bg-gray-900 text-white px-3 py-2">
-        <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-2" />
-        <span>{{ repo.metadata.owner }}</span>
+      <!-- Author photo and name -->
+      <div class="mt-2 flex flex-row items-center">
+        <img
+          class="avatar mr-2 rounded-full"
+          :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
+        />
+        <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
       </div>
 
-      <!-- Title and Stats -->
-      <div class="mt-2 px-3 flex flex-row items-center">
-        <router-link :to="link" class="text-lg font-medium flex-grow">{{
-          repo.metadata.repo
-        }}</router-link>
-        <span class="ml-2 text-sm"
-          >{{ repo.stats.stars }} <font-awesome-icon class="ml-1" icon="star"
-        /></span>
-        <span class="ml-2 text-sm"
-          >{{ repo.stats.forks }}
-          <font-awesome-icon class="ml-1" icon="code-branch"
-        /></span>
+      <!-- Title -->
+      <div class="mt-4 font-display text-2xl">
+        {{ repo.metadata.repo }}
+      </div>
+
+      <!-- Tags -->
+      <div
+        v-if="showTags"
+        class="mt-4 flex flex-row gap-2 overflow-hidden items-center"
+      >
+        <TagChip
+          v-for="t in repo.metadata.tags"
+          :key="t"
+          :label="getTag(t).label"
+          :textColor="getTag(t).textColor"
+          :bgColor="getTag(t).bgColor"
+        />
       </div>
 
       <!-- Description -->
-      <div class="flex-grow mt-2 px-3 wrap-lines-3">
+      <div class="mt-4 flex-grow wrap-lines-3">
         {{ repo.metadata.longDescription }}
       </div>
 
-      <!-- Timestamp and Button -->
-      <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
-        <span class="flex-grow text-gray-500"
-          >updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span
+      <!-- Timestamp -->
+      <div class="mt-4 flex flex-row text-sm items-center gap-1 text-gray-600">
+        <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-1" />
+        <span>GitHub</span>
+        <span>•</span>
+        <span class="flex-grow"
+          >Updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span
         >
+      </div>
+
+      <!-- Button -->
+      <div class="mt-6 flex flex-row-reverse">
         <router-link :to="link"
           ><MaterialButton type="text">Learn More</MaterialButton></router-link
         >
       </div>
-    </div>
-
-    <!-- Card tags -->
-    <div class="mt-2 flex flex-row overflow-hidden items-center">
-      <TagChip
-        v-for="t in repo.metadata.tags"
-        :key="t"
-        :label="getTag(t).label"
-        :color="getTag(t).color"
-      />
     </div>
   </div>
 </template>
@@ -86,6 +91,7 @@ import * as product from "@/model/product";
 })
 export default class LargeRepoCard extends Vue {
   @Prop() repo!: RepoData;
+  @Prop({ default: true }) showTags!: boolean;
 
   public renderDaysAgo(lastUpdated: number) {
     return dates.renderDaysAgo(lastUpdated);
@@ -109,5 +115,10 @@ export default class LargeRepoCard extends Vue {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.avatar {
+  width: 26px;
+  height: 26px;
 }
 </style>
