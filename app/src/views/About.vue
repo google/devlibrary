@@ -27,18 +27,21 @@
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p>
-            <strong>Dev Library</strong> is a curated platform for
-            technical content written or built using any of the following Google technologies:
-              <ul class="ml-6 mt-2 list-disc">
+            <span
+              ><strong>Dev Library</strong> is a curated platform for technical
+              content written or built using any of the following Google
+              technologies:</span
+            >
+          </p>
+
+          <ul class="ml-6 mt-2 list-disc">
             <li>Android</li>
             <li>Angular</li>
             <li>Flutter</li>
             <li>Firebase</li>
             <li>Google Cloud</li>
-       
           </ul>
-          
-          </p>
+
           <p class="mt-4">Currently we accept two kinds of content:</p>
 
           <ul class="ml-6 mt-2 list-disc">
@@ -46,7 +49,7 @@
             <li>Blog posts</li>
           </ul>
 
-          <p class="mt-4"> 
+          <p class="mt-4">
             This platform will evolve as we receive more submissions and we are
             working to accept a wider range of content, so stay tuned!
           </p>
