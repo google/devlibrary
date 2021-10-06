@@ -19,14 +19,14 @@
     <template v-if="loaded" v-slot:header>
       <!-- Header (Mobile) -->
       <div class="mobile-only">
-        <div class="mobile-only flex flex-row gap-4 items-center px-6 py-4">
+        <div class="mobile-only flex flex-row gap-4 items-center px-6 py-6">
           <CircleImage
             class="border-white"
             size="small"
             :src="author.metadata.photoURL"
           />
           <div>
-            <h1 class="text-2xl">
+            <h1 class="text-xl">
               {{ author.metadata.name }}
             </h1>
             <p class="text-xs">
@@ -38,7 +38,7 @@
 
       <!-- Header (Desktop) -->
       <div class="desktop-only">
-        <div class="py-20 grid grid-cols-10">
+        <div class="pt-20 pb-10 grid grid-cols-10">
           <div class="col-start-2 col-span-6">
             <div class="flex flex-row gap-8 items-center">
               <CircleImage
@@ -125,31 +125,12 @@
         </div>
 
         <!-- Open Source -->
-        <div id="opensource" v-if="repos.length > 0">
-          <h2 class="text-2xl mt-8">Open Source</h2>
-
+        <div v-if="projects.length > 0">
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <LargeRepoCard
-              class="mt-4"
-              v-for="repo in repos"
-              :key="repo.id"
-              :repo="repo"
-              :showLogo="true"
-              :showTags="false"
-            />
-          </div>
-        </div>
-
-        <!-- Blog Posts -->
-        <div id="blogposts" v-if="blogs.length > 0">
-          <h2 class="text-2xl mt-8">Blog Posts</h2>
-
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <LargeBlogCard
-              class="mt-4"
-              v-for="blog in blogs"
-              :key="blog.id"
-              :blog="blog"
+            <RepoOrBlogCard
+              v-for="project in projects"
+              :key="project.data.id"
+              :project="project"
               :showLogo="true"
               :showTags="false"
             />
@@ -167,21 +148,23 @@ import { getModule } from "vuex-module-decorators";
 import UIModule from "@/store/ui";
 
 import MaterialButton from "@/components/MaterialButton.vue";
-import LargeRepoCard from "@/components/LargeRepoCard.vue";
-import LargeBlogCard from "@/components/LargeBlogCard.vue";
+import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import CircleImage from "@/components/CircleImage.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 
-import { fetchAuthor, queryAuthorProjects } from "@/plugins/data";
+import {
+  fetchAuthor,
+  queryAuthorProjects,
+  wrapInHolders,
+} from "@/plugins/data";
 import { AuthorData, BlogData, RepoData } from "../../../shared/types";
 import { ALL_PRODUCTS } from "../../../shared/product";
 
 @Component({
   components: {
     MaterialButton,
-    LargeRepoCard,
-    LargeBlogCard,
+    RepoOrBlogCard,
     HeaderBodyLayout,
     CircleImage,
     ProductLogo,
@@ -235,6 +218,12 @@ export default class Author extends Vue {
     const blogProducts = this.blogs.map((b) => b.product);
     const repoProducts = this.repos.map((r) => r.product);
     return Array.from(new Set([...blogProducts, ...repoProducts])).sort();
+  }
+
+  get projects() {
+    return wrapInHolders(this.blogs, this.repos).sort((a, b) => {
+      return b.data.stats.dateAdded - a.data.stats.dateAdded;
+    });
   }
 
   public getProductName(productId: string) {

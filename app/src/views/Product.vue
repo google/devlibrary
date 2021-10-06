@@ -117,19 +117,11 @@
           </div>
 
           <div class="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <template v-for="project in projects">
-              <LargeRepoCard
-                v-if="project.type === 'repo'"
-                :key="project.data.id"
-                :repo="project.data"
-              />
-
-              <LargeBlogCard
-                v-if="project.type === 'blog'"
-                :key="project.data.id"
-                :blog="project.data"
-              />
-            </template>
+            <RepoOrBlogCard
+              v-for="project in projects"
+              :key="project.data.id"
+              :project="project"
+            />
           </div>
 
           <div class="flex flex-row justify-center mt-4 lg:mt-6">
@@ -154,16 +146,13 @@ import { getModule } from "vuex-module-decorators";
 import {
   BlogData,
   RepoData,
-  BlogDataHolder,
-  RepoDataHolder,
   BlogOrRepoDataHolder,
 } from "../../../shared/types";
 
 import UIModule from "@/store/ui";
 
 import MaterialButton from "@/components/MaterialButton.vue";
-import LargeRepoCard from "@/components/LargeRepoCard.vue";
-import LargeBlogCard from "@/components/LargeBlogCard.vue";
+import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import RadioGroup from "@/components/RadioGroup.vue";
 import CheckboxGroup, {
   CheckboxGroupEntry,
@@ -171,7 +160,12 @@ import CheckboxGroup, {
 import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 
-import { PagedResponse, nextPage, emptyPageResponse } from "@/plugins/data";
+import {
+  PagedResponse,
+  nextPage,
+  emptyPageResponse,
+  wrapInHolders,
+} from "@/plugins/data";
 
 import { ProductConfig } from "../../../shared/types";
 import { ALL_PRODUCTS } from "../../../shared/product";
@@ -181,8 +175,7 @@ import { getStyle, ProductStyle } from "@/model/product";
 @Component({
   components: {
     MaterialButton,
-    LargeRepoCard,
-    LargeBlogCard,
+    RepoOrBlogCard,
     RadioGroup,
     CheckboxGroup,
     HeaderBodyLayout,
@@ -352,19 +345,12 @@ export default class Product extends Vue {
   }
 
   get projects(): BlogOrRepoDataHolder[] {
-    const blogs: BlogDataHolder[] = this.showBlogPosts
-      ? this.blogs.map((data) => {
-          return { type: "blog", data };
-        })
-      : [];
-    const repos: RepoDataHolder[] = this.showOpenSource
-      ? this.repos.map((data) => {
-          return { type: "repo", data };
-        })
-      : [];
+    const blogs = this.showBlogPosts ? this.blogs : [];
+    const repos = this.showOpenSource ? this.repos : [];
+    const projects = wrapInHolders(blogs, repos);
 
     // Locally join and sort
-    return [...repos, ...blogs].sort((a, b) => {
+    return projects.sort((a, b) => {
       const dataA = a.data;
       const dataB = b.data;
 

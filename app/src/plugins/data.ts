@@ -17,7 +17,10 @@
 import {
   AuthorData,
   BlogData,
+  BlogDataHolder,
+  BlogOrRepoDataHolder,
   RepoData,
+  RepoDataHolder,
   RepoPage,
   SearchResult,
 } from "../../../shared/types";
@@ -268,4 +271,19 @@ export function shuffleArr<T>(arr: T[]): T[] {
   }
 
   return arr;
+}
+
+export function wrapInHolders(
+  blogs: BlogData[],
+  repos: RepoData[]
+): BlogOrRepoDataHolder[] {
+  const blogHolders: BlogDataHolder[] = blogs.map((data) => {
+    return { type: "blog", data };
+  });
+
+  const repoHolders: RepoDataHolder[] = repos.map((data) => {
+    return { type: "repo", data };
+  });
+
+  return [...blogHolders, ...repoHolders];
 }
