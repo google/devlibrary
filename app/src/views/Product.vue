@@ -104,52 +104,39 @@
 
       <!-- Cards -->
       <div v-show="hasContent" class="col-span-10 lg:col-span-8">
-        <!-- Open Source -->
-        <div id="opensource" v-if="showOpenSource">
-          <div v-if="repos.length === 0" class="mt-4">
-            No projects matching your filters...
+        <div id="projects">
+          <div
+            v-if="projects.length === 0"
+            class="mt-4 flex flex-row items-center justify-center py-20 text-gray-400"
+          >
+            <font-awesome-icon
+              :icon="['fas', 'exclamation-circle']"
+              class="mr-2"
+            />
+            <span>No projects matching your filters.</span>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <LargeRepoCard
-              class="mt-4"
-              v-for="repo in repos"
-              :key="repo.id"
-              :repo="repo"
-            />
+          <div class="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <template v-for="project in projects">
+              <LargeRepoCard
+                v-if="project.type === 'repo'"
+                :key="project.data.id"
+                :repo="project.data"
+              />
+
+              <LargeBlogCard
+                v-if="project.type === 'blog'"
+                :key="project.data.id"
+                :blog="project.data"
+              />
+            </template>
           </div>
 
           <div class="flex flex-row justify-center mt-4 lg:mt-6">
             <MaterialButton
-              v-if="repoData.hasNext"
+              v-if="canLoadMore"
               type="outlined"
-              @click.native="loadNext(repoData)"
-            >
-              Load More
-            </MaterialButton>
-          </div>
-        </div>
-
-        <!-- Blog Posts -->
-        <div id="blogposts" v-if="showBlogPosts">
-          <div v-if="blogs.length === 0" class="mt-4">
-            No blog posts matching your filters...
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <LargeBlogCard
-              class="mt-4"
-              v-for="blog in blogs"
-              :key="blog.id"
-              :blog="blog"
-            />
-          </div>
-
-          <div class="flex flex-row justify-center mt-4 lg:mt-6">
-            <MaterialButton
-              v-if="blogData.hasNext"
-              type="outlined"
-              @click.native="loadNext(blogData)"
+              @click.native="loadMore"
             >
               Load More
             </MaterialButton>
@@ -164,7 +151,13 @@
 import { Component, Vue, Watch } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
-import { BlogData, RepoData } from "../../../shared/types";
+import {
+  BlogData,
+  RepoData,
+  BlogDataHolder,
+  RepoDataHolder,
+  BlogOrRepoDataHolder,
+} from "../../../shared/types";
 
 import UIModule from "@/store/ui";
 
@@ -178,12 +171,7 @@ import CheckboxGroup, {
 import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 
-import {
-  PagedResponse,
-  nextPage,
-  prevPage,
-  emptyPageResponse,
-} from "@/plugins/data";
+import { PagedResponse, nextPage, emptyPageResponse } from "@/plugins/data";
 
 import { ProductConfig } from "../../../shared/types";
 import { ALL_PRODUCTS } from "../../../shared/product";
@@ -208,7 +196,7 @@ export default class Product extends Vue {
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
 
-  private perPage = 4;
+  private perPage = 6;
 
   public repoData: PagedResponse<RepoData> = emptyPageResponse<RepoData>(
     `/products/${this.product.key}/repos`,
@@ -304,14 +292,22 @@ export default class Product extends Vue {
     return this.blogData.currentPage >= 0 || this.repoData.currentPage >= 0;
   }
 
-  public async loadNext(data: PagedResponse<unknown>) {
-    const p = nextPage(data);
-    this.uiModule.waitFor(p);
+  get canLoadMore() {
+    return this.blogData.hasNext || this.repoData.hasNext;
   }
 
-  public async loadPrev(data: PagedResponse<unknown>) {
-    const p = prevPage(data);
-    this.uiModule.waitFor(p);
+  public async loadMore() {
+    const promises = [];
+
+    if (this.repoData.hasNext) {
+      promises.push(nextPage(this.repoData));
+    }
+
+    if (this.blogData.hasNext) {
+      promises.push(nextPage(this.blogData));
+    }
+
+    this.uiModule.waitFor(Promise.all(promises));
   }
 
   get product(): ProductConfig {
@@ -353,6 +349,31 @@ export default class Product extends Vue {
       return [];
     }
     return this.blogData.pages.flatMap((p) => p);
+  }
+
+  get projects(): BlogOrRepoDataHolder[] {
+    const blogs: BlogDataHolder[] = this.showBlogPosts
+      ? this.blogs.map((data) => {
+          return { type: "blog", data };
+        })
+      : [];
+    const repos: RepoDataHolder[] = this.showOpenSource
+      ? this.repos.map((data) => {
+          return { type: "repo", data };
+        })
+      : [];
+
+    // Locally join and sort
+    return [...repos, ...blogs].sort((a, b) => {
+      const dataA = a.data;
+      const dataB = b.data;
+
+      if (this.sort === "added") {
+        return dataB.stats.dateAdded - dataA.stats.dateAdded;
+      } else {
+        return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
+      }
+    });
   }
 }
 </script>

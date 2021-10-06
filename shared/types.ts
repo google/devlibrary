@@ -123,3 +123,15 @@ export type SearchResult =
   | BlogSearchResult
   | RepoSearchResult
   | AuthorSearchResult;
+
+export interface BlogDataHolder {
+  type: "blog";
+  data: BlogData;
+}
+
+export interface RepoDataHolder {
+  type: "repo";
+  data: RepoData;
+}
+
+export type BlogOrRepoDataHolder = BlogDataHolder | RepoDataHolder;
