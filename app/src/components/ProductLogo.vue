@@ -41,6 +41,14 @@ export default class ProductLogo extends Vue {
 </script>
 
 <style scoped lang="postcss">
+.xxtiny {
+  @apply p-0 w-5 h-5 border-none bg-white rounded-full;
+}
+
+.xtiny {
+  @apply p-0 w-8 h-8 border-none bg-white rounded-full;
+}
+
 .tiny {
   @apply p-1 w-10 h-10 border-2 bg-white rounded-full;
 }

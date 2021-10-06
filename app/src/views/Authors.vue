@@ -33,31 +33,26 @@
       <!-- Author Cards -->
       <div class="col-start-2 col-span-8">
         <div
-          class="py-6 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          class="py-6 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
         >
+          <!-- Author Card -->
           <div
             v-for="author in authors"
             :key="author.id"
-            class="card px-3 py-3 flex flex-row items-center"
+            class="card px-5 py-4 flex flex-col items-center text-center"
           >
-            <router-link
-              :to="`/authors/${author.id}`"
-              class="flex-shrink-0 mr-2"
-            >
-              <CircleImage
-                :src="author.metadata.photoURL"
-                class="border-gray-200"
-                size="small"
-              />
-            </router-link>
+            <CircleImage
+              :src="author.metadata.photoURL"
+              class="flex-shrink-0 avatar border-none"
+              size="small"
+            />
             <div>
-              <router-link
-                :to="`/authors/${author.id}`"
-                class="wrap-lines-1 text-lg font-bold font-display"
-              >
+              <div class="mt-2 wrap-lines-1 font-medium font-display">
                 {{ author.metadata.name }}
-              </router-link>
-              <div class="flex flex-row gap-2 text-sm">
+              </div>
+
+              <!-- Icons -->
+              <div class="mt-2 flex flex-row justify-center gap-2 text-sm">
                 <a
                   v-if="author.metadata.githubURL"
                   :href="author.metadata.githubURL"
@@ -75,6 +70,13 @@
                   <font-awesome-icon :icon="['fab', 'medium']" />
                 </a>
               </div>
+
+              <router-link
+                :to="`/authors/${author.id}`"
+                class="mt-2 flex flex-row justify-center"
+              >
+                <MaterialButton type="text">View profile</MaterialButton>
+              </router-link>
             </div>
           </div>
         </div>
@@ -147,7 +149,12 @@ export default class Authors extends Vue {
 
 <style scoped lang="postcss">
 .card {
-  @apply rounded overflow-hidden border border-gray-50 shadow transition-shadow hover:shadow-lg;
+  @apply rounded-lg border border-gray-200 overflow-hidden transition-shadow hover:shadow;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
 }
 
 .icon-link {

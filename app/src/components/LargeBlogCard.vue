@@ -21,12 +21,19 @@
       class="flex-grow flex flex-col rounded-lg border border-gray-200 transition-shadow hover:shadow overflow-hidden p-4"
     >
       <!-- Author photo and name -->
-      <div class="mt-2 flex flex-row items-center">
+      <div class="flex flex-row items-center">
         <img
           class="avatar mr-2 rounded-full"
           :src="`https://avatars.githubusercontent.com/${blog.metadata.author}`"
         />
         <span class="font-display text-lg">{{ blog.metadata.author }}</span>
+
+        <ProductLogo
+          v-if="showLogo"
+          size="xtiny"
+          :productKey="blog.product"
+          class="ml-auto"
+        />
       </div>
 
       <!-- Title -->
@@ -77,8 +84,10 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import { BlogData } from "../../../shared/types";
+
 import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
+import ProductLogo from "@/components/ProductLogo.vue";
 
 import * as dates from "@/plugins/dates";
 import * as product from "@/model/product";
@@ -87,11 +96,13 @@ import * as product from "@/model/product";
   components: {
     MaterialButton,
     TagChip,
+    ProductLogo,
   },
 })
 export default class LargeBlogCard extends Vue {
   @Prop() blog!: BlogData;
   @Prop({ default: true }) showTags!: boolean;
+  @Prop({ default: false }) showLogo!: boolean;
 
   public renderDaysAgo(lastUpdated: number) {
     return dates.renderDaysAgo(lastUpdated);
