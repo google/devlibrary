@@ -15,7 +15,7 @@
 -->
 
 <template>
-  <HeaderSidebarLayout>
+  <HeaderBodyLayout>
     <template v-slot:header>
       <!-- Header (Mobile) -->
       <div class="mobile-only">
@@ -57,53 +57,60 @@
       </div>
     </template>
 
-    <template v-slot:sidebar>
-      <!-- Side bar -->
-      <div>
-        <p class="uppercase font-medium mt-4 mb-2">Sort</p>
-
-        <RadioGroup
-          prefix="sort"
-          :keys="['Recently Updated', 'Recently Added']"
-          :values="['updated', 'added']"
-          v-model="sort"
-        />
-
-        <p class="uppercase font-medium mt-4 mb-2">Type</p>
-
-        <CheckboxGroup
-          prefix="type"
-          :keys="['Open Source', 'Blog Posts']"
-          :values="['open-source', 'blog']"
-          v-model="types"
-        />
-
-        <p class="uppercase font-medium mt-4 mb-2">Category</p>
-
-        <CheckboxGroup
-          prefix="category"
-          :keys="product.tags.map((t) => t.label)"
-          :values="product.tags.map((t) => t.value)"
-          v-model="categories"
-        />
-      </div>
-    </template>
-
     <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-20">
-      <div
-        v-show="hasContent"
-        class="col-span-10 px-6 lg:px-0 lg:col-start-2 lg:col-span-8"
-      >
+    <div class="grid grid-cols-10 gap-4 mb-20 px-6">
+      <!-- Filters -->
+      <div class="mt-4 col-span-2 flex flex-col">
+        <div class="rounded-lg border border-gray-200 flex-shrink">
+          <!-- TODO: Get this text styling right -->
+          <div class="px-5 py-4 uppercase text-gray-500 font-medium text-sm">
+            Filters
+          </div>
+
+          <div class="border-t px-4 py-3">
+            <p class="font-display font-medium text-sm mb-4">Sort</p>
+
+            <RadioGroup
+              prefix="sort"
+              :keys="['Recently Updated', 'Recently Added']"
+              :values="['updated', 'added']"
+              v-model="sort"
+            />
+          </div>
+
+          <div class="border-t px-4 py-3">
+            <p class="font-display font-medium text-sm mb-4">Type</p>
+
+            <CheckboxGroup
+              prefix="type"
+              :keys="['Open Source', 'Blog Posts']"
+              :values="['open-source', 'blog']"
+              v-model="types"
+            />
+          </div>
+
+          <div class="border-t px-4 py-3">
+            <p class="font-display font-medium text-sm mb-4">Category</p>
+
+            <CheckboxGroup
+              prefix="category"
+              :keys="product.tags.map((t) => t.label)"
+              :values="product.tags.map((t) => t.value)"
+              v-model="categories"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div v-show="hasContent" class="col-span-10 lg:col-span-8">
         <!-- Open Source -->
         <div id="opensource" v-if="showOpenSource">
-          <h2 class="text-2xl mt-8">Open Source</h2>
-
           <div v-if="repos.length === 0" class="mt-4">
             No projects matching your filters...
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <LargeRepoCard
               class="mt-4"
               v-for="repo in repos"
@@ -125,13 +132,11 @@
 
         <!-- Blog Posts -->
         <div id="blogposts" v-if="showBlogPosts">
-          <h2 class="text-2xl mt-8">Blog Posts</h2>
-
           <div v-if="blogs.length === 0" class="mt-4">
             No blog posts matching your filters...
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <LargeBlogCard
               class="mt-4"
               v-for="blog in blogs"
@@ -152,7 +157,7 @@
         </div>
       </div>
     </div>
-  </HeaderSidebarLayout>
+  </HeaderBodyLayout>
 </template>
 
 <script lang="ts">
@@ -170,7 +175,7 @@ import RadioGroup from "@/components/RadioGroup.vue";
 import CheckboxGroup, {
   CheckboxGroupEntry,
 } from "@/components/CheckboxGroup.vue";
-import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
+import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 
 import {
@@ -192,7 +197,7 @@ import { getStyle, ProductStyle } from "@/model/product";
     LargeBlogCard,
     RadioGroup,
     CheckboxGroup,
-    HeaderSidebarLayout,
+    HeaderBodyLayout,
     ProductLogo,
   },
 })

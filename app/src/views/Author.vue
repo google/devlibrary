@@ -15,7 +15,7 @@
 -->
 
 <template>
-  <HeaderSidebarLayout>
+  <HeaderBodyLayout>
     <template v-if="loaded" v-slot:header>
       <!-- Header (Mobile) -->
       <div class="mobile-only">
@@ -55,37 +55,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </template>
-
-    <template v-if="loaded" v-slot:sidebar>
-      <!-- Side bar -->
-      <div>
-        <p class="uppercase font-medium mt-4 mb-2">Links</p>
-        <ul>
-          <li
-            v-if="author.metadata.githubURL"
-            class="flex items-center hover:text-blue-500"
-          >
-            <a :href="author.metadata.githubURL" target="_blank">GitHub</a>
-            <font-awesome-icon
-              icon="external-link-alt"
-              size="xs"
-              class="ml-2"
-            />
-          </li>
-          <li
-            v-if="author.metadata.mediumURL"
-            class="flex items-center hover:text-blue-500"
-          >
-            <a :href="author.metadata.mediumURL" target="_blank">Medium</a>
-            <font-awesome-icon
-              icon="external-link-alt"
-              size="xs"
-              class="ml-2"
-            />
-          </li>
-        </ul>
       </div>
     </template>
 
@@ -135,7 +104,7 @@
         </div>
       </div>
     </div>
-  </HeaderSidebarLayout>
+  </HeaderBodyLayout>
 </template>
 
 <script lang="ts">
@@ -147,7 +116,7 @@ import UIModule from "@/store/ui";
 import MaterialButton from "@/components/MaterialButton.vue";
 import LargeRepoCard from "@/components/LargeRepoCard.vue";
 import LargeBlogCard from "@/components/LargeBlogCard.vue";
-import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
+import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import CircleImage from "@/components/CircleImage.vue";
 
 import { fetchAuthor, queryAuthorProjects } from "@/plugins/data";
@@ -158,7 +127,7 @@ import { AuthorData, BlogData, RepoData } from "../../../shared/types";
     MaterialButton,
     LargeRepoCard,
     LargeBlogCard,
-    HeaderSidebarLayout,
+    HeaderBodyLayout,
     CircleImage,
   },
 })

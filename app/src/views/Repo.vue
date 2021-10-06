@@ -15,7 +15,7 @@
 -->
 
 <template>
-  <HeaderSidebarLayout>
+  <HeaderBodyLayout>
     <template v-if="loaded" v-slot:header>
       <!-- Header (Desktop) -->
       <div class="desktop-only">
@@ -155,7 +155,7 @@
         </MaterialButton>
       </div>
     </div>
-  </HeaderSidebarLayout>
+  </HeaderBodyLayout>
 </template>
 
 <script lang="ts">
@@ -165,7 +165,7 @@ import DOMPurify from "dompurify";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import AuthorLink from "@/components/AuthorLink.vue";
-import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
+import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import UIModule from "@/store/ui";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
@@ -187,7 +187,7 @@ declare const hljs: any;
   components: {
     MaterialButton,
     AuthorLink,
-    HeaderSidebarLayout,
+    HeaderBodyLayout,
   },
 })
 export default class Repo extends Vue {

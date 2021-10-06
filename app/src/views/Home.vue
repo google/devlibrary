@@ -192,9 +192,9 @@ export default class Home extends Vue {
     const res = await queryRepos(product, this.RECENTLY_ADDED_QUERY);
     const docs = res.docs.map((d) => d.data);
 
-    // We take the most recent 10, shuffle, and pick 2. That way the
+    // We take the most recent 10, shuffle, and pick 3. That way the
     // most recent additions don't get stuck on the homepage.
-    const recentRepos = shuffleArr(docs).slice(0, 2);
+    const recentRepos = shuffleArr(docs).slice(0, 3);
     Vue.set(this.recentRepos, product, recentRepos);
   }
 
@@ -202,9 +202,9 @@ export default class Home extends Vue {
     const res = await queryBlogs(product, this.RECENTLY_ADDED_QUERY);
     const docs = res.docs.map((d) => d.data);
 
-    // We take the most recent 10, shuffle, and pick 2. That way the
+    // We take the most recent 10, shuffle, and pick 3. That way the
     // most recent additions don't get stuck on the homepage.
-    const recentBlogs = shuffleArr(docs).slice(0, 2);
+    const recentBlogs = shuffleArr(docs).slice(0, 3);
     Vue.set(this.recentBlogs, product, recentBlogs);
   }
 
@@ -252,6 +252,6 @@ export default class Home extends Vue {
 
 .home-grid-projects {
   @apply grid gap-4;
-  @apply grid-cols-1 lg:grid-cols-2;
+  @apply grid-cols-1 lg:grid-cols-3;
 }
 </style>
