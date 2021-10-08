@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "owner": "rodrigokamada",
+  "repo": "angular-highcharts",
+  "name": "Angular Highcharts",
+  "shortDescription": "Application example built with Angular 12 and adding charts using the highcharts library.",
+  "longDescription": "Application example built with Angular 12 and adding charts using the highcharts library.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos",
+    "gettingstarted"
+  ]
+}
