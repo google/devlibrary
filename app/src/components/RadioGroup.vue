@@ -18,7 +18,7 @@
   <div>
     <label
       v-for="entry in entries"
-      :for="entry.id" 
+      :for="entry.id"
       :key="entry.id"
       class="flex flex-row items-center mb-2 cursor-pointer"
     >

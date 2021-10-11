@@ -58,50 +58,16 @@
     </template>
 
     <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-20 px-6 pt-8">
-      <!-- Filters -->
-      <div class="col-span-2 flex flex-col">
-        <div class="rounded-lg border border-gray-200 flex-shrink">
-          <div
-            class="px-5 py-4 uppercase text-gray-500 font-medium text-xs tracking-widest"
-          >
-            Filters
-          </div>
-
-          <div class="border-t px-4 py-3">
-            <p class="font-display font-medium text-sm mb-4">Sort</p>
-
-            <RadioGroup
-              prefix="sort"
-              :keys="['Recently Updated', 'Recently Added']"
-              :values="['updated', 'added']"
-              v-model="sort"
-            />
-          </div>
-
-          <div class="border-t px-4 py-3">
-            <p class="font-display font-medium text-sm mb-4">Type</p>
-
-            <CheckboxGroup
-              prefix="type"
-              :keys="['Open Source', 'Blog Posts']"
-              :values="['open-source', 'blog']"
-              v-model="types"
-            />
-          </div>
-
-          <div class="border-t px-4 py-3">
-            <p class="font-display font-medium text-sm mb-4">Category</p>
-
-            <CheckboxGroup
-              prefix="category"
-              :keys="product.tags.map((t) => t.label)"
-              :values="product.tags.map((t) => t.value)"
-              v-model="categories"
-            />
-          </div>
-        </div>
+    <div class="grid grid-cols-10 gap-4 mb-20 px-6 pt-4 lg:pt-8">
+      <div class="mobile-only col-span-10 flex flex-row-reverse">
+        <MaterialButton type="text">
+          <font-awesome-icon icon="filter" size="sm" class="mr-1" />
+          <span>Filters</span>
+        </MaterialButton>
       </div>
+
+      <!-- Filters -->
+      <ProjectFilters class="col-span-2" v-model="filters" :product="product" />
 
       <!-- Cards -->
       <div v-show="hasContent" class="col-span-10 lg:col-span-8">
@@ -154,6 +120,7 @@ import UIModule from "@/store/ui";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
+import ProjectFilters from "@/components/ProjectFilters.vue";
 import RadioGroup from "@/components/RadioGroup.vue";
 import CheckboxGroup, {
   CheckboxGroupEntry,
@@ -181,14 +148,17 @@ import { getStyle, ProductStyle } from "@/model/product";
     CheckboxGroup,
     HeaderBodyLayout,
     ProductLogo,
+    ProjectFilters,
   },
 })
 export default class Product extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
-  public sort = "updated";
-  public types: CheckboxGroupEntry[] = [];
-  public categories: CheckboxGroupEntry[] = [];
+  public filters = {
+    sort: "updated",
+    types: [] as CheckboxGroupEntry[],
+    categories: [] as CheckboxGroupEntry[],
+  };
 
   private perPage = 6;
 
@@ -236,20 +206,20 @@ export default class Product extends Vue {
 
   get queryTags(): string[] | null {
     // If no selection, consider them all checked
-    const noneChecked = this.categories.every((c) => !c.checked);
+    const noneChecked = this.filters.categories.every((c) => !c.checked);
     if (noneChecked) {
       return null;
     }
 
-    return this.categories.filter((x) => x.checked).map((x) => x.value);
+    return this.filters.categories.filter((x) => x.checked).map((x) => x.value);
   }
 
   get queryOrderBy(): string {
-    if (this.sort === "added") {
+    if (this.filters.sort === "added") {
       return "stats.dateAdded";
     }
 
-    if (this.sort === "updated") {
+    if (this.filters.sort === "updated") {
       return "stats.lastUpdated";
     }
 
@@ -314,20 +284,20 @@ export default class Product extends Vue {
 
   get showAllTypes() {
     // If nothing is checked, show them all
-    return this.types.every((t) => !t.checked);
+    return this.filters.types.every((t) => !t.checked);
   }
 
   get showOpenSource(): boolean {
     return (
       this.showAllTypes ||
-      this.types.some((t) => t.value === "open-source" && t.checked)
+      this.filters.types.some((t) => t.value === "open-source" && t.checked)
     );
   }
 
   get showBlogPosts(): boolean {
     return (
       this.showAllTypes ||
-      this.types.some((t) => t.value === "blog" && t.checked)
+      this.filters.types.some((t) => t.value === "blog" && t.checked)
     );
   }
 
@@ -355,7 +325,7 @@ export default class Product extends Vue {
       const dataA = a.data;
       const dataB = b.data;
 
-      if (this.sort === "added") {
+      if (this.filters.sort === "added") {
         return dataB.stats.dateAdded - dataA.stats.dateAdded;
       } else {
         return dataB.stats.lastUpdated - dataA.stats.lastUpdated;

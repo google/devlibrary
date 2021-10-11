@@ -18,7 +18,7 @@
   <div>
     <label
       v-for="entry in entries"
-      :for="entry.id" 
+      :for="entry.id"
       :key="entry.key"
       class="flex flex-row items-center mb-2 cursor-pointer"
     >
@@ -29,9 +29,7 @@
         @input="emitValue"
         :id="entry.id"
       />
-      <span class="ml-2 text-sm wrap-lines-1">{{
-        entry.key
-      }}</span>
+      <span class="ml-2 text-sm wrap-lines-1">{{ entry.key }}</span>
     </label>
   </div>
 </template>

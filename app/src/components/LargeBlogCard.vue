@@ -135,7 +135,7 @@ export default class LargeBlogCard extends Vue {
 
   get authorPhotoUrl() {
     if (this.authorId) {
-      return `${getApiHost()}/api/authorPhoto?id=${this.authorId}`
+      return `${getApiHost()}/api/authorPhoto?id=${this.authorId}`;
     }
 
     return undefined;
@@ -159,6 +159,4 @@ export default class LargeBlogCard extends Vue {
 }
 </style>
 
-function getApiHost() {
-  throw new Error("Function not implemented.");
-}
+function getApiHost() { throw new Error("Function not implemented."); }
