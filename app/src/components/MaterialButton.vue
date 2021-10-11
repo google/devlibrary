@@ -66,7 +66,7 @@ export default class MaterialButton extends Vue {
 }
 
 .text {
-  @apply border-none;
+  @apply border-transparent border-none;
   @apply text-blue-600 bg-none;
   @apply shadow-none;
 }

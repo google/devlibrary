@@ -29,9 +29,9 @@
         href="https://policies.google.com/technologies/cookies"
         target="_blank"
       >
-        <MaterialButton>More details</MaterialButton>
+        <MaterialButton type="text">More details</MaterialButton>
       </a>
-      <MaterialButton @click.native="onAccepted">OK</MaterialButton>
+      <MaterialButton type="text" @click.native="onAccepted">OK</MaterialButton>
     </div>
   </div>
 </template>
