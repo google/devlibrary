@@ -16,10 +16,11 @@
 
 <template>
   <div>
-    <div
+    <label
       v-for="entry in entries"
+      :for="entry.id" 
       :key="entry.key"
-      class="flex flex-row items-center mb-2"
+      class="flex flex-row items-center mb-2 cursor-pointer"
     >
       <input
         type="checkbox"
@@ -28,10 +29,10 @@
         @input="emitValue"
         :id="entry.id"
       />
-      <label :for="entry.id" class="ml-2 text-sm wrap-lines-1">{{
+      <span class="ml-2 text-sm wrap-lines-1">{{
         entry.key
-      }}</label>
-    </div>
+      }}</span>
+    </label>
   </div>
 </template>
 

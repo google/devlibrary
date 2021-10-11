@@ -16,10 +16,11 @@
 
 <template>
   <div>
-    <div
+    <label
       v-for="entry in entries"
+      :for="entry.id" 
       :key="entry.id"
-      class="flex flex-row items-center mb-2"
+      class="flex flex-row items-center mb-2 cursor-pointer"
     >
       <input
         type="radio"
@@ -29,8 +30,8 @@
         v-model="choice"
         @input="onInput"
       />
-      <label :for="entry.id" class="ml-2 text-sm">{{ entry.key }}</label>
-    </div>
+      <span class="ml-2 text-sm">{{ entry.key }}</span>
+    </label>
   </div>
 </template>
 
