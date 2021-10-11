@@ -59,15 +59,58 @@
 
     <!-- Body -->
     <div class="grid grid-cols-10 gap-4 mb-20 px-6 pt-4 lg:pt-8">
-      <div class="mobile-only col-span-10 flex flex-row-reverse">
-        <MaterialButton type="text">
-          <font-awesome-icon icon="filter" size="sm" class="mr-1" />
-          <span>Filters</span>
-        </MaterialButton>
+      <!-- Show filters button -->
+      <div class="mobile-only col-span-10">
+        <div class="flex flex-row-reverse">
+          <MaterialButton
+            type="secondary"
+            @click.native="showFilterOverlay = true"
+          >
+            <font-awesome-icon icon="filter" size="sm" class="mr-1" />
+            <span>Filters</span>
+          </MaterialButton>
+        </div>
       </div>
 
-      <!-- Filters -->
-      <ProjectFilters class="col-span-2" v-model="filters" :product="product" />
+      <!-- Filters (Desktop) -->
+      <div v-if="$mq === 'desktop'" class="lg:col-span-2">
+        <ProjectFilters v-model="filters" :product="product" />
+      </div>
+
+      <!-- Filters (Mobile) -->
+      <div
+        v-if="$mq === 'mobile'"
+        v-show="showFilterOverlay"
+        class="mobile-only fixed right-0 top-0 bg-black bg-opacity-10 w-full h-full"
+      >
+        <!-- scrim -->
+      </div>
+      <transition name="slide-in-left">
+        <div
+          v-if="$mq === 'mobile'"
+          v-show="showFilterOverlay"
+          class="mobile-only fixed right-0 top-0 pt-20 w-full h-full"
+        >
+          <div
+            class="bg-white rounded-l overflow-hidden w-2/3 ml-auto shadow-lg"
+          >
+            <ProjectFilters
+              v-model="filters"
+              :product="product"
+              :mobile="true"
+            />
+            <div
+              class="border-t border-gray-200 flex flex-row-reverse gap-2 p-2"
+            >
+              <MaterialButton
+                type="primary"
+                @click.native="showFilterOverlay = false"
+                >Done</MaterialButton
+              >
+            </div>
+          </div>
+        </div>
+      </transition>
 
       <!-- Cards -->
       <div v-show="hasContent" class="col-span-10 lg:col-span-8">
@@ -154,6 +197,7 @@ import { getStyle, ProductStyle } from "@/model/product";
 export default class Product extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
+  public showFilterOverlay = false;
   public filters = {
     sort: "updated",
     types: [] as CheckboxGroupEntry[],
@@ -335,4 +379,17 @@ export default class Product extends Vue {
 }
 </script>
 
-<style scoped lang="postcss"></style>
+<style scoped lang="postcss">
+/** slide-in-left transition */
+.slide-in-left-leave-active,
+.slide-in-left-enter-active {
+  transition: 0.25s;
+}
+.slide-in-left-enter-to {
+  transform: translate(0, 0);
+}
+.slide-in-left-enter,
+.slide-in-left-leave-to {
+  transform: translate(120%, 0);
+}
+</style>

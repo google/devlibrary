@@ -15,45 +15,47 @@
 -->
 
 <template>
-  <div class="flex flex-col">
-    <div class="rounded-lg border border-gray-200 flex-shrink">
+  <div class="flex flex-col bg-white" :class="{ mobile, desktop: !mobile }">
+    <div class="rounded-lg flex-shrink" :class="{ border: !mobile }">
       <div
         class="px-5 py-4 uppercase text-gray-500 font-medium text-xs tracking-widest"
       >
-        Filters
+        Filter
       </div>
 
-      <div class="border-t px-4 py-3">
-        <p class="font-display font-medium text-sm mb-4">Sort</p>
+      <div class="sections">
+        <div class="section">
+          <p class="font-display font-medium text-sm mb-4">Sort</p>
 
-        <RadioGroup
-          prefix="sort"
-          :keys="['Recently Updated', 'Recently Added']"
-          :values="['updated', 'added']"
-          v-model="sort"
-        />
-      </div>
+          <RadioGroup
+            prefix="sort"
+            :keys="['Recently Updated', 'Recently Added']"
+            :values="['updated', 'added']"
+            v-model="sort"
+          />
+        </div>
 
-      <div class="border-t px-4 py-3">
-        <p class="font-display font-medium text-sm mb-4">Type</p>
+        <div class="section">
+          <p class="font-display font-medium text-sm mb-4">Type</p>
 
-        <CheckboxGroup
-          prefix="type"
-          :keys="['Open Source', 'Blog Posts']"
-          :values="['open-source', 'blog']"
-          v-model="types"
-        />
-      </div>
+          <CheckboxGroup
+            prefix="type"
+            :keys="['Open Source', 'Blog Posts']"
+            :values="['open-source', 'blog']"
+            v-model="types"
+          />
+        </div>
 
-      <div class="border-t px-4 py-3">
-        <p class="font-display font-medium text-sm mb-4">Category</p>
+        <div class="section">
+          <p class="font-display font-medium text-sm mb-4">Category</p>
 
-        <CheckboxGroup
-          prefix="category"
-          :keys="product.tags.map((t) => t.label)"
-          :values="product.tags.map((t) => t.value)"
-          v-model="categories"
-        />
+          <CheckboxGroup
+            prefix="category"
+            :keys="product.tags.map((t) => t.label)"
+            :values="product.tags.map((t) => t.value)"
+            v-model="categories"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -75,6 +77,7 @@ import { ProductConfig } from "../../../shared/types";
 })
 export default class ProjectFilters extends Vue {
   @Prop() product!: ProductConfig;
+  @Prop({ default: false }) mobile!: boolean;
 
   public sort = "updated";
   public types: CheckboxGroupEntry[] = [];
@@ -94,3 +97,26 @@ export default class ProjectFilters extends Vue {
   }
 }
 </script>
+
+<style scoped lang="postcss">
+.desktop {
+  @apply border-gray-200;
+}
+
+.sections {
+  overflow-y: scroll;
+}
+
+.mobile .sections {
+  max-height: 66vh;
+}
+
+.mobile {
+  @apply border-transparent;
+}
+
+.section {
+  @apply border-t;
+  @apply px-4 py-3;
+}
+</style>
