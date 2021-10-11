@@ -19,10 +19,11 @@
     <div
       v-for="entry in entries"
       :key="entry.key"
-      class="flex flex-row items-center"
+      class="flex flex-row items-center mb-2"
     >
       <input
         type="checkbox"
+        class="mr-1"
         v-model="entry.checked"
         @input="emitValue"
         :id="entry.id"
@@ -85,3 +86,11 @@ export default class CheckboxGroup extends Vue {
   }
 }
 </script>
+
+<style scoped lang="postcss">
+input[type="checkbox"] {
+  @apply rounded-sm;
+  @apply w-4 h-4;
+  @apply ml-px;
+}
+</style>

@@ -58,12 +58,13 @@
     </template>
 
     <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-20 px-6">
+    <div class="grid grid-cols-10 gap-4 mb-20 px-6 pt-8">
       <!-- Filters -->
-      <div class="mt-4 col-span-2 flex flex-col">
+      <div class="col-span-2 flex flex-col">
         <div class="rounded-lg border border-gray-200 flex-shrink">
-          <!-- TODO: Get this text styling right -->
-          <div class="px-5 py-4 uppercase text-gray-500 font-medium text-sm">
+          <div
+            class="px-5 py-4 uppercase text-gray-500 font-medium text-xs tracking-widest"
+          >
             Filters
           </div>
 
@@ -116,7 +117,7 @@
             <span>No projects matching your filters.</span>
           </div>
 
-          <div class="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <RepoOrBlogCard
               v-for="project in projects"
               :key="project.data.id"

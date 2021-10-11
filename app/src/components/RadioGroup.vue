@@ -19,7 +19,7 @@
     <div
       v-for="entry in entries"
       :key="entry.id"
-      class="flex flex-row items-center"
+      class="flex flex-row items-center mb-2"
     >
       <input
         type="radio"
@@ -88,3 +88,10 @@ export default class RadioGroup extends Vue {
   }
 }
 </script>
+
+<style scoped lang="postcss">
+input[type="radio"] {
+  @apply w-4 h-4;
+  @apply ml-px;
+}
+</style>

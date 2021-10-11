@@ -44,7 +44,7 @@
       <!-- Tags -->
       <div
         v-if="showTags"
-        class="mt-4 flex flex-row gap-2 overflow-hidden items-center"
+        class="mt-4 flex flex-row gap-2 flex-wrap items-center"
       >
         <TagChip
           v-for="t in repo.metadata.tags"
