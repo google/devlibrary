@@ -51,7 +51,7 @@
           </router-link>
 
           <div class="section">
-            <span class="header">Products</span>
+            <span class="header mb-1">Products</span>
             <router-link
               v-for="p in products"
               :key="p.key"
@@ -113,8 +113,6 @@
       <router-link tag="div" class="nav-item nav-item-link" to="/"
         ><span>Home</span></router-link
       >
-
-      <!-- TODO: Mobile hamburger menu -->
 
       <!-- Products -->
       <div
@@ -260,7 +258,7 @@ export default class NavBar extends Vue {
 }
 
 .side-menu .section .header {
-  @apply text-sm font-bold text-gray-500;
+  @apply text-xs tracking-widest uppercase text-gray-500;
 }
 
 .side-menu .section a {

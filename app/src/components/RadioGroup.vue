@@ -94,5 +94,6 @@ export default class RadioGroup extends Vue {
 input[type="radio"] {
   @apply w-4 h-4;
   @apply ml-px;
+  @apply flex-shrink-0;
 }
 </style>

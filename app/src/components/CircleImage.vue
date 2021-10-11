@@ -41,6 +41,10 @@ export default class CircleImage extends Vue {
   @apply w-12 h-12 border-2;
 }
 
+.medium {
+  @apply w-20 h-20 border-2;
+}
+
 .large {
   @apply w-36 h-36 border-4;
 }

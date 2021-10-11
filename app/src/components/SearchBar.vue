@@ -45,7 +45,7 @@
       class="absolute right-0 top-full mt-1 w-72 lg:w-96 bg-white border rounded overflow-hidden shadow-lg"
     >
       <div class="px-2 py-1 border-b bg-gray-100 border-gray-100">
-        Top Results
+        <span class="uppercase tracking-widest text-xs">Results</span>
       </div>
       <div class="font-sans">
         <div v-if="searching" class="px-2 py-1">Searching...</div>
@@ -64,7 +64,7 @@
               <font-awesome-icon :icon="res.icon" fixed-width />
             </div>
             <div class="px-3 py-2">
-              <p class="font-bold">{{ res.title }}</p>
+              <p class="font-medium font-display">{{ res.title }}</p>
               <p class="text-sm wrap-lines-2">
                 {{ res.description }}
               </p>
@@ -138,7 +138,7 @@ export default class SearchBar extends Vue {
       };
     } else if (res.type === "blog") {
       return {
-        icon: ["far", "bookmark"],
+        icon: ["fas", "book"],
         title: res.data.metadata.author,
         description: res.data.metadata.title,
         link: res.data.metadata.link,

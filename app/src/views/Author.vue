@@ -19,17 +19,19 @@
     <template v-if="loaded" v-slot:header>
       <!-- Header (Mobile) -->
       <div class="mobile-only">
-        <div class="mobile-only flex flex-row gap-4 items-center px-6 py-6">
+        <div
+          class="mobile-only flex flex-col gap-4 items-center px-6 py-6 text-center"
+        >
           <CircleImage
             class="border-white"
-            size="small"
+            size="medium"
             :src="author.metadata.photoURL"
           />
           <div>
             <h1 class="text-xl">
               {{ author.metadata.name }}
             </h1>
-            <p class="text-xs">
+            <p class="text-sm">
               {{ bio }}
             </p>
           </div>
@@ -39,7 +41,7 @@
       <!-- Header (Desktop) -->
       <div class="desktop-only">
         <div class="pt-20 pb-10 grid grid-cols-10">
-          <div class="col-start-2 col-span-6">
+          <div class="col-start-2 col-span-5">
             <div class="flex flex-row gap-8 items-center">
               <CircleImage
                 class="border-none"
@@ -59,7 +61,7 @@
           <!-- Info card -->
           <div
             v-if="loaded"
-            class="col-span-2 px-6 py-6 rounded-lg border border-gray-200 flex flex-col text-xs"
+            class="col-span-3 px-6 py-6 rounded-lg border border-gray-200 flex flex-col text-xs"
           >
             <p class="mb-1 uppercase font-medium">Expertise</p>
             <div
@@ -70,7 +72,7 @@
               <ProductLogo
                 :productKey="p"
                 class="filter grayscale mr-2"
-                size="xxtiny"
+                size="xtiny"
               />
               {{ getProductName(p) }}
             </div>
@@ -91,7 +93,7 @@
             </div>
             <div
               v-if="author.metadata.mediumURL"
-              class="mt-2 flex flex-row items-center"
+              class="mt-2 flex flex-row items-center truncate"
             >
               <font-awesome-icon
                 :icon="['fab', 'medium']"
@@ -126,7 +128,7 @@
 
         <!-- Open Source -->
         <div v-if="projects.length > 0">
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <RepoOrBlogCard
               v-for="project in projects"
               :key="project.data.id"
