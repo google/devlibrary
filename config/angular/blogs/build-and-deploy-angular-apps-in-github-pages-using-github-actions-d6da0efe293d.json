@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["ccaballero"],
   "author": "Carlos Caballero González",
   "title": "Build and Deploy Angular Apps in GitHub Pages Using GitHub Actions",
   "link": "https://betterprogramming.pub/build-and-deploy-angular-apps-in-github-pages-using-github-actions-d6da0efe293d",
