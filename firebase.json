@@ -20,6 +20,10 @@
         "function": "elasticSearch"
       },
       {
+        "source": "/api/authorPhoto",
+        "function": "authorPhoto"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

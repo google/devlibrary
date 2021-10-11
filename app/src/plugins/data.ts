@@ -45,7 +45,7 @@ export interface PagedResponse<T> {
   lastDoc: QueryResultDocument<T> | null;
 }
 
-function getApiHost(): string {
+export function getApiHost(): string {
   // In development the hosting emulator runs at port 5000
   // while the Vue dev server runs elsewhere. In prod this is
   // not an issue

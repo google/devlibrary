@@ -23,9 +23,18 @@
       <!-- Author photo and name -->
       <div class="flex flex-row items-center">
         <img
+          v-if="authorId"
           class="avatar mr-2 rounded-full"
-          :src="`https://avatars.githubusercontent.com/${blog.metadata.author}`"
+          :src="authorPhotoUrl"
         />
+
+        <div
+          v-else
+          class="avatar mr-2 bg-gray-200 text-gray-400 rounded-full flex flex-row items-center justify-center"
+        >
+          <font-awesome-icon icon="user" />
+        </div>
+
         <span class="font-display text-lg">{{ blog.metadata.author }}</span>
 
         <ProductLogo
@@ -91,6 +100,7 @@ import ProductLogo from "@/components/ProductLogo.vue";
 
 import * as dates from "@/plugins/dates";
 import * as product from "@/model/product";
+import { getApiHost } from "@/plugins/data";
 
 @Component({
   components: {
@@ -111,6 +121,25 @@ export default class LargeBlogCard extends Vue {
   public getTag(value: string) {
     return product.getTag(this.blog.product, value);
   }
+
+  get authorId() {
+    if (
+      this.blog.metadata.authorIds &&
+      this.blog.metadata.authorIds.length > 0
+    ) {
+      return this.blog.metadata.authorIds[0];
+    }
+
+    return undefined;
+  }
+
+  get authorPhotoUrl() {
+    if (this.authorId) {
+      return `${getApiHost()}/api/authorPhoto?id=${this.authorId}`
+    }
+
+    return undefined;
+  }
 }
 </script>
 
@@ -129,3 +158,7 @@ export default class LargeBlogCard extends Vue {
   height: 26px;
 }
 </style>
+
+function getApiHost() {
+  throw new Error("Function not implemented.");
+}
