@@ -33,7 +33,6 @@
             >
               <font-awesome-icon
                 icon="times"
-                size="md"
                 class="m-1"
                 fixed-width
               />
@@ -89,7 +88,6 @@
       >
         <font-awesome-icon
           icon="bars"
-          size="md"
           class="mobile-only m-1"
           fixed-width
         />
