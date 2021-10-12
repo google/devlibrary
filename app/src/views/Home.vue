@@ -18,9 +18,9 @@
   <div>
     <div
       id="header"
-      class="home-grid-base py-8 lg:py-10 bg-gray-50 border-b border-gray-100"
+      class="grid gap-4 grid-cols-8 lg:grid-cols-12 mt-2 py-6 px-8 lg:px-10 border-b border-gray-100"
     >
-      <div class="col-span-8 lg:col-start-2 lg:col-span-4 lg:mt-10">
+      <div class="col-span-12 lg:col-span-6 lg:mt-10">
         <h1 class="text-2xl lg:text-3xl font-semibold">
           What will <span class="underline">you</span> build?
         </h1>
@@ -41,15 +41,13 @@
         </div>
       </div>
 
-      <div>
-        <!-- 1-col spacer -->
+      <div class="col-span-3">
+        <!-- 3-col spacer -->
       </div>
 
-      <div class="col-span-4 hidden lg:block">
+      <div class="col-span-3 hidden lg:block">
         <img src="/img/LibraryGoogleDev-Header.svg" />
       </div>
-
-      <div class="col-span-2"><!-- Gutter --></div>
     </div>
 
     <!-- Products -->
@@ -269,10 +267,4 @@ export default class Home extends Vue {
 }
 </script>
 
-<style scoped lang="postcss">
-.home-grid-base {
-  @apply grid gap-4;
-  @apply grid-cols-8 px-8;
-  @apply lg:grid-cols-12 lg:px-0;
-}
-</style>
+<style scoped lang="postcss"></style>
