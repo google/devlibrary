@@ -103,11 +103,8 @@ export default class ProjectFilters extends Vue {
   @apply border-gray-200;
 }
 
-.sections {
-  overflow-y: scroll;
-}
-
 .mobile .sections {
+  overflow-y: scroll;
   max-height: 66vh;
 }
 
