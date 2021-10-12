@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["douglasduhaime"],
   "owner": "YaleDHLab",
   "repo": "pix-plot",
   "name": "PixPlot",
