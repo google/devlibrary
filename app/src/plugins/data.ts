@@ -66,7 +66,8 @@ async function fetchDoc(docPath: string) {
 async function fetchQuery(collectionPath: string, q: FirestoreQuery) {
   const params = new URLSearchParams({
     path: collectionPath,
-    q: btoa(JSON.stringify(q)),
+    // The unescape() and encodeURIComponent() deal with UTF-8
+    q: btoa(unescape(encodeURIComponent(JSON.stringify(q)))),
   });
 
   const res = await fetch(

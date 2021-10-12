@@ -301,7 +301,7 @@ export default class Product extends Vue {
   }
 
   get canLoadMore() {
-    return this.blogData.hasNext || this.repoData.hasNext;
+    return (this.showBlogPosts && this.blogData.hasNext) || (this.showOpenSource && this.repoData.hasNext);
   }
 
   public async loadMore() {
