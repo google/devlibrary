@@ -40,7 +40,9 @@
 
       <!-- Header (Desktop) -->
       <div class="desktop-only">
-        <div class="pt-20 pb-10 grid grid-cols-10">
+        <div class="pt-20 pb-10 grid grid-cols-10 gap-4">
+
+          <!-- Photo, name, and bio -->
           <div class="col-start-2 col-span-5">
             <div class="flex flex-row gap-8 items-center">
               <CircleImage
@@ -112,23 +114,23 @@
     <!-- Body -->
     <div class="grid grid-cols-10 gap-4 mb-20">
       <div class="col-span-10 px-6 lg:px-0 lg:col-start-2 lg:col-span-8">
-        <div v-if="loaded && author.metadata.interviewVideoId">
-          <h2 class="text-2xl mt-8">Author Interview</h2>
-          <iframe
-            class="mt-4 max-w-full"
-            width="560"
-            height="315"
-            :src="`https://www.youtube.com/embed/${author.metadata.interviewVideoId}`"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <!-- Open Source -->
-        <div v-if="projects.length > 0">
+        <div v-if="loaded">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            <!-- Video Interview -->
+            <iframe
+              v-if="loaded && author.metadata.interviewVideoId"
+              class="max-w-full rounded-lg overflow-hidden"
+              width="560"
+              height="315"
+              :src="`https://www.youtube.com/embed/${author.metadata.interviewVideoId}`"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+            <!-- Projects-->
             <RepoOrBlogCard
               v-for="project in projects"
               :key="project.data.id"
@@ -197,9 +199,9 @@ export default class Author extends Vue {
     const author = await fetchAuthor(this.id);
     const { blogs, repos } = await queryAuthorProjects(this.id);
 
-    this.author = author;
     this.blogs = blogs.docs.map((d) => d.data);
     this.repos = repos.docs.map((d) => d.data);
+    this.author = author;
   }
 
   get loaded() {
