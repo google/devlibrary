@@ -29,31 +29,15 @@
           <p class="mt-4 lg:mt-10">
             Welcome to Dev Library, a platform to showcase the projects and
             articles that developers have built with Google technologies.
-            Browse, learn, or
-            <a
-              class="underline"
-              href="https://forms.gle/E54pxK3JzpXMGyqN7"
-              target="_blanke"
-              >submit your own!</a
-            >
+            Browse, learn, or submit your own!
           </p>
-        </div>
-
-        <div class="lg:text-lg">
-          <div class="mt-4 lg:mt-10">
-            Subscribe to our newsletter to stay up to date:
-            <div class="flex flex-row mt-2 text-base">
-              <input
-                class="flex-grow rounded shadow-inner border border-gray-200 px-2 mr-2"
-                type="email"
-                v-model="newsletterEmail"
-                placeholder="Enter your email address..."
-              />
-              <a :href="newsletterLink" target="_blank">
-                <MaterialButton type="primary">Subscribe</MaterialButton>
-              </a>
-            </div>
-          </div>
+          <a
+            class="inline-block mt-4 lg:mt-10"
+            href="https://forms.gle/E54pxK3JzpXMGyqN7"
+            target="_blanke"
+          >
+            <MaterialButton type="primary">Submit</MaterialButton>
+          </a>
         </div>
       </div>
 
@@ -68,65 +52,72 @@
       <div class="col-span-2"><!-- Gutter --></div>
     </div>
 
-    <div class="pt-4 pb-10 lg:pb-20">
-      <!-- Iterate over each product -->
+    <!-- Products -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 py-6 px-8">
       <div
-        class="home-grid-base"
-        v-show="hasContent"
         v-for="p in products"
         :key="p.key"
+        class="border border-gray-200 rounded-lg p-6 flex flex-col"
       >
-        <div
-          class="desktop-only lg:flex flex-row-reverse col-start-1 col-span-1"
-        >
-          <ProductLogo class="mt-8" size="small" :productKey="p.key" />
-        </div>
-
-        <div class="flex flex-row mt-8 col-span-7 lg:col-span-11">
+        <div class="flex flex-row items-center">
           <ProductLogo
-            class="mobile-only mr-2"
-            size="small"
             :productKey="p.key"
+            size="small"
+            class="p-0 border-none mr-2"
           />
-          <div>
-            <router-link
-              :to="`/products/${p.key}`"
-              class="font-display text-2xl"
-              >{{ p.name }}</router-link
-            >
-            <p class="text-gray-500">Recently Added</p>
-          </div>
+          <span class="font-display text-lg">{{ p.name }}</span>
         </div>
-
-        <div class="col-start-1 col-span-8 lg:col-start-2 lg:col-span-10">
-          <div class="home-grid-projects">
-            <LargeRepoCard
-              v-for="repo in recentRepos[p.key]"
-              :showTags="false"
-              :key="repo.id"
-              :repo="repo"
-            />
-
-            <LargeBlogCard
-              v-for="blog in recentBlogs[p.key]"
-              :showTags="false"
-              :key="blog.id"
-              :blog="blog"
-            />
-          </div>
+        <div class="text-gray-800 mt-3 flex-grow wrap-lines-4">
+          {{ p.description }}
         </div>
-
-        <div
-          :key="p.key"
-          class="col-span-8 lg:col-start-2 lg:col-span-10 flex flex-row-reverse"
-        >
-          <router-link :to="`/products/${p.key}`"
-            ><MaterialButton type="text"
-              >All {{ p.name }} projects</MaterialButton
-            ></router-link
+        <router-link :to="`/products/${p.key}`">
+          <MaterialButton type="secondary" class="mt-4 mr-auto"
+            >Learn more</MaterialButton
           >
+        </router-link>
+      </div>
+    </div>
+
+    <!-- Newsletter banner -->
+    <div class="w-full p-10 bg-blue-600 text-white flex flex-col items-center">
+      <h2 class="text-2xl">Subscribe to our newsletter to stay up to date</h2>
+      <div class="flex flex-row w-3/4 md:w-1/2 text-base mt-6 mb-2">
+        <input
+          class="flex-grow rounded-sm shadow-inner border border-gray-200 px-2 mr-2"
+          type="email"
+          v-model="newsletterEmail"
+          placeholder="Enter your email address..."
+        />
+        <a :href="newsletterLink" target="_blank">
+          <MaterialButton type="secondary">Subscribe</MaterialButton>
+        </a>
+      </div>
+    </div>
+
+    <!-- Recently Added projects -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 py-8">
+      <div class="col-span-1 lg:col-span-2 px-2">
+        <h2 class="text-2xl">Recently Added</h2>
+        <p class="text-gray-800 font-sans text-sm mt-2 mb-4">
+          Check out the latest projects we've added to the Dev Library.<br />
+          To see all projects, choose one of the product areas below.
+        </p>
+        <div class="flex flex-row gap-2">
+          <ProductLogo
+            v-for="p in products"
+            :key="p.key"
+            :productKey="p.key"
+            size="tiny"
+          />
         </div>
       </div>
+      <RepoOrBlogCard
+        v-for="p in recentProjects"
+        :key="p.id"
+        :project="p"
+        :showLogo="true"
+        :showTags="false"
+      />
     </div>
   </div>
 </template>
@@ -138,11 +129,17 @@ import { getModule } from "vuex-module-decorators";
 import MaterialButton from "@/components/MaterialButton.vue";
 import LargeRepoCard from "@/components/LargeRepoCard.vue";
 import LargeBlogCard from "@/components/LargeBlogCard.vue";
+import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 
 import UIModule from "@/store/ui";
 
-import { queryRepos, queryBlogs, shuffleArr } from "@/plugins/data";
+import {
+  queryRepos,
+  queryBlogs,
+  shuffleArr,
+  wrapInHolders,
+} from "@/plugins/data";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
 import { BlogData, RepoData } from "../../../shared/types";
@@ -153,6 +150,7 @@ import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
     MaterialButton,
     LargeRepoCard,
     LargeBlogCard,
+    RepoOrBlogCard,
     ProductLogo,
   },
 })
@@ -171,7 +169,7 @@ export default class Home extends Vue {
         direction: "desc",
       },
     ],
-    limit: 10,
+    limit: 5,
   };
 
   mounted() {
@@ -220,6 +218,12 @@ export default class Home extends Vue {
   }
 
   get products() {
+    return Object.values(ALL_PRODUCTS).sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
+  }
+
+  get productsRandomized() {
     // Calculate the day of the year:
     // https://stackoverflow.com/a/8619946/324977
     const now = new Date();
@@ -231,6 +235,17 @@ export default class Home extends Vue {
     // Use the day of the year to change the order of product display
     const startInd = day % configs.length;
     return [...configs.slice(startInd), ...configs.slice(0, startInd)];
+  }
+
+  get recentProjects() {
+    const allRepos = Object.values(this.recentRepos).flatMap((arr) => arr);
+    const allBlogs = Object.values(this.recentBlogs).flatMap((arr) => arr);
+
+    return wrapInHolders(allBlogs, allRepos)
+      .sort((a, b) => {
+        return b.data.stats.dateAdded - a.data.stats.dateAdded;
+      })
+      .slice(0, 14);
   }
 
   get loading() {
@@ -248,10 +263,5 @@ export default class Home extends Vue {
   @apply grid gap-4;
   @apply grid-cols-8 px-8;
   @apply lg:grid-cols-12 lg:px-0;
-}
-
-.home-grid-projects {
-  @apply grid gap-4;
-  @apply grid-cols-1 lg:grid-cols-3;
 }
 </style>

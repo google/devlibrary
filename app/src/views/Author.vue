@@ -41,7 +41,6 @@
       <!-- Header (Desktop) -->
       <div class="desktop-only">
         <div class="pt-20 pb-10 grid grid-cols-10 gap-4">
-
           <!-- Photo, name, and bio -->
           <div class="col-start-2 col-span-5">
             <div class="flex flex-row gap-8 items-center">
@@ -116,7 +115,6 @@
       <div class="col-span-10 px-6 lg:px-0 lg:col-start-2 lg:col-span-8">
         <div v-if="loaded">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
             <!-- Video Interview -->
             <iframe
               v-if="loaded && author.metadata.interviewVideoId"

@@ -31,11 +31,7 @@
               class="mr-3 flex items-center align-middle text-gray-400 hover:text-gray-600"
               @click="showSideMenu = false"
             >
-              <font-awesome-icon
-                icon="times"
-                class="m-1"
-                fixed-width
-              />
+              <font-awesome-icon icon="times" class="m-1" fixed-width />
             </div>
 
             <img
@@ -86,11 +82,7 @@
         class="mr-1 flex items-center align-middle text-gray-400 hover:text-gray-600"
         @click="showSideMenu = true"
       >
-        <font-awesome-icon
-          icon="bars"
-          class="mobile-only m-1"
-          fixed-width
-        />
+        <font-awesome-icon icon="bars" class="mobile-only m-1" fixed-width />
       </div>
 
       <router-link
