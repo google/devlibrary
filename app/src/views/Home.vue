@@ -243,7 +243,16 @@ export default class Home extends Vue {
     const allRepos = Object.values(this.recentRepos).flatMap((arr) => arr);
     const allBlogs = Object.values(this.recentBlogs).flatMap((arr) => arr);
 
-    return wrapInHolders(allBlogs, allRepos)
+    const projects = wrapInHolders(allBlogs, allRepos);
+
+    // Add 30m of jitter so that the exact time the server added this doesn't
+    // matter so much.
+    for (const p of projects) {
+      p.data.stats.dateAdded +=
+        Math.random() * 1000 * 60 * 15 * Math.round(Math.random() - 1);
+    }
+
+    return projects
       .sort((a, b) => {
         return b.data.stats.dateAdded - a.data.stats.dateAdded;
       })
