@@ -79,14 +79,16 @@
     </div>
 
     <!-- Newsletter banner -->
-    <div class="w-full p-10 bg-blue-600 text-white flex flex-col items-center">
+    <div
+      class="w-full p-10 bg-blue-600 text-white flex flex-col lg:items-center"
+    >
       <h2 class="text-2xl">Subscribe to our newsletter to stay up to date</h2>
       <div class="flex flex-row w-3/4 md:w-1/2 text-base mt-6 mb-2">
         <input
           class="flex-grow rounded-sm shadow-inner border border-gray-200 px-2 mr-2"
           type="email"
           v-model="newsletterEmail"
-          placeholder="Enter your email address..."
+          placeholder="Email address..."
         />
         <a :href="newsletterLink" target="_blank">
           <MaterialButton type="secondary">Subscribe</MaterialButton>
@@ -98,11 +100,11 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 py-8">
       <div class="col-span-1 lg:col-span-2 px-2">
         <h2 class="text-2xl">Recently Added</h2>
-        <p class="text-gray-800 font-sans text-sm mt-2 mb-4">
-          Check out the latest projects we've added to the Dev Library.<br />
-          To see all projects, choose one of the product areas below.
+        <p class="text-gray-800 font-sans text-sm mt-2 mb-4 lg:w-3/4">
+          Check out the latest projects we've added to the Dev Library. To see
+          all projects, choose one of the product areas below.
         </p>
-        <div class="flex flex-row gap-2">
+        <div class="flex flex-row gap-2 mt-2 mb-4">
           <ProductLogo
             v-for="p in products"
             :key="p.key"
