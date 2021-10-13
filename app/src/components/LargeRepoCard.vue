@@ -37,9 +37,9 @@
       </div>
 
       <!-- Title -->
-      <div class="mt-4 font-display text-2xl">
+      <router-link :to="link" class="block mt-4 font-display text-2xl">
         {{ repo.metadata.repo }}
-      </div>
+      </router-link>
 
       <!-- Tags -->
       <div
@@ -56,9 +56,11 @@
       </div>
 
       <!-- Description -->
-      <div class="mt-4 flex-grow wrap-lines-3">
+      <div class="mt-4 wrap-lines-3">
         {{ repo.metadata.longDescription }}
       </div>
+
+      <div class="flex-grow"><!-- spacer --></div>
 
       <!-- Timestamp -->
       <div class="mt-4 flex flex-row text-sm items-center gap-1 text-gray-600">
@@ -121,15 +123,6 @@ export default class LargeRepoCard extends Vue {
 </script>
 
 <style scoped lang="postcss">
-/** See: https://stackoverflow.com/a/13924997/324977 */
-.wrap-lines-3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-
 .avatar {
   width: 26px;
   height: 26px;

@@ -34,7 +34,7 @@
           <a
             class="inline-block mt-4 lg:mt-10"
             href="https://forms.gle/E54pxK3JzpXMGyqN7"
-            target="_blanke"
+            target="_blank"
           >
             <MaterialButton type="primary">Submit</MaterialButton>
           </a>
@@ -68,10 +68,8 @@
         <div class="text-gray-800 mt-3 flex-grow wrap-lines-4">
           {{ p.description }}
         </div>
-        <router-link :to="`/products/${p.key}`">
-          <MaterialButton type="secondary" class="mt-4 mr-auto"
-            >Learn more</MaterialButton
-          >
+        <router-link :to="`/products/${p.key}`" class="mt-4 mr-auto">
+          <MaterialButton type="secondary">Learn more</MaterialButton>
         </router-link>
       </div>
     </div>

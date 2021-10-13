@@ -22,11 +22,9 @@
     >
       <!-- Author photo and name -->
       <div class="flex flex-row items-center">
-        <img
-          v-if="authorId"
-          class="avatar mr-2 rounded-full"
-          :src="authorPhotoUrl"
-        />
+        <router-link v-if="authorId" :to="`/authors/${authorId}`" class="mr-2">
+          <img class="avatar rounded-full" :src="authorPhotoUrl" />
+        </router-link>
 
         <div
           v-else
@@ -46,9 +44,12 @@
       </div>
 
       <!-- Title -->
-      <div class="mt-4 font-display text-2xl">
+      <a
+        :href="blog.metadata.link"
+        class="mt-4 font-display text-2xl wrap-lines-3"
+      >
         {{ blog.metadata.title }}
-      </div>
+      </a>
 
       <!-- Tags -->
       <div
@@ -64,7 +65,7 @@
         />
       </div>
 
-      <span class="flex-grow"><!-- Spacer --></span>
+      <span class="flex-grow"><!-- spacer --></span>
 
       <!-- Timestamp -->
       <div class="mt-4 flex flex-row text-sm items-center gap-1 text-gray-600">
@@ -144,19 +145,8 @@ export default class LargeBlogCard extends Vue {
 </script>
 
 <style scoped lang="postcss">
-/** See: https://stackoverflow.com/a/13924997/324977 */
-.wrap-lines-3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-
 .avatar {
   width: 26px;
   height: 26px;
 }
 </style>
-
-function getApiHost() { throw new Error("Function not implemented."); }

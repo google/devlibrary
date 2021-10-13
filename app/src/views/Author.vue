@@ -19,9 +19,7 @@
     <template v-if="loaded" v-slot:header>
       <!-- Header (Mobile) -->
       <div class="mobile-only">
-        <div
-          class="mobile-only flex flex-col gap-4 items-center my-6"
-        >
+        <div class="mobile-only flex flex-col gap-4 items-center my-6">
           <CircleImage
             class="border-white"
             size="medium"
@@ -140,7 +138,7 @@ import { AuthorData, BlogData, RepoData } from "../../../shared/types";
     RepoOrBlogCard,
     HeaderBodyLayout,
     CircleImage,
-    AuthorExpertiseCard
+    AuthorExpertiseCard,
   },
 })
 export default class Author extends Vue {
