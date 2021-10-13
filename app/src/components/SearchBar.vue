@@ -128,7 +128,13 @@ export default class SearchBar extends Vue {
 
   @Watch("query")
   public async onQueryChange() {
-    this.searchFn();
+    if (this.query.length === 0) {
+      this.searching = false;
+      this.results = [];
+    } else {
+      this.searching = true;
+      this.searchFn();
+    }
   }
 
   public toDisplay(res: SearchResult) {
