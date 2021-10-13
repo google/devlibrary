@@ -20,20 +20,32 @@
       <!-- Header (Mobile) -->
       <div class="mobile-only">
         <div
-          class="mobile-only flex flex-col gap-4 items-center px-6 py-6 text-center"
+          class="mobile-only flex flex-col gap-4 items-center my-6"
         >
           <CircleImage
             class="border-white"
             size="medium"
             :src="author.metadata.photoURL"
           />
-          <div>
+
+          <!-- Name and bio -->
+          <div class="px-6 py-2 text-center">
             <h1 class="text-xl">
               {{ author.metadata.name }}
             </h1>
-            <p class="text-sm">
+            <p class="text-sm mt-2">
               {{ bio }}
             </p>
+          </div>
+
+          <!-- Info card -->
+          <div class="px-6 w-full">
+            <AuthorExpertiseCard
+              v-if="loaded"
+              class="w-full"
+              :expertise="expertise"
+              :author="author"
+            />
           </div>
         </div>
       </div>
@@ -42,7 +54,7 @@
       <div class="desktop-only">
         <div class="pt-20 pb-10 grid grid-cols-10 gap-4">
           <!-- Photo, name, and bio -->
-          <div class="col-start-2 col-span-5">
+          <div class="col-start-2 col-span-6">
             <div class="flex flex-row gap-8 items-center">
               <CircleImage
                 class="border-none"
@@ -60,52 +72,12 @@
           </div>
 
           <!-- Info card -->
-          <div
+          <AuthorExpertiseCard
             v-if="loaded"
-            class="col-span-3 px-6 py-6 rounded-lg border border-gray-200 flex flex-col text-xs"
-          >
-            <p class="mb-1 uppercase font-medium">Expertise</p>
-            <div
-              v-for="p in expertise"
-              :key="p"
-              class="mt-2 flex flex-row items-center"
-            >
-              <ProductLogo
-                :productKey="p"
-                class="filter grayscale mr-2"
-                size="xtiny"
-              />
-              {{ getProductName(p) }}
-            </div>
-
-            <p class="mt-8 mb-1 uppercase font-medium">Connect</p>
-            <div
-              v-if="author.metadata.githubURL"
-              class="mt-2 flex flex-row items-center"
-            >
-              <font-awesome-icon
-                :icon="['fab', 'github']"
-                fixed-width
-                class="mr-2 text-lg opacity-60"
-              />
-              <a :href="author.metadata.githubURL" target="_blank">{{
-                author.metadata.githubURL
-              }}</a>
-            </div>
-            <div
-              v-if="author.metadata.mediumURL"
-              class="mt-2 flex flex-row items-center truncate"
-            >
-              <font-awesome-icon
-                :icon="['fab', 'medium']"
-                fixed-width
-                class="mr-2 text-lg opacity-60"
-              />
-              <a :href="author.metadata.mediumURL" target="_blank">{{
-                author.metadata.mediumURL
-              }}</a>
-            </div>
-          </div>
+            class="col-span-2"
+            :expertise="expertise"
+            :author="author"
+          />
         </div>
       </div>
     </template>
@@ -118,7 +90,7 @@
             <!-- Video Interview -->
             <iframe
               v-if="loaded && author.metadata.interviewVideoId"
-              class="max-w-full rounded-lg overflow-hidden"
+              class="max-w-full rounded-lg overflow-hidden bg-gray-200"
               width="560"
               height="315"
               :src="`https://www.youtube.com/embed/${author.metadata.interviewVideoId}`"
@@ -153,7 +125,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import CircleImage from "@/components/CircleImage.vue";
-import ProductLogo from "@/components/ProductLogo.vue";
+import AuthorExpertiseCard from "@/components/AuthorExpertiseCard.vue";
 
 import {
   fetchAuthor,
@@ -161,7 +133,6 @@ import {
   wrapInHolders,
 } from "@/plugins/data";
 import { AuthorData, BlogData, RepoData } from "../../../shared/types";
-import { ALL_PRODUCTS } from "../../../shared/product";
 
 @Component({
   components: {
@@ -169,7 +140,7 @@ import { ALL_PRODUCTS } from "../../../shared/product";
     RepoOrBlogCard,
     HeaderBodyLayout,
     CircleImage,
-    ProductLogo,
+    AuthorExpertiseCard
   },
 })
 export default class Author extends Vue {
@@ -226,10 +197,6 @@ export default class Author extends Vue {
     return wrapInHolders(this.blogs, this.repos).sort((a, b) => {
       return b.data.stats.dateAdded - a.data.stats.dateAdded;
     });
-  }
-
-  public getProductName(productId: string) {
-    return ALL_PRODUCTS[productId].name;
   }
 }
 </script>
