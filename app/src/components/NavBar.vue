@@ -100,7 +100,7 @@
       <span class="mr-4 lg:mr-8"><!-- spacer --></span>
 
       <!-- Home -->
-      <router-link tag="div" class="nav-item nav-item-link" to="/"
+      <router-link class="block nav-item nav-item-link" to="/"
         ><span>Home</span></router-link
       >
 
@@ -122,23 +122,22 @@
             v-for="p in products"
             :key="p.key"
             :to="`/products/${p.key}`"
-            tag="div"
-            class="px-3 py-2 whitespace-nowrap hover:bg-gray-50"
+            class="block px-3 py-2 whitespace-nowrap hover:bg-gray-50"
           >
             {{ p.name }}
           </router-link>
         </div>
       </div>
 
-      <router-link tag="div" class="nav-item nav-item-link" to="/authors"
+      <router-link class="block nav-item nav-item-link" to="/authors"
         ><span>Authors</span></router-link
       >
 
-      <a class="nav-item nav-item-link" :href="submitLink" target="_blank"
+      <a class="block nav-item nav-item-link" :href="submitLink" target="_blank"
         >Submit</a
       >
 
-      <router-link tag="div" class="nav-item nav-item-link" to="/about"
+      <router-link class="block nav-item nav-item-link" to="/about"
         ><span>About</span></router-link
       >
 
