@@ -51,37 +51,44 @@
     </div>
 
     <!-- Products -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 py-6 px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-5 lg:px-8">
       <div
         v-for="p in products"
         :key="p.key"
-        class="border border-gray-200 rounded-lg p-6 flex flex-col"
+        class="border border-gray-200 rounded-lg px-3 py-4 lg:px-6 lg:py-6 flex flex-col"
       >
-        <div class="flex flex-row items-center">
+        <router-link
+          :to="`/products/${p.key}`"
+          class="flex flex-row items-center"
+        >
           <ProductLogo
             :productKey="p.key"
             size="small"
             class="p-0 border-none mr-2"
           />
           <span class="font-display text-lg">{{ p.name }}</span>
-        </div>
-        <div class="text-gray-800 mt-3 flex-grow wrap-lines-4">
-          {{ p.description }}
-        </div>
-        <router-link :to="`/products/${p.key}`" class="mt-4 mr-auto">
-          <MaterialButton type="secondary">Learn more</MaterialButton>
         </router-link>
+        <div class="desktop-only">
+          <div class="text-gray-800 mt-3 flex-grow wrap-lines-4">
+            {{ p.description }}
+          </div>
+        </div>
+        <div class="desktop-only">
+          <router-link :to="`/products/${p.key}`" class="mt-4 mr-auto">
+            <MaterialButton type="secondary">Learn more</MaterialButton>
+          </router-link>
+        </div>
       </div>
     </div>
 
     <!-- Newsletter banner -->
-    <div
-      class="w-full p-10 bg-gblue-600 text-white flex flex-col lg:items-center"
-    >
-      <h2 class="text-2xl">Subscribe to our newsletter to stay up to date</h2>
-      <div class="flex flex-row w-3/4 md:w-1/2 text-base mt-6 mb-2">
+    <div class="w-full p-10 bg-gblue-600 text-white flex flex-col items-center">
+      <h2 class="text-2xl text-center">
+        Subscribe to our newsletter to stay up to date:
+      </h2>
+      <div class="flex flex-row max-w-sm text-base mt-6 mb-2">
         <input
-          class="flex-grow rounded-sm shadow-inner border border-gray-200 px-2 mr-2"
+          class="flex-grow rounded-sm border border-gray-200 px-2 mr-2"
           type="email"
           v-model="newsletterEmail"
           placeholder="Email address..."

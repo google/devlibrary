@@ -20,7 +20,7 @@
       <div
         class="px-5 py-4 uppercase text-gray-500 font-medium text-xs tracking-widest"
       >
-        Filter
+        Filter By
       </div>
 
       <div class="sections">

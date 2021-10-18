@@ -61,7 +61,7 @@
     <div class="grid grid-cols-10 gap-4 mb-20 px-6 pt-4 lg:pt-8">
       <!-- Show filters button -->
       <div class="mobile-only col-span-10">
-        <div class="flex flex-row-reverse">
+        <div class="flex flex-row">
           <MaterialButton
             type="secondary"
             @click.native="showFilterOverlay = true"
@@ -81,7 +81,7 @@
       <div
         v-if="$mq === 'mobile'"
         v-show="showFilterOverlay"
-        class="mobile-only fixed right-0 top-0 bg-black bg-opacity-10 w-full h-full"
+        class="mobile-only fixed right-0 top-0 bg-black bg-opacity-60 w-full h-full"
       >
         <!-- scrim -->
       </div>

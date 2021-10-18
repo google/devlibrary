@@ -29,72 +29,70 @@
     </div>
 
     <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-8" v-if="loaded">
+    <div class="grid gap-4 mb-8" v-if="loaded">
       <!-- Author Cards -->
-      <div class="col-start-2 col-span-8">
+      <div
+        class="py-4 px-4 lg:px-6 grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+      >
+        <!-- Author Card -->
         <div
-          class="py-6 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+          v-for="author in authors"
+          :key="author.id"
+          class="card px-5 py-4 flex flex-col items-center text-center"
         >
-          <!-- Author Card -->
-          <div
-            v-for="author in authors"
-            :key="author.id"
-            class="card px-5 py-4 flex flex-col items-center text-center"
-          >
-            <CircleImage
-              :src="author.metadata.photoURL"
-              class="flex-shrink-0 avatar border-none"
-              size="small"
-            />
-            <div>
-              <div class="mt-2 wrap-lines-1 font-medium font-display">
-                {{ author.metadata.name }}
-              </div>
-
-              <!-- Icons -->
-              <div class="mt-2 flex flex-row justify-center gap-2 text-sm">
-                <a
-                  v-if="author.metadata.githubURL"
-                  :href="author.metadata.githubURL"
-                  target="_blank"
-                  class="icon-link"
-                >
-                  <font-awesome-icon :icon="['fab', 'github']" />
-                </a>
-                <a
-                  v-if="author.metadata.mediumURL"
-                  :href="author.metadata.mediumURL"
-                  target="_blank"
-                  class="icon-link"
-                >
-                  <font-awesome-icon :icon="['fab', 'medium']" />
-                </a>
-              </div>
-
-              <router-link
-                :to="`/authors/${author.id}`"
-                class="mt-2 flex flex-row justify-center"
-              >
-                <MaterialButton type="text">View profile</MaterialButton>
-              </router-link>
+          <CircleImage
+            :src="author.metadata.photoURL"
+            class="flex-shrink-0 avatar border-none"
+            size="small"
+          />
+          <div>
+            <div class="mt-2 wrap-lines-1 font-medium font-display">
+              {{ author.metadata.name }}
             </div>
+
+            <!-- Icons -->
+            <div class="mt-2 flex flex-row justify-center gap-2 text-sm">
+              <a
+                v-if="author.metadata.githubURL"
+                :href="author.metadata.githubURL"
+                target="_blank"
+                class="icon-link"
+              >
+                <font-awesome-icon :icon="['fab', 'github']" />
+              </a>
+              <a
+                v-if="author.metadata.mediumURL"
+                :href="author.metadata.mediumURL"
+                target="_blank"
+                class="icon-link"
+              >
+                <font-awesome-icon :icon="['fab', 'medium']" />
+              </a>
+            </div>
+
+            <router-link
+              :to="`/authors/${author.id}`"
+              class="mt-2 flex flex-row justify-center"
+            >
+              <MaterialButton type="text">View profile</MaterialButton>
+            </router-link>
           </div>
         </div>
       </div>
-
-      <!-- Link -->
-      <p class="text-sm col-start-2 col-span-8 opacity-50">
-        If you believe you should be on this page, or if you're on this page and
-        would like to update your information, open an Issue or send us a Pull
-        Request
-        <a
-          href="https://github.com/google/devlibrary"
-          class="cursor-pointer underline"
-          target="_blank"
-          >here</a
-        >.
-      </p>
     </div>
+
+    <!-- Link -->
+    <p class="text-sm col-start-2 col-span-8 opacity-50">
+      If you believe you should be on this page, or if you're on this page and
+      would like to update your information, open an Issue or send us a Pull
+      Request
+      <a
+        href="https://github.com/google/devlibrary"
+        class="cursor-pointer underline"
+        target="_blank"
+        >here</a
+      >.
+    </p>
   </div>
 </template>
 
