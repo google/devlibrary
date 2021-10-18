@@ -68,13 +68,13 @@
           />
           <span class="font-display text-lg">{{ p.name }}</span>
         </router-link>
-        <div class="desktop-only">
-          <div class="text-gray-800 mt-3 flex-grow wrap-lines-4">
+        <div class="desktop-only flex-grow">
+          <div class="text-gray-800 mt-3 wrap-lines-4">
             {{ p.description }}
           </div>
         </div>
-        <div class="desktop-only">
-          <router-link :to="`/products/${p.key}`" class="mt-4 mr-auto">
+        <div class="desktop-only mt-4">
+          <router-link :to="`/products/${p.key}`" class="mr-auto">
             <MaterialButton type="secondary">Learn more</MaterialButton>
           </router-link>
         </div>
