@@ -140,7 +140,10 @@
               type="text"
               @click.native="loadMore"
             >
-              Load more
+              <div class="flex flex-row items-center">
+                <span>Load more</span>
+                <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
+              </div>
             </MaterialButton>
           </div>
         </div>
