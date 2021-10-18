@@ -17,7 +17,7 @@
 <template>
   <button
     :class="type"
-    class="materialbutton cursor-pointer whitespace-pre rounded font-display text-sm px-4 py-2 border border-gray-200 transition-colors"
+    class="materialbutton cursor-pointer whitespace-pre rounded font-display text-sm px-6 py-2 border border-gray-200 transition-colors"
   >
     <slot></slot>
   </button>
