@@ -42,19 +42,19 @@ export default class MaterialButton extends Vue {
 }
 
 .primary {
-  @apply text-white bg-blue-600;
+  @apply text-white bg-gblue-600;
 }
 
 .primary:hover {
-  @apply bg-blue-700;
+  @apply bg-gblue-700;
 }
 
 .primary:active {
-  @apply bg-blue-700;
+  @apply bg-gblue-700;
 }
 
 .secondary {
-  @apply text-blue-600 bg-white;
+  @apply text-gblue-600 bg-white;
 }
 
 .secondary:hover {
@@ -67,7 +67,7 @@ export default class MaterialButton extends Vue {
 
 .text {
   @apply border-transparent border-none;
-  @apply text-blue-600 bg-none;
+  @apply text-gblue-600 bg-none;
   @apply shadow-none;
 }
 

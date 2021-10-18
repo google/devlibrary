@@ -76,7 +76,7 @@
 
     <!-- Newsletter banner -->
     <div
-      class="w-full p-10 bg-blue-600 text-white flex flex-col lg:items-center"
+      class="w-full p-10 bg-gblue-600 text-white flex flex-col lg:items-center"
     >
       <h2 class="text-2xl">Subscribe to our newsletter to stay up to date</h2>
       <div class="flex flex-row w-3/4 md:w-1/2 text-base mt-6 mb-2">
