@@ -20,27 +20,33 @@
       <!-- Header (Mobile) -->
       <div class="mobile-only">
         <div
-          :class="[productStyle.bg]"
-          class="mobile-only flex flex-row items-center px-6 py-4"
+          class="mobile-only flex flex-row items-center px-6 py-4 border-b border-gray-100"
         >
-          <ProductLogo size="tiny" :productKey="product.key" />
+          <ProductLogo size="small" :productKey="product.key" />
 
-          <h1 class="text-2xl ml-2" :class="[productStyle.text]">
+          <h1 class="text-2xl ml-2">
             {{ product.name }}
           </h1>
         </div>
       </div>
 
       <!-- Header (Desktop) -->
-      <div class="desktop-only">
-        <div :class="[productStyle.bg]" class="py-20 grid grid-cols-10 gap-4">
-          <div
-            :class="[productStyle.text]"
-            class="col-start-2 col-span-5 text-white"
-          >
-            <h1 class="text-3xl font-semibold">
-              {{ product.name }}
-            </h1>
+      <div class="desktop-only" id="header">
+        <div
+          class="lg:py-4 xl:py-10 px-10 grid grid-cols-10 gap-4 border-b border-gray-100"
+        >
+          <div class="col-span-4">
+            <div class="flex flex-row items-center">
+              <ProductLogo
+                class="mr-4"
+                size="medium"
+                :productKey="product.key"
+              />
+              <h1 class="text-3xl font-semibold">
+                {{ product.name }}
+              </h1>
+            </div>
+
             <p class="mt-2">{{ product.description }}</p>
             <a :href="product.docsUrl" target="blank">
               <MaterialButton type="secondary" class="mt-8">
@@ -48,10 +54,6 @@
                 <font-awesome-icon icon="external-link-alt" class="ml-1" />
               </MaterialButton>
             </a>
-          </div>
-
-          <div class="col-start-8 col-span-2">
-            <ProductLogo size="large" :productKey="product.key" />
           </div>
         </div>
       </div>
@@ -386,6 +388,15 @@ export default class Product extends Vue {
 </script>
 
 <style scoped lang="postcss">
+@screen lg {
+  #header {
+    background-image: url("/img/banners/product.png");
+    background-position: right top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
 /** slide-in-left transition */
 .slide-in-left-leave-active,
 .slide-in-left-enter-active {

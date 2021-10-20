@@ -17,7 +17,7 @@
 <template>
   <div>
     <!-- Header -->
-    <div class="grid grid-cols-10 gap-4 bg-gray-50 border-b border-gray-100">
+    <div class="grid grid-cols-10 gap-4 border-b border-gray-100">
       <div class="col-start-2 col-span-8">
         <div class="py-10">
           <h1>Content Policy</h1>

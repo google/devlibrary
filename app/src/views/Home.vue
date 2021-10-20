@@ -18,35 +18,27 @@
   <div>
     <div
       id="header"
-      class="grid gap-4 grid-cols-8 lg:grid-cols-12 mt-2 py-6 px-8 lg:px-10 border-b border-gray-100"
+      class="grid grid-cols-12 mt-2 py-6 lg:py-8 xl:py-10 px-8 lg:px-10 border-b border-gray-100"
     >
-      <div class="col-span-12 lg:col-span-6 lg:mt-10">
+      <div class="col-span-12 lg:col-span-5">
         <h1 class="text-2xl lg:text-3xl font-semibold">
           What will <span class="underline">you</span> build?
         </h1>
 
         <div class="lg:text-lg">
-          <p class="mt-4 lg:mt-10">
+          <p class="mt-4 lg:mt-6">
             Welcome to Dev Library, a platform to showcase the projects and
             articles that developers have built with Google technologies.
             Browse, learn, or submit your own!
           </p>
           <a
-            class="inline-block mt-4 lg:mt-10"
+            class="inline-block mt-4 lg:mt-6"
             href="https://forms.gle/E54pxK3JzpXMGyqN7"
             target="_blank"
           >
             <MaterialButton type="primary">Submit</MaterialButton>
           </a>
         </div>
-      </div>
-
-      <div class="col-span-3">
-        <!-- 3-col spacer -->
-      </div>
-
-      <div class="col-span-3 hidden lg:block">
-        <img src="/img/LibraryGoogleDev-Header.svg" />
       </div>
     </div>
 
@@ -61,11 +53,7 @@
           :to="`/products/${p.key}`"
           class="flex flex-row items-center"
         >
-          <ProductLogo
-            :productKey="p.key"
-            size="small"
-            class="p-0 border-none mr-2"
-          />
+          <ProductLogo :productKey="p.key" size="tiny" class="mr-2" />
           <span class="font-display text-lg">{{ p.name }}</span>
         </router-link>
         <div class="desktop-only flex-grow">
@@ -272,4 +260,13 @@ export default class Home extends Vue {
 }
 </script>
 
-<style scoped lang="postcss"></style>
+<style scoped lang="postcss">
+@screen lg {
+  #header {
+    background-image: url("/img/banners/home.png");
+    background-position: right top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+</style>

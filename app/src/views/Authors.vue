@@ -17,15 +17,11 @@
 <template>
   <div>
     <!-- Header -->
-    <div class="grid grid-cols-10 gap-4 bg-gray-50 border-b border-gray-100">
-      <div class="col-start-2 col-span-8">
-        <div class="py-10">
-          <h1 class="text-2xl lg:text-3xl font-semibold">Authors</h1>
-          <p class="mt-1">
-            All content on Dev Library is contributed by our incredible authors!
-          </p>
-        </div>
-      </div>
+    <div id="header" class="py-10 lg:py-20 px-8 border-b border-gray-100">
+      <h1 class="text-2xl lg:text-3xl font-semibold">Authors</h1>
+      <p class="mt-1">
+        All content on Dev Library is contributed by our incredible authors!
+      </p>
     </div>
 
     <!-- Body -->
@@ -146,6 +142,15 @@ export default class Authors extends Vue {
 </script>
 
 <style scoped lang="postcss">
+@screen lg {
+  #header {
+    background-image: url("/img/banners/authors.png");
+    background-position: right top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
 .card {
   @apply rounded-lg border border-gray-200 overflow-hidden transition-shadow hover:shadow;
 }

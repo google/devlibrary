@@ -18,11 +18,11 @@
   <div class="about">
     <div
       id="header"
-      class="grid gap-4 grid-cols-6 py-6 lg:py-10 bg-gray-50 border-b border-gray-100"
+      class="grid gap-4 grid-cols-6 py-6 lg:py-10 border-b border-gray-100"
     >
       <div class="section">
         <h1 class="text-2xl lg:text-3xl font-semibold">
-          <span class="underline">About</span>
+          <span>About</span>
         </h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
@@ -75,7 +75,7 @@
     <div class="grid gap-4 grid-cols-6">
       <div class="section mt-6 lg:mt-10">
         <h1 class="text-2xl lg:text-3xl font-semibold">
-          <span class="underline">Policies</span>
+          <span>Policies</span>
         </h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
@@ -114,7 +114,7 @@
 
       <div class="section mt-6 lg:mt-10">
         <h1 class="text-2xl lg:text-3xl font-semibold">
-          <span class="underline">Frequently Asked Questions</span>
+          <span>Frequently Asked Questions</span>
         </h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
