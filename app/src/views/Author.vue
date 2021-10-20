@@ -203,7 +203,7 @@ export default class Author extends Vue {
 @screen lg {
   #header {
     background-image: url("/img/banners/author.png");
-    background-position: left top;
+    background-position: right top;
     background-size: contain;
     background-repeat: no-repeat;
   }
