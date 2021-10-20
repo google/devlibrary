@@ -21,9 +21,7 @@
       class="grid gap-4 grid-cols-6 py-6 lg:py-10 border-b border-gray-100"
     >
       <div class="section">
-        <h1 class="text-2xl lg:text-3xl font-semibold">
-          <span>About</span>
-        </h1>
+        <h1>About</h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p>
@@ -74,9 +72,7 @@
     </div>
     <div class="grid gap-4 grid-cols-6">
       <div class="section mt-6 lg:mt-10">
-        <h1 class="text-2xl lg:text-3xl font-semibold">
-          <span>Policies</span>
-        </h1>
+        <h1>Policies</h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p class="mt-6 font-bold">Terms of Service</p>
@@ -113,9 +109,7 @@
       </div>
 
       <div class="section mt-6 lg:mt-10">
-        <h1 class="text-2xl lg:text-3xl font-semibold">
-          <span>Frequently Asked Questions</span>
-        </h1>
+        <h1>Frequently Asked Questions</h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p class="mt-6 font-bold">What is the purpose of this site?</p>

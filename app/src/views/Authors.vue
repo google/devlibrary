@@ -18,7 +18,7 @@
   <div>
     <!-- Header -->
     <div id="header" class="py-10 lg:py-20 px-8 border-b border-gray-100">
-      <h1 class="text-2xl lg:text-3xl font-semibold">Authors</h1>
+      <h1>Authors</h1>
       <p class="mt-1">
         All content on Dev Library is contributed by our incredible authors!
       </p>

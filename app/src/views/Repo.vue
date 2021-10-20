@@ -24,7 +24,7 @@
           class="py-20 grid grid-cols-10 gap-4"
         >
           <div class="col-start-2 col-span-7">
-            <h1 class="text-3xl font-semibold">
+            <h1>
               {{ repo.metadata.name }}
             </h1>
             <p class="opacity-80">
@@ -67,9 +67,9 @@
       <!-- Header (Mobile) -->
       <div class="mobile-only">
         <div :class="[productStyle.bg, productStyle.text]" class="py-4 px-8">
-          <h1 class="text-2xl font-semibold">
+          <h2>
             {{ repo.metadata.name }}
-          </h1>
+          </h2>
           <p class="opacity-80">
             {{ repo.metadata.shortDescription }}
           </p>
@@ -129,7 +129,7 @@
         <template v-for="(s, i) in content.sections">
           <h2
             v-if="i > 0 && s.name.length > 0"
-            class="text-2xl mt-8 mb-2"
+            class="mt-8 mb-2"
             :key="`header-${s.name}`"
           >
             {{ s.name }}

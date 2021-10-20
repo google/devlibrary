@@ -21,11 +21,9 @@
       class="grid grid-cols-12 mt-2 py-6 lg:py-8 xl:py-10 px-8 lg:px-10 border-b border-gray-100"
     >
       <div class="col-span-12 lg:col-span-5">
-        <h1 class="text-2xl lg:text-3xl font-semibold">
-          What will <span class="underline">you</span> build?
-        </h1>
+        <h1>What will <span class="underline">you</span> build?</h1>
 
-        <div class="lg:text-lg">
+        <div>
           <p class="mt-4 lg:mt-6">
             Welcome to Dev Library, a platform to showcase the projects and
             articles that developers have built with Google technologies.
@@ -54,10 +52,10 @@
           class="flex flex-row items-center"
         >
           <ProductLogo :productKey="p.key" size="tiny" class="mr-2" />
-          <span class="font-display text-lg">{{ p.name }}</span>
+          <h3>{{ p.name }}</h3>
         </router-link>
         <div class="desktop-only flex-grow">
-          <div class="text-gray-800 mt-3 wrap-lines-4">
+          <div class="text-mgray-800 mt-3 wrap-lines-4">
             {{ p.description }}
           </div>
         </div>
@@ -71,9 +69,9 @@
 
     <!-- Newsletter banner -->
     <div class="w-full p-10 bg-gblue-600 text-white flex flex-col items-center">
-      <h2 class="text-2xl text-center">
+      <h1 class="text-white text-center">
         Subscribe to our newsletter to stay up to date:
-      </h2>
+      </h1>
       <div class="flex flex-row max-w-sm text-base mt-6 mb-2">
         <input
           class="flex-grow rounded-sm border border-gray-200 px-2 mr-2"
@@ -90,8 +88,8 @@
     <!-- Recently Added projects -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 py-8">
       <div class="col-span-1 lg:col-span-2 px-2">
-        <h2 class="text-2xl">Recently Added</h2>
-        <p class="text-gray-800 font-sans text-sm mt-2 mb-4 lg:w-3/4">
+        <h2>Recently Added</h2>
+        <p class="text-mgray-800 font-sans text-sm mt-2 mb-4 lg:w-3/4">
           Check out the latest projects we've added to the Dev Library. To see
           all projects, choose one of the product areas below.
         </p>

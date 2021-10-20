@@ -184,11 +184,11 @@ export default class ContentPolicy extends Vue {}
 
 <style scoped lang="postcss">
 h1 {
-  @apply text-2xl lg:text-3xl font-semibold mb-4;
+  @apply mb-4;
 }
 
 h2 {
-  @apply text-xl lg:text-2xl font-semibold mt-4 mb-2;
+  @apply mt-4 mb-2;
 }
 
 a {

@@ -24,7 +24,7 @@
         >
           <ProductLogo size="small" :productKey="product.key" />
 
-          <h1 class="text-2xl ml-2">
+          <h1 class="ml-2">
             {{ product.name }}
           </h1>
         </div>
@@ -42,7 +42,7 @@
                 size="medium"
                 :productKey="product.key"
               />
-              <h1 class="text-3xl font-semibold">
+              <h1>
                 {{ product.name }}
               </h1>
             </div>

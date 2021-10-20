@@ -37,8 +37,8 @@
       </div>
 
       <!-- Title -->
-      <router-link :to="link" class="block mt-4 font-display text-2xl">
-        {{ repo.metadata.repo }}
+      <router-link :to="link" class="block mt-4">
+        <h3>{{ repo.metadata.repo }}</h3>
       </router-link>
 
       <!-- Tags -->

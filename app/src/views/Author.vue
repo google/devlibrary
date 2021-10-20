@@ -28,9 +28,9 @@
 
           <!-- Name and bio -->
           <div class="px-6 py-2 text-center">
-            <h1 class="text-xl">
+            <h3>
               {{ author.metadata.name }}
-            </h1>
+            </h3>
             <p class="text-sm mt-2">
               {{ bio }}
             </p>
@@ -61,7 +61,7 @@
               />
 
               <div>
-                <h1 class="text-3xl font-semibold">
+                <h1>
                   {{ author.metadata.name }}
                 </h1>
                 <p class="mt-2 max-w-xl">{{ bio }}</p>

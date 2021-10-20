@@ -44,11 +44,8 @@
       </div>
 
       <!-- Title -->
-      <a
-        :href="blog.metadata.link"
-        class="mt-4 font-display text-2xl wrap-lines-3"
-      >
-        {{ blog.metadata.title }}
+      <a :href="blog.metadata.link" class="mt-4 wrap-lines-3">
+        <h3>{{ blog.metadata.title }}</h3>
       </a>
 
       <!-- Tags -->
