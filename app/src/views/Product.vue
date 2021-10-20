@@ -61,19 +61,6 @@
 
     <!-- Body -->
     <div class="grid grid-cols-10 gap-4 mb-20 px-6 pt-4 lg:pt-8">
-      <!-- Show filters button -->
-      <div class="mobile-only col-span-10">
-        <div class="flex flex-row">
-          <MaterialButton
-            type="secondary"
-            @click.native="showFilterOverlay = true"
-          >
-            <font-awesome-icon icon="filter" size="sm" class="mr-1" />
-            <span>Filters</span>
-          </MaterialButton>
-        </div>
-      </div>
-
       <!-- Filters (Desktop) -->
       <div v-if="$mq === 'desktop'" class="lg:col-span-2">
         <ProjectFilters v-model="filters" :product="product" />
@@ -93,9 +80,7 @@
           v-show="showFilterOverlay"
           class="mobile-only fixed right-0 top-0 pt-20 w-full h-full"
         >
-          <div
-            class="bg-white rounded-l overflow-hidden w-2/3 ml-auto shadow-lg"
-          >
+          <div class="bg-white rounded-l overflow-hidden w-2/3 ml-auto">
             <ProjectFilters
               v-model="filters"
               :product="product"
@@ -116,6 +101,41 @@
 
       <!-- Cards -->
       <div v-show="hasContent" class="col-span-10 lg:col-span-8">
+        <!-- Filter Chips -->
+        <div v-if="filters" class="flex flex-row flex-wrap">
+          <!-- Show filters button (mobile) -->
+          <div class="mobile-only">
+            <div class="flex flex-row mr-2 mb-4">
+              <div class="filter-chip" @click="showFilterOverlay = true">
+                <font-awesome-icon icon="filter" size="sm" class="mr-2" />
+                <span>Filters</span>
+              </div>
+            </div>
+          </div>
+
+          <div v-for="item in filters.types" :key="item.value">
+            <div
+              v-if="item.checked"
+              class="mr-2 mb-4 filter-chip"
+              @click="removeFilterType(item.value)"
+            >
+              <span class="mr-2">{{ item.key }}</span>
+              <font-awesome-icon icon="times" class="ml-px" size="sm" />
+            </div>
+          </div>
+
+          <div v-for="item in filters.categories" :key="item.value">
+            <div
+              v-if="item.checked"
+              class="mr-2 mb-4 filter-chip"
+              @click="removeFilterCategory(item.value)"
+            >
+              <span class="mr-2">{{ item.key }}</span>
+              <font-awesome-icon icon="times" class="ml-px" size="sm" />
+            </div>
+          </div>
+        </div>
+
         <div id="projects">
           <div
             v-if="projects.length === 0"
@@ -326,6 +346,20 @@ export default class Product extends Vue {
     this.uiModule.waitFor(Promise.all(promises));
   }
 
+  public removeFilterType(value: string) {
+    const f = this.filters.types.find((x) => x.value === value);
+    if (f) {
+      f.checked = false;
+    }
+  }
+
+  public removeFilterCategory(value: string) {
+    const f = this.filters.categories.find((x) => x.value === value);
+    if (f) {
+      f.checked = false;
+    }
+  }
+
   get product(): ProductConfig {
     return ALL_PRODUCTS[this.$route.params["product"]];
   }
@@ -395,6 +429,20 @@ export default class Product extends Vue {
     background-size: contain;
     background-repeat: no-repeat;
   }
+}
+
+.filter-chip {
+  @apply flex flex-row items-center;
+  @apply px-3 py-1 text-sm text-gblue-700 border border-gray-200 rounded-full;
+  @apply cursor-pointer;
+}
+
+.filter-chip:hover {
+  @apply bg-gblue-50;
+}
+
+.filter-chip:active {
+  @apply bg-gblue-100;
 }
 
 /** slide-in-left transition */
