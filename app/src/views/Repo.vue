@@ -24,10 +24,10 @@
           class="py-20 grid grid-cols-10 gap-4"
         >
           <div class="col-start-2 col-span-7">
-            <h1>
+            <h1 :class="[productStyle.text]">
               {{ repo.metadata.name }}
             </h1>
-            <p class="opacity-80">
+            <p class="mt-2">
               {{ repo.metadata.longDescription }}
             </p>
 
