@@ -79,7 +79,7 @@
     </div>
 
     <!-- Link -->
-    <p class="text-sm px-6 my-4 text-mgray-700">
+    <p class="text-xs px-6 mt-2 mb-6 text-mgray-700" v-show="loaded">
       If your content is in the Dev Library and you're missing from this page,
       or if you're on this page and would like to update your information, open
       an Issue or send us a Pull Request

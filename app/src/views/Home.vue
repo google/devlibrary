@@ -18,9 +18,9 @@
   <div>
     <div
       id="header"
-      class="grid grid-cols-12 mt-2 py-6 lg:py-8 xl:py-10 px-8 lg:px-10 border-b border-gray-100"
+      class="grid grid-cols-12 mt-2 py-6 lg:py-8 xl:py-10 px-6 border-b border-gray-100"
     >
-      <div class="col-span-12 lg:col-span-5">
+      <div class="col-span-12 lg:col-span-5 px-1">
         <h1>What will <span class="underline">you</span> build?</h1>
 
         <div>
@@ -41,7 +41,7 @@
     </div>
 
     <!-- Products -->
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-5 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-6">
       <div
         v-for="p in products"
         :key="p.key"
@@ -72,12 +72,12 @@
       <h1 class="text-white text-center">
         Subscribe to our newsletter to stay up to date:
       </h1>
-      <div class="flex flex-row max-w-sm text-base mt-6 mb-2">
+      <div class="flex flex-row max-w-lg text-base mt-6 mb-2">
         <input
           class="flex-grow rounded-sm border border-gray-200 px-2 mr-2"
           type="email"
           v-model="newsletterEmail"
-          placeholder="Email address..."
+          placeholder="Email Address"
         />
         <a :href="newsletterLink" target="_blank">
           <MaterialButton type="secondary">Subscribe</MaterialButton>

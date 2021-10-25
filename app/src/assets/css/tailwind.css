@@ -122,5 +122,9 @@
   }
 }
 
+input:active {
+  outline: none;
+}
+
 @tailwind components;
 @tailwind utilities;

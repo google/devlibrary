@@ -33,7 +33,7 @@
       <!-- Header (Desktop) -->
       <div class="desktop-only" id="header">
         <div
-          class="lg:py-4 xl:py-10 px-10 grid grid-cols-10 gap-4 border-b border-gray-100"
+          class="lg:py-4 xl:py-10 px-8 grid grid-cols-10 gap-4 border-b border-gray-100"
         >
           <div class="col-span-4">
             <div class="flex flex-row items-center">
@@ -60,7 +60,7 @@
     </template>
 
     <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-20 px-6 pt-4 lg:pt-8">
+    <div class="grid grid-cols-10 gap-4 mb-20 px-8 pt-4 lg:pt-8">
       <!-- Filters (Desktop) -->
       <div v-if="$mq === 'desktop'" class="lg:col-span-2">
         <ProjectFilters v-model="filters" :product="product" />

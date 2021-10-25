@@ -50,9 +50,9 @@
 
       <!-- Header (Desktop) -->
       <div class="desktop-only" id="header">
-        <div class="py-10 grid grid-cols-10 gap-4">
+        <div class="py-10 grid grid-cols-10 gap-4 px-6">
           <!-- Photo, name, and bio -->
-          <div class="col-start-2 col-span-6">
+          <div class="col-span-8">
             <div class="flex flex-row gap-8 items-center">
               <CircleImage
                 class="border-none"
@@ -81,32 +81,30 @@
     </template>
 
     <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-20">
-      <div class="col-span-10 px-6 lg:px-0 lg:col-start-2 lg:col-span-8">
-        <div v-if="loaded">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- Video Interview -->
-            <iframe
-              v-if="loaded && author.metadata.interviewVideoId"
-              class="max-w-full rounded-lg overflow-hidden bg-gray-200"
-              width="560"
-              height="315"
-              :src="`https://www.youtube.com/embed/${author.metadata.interviewVideoId}`"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+    <div class="px-6 mb-20">
+      <div v-if="loaded">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Video Interview -->
+          <iframe
+            v-if="loaded && author.metadata.interviewVideoId"
+            class="max-w-full rounded-lg overflow-hidden bg-gray-200"
+            width="560"
+            height="315"
+            :src="`https://www.youtube.com/embed/${author.metadata.interviewVideoId}`"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
 
-            <!-- Projects-->
-            <RepoOrBlogCard
-              v-for="project in projects"
-              :key="project.data.id"
-              :project="project"
-              :showLogo="true"
-              :showTags="false"
-            />
-          </div>
+          <!-- Projects-->
+          <RepoOrBlogCard
+            v-for="project in projects"
+            :key="project.data.id"
+            :project="project"
+            :showLogo="true"
+            :showTags="false"
+          />
         </div>
       </div>
     </div>
