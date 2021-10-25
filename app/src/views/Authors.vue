@@ -25,9 +25,10 @@
     </div>
 
     <!-- Body -->
-    <div class="grid gap-4 mb-8" v-if="loaded">
+    <div class="mb-4 min-h-full">
       <!-- Author Cards -->
       <div
+        v-if="loaded"
         class="py-4 px-4 lg:px-6 grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
       >
         <!-- Author Card -->
@@ -78,10 +79,10 @@
     </div>
 
     <!-- Link -->
-    <p class="text-sm col-start-2 col-span-8 opacity-50">
-      If you believe you should be on this page, or if you're on this page and
-      would like to update your information, open an Issue or send us a Pull
-      Request
+    <p class="text-sm px-6 my-4 text-mgray-700">
+      If your content is in the Dev Library and you're missing from this page,
+      or if you're on this page and would like to update your information, open
+      an Issue or send us a Pull Request
       <a
         href="https://github.com/google/devlibrary"
         class="cursor-pointer underline"
@@ -144,8 +145,8 @@ export default class Authors extends Vue {
 <style scoped lang="postcss">
 @screen lg {
   #header {
-    background-image: url("/img/banners/authors.png");
-    background-position: right top;
+    background-image: url("/img/banners/authors-wide.png");
+    background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
   }

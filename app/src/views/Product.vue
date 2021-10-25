@@ -424,8 +424,8 @@ export default class Product extends Vue {
 <style scoped lang="postcss">
 @screen lg {
   #header {
-    background-image: url("/img/banners/product.png");
-    background-position: right top;
+    background-image: url("/img/banners/product-wide.png");
+    background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
   }

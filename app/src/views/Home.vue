@@ -261,8 +261,8 @@ export default class Home extends Vue {
 <style scoped lang="postcss">
 @screen lg {
   #header {
-    background-image: url("/img/banners/home.png");
-    background-position: right top;
+    background-image: url("/img/banners/home-wide.png");
+    background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
   }

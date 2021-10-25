@@ -19,7 +19,7 @@
     <template v-if="loaded" v-slot:header>
       <!-- Header (Mobile) -->
       <div class="mobile-only">
-        <div class="mobile-only flex flex-col gap-4 items-center my-6">
+        <div class="mobile-only flex flex-col gap-2 items-center my-6">
           <CircleImage
             class="border-white"
             size="medium"
@@ -27,7 +27,7 @@
           />
 
           <!-- Name and bio -->
-          <div class="px-6 py-2 text-center">
+          <div class="px-6 py-2 text-center max-w-lg">
             <h3>
               {{ author.metadata.name }}
             </h3>
@@ -37,7 +37,7 @@
           </div>
 
           <!-- Info card -->
-          <div class="px-6 w-full">
+          <div class="px-6 w-full flex flex-row justify-center">
             <AuthorExpertiseCard
               v-if="loaded"
               class="w-full"
@@ -50,7 +50,7 @@
 
       <!-- Header (Desktop) -->
       <div class="desktop-only" id="header">
-        <div class="pt-20 pb-10 grid grid-cols-10 gap-4">
+        <div class="py-10 grid grid-cols-10 gap-4">
           <!-- Photo, name, and bio -->
           <div class="col-start-2 col-span-6">
             <div class="flex flex-row gap-8 items-center">
@@ -202,8 +202,8 @@ export default class Author extends Vue {
 <style scoped lang="postcss">
 @screen lg {
   #header {
-    background-image: url("/img/banners/author.png");
-    background-position: right top;
+    background-image: url("/img/banners/author-wide.png");
+    background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
   }

@@ -16,7 +16,7 @@
 
 <template>
   <div
-    class="bg-white rounded-lg border border-gray-200 flex flex-row lg:flex-col text-xs"
+    class="bg-white rounded-lg border border-gray-200 max-w-lg flex flex-row lg:flex-col text-xs"
   >
     <!-- Expertise -->
     <div

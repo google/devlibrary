@@ -77,8 +77,8 @@ module.exports = {
         mgray: {
           900: "#202124",
           800: "#3c4043",
-          700: "#5f6368"
-        }
+          700: "#5f6368",
+        },
       },
       typography: {
         DEFAULT: {

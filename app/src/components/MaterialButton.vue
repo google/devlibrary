@@ -50,7 +50,7 @@ export default class MaterialButton extends Vue {
 }
 
 .primary:active {
-  @apply bg-gblue-700;
+  @apply bg-gblue-800;
 }
 
 .secondary {

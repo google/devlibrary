@@ -63,7 +63,7 @@
       <div class="flex-grow"><!-- spacer --></div>
 
       <!-- Timestamp -->
-      <div class="mt-4 flex flex-row text-sm items-center gap-1 text-gray-600">
+      <div class="mt-4 flex flex-row text-sm items-center gap-1 text-mgray-700">
         <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-1" />
         <span>GitHub</span>
         <span>•</span>
