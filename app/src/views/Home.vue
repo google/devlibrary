@@ -21,7 +21,7 @@
       class="grid grid-cols-12 mt-2 py-6 lg:py-8 xl:py-10 px-6 border-b border-gray-100"
     >
       <div class="col-span-12 lg:col-span-5 px-1">
-        <h1>What will <span class="underline">you</span> build?</h1>
+        <h1>What will you build?</h1>
 
         <div>
           <p class="mt-4 lg:mt-6">
@@ -45,14 +45,18 @@
       <div
         v-for="p in products"
         :key="p.key"
-        class="border border-gray-200 rounded-lg px-3 py-4 lg:px-6 lg:py-6 flex flex-col"
+        class="border border-gray-200 rounded-lg px-3 py-2 lg:px-6 lg:py-6 flex flex-col"
       >
         <router-link
           :to="`/products/${p.key}`"
           class="flex flex-row items-center"
         >
-          <ProductLogo :productKey="p.key" size="tiny" class="mr-2" />
-          <h3>{{ p.name }}</h3>
+          <ProductLogo
+            :productKey="p.key"
+            :size="$mq === 'mobile' ? 'xtiny' : 'tiny'"
+            class="mr-3"
+          />
+          <h3 class="product-name">{{ p.name }}</h3>
         </router-link>
         <div class="desktop-only flex-grow">
           <div class="text-mgray-800 mt-3 wrap-lines-4">
@@ -265,6 +269,17 @@ export default class Home extends Vue {
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+}
+
+.product-name {
+  @apply flex flex-row items-center;
+  min-height: 3.75rem;
+}
+
+@screen sm {
+  .product-name {
+    min-height: 0;
   }
 }
 </style>

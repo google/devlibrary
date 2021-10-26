@@ -18,7 +18,7 @@
   <router-link
     tag="div"
     :to="`/products/${productKey}`"
-    class="cursor-pointer"
+    class="cursor-pointer flex-shrink-0"
     :class="[size]"
   >
     <img :src="`/logos/${productKey}.png`" />
