@@ -72,13 +72,13 @@
     </div>
 
     <!-- Newsletter banner -->
-    <div class="w-full p-10 bg-gblue-600 text-white flex flex-col items-center">
-      <h1 class="text-white text-center">
+    <div class="w-full p-6 lg:p-10 bg-gblue-600">
+      <h1 class="text-white text-center text-2xl lg:text-3xl">
         Subscribe to our newsletter to stay up to date:
       </h1>
-      <div class="flex flex-row max-w-lg text-base mt-6 mb-2">
+      <div class="flex flex-row justify-center text-base mt-6 mb-2">
         <input
-          class="flex-grow rounded-sm border border-gray-200 px-2 mr-2"
+          class="flex-grow max-w-md rounded-sm px-2 mr-2"
           type="email"
           v-model="newsletterEmail"
           placeholder="Email Address"
@@ -91,19 +91,21 @@
 
     <!-- Recently Added projects -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 py-8">
-      <div class="col-span-1 lg:col-span-2 px-2">
+      <div class="col-span-1 lg:col-span-2 lg:px-2">
         <h2>Recently Added</h2>
-        <p class="text-mgray-800 font-sans text-sm mt-2 mb-4 lg:w-3/4">
-          Check out the latest projects we've added to the Dev Library. To see
-          all projects, choose one of the product areas below.
-        </p>
-        <div class="flex flex-row gap-2 mt-2 mb-4">
-          <ProductLogo
-            v-for="p in products"
-            :key="p.key"
-            :productKey="p.key"
-            size="tiny"
-          />
+        <div class="desktop-only">
+          <p class="text-mgray-800 font-sans text-sm mt-2 mb-4 lg:w-3/4">
+            Check out the latest projects we've added to the Dev Library. To see
+            all projects, choose one of the product areas below.
+          </p>
+          <div class="flex flex-row gap-2 mt-2 mb-4">
+            <ProductLogo
+              v-for="p in products"
+              :key="p.key"
+              :productKey="p.key"
+              size="tiny"
+            />
+          </div>
         </div>
       </div>
       <RepoOrBlogCard
