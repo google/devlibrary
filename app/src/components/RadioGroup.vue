@@ -16,21 +16,29 @@
 
 <template>
   <div>
+    <!-- See: https://material.io/components/radio-buttons/web#radio-buttons -->
     <label
+      class="mdc-form-field flex flex-row items-center cursor-pointer"
       v-for="entry in entries"
       :for="entry.id"
       :key="entry.id"
-      class="flex flex-row items-center mb-2 cursor-pointer"
     >
-      <input
-        type="radio"
-        :id="entry.id"
-        :name="prefix"
-        :value="entry.value"
-        v-model="choice"
-        @input="onInput"
-      />
-      <span class="ml-2 text-sm">{{ entry.key }}</span>
+      <div class="mdc-radio">
+        <input
+          class="mdc-radio__native-control"
+          type="radio"
+          :id="entry.id"
+          :name="prefix"
+          :value="entry.value"
+          v-model="choice"
+          @input="onInput"
+        />
+        <div class="mdc-radio__background">
+          <div class="mdc-radio__outer-circle"></div>
+          <div class="mdc-radio__inner-circle"></div>
+        </div>
+      </div>
+      <label class="text-sm">{{ entry.key }}</label>
     </label>
   </div>
 </template>

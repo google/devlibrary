@@ -25,7 +25,7 @@
 
       <div class="sections">
         <div class="section">
-          <p class="font-display font-medium text-sm mb-4">Sort</p>
+          <p class="font-display font-medium text-sm mb-2 px-2">Sort</p>
 
           <RadioGroup
             prefix="sort"
@@ -36,7 +36,7 @@
         </div>
 
         <div class="section">
-          <p class="font-display font-medium text-sm mb-4">Type</p>
+          <p class="font-display font-medium text-sm mb-2 px-2">Type</p>
 
           <CheckboxGroup
             prefix="type"
@@ -47,7 +47,7 @@
         </div>
 
         <div class="section">
-          <p class="font-display font-medium text-sm mb-4">Category</p>
+          <p class="font-display font-medium text-sm mb-2 px-2">Category</p>
 
           <CheckboxGroup
             prefix="category"
@@ -114,6 +114,6 @@ export default class ProjectFilters extends Vue {
 
 .section {
   @apply border-t;
-  @apply px-4 py-3;
+  @apply px-2 py-3;
 }
 </style>
