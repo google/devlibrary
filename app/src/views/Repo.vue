@@ -67,13 +67,13 @@
       <!-- Header (Mobile) -->
       <div class="mobile-only">
         <div :class="[productStyle.bg, productStyle.text]" class="py-4 px-8">
-          <h2>
+          <h2 :class="[productStyle.text]" class="mb-2">
             {{ repo.metadata.name }}
           </h2>
-          <p class="opacity-80">
+          <p class="opacity-80 text-sm">
             {{ repo.metadata.shortDescription }}
           </p>
-          <p v-if="authors.length > 0" class="flex gap-2 mt-2">
+          <p v-if="authors.length > 0" class="flex gap-2 mt-4">
             <AuthorLink
               v-for="author in authors"
               :key="author.id"
