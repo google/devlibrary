@@ -25,15 +25,45 @@
     </div>
 
     <!-- Body -->
-    <div class="mb-4 min-h-full">
+    <div id="pagebody" class="mb-4 px-std">
+      <!-- Search bar -->
+      <div
+        class="mt-4 flex flex-row items-center rounded-lg max-w-lg border border-gray-200 px-2"
+      >
+        <font-awesome-icon
+          icon="search"
+          size="sm"
+          class="text-mgray-700 opacity-70"
+        />
+        <input
+          class="px-2 py-1 flex-grow"
+          type="text"
+          v-model="authorFilter"
+          placeholder="Search for authors"
+        />
+        <font-awesome-icon
+          v-if="authorFilter.length > 0"
+          @click="authorFilter = ''"
+          icon="times-circle"
+          class="text-mgray-700 cursor-pointer opacity-70"
+        />
+      </div>
+
+      <div
+        v-if="filteredAuthors.length === 0 && authorFilter.length > 0"
+        class="text-mgray-700 opacity-70 py-8 px-1"
+      >
+        <font-awesome-icon :icon="['fas', 'exclamation-circle']" class="mr-1" />
+        No authors matching your search.
+      </div>
+
       <!-- Author Cards -->
       <div
-        v-if="loaded"
-        class="py-4 px-std grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+        class="py-4 grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
       >
         <!-- Author Card -->
         <div
-          v-for="author in authors"
+          v-for="author in filteredAuthors"
           :key="author.id"
           class="card px-5 py-4 flex flex-col items-center text-center"
         >
@@ -79,7 +109,7 @@
     </div>
 
     <!-- Link -->
-    <p class="text-xs px-6 mt-2 mb-6 text-mgray-700" v-show="loaded">
+    <p class="text-xs px-std mt-2 mb-6 text-mgray-700" v-show="loaded">
       If your content is in the Dev Library and you're missing from this page,
       or if you're on this page and would like to update your information, open
       an Issue or send us a Pull Request
@@ -114,6 +144,7 @@ import { queryAuthors } from "@/plugins/data";
 export default class Authors extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
+  public authorFilter = "";
   public authors: AuthorData[] = [];
 
   mounted() {
@@ -122,6 +153,16 @@ export default class Authors extends Vue {
 
   get loaded() {
     return this.authors.length > 0;
+  }
+
+  get filteredAuthors() {
+    if (this.authorFilter.length === 0) {
+      return this.authors;
+    }
+
+    return this.authors.filter((a) =>
+      a.metadata.name.toLowerCase().includes(this.authorFilter.toLowerCase())
+    );
   }
 
   private async loadContent() {
@@ -167,5 +208,13 @@ export default class Authors extends Vue {
 
 a {
   @apply cursor-pointer;
+}
+
+input {
+  outline: none;
+}
+
+#pagebody {
+  min-height: 60vh;
 }
 </style>
