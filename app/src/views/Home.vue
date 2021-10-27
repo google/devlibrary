@@ -18,7 +18,7 @@
   <div>
     <div
       id="header"
-      class="grid grid-cols-12 mt-2 py-6 lg:py-8 xl:py-10 px-6 border-b border-gray-100"
+      class="grid grid-cols-12 mt-2 py-6 lg:py-8 xl:py-10 px-std border-b border-gray-100"
     >
       <div class="col-span-12 lg:col-span-5 px-1">
         <h1>What will you build?</h1>
@@ -41,11 +41,11 @@
     </div>
 
     <!-- Products -->
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-6">
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-std">
       <div
         v-for="p in products"
         :key="p.key"
-        class="border border-gray-200 rounded-lg px-3 py-2 lg:px-6 lg:py-6 flex flex-col"
+        class="border border-gray-200 rounded-lg px-3 lg:px-6 py-2 lg:py-6 flex flex-col"
       >
         <router-link
           :to="`/products/${p.key}`"
@@ -90,7 +90,9 @@
     </div>
 
     <!-- Recently Added projects -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 py-8">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-std py-8"
+    >
       <div class="col-span-1 lg:col-span-2 lg:px-2">
         <h2>Recently Added</h2>
         <div class="desktop-only">
@@ -98,13 +100,14 @@
             Check out the latest projects we've added to the Dev Library. To see
             all projects, choose one of the product areas below.
           </p>
-          <div class="flex flex-row gap-2 mt-2 mb-4">
-            <ProductLogo
+          <div class="flex flex-row gap-1 mb-3">
+            <div
               v-for="p in products"
               :key="p.key"
-              :productKey="p.key"
-              size="tiny"
-            />
+              class="rounded-lg p-1 hover:shadow hover:bg-gray-50 hover:border-gray-50 transition-all"
+            >
+              <ProductLogo :productKey="p.key" size="tiny" />
+            </div>
           </div>
         </div>
       </div>

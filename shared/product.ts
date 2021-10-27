@@ -21,7 +21,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.FIREBASE,
     name: "Firebase",
     description:
-      "Firebase helps you build and run successful apps. Backed by Google and loved by app development teams - from startups to global enterprises",
+      "Firebase helps you build and run successful apps. Backed by Google and loved by app development teams - from startups to global enterprises.",
     docsUrl: "https://firebase.google.com/docs/",
     tags: [
       {
@@ -136,7 +136,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.FLUTTER,
     name: "Flutter",
     description:
-      "An open-source UI toolkit that makes it easy and fast to build beautiful mobile apps. Flutter apps run natively on iOS and Android and are powered by the Dart language. ",
+      "An open-source UI toolkit that makes it easy and fast to build beautiful mobile apps. Flutter apps run natively on iOS and Android and are powered by the Dart language.",
     docsUrl: "https://flutter.dev/",
     tags: [
       {

@@ -17,7 +17,7 @@
 <template>
   <div>
     <!-- Header -->
-    <div id="header" class="py-10 lg:py-20 px-8 border-b border-gray-100">
+    <div id="header" class="py-10 lg:py-20 px-std border-b border-gray-100">
       <h1>Authors</h1>
       <p class="mt-1">
         All content on Dev Library is contributed by our incredible authors!
@@ -29,7 +29,7 @@
       <!-- Author Cards -->
       <div
         v-if="loaded"
-        class="py-4 px-4 lg:px-6 grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+        class="py-4 px-std grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
       >
         <!-- Author Card -->
         <div

@@ -18,7 +18,7 @@
   <div class="flex flex-col bg-white" :class="{ mobile, desktop: !mobile }">
     <div class="rounded-lg flex-shrink" :class="{ border: !mobile }">
       <div
-        class="px-5 py-4 uppercase text-gray-500 font-medium text-xs tracking-widest"
+        class="px-5 py-4 uppercase border-b border-gray-200 text-gray-500 font-medium text-xs tracking-widest"
       >
         Filter By
       </div>
@@ -105,15 +105,18 @@ export default class ProjectFilters extends Vue {
 
 .mobile .sections {
   overflow-y: scroll;
-  max-height: 66vh;
+  max-height: 60vh;
 }
 
 .mobile {
   @apply border-transparent;
 }
 
-.section {
+.section:not(:first-of-type) {
   @apply border-t;
+}
+
+.section {
   @apply px-2 py-3;
 }
 </style>

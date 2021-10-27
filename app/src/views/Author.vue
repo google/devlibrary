@@ -50,9 +50,9 @@
 
       <!-- Header (Desktop) -->
       <div class="desktop-only" id="header">
-        <div class="py-10 grid grid-cols-10 gap-4 px-6">
+        <div class="py-10 grid grid-cols-12 gap-4 px-std">
           <!-- Photo, name, and bio -->
-          <div class="col-span-8">
+          <div class="col-span-9">
             <div class="flex flex-row gap-8 items-center">
               <CircleImage
                 class="border-none"
@@ -72,7 +72,7 @@
           <!-- Info card -->
           <AuthorExpertiseCard
             v-if="loaded"
-            class="col-span-2"
+            class="col-span-3"
             :expertise="expertise"
             :author="author"
           />
@@ -81,9 +81,9 @@
     </template>
 
     <!-- Body -->
-    <div class="px-6 mb-20">
+    <div class="px-std mb-20">
       <div v-if="loaded">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <!-- Video Interview -->
           <iframe
             v-if="loaded && author.metadata.interviewVideoId"

@@ -20,7 +20,7 @@
       <!-- Header (Mobile) -->
       <div class="mobile-only">
         <div
-          class="mobile-only flex flex-row items-center px-6 py-4 border-b border-gray-100"
+          class="mobile-only flex flex-row items-center px-std py-4 border-b border-gray-100"
         >
           <ProductLogo size="small" :productKey="product.key" />
 
@@ -33,9 +33,9 @@
       <!-- Header (Desktop) -->
       <div class="desktop-only" id="header">
         <div
-          class="lg:py-4 xl:py-10 px-8 grid grid-cols-10 gap-4 border-b border-gray-100"
+          class="lg:py-4 xl:py-10 px-std grid grid-cols-10 gap-4 border-b border-gray-100"
         >
-          <div class="col-span-4">
+          <div class="col-span-4 pt-2">
             <div class="flex flex-row items-center">
               <ProductLogo
                 class="mr-4"
@@ -60,7 +60,7 @@
     </template>
 
     <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-20 px-8 pt-4 lg:pt-8">
+    <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
       <!-- Filters (Desktop) -->
       <div v-if="$mq === 'desktop'" class="lg:col-span-2">
         <ProjectFilters v-model="filters" :product="product" />
@@ -93,6 +93,10 @@
                 type="primary"
                 @click.native="showFilterOverlay = false"
                 >Done</MaterialButton
+              >
+
+              <MaterialButton type="secondary" @click.native="resetFilters()"
+                >Reset</MaterialButton
               >
             </div>
           </div>
@@ -208,6 +212,9 @@ import { ALL_PRODUCTS } from "../../../shared/product";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 import { getStyle, ProductStyle } from "@/model/product";
 
+const SORT_ADDED = "added";
+const SORT_UPDATED = "updated";
+
 @Component({
   components: {
     MaterialButton,
@@ -224,7 +231,7 @@ export default class Product extends Vue {
 
   public showFilterOverlay = false;
   public filters = {
-    sort: "updated",
+    sort: SORT_ADDED,
     types: [] as CheckboxGroupEntry[],
     categories: [] as CheckboxGroupEntry[],
   };
@@ -284,11 +291,11 @@ export default class Product extends Vue {
   }
 
   get queryOrderBy(): string {
-    if (this.filters.sort === "added") {
+    if (this.filters.sort === SORT_ADDED) {
       return "stats.dateAdded";
     }
 
-    if (this.filters.sort === "updated") {
+    if (this.filters.sort === SORT_UPDATED) {
       return "stats.lastUpdated";
     }
 
@@ -360,6 +367,18 @@ export default class Product extends Vue {
     }
   }
 
+  public resetFilters() {
+    for (const c of this.filters.categories) {
+      c.checked = false;
+    }
+
+    for (const t of this.filters.types) {
+      t.checked = false;
+    }
+
+    this.filters.sort = SORT_UPDATED;
+  }
+
   get product(): ProductConfig {
     return ALL_PRODUCTS[this.$route.params["product"]];
   }
@@ -411,7 +430,7 @@ export default class Product extends Vue {
       const dataA = a.data;
       const dataB = b.data;
 
-      if (this.filters.sort === "added") {
+      if (this.filters.sort === SORT_ADDED) {
         return dataB.stats.dateAdded - dataA.stats.dateAdded;
       } else {
         return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
