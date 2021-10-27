@@ -21,19 +21,26 @@
       class="flex-grow flex flex-col rounded-lg border border-gray-200 transition-shadow hover:shadow overflow-hidden p-4"
     >
       <!-- Author photo and name -->
-      <div class="flex flex-row items-center">
-        <router-link v-if="authorId" :to="`/authors/${authorId}`" class="mr-2">
-          <img class="avatar rounded-full" :src="authorPhotoUrl" />
+      <div>
+        <!-- Link to author (if present) -->
+        <router-link
+          v-if="authorId"
+          :to="`/authors/${authorId}`"
+          class="flex flex-row items-center"
+        >
+          <img class="avatar rounded-full mr-2" :src="authorPhotoUrl" />
+          <span class="font-display text-lg">{{ blog.metadata.author }}</span>
         </router-link>
 
-        <div
-          v-else
-          class="avatar mr-2 bg-gray-200 text-gray-400 rounded-full flex flex-row items-center justify-center"
-        >
-          <font-awesome-icon icon="user" />
+        <!-- Standard avatar -->
+        <div v-else class="flex flex-row items-center">
+          <div
+            class="avatar mr-2 bg-gray-200 text-gray-400 rounded-full flex flex-row items-center justify-center"
+          >
+            <font-awesome-icon icon="user" />
+          </div>
+          <span class="font-display text-lg">{{ blog.metadata.author }}</span>
         </div>
-
-        <span class="font-display text-lg">{{ blog.metadata.author }}</span>
 
         <ProductLogo
           v-if="showLogo"
