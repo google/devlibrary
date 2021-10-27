@@ -69,6 +69,7 @@
         >
           <CircleImage
             :src="author.metadata.photoURL"
+            :lazy="true"
             class="flex-shrink-0 avatar border-none"
             size="small"
           />

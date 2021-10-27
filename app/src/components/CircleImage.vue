@@ -18,6 +18,7 @@
   <img
     :src="src"
     :class="[size]"
+    :loading="lazy ? 'lazy' : 'eager'"
     class="flex-shrink-0 bg-white overflow-hidden object-contain rounded-full"
   />
 </template>
@@ -29,6 +30,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 export default class CircleImage extends Vue {
   @Prop() size!: string;
   @Prop() src!: string;
+  @Prop({ default: false }) lazy!: boolean;
 }
 </script>
 
