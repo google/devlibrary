@@ -15,87 +15,82 @@
 -->
 
 <template>
-  <HeaderSidebarLayout>
+  <HeaderBodyLayout>
     <template v-if="loaded" v-slot:header>
       <!-- Header (Mobile) -->
       <div class="mobile-only">
-        <div
-          class="mobile-only flex flex-row gap-4 items-center px-6 py-4 bg-gray-500"
-        >
+        <div class="mobile-only flex flex-col items-center gap-2 my-6">
           <CircleImage
             class="border-white"
-            size="small"
+            size="medium"
             :src="author.metadata.photoURL"
           />
-          <div class="text-white">
-            <h1 class="text-2xl">
+
+          <!-- Name and bio -->
+          <div class="px-6 py-2 text-center max-w-lg">
+            <h3>
               {{ author.metadata.name }}
-            </h1>
-            <p class="text-xs">
+            </h3>
+            <p class="text-sm mt-2">
               {{ bio }}
             </p>
+          </div>
+
+          <!-- Info card -->
+          <div class="px-6 w-full flex flex-row justify-center">
+            <AuthorExpertiseCard
+              v-if="loaded"
+              class="w-full"
+              :expertise="expertise"
+              :author="author"
+            />
           </div>
         </div>
       </div>
 
       <!-- Header (Desktop) -->
-      <div class="desktop-only">
-        <div class="py-20 grid grid-cols-10 bg-gray-500">
-          <div class="col-start-2 col-span-8 flex flex-row gap-8 items-center">
-            <CircleImage
-              class="border-white"
-              size="large"
-              :src="author.metadata.photoURL"
-            />
-            <div class="text-white">
-              <h1 class="text-3xl font-semibold">
-                {{ author.metadata.name }}
-              </h1>
-              <p class="mt-2 max-w-xl">{{ bio }}</p>
+      <div
+        class="desktop-only header-image"
+        style="--header-bg-image: url('/img/banners/author-wide.png')"
+      >
+        <div class="py-10 grid grid-cols-12 gap-4 px-std">
+          <!-- Photo, name, and bio -->
+          <div class="col-span-9">
+            <div class="flex flex-row gap-8 items-center">
+              <CircleImage
+                class="border-none"
+                size="large"
+                :src="author.metadata.photoURL"
+              />
+
+              <div>
+                <h1>
+                  {{ author.metadata.name }}
+                </h1>
+                <p class="mt-2 max-w-xl">{{ bio }}</p>
+              </div>
             </div>
           </div>
+
+          <!-- Info card -->
+          <AuthorExpertiseCard
+            v-if="loaded"
+            class="col-span-3"
+            :expertise="expertise"
+            :author="author"
+          />
         </div>
       </div>
     </template>
 
-    <template v-if="loaded" v-slot:sidebar>
-      <!-- Side bar -->
-      <div>
-        <p class="uppercase font-medium mt-4 mb-2">Links</p>
-        <ul>
-          <li
-            v-if="author.metadata.githubURL"
-            class="flex items-center hover:text-blue-500"
-          >
-            <a :href="author.metadata.githubURL" target="_blank">GitHub</a>
-            <font-awesome-icon
-              icon="external-link-alt"
-              size="xs"
-              class="ml-2"
-            />
-          </li>
-          <li
-            v-if="author.metadata.mediumURL"
-            class="flex items-center hover:text-blue-500"
-          >
-            <a :href="author.metadata.mediumURL" target="_blank">Medium</a>
-            <font-awesome-icon
-              icon="external-link-alt"
-              size="xs"
-              class="ml-2"
-            />
-          </li>
-        </ul>
-      </div>
-    </template>
-
     <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-20">
-      <div class="col-span-10 px-6 lg:px-0 lg:col-start-2 lg:col-span-8">
-        <div v-if="author.metadata.interviewVideoId">
-          <h2 class="text-2xl mt-8">Author Interview</h2>
+    <div class="px-std mb-20">
+      <div v-if="loaded">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Video Interview -->
           <iframe
-            class="mt-4 max-w-full"
+            v-if="loaded && author.metadata.interviewVideoId"
+            class="max-w-full rounded-lg overflow-hidden bg-gray-200"
             width="560"
             height="315"
             :src="`https://www.youtube.com/embed/${author.metadata.interviewVideoId}`"
@@ -104,38 +99,19 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-        </div>
 
-        <!-- Open Source -->
-        <div id="opensource" v-if="repos.length > 0">
-          <h2 class="text-2xl mt-8">Open Source</h2>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <LargeRepoCard
-              class="mt-4"
-              v-for="repo in repos"
-              :key="repo.id"
-              :repo="repo"
-            />
-          </div>
-        </div>
-
-        <!-- Blog Posts -->
-        <div id="blogposts" v-if="blogs.length > 0">
-          <h2 class="text-2xl mt-8">Blog Posts</h2>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <LargeBlogCard
-              class="mt-4"
-              v-for="blog in blogs"
-              :key="blog.id"
-              :blog="blog"
-            />
-          </div>
+          <!-- Projects-->
+          <RepoOrBlogCard
+            v-for="project in projects"
+            :key="project.data.id"
+            :project="project"
+            :showLogo="true"
+            :showTags="false"
+          />
         </div>
       </div>
     </div>
-  </HeaderSidebarLayout>
+  </HeaderBodyLayout>
 </template>
 
 <script lang="ts">
@@ -145,21 +121,25 @@ import { getModule } from "vuex-module-decorators";
 import UIModule from "@/store/ui";
 
 import MaterialButton from "@/components/MaterialButton.vue";
-import LargeRepoCard from "@/components/LargeRepoCard.vue";
-import LargeBlogCard from "@/components/LargeBlogCard.vue";
-import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
+import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
+import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import CircleImage from "@/components/CircleImage.vue";
+import AuthorExpertiseCard from "@/components/AuthorExpertiseCard.vue";
 
-import { fetchAuthor, queryAuthorProjects } from "@/plugins/data";
+import {
+  fetchAuthor,
+  queryAuthorProjects,
+  wrapInHolders,
+} from "@/plugins/data";
 import { AuthorData, BlogData, RepoData } from "../../../shared/types";
 
 @Component({
   components: {
     MaterialButton,
-    LargeRepoCard,
-    LargeBlogCard,
-    HeaderSidebarLayout,
+    RepoOrBlogCard,
+    HeaderBodyLayout,
     CircleImage,
+    AuthorExpertiseCard,
   },
 })
 export default class Author extends Vue {
@@ -187,9 +167,9 @@ export default class Author extends Vue {
     const author = await fetchAuthor(this.id);
     const { blogs, repos } = await queryAuthorProjects(this.id);
 
-    this.author = author;
     this.blogs = blogs.docs.map((d) => d.data);
     this.repos = repos.docs.map((d) => d.data);
+    this.author = author;
   }
 
   get loaded() {
@@ -204,6 +184,18 @@ export default class Author extends Vue {
     }
 
     return "Dev Library contributor";
+  }
+
+  get expertise() {
+    const blogProducts = this.blogs.map((b) => b.product);
+    const repoProducts = this.repos.map((r) => r.product);
+    return Array.from(new Set([...blogProducts, ...repoProducts])).sort();
+  }
+
+  get projects() {
+    return wrapInHolders(this.blogs, this.repos).sort((a, b) => {
+      return b.data.stats.dateAdded - a.data.stats.dateAdded;
+    });
   }
 }
 </script>

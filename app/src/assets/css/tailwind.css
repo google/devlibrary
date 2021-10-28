@@ -15,5 +15,153 @@
  */
 
 @tailwind base;
+
+/**
+ * See: https://tailwindcss.com/docs/preflight#extending-preflight
+ */
+@layer base {
+  #app {
+    min-height: 100vh;
+  }
+  
+  body {
+    @apply text-mgray-800;
+  }
+  
+  .desktop-only {
+    @apply hidden;
+    @apply lg:block;
+  }
+  
+  .mobile-only {
+    @apply block;
+    @apply lg:hidden;
+  }
+  
+  #app {
+    
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+    @apply text-mgray-900;
+  }
+  
+  h1 {
+    @apply text-3xl;
+  }
+  
+  h2 {
+    @apply text-2xl;
+  }
+  
+  h3 {
+    @apply text-xl;
+  }
+  
+  a {
+    @apply cursor-pointer;
+  }
+  
+  .wrap-lines-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .wrap-lines-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  .wrap-lines-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  
+  .wrap-lines-4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  
+  .prose table {
+    max-width: 100%;
+    width: max-content;
+  }
+  .prose table td,
+  .prose table th {
+    @apply px-2 py-1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .prose table img {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .prose .li-task::before {
+    display: none;
+  }
+  .prose ul li.li-task *:first-child {
+    margin-right: 4px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  input:active {
+    outline: none;
+  }
+
+  .card {
+    @apply rounded-lg border border-gray-200 overflow-hidden;
+  }
+
+  .card-clickable {
+    @apply hover:shadow transition-shadow;
+  }
+
+  @screen lg {
+    .header-image {
+      background-image: var(--header-bg-image);
+      background-position: right;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .frc {
+    @apply flex flex-row items-center;
+  }
+
+  .ifrc {
+    @apply inline-flex flex-row items-center; 
+  }
+
+  .px-std {
+    @apply px-6;
+  }
+  
+  @screen lg {
+    .px-std {
+      @apply px-10;
+    }
+  }
+}

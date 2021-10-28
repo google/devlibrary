@@ -43,7 +43,22 @@ Vue.use(
   router
 );
 
+// Media Queries
+// eslint-disable-next-line
+import VueMq from "vue-mq";
+Vue.use(VueMq, {
+  breakpoints: {
+    // Tailwind: sm-640, md=768, lg=1024
+    mobile: 1024,
+    desktop: Infinity,
+  },
+});
+
 Vue.config.productionTip = false;
+
+if (process.env.NODE_ENV === "development") {
+  Vue.config.performance = true;
+}
 
 new Vue({
   router,

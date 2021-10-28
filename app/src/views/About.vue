@@ -18,27 +18,29 @@
   <div class="about">
     <div
       id="header"
-      class="grid gap-4 grid-cols-6 py-6 lg:py-10 bg-gray-50 border-b border-gray-100"
+      class="grid gap-4 grid-cols-6 py-6 lg:py-10 border-b border-gray-100"
     >
       <div class="section">
-        <h1 class="text-2xl lg:text-3xl font-semibold">
-          <span class="underline">About</span>
-        </h1>
+        <h1>About</h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p>
-            <strong>Dev Library</strong> is a curated platform for
-            technical content written or built using any of the following Google technologies:
-              <ul class="ml-6 mt-2 list-disc">
+            <span
+              ><strong>Dev Library</strong> is a curated platform for technical
+              content written or built using any of the following Google
+              technologies:</span
+            >
+          </p>
+
+          <ul class="ml-6 mt-2 list-disc">
             <li>Android</li>
             <li>Angular</li>
             <li>Flutter</li>
             <li>Firebase</li>
             <li>Google Cloud</li>
-       
+            <li>Machine Learning</li>
           </ul>
-          
-          </p>
+
           <p class="mt-4">Currently we accept two kinds of content:</p>
 
           <ul class="ml-6 mt-2 list-disc">
@@ -46,7 +48,7 @@
             <li>Blog posts</li>
           </ul>
 
-          <p class="mt-4"> 
+          <p class="mt-4">
             This platform will evolve as we receive more submissions and we are
             working to accept a wider range of content, so stay tuned!
           </p>
@@ -59,11 +61,11 @@
           </p>
           <p class="mt-8 flex flex-wrap gap-4">
             <a href="https://forms.gle/2JoN6csvyvnDC8Nd9" target="_blank">
-              <MaterialButton type="primary"> Send Feedback </MaterialButton>
+              <MaterialButton type="primary"> Send feedback </MaterialButton>
             </a>
 
             <a href="mailto:library-google-dev@google.com">
-              <MaterialButton type="secondary"> Contact Us </MaterialButton>
+              <MaterialButton type="secondary"> Contact us </MaterialButton>
             </a>
           </p>
         </div>
@@ -71,9 +73,7 @@
     </div>
     <div class="grid gap-4 grid-cols-6">
       <div class="section mt-6 lg:mt-10">
-        <h1 class="text-2xl lg:text-3xl font-semibold">
-          <span class="underline">Policies</span>
-        </h1>
+        <h1>Policies</h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p class="mt-6 font-bold">Terms of Service</p>
@@ -110,9 +110,7 @@
       </div>
 
       <div class="section mt-6 lg:mt-10">
-        <h1 class="text-2xl lg:text-3xl font-semibold">
-          <span class="underline">Frequently Asked Questions</span>
-        </h1>
+        <h1>Frequently Asked Questions</h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p class="mt-6 font-bold">What is the purpose of this site?</p>

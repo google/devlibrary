@@ -24,19 +24,12 @@
         style="height: 100vh"
       >
         <div class="flex flex-col">
-          <div
-            class="py-2 lg:py-1 flex flex-row items-center px-4 border-b border-gray-200"
-          >
+          <div class="py-2 lg:py-1 frc px-4 border-b border-gray-200">
             <div
-              class="mr-3 flex items-center align-middle text-gray-400 hover:text-gray-600"
+              class="mr-3 frc align-middle text-gray-400 hover:text-gray-600"
               @click="showSideMenu = false"
             >
-              <font-awesome-icon
-                icon="times"
-                size="md"
-                class="m-1"
-                fixed-width
-              />
+              <font-awesome-icon icon="times" class="m-1" fixed-width />
             </div>
 
             <img
@@ -51,7 +44,7 @@
           </router-link>
 
           <div class="section">
-            <span class="header">Products</span>
+            <span class="header mb-1">Products</span>
             <router-link
               v-for="p in products"
               :key="p.key"
@@ -82,24 +75,15 @@
     </transition>
 
     <!-- Nav row -->
-    <div class="flex flex-row items-center py-3 lg:py-0 px-4 text-nav">
+    <div class="frc py-3 lg:py-0 px-4 text-nav">
       <div
-        class="mr-1 flex items-center align-middle text-gray-400 hover:text-gray-600"
+        class="mr-1 frc align-middle text-gray-400 hover:text-gray-600"
         @click="showSideMenu = true"
       >
-        <font-awesome-icon
-          icon="bars"
-          size="md"
-          class="mobile-only m-1"
-          fixed-width
-        />
+        <font-awesome-icon icon="bars" class="mobile-only m-1" fixed-width />
       </div>
 
-      <router-link
-        tag="div"
-        to="/"
-        class="inline-flex flex-row items-center ml-2 cursor-pointer"
-      >
+      <router-link tag="div" to="/" class="ifrc ml-2 cursor-pointer">
         <img
           src="@/assets/GoogleDevelopers-lockup.svg"
           alt="devlibrary.withgoogle.com"
@@ -110,11 +94,9 @@
       <span class="mr-4 lg:mr-8"><!-- spacer --></span>
 
       <!-- Home -->
-      <router-link tag="div" class="nav-item nav-item-link" to="/"
+      <router-link class="block nav-item nav-item-link" to="/"
         ><span>Home</span></router-link
       >
-
-      <!-- TODO: Mobile hamburger menu -->
 
       <!-- Products -->
       <div
@@ -134,23 +116,22 @@
             v-for="p in products"
             :key="p.key"
             :to="`/products/${p.key}`"
-            tag="div"
-            class="px-3 py-2 whitespace-nowrap hover:bg-gray-50"
+            class="block px-3 py-2 whitespace-nowrap hover:bg-gray-50"
           >
             {{ p.name }}
           </router-link>
         </div>
       </div>
 
-      <router-link tag="div" class="nav-item nav-item-link" to="/authors"
+      <router-link class="block nav-item nav-item-link" to="/authors"
         ><span>Authors</span></router-link
       >
 
-      <a class="nav-item nav-item-link" :href="submitLink" target="_blank"
+      <a class="block nav-item nav-item-link" :href="submitLink" target="_blank"
         >Submit</a
       >
 
-      <router-link tag="div" class="nav-item nav-item-link" to="/about"
+      <router-link class="block nav-item nav-item-link" to="/about"
         ><span>About</span></router-link
       >
 
@@ -260,7 +241,7 @@ export default class NavBar extends Vue {
 }
 
 .side-menu .section .header {
-  @apply text-sm font-bold text-gray-500;
+  @apply text-xs tracking-widest uppercase text-gray-500;
 }
 
 .side-menu .section a {

@@ -61,6 +61,9 @@ export { queryProxy, docProxy } from "./proxy";
 /** Search functions */
 export { elasticSearch } from "./search";
 
+/** Photo functions */
+export { authorPhoto } from "./photos";
+
 /**
  * Return elements of a that are not in b
  */

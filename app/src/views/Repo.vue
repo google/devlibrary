@@ -15,7 +15,7 @@
 -->
 
 <template>
-  <HeaderSidebarLayout>
+  <HeaderBodyLayout>
     <template v-if="loaded" v-slot:header>
       <!-- Header (Desktop) -->
       <div class="desktop-only">
@@ -24,10 +24,10 @@
           class="py-20 grid grid-cols-10 gap-4"
         >
           <div class="col-start-2 col-span-7">
-            <h1 class="text-3xl font-semibold">
+            <h1 :class="[productStyle.text]">
               {{ repo.metadata.name }}
             </h1>
-            <p class="opacity-80">
+            <p class="mt-2">
               {{ repo.metadata.longDescription }}
             </p>
 
@@ -67,13 +67,13 @@
       <!-- Header (Mobile) -->
       <div class="mobile-only">
         <div :class="[productStyle.bg, productStyle.text]" class="py-4 px-8">
-          <h1 class="text-2xl font-semibold">
+          <h2 :class="[productStyle.text]" class="mb-2">
             {{ repo.metadata.name }}
-          </h1>
-          <p class="opacity-80">
+          </h2>
+          <p class="opacity-80 text-sm">
             {{ repo.metadata.shortDescription }}
           </p>
-          <p v-if="authors.length > 0" class="flex gap-2 mt-2">
+          <p v-if="authors.length > 0" class="flex gap-2 mt-4">
             <AuthorLink
               v-for="author in authors"
               :key="author.id"
@@ -129,7 +129,7 @@
         <template v-for="(s, i) in content.sections">
           <h2
             v-if="i > 0 && s.name.length > 0"
-            class="text-2xl mt-8 mb-2"
+            class="mt-8 mb-2"
             :key="`header-${s.name}`"
           >
             {{ s.name }}
@@ -155,7 +155,7 @@
         </MaterialButton>
       </div>
     </div>
-  </HeaderSidebarLayout>
+  </HeaderBodyLayout>
 </template>
 
 <script lang="ts">
@@ -165,7 +165,7 @@ import DOMPurify from "dompurify";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import AuthorLink from "@/components/AuthorLink.vue";
-import HeaderSidebarLayout from "@/components/HeaderSidebarLayout.vue";
+import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import UIModule from "@/store/ui";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
@@ -187,7 +187,7 @@ declare const hljs: any;
   components: {
     MaterialButton,
     AuthorLink,
-    HeaderSidebarLayout,
+    HeaderBodyLayout,
   },
 })
 export default class Repo extends Vue {
@@ -278,7 +278,7 @@ export default class Repo extends Vue {
 
 <style scoped lang="postcss">
 .router-link-exact-active {
-  @apply font-bold text-blue-500;
+  @apply font-bold text-gblue-600;
 }
 
 a {

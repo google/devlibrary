@@ -16,21 +16,30 @@
 
 <template>
   <div>
-    <div
+    <!-- See: https://material.io/components/radio-buttons/web#radio-buttons -->
+    <label
+      class="mdc-form-field frc cursor-pointer"
       v-for="entry in entries"
+      :for="entry.id"
       :key="entry.id"
-      class="flex flex-row items-center"
     >
-      <input
-        type="radio"
-        :id="entry.id"
-        :name="prefix"
-        :value="entry.value"
-        v-model="choice"
-        @input="onInput"
-      />
-      <label :for="entry.id" class="ml-2 text-sm">{{ entry.key }}</label>
-    </div>
+      <div class="mdc-radio">
+        <input
+          class="mdc-radio__native-control"
+          type="radio"
+          :id="entry.id"
+          :name="prefix"
+          :value="entry.value"
+          v-model="choice"
+          @input="onInput"
+        />
+        <div class="mdc-radio__background">
+          <div class="mdc-radio__outer-circle"></div>
+          <div class="mdc-radio__inner-circle"></div>
+        </div>
+      </div>
+      <label class="text-sm">{{ entry.key }}</label>
+    </label>
   </div>
 </template>
 
@@ -88,3 +97,5 @@ export default class RadioGroup extends Vue {
   }
 }
 </script>
+
+<style scoped lang="postcss"></style>

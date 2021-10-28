@@ -21,6 +21,8 @@
         type="text"
         class="stack-child w-32 lg:w-40 xl:w-52 bg-gray-100 text-gray-500 text-sm lg:text-base pl-7 pr-6 py-1 shadow-inner rounded"
         placeholder="Search"
+        @focusin="focus = true"
+        @blur="focus = false"
         v-model="query"
       />
 
@@ -44,12 +46,12 @@
       v-if="showResults"
       class="absolute right-0 top-full mt-1 w-72 lg:w-96 bg-white border rounded overflow-hidden shadow-lg"
     >
-      <div class="px-2 py-1 border-b bg-gray-100 border-gray-100">
-        Top Results
+      <div class="px-2 py-1 border-b border-gray-200">
+        <span class="font-bold uppercase tracking-widest text-xs">Results</span>
       </div>
       <div class="font-sans">
-        <div v-if="searching" class="px-2 py-1">Searching...</div>
-        <div v-else-if="results.length === 0" class="px-2 py-1">
+        <div v-if="searching" class="px-2 py-1 opacity-50">Searching...</div>
+        <div v-else-if="results.length === 0" class="px-2 py-1 opacity-50">
           No results...
         </div>
 
@@ -58,13 +60,13 @@
             v-for="res in displayResults"
             :key="res.link"
             :href="res.link"
-            class="flex flex-row items-center cursor-pointer hover:bg-gray-50 border-b border-gray-100"
+            class="frc cursor-pointer hover:bg-gray-50 border-b border-gray-100"
           >
             <div class="pl-2">
               <font-awesome-icon :icon="res.icon" fixed-width />
             </div>
             <div class="px-3 py-2">
-              <p class="font-bold">{{ res.title }}</p>
+              <p class="font-medium font-display">{{ res.title }}</p>
               <p class="text-sm wrap-lines-2">
                 {{ res.description }}
               </p>
@@ -84,6 +86,7 @@ import { SearchResult } from "../../../shared/types";
 @Component
 export default class SearchBar extends Vue {
   public query = "";
+  public focus = false;
   public searching = false;
   public results: SearchResult[] = [];
   public searchFn = this.debounce(this.search, 500);
@@ -125,7 +128,13 @@ export default class SearchBar extends Vue {
 
   @Watch("query")
   public async onQueryChange() {
-    this.searchFn();
+    if (this.query.length === 0) {
+      this.searching = false;
+      this.results = [];
+    } else {
+      this.searching = true;
+      this.searchFn();
+    }
   }
 
   public toDisplay(res: SearchResult) {
@@ -138,7 +147,7 @@ export default class SearchBar extends Vue {
       };
     } else if (res.type === "blog") {
       return {
-        icon: ["far", "bookmark"],
+        icon: ["fas", "clipboard-list"],
         title: res.data.metadata.author,
         description: res.data.metadata.title,
         link: res.data.metadata.link,
@@ -158,7 +167,11 @@ export default class SearchBar extends Vue {
   }
 
   get showResults() {
-    return this.searching || this.results.length > 0;
+    return (
+      this.searching ||
+      (this.focus && this.query.length > 0) ||
+      this.results.length > 0
+    );
   }
 }
 </script>
@@ -170,14 +183,5 @@ export default class SearchBar extends Vue {
 
 .stack-child {
   grid-area: 1 / 1 / 2 / 2;
-}
-
-/** See: https://stackoverflow.com/a/13924997/324977 */
-.wrap-lines-2 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 </style>

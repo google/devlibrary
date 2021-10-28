@@ -15,30 +15,40 @@
 -->
 
 <template>
-  <router-link
-    tag="span"
-    :to="`/authors/${author.id}`"
-    :key="author.id"
-    class="ifrc gap-2 cursor-pointer text-sm font-display pl-2 pr-2 py-1 border rounded-full hover:shadow"
-  >
-    <CircleImage size="xsmall" :src="author.metadata.photoURL" />
-    <span>{{ author.metadata.name }}</span>
-  </router-link>
+  <LargeRepoCard
+    v-if="project.type === 'repo'"
+    :key="project.data.id"
+    :repo="project.data"
+    :showTags="showTags"
+    :showLogo="showLogo"
+  />
+
+  <LargeBlogCard
+    v-else-if="project.type === 'blog'"
+    :key="project.data.id"
+    :blog="project.data"
+    :showTags="showTags"
+    :showLogo="showLogo"
+  />
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import { BlogOrRepoDataHolder } from "../../../shared/types";
 
-import CircleImage from "@/components/CircleImage.vue";
-import { AuthorData } from "../../../shared/types";
+import LargeBlogCard from "@/components/LargeBlogCard.vue";
+import LargeRepoCard from "@/components/LargeRepoCard.vue";
 
 @Component({
   components: {
-    CircleImage,
+    LargeBlogCard,
+    LargeRepoCard,
   },
 })
-export default class AuthorLink extends Vue {
-  @Prop() author!: AuthorData;
+export default class RepoOrBlogCard extends Vue {
+  @Prop() project!: BlogOrRepoDataHolder;
+  @Prop({ default: true }) showTags!: boolean;
+  @Prop({ default: false }) showLogo!: boolean;
 }
 </script>
 
