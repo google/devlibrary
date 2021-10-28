@@ -19,7 +19,7 @@
     <template v-if="loaded" v-slot:header>
       <!-- Header (Mobile) -->
       <div class="mobile-only">
-        <div class="mobile-only flex flex-col gap-2 items-center my-6">
+        <div class="mobile-only flex flex-col items-center gap-2 my-6">
           <CircleImage
             class="border-white"
             size="medium"

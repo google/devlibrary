@@ -71,7 +71,7 @@
       />
       <span>Blog</span>
       <span>•</span>
-      <span class="flex-grow"
+      <span class="flex-grow wrap-lines-1"
         >Updated {{ renderDaysAgo(blog.stats.lastUpdated) }}</span
       >
     </div>

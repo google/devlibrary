@@ -60,7 +60,7 @@
       <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-1" />
       <span>GitHub</span>
       <span>•</span>
-      <span class="flex-grow"
+      <span class="flex-grow wrap-lines-1"
         >Updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span
       >
     </div>

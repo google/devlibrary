@@ -143,7 +143,7 @@
 
         <div id="projects">
           <div
-            v-if="projects.length === 0"
+            v-if="visibleProjects.length === 0"
             class="mt-4 frc justify-center py-20 text-gray-400"
           >
             <font-awesome-icon
@@ -155,7 +155,7 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <RepoOrBlogCard
-              v-for="project in projects"
+              v-for="project in visibleProjects"
               :key="project.data.id"
               :project="project"
             />
@@ -237,7 +237,8 @@ export default class Product extends Vue {
     categories: [] as CheckboxGroupEntry[],
   };
 
-  private perPage = 6;
+  private pagesToShow = 1;
+  private perPage = 12;
 
   public repoData: PagedResponse<RepoData> = emptyPageResponse<RepoData>(
     `/products/${this.product.key}/repos`,
@@ -334,10 +335,14 @@ export default class Product extends Vue {
   }
 
   get canLoadMore() {
-    return (
+    const canLoadMoreRemote =
       (this.showBlogPosts && this.blogData.hasNext) ||
-      (this.showOpenSource && this.repoData.hasNext)
-    );
+      (this.showOpenSource && this.repoData.hasNext);
+
+    const canLoadMoreLocal =
+      this.visibleProjects.length < this.sortedProjects.length;
+
+    return canLoadMoreRemote || canLoadMoreLocal;
   }
 
   public async loadMore() {
@@ -351,7 +356,8 @@ export default class Product extends Vue {
       promises.push(nextPage(this.blogData));
     }
 
-    this.uiModule.waitFor(Promise.all(promises));
+    await this.uiModule.waitFor(Promise.all(promises));
+    this.pagesToShow++;
   }
 
   public removeFilterType(value: string) {
@@ -421,7 +427,7 @@ export default class Product extends Vue {
     return this.blogData.pages.flatMap((p) => p);
   }
 
-  get projects(): BlogOrRepoDataHolder[] {
+  get sortedProjects(): BlogOrRepoDataHolder[] {
     const blogs = this.showBlogPosts ? this.blogs : [];
     const repos = this.showOpenSource ? this.repos : [];
     const projects = wrapInHolders(blogs, repos);
@@ -437,6 +443,14 @@ export default class Product extends Vue {
         return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
       }
     });
+  }
+
+  get visibleProjects(): BlogOrRepoDataHolder[] {
+    // We load up to 1 full page of blogs and 1 full page of repos so
+    // that our sort is stable across page loads, but this means we
+    // only show part of the loaded data.
+    const maxToShow = this.perPage * this.pagesToShow;
+    return this.sortedProjects.slice(0, maxToShow);
   }
 }
 </script>
