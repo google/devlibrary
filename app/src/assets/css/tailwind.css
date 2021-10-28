@@ -121,16 +121,6 @@
     margin-bottom: 0;
   }
 
-  .px-std {
-    @apply px-6;
-  }
-  
-  @screen lg {
-    .px-std {
-      @apply px-10;
-    }
-  }
-
   input:active {
     outline: none;
   }
@@ -155,3 +145,23 @@
 
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .frc {
+    @apply flex flex-row items-center;
+  }
+
+  .ifrc {
+    @apply inline-flex flex-row items-center; 
+  }
+
+  .px-std {
+    @apply px-6;
+  }
+  
+  @screen lg {
+    .px-std {
+      @apply px-10;
+    }
+  }
+}

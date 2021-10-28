@@ -21,11 +21,7 @@
       class="flex-grow py-3 lg:py-4 px-3 lg:px-4 border-r lg:border-none border-gray-200"
     >
       <p class="mb-1 uppercase font-medium">Expertise</p>
-      <div
-        v-for="p in expertise"
-        :key="p"
-        class="mt-2 flex flex-row items-center"
-      >
+      <div v-for="p in expertise" :key="p" class="mt-2 frc">
         <ProductLogo
           :productKey="p"
           class="filter grayscale mr-2"
@@ -38,10 +34,7 @@
     <!-- Connect -->
     <div class="flex-grow py-3 lg:py-4 px-3 lg:px-4">
       <p class="mb-1 uppercase font-medium">Connect</p>
-      <div
-        v-if="author.metadata.githubURL"
-        class="mt-2 flex flex-row items-center"
-      >
+      <div v-if="author.metadata.githubURL" class="mt-2 frc">
         <font-awesome-icon
           :icon="['fab', 'github']"
           fixed-width
@@ -52,10 +45,7 @@
           <span class="desktop-only">{{ author.metadata.githubURL }}</span>
         </a>
       </div>
-      <div
-        v-if="author.metadata.mediumURL"
-        class="mt-2 flex flex-row items-center truncate"
-      >
+      <div v-if="author.metadata.mediumURL" class="mt-2 frc truncate">
         <font-awesome-icon
           :icon="['fab', 'medium']"
           fixed-width

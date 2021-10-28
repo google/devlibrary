@@ -60,7 +60,7 @@
             v-for="res in displayResults"
             :key="res.link"
             :href="res.link"
-            class="flex flex-row items-center cursor-pointer hover:bg-gray-50 border-b border-gray-100"
+            class="frc cursor-pointer hover:bg-gray-50 border-b border-gray-100"
           >
             <div class="pl-2">
               <font-awesome-icon :icon="res.icon" fixed-width />

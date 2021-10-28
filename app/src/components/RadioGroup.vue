@@ -18,7 +18,7 @@
   <div>
     <!-- See: https://material.io/components/radio-buttons/web#radio-buttons -->
     <label
-      class="mdc-form-field flex flex-row items-center cursor-pointer"
+      class="mdc-form-field frc cursor-pointer"
       v-for="entry in entries"
       :for="entry.id"
       :key="entry.id"

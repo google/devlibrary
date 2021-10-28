@@ -47,10 +47,7 @@
         :key="p.key"
         class="card px-3 lg:px-6 py-2 lg:py-6 flex flex-col"
       >
-        <router-link
-          :to="`/products/${p.key}`"
-          class="flex flex-row items-center"
-        >
+        <router-link :to="`/products/${p.key}`" class="frc">
           <ProductLogo
             :productKey="p.key"
             :size="$mq === 'mobile' ? 'xtiny' : 'tiny'"

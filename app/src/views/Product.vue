@@ -19,9 +19,7 @@
     <template v-slot:header>
       <!-- Header (Mobile) -->
       <div class="mobile-only">
-        <div
-          class="mobile-only flex flex-row items-center px-std py-4 border-b border-gray-100"
-        >
+        <div class="mobile-only frc px-std py-4 border-b border-gray-100">
           <ProductLogo size="small" :productKey="product.key" />
 
           <h1 class="ml-2">
@@ -39,7 +37,7 @@
           class="lg:py-4 xl:py-10 px-std grid grid-cols-10 gap-4 border-b border-gray-100"
         >
           <div class="col-span-4 pt-2">
-            <div class="flex flex-row items-center">
+            <div class="frc">
               <ProductLogo
                 class="mr-4"
                 size="medium"
@@ -146,7 +144,7 @@
         <div id="projects">
           <div
             v-if="projects.length === 0"
-            class="mt-4 flex flex-row items-center justify-center py-20 text-gray-400"
+            class="mt-4 frc justify-center py-20 text-gray-400"
           >
             <font-awesome-icon
               :icon="['fas', 'exclamation-circle']"
@@ -169,7 +167,7 @@
               type="text"
               @click.native="loadMore"
             >
-              <div class="flex flex-row items-center">
+              <div class="frc">
                 <span>Load more</span>
                 <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
               </div>

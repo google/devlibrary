@@ -17,13 +17,10 @@
 <template>
   <div class="flex flex-col card card-clickable p-4">
     <!-- Author photo and name -->
-    <div class="flex flex-row items-center">
+    <div class="frc">
       <!-- Link to author (if present) -->
       <template v-if="authorId">
-        <router-link
-          :to="`/authors/${authorId}`"
-          class="flex flex-row items-center"
-        >
+        <router-link :to="`/authors/${authorId}`" class="frc">
           <img class="avatar rounded-full mr-2" :src="authorPhotoUrl" />
           <span class="font-display text-lg">{{ blog.metadata.author }}</span>
         </router-link>
@@ -32,7 +29,7 @@
       <!-- Standard avatar -->
       <template v-else>
         <div
-          class="avatar mr-2 bg-gray-200 text-gray-400 rounded-full flex flex-row items-center justify-center"
+          class="avatar mr-2 bg-gray-200 text-gray-400 rounded-full frc justify-center"
         >
           <font-awesome-icon icon="user" />
         </div>
@@ -53,10 +50,7 @@
     </a>
 
     <!-- Tags -->
-    <div
-      v-if="showTags"
-      class="mt-4 flex flex-row flex-wrap gap-2 items-center"
-    >
+    <div v-if="showTags" class="frc mt-4 flex-wrap gap-2">
       <TagChip
         v-for="t in blog.metadata.tags"
         :key="t"
@@ -69,7 +63,7 @@
     <span class="flex-grow"><!-- spacer --></span>
 
     <!-- Timestamp -->
-    <div class="mt-4 flex flex-row text-sm items-center gap-1 text-mgray-700">
+    <div class="frc mt-4 text-sm gap-1 text-mgray-700">
       <font-awesome-icon
         :icon="['fas', 'clipboard-list']"
         size="lg"

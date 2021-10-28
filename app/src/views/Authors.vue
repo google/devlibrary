@@ -30,9 +30,7 @@
     <!-- Body -->
     <div id="pagebody" class="mb-4 px-std">
       <!-- Search bar -->
-      <div
-        class="mt-4 flex flex-row items-center rounded-lg max-w-lg border border-gray-200 px-2"
-      >
+      <div class="mt-4 frc rounded-lg max-w-lg border border-gray-200 px-2">
         <font-awesome-icon
           icon="search"
           size="sm"

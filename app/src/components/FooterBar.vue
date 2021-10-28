@@ -18,7 +18,7 @@
   <div
     class="relative text-sm text-mgray-700 border-t border-gray-100 px-std lg:px-8 py-4 bg-white"
   >
-    <div class="flex flex-row items-center justify-center lg:justify-start">
+    <div class="frc justify-center lg:justify-start">
       <router-link to="/about">About</router-link>
       <span class="mx-2">·</span>
       <a href="https://developers.google.com/terms/site-terms">Terms</a>

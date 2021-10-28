@@ -15,10 +15,7 @@
 -->
 
 <template>
-  <div
-    class="bg-gray-100 flex flex-row items-center rounded-sm px-2 py-1"
-    :class="[bgColor]"
-  >
+  <div class="bg-gray-100 frc rounded-sm px-2 py-1" :class="[bgColor]">
     <span
       class="text-gray-500 whitespace-nowrap text-sm"
       :class="[textColor]"

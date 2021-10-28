@@ -24,9 +24,7 @@
         style="height: 100vh"
       >
         <div class="flex flex-col">
-          <div
-            class="py-2 lg:py-1 flex flex-row items-center px-4 border-b border-gray-200"
-          >
+          <div class="py-2 lg:py-1 frc px-4 border-b border-gray-200">
             <div
               class="mr-3 flex items-center align-middle text-gray-400 hover:text-gray-600"
               @click="showSideMenu = false"
@@ -77,7 +75,7 @@
     </transition>
 
     <!-- Nav row -->
-    <div class="flex flex-row items-center py-3 lg:py-0 px-4 text-nav">
+    <div class="frc py-3 lg:py-0 px-4 text-nav">
       <div
         class="mr-1 flex items-center align-middle text-gray-400 hover:text-gray-600"
         @click="showSideMenu = true"
@@ -85,11 +83,7 @@
         <font-awesome-icon icon="bars" class="mobile-only m-1" fixed-width />
       </div>
 
-      <router-link
-        tag="div"
-        to="/"
-        class="inline-flex flex-row items-center ml-2 cursor-pointer"
-      >
+      <router-link tag="div" to="/" class="ifrc ml-2 cursor-pointer">
         <img
           src="@/assets/GoogleDevelopers-lockup.svg"
           alt="devlibrary.withgoogle.com"

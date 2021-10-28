@@ -17,7 +17,7 @@
 <template>
   <div class="flex flex-col card card-clickable p-4">
     <!-- Author photo and name -->
-    <div class="flex flex-row items-center">
+    <div class="frc">
       <img
         class="avatar mr-2 rounded-full"
         :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
@@ -38,10 +38,7 @@
     </router-link>
 
     <!-- Tags -->
-    <div
-      v-if="showTags"
-      class="mt-4 flex flex-row flex-wrap gap-2 items-center"
-    >
+    <div v-if="showTags" class="mt-4 frc flex-wrap gap-2">
       <TagChip
         v-for="t in repo.metadata.tags"
         :key="t"
@@ -59,7 +56,7 @@
     <div class="flex-grow"><!-- spacer --></div>
 
     <!-- Timestamp -->
-    <div class="mt-4 flex flex-row text-sm items-center gap-1 text-mgray-700">
+    <div class="mt-4 frc text-sm gap-1 text-mgray-700">
       <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-1" />
       <span>GitHub</span>
       <span>•</span>

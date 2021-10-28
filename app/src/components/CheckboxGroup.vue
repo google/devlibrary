@@ -21,7 +21,7 @@
       v-for="entry in entries"
       :for="entry.id"
       :key="entry.key"
-      class="mdc-form-field flex flex-row items-center cursor-pointer"
+      class="mdc-form-field frc cursor-pointer"
     >
       <div class="mdc-checkbox">
         <input
