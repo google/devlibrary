@@ -47,14 +47,4 @@ import CookieBar from "@/components/CookieBar.vue";
 export default class App extends Vue {}
 </script>
 
-<style lang="postcss">
-.px-std {
-  @apply px-6;
-}
-
-@screen lg {
-  .px-std {
-    @apply px-10;
-  }
-}
-</style>
+<style lang="postcss"></style>

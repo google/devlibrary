@@ -120,10 +120,20 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-}
 
-input:active {
-  outline: none;
+  .px-std {
+    @apply px-6;
+  }
+  
+  @screen lg {
+    .px-std {
+      @apply px-10;
+    }
+  }
+
+  input:active {
+    outline: none;
+  }
 }
 
 @tailwind components;
