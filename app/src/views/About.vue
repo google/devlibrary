@@ -38,6 +38,7 @@
             <li>Flutter</li>
             <li>Firebase</li>
             <li>Google Cloud</li>
+            <li>Machine Learning</li>
           </ul>
 
           <p class="mt-4">Currently we accept two kinds of content:</p>
