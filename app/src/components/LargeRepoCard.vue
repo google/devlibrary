@@ -15,71 +15,66 @@
 -->
 
 <template>
-  <div class="flex flex-col">
-    <!-- Card -->
+  <div class="flex flex-col card card-clickable p-4">
+    <!-- Author photo and name -->
+    <div class="flex flex-row items-center">
+      <img
+        class="avatar mr-2 rounded-full"
+        :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
+      />
+      <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
+
+      <ProductLogo
+        v-if="showLogo"
+        size="xtiny"
+        :productKey="repo.product"
+        class="ml-auto"
+      />
+    </div>
+
+    <!-- Title -->
+    <router-link :to="link" class="mt-4 wrap-lines-3">
+      <h3>{{ repo.metadata.repo }}</h3>
+    </router-link>
+
+    <!-- Tags -->
     <div
-      class="flex-grow flex flex-col rounded-lg border border-gray-200 transition-shadow hover:shadow overflow-hidden p-4"
+      v-if="showTags"
+      class="mt-4 flex flex-row flex-wrap gap-2 items-center"
     >
-      <!-- Author photo and name -->
-      <div class="flex flex-row items-center">
-        <img
-          class="avatar mr-2 rounded-full"
-          :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
-        />
-        <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
+      <TagChip
+        v-for="t in repo.metadata.tags"
+        :key="t"
+        :label="getTag(t).label"
+        :textColor="getTag(t).textColor"
+        :bgColor="getTag(t).bgColor"
+      />
+    </div>
 
-        <ProductLogo
-          v-if="showLogo"
-          size="xtiny"
-          :productKey="repo.product"
-          class="ml-auto"
-        />
-      </div>
+    <!-- Description -->
+    <div class="mt-4 wrap-lines-3">
+      {{ repo.metadata.longDescription }}
+    </div>
 
-      <!-- Title -->
-      <router-link :to="link" class="block mt-4">
-        <h3>{{ repo.metadata.repo }}</h3>
-      </router-link>
+    <div class="flex-grow"><!-- spacer --></div>
 
-      <!-- Tags -->
-      <div
-        v-if="showTags"
-        class="mt-4 flex flex-row gap-2 flex-wrap items-center"
+    <!-- Timestamp -->
+    <div class="mt-4 flex flex-row text-sm items-center gap-1 text-mgray-700">
+      <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-1" />
+      <span>GitHub</span>
+      <span>•</span>
+      <span class="flex-grow"
+        >Updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span
       >
-        <TagChip
-          v-for="t in repo.metadata.tags"
-          :key="t"
-          :label="getTag(t).label"
-          :textColor="getTag(t).textColor"
-          :bgColor="getTag(t).bgColor"
-        />
-      </div>
+    </div>
 
-      <!-- Description -->
-      <div class="mt-4 wrap-lines-3">
-        {{ repo.metadata.longDescription }}
-      </div>
-
-      <div class="flex-grow"><!-- spacer --></div>
-
-      <!-- Timestamp -->
-      <div class="mt-4 flex flex-row text-sm items-center gap-1 text-mgray-700">
-        <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-1" />
-        <span>GitHub</span>
-        <span>•</span>
-        <span class="flex-grow"
-          >Updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span
-        >
-      </div>
-
-      <!-- Button -->
-      <div class="mt-6 flex flex-row-reverse">
-        <router-link :to="link"
-          ><MaterialButton type="secondary"
-            >Learn more</MaterialButton
-          ></router-link
-        >
-      </div>
+    <!-- Button -->
+    <div class="mt-6 flex flex-row-reverse">
+      <router-link :to="link"
+        ><MaterialButton type="secondary"
+          >Learn more</MaterialButton
+        ></router-link
+      >
     </div>
   </div>
 </template>

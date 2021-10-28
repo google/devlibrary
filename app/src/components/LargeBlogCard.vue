@@ -15,83 +15,78 @@
 -->
 
 <template>
-  <div class="flex flex-col">
-    <!-- Card -->
-    <div
-      class="flex-grow flex flex-col rounded-lg border border-gray-200 transition-shadow hover:shadow overflow-hidden p-4"
-    >
-      <!-- Author photo and name -->
-      <div class="flex flex-row items-cetner">
-        <!-- Link to author (if present) -->
-        <template v-if="authorId">
-          <router-link
-            :to="`/authors/${authorId}`"
-            class="flex flex-row items-center"
-          >
-            <img class="avatar rounded-full mr-2" :src="authorPhotoUrl" />
-            <span class="font-display text-lg">{{ blog.metadata.author }}</span>
-          </router-link>
-        </template>
-
-        <!-- Standard avatar -->
-        <template v-else>
-          <div
-            class="avatar mr-2 bg-gray-200 text-gray-400 rounded-full flex flex-row items-center justify-center"
-          >
-            <font-awesome-icon icon="user" />
-          </div>
+  <div class="flex flex-col card card-clickable p-4">
+    <!-- Author photo and name -->
+    <div class="flex flex-row items-center">
+      <!-- Link to author (if present) -->
+      <template v-if="authorId">
+        <router-link
+          :to="`/authors/${authorId}`"
+          class="flex flex-row items-center"
+        >
+          <img class="avatar rounded-full mr-2" :src="authorPhotoUrl" />
           <span class="font-display text-lg">{{ blog.metadata.author }}</span>
-        </template>
+        </router-link>
+      </template>
 
-        <ProductLogo
-          v-if="showLogo"
-          size="xtiny"
-          :productKey="blog.product"
-          class="ml-auto"
-        />
-      </div>
+      <!-- Standard avatar -->
+      <template v-else>
+        <div
+          class="avatar mr-2 bg-gray-200 text-gray-400 rounded-full flex flex-row items-center justify-center"
+        >
+          <font-awesome-icon icon="user" />
+        </div>
+        <span class="font-display text-lg">{{ blog.metadata.author }}</span>
+      </template>
 
-      <!-- Title -->
-      <a :href="blog.metadata.link" class="mt-4 wrap-lines-3">
-        <h3>{{ blog.metadata.title }}</h3>
-      </a>
+      <ProductLogo
+        v-if="showLogo"
+        size="xtiny"
+        :productKey="blog.product"
+        class="ml-auto"
+      />
+    </div>
 
-      <!-- Tags -->
-      <div
-        v-if="showTags"
-        class="mt-4 flex flex-row flex-wrap gap-2 overflow-hidden items-center"
+    <!-- Title -->
+    <a :href="blog.metadata.link" class="mt-4 wrap-lines-3">
+      <h3>{{ blog.metadata.title }}</h3>
+    </a>
+
+    <!-- Tags -->
+    <div
+      v-if="showTags"
+      class="mt-4 flex flex-row flex-wrap gap-2 items-center"
+    >
+      <TagChip
+        v-for="t in blog.metadata.tags"
+        :key="t"
+        :label="getTag(t).label"
+        :textColor="getTag(t).textColor"
+        :bgColor="getTag(t).bgColor"
+      />
+    </div>
+
+    <span class="flex-grow"><!-- spacer --></span>
+
+    <!-- Timestamp -->
+    <div class="mt-4 flex flex-row text-sm items-center gap-1 text-mgray-700">
+      <font-awesome-icon
+        :icon="['fas', 'clipboard-list']"
+        size="lg"
+        class="mr-1 text-gray-500"
+      />
+      <span>Blog</span>
+      <span>•</span>
+      <span class="flex-grow"
+        >Updated {{ renderDaysAgo(blog.stats.lastUpdated) }}</span
       >
-        <TagChip
-          v-for="t in blog.metadata.tags"
-          :key="t"
-          :label="getTag(t).label"
-          :textColor="getTag(t).textColor"
-          :bgColor="getTag(t).bgColor"
-        />
-      </div>
+    </div>
 
-      <span class="flex-grow"><!-- spacer --></span>
-
-      <!-- Timestamp -->
-      <div class="mt-4 flex flex-row text-sm items-center gap-1 text-mgray-700">
-        <font-awesome-icon
-          :icon="['fas', 'clipboard-list']"
-          size="lg"
-          class="mr-1 text-gray-500"
-        />
-        <span>Blog</span>
-        <span>•</span>
-        <span class="flex-grow"
-          >Updated {{ renderDaysAgo(blog.stats.lastUpdated) }}</span
-        >
-      </div>
-
-      <!-- Button -->
-      <div class="mt-6 flex flex-row-reverse">
-        <a :href="blog.metadata.link" target="_blank"
-          ><MaterialButton type="secondary"> Read post </MaterialButton></a
-        >
-      </div>
+    <!-- Button -->
+    <div class="mt-6 flex flex-row-reverse">
+      <a :href="blog.metadata.link" target="_blank"
+        ><MaterialButton type="secondary"> Read post </MaterialButton></a
+      >
     </div>
   </div>
 </template>

@@ -15,12 +15,10 @@
 -->
 
 <template>
-  <div
-    class="bg-white rounded-lg border border-gray-200 max-w-lg flex flex-row lg:flex-col text-xs"
-  >
+  <div class="card bg-white max-w-lg flex flex-row lg:flex-col text-xs">
     <!-- Expertise -->
     <div
-      class="flex-grow py-3 lg:py-4 px-3 lg:px-4 border-r border-gray-200 lg:border-none"
+      class="flex-grow py-3 lg:py-4 px-3 lg:px-4 border-r lg:border-none border-gray-200"
     >
       <p class="mb-1 uppercase font-medium">Expertise</p>
       <div

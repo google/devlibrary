@@ -134,6 +134,23 @@
   input:active {
     outline: none;
   }
+
+  .card {
+    @apply rounded-lg border border-gray-200 overflow-hidden;
+  }
+
+  .card-clickable {
+    @apply hover:shadow transition-shadow;
+  }
+
+  @screen lg {
+    .header-image {
+      background-image: var(--header-bg-image);
+      background-position: right;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 @tailwind components;

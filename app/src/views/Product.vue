@@ -31,7 +31,10 @@
       </div>
 
       <!-- Header (Desktop) -->
-      <div class="desktop-only" id="header">
+      <div
+        class="desktop-only header-image"
+        style="--header-bg-image: url('/img/banners/product-wide.png')"
+      >
         <div
           class="lg:py-4 xl:py-10 px-std grid grid-cols-10 gap-4 border-b border-gray-100"
         >
@@ -441,15 +444,6 @@ export default class Product extends Vue {
 </script>
 
 <style scoped lang="postcss">
-@screen lg {
-  #header {
-    background-image: url("/img/banners/product-wide.png");
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
-
 .filter-chip {
   @apply flex flex-row items-center;
   @apply px-3 py-1 text-sm text-gblue-700 border border-gray-200 rounded-full;

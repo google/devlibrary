@@ -49,7 +49,10 @@
       </div>
 
       <!-- Header (Desktop) -->
-      <div class="desktop-only" id="header">
+      <div
+        class="desktop-only header-image"
+        style="--header-bg-image: url('/img/banners/author-wide.png')"
+      >
         <div class="py-10 grid grid-cols-12 gap-4 px-std">
           <!-- Photo, name, and bio -->
           <div class="col-span-9">
@@ -197,13 +200,4 @@ export default class Author extends Vue {
 }
 </script>
 
-<style scoped lang="postcss">
-@screen lg {
-  #header {
-    background-image: url("/img/banners/author-wide.png");
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
-</style>
+<style scoped lang="postcss"></style>

@@ -17,8 +17,8 @@
 <template>
   <div>
     <div
-      id="header"
-      class="grid grid-cols-12 mt-2 py-6 lg:py-8 xl:py-10 px-std border-b border-gray-100"
+      class="header-image grid grid-cols-12 mt-2 py-6 lg:py-8 xl:py-10 px-std border-b border-gray-100"
+      style="--header-bg-image: url('/img/banners/home-wide.png')"
     >
       <div class="col-span-12 lg:col-span-5 px-1">
         <h1>What will you build?</h1>
@@ -45,7 +45,7 @@
       <div
         v-for="p in products"
         :key="p.key"
-        class="border border-gray-200 rounded-lg px-3 lg:px-6 py-2 lg:py-6 flex flex-col"
+        class="card px-3 lg:px-6 py-2 lg:py-6 flex flex-col"
       >
         <router-link
           :to="`/products/${p.key}`"
@@ -268,15 +268,6 @@ export default class Home extends Vue {
 </script>
 
 <style scoped lang="postcss">
-@screen lg {
-  #header {
-    background-image: url("/img/banners/home-wide.png");
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
-
 .product-name {
   @apply flex flex-row items-center;
   min-height: 3.75rem;

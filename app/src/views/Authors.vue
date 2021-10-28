@@ -17,7 +17,10 @@
 <template>
   <div>
     <!-- Header -->
-    <div id="header" class="py-10 lg:py-20 px-std border-b border-gray-100">
+    <div
+      class="header-image py-10 lg:py-20 px-std border-b border-gray-100"
+      style="--header-bg-image: url('/img/banners/authors-wide.png')"
+    >
       <h1>Authors</h1>
       <p class="mt-1">
         All content on Dev Library is contributed by our incredible authors!
@@ -65,7 +68,7 @@
         <div
           v-for="author in filteredAuthors"
           :key="author.id"
-          class="card px-5 py-4 flex flex-col items-center text-center"
+          class="card card-clickable px-5 py-4 flex flex-col items-center text-center"
         >
           <CircleImage
             :src="author.metadata.photoURL"
@@ -185,19 +188,6 @@ export default class Authors extends Vue {
 </script>
 
 <style scoped lang="postcss">
-@screen lg {
-  #header {
-    background-image: url("/img/banners/authors-wide.png");
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
-
-.card {
-  @apply rounded-lg border border-gray-200 overflow-hidden transition-shadow hover:shadow;
-}
-
 .avatar {
   width: 60px;
   height: 60px;
