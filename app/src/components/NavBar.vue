@@ -26,7 +26,7 @@
         <div class="flex flex-col">
           <div class="py-2 lg:py-1 frc px-4 border-b border-gray-200">
             <div
-              class="mr-3 flex items-center align-middle text-gray-400 hover:text-gray-600"
+              class="mr-3 frc align-middle text-gray-400 hover:text-gray-600"
               @click="showSideMenu = false"
             >
               <font-awesome-icon icon="times" class="m-1" fixed-width />
@@ -77,7 +77,7 @@
     <!-- Nav row -->
     <div class="frc py-3 lg:py-0 px-4 text-nav">
       <div
-        class="mr-1 flex items-center align-middle text-gray-400 hover:text-gray-600"
+        class="mr-1 frc align-middle text-gray-400 hover:text-gray-600"
         @click="showSideMenu = true"
       >
         <font-awesome-icon icon="bars" class="mobile-only m-1" fixed-width />

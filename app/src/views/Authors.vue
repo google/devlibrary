@@ -51,7 +51,7 @@
       </div>
 
       <div
-        v-if="filteredAuthors.length === 0 && authorFilter.length > 0"
+        v-if="showNoMatchesMessage"
         class="text-mgray-700 opacity-70 py-8 px-1"
       >
         <font-awesome-icon :icon="['fas', 'exclamation-circle']" class="mr-1" />
@@ -64,7 +64,8 @@
       >
         <!-- Author Card -->
         <div
-          v-for="author in filteredAuthors"
+          v-for="author in authors"
+          v-show="showAuthor(author)"
           :key="author.id"
           class="card card-clickable px-5 py-4 flex flex-col items-center text-center"
         >
@@ -153,17 +154,24 @@ export default class Authors extends Vue {
     this.uiModule.waitFor(this.loadContent());
   }
 
+  public showAuthor(a: AuthorData): boolean {
+    if (this.authorFilter.length === 0) {
+      return true;
+    }
+
+    return a.metadata.name
+      .toLowerCase()
+      .includes(this.authorFilter.toLowerCase());
+  }
+
   get loaded() {
     return this.authors.length > 0;
   }
 
-  get filteredAuthors() {
-    if (this.authorFilter.length === 0) {
-      return this.authors;
-    }
-
-    return this.authors.filter((a) =>
-      a.metadata.name.toLowerCase().includes(this.authorFilter.toLowerCase())
+  get showNoMatchesMessage() {
+    return (
+      this.authorFilter.length > 0 &&
+      !this.authors.some((a) => this.showAuthor(a))
     );
   }
 

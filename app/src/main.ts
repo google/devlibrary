@@ -56,6 +56,10 @@ Vue.use(VueMq, {
 
 Vue.config.productionTip = false;
 
+if (process.env.NODE_ENV === "development") {
+  Vue.config.performance = true;
+}
+
 new Vue({
   router,
   store,
