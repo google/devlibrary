@@ -98,10 +98,4 @@ export default class RadioGroup extends Vue {
 }
 </script>
 
-<style scoped lang="postcss">
-input[type="radio"] {
-  @apply w-4 h-4;
-  @apply ml-px;
-  @apply flex-shrink-0;
-}
-</style>
+<style scoped lang="postcss"></style>
