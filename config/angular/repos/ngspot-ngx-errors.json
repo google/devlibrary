@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "ngspot",
+  "repo": "ngx-errors",
+  "name": "@ngspot/ngx-errors",
+  "shortDescription": "Reactive forms validation for pros",
+  "longDescription": "Reactive forms validation for pros",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

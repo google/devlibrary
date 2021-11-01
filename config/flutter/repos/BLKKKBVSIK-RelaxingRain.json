@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "blkkkbvsik"
+  ],
+  "owner": "blkkkbvsik",
+  "repo": "RelaxingRain",
+  "name": "RelaxingRain",
+  "shortDescription": "A simple application made with Flutter to listen to relaxing noises like rain, thunder or wind.",
+  "longDescription": "A simple application made with Flutter to listen to relaxing noises like rain, thunder or wind.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "plugins"
+  ]
+}

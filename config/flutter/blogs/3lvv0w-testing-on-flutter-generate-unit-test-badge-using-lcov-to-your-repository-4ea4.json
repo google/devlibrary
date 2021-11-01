@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": ["3lvv0w"],
+  "authorIds": [
+    "3lvv0w"
+  ],
   "author": "krisada Vivek",
   "title": "Testing on Flutter: generate unit test badge using LCOV to your repository",
   "link": "https://dev.to/3lvv0w/testing-on-flutter-generate-unit-test-badge-using-lcov-to-your-repository-4ea4",

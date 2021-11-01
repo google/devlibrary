@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "ngspot",
+  "repo": "route-path-builder",
+  "name": "@ngspot/route-path-builder",
+  "shortDescription": "Declarative Route Path Management in Angular Apps",
+  "longDescription": "Declarative Route Path Management in Angular Apps",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

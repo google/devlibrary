@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "ngx-rocket",
+  "repo": "generator-ngx-rocket",
+  "name": "generator-ngx-rocket",
+  "shortDescription": "Extensible Angular 12+ enterprise-grade project generator based on angular-cli with best practices from the community. Includes PWA, Cordova & Electron support, coding guides and more!",
+  "longDescription": "Extensible Angular 12+ enterprise-grade project generator based on angular-cli with best practices from the community. Includes PWA, Cordova & Electron support, coding guides and more!",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

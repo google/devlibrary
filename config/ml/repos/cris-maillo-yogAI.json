@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "cris-maillo"
+  ],
+  "owner": "cris-maillo",
+  "repo": "yogAI",
+  "name": "yogAI",
+  "shortDescription": "A TensorFlow.js - based project using ml5 and p5.js to create a visual recognition model to teach and test different yoga poses",
+  "longDescription": "A TensorFlow.js - based project using ml5 and p5.js to create a visual recognition model to teach and test different yoga poses",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web"
+  ]
+}
