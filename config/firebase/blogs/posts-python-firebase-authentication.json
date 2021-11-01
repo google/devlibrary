@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": ["icodes"],
+  "authorIds": [
+    "icodes"
+  ],
   "author": "mohsine maiet",
   "title": "Python firebase authentication Definitive guide (2021)",
   "link": "https://blog.icodes.tech/posts/python-firebase-authentication.html",

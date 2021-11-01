@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "martinoyovo"
+  ],
+  "owner": "martinoyovo",
+  "repo": "flutter-banking-app",
+  "name": "Mobile Banking App",
+  "shortDescription": "Complete UI of a mobile banking app made with Flutter.",
+  "longDescription": "Complete UI of a mobile banking app made with Flutter.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gihan667"
+  ],
+  "owner": "gihan667",
+  "repo": "flutter-login-ui",
+  "name": "flutter-login-ui",
+  "shortDescription": "Mobile app Minimal Auth Screen with Flutter. Contains - Login & Register Page",
+  "longDescription": "Mobile app Minimal Auth Screen with Flutter. Contains - Login & Register Page",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}
