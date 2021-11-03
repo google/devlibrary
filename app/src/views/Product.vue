@@ -275,6 +275,7 @@ export default class Product extends Vue {
     const blogsPromise = nextPage(blogData);
 
     const reloadPromise = Promise.all([reposPromise, blogsPromise]).then(() => {
+      this.pagesToShow = 1;
       this.repoData = repoData;
       this.blogData = blogData;
     });
