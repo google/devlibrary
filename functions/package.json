@@ -29,7 +29,7 @@
     "@types/url-join": "^4.0.0",
     "concurrently": "^5.3.0",
     "firebase-functions-test": "^0.2.0",
-    "firebase-tools": "^9.3.0",
+    "firebase-tools": "^9.21.0",
     "prettier": "^2.2.1",
     "typescript": "~3.9.3"
   },

@@ -24,7 +24,8 @@
         <h1>What will you build?</h1>
 
         <div>
-          <p class="mt-4 lg:mt-6">
+          <!-- Right-padding added on mobile to improve text flow -->
+          <p class="mt-4 lg:mt-6 pr-4 lg:pr-0">
             Welcome to Dev Library, a platform to showcase the projects and
             articles that developers have built with Google technologies.
             Browse, learn, or submit your own!
