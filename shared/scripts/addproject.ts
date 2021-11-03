@@ -165,15 +165,7 @@ async function getRepoReadme(owner: string, repo: string) {
   return path;
 }
 
-/**
- * @returns {Promise<string>} the project ID
- */
-export async function addRepo(
-  product: string,
-  projectUrl: string,
-  projectId?: string,
-  overrides?: object
-): Promise<string> {
+export function parseGithubUrl(projectUrl: string) {
   const re = /github.com\/([\w\-]+)\/([\w\-]+)/;
   const m = projectUrl.match(re);
 
@@ -183,6 +175,20 @@ export async function addRepo(
 
   const owner = m[1];
   const repo = m[2];
+
+  return { owner, repo };
+}
+
+/**
+ * @returns {Promise<string>} the project ID
+ */
+export async function addRepo(
+  product: string,
+  projectUrl: string,
+  projectId?: string,
+  overrides?: object
+): Promise<string> {
+  const { owner, repo } = parseGithubUrl(projectUrl);
 
   const templateStr = fs
     .readFileSync(path.join(getConfigDir(), "template-repo.json"))
