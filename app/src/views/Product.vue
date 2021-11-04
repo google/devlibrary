@@ -15,10 +15,15 @@
 -->
 
 <template>
-  <HeaderBodyLayout>
+  <HeaderBodyLayout
+    style="
+      --header-bg-image-desktop: url('/img/banners/desktop/product-wide.png');
+      --header-bg-image-mobile: url('/img/banners/mobile/product-wide.png');
+    "
+  >
     <template v-slot:header>
       <!-- Header (Mobile) -->
-      <div class="mobile-only">
+      <div class="mobile-only header-image">
         <div class="mobile-only frc px-std py-4 border-b border-gray-100">
           <ProductLogo size="small" :productKey="product.key" />
 
@@ -29,10 +34,7 @@
       </div>
 
       <!-- Header (Desktop) -->
-      <div
-        class="desktop-only header-image"
-        style="--header-bg-image: url('/img/banners/product-wide.png')"
-      >
+      <div class="desktop-only header-image">
         <div
           class="lg:py-4 xl:py-10 px-std grid grid-cols-10 gap-4 border-b border-gray-100"
         >

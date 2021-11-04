@@ -20,10 +20,7 @@
       <NavBar class="z-20 relative" />
       <ProgressBar class="z-10" />
     </div>
-    <router-view
-      class="main-content flex-grow z-0 relative"
-      :key="$route.fullPath"
-    />
+    <router-view class="flex-grow z-0 relative" :key="$route.fullPath" />
     <CookieBar class="fixed z-10 bottom-0 left-0" />
     <FooterBar class="z-0" />
   </div>
