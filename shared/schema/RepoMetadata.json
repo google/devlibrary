@@ -4,6 +4,10 @@
   "description": "RepoMetadata",
   "type": "object",
   "properties": {
+    "version": {
+      "type": "number",
+      "description": "Internal schema version"
+    },
     "authorIds": {
       "type": "array",
       "description": "The Dev Library ID of the author(s)",

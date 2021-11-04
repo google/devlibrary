@@ -4,6 +4,14 @@
   "description": "BlogMetadata",
   "type": "object",
   "properties": {
+    "version": {
+      "type": "number",
+      "description": "Internal schema version"
+    },
+    "source": {
+      "type": "string",
+      "description": "'medium' or 'other'"
+    },
     "authorIds": {
       "type": "array",
       "description": "The Dev Library ID of the author(s)",
