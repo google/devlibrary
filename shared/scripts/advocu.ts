@@ -17,9 +17,14 @@
 import * as fs from "fs";
 import * as path from "path";
 import fetch from "node-fetch";
-import { getConfigDir } from "./util";
+import { getConfigDir, writeOrUpdateJSON } from "./util";
 import { RepoMetadata } from "../types/RepoMetadata";
-import { parseGithubUrl } from "./addproject";
+import {
+  addMediumBlog,
+  addOtherBlog,
+  addRepo,
+  parseGithubUrl,
+} from "./addproject";
 import { BlogMetadata } from "../types/BlogMetadata";
 
 const ADVOCU_METADATA_FILE_NAME = "advocu.json";
@@ -91,16 +96,13 @@ function applicationToRepoMetadata(a: Application): RepoMetadata {
 
   const { owner, repo } = parseGithubUrl(a.github.repositoryUrl);
 
-  // TODO: Author IDs
-  // TODO: The description should not be direct from GitHub
-  // TODO: Where do we get the main content URL
   return {
     owner,
     repo,
     name: a.github.projectName,
     shortDescription: a.github.description,
     longDescription: a.github.description,
-    content: "README.md",
+    content: a.github.linkToReadme,
     tags: a.tags,
   };
 }
@@ -114,7 +116,6 @@ function applicationToBlogMetadata(a: Application): BlogMetadata {
     throw new Error(`Application ${a.id} has empty 'tags' field`);
   }
 
-  // TODO: Author IDs
   return {
     author: `${a.firstName} ${a.lastName}`,
     title: a.blogPost.description,
@@ -137,6 +138,7 @@ export async function main() {
     fs.readFileSync(advocuMetadataPath).toString()
   ) as AdvocuMetadata;
 
+  const nowDate = new Date();
   const lastPullDate = new Date(advocuMetadata.lastPullTime);
   console.log(`Last pull: ${lastPullDate.toISOString()}`);
 
@@ -159,25 +161,56 @@ export async function main() {
   });
   console.log(`New items: ${newApplications.length}`);
 
+  // For each new application, add the project and the author files
   for (const a of newApplications) {
+    console.log();
+    const product = a.productCategory;
+
     if (a.github) {
-      console.log(applicationToRepoMetadata(a));
+      const projectUrl = a.github.repositoryUrl;
+      const metadata = applicationToRepoMetadata(a);
+
+      console.log(`Adding ${product} repo ${projectUrl}`);
+      await addRepo(product, projectUrl, /* projectId= */ undefined, metadata);
     }
 
     if (a.blogPost) {
-      console.log(applicationToBlogMetadata(a));
+      const projectUrl = a.blogPost.url;
+      const metadata = applicationToBlogMetadata(a);
+
+      console.log(`Adding ${product} blog ${projectUrl}`);
+      if (projectUrl.includes("medium.com")) {
+        await addMediumBlog(
+          product,
+          projectUrl,
+          /* projectId= */ undefined,
+          metadata
+        );
+      } else {
+        await addOtherBlog(
+          product,
+          projectUrl,
+          /* projectId= */ undefined,
+          metadata
+        );
+      }
     }
   }
 
-  // TODO:
-  // Add all projects
-  // Add all authors
-  // Update config metadata file with newest timestamp
-  // Give the 'git commit' command
+  // Update the advocu metadata file
+  const newAdvocuMetadata: AdvocuMetadata = {
+    lastPullTime: nowDate.getTime(),
+  };
+  fs.writeFileSync(
+    advocuMetadataPath,
+    JSON.stringify(newAdvocuMetadata, undefined, 2)
+  );
 
-  // Other TODO:
-  // Docs
-  // Home link
+  console.log();
+  console.log(
+    "Success! Please 'git commit' any changes and push the new config files."
+  );
+  console.log();
 }
 
 if (require.main === module) {
