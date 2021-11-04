@@ -17,7 +17,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import fetch from "node-fetch";
-import { getConfigDir, writeOrUpdateJSON } from "./util";
+import { getConfigDir } from "./util";
 import { RepoMetadata } from "../types/RepoMetadata";
 import {
   addMediumBlog,
