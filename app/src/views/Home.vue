@@ -17,8 +17,11 @@
 <template>
   <div>
     <div
-      class="header-image grid grid-cols-12 mt-2 py-6 lg:py-8 xl:py-10 px-std border-b border-gray-100"
-      style="--header-bg-image: url('/img/banners/home-wide.png')"
+      class="header-image grid grid-cols-12 py-8 lg:py-10 xl:py-12 px-std border-b border-gray-100"
+      style="
+        --header-bg-image-desktop: url('/img/banners/desktop/home-wide.png');
+        --header-bg-image-mobile: url('/img/banners/mobile/home-wide.png');
+      "
     >
       <div class="col-span-12 lg:col-span-5 px-1">
         <h1>What will you build?</h1>

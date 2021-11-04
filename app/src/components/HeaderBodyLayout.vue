@@ -18,12 +18,12 @@
   <div class="relative fill-height gap-0">
     <div>
       <!-- Header -->
-      <div>
+      <div class="layout-header">
         <slot name="header"></slot>
       </div>
 
       <!-- Body -->
-      <div class="mb-20">
+      <div class="layout-body mb-20">
         <slot></slot>
       </div>
     </div>
