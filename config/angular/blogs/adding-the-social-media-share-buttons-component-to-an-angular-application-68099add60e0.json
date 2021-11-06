@@ -1,12 +1,15 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": [
+    "rodrigokamada"
+  ],
   "author": "Rodrigo Kamada",
   "title": "Adding the social media share buttons component to an Angular application",
   "link": "https://rodrigokamada.medium.com/adding-the-social-media-share-buttons-component-to-an-angular-application-68099add60e0",
   "tags": [
     "demos",
-    "components"
+    "components",
+    "gettingstarted"
   ]
 }
