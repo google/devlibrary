@@ -1,11 +1,14 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": [
+    "rodrigokamada"
+  ],
   "author": "Rodrigo Kamada",
   "title": "Adding the loading component (spinner) to an Angular application",
   "link": "https://rodrigokamada.medium.com/adding-the-loading-component-spinner-to-an-angular-application-a2b3bbab3a6c",
   "tags": [
-    "demos"
+    "demos",
+    "gettingstarted"
   ]
 }

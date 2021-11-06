@@ -1,12 +1,15 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": [
+    "rodrigokamada"
+  ],
   "author": "Rodrigo Kamada",
   "title": "Adding the notification component to an Angular application",
   "link": "https://rodrigokamada.medium.com/adding-the-notification-component-to-an-angular-application-504c7fa17121",
   "tags": [
     "demos",
-    "components"
+    "components",
+    "gettingstarted"
   ]
 }
