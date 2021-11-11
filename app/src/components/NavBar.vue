@@ -127,9 +127,9 @@
         ><span>Authors</span></router-link
       >
 
-      <a class="block nav-item nav-item-link" :href="submitLink" target="_blank"
-        >Submit</a
-      >
+      <div class="block nav-item nav-item-link" @click="showSubmitDialog">
+        Submit
+      </div>
 
       <router-link class="block nav-item nav-item-link" to="/about"
         ><span>About</span></router-link
@@ -154,6 +154,7 @@ import { Component, Vue, Watch } from "vue-property-decorator";
 
 import SearchBar from "@/components/SearchBar.vue";
 import { ALL_PRODUCTS } from "../../../shared/product";
+import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
 
 @Component({
   components: {
@@ -165,7 +166,10 @@ export default class NavBar extends Vue {
   public showProductsDropdown = false;
 
   public feedbackLink = "https://forms.gle/2JoN6csvyvnDC8Nd9";
-  public submitLink = "https://forms.gle/E54pxK3JzpXMGyqN7";
+
+  public showSubmitDialog() {
+    EVENT_BUS.$emit(NAME_SHOW_SUBMIT_DIALOG);
+  }
 
   get products() {
     return Object.values(ALL_PRODUCTS).sort((a, b) =>

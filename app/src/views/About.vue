@@ -129,9 +129,9 @@
           </p>
           <p class="mt-6 font-bold">How do I submit content to the site?</p>
           <p class="mt-4">
-            You can submit your content through this
-            <a href="https://forms.gle/E54pxK3JzpXMGyqN7" target="blank">form</a
-            >. We aim to reply within 2-4 weeks.
+            You can submit your content by clicking
+            <b class="font-bold">Submit</b> at the top of any page. We aim to
+            reply within 2-4 weeks.
           </p>
           <p class="mt-6 font-bold">How does a submission get selected?</p>
           <p class="mt-4">

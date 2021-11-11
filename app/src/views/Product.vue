@@ -73,7 +73,7 @@
       <div
         v-if="$mq === 'mobile'"
         v-show="showFilterOverlay"
-        class="mobile-only fixed right-0 top-0 bg-black bg-opacity-60 w-full h-full"
+        class="mobile-only scrim"
       >
         <!-- scrim -->
       </div>
