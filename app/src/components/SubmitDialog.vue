@@ -15,9 +15,13 @@
 -->
 
 <template>
-  <div v-if="show" class="scrim z-50 frc justify-center">
+  <div
+    v-if="show"
+    class="scrim z-50 frc justify-center"
+    @click="(e) => e.preventDefault()"
+  >
     <div
-      class="px-6 py-5 rounded-lg shadow-lg bg-white border-gray-100 max-w-md"
+      class="my-8 mx-6 px-6 py-5 rounded-lg shadow-lg bg-white border-gray-100 max-w-md"
     >
       <p>
         You are about to be redirected to <b class="font-bold">Advocu</b>, an
@@ -28,14 +32,9 @@
         <MaterialButton type="text" @click.native="show = false"
           >Cancel</MaterialButton
         >
-        <a
-          href="https://devlibrary.advocu.com/home/applications/form"
-          target="_blank"
+        <MaterialButton type="primary" @click.native="goToForm"
+          >Continue</MaterialButton
         >
-          <MaterialButton type="primary" @click.native="show = false"
-            >Continue</MaterialButton
-          >
-        </a>
       </div>
     </div>
   </div>
@@ -64,6 +63,12 @@ export default class SubmitDialog extends Vue {
 
   beforeDestroy() {
     EVENT_BUS.$off(NAME_SHOW_SUBMIT_DIALOG);
+  }
+
+  goToForm() {
+    this.show = false;
+    window.location.href =
+      "https://devlibrary.advocu.com/home/applications/form";
   }
 }
 </script>
