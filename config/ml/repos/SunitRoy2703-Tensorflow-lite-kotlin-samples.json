@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sunitroy2703"
+  ],
+  "owner": "SunitRoy2703",
+  "repo": "Tensorflow-lite-kotlin-samples",
+  "name": "Tensorflow-lite-kotlin-samples",
+  "shortDescription": "Collection of Tensorflow Lite example Apps in kotlin, to demonstrate the kotlin implementation of the various TFLite example Apps.",
+  "longDescription": "Collection of Tensorflow Lite example Apps in kotlin, to demonstrate the kotlin implementation of the various TFLite example Apps.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "nlp",
+    "mobile"
+  ]
+}

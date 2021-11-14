@@ -16,21 +16,34 @@
 
 <template>
   <div>
-    <div
+    <!-- See: https://material.io/components/checkboxes/web#checkboxes -->
+    <label
       v-for="entry in entries"
+      :for="entry.id"
       :key="entry.key"
-      class="flex flex-row items-center"
+      class="mdc-form-field frc cursor-pointer"
     >
-      <input
-        type="checkbox"
-        v-model="entry.checked"
-        @input="emitValue"
-        :id="entry.id"
-      />
-      <label :for="entry.id" class="ml-2 text-sm wrap-lines-1">{{
-        entry.key
-      }}</label>
-    </div>
+      <div class="mdc-checkbox">
+        <input
+          type="checkbox"
+          class="mdc-checkbox__native-control"
+          v-model="entry.checked"
+          @input="emitValue"
+          :id="entry.id"
+        />
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path
+              class="mdc-checkbox__checkmark-path"
+              fill="none"
+              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+            />
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <span class="text-sm wrap-lines-1">{{ entry.key }}</span>
+    </label>
   </div>
 </template>
 
@@ -85,3 +98,5 @@ export default class CheckboxGroup extends Vue {
   }
 }
 </script>
+
+<style scoped lang="postcss"></style>

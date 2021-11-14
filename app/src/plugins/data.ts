@@ -17,7 +17,10 @@
 import {
   AuthorData,
   BlogData,
+  BlogDataHolder,
+  BlogOrRepoDataHolder,
   RepoData,
+  RepoDataHolder,
   RepoPage,
   SearchResult,
 } from "../../../shared/types";
@@ -42,7 +45,7 @@ export interface PagedResponse<T> {
   lastDoc: QueryResultDocument<T> | null;
 }
 
-function getApiHost(): string {
+export function getApiHost(): string {
   // In development the hosting emulator runs at port 5000
   // while the Vue dev server runs elsewhere. In prod this is
   // not an issue
@@ -63,7 +66,8 @@ async function fetchDoc(docPath: string) {
 async function fetchQuery(collectionPath: string, q: FirestoreQuery) {
   const params = new URLSearchParams({
     path: collectionPath,
-    q: btoa(JSON.stringify(q)),
+    // The unescape() and encodeURIComponent() deal with UTF-8
+    q: btoa(unescape(encodeURIComponent(JSON.stringify(q)))),
   });
 
   const res = await fetch(
@@ -268,4 +272,19 @@ export function shuffleArr<T>(arr: T[]): T[] {
   }
 
   return arr;
+}
+
+export function wrapInHolders(
+  blogs: BlogData[],
+  repos: RepoData[]
+): BlogOrRepoDataHolder[] {
+  const blogHolders: BlogDataHolder[] = blogs.map((data) => {
+    return { type: "blog", data };
+  });
+
+  const repoHolders: RepoDataHolder[] = repos.map((data) => {
+    return { type: "repo", data };
+  });
+
+  return [...blogHolders, ...repoHolders];
 }

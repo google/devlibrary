@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": ["theindianappguy"],
+  "authorIds": [
+    "theindianappguy"
+  ],
   "author": "Sanskar Tiwari",
   "title": "Messenger Clone built with Flutter & Firebase - FlutterNerd",
   "link": "https://flutternerd.com/messenger-clone-built-with-flutter-firebase",

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Tim Deschryver",
+  "title": "Getting the most value out of your Angular Component Tests",
+  "link": "https://timdeschryver.dev/blog/getting-the-most-value-out-of-your-angular-component-tests",
+  "tags": [
+    "components",
+    "performance"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sayannath"
+  ],
+  "owner": "sayannath",
+  "repo": "ViT-TF-Hub-Application",
+  "name": "ViT-TF-Hub-Application",
+  "shortDescription": "This repositories show how to fine-tune a Vision Transformer model from TensorFlow Hub on the Image Scene Detection dataset.This dataset is the part of the competition which is Mobile AI Workshop @ CVPR 2021.",
+  "longDescription": "This repositories show how to fine-tune a Vision Transformer model from TensorFlow Hub on the Image Scene Detection dataset.This dataset is the part of the competition which is Mobile AI Workshop @ CVPR 2021.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "notebook","collection","web","theory"
+  ]
+}

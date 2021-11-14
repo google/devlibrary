@@ -15,9 +15,12 @@
 -->
 
 <template>
-  <div class="flex flex-row items-center">
-    <div :class="[color]" class="block ml-3 mr-1 h-3 w-3 rounded-full"></div>
-    <span class="text-gray-500 whitespace-nowrap">{{ label }}</span>
+  <div class="bg-gray-100 frc rounded-sm px-2 py-1" :class="[bgColor]">
+    <span
+      class="text-gray-500 whitespace-nowrap text-sm"
+      :class="[textColor]"
+      >{{ label }}</span
+    >
   </div>
 </template>
 
@@ -27,6 +30,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 @Component
 export default class TagChip extends Vue {
   @Prop() label!: string;
-  @Prop() color!: string;
+  @Prop() textColor!: string;
+  @Prop() bgColor!: string;
 }
 </script>

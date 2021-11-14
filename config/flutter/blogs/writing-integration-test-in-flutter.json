@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["o-ifeanyi"],
   "author": "Onuoha Ifeanyichukwu",
   "title": "Writing Integration Test In Flutter",
   "link": "https://o-ifeanyi.hashnode.dev/writing-integration-test-in-flutter",

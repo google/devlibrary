@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "haruiz"
+  ],
+  "owner": "haruiz",
+  "repo": "FalconCV",
+  "name": "FalconCV",
+  "shortDescription": "open-source python library that offers developers an interface to interact with some of the most popular computer vision frameworks, such as Tensorflow Object detection API and Detectron.",
+  "longDescription": "open-source python library that offers developers an interface to interact with some of the most popular computer vision frameworks, such as Tensorflow Object detection API and Detectron.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "library",
+    "theory"
+  ]
+}
+

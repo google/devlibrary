@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["javierluraschi"],
   "owner": "hal9ai",
   "repo": "hal9ai",
   "name": "hal9ai",

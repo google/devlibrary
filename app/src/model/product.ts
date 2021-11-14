@@ -56,18 +56,24 @@ const styles: Record<string, ProductStyle> = {
 
 // Listing these classes here means that PurgeCSS will not
 // drop them.
-const TAG_COLORS = [
-  "bg-blue-500",
-  "bg-green-500",
-  "bg-yellow-500",
-  "bg-indigo-500",
-  "bg-red-500",
-  "bg-purple-500",
-  "bg-pink-500",
-  "bg-blue-300",
-  "bg-green-300",
-  "bg-yellow-700",
-  "bg-gray-500",
+const TAG_BG_COLORS = [
+  "bg-blue-50",
+  "bg-green-50",
+  "bg-yellow-50",
+  "bg-indigo-50",
+  "bg-red-50",
+  "bg-purple-50",
+  "bg-pink-50",
+];
+
+const TAG_TEXT_COLORS = [
+  "text-blue-500",
+  "text-green-500",
+  "text-yellow-500",
+  "text-indigo-500",
+  "text-red-500",
+  "text-purple-500",
+  "text-pink-500",
 ];
 
 export function getStyle(product: string) {
@@ -89,6 +95,7 @@ export function getTag(product: string, value: string) {
   const t = p.tags[ind];
   return {
     label: t.label,
-    color: TAG_COLORS[ind % TAG_COLORS.length],
+    textColor: TAG_TEXT_COLORS[ind % TAG_TEXT_COLORS.length],
+    bgColor: TAG_BG_COLORS[ind % TAG_BG_COLORS.length],
   };
 }

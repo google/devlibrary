@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "talamaska"
+  ],
+  "owner": "talamaska",
+  "repo": "flutter_color_picker_field",
+  "name": "color_picker_field",
+  "shortDescription": "A form field for colors with a radial color picker",
+  "longDescription": "A form field for colors with a radial color picker",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets"
+  ]
+}

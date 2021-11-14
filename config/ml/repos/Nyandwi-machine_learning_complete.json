@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "nyandwi"
+  ],
+  "owner": "Nyandwi",
+  "repo": "machine_learning_complete",
+  "name": "machine_learning_complete",
+  "shortDescription": "This is a comprehensive repository containing 30+ notebooks on Python programming, data manipulation, data analysis, data visualization, data cleaning, classical machine learning, Computer Vision and Natural Language Processing(NLP).",
+  "longDescription": "This is a comprehensive repository containing 30+ notebooks on Python programming, data manipulation, data analysis, data visualization, data cleaning, classical machine learning, Computer Vision and Natural Language Processing(NLP).",
+  "content": "Readme.md",
+  "pages": [],
+  "tags": [
+    "notebook","collection","web","theory"
+  ]
+}

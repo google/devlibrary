@@ -203,16 +203,20 @@ export async function search(
   return sorted.slice(0, limit);
 }
 
-export const elasticSearch = functions.https.onRequest(async (req, res) => {
-  // Allow CORS
-  res.header("Access-Control-Allow-Origin", "*");
+export const elasticSearch = functions
+  .runWith({
+    minInstances: 1,
+  })
+  .https.onRequest(async (req, res) => {
+    // Allow CORS
+    res.header("Access-Control-Allow-Origin", "*");
 
-  // Cache at browser for 10 minutes (600s) and on CDN for 12 hours (43200s)
-  res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
+    // Cache at browser for 10 minutes (600s) and on CDN for 12 hours (43200s)
+    res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
 
-  // The "q" param is the search term
-  const q = req.query.q as string;
+    // The "q" param is the search term
+    const q = req.query.q as string;
 
-  const result = await search(q, 5);
-  res.json(result);
-});
+    const result = await search(q, 5);
+    res.json(result);
+  });

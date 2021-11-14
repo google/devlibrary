@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["wasabeef"],
+  "owner": "FlutterGen",
+  "repo": "flutter_gen",
+  "name": "FlutterGen",
+  "shortDescription": "The Flutter code generator for your assets, fonts, colors, … — Get rid of all String-based APIs.",
+  "longDescription": "The Flutter code generator for your assets, fonts, colors, … — Get rid of all String-based APIs.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web",
+    "widgets"
+  ]
+}

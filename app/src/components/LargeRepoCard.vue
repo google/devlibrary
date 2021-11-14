@@ -15,55 +15,65 @@
 -->
 
 <template>
-  <div class="flex flex-col">
-    <!-- Card -->
-    <div
-      class="flex-grow flex flex-col rounded shadow transition-shadow hover:shadow-lg overflow-hidden"
-    >
-      <!-- GitHub Header -->
-      <div class="bg-gray-900 text-white px-3 py-2">
-        <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-2" />
-        <span>{{ repo.metadata.owner }}</span>
-      </div>
+  <div class="flex flex-col card card-clickable p-4">
+    <!-- Author photo and name -->
+    <div class="frc">
+      <CircleImage
+        :lazy="true"
+        size="card-avatar"
+        class="mr-2"
+        :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
+      />
+      <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
 
-      <!-- Title and Stats -->
-      <div class="mt-2 px-3 flex flex-row items-center">
-        <router-link :to="link" class="text-lg font-medium flex-grow">{{
-          repo.metadata.repo
-        }}</router-link>
-        <span class="ml-2 text-sm"
-          >{{ repo.stats.stars }} <font-awesome-icon class="ml-1" icon="star"
-        /></span>
-        <span class="ml-2 text-sm"
-          >{{ repo.stats.forks }}
-          <font-awesome-icon class="ml-1" icon="code-branch"
-        /></span>
-      </div>
-
-      <!-- Description -->
-      <div class="flex-grow mt-2 px-3 wrap-lines-3">
-        {{ repo.metadata.longDescription }}
-      </div>
-
-      <!-- Timestamp and Button -->
-      <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
-        <span class="flex-grow text-gray-500"
-          >updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span
-        >
-        <router-link :to="link"
-          ><MaterialButton type="text">Learn More</MaterialButton></router-link
-        >
-      </div>
+      <ProductLogo
+        v-if="showLogo"
+        size="xtiny"
+        :productKey="repo.product"
+        class="ml-auto"
+      />
     </div>
 
-    <!-- Card tags -->
-    <div class="mt-2 flex flex-row overflow-hidden items-center">
+    <!-- Title -->
+    <router-link :to="link" class="mt-4 wrap-lines-3">
+      <h3>{{ repo.metadata.repo }}</h3>
+    </router-link>
+
+    <!-- Tags -->
+    <div v-if="showTags" class="mt-4 frc flex-wrap gap-2">
       <TagChip
         v-for="t in repo.metadata.tags"
         :key="t"
         :label="getTag(t).label"
-        :color="getTag(t).color"
+        :textColor="getTag(t).textColor"
+        :bgColor="getTag(t).bgColor"
       />
+    </div>
+
+    <!-- Description -->
+    <div class="mt-4 wrap-lines-3">
+      {{ repo.metadata.longDescription }}
+    </div>
+
+    <div class="flex-grow"><!-- spacer --></div>
+
+    <!-- Timestamp -->
+    <div class="mt-4 frc text-sm gap-1 text-mgray-700">
+      <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-1" />
+      <span>GitHub</span>
+      <span>•</span>
+      <span class="flex-grow wrap-lines-1"
+        >Updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span
+      >
+    </div>
+
+    <!-- Button -->
+    <div class="mt-6 flex flex-row-reverse">
+      <router-link :to="link"
+        ><MaterialButton type="secondary"
+          >Learn more</MaterialButton
+        ></router-link
+      >
     </div>
   </div>
 </template>
@@ -72,8 +82,11 @@
 import { Component, Vue, Prop } from "vue-property-decorator";
 
 import { RepoData } from "../../../shared/types";
+
 import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
+import ProductLogo from "@/components/ProductLogo.vue";
+import CircleImage from "@/components/CircleImage.vue";
 
 import * as dates from "@/plugins/dates";
 import * as product from "@/model/product";
@@ -82,10 +95,14 @@ import * as product from "@/model/product";
   components: {
     MaterialButton,
     TagChip,
+    ProductLogo,
+    CircleImage,
   },
 })
 export default class LargeRepoCard extends Vue {
   @Prop() repo!: RepoData;
+  @Prop({ default: true }) showTags!: boolean;
+  @Prop({ default: false }) showLogo!: boolean;
 
   public renderDaysAgo(lastUpdated: number) {
     return dates.renderDaysAgo(lastUpdated);
@@ -101,13 +118,4 @@ export default class LargeRepoCard extends Vue {
 }
 </script>
 
-<style scoped lang="postcss">
-/** See: https://stackoverflow.com/a/13924997/324977 */
-.wrap-lines-3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-</style>
+<style scoped lang="postcss"></style>

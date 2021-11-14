@@ -18,6 +18,7 @@
   <img
     :src="src"
     :class="[size]"
+    :loading="lazy ? 'lazy' : 'eager'"
     class="flex-shrink-0 bg-white overflow-hidden object-contain rounded-full"
   />
 </template>
@@ -29,6 +30,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 export default class CircleImage extends Vue {
   @Prop() size!: string;
   @Prop() src!: string;
+  @Prop({ default: false }) lazy!: boolean;
 }
 </script>
 
@@ -37,8 +39,16 @@ export default class CircleImage extends Vue {
   @apply w-5 h-5;
 }
 
+.card-avatar {
+  @apply w-6 h-6;
+}
+
 .small {
   @apply w-12 h-12 border-2;
+}
+
+.medium {
+  @apply w-20 h-20 border-2;
 }
 
 .large {

@@ -34,6 +34,10 @@ import {
   faUser,
   faTimes,
   faBars,
+  faClipboardList,
+  faExclamationCircle,
+  faFilter,
+  faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import { faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
@@ -53,6 +57,10 @@ library.add(
   faBookmark,
   faTimes,
   faBars,
+  faClipboardList,
+  faExclamationCircle,
+  faFilter,
+  faChevronDown,
 
   faGithub,
   faMedium

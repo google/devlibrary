@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["simform-solutions"],
   "owner": "SimformSolutionsPvtLtd",
   "repo": "flutter_showcaseview",
   "name": "flutter_showcaseview",
@@ -10,5 +10,8 @@
   "content": "README.md",
   "pages": [],
   "tags": [
-  "mobile", "plugins", "web" ]
+    "mobile",
+    "plugins",
+    "web"
+  ]
 }
