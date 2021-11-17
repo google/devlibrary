@@ -34,13 +34,11 @@
             Browse, learn, or submit your own!
           
           </p>
-          <a
-            class="inline-block mt-4 lg:mt-6"
-            href="https://forms.gle/E54pxK3JzpXMGyqN7"
-            target="_blank"
-          >
-            <MaterialButton type="primary">Submit</MaterialButton>
-          </a>
+          <div class="mt-4 lg:mt-6">
+            <MaterialButton type="primary" @click.native="showSubmitDialog"
+              >Submit</MaterialButton
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -146,6 +144,7 @@ import {
 import { ALL_PRODUCTS } from "../../../shared/product";
 import { BlogData, RepoData } from "../../../shared/types";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
+import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
 
 @Component({
   components: {
@@ -206,6 +205,10 @@ export default class Home extends Vue {
     // most recent additions don't get stuck on the homepage.
     const recentBlogs = shuffleArr(docs).slice(0, 3);
     Vue.set(this.recentBlogs, product, recentBlogs);
+  }
+
+  public showSubmitDialog() {
+    EVENT_BUS.$emit(NAME_SHOW_SUBMIT_DIALOG);
   }
 
   get hasContent() {
