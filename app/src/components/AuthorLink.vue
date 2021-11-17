@@ -21,7 +21,7 @@
     :key="author.id"
     class="ifrc gap-2 cursor-pointer text-sm font-display pl-2 pr-2 py-1 border rounded-full hover:shadow"
   >
-    <CircleImage size="xsmall" :src="author.metadata.photoURL" />
+    <CircleImage size="xsmall" :lazy="true" :src="author.metadata.photoURL" />
     <span>{{ author.metadata.name }}</span>
   </router-link>
 </template>

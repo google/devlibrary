@@ -17,8 +17,11 @@
 <template>
   <div>
     <div
-      class="header-image grid grid-cols-12 mt-2 py-6 lg:py-8 xl:py-10 px-std border-b border-gray-100"
-      style="--header-bg-image: url('/img/banners/home-wide.png')"
+      class="header-image grid grid-cols-12 py-8 lg:py-10 xl:py-12 px-std border-b border-gray-100"
+      style="
+        --header-bg-image-desktop: url('/img/banners/desktop/home-wide.png');
+        --header-bg-image-mobile: url('/img/banners/mobile/home-wide.png');
+      "
     >
       <div class="col-span-12 lg:col-span-5 px-1">
         <h1>What will you build?</h1>
@@ -30,13 +33,11 @@
             articles that developers have built with Google technologies.
             Browse, learn, or submit your own!
           </p>
-          <a
-            class="inline-block mt-4 lg:mt-6"
-            href="https://forms.gle/E54pxK3JzpXMGyqN7"
-            target="_blank"
-          >
-            <MaterialButton type="primary">Submit</MaterialButton>
-          </a>
+          <div class="mt-4 lg:mt-6">
+            <MaterialButton type="primary" @click.native="showSubmitDialog"
+              >Submit</MaterialButton
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -142,6 +143,7 @@ import {
 import { ALL_PRODUCTS } from "../../../shared/product";
 import { BlogData, RepoData } from "../../../shared/types";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
+import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
 
 @Component({
   components: {
@@ -202,6 +204,10 @@ export default class Home extends Vue {
     // most recent additions don't get stuck on the homepage.
     const recentBlogs = shuffleArr(docs).slice(0, 3);
     Vue.set(this.recentBlogs, product, recentBlogs);
+  }
+
+  public showSubmitDialog() {
+    EVENT_BUS.$emit(NAME_SHOW_SUBMIT_DIALOG);
   }
 
   get hasContent() {

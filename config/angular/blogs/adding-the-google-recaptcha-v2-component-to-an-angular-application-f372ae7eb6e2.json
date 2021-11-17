@@ -1,11 +1,14 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": [
+    "rodrigokamada"
+  ],
   "author": "Rodrigo Kamada",
   "title": "Adding the Google reCAPTCHA v2 to an Angular application",
   "link": "https://rodrigokamada.medium.com/adding-the-google-recaptcha-v2-component-to-an-angular-application-f372ae7eb6e2",
   "tags": [
-    "demos"
+    "demos",
+    "gettingstarted"
   ]
 }

@@ -133,13 +133,23 @@
     @apply hover:shadow transition-shadow;
   }
 
+  .header-image {
+    background-image: var(--header-bg-image-mobile);
+    background-position: top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+
   @screen lg {
     .header-image {
-      background-image: var(--header-bg-image);
+      background-image: var(--header-bg-image-desktop);
       background-position: right;
       background-size: contain;
-      background-repeat: no-repeat;
     }
+  }
+
+  .scrim {
+    @apply fixed right-0 top-0 bg-black bg-opacity-60 w-full h-full;
   }
 }
 

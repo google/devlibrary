@@ -10,7 +10,7 @@
     "importcsv": "ts-node ./scripts/importcsv.ts",
     "validate": "ts-node ./scripts/validate.ts",
     "build": "ts-node ./scripts/generate.ts",
-    "deploy:firebase": "firebase --project=$FIREBASE_PROJECT deploy",
+    "deploy:firebase": "firebase --project=$FIREBASE_PROJECT deploy --force",
     "format": "prettier --write *.ts ./scripts/*.ts"
   },
   "author": "",

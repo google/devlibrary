@@ -15,11 +15,16 @@
 -->
 
 <template>
-  <HeaderBodyLayout>
+  <HeaderBodyLayout
+    style="
+      --header-bg-image-desktop: url('/img/banners/desktop/author-wide.png');
+      --header-bg-image-mobile: url('/img/banners/mobile/author-wide.png');
+    "
+  >
     <template v-if="loaded" v-slot:header>
       <!-- Header (Mobile) -->
-      <div class="mobile-only">
-        <div class="mobile-only flex flex-col items-center gap-2 my-6">
+      <div class="mobile-only header-image py-6">
+        <div class="flex flex-col items-center gap-2">
           <CircleImage
             class="border-white"
             size="medium"
@@ -49,10 +54,7 @@
       </div>
 
       <!-- Header (Desktop) -->
-      <div
-        class="desktop-only header-image"
-        style="--header-bg-image: url('/img/banners/author-wide.png')"
-      >
+      <div class="desktop-only header-image">
         <div class="py-10 grid grid-cols-12 gap-4 px-std">
           <!-- Photo, name, and bio -->
           <div class="col-span-9">

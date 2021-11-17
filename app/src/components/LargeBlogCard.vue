@@ -21,7 +21,12 @@
       <!-- Link to author (if present) -->
       <template v-if="authorId">
         <router-link :to="`/authors/${authorId}`" class="frc">
-          <img class="avatar rounded-full mr-2" :src="authorPhotoUrl" />
+          <CircleImage
+            :lazy="true"
+            size="card-avatar"
+            class="mr-2"
+            :src="authorPhotoUrl"
+          />
           <span class="font-display text-lg">{{ blog.metadata.author }}</span>
         </router-link>
       </template>
@@ -29,7 +34,7 @@
       <!-- Standard avatar -->
       <template v-else>
         <div
-          class="avatar mr-2 bg-gray-200 text-gray-400 rounded-full frc justify-center"
+          class="w-6 h-6 mr-2 bg-gray-200 text-gray-400 rounded-full frc justify-center"
         >
           <font-awesome-icon icon="user" />
         </div>
@@ -91,6 +96,7 @@ import { BlogData } from "../../../shared/types";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
+import CircleImage from "@/components/CircleImage.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 
 import * as dates from "@/plugins/dates";
@@ -102,6 +108,7 @@ import { getApiHost } from "@/plugins/data";
     MaterialButton,
     TagChip,
     ProductLogo,
+    CircleImage,
   },
 })
 export default class LargeBlogCard extends Vue {
@@ -138,9 +145,4 @@ export default class LargeBlogCard extends Vue {
 }
 </script>
 
-<style scoped lang="postcss">
-.avatar {
-  width: 26px;
-  height: 26px;
-}
-</style>
+<style scoped lang="postcss"></style>

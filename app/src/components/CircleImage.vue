@@ -39,6 +39,10 @@ export default class CircleImage extends Vue {
   @apply w-5 h-5;
 }
 
+.card-avatar {
+  @apply w-6 h-6;
+}
+
 .small {
   @apply w-12 h-12 border-2;
 }

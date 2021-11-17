@@ -18,8 +18,10 @@
   <div class="flex flex-col card card-clickable p-4">
     <!-- Author photo and name -->
     <div class="frc">
-      <img
-        class="avatar mr-2 rounded-full"
+      <CircleImage
+        :lazy="true"
+        size="card-avatar"
+        class="mr-2"
         :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
       />
       <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
@@ -84,6 +86,7 @@ import { RepoData } from "../../../shared/types";
 import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
+import CircleImage from "@/components/CircleImage.vue";
 
 import * as dates from "@/plugins/dates";
 import * as product from "@/model/product";
@@ -93,6 +96,7 @@ import * as product from "@/model/product";
     MaterialButton,
     TagChip,
     ProductLogo,
+    CircleImage,
   },
 })
 export default class LargeRepoCard extends Vue {
@@ -114,9 +118,4 @@ export default class LargeRepoCard extends Vue {
 }
 </script>
 
-<style scoped lang="postcss">
-.avatar {
-  width: 26px;
-  height: 26px;
-}
-</style>
+<style scoped lang="postcss"></style>
