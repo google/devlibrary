@@ -29,7 +29,15 @@ import { BlogMetadata } from "../types/BlogMetadata";
 
 const ADVOCU_METADATA_FILE_NAME = "advocu.json";
 
-const API_HOST = "https://api-devlibrary-stage.k8s01.nexo.zone";
+// Advocu API Staging
+// For usage, see: https://api-devlibrary-stage.k8s01.nexo.zone/swagger-ui/index.htm
+// const API_HOST = "https://api-devlibrary-stage.k8s01.nexo.zone";
+
+// Advodu API Prod
+// For usage, see: https://api-devlibrary.advocu.com/swagger-ui/index.html
+const API_HOST = "https://api-devlibrary.advocu.com";
+
+// API path to get applications
 const PATH_GET_APPLICATIONS = "/public/applications";
 
 function exitWithError(msg: string, code = 1) {
