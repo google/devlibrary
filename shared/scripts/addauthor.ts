@@ -41,21 +41,7 @@ export function authorExists(owner: string) {
   return fs.existsSync(authorFilePath(normalizeAuthorId(owner)));
 }
 
-export async function getMediumPostAuthor(url: string): Promise<string | undefined> {
-  const res = await fetch(url);
-  const html = await res.text();
-  const $ = cheerio.load(html);
-
-  const authorLink = $.root().find('link[rel="author"]');
-  if (!authorLink) {
-    return;
-  }
-
-  const href = authorLink.attr("href");
-  if (!href) {
-    return;
-  }
-
+function extractAuthorFromLink(href: string): string | undefined {
   const atMatch = href.match(RE_AUTHOR_AT);
   if (atMatch && atMatch.length >= 1) {
     return atMatch[1];
@@ -65,6 +51,22 @@ export async function getMediumPostAuthor(url: string): Promise<string | undefin
   if (subMatch && subMatch.length >= 1) {
     return subMatch[1];
   }
+}
+
+export async function getMediumPostAuthor(url: string): Promise<string | undefined> {
+  const res = await fetch(url);
+  const html = await res.text();
+  const $ = cheerio.load(html);
+
+  // As a primary, use the author link on the page
+  const authorLink = $.root().find('link[rel="author"]');
+  const href = authorLink?.attr("href");
+  if (href) {
+    return extractAuthorFromLink(href);
+  }
+
+  // As a backup, try the project URL
+  return extractAuthorFromLink(url);
 }
 
 export async function addMediumAuthor(username: string) {
