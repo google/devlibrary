@@ -29,9 +29,9 @@
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="mt-4 lg:mt-6 pr-4 lg:pr-0">
-            Welcome to Dev Library, a platform to showcase the projects and
-            articles that developers have built with Google technologies.
-            Browse, learn, or submit your own!
+            Welcome to Dev Library - a showcase of open-source projects and blog posts built with Google technologies. 
+            Created by you, curated by Google engineers.
+          
           </p>
           <div class="mt-4 lg:mt-6">
             <MaterialButton type="primary" @click.native="showSubmitDialog"

@@ -3,7 +3,7 @@
   "source": "github",
   "authorIds": ["joyl1216"],
   "owner": "microsoft",
-  "repo": "surface-duo-compose-samples",
+  "repo": "surface-duo-compose-sdk",
   "name": "TwoPaneLayout",
   "shortDescription": "a UI component built in Jetpack Compose, which contains the layouts that help you create UI for dual-screen, foldable and large-screen devices. TwoPaneLayout provides a two-pane layout for use at the top level of a UI. The two panes can be horizontal or vertical, based on the orientation of the device. TwoPaneLayout supports the use of the layout parameter layout_weight on child views to determine how to divide two panes to cover the whole display area.",
   "longDescription": "a UI component built in Jetpack Compose, which contains the layouts that help you create UI for dual-screen, foldable and large-screen devices. TwoPaneLayout provides a two-pane layout for use at the top level of a UI. The two panes can be horizontal or vertical, based on the orientation of the device. TwoPaneLayout supports the use of the layout parameter layout_weight on child views to determine how to divide two panes to cover the whole display area.",
@@ -13,3 +13,4 @@
     "compose"
   ]
 }
+
