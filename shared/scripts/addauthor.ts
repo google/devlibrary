@@ -51,6 +51,8 @@ function extractAuthorFromLink(href: string): string | undefined {
   if (subMatch && subMatch.length >= 1) {
     return subMatch[1];
   }
+
+  return undefined;
 }
 
 export async function getMediumPostAuthor(url: string): Promise<string | undefined> {
