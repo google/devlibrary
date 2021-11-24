@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "olexale"
+  ],
+  "owner": "olexale",
+  "repo": "arkit_flutter_plugin",
+  "name": "arkit_flutter_plugin",
+  "shortDescription": "ARKit Flutter Plugin with pretty cool AR samples",
+  "longDescription": "ARKit Flutter Plugin with pretty cool AR samples",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "plugins",
+    "mobile"
+  ]
+}
