@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "olexale"
+  ],
+  "owner": "olexale",
+  "repo": "flutter_roadmap",
+  "name": "flutter_roadmap",
+  "shortDescription": "Highly Subjective Roadmap to Flutter Development",
+  "longDescription": "Highly Subjective Roadmap to Flutter Development",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "general",
+    "samples"
+  ]
+}

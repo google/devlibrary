@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ethiel97"
+  ],
+  "owner": "Ethiel97",
+  "repo": "flutter_windows_11",
+  "name": "flutter_windows_11",
+  "shortDescription": "Fully responsive and beautiful desktop app built with Flutter ",
+  "longDescription": "Fully responsive and beautiful desktop app built with Flutter ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web",
+    "samples"
+  ]
+}

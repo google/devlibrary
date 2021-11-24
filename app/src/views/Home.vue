@@ -29,7 +29,7 @@
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="mt-4 lg:mt-6 pr-4 lg:pr-0">
-            Welcome to Dev Library - a showcase of open-source projects and blog posts built with Google technologies. 
+            Welcome to Dev Library - a platform showvasing open-source projects and blog posts built with Google technologies. 
             Created by you, curated by Google engineers.
           
           </p>
