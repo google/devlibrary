@@ -22,6 +22,12 @@ import ogs from "open-graph-scraper";
 
 import { writeOrUpdateJSON, getConfigDir } from "./util";
 
+// https://medium.com/@username
+const RE_AUTHOR_AT = /https:\/\/medium\.com\/@([\w]+)/;
+
+// https://username.medium.com
+const RE_AUTHOR_SUBDOMAIN = /https:\/\/([\w]+)\.medium\.com/;
+
 export function normalizeAuthorId(id: string) {
   // Replace all '.' with '-'
   return id.split(".").join("-").toLowerCase();
@@ -35,23 +41,34 @@ export function authorExists(owner: string) {
   return fs.existsSync(authorFilePath(normalizeAuthorId(owner)));
 }
 
-export async function getMediumPostAuthor(url: string) {
+function extractAuthorFromLink(href: string): string | undefined {
+  const atMatch = href.match(RE_AUTHOR_AT);
+  if (atMatch && atMatch.length >= 1) {
+    return atMatch[1];
+  }
+
+  const subMatch = href.match(RE_AUTHOR_SUBDOMAIN);
+  if (subMatch && subMatch.length >= 1) {
+    return subMatch[1];
+  }
+
+  return undefined;
+}
+
+export async function getMediumPostAuthor(url: string): Promise<string | undefined> {
   const res = await fetch(url);
   const html = await res.text();
   const $ = cheerio.load(html);
 
+  // As a primary, use the author link on the page
   const authorLink = $.root().find('link[rel="author"]');
-  if (!authorLink) {
-    return;
+  const href = authorLink?.attr("href");
+  if (href) {
+    return extractAuthorFromLink(href);
   }
 
-  const prefix = "https://medium.com/@";
-  const href = authorLink.attr("href");
-  if (!(href && href.startsWith(prefix))) {
-    return;
-  }
-
-  return href.replace("https://medium.com/@", "");
+  // As a backup, try the project URL
+  return extractAuthorFromLink(url);
 }
 
 export async function addMediumAuthor(username: string) {
