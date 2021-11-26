@@ -64,6 +64,9 @@ export { elasticSearch } from "./search";
 /** Photo functions */
 export { authorPhoto } from "./photos";
 
+/** Sitemap generator */
+export { sitemap } from "./sitemap";
+
 /**
  * Return elements of a that are not in b
  */
