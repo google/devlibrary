@@ -119,6 +119,36 @@ export async function getFileContent(
   return buffer.toString("utf-8");
 }
 
+export async function getEmojiMap(): Promise<Record<string, string>> {
+  const res = await gh().emojis.get();
+
+  // This is a map from emoji shortcode to image URL, for example:
+  // 1st_place_medal: "https://github.githubassets.com/images/icons/emoji/unicode/1f947.png?v8",
+  // algeria: "https://github.githubassets.com/images/icons/emoji/unicode/1f1e9-1f1ff.png?v8",
+  const urlMap = res.data;
+
+  const map: Record<string, string> = {};
+
+  for (const k of Object.keys(urlMap)) {
+    const url = urlMap[k];
+    if (!url.includes("/emoji/unicode/")) {
+      continue;
+    }
+
+    const segments = url.split("/");
+    const lastSegment = segments[segments.length - 1];
+    const withoutExtension = lastSegment.split(".png")[0];
+
+    const codepointStrings = withoutExtension.split("-");
+    const codepoints = codepointStrings.map((str) => Number.parseInt(str, 16));
+    const emoji = String.fromCodePoint(...codepoints);
+
+    map[k] = emoji;
+  }
+
+  return map;
+}
+
 export async function getDirectoryContent(
   owner: string,
   repo: string,
