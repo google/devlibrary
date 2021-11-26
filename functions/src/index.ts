@@ -197,7 +197,12 @@ async function refreshRepoInternal(
 
   const branch = await github.getDefaultBranch(metadata.owner, metadata.repo);
 
-  const emojis = await github.getEmojiMap();
+  let emojis = {};
+  try {
+    emojis = await github.getEmojiMap();
+  } catch (e) {
+    console.warn("Failed to get emojis from GitHub", e);
+  }
 
   for (const p of pages) {
     // Get Markdown from GitHub
