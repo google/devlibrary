@@ -14,9 +14,9 @@
 
 runtime: nodejs12
 handlers:
-# Serve all static files with url ending with a file extension (other than sitemap.xml)
-- url: /(?!sitemap\.xml)(.*\..+)$
-  static_files: dist/\2
+# Serve all static files with url ending with a file extension
+- url: /(.*\..+)$
+  static_files: dist/\1
   upload: dist/(.*\..+)$
 # Catch all handler to index.html
 - url: /.*

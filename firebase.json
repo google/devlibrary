@@ -24,7 +24,7 @@
         "function": "authorPhoto"
       },
       {
-        "source": "/sitemap.xml",
+        "source": "/api/sitemap",
         "function": "sitemap"
       },
       {
