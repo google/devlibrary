@@ -197,6 +197,13 @@ async function refreshRepoInternal(
 
   const branch = await github.getDefaultBranch(metadata.owner, metadata.repo);
 
+  let emojis = {};
+  try {
+    emojis = await github.getEmojiMap();
+  } catch (e) {
+    console.warn("Failed to get emojis from GitHub", e);
+  }
+
   for (const p of pages) {
     // Get Markdown from GitHub
     const md = await github.getFileContent(
@@ -207,7 +214,14 @@ async function refreshRepoInternal(
     );
 
     // Render into a series of HTML "sections"
-    const sections = content.renderContent(product, repo, p.path, md, branch);
+    const sections = content.renderContent(
+      product,
+      repo,
+      p.path,
+      md,
+      branch,
+      emojis
+    );
 
     const data: RepoPage = {
       name: p.name,
