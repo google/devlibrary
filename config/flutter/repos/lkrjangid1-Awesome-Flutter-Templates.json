@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "lkrjangid1"
+  ],
+  "owner": "lkrjangid1",
+  "repo": "Awesome-Flutter-Templates",
+  "name": "Awesome-Flutter-Templates",
+  "shortDescription": "A Collection of Flutter Application templates.",
+  "longDescription": "A Collection of Flutter Application templates.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["layzeedk"],
   "owner": "ngworker",
   "repo": "ngworker",
   "name": "Spectacular",

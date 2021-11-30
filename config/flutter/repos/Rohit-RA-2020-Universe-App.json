@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rohit-ra-2020"
+  ],
+  "owner": "Rohit-RA-2020",
+  "repo": "Universe-App",
+  "name": "Universe-App",
+  "shortDescription": "App made in flutter which contains information about the Universe. Simple & small yet beautiful and minimalistic animations.",
+  "longDescription": "App made in flutter which contains information about the Universe. Simple & small yet beautiful and minimalistic animations.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}

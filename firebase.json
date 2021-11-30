@@ -24,6 +24,10 @@
         "function": "authorPhoto"
       },
       {
+        "source": "/api/sitemap",
+        "function": "sitemap"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

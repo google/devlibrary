@@ -51,13 +51,26 @@ export function renderContent(
   repo: RepoData,
   page: string,
   content: string,
-  branch: string
+  branch: string,
+  emojis: Record<string, string> = {}
 ) {
-  const html = marked(content);
+  const withEmojis = replaceEmojis(content, emojis);
+  const html = marked(withEmojis);
   const sanitizedHtml = sanitizeHtml(product, repo, page, html, branch);
   const sections = htmlToSections(sanitizedHtml);
 
   return sections;
+}
+
+function replaceEmojis(md: string, emojis: Record<string, string>): string {
+  let content = md;
+  for (const k of Object.keys(emojis)) {
+    const withColons = `:${k}:`;
+    const asEmoji = emojis[k];
+    content = content.replace(new RegExp(withColons, "g"), asEmoji);
+  }
+
+  return content;
 }
 
 /**
