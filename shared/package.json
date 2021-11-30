@@ -5,6 +5,7 @@
   "scripts": {
     "addauthor": "ts-node ./scripts/addauthor.ts",
     "addproject": "ts-node ./scripts/addproject.ts",
+    "advocu": "ts-node ./scripts/advocu.ts",
     "backfill": "ts-node ./scripts/backfill.ts",
     "importcsv": "ts-node ./scripts/importcsv.ts",
     "validate": "ts-node ./scripts/validate.ts",

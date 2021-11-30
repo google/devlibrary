@@ -27,6 +27,8 @@ import {
   authorExists,
 } from "./addauthor";
 import { writeOrUpdateJSON, getConfigDir } from "./util";
+import { BlogMetadata } from "../types/BlogMetadata";
+import { RepoMetadata } from "../types/RepoMetadata";
 
 /**
  * @returns {Promise<string>} the project ID
@@ -35,28 +37,39 @@ export async function addOtherBlog(
   product: string,
   projectUrl: string,
   projectId?: string,
-  overrides?: object
+  overrides?: Partial<BlogMetadata>
 ): Promise<string> {
   const templateStr = fs
     .readFileSync(path.join(getConfigDir(), "template-blog.json"))
     .toString();
-  const blogFileContent = JSON.parse(templateStr);
+  const blogFileContent = JSON.parse(templateStr) as BlogMetadata;
   blogFileContent.source = "other";
   blogFileContent.link = projectUrl;
 
   Object.assign(blogFileContent, overrides || {});
 
   // Get the title from OpenGraph
-  const { result } = await ogs({
-    url: projectUrl,
-  });
-  if (result.success) {
-    blogFileContent.title = result.ogTitle;
+  try {
+    const { result } = await ogs({
+      url: projectUrl,
+    });
+    if (result.success && result.ogTitle) {
+      blogFileContent.title = result.ogTitle;
+    }
+  } catch (e) {
+    console.warn(`Warning: could not get OpenGraph title from ${projectUrl}`);
   }
 
   // Make a slug ID from the URL
   const u = new URL(projectUrl);
-  const segments = u.pathname
+
+  // Generally we want to use the pathname but if there is no path
+  // we try to clean up the hostname
+  const baseName =
+    u.pathname && u.pathname !== "/"
+      ? u.pathname
+      : u.hostname.replace("www.", "").replace(/\./g, "-");
+  const segments = baseName
     .split("/")
     .map((s) => s.split(".")[0])
     .filter((s) => s.length > 0);
@@ -106,14 +119,14 @@ export async function addMediumBlog(
   product: string,
   projectUrl: string,
   projectId?: string,
-  overrides?: object
+  overrides?: Partial<BlogMetadata>
 ): Promise<string> {
   const { slug } = parseMediumUrl(projectUrl);
 
   const templateStr = fs
     .readFileSync(path.join(getConfigDir(), "template-blog.json"))
     .toString();
-  const blogFileContent = JSON.parse(templateStr);
+  const blogFileContent = JSON.parse(templateStr) as BlogMetadata;
   blogFileContent.link = projectUrl;
 
   Object.assign(blogFileContent, overrides || {});
@@ -144,7 +157,7 @@ export async function addMediumBlog(
   return blogId;
 }
 
-async function getRepoReadme(owner: string, repo: string) {
+export async function getRepoReadme(owner: string, repo: string) {
   // If available, use a GitHub token from the environment
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
@@ -165,15 +178,7 @@ async function getRepoReadme(owner: string, repo: string) {
   return path;
 }
 
-/**
- * @returns {Promise<string>} the project ID
- */
-export async function addRepo(
-  product: string,
-  projectUrl: string,
-  projectId?: string,
-  overrides?: object
-): Promise<string> {
+export function parseGithubUrl(projectUrl: string) {
   const re = /github.com\/([\w\-]+)\/([\w\-]+)/;
   const m = projectUrl.match(re);
 
@@ -184,10 +189,24 @@ export async function addRepo(
   const owner = m[1];
   const repo = m[2];
 
+  return { owner, repo };
+}
+
+/**
+ * @returns {Promise<string>} the project ID
+ */
+export async function addRepo(
+  product: string,
+  projectUrl: string,
+  projectId?: string,
+  overrides?: Partial<RepoMetadata>
+): Promise<string> {
+  const { owner, repo } = parseGithubUrl(projectUrl);
+
   const templateStr = fs
     .readFileSync(path.join(getConfigDir(), "template-repo.json"))
     .toString();
-  const repoFileContent = JSON.parse(templateStr);
+  const repoFileContent = JSON.parse(templateStr) as RepoMetadata;
   repoFileContent.owner = owner;
   repoFileContent.repo = repo;
 
@@ -206,8 +225,10 @@ export async function addRepo(
   }
 
   // Get the name of the README file
-  const readmePath = await getRepoReadme(owner, repo);
-  repoFileContent.content = readmePath;
+  if (!repoFileContent.content) {
+    const readmePath = await getRepoReadme(owner, repo);
+    repoFileContent.content = readmePath;
+  }
 
   const repoId = projectId || `${owner}-${repo}`;
   const repoFilePath = path.join(
