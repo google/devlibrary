@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "Developer-Student-Clubs-UBa",
+  "repo": "Flow",
+  "name": "Flow",
+  "shortDescription": "Flow is a water source location app that helps students of the University of Bamenda, Bambili to find/locate clean water sources. This was a team project for the GDSC Solution challenge.",
+  "longDescription": "Flow is a water source location app that helps students of the University of Bamenda, Bambili to find/locate clean water sources. This was a team project for the GDSC Solution challenge.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}
