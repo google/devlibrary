@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": ["unsuitable001"],
+  "authorIds": [
+    "unsuitable001"
+  ],
   "author": "Soumyadip Mondal",
   "title": "package:cronet, an HTTP Dart/Flutter package with dart FFI",
   "link": "https://unsuitable001.medium.com/",

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jmrchelani"
+  ],
+  "owner": "jmrchelani",
+  "repo": "flutter_portfolio",
+  "name": "Flutter Portfolio",
+  "shortDescription": "This is a responsive, full fledged and custom-made portfolio developed using flutter. It is totally cross platform and provides best view on almost any platform!",
+  "longDescription": "This is a responsive, full fledged and custom-made portfolio developed using flutter. It is totally cross platform and provides best view on almost any platform!",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "samples",
+    "mobile"
+  ]
+}
