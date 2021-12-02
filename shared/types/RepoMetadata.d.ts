@@ -10,6 +10,10 @@
  */
 export interface RepoMetadata {
   /**
+   * Internal schema version
+   */
+  version?: number;
+  /**
    * The Dev Library ID of the author(s)
    */
   authorIds?: string[];

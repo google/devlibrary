@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bbariskilic"
+  ],
+  "owner": "BBarisKilic",
+  "repo": "Editable-Image",
+  "name": " Editable-Image",
+  "shortDescription": "Flutter package for creating a fully customizable and editable image widget. The package has been written solely in Dart Language.",
+  "longDescription": "Flutter package for creating a fully customizable and editable image widget. The package has been written solely in Dart Language.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "samples"
+  ]
+}

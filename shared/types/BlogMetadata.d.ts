@@ -10,6 +10,14 @@
  */
 export interface BlogMetadata {
   /**
+   * Internal schema version
+   */
+  version?: number;
+  /**
+   * 'medium' or 'other'
+   */
+  source?: string;
+  /**
    * The Dev Library ID of the author(s)
    */
   authorIds?: string[];
