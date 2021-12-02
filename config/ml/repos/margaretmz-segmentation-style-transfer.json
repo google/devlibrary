@@ -6,7 +6,7 @@
   ],
   "owner": "margaretmz",
   "repo": "segmentation-style-transfer",
-  "name": "Image Background Stylizer",
+  "name": "Segmentation Style Transfer",
   "shortDescription": "A background stylizer chaining 2 ML models: segmentation & style transfer.",
   "longDescription": "A background stylizer chaining 2 ML models: segmentation & style transfer.",
   "content": "README.md",

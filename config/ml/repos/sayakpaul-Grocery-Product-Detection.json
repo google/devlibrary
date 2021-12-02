@@ -6,7 +6,7 @@
   ],
   "owner": "sayakpaul",
   "repo": "Grocery-Product-Detection",
-  "name": "Grocery Product Detection",
+  "name": "Grocery-Product-Detection",
   "shortDescription": "This repository builds a product detection model to recognize products from grocery shelf images.",
   "longDescription": "This repository builds a product detection model to recognize products from grocery shelf images.",
   "content": "README.md",
