@@ -57,7 +57,10 @@ export function renderContent(
   const withEmojis = replaceEmojis(content, emojis);
   const html = marked(withEmojis);
   const sanitizedHtml = sanitizeHtml(product, repo, page, html, branch);
-  const sections = htmlToSections(sanitizedHtml);
+
+  // TODO: We no longer use the concept of "sections" at all so we could
+  //       eventually remove this but there's no need to do that urgently.
+  const sections = htmlToSections(repo, sanitizedHtml);
 
   return sections;
 }
@@ -250,86 +253,32 @@ function isRelativeLink(href: string): boolean {
 /**
  * Turn HTML into a sections objects.
  */
-function htmlToSections(html: string): RepoPageSection[] {
+function htmlToSections(repo: RepoData, html: string): RepoPageSection[] {
   const $ = cheerio.load(html);
-  const sections: RepoPageSection[] = [];
 
-  // TODO: Do we even need sections? Could we just do the following:
-  //  1) If there is exactly one h1 tag, delete it.
-  //  2) Render out $('body').html() as the content
-
+  // We want to remove any big headers on the page where the content is
+  // equal to either the project name or the repo name
   const $h1s = $("h1");
+  const $h2s = $("h2");
 
-  // Determine what the highest subheader type is (h1, h2, h3, h4, h5, h6)
-  let highestSubheader: string = "h7";
-  if ($h1s.length > 1) {
-    // If there is more than one h1 tag, we use that as the section delimeter
-    highestSubheader = "h1";
-  } else {
-    const subheaderTypes = ["h2", "h3", "h4", "h5", "h6"];
-    for (const h of subheaderTypes) {
-      if ($(h).length > 0) {
-        highestSubheader = h;
-        break;
-      }
+  const headers = [...$h1s.toArray(), ...$h2s.toArray()];
+  for (const h of headers) {
+    const el = $(h);
+    const hText = el.text().trim().toLowerCase();
+
+    if (
+      hText === repo.metadata.repo.toLowerCase() ||
+      hText === repo.metadata.name.toLowerCase()
+    ) {
+      console.log(`Removing header ${el.html()}`);
+      el.remove();
     }
   }
-  const $subheaders = $(highestSubheader);
 
-  // If there are no headers, return one big section
-  if ($h1s.length === 0 && $subheaders.length === 0) {
-    return [
-      {
-        name: "README",
-        content: $.html(),
-      },
-    ];
-  }
-
-  // If there is exactly one h1 tag, it represents the first section
-  // Otherwise we just push an empty section.
-  if ($h1s.length === 1) {
-    const $h1 = $h1s.first();
-    let $headerChildren = $("div", "<div></div>");
-
-    $h1.nextUntil(highestSubheader).each((_: number, el: any) => {
-      $headerChildren = $headerChildren.append(el);
-    });
-
-    const header = {
-      name: $h1.text(),
-      content: $headerChildren.html()!,
-    };
-    sections.push(header);
-  } else {
-    sections.push({
-      name: "",
-      content: "",
-    });
-  }
-
-  // Iterate through all subheaders and make a section
-  $subheaders.each((_: number, el: cheerio.Element) => {
-    const $sh = $(el);
-    let $sibchils = $("div", "<div></div>");
-
-    $sh.nextUntil(highestSubheader).each((_: number, el: any) => {
-      $sibchils = $sibchils.append(el);
-    });
-
-    sections.push({
-      name: $sh.text(),
-      content: $sibchils.html()!,
-    });
-  });
-
-  // For debugging
-  console.log({
-    h1Count: $h1s.length,
-    highestSubheader,
-    subheaderCount: $subheaders.length,
-    sectionCount: sections.length,
-  });
-
-  return sections;
+  return [
+    {
+      name: "README",
+      content: $.html(),
+    },
+  ];
 }

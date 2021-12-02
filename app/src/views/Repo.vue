@@ -127,6 +127,7 @@
         class="col-span-10 px-8 lg:px-0 lg:col-start-2 lg:col-span-8"
       >
         <template v-for="(s, i) in content.sections">
+          <!-- Only show headers for sections after the first one -->
           <h2
             v-if="i > 0 && s.name.length > 0"
             class="mt-8 mb-2"
@@ -283,5 +284,9 @@ export default class Repo extends Vue {
 
 a {
   @apply hover:underline;
+}
+
+.prose {
+  max-width: 900px;
 }
 </style>

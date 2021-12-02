@@ -27,6 +27,10 @@
   body {
     @apply text-mgray-800;
   }
+
+  .hidden {
+    display: none !important;
+  }
   
   .desktop-only {
     @apply hidden;
@@ -97,6 +101,11 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+  }
+
+  .prose img {
+    @apply inline;
+    @apply my-2;
   }
   
   .prose table {
