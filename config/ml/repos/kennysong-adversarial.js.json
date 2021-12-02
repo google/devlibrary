@@ -5,7 +5,7 @@
     "kennysong"
   ],
   "owner": "kennysong",
-  "repo": "adversarial",
+  "repo": "adversarial.js",
   "name": "adversarial.js",
   "shortDescription": "Generate adversarial images against neural networks entirely in JavaScript. Try the live demo in your browser, no installation required.",
   "longDescription": "Generate adversarial images against neural networks entirely in JavaScript. Try the live demo in your browser, no installation required.",
