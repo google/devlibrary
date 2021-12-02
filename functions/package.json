@@ -5,7 +5,7 @@
     "build:watch": "tsc -w",
     "format": "prettier --write src/**/*.ts",
     "emulate": "firebase emulators:start --import=./emulator-data --export-on-exit",
-    "serve": "concurrently 'npm run build:watch' 'npm run emulate'"
+    "serve": "tsc-watch --onFirstSuccess 'npm run emulate'"
   },
   "engines": {
     "node": "12"
@@ -27,10 +27,10 @@
     "@types/cheerio": "^0.22.23",
     "@types/marked": "^2.0.3",
     "@types/url-join": "^4.0.0",
-    "concurrently": "^5.3.0",
     "firebase-functions-test": "^0.2.0",
     "firebase-tools": "^9.21.0",
     "prettier": "^2.2.1",
+    "tsc-watch": "^4.5.0",
     "typescript": "~3.9.3"
   },
   "private": true
