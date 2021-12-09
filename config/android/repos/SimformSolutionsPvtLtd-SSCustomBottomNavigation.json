@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["simform-solutions"],
+  "owner": "SimformSolutionsPvtLtd",
+  "repo": "SSCustomBottomNavigation",
+  "name": "SSCustomBottomNavigation",
+  "shortDescription": "SSCustomBottomNavigation is a customizable bottom bar library with curved animations and Jetpack Navigation support.",
+  "longDescription": "SSCustomBottomNavigation is a customizable bottom bar library with curved animations and Jetpack Navigation support.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

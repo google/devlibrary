@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["simform-solutions"],
+  "owner": "SimformSolutionsPvtLtd",
+  "repo": "SSCustomEditTextOutLineBorder",
+  "name": "SSCustomEditTextOutLineBorder",
+  "shortDescription": "SSCustomEditTextOutLineBorder is a small kotlin library for android to support outlined (stroked) text in EditText widgets same as Material Design Outlined Box but without Floating Label.",
+  "longDescription": "SSCustomEditTextOutLineBorder is a small kotlin library for android to support outlined (stroked) text in EditText widgets same as Material Design Outlined Box but without Floating Label.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

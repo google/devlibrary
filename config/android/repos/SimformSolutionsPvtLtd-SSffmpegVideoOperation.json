@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["simform-solutions"],
+  "owner": "SimformSolutionsPvtLtd",
+  "repo": "SSffmpegVideoOperation",
+  "name": "SSffmpegVideoOperation",
+  "shortDescription": "FFmpeg compiled for Android. Execute FFmpeg commands with ease in your Android app.",
+  "longDescription": "FFmpeg compiled for Android. Execute FFmpeg commands with ease in your Android app.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "coil-kt",
+  "repo": "coil",
+  "name": "Coil",
+  "shortDescription": "Image loading for Android backed by Kotlin Coroutines.",
+  "longDescription": "Image loading for Android backed by Kotlin Coroutines.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}
