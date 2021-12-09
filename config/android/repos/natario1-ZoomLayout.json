@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "natario1"
+  ],
+  "owner": "natario1",
+  "repo": "ZoomLayout",
+  "name": "ZoomLayout",
+  "shortDescription": "A collection of Android components that support zooming and 2D panning of View hierarchies, images, video streams and more, written in Kotlin.",
+  "longDescription": "A collection of Android components that support zooming and 2D panning of View hierarchies, images, video streams and more, written in Kotlin.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "ui"
+  ]
+}

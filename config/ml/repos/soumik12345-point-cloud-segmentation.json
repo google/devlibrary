@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "soumik12345"
+  ],
+  "owner": "soumik12345",
+  "repo": "point-cloud-segmentation",
+  "name": "Point Cloud Segmentation",
+  "shortDescription": "This repository provides a TF2 implementation of PointNet for segmenting point clouds supporting distributed training using TPUs.",
+  "longDescription": "This repository provides a TF2 implementation of PointNet for segmenting point clouds supporting distributed training using TPUs.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "tf",
+    "segmentation"
+  ]
+}

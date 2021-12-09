@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "andreas"
+  ],
+  "author": "Andreas Schallwig",
+  "title": "A tutorial how to use a TensorFlow.js based machine learning model to create a fun \"Rock, Paper, Scissors\" browser game with gesture controls",
+  "link": "https://medium.com/@andreas.schallwig/rock-paper-scissors-with-hand-gesture-recognition-841297a7d915",
+  "tags": [
+    "web",
+    "hands",
+    "tfjs"
+  ]
+}

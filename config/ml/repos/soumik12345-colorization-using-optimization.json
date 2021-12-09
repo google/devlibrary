@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "soumik12345"
+  ],
+  "owner": "soumik12345",
+  "repo": "colorization-using-optimization",
+  "name": "Colorization using Optimization",
+  "shortDescription": "Python and C++ implementations of a user-guided image/video colorization technique as proposed by the paper Colorization Using Optimization.",
+  "longDescription": "Python and C++ implementations of a user-guided image/video colorization technique as proposed by the paper Colorization Using Optimization.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "python",
+    "hci"
+  ]
+}

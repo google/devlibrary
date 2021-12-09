@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "deepmedia",
+  "repo": "multiplatform-testing",
+  "name": "multiplatform-testing",
+  "shortDescription": "A Gradle plugin to ease testing in multiplatform projects, with a focus on Android and Android Native targets. Locates and downloads SDK packages, configures emulators and more, invaluable on CI.",
+  "longDescription": "A Gradle plugin to ease testing in multiplatform projects, with a focus on Android and Android Native targets. Locates and downloads SDK packages, configures emulators and more, invaluable on CI.",
+  "content": "readme.md",
+  "pages": [],
+  "tags": [
+    "build-tools",
+    "kotlin",
+    "modern-android-development"
+  ]
+}
