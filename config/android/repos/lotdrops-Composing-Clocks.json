@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "lotdrops"
+  ],
+  "owner": "lotdrops",
+  "repo": "Composing-Clocks",
+  "name": "Composing-Clocks",
+  "shortDescription": "Sample app to show how to build an app 100% with Jetpack Compose and MVVM, handling config changes manually, without using AAC-ViewModels but saving user state. It comes with a series of blog posts that explain the process and reasoning.",
+  "longDescription": "Sample app to show how to build an app 100% with Jetpack Compose and MVVM, handling config changes manually, without using AAC-ViewModels but saving user state. It comes with a series of blog posts that explain the process and reasoning.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

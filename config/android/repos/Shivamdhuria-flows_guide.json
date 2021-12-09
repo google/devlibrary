@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "shivamdhuria"
+  ],
+  "owner": "Shivamdhuria",
+  "repo": "flows_guide",
+  "name": "flows_guide",
+  "shortDescription": "An Android Application written purely in Kotlin utilizing all the latest tech in Android.\nThe project uses Material Design guidelines, MVVM architecture, Hilt for Dependency Injection and uses Room for an offline- first approach.",
+  "longDescription": "An Android Application written purely in Kotlin utilizing all the latest tech in Android.\nThe project uses Material Design guidelines, MVVM architecture, Hilt for Dependency Injection and uses Room for an offline- first approach.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

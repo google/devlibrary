@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "whatif",
+  "name": "WhatIf",
+  "shortDescription": "Fluent syntactic sugar of Kotlin for handling single if-else statements, nullable, collections, and booleans.",
+  "longDescription": "Fluent syntactic sugar of Kotlin for handling single if-else statements, nullable, collections, and booleans.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "iamjosephmj"
+  ],
+  "owner": "iamjosephmj",
+  "repo": "flinger",
+  "name": "Flinger",
+  "shortDescription": "Lightweight library to tweak the fling behaviour in Android. This library is only compatible with Jetpack-Compose.",
+  "longDescription": "Lightweight library to tweak the fling behaviour in Android. This library is only compatible with Jetpack-Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

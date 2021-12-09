@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kaustubhpatange"
+  ],
+  "owner": "KaustubhPatange",
+  "repo": "Gear-VPN",
+  "name": "Gear-VPN",
+  "shortDescription": "A VPN app made with Jetpack Compose.",
+  "longDescription": "A VPN app made with Jetpack Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

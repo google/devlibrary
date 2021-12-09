@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "krossovochkin"
+  ],
+  "owner": "krossovochkin",
+  "repo": "KWeather",
+  "name": "KWeather",
+  "shortDescription": "Jetpack Compose Kotlin MPP Weather app with Android, Desktop and Web support.",
+  "longDescription": "Jetpack Compose Kotlin MPP Weather app with Android, Desktop and Web support.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}
