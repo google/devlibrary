@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "author": "Rodrigo Kamada",
+  "title": "Application example built with Angular 13 and adding form validation.",
+  "link": "https://rodrigokamada.medium.com/adding-form-validation-to-an-angular-application-9256ede9ecd3",
+  "tags": [
+    "demos"
+  ]
+}

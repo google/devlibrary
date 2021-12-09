@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pranavpandey"
+  ],
+  "owner": "pranavpandey",
+  "repo": "dynamic-utils",
+  "name": "Dynamic Utils",
+  "shortDescription": "Utility functions to perform dynamic operations on Android.",
+  "longDescription": "Utility functions to perform dynamic operations on Android.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

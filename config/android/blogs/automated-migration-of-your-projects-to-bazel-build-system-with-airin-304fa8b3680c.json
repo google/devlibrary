@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Pavlo Stavytskyi",
+  "title": "Airin is a framework for automated migration of your projects to Bazel build system. In particular, it can help to migrate Android apps from Gradle to Bazel.",
+  "link": "https://proandroiddev.com/automated-migration-of-your-projects-to-bazel-build-system-with-airin-304fa8b3680c",
+  "tags": [
+    "build-tools"
+  ]
+}

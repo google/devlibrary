@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Pavlo Stavytskyi",
+  "title": "Navigating through multi-module Jetpack Compose applications. Designing a scalable architecture for multi-module Jetpack Compose apps.",
+  "link": "https://proandroiddev.com/navigating-through-multi-module-jetpack-compose-applications-6c9a31fa12b6",
+  "tags": [
+    "architecture",
+    "modern-android-development",
+    "compose"
+  ]
+}

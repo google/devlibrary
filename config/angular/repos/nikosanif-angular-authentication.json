@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "nikosanif"
+  ],
+  "owner": "nikosanif",
+  "repo": "angular-authentication",
+  "name": "Angular Authentication",
+  "shortDescription": "An Angular application that demonstrates best practices for user authentication.",
+  "longDescription": "An Angular application that demonstrates best practices for user authentication.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos",
+    "getting-started"
+  ]
+}
