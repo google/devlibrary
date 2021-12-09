@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "adrielcafe"
+  ],
+  "owner": "adrielcafe",
+  "repo": "lyricist",
+  "name": "Lyricist",
+  "shortDescription": "The missing I18N/L10N (internationalization/localization) library for Jetpack Compose!",
+  "longDescription": "The missing I18N/L10N (internationalization/localization) library for Jetpack Compose!",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

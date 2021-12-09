@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "ReactiveCircus",
+  "repo": "android-emulator-runner",
+  "name": "Android Emulator Runner",
+  "shortDescription": "A GitHub Action for installing, configuring and running hardware-accelerated Android Emulators on macOS virtual machines.",
+  "longDescription": "A GitHub Action for installing, configuring and running hardware-accelerated Android Emulators on macOS virtual machines.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

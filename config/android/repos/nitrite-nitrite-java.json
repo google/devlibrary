@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "nitrite",
+  "repo": "nitrite-java",
+  "name": "Nitrite Database",
+  "shortDescription": "Nitrite database is an open source NoSQL embedded document store written in Java. It has MongoDB like API. It supports both in-memory and file based persistent store.",
+  "longDescription": "Nitrite database is an open source NoSQL embedded document store written in Java. It has MongoDB like API. It supports both in-memory and file based persistent store.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "igorescodro"
+  ],
+  "owner": "igorescodro",
+  "repo": "alkaa",
+  "name": "Alkaa - Tasks simplified",
+  "shortDescription": "Alkaa (begin, start in Finnish) is a to-do application project using the latest components, architecture and tools for Android development, such as Jetpack Compose, Coroutines and Dynamic Delivery.",
+  "longDescription": "Alkaa (begin, start in Finnish) is a to-do application project using the latest components, architecture and tools for Android development, such as Jetpack Compose, Coroutines and Dynamic Delivery.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

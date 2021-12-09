@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "yogeshpaliyal"
+  ],
+  "owner": "yogeshpaliyal",
+  "repo": "Android-Universal-Recycler-View-Adapter",
+  "name": "Android-Universal-Recycler-View-Adapter",
+  "shortDescription": "One recycler adapter that can be used at more that 90% of the time, reduce boilerplate code",
+  "longDescription": "One recycler adapter that can be used at more that 90% of the time, reduce boilerplate code",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

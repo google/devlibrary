@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "aliazaz"
+  ],
+  "owner": "AliAzaz",
+  "repo": "PixabayGalleryApp",
+  "name": "PixabayGalleryApp",
+  "shortDescription": "An Image Gallery App implemented using Android best approaches are MVVM - Clean Architecture, Dependency Injection, Android Material Components, Consuming data using Flow, and MockK unit tests.",
+  "longDescription": "An Image Gallery App implemented using Android best approaches are MVVM - Clean Architecture, Dependency Injection, Android Material Components, Consuming data using Flow, and MockK unit tests.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}
