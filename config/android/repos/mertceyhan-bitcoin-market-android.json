@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mertceyhan"
+  ],
+  "owner": "mertceyhan",
+  "repo": "bitcoin-market-android",
+  "name": "bitcoin-market-android",
+  "shortDescription": "Bitcoin Market app shows you the current Bitcoin market price and price chart of different time intervals. The project has been written with Kotlin and Jetpack libraries.",
+  "longDescription": "Bitcoin Market app shows you the current Bitcoin market price and price chart of different time intervals. The project has been written with Kotlin and Jetpack libraries.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

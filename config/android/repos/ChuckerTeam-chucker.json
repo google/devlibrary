@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["vbuberen"],
+  "owner": "ChuckerTeam",
+  "repo": "chucker",
+  "name": "Chucker",
+  "shortDescription": "An HTTP inspector for Android & OkHTTP (like Charles Proxy but on device)",
+  "longDescription": "An HTTP inspector for Android & OkHTTP (like Charles Proxy but on device)",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

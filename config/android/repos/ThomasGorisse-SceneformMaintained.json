@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "thomasgorisse"
+  ],
+  "owner": "ThomasGorisse",
+  "repo": "SceneformMaintained",
+  "name": "SceneformMaintained",
+  "shortDescription": "ARCore Android SDK with Google Filament for Augmented Reality apps: glTF 3D objects, Augmented Images, Augmented Faces, Depth and much more in Kotlin/Java",
+  "longDescription": "ARCore Android SDK with Google Filament for Augmented Reality apps: glTF 3D objects, Augmented Images, Augmented Faces, Depth and much more in Kotlin/Java",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}
