@@ -17,6 +17,15 @@
 import { Octokit } from "@octokit/rest";
 import * as config from "./config";
 
+import fetch from "node-fetch";
+
+export interface GitHubRepo {
+  default_branch: string;
+  stargazers_count: number;
+  forks_count: number;
+  pushed_at: string;
+}
+
 let _gh: Octokit | undefined = undefined;
 
 function gh(): Octokit {
@@ -29,7 +38,10 @@ function gh(): Octokit {
   return _gh;
 }
 
-export async function getRepo(owner: string, repo: string) {
+export async function getRepo(
+  owner: string,
+  repo: string
+): Promise<GitHubRepo> {
   const res = await gh()
     .repos.get({
       owner,
@@ -120,12 +132,17 @@ export async function getFileContent(
 }
 
 export async function getEmojiMap(): Promise<Record<string, string>> {
-  const res = await gh().emojis.get();
+  // We proxy this through our own function to reduce API calls
+  const emojisUrl =
+    process.env.FUNCTIONS_EMULATOR === "true"
+      ? `http://localhost:5000/api/emojis`
+      : `https://${process.env.GCP_PROJECT}.web.app/api/emojis`;
+  const res = await fetch(emojisUrl);
 
   // This is a map from emoji shortcode to image URL, for example:
   // 1st_place_medal: "https://github.githubassets.com/images/icons/emoji/unicode/1f947.png?v8",
   // algeria: "https://github.githubassets.com/images/icons/emoji/unicode/1f1e9-1f1ff.png?v8",
-  const urlMap = res.data;
+  const urlMap = (await res.json()) as Record<string, string>;
 
   const map: Record<string, string> = {};
 

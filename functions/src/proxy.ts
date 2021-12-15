@@ -17,6 +17,8 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 
+import fetch from "node-fetch";
+
 import { FirestoreQuery, QueryResult } from "../../shared/types/FirestoreQuery";
 
 export const queryProxy = functions
@@ -112,4 +114,20 @@ export const docProxy = functions.https.onRequest(async (req, res) => {
   }
 
   res.json(snap.data());
+});
+
+/**
+ * Proxy https://api.github.com/emojis
+ */
+export const emojis = functions.https.onRequest(async (req, res) => {
+  // Allow CORS
+  res.header("Access-Control-Allow-Origin", "*");
+
+  // Cache at browser for 10 minutes (600s) and on CDN for 12 hours (43200s)
+  res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
+
+  const r = await fetch("https://api.github.com/emojis");
+  const obj = await r.json();
+
+  res.json(obj);
 });
