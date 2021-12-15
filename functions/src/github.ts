@@ -15,9 +15,10 @@
  */
 
 import { Octokit } from "@octokit/rest";
-import * as config from "./config";
-
 import fetch from "node-fetch";
+
+import * as config from "./config";
+import { getProjectId } from "./project";
 
 export interface GitHubRepo {
   default_branch: string;
@@ -136,7 +137,7 @@ export async function getEmojiMap(): Promise<Record<string, string>> {
   const emojisUrl =
     process.env.FUNCTIONS_EMULATOR === "true"
       ? `http://localhost:5000/api/emojis`
-      : `https://${process.env.GCP_PROJECT}.web.app/api/emojis`;
+      : `https://${getProjectId()}.web.app/api/emojis`;
   const res = await fetch(emojisUrl);
 
   // This is a map from emoji shortcode to image URL, for example:
