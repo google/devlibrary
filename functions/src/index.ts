@@ -19,7 +19,7 @@ import * as admin from "firebase-admin";
 import { PubSub } from "@google-cloud/pubsub";
 
 import { loadAuthorMetadata, loadProjectMetadata } from "./metadata";
-import { loadBlogStats, loadRepoStats } from "./stats";
+import { loadBlogStats, makeRepoStats } from "./stats";
 import {
   deleteAuthorData,
   deleteBlogData,
@@ -56,7 +56,7 @@ admin.initializeApp();
 const pubsub = new PubSub();
 
 /** Proxy functions */
-export { queryProxy, docProxy } from "./proxy";
+export { queryProxy, docProxy, emojis } from "./proxy";
 
 /** Search functions */
 export { elasticSearch } from "./search";
@@ -155,29 +155,19 @@ async function refreshAllAuthors() {
 async function refreshRepoInternal(
   product: string,
   id: string,
-  metadata: RepoMetadata
+  metadata: RepoMetadata,
+  force: boolean = false
 ) {
   console.log("Refreshing repo", product, id);
 
-  // Get the existing repo
+  // Get the existing repo data from the database
   const existing = await getRepoData(product, id);
 
-  // If the repo doesn't have the right license, exit early
-  const license = await github.getRepoLicense(metadata.owner, metadata.repo);
-  if (!(license.key === "mit" || license.key === "apache-2.0")) {
-    console.warn(
-      `Invalid license ${license.key} for repo ${metadata.owner}/${metadata.repo}`
-    );
-
-    if (existing) {
-      await deleteRepoData(product, id);
-    }
-
-    return;
-  }
+  // Get the latest repo stats from GitHub
+  const ghRepo = await github.getRepo(metadata.owner, metadata.repo);
+  const stats = makeRepoStats(existing, ghRepo);
 
   // First save the repo's stats and metadata
-  const stats = await loadRepoStats(metadata, existing);
   const repo = {
     id,
     product,
@@ -185,6 +175,32 @@ async function refreshRepoInternal(
     stats,
   };
   await saveRepoData(product, repo);
+
+  // Check if the repo has been pushed since our last sync
+  const recentlyPushed =
+    !existing || stats.lastUpdated > existing.stats.lastUpdated;
+  if (!recentlyPushed) {
+    console.log(
+      `Repo ${product}/${id} has not been updated since last pull (lastUpdated = ${stats.lastUpdated}).`
+    );
+  }
+
+  // If the repo is not recently pushed, we can exit early to save API calls
+  if (!(recentlyPushed || force)) {
+    return;
+  }
+
+  // First check the license
+  const license = await github.getRepoLicense(metadata.owner, metadata.repo);
+  if (!(license.key === "mit" || license.key === "apache-2.0")) {
+    console.warn(
+      `Invalid license ${license.key} for repo ${metadata.owner}/${metadata.repo}`
+    );
+
+    // Delete the repo and exit early
+    deleteRepoData(product, id);
+    return;
+  }
 
   // Then save a document for each page
   const pages = [
@@ -195,7 +211,7 @@ async function refreshRepoInternal(
     ...(metadata.pages || []),
   ];
 
-  const branch = await github.getDefaultBranch(metadata.owner, metadata.repo);
+  const branch = ghRepo.default_branch || "master";
 
   let emojis = {};
   try {
@@ -278,6 +294,7 @@ if (process.env.FUNCTIONS_EMULATOR) {
     async (request, response) => {
       const product = request.query["product"] as string | undefined;
       const id = request.query["id"] as string | undefined;
+      const forceParam = request.query["force"] as string | undefined;
 
       if (!(product && id)) {
         response.status(400).send("Must include product and id query params");
@@ -294,7 +311,10 @@ if (process.env.FUNCTIONS_EMULATOR) {
         return;
       }
 
-      await refreshRepoInternal(product, id, metadata);
+      // Force is default, ?force=false overrides it
+      const force = forceParam === "false" ? false : true;
+
+      await refreshRepoInternal(product, id, metadata, force);
       response.status(200).send(`Refreshed /products/${product}/repos/${id}`);
     }
   );
@@ -336,5 +356,5 @@ export const refreshRepo = functions.pubsub
     const id = message.json.id as string;
     const metadata = message.json.metadata as RepoMetadata;
 
-    await refreshRepoInternal(product, id, metadata);
+    await refreshRepoInternal(product, id, metadata, /* force= */ false);
   });

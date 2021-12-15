@@ -16,6 +16,10 @@
         "function": "queryProxy"
       },
       {
+        "source": "/api/emojis",
+        "function": "emojis"
+      },
+      {
         "source": "/api/elasticSearch",
         "function": "elasticSearch"
       },
