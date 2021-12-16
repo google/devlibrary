@@ -26,7 +26,7 @@ function isValidCollectionPath(path: string): boolean {
   try {
     db.collection(path);
     return true;
-  } catch (e: unknown) {
+  } catch (e) {
     return false;
   }
 }
@@ -36,7 +36,7 @@ function isValidDocumentPath(path: string): boolean {
   try {
     db.doc(path);
     return true;
-  } catch (e: unknown) {
+  } catch (e) {
     return false;
   }
 }
