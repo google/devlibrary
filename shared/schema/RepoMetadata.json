@@ -40,7 +40,8 @@
     },
     "content": {
       "type": "string",
-      "description": "File name of the main markdown file in the repo (ex: README.md)"
+      "description": "File name of the main markdown file in the repo (ex: README.md)",
+      "pattern": "^[\\w\\/\\.\\-]+$"
     },
     "tags": {
       "type": "array",
