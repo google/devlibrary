@@ -9,7 +9,7 @@
   "name": "Airin",
   "shortDescription": "A framework for automated migration of your projects to Bazel build system. Includes a standalone Starlark code generator.",
   "longDescription": "A framework for automated migration of your projects to Bazel build system. Includes a standalone Starlark code generator.",
-  "content": "https://github.com/Morfly/airin/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "build-tools"

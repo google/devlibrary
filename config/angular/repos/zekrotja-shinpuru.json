@@ -9,7 +9,7 @@
   "name": "shinpuru",
   "shortDescription": "shinpuru is a multi-purpose Discord bot with a lot of moderation, security and fun features which all can be accessed and controlled via a Web Interface.",
   "longDescription": "shinpuru is a multi-purpose Discord bot with a lot of moderation, security and fun features which all can be accessed and controlled via a Web Interface.",
-  "content": "https://github.com/zekroTJA/shinpuru/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "demos"
