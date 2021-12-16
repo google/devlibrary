@@ -176,17 +176,29 @@ async function refreshRepoInternal(
   };
   await saveRepoData(product, repo);
 
-  // Check if the repo has been pushed since our last sync
   const recentlyPushed =
-    !existing || stats.lastUpdated > existing.stats.lastUpdated;
-  if (!recentlyPushed) {
+    existing && stats.lastUpdated > existing.stats.lastUpdated;
+  if (existing && recentlyPushed) {
     console.log(
-      `Repo ${product}/${id} has not been updated since last pull (lastUpdated = ${stats.lastUpdated}).`
+      `[${product}/${id}] has been updated since last pull (lastUpdated = ${stats.lastUpdated}).`
     );
   }
 
-  // If the repo is not recently pushed, we can exit early to save API calls
-  if (!(recentlyPushed || force)) {
+  const metadataChanged =
+    existing && JSON.stringify(existing.metadata) !== JSON.stringify(metadata);
+  if (existing && metadataChanged) {
+    console.log(`[${product}/${id}] repo has metadata changes.`);
+  }
+
+  // We consider the repo recently changed if any of:
+  //  - It did not exist before
+  //  - It had a recent metadata change (on our side)
+  //  - It was recently pushed (on their side)
+  //
+  // If the repo is not recently changed, we can exit early to save API calls
+  const shouldUpdate = recentlyPushed || metadataChanged || force;
+  if (!shouldUpdate) {
+    console.log(`[${product}/${id}] skipping update.`);
     return;
   }
 
