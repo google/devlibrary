@@ -18,6 +18,8 @@ import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import { PubSub } from "@google-cloud/pubsub";
 
+import equal from "fast-deep-equal";
+
 import { loadAuthorMetadata, loadProjectMetadata } from "./metadata";
 import { loadBlogStats, makeRepoStats } from "./stats";
 import {
@@ -182,12 +184,19 @@ async function refreshRepoInternal(
     console.log(
       `[${product}/${id}] has been updated since last pull (lastUpdated = ${stats.lastUpdated}).`
     );
+  } else {
+    console.log(
+      `[${product}/${id}] not recently pushed (lastUpdated = ${stats.lastUpdated}).`
+    );
   }
 
-  const metadataChanged =
-    existing && JSON.stringify(existing.metadata) !== JSON.stringify(metadata);
+  const metadataChanged = existing && !equal(existing.metadata, metadata);
   if (existing && metadataChanged) {
     console.log(`[${product}/${id}] repo has metadata changes.`);
+    console.log("existing", JSON.stringify(existing.metadata));
+    console.log("new", JSON.stringify(metadata));
+  } else {
+    console.log(`[${product}/${id}] does not have metadata changes.`);
   }
 
   // We consider the repo recently changed if any of:

@@ -160,8 +160,6 @@ function sanitizeHtml(
     if (isRelativeLink(href)) {
       // Check if the link is to a page within the repo
       const repoRelative = path.join(pageDir, href);
-
-      console.log(`Relative link on page ${page}: ${href} --> ${repoRelative}`);
       el.attribs["href"] = repoRelative;
 
       const repoRelativeWithoutHash =
@@ -178,15 +176,8 @@ function sanitizeHtml(
 
           return res;
         });
-
-        console.log(
-          `Sanitizing relative project link ${repoRelative} --> ${el.attribs["href"]}`
-        );
       } else {
         modifyAttr(el, "href", (h) => urljoin(renderedBaseUrl, h));
-        console.log(
-          `Sanitizing relative GitHub link ${repoRelative} --> ${el.attribs["href"]}`
-        );
       }
     }
   });
