@@ -47,13 +47,17 @@
         </div>
 
         <div class="section">
-          <p class="font-display font-medium text-sm mb-2 px-2">Category</p>
+          <p class="frc font-display font-medium text-sm mb-2 px-2">
+            Category
+            <InfoCircle class="ml-2" msg="Select up to 10 categories" />
+          </p>
 
           <CheckboxGroup
             prefix="category"
             :keys="product.tags.map((t) => t.label)"
             :values="product.tags.map((t) => t.value)"
             v-model="categories"
+            :maxSelections="10"
           />
         </div>
       </div>
@@ -64,6 +68,7 @@
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 import RadioGroup from "@/components/RadioGroup.vue";
+import InfoCircle from "@/components/InfoCircle.vue";
 import CheckboxGroup, {
   CheckboxGroupEntry,
 } from "@/components/CheckboxGroup.vue";
@@ -73,6 +78,7 @@ import { ProductConfig } from "../../../shared/types";
   components: {
     RadioGroup,
     CheckboxGroup,
+    InfoCircle,
   },
 })
 export default class ProjectFilters extends Vue {

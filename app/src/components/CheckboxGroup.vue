@@ -30,6 +30,7 @@
           v-model="entry.checked"
           @input="emitValue"
           :id="entry.id"
+          :disabled="!entry.checked && numChecked >= maxSelections"
         />
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
@@ -68,6 +69,9 @@ export default class CheckboxGroup extends Vue {
   /** Internal value for each key (ex: android, web) */
   @Prop() values!: string[];
 
+  /** Maximum number of selections allowed */
+  @Prop({ default: 100 }) maxSelections!: number;
+
   public entries: CheckboxGroupEntry[] = [];
 
   mounted() {
@@ -95,6 +99,10 @@ export default class CheckboxGroup extends Vue {
    */
   public emitValue() {
     this.$emit("input", this.entries);
+  }
+
+  get numChecked() {
+    return this.entries.filter((e) => e.checked).length;
   }
 }
 </script>
