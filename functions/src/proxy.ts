@@ -21,6 +21,26 @@ import fetch from "node-fetch";
 
 import { FirestoreQuery, QueryResult } from "../../shared/types/FirestoreQuery";
 
+function isValidCollectionPath(path: string): boolean {
+  const db = admin.firestore();
+  try {
+    db.collection(path);
+    return true;
+  } catch (e: unknown) {
+    return false;
+  }
+}
+
+function isValidDocumentPath(path: string): boolean {
+  const db = admin.firestore();
+  try {
+    db.doc(path);
+    return true;
+  } catch (e: unknown) {
+    return false;
+  }
+}
+
 export const queryProxy = functions
   .runWith({
     minInstances: 1,
@@ -35,14 +55,14 @@ export const queryProxy = functions
     // The "q'" param is a Base64 encoded FirestoreQuery
     const qEncoded = req.query.q as string;
     if (!qEncoded) {
-      res.status(400).send('HTTP 400: "q" is required');
+      res.status(400).send('Parameter "q" is required');
       return;
     }
 
     // The "path" param is the collection to query
     const path = req.query.path as string;
     if (!path) {
-      res.status(400).send('HTTP 400: "path" is required');
+      res.status(400).send('Parameter "path" is required');
       return;
     }
 
@@ -53,6 +73,13 @@ export const queryProxy = functions
     // Log out the query
     functions.logger.info(path);
     functions.logger.info(qDecoded);
+
+    if (!isValidCollectionPath(path)) {
+      const msg = `Invalid collection path: ${path}`;
+      functions.logger.error(msg);
+      res.status(400).send(msg);
+      return;
+    }
 
     const db = admin.firestore();
 
@@ -103,13 +130,22 @@ export const docProxy = functions.https.onRequest(async (req, res) => {
 
   const path = req.query.path as string;
   if (!path) {
-    res.status(400).send('HTTP 400: "path" is required');
+    res.status(400).send('Parameter "path" is required');
+    return;
+  }
+
+  if (!isValidDocumentPath(path)) {
+    const msg = `Invalid document path: ${path}`;
+    functions.logger.error(msg);
+    res.status(400).send(msg);
     return;
   }
 
   const snap = await admin.firestore().doc(path).get();
   if (!snap.exists) {
-    res.status(404).send(`HTTP 404: could not find document at path "${path}"`);
+    const msg = `Could not find document at path "${path}"`;
+    functions.logger.error(msg);
+    res.status(404).send(msg);
     return;
   }
 
