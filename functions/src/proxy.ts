@@ -74,9 +74,11 @@ export const queryProxy = functions
     functions.logger.info(path);
     functions.logger.info(qDecoded);
 
+    // This is only a warning because sometimes the XSS scanner does things like:
+    // /authors/javascript:xssdetected(2335655322300400009712911n)...
     if (!isValidCollectionPath(path)) {
       const msg = `Invalid collection path: ${path}`;
-      functions.logger.error(msg);
+      functions.logger.warn(msg);
       res.status(400).send(msg);
       return;
     }
@@ -134,9 +136,11 @@ export const docProxy = functions.https.onRequest(async (req, res) => {
     return;
   }
 
+  // This is only a warning because sometimes the XSS scanner does things like:
+  // /authors/javascript:xssdetected(2335655322300400009712911n)...
   if (!isValidDocumentPath(path)) {
     const msg = `Invalid document path: ${path}`;
-    functions.logger.error(msg);
+    functions.logger.warn(msg);
     res.status(400).send(msg);
     return;
   }
