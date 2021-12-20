@@ -46,9 +46,9 @@ export async function main(args: string[]) {
   for (const p of contentPaths) {
     const pageContent = await getRepoContent(owner, repo, p);
     if (pageContent) {
-      console.log(`✅ Valid content ${content}`);
+      console.log(`✅ Valid content ${p}`);
     } else {
-      console.log(`❌ Error: invalid content path ${content}`);
+      console.log(`❌ Error: invalid content path ${p}`);
     }
   }
 }
