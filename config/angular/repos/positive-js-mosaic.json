@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["fost"],
+  "owner": "positive-js",
+  "repo": "mosaic",
+  "name": "Mosaic",
+  "shortDescription": "Angular UI components.\nMosaic components are the building blocks of Positive Technologies applications.",
+  "longDescription": "Angular UI components.\nMosaic components are the building blocks of Positive Technologies applications.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "components"
+  ]
+}

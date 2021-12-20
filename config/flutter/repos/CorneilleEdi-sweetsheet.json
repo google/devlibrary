@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "corneilleedi"
+  ],
+  "owner": "CorneilleEdi",
+  "repo": "sweetsheet",
+  "name": "SweetSheet",
+  "shortDescription": "Show beautiful bottom sheet as confirmation dialog quickly and easily.",
+  "longDescription": "Show beautiful bottom sheet as confirmation dialog quickly and easily.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "plugins",
+    "widgets",
+    "general"
+  ]
+}

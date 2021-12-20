@@ -54,12 +54,15 @@ export function getApiHost(): string {
     : hostingRoot();
 }
 
-async function fetchDoc(docPath: string) {
+async function fetchDoc(docPath: string): Promise<object | undefined> {
   const params = new URLSearchParams({
     path: docPath,
   });
 
   const res = await fetch(`${getApiHost()}/api/docProxy?${params.toString()}`);
+  if (!res.ok) {
+    return undefined;
+  }
   return await res.json();
 }
 
@@ -168,34 +171,39 @@ export async function nextPage<T>(res: PagedResponse<T>) {
   res.currentPage = res.currentPage + 1;
 }
 
-export async function fetchAuthor(id: string): Promise<AuthorData> {
+export async function fetchAuthor(id: string): Promise<AuthorData | undefined> {
   // We are case insensitive on Author IDs in URL paths
   const normalizedId = id.toLowerCase();
   const authorPath = `/authors/${normalizedId}`;
   const json = await fetchDoc(authorPath);
-
-  return json as AuthorData;
+  if (json) {
+    return json as AuthorData;
+  }
 }
 
 export async function fetchRepo(
   product: string,
   id: string
-): Promise<RepoData> {
+): Promise<RepoData | undefined> {
   const repoPath = `/products/${product}/repos/${id}`;
   const json = await fetchDoc(repoPath);
 
-  return json as RepoData;
+  if (json) {
+    return json as RepoData;
+  }
 }
 
 export async function fetchRepoPage(
   product: string,
   id: string,
   pageKey: string
-): Promise<RepoPage> {
+): Promise<RepoPage | undefined> {
   const pagePath = `/products/${product}/repos/${id}/pages/${pageKey}`;
   const json = await fetchDoc(pagePath);
 
-  return json as RepoPage;
+  if (json) {
+    return json as RepoPage;
+  }
 }
 
 export async function queryAuthors(

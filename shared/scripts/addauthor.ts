@@ -55,7 +55,9 @@ function extractAuthorFromLink(href: string): string | undefined {
   return undefined;
 }
 
-export async function getMediumPostAuthor(url: string): Promise<string | undefined> {
+export async function getMediumPostAuthor(
+  url: string
+): Promise<string | undefined> {
   const res = await fetch(url);
   const html = await res.text();
   const $ = cheerio.load(html);

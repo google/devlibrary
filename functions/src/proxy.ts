@@ -123,6 +123,44 @@ export const queryProxy = functions
     res.json(result);
   });
 
+function diagnoseMissingDocument(path: string) {
+  // Possible paths
+  // Author:
+  //  /authors/<author>
+  // Blog:
+  //  /products/<product>/blogs/<blog>
+  // Repo:
+  //  /products/<product>/repos/<repo>
+  // Repo page:
+  //  /products/<product>/repos/<repo>/pages/<page path base64>
+
+  const segments = path.split("/").filter(x => x && x.length > 0);
+  const first = segments[0];
+
+  if (first === "authors") {
+    const id = segments[1];
+    return `Could not find author ${id}`;
+  } else if (first === "products") {
+    const product = segments[1];
+    const type = segments[2];
+    if (type === "blogs") {
+      const id = segments[3];
+      return `Could not find ${product} blog ${id}`;
+    } else if (type === "repos") {
+      const id = segments[3];
+      if (segments.length > 4) {
+        const page = segments[5];
+        const pageDecoded = Buffer.from(page, "base64").toString("ascii");
+        return `Could not find page "${pageDecoded}" on ${product} repo ${id}`;
+      } else {
+        return `Could not find ${product} repo ${id}`;
+      }
+    }
+  }
+
+  return `Unknown or invalid document path: "${path}"`;
+}
+
 export const docProxy = functions.https.onRequest(async (req, res) => {
   // Allow CORS
   res.header("Access-Control-Allow-Origin", "*");
@@ -149,6 +187,8 @@ export const docProxy = functions.https.onRequest(async (req, res) => {
   if (!snap.exists) {
     const msg = `Could not find document at path "${path}"`;
     functions.logger.error(msg);
+    functions.logger.error(diagnoseMissingDocument(path));
+
     res.status(404).send(msg);
     return;
   }

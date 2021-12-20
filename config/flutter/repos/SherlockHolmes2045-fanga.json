@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sherlockholmes2045"
+  ],
+  "owner": "SherlockHolmes2045",
+  "repo": "fanga",
+  "name": "Fanga",
+  "shortDescription": "Fanga is a free manga reader and downloader made with Flutter for Android and ios.",
+  "longDescription": "Fanga is a free manga reader and downloader made with Flutter for Android and ios.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "general"
+  ]
+}

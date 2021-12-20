@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "dinurymomshad"
+  ],
+  "owner": "dinurymomshad",
+  "repo": "listify",
+  "name": "Listify",
+  "shortDescription": "Experimenting with Riverpod and MVC pattern while building a task management app with refreshing UI",
+  "longDescription": "Experimenting with Riverpod and MVC pattern while building a task management app with refreshing UI",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "firebase",
+    "mobile"
+  ]
+}
