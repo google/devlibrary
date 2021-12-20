@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "deep-diver"
+  ],
+  "owner": "deep-diver",
+  "repo": "image_search_with_natural_language",
+  "name": "Image Search with Natural Language Queries",
+  "shortDescription": "This project shows how to build an image search Flutter app with natural language queries using OpenAI's CLIP model. This is an effort to implement E2E product from frontend to backend even with ML.",
+  "longDescription": "This project shows how to build an image search Flutter app with natural language queries using OpenAI's CLIP model. This is an effort to implement E2E product from frontend to backend even with ML.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "mlops",
+    "python"
+  ]
+}

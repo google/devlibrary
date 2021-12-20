@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pbk-b"
+  ],
+  "owner": "PBK-B",
+  "repo": "Countdown-timer",
+  "name": "Countdown timer",
+  "shortDescription": "🐌 Countdown App use for Participate in #AndroidDevChallenge Jetpack Compose",
+  "longDescription": "🐌 Countdown App use for Participate in #AndroidDevChallenge Jetpack Compose",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui",
+    "kotlin"
+  ]
+}

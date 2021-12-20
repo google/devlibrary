@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "haidarz"
+  ],
+  "owner": "HaidarZ",
+  "repo": "ng-mat-select-infinite-scroll",
+  "name": "ng-mat-select-infinite-scroll",
+  "shortDescription": "Adds missing infinite scroll functionality for the angular material select component",
+  "longDescription": "Adds missing infinite scroll functionality for the angular material select component",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "components"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "OneSignalDevelopers",
+  "repo": "OneSignal-Angular-NPM-Sample",
+  "name": "Angular Push Notifications with OneSignal",
+  "shortDescription": "Angular demo to demonstrate the usage of the OneSignal npm package to integrate push notifications into Angular applications.",
+  "longDescription": "Angular demo to demonstrate the usage of the OneSignal npm package to integrate push notifications into Angular applications.",
+  "content": "https://github.com/OneSignalDevelopers/OneSignal-Angular-NPM-Sample/blob/main/README.md",
+  "pages": [],
+  "tags": [
+    "getting-started",
+    "libraries",
+    "demos"
+  ]
+}

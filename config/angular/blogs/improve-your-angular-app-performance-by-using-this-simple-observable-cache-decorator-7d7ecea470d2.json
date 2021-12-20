@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "darkysharky"
+  ],
+  "author": "Angel Nikolov",
+  "title": "This is an article about an Observable/Promise cache decorators which makes it easy to introduce caching to your typescript application",
+  "link": "https://medium.com/@darkysharky/improve-your-angular-app-performance-by-using-this-simple-observable-cache-decorator-7d7ecea470d2",
+  "tags": [
+    "performance"
+  ]
+}

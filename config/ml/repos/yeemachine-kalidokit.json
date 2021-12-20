@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "yeemachine"
+  ],
+  "owner": "yeemachine",
+  "repo": "kalidokit",
+  "name": "KalidoKit",
+  "shortDescription": "Vtuber tracking for Mediapipe/Tensorflow.js Face, Eyes, Pose, and Finger models.",
+  "longDescription": "Vtuber tracking for Mediapipe/Tensorflow.js Face, Eyes, Pose, and Finger models.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "face",
+    "body",
+    "web"
+  ]
+}
