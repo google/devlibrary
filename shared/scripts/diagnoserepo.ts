@@ -17,7 +17,9 @@ export async function diagnoseRepo(metadata: RepoMetadata) {
     if (key === "apache-2.0" || key === "mit") {
       console.log(`✅ Valid license type: ${key}`);
     } else {
-      console.log(`❌ Error: ${owner}/${repo} has invalid license type: ${key}`);
+      console.log(
+        `❌ Error: ${owner}/${repo} has invalid license type: ${key}`
+      );
     }
   } else {
     console.log(`❌ Error: ${owner}/${repo} does not have a license.`);
@@ -46,12 +48,12 @@ export async function main(args: string[]) {
       "Missing required arguments:\nnpm run diagnoserepo <config file path> <... more paths>"
     );
     return;
-  } 
+  }
 
   for (let i = 2; i < args.length; i++) {
     const configFilePath = args[i];
     const absPath = path.resolve(configFilePath);
-  
+
     const fileContent = fs.readFileSync(absPath).toString();
     const metadata = JSON.parse(fileContent) as RepoMetadata;
     await diagnoseRepo(metadata);
