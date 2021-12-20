@@ -167,6 +167,10 @@ export default class Author extends Vue {
 
   public async loadContent() {
     const author = await fetchAuthor(this.id);
+    if (!author) {
+      this.$router.push("/404");
+      return;
+    }
     const { blogs, repos } = await queryAuthorProjects(this.id);
 
     this.blogs = blogs.docs.map((d) => d.data);

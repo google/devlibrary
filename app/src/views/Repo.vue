@@ -218,14 +218,24 @@ export default class Repo extends Vue {
   }
 
   async loadContent() {
-    this.repo = await fetchRepo(this.productKey, this.id);
+    const repo = await fetchRepo(this.productKey, this.id);
+    if (repo) {
+      this.repo = repo;
+    } else {
+      this.$router.push("/404");
+      return;
+    }
 
     const authorIds = this.repo.metadata.authorIds || [];
     for (const aid of authorIds) {
       // We don't want a failed author fetch to block the rest of the page rendering
       try {
         const data = await fetchAuthor(aid);
-        this.authors.push(data);
+        if (data) {
+          this.authors.push(data);
+        } else {
+          console.warn(`Author not found: ${aid}`);
+        }
       } catch (e) {
         console.warn(`Failed to fetch author ${aid}`, e);
       }
@@ -236,7 +246,13 @@ export default class Repo extends Vue {
       util.cleanPagePath(this.repo.metadata.content);
     const pageKey = btoa(pagePath);
 
-    this.content = await fetchRepoPage(this.productKey, this.id, pageKey);
+    const content = await fetchRepoPage(this.productKey, this.id, pageKey);
+    if (content) {
+      this.content = content;
+    } else {
+      this.$router.push("/404");
+      return;
+    }
   }
 
   public fullPagePath(path?: string) {

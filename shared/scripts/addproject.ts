@@ -157,7 +157,7 @@ export async function addMediumBlog(
   return blogId;
 }
 
-export async function getRepoReadme(owner: string, repo: string) {
+function getGithubHeaders() {
   // If available, use a GitHub token from the environment
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
@@ -166,16 +166,74 @@ export async function getRepoReadme(owner: string, repo: string) {
     headers["Authorization"] = `token ${process.env.GITHUB_TOKEN}`;
   }
 
+  return headers;
+}
+
+interface GitHubLicense {
+  path: string;
+  license: {
+    key: string; // "mit", "apache-2.0", etc
+  };
+}
+
+export async function getRepoLicense(
+  owner: string,
+  repo: string
+): Promise<GitHubLicense | undefined> {
+  const res = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/license`,
+    {
+      method: "get",
+      headers: getGithubHeaders(),
+    }
+  );
+
+  if (!res.ok) {
+    return;
+  }
+
+  return await res.json();
+}
+
+export async function getRepoReadme(
+  owner: string,
+  repo: string
+): Promise<string | undefined> {
   const res = await fetch(
     `https://api.github.com/repos/${owner}/${repo}/readme`,
     {
       method: "get",
-      headers,
+      headers: getGithubHeaders(),
     }
   );
   const { path } = await res.json();
 
   return path;
+}
+
+interface GitHubContent {
+  path: string;
+  type: string;
+}
+
+export async function getRepoContent(
+  owner: string,
+  repo: string,
+  contentPath: string
+): Promise<GitHubContent | undefined> {
+  const res = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/contents/${contentPath}`,
+    {
+      method: "get",
+      headers: getGithubHeaders(),
+    }
+  );
+
+  if (!res.ok) {
+    return;
+  }
+
+  return await res.json();
 }
 
 export function parseGithubUrl(projectUrl: string) {
@@ -227,7 +285,9 @@ export async function addRepo(
   // Get the name of the README file
   if (!repoFileContent.content) {
     const readmePath = await getRepoReadme(owner, repo);
-    repoFileContent.content = readmePath;
+    if (readmePath) {
+      repoFileContent.content = readmePath;
+    }
   }
 
   const repoId = projectId || `${owner}-${repo}`;
