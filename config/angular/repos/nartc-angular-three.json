@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "nartc"
+  ],
+  "owner": "nartc",
+  "repo": "angular-three",
+  "name": "Angular Three",
+  "shortDescription": "This is a Component Library to integrate THREE.js (3D library) with Angular. Leveraging Angular capabilities to build 3D scene graph with ease",
+  "longDescription": "This is a Component Library to integrate THREE.js (3D library) with Angular. Leveraging Angular capabilities to build 3D scene graph with ease",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "components",
+    "libraries"
+  ]
+}

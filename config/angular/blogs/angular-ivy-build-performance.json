@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["piotrl"],
+  "author": "Piotr Lewandowski",
+  "title": "Angular with Ivy — Build performance review",
+  "link": "https://www.piotrl.net/angular-ivy-build-performance/",
+  "tags": [
+    "performance"
+  ]
+}

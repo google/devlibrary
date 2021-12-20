@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "siqlainhanif"
+  ],
+  "author": "Siqlain Hanif",
+  "title": "Tinder like swipe cards that are resolved 5 cards per request from the server with triggers to fetch the cards when we are low on cards to display.",
+  "link": "https://siqlainhanif.medium.com/flutter-tinder-like-swipe-cards-but-async-infinite-b6dc3e8b51a1",
+  "tags": [
+    "samples",
+    "mobile",
+    "widgets"
+  ]
+}

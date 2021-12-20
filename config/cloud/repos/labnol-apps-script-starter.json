@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "labnol"
+  ],
+  "owner": "labnol",
+  "repo": "apps-script-starter",
+  "name": "Apps Script Starter",
+  "shortDescription": "Develop Google Workspace add-ons locally with Visual Studio Code and modern JavaScript.",
+  "longDescription": "Develop Google Workspace add-ons locally with Visual Studio Code and modern JavaScript.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "developer-tools"
+  ]
+}
