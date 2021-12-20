@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["fost"],
   "owner": "positive-js",
   "repo": "mosaic",
   "name": "Mosaic",

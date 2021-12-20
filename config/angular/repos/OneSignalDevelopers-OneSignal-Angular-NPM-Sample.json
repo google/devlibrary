@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["devpato"],
   "owner": "OneSignalDevelopers",
   "repo": "OneSignal-Angular-NPM-Sample",
   "name": "Angular Push Notifications with OneSignal",
