@@ -7,7 +7,7 @@
   "name": "Mosaic",
   "shortDescription": "Angular UI components.\nMosaic components are the building blocks of Positive Technologies applications.",
   "longDescription": "Angular UI components.\nMosaic components are the building blocks of Positive Technologies applications.",
-  "content": "https://github.com/positive-js/mosaic/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "components"
