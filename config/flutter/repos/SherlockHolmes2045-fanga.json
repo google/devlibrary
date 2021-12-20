@@ -9,7 +9,7 @@
   "name": "Fanga",
   "shortDescription": "Fanga is a free manga reader and downloader made with Flutter for Android and ios.",
   "longDescription": "Fanga is a free manga reader and downloader made with Flutter for Android and ios.",
-  "content": "https://github.com/SherlockHolmes2045/fanga/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "mobile",

@@ -9,7 +9,7 @@
   "name": "Listify",
   "shortDescription": "Experimenting with Riverpod and MVC pattern while building a task management app with refreshing UI",
   "longDescription": "Experimenting with Riverpod and MVC pattern while building a task management app with refreshing UI",
-  "content": "https://github.com/dinurymomshad/listify/tree/main/lib",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "firebase",

@@ -7,7 +7,7 @@
   "name": "Brainchop",
   "shortDescription": "Front-end web application for automatic 3D MRI volumetric segmentation in the browser. #MadeWithTFJS",
   "longDescription": "Front-end web application for automatic 3D MRI volumetric segmentation in the browser. #MadeWithTFJS",
-  "content": "https://github.com/neuroneural/brainchop/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "web",
