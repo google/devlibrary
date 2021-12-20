@@ -214,6 +214,8 @@ export async function getRepoReadme(
 interface GitHubContent {
   path: string;
   type: string;
+  content: string;
+  encoding: string;
 }
 
 export async function getRepoContent(

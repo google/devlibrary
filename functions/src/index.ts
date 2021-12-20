@@ -91,6 +91,7 @@ async function refreshAllProjects() {
         product,
         id,
         metadata,
+        force: false
       });
     }
 
@@ -99,6 +100,7 @@ async function refreshAllProjects() {
         product,
         id,
         metadata,
+        force: false
       });
     }
 
@@ -376,6 +378,7 @@ export const refreshRepo = functions.pubsub
     const product = message.json.product as string;
     const id = message.json.id as string;
     const metadata = message.json.metadata as RepoMetadata;
+    const force = !!message.json.force;
 
-    await refreshRepoInternal(product, id, metadata, /* force= */ false);
+    await refreshRepoInternal(product, id, metadata, force);
   });
