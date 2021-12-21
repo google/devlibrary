@@ -46,6 +46,8 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
+import { waitForMaterialStyles } from "@/plugins/preload";
+
 export interface RadioGroupEntry {
   key: string;
   value: string;
@@ -61,7 +63,9 @@ export default class RadioGroup extends Vue {
   private choice = "";
   public entries: RadioGroupEntry[] = [];
 
-  mounted() {
+  async mounted() {
+    await waitForMaterialStyles();
+
     for (let i = 0; i < this.keys.length; i++) {
       const key = this.keys[i];
       const value = this.values[i];

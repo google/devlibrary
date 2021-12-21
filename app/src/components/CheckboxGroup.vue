@@ -51,6 +51,8 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
+import { waitForMaterialStyles } from "@/plugins/preload";
+
 export interface CheckboxGroupEntry {
   key: string;
   value: string;
@@ -74,7 +76,9 @@ export default class CheckboxGroup extends Vue {
 
   public entries: CheckboxGroupEntry[] = [];
 
-  mounted() {
+  async mounted() {
+    await waitForMaterialStyles();
+
     for (let i = 0; i < this.keys.length; i++) {
       const key = this.keys[i];
       const value = this.values[i];
