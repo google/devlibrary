@@ -178,6 +178,7 @@ import {
 } from "../../../shared/types";
 import * as util from "../../../shared/util";
 import { fetchAuthor, fetchRepo, fetchRepoPage } from "@/plugins/data";
+import { waitForHljsLoad } from "@/plugins/preload";
 import { getStyle, ProductStyle } from "@/model/product";
 
 // Global HLJS
@@ -211,8 +212,8 @@ export default class Repo extends Vue {
 
     this.uiModule.waitFor(p);
 
-    // After contetn has loaded, highlight all code blocks with HLJS
-    p.then(() => {
+    // After content has loaded, highlight all code blocks with HLJS
+    p.then(() => waitForHljsLoad()).then(() => {
       hljs && hljs.highlightAll();
     });
   }

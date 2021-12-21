@@ -22,9 +22,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>Google Dev Library | What will you build?</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/a11y-dark.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
     
     <!-- Verification for Google Search Console -->
     <meta name="google-site-verification" content="3Fs4HuD7rC0LxPmCZjCIeaa_EmMrN2kfpkg4LyfI2nM" />
@@ -32,6 +29,10 @@
     <!-- Basic OpenGraph Tags -->
     <meta property="og:title" content="Google Dev Library | What will you build?" />
     <meta property="og:image" content="https://devlibrary.withgoogle.com/img/LibraryGoogleDev-Header.png" />
+
+    <!-- HighlightJS (deferred for performance) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/a11y-dark.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <script id="hljs" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js" async defer></script>
 
     <!-- Material Design Theme -->
     <style>
@@ -41,9 +42,9 @@
       }
     </style>
 
-    <!-- Material Design components -->
-    <link rel="stylesheet" href="https://unpkg.com/@material/checkbox@13.0.0/dist/mdc.checkbox.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/@material/radio@13.0.0/dist/mdc.radio.min.css">
+    <!-- Material Design components (deferred for performance) -->
+    <link data-mdc="true" href="https://unpkg.com/@material/checkbox@13.0.0/dist/mdc.checkbox.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link data-mdc="true" href="https://unpkg.com/@material/radio@13.0.0/dist/mdc.radio.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   </head>
   <body>
     <noscript>
