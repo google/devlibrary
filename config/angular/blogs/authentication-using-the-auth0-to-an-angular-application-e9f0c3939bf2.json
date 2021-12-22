@@ -5,9 +5,10 @@
     "rodrigokamada"
   ],
   "author": "Rodrigo Kamada",
-  "title": "Application example built with Angular 13 with authentication using the Auth0 service.",
+  "title": "Authentication using the Auth0 to an Angular application",
   "link": "https://rodrigokamada.medium.com/authentication-using-the-auth0-to-an-angular-application-e9f0c3939bf2",
   "tags": [
-    "demos"
+    "demos",
+    "gettingstarted"
   ]
 }
