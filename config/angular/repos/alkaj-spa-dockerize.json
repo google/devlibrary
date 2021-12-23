@@ -9,7 +9,7 @@
   "name": "SPA Dockerizer",
   "shortDescription": "Turn your Angular project into a docker image runing NGINX to serve your site with render-tron prerendering enabled for search engines.",
   "longDescription": "Turn your Angular project into a docker image runing NGINX to serve your site with render-tron prerendering enabled for search engines.",
-  "content": "README.md",
+  "content": "readme.md",
   "pages": [],
   "tags": [
     "frameworks",
