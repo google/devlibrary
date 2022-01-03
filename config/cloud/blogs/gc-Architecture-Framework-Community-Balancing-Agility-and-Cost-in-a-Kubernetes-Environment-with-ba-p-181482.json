@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["tusharguptag"],
+  "author": "Tushar Gupta",
+  "title": "Balancing Agility and Cost in a Kubernetes Environment with Google Kubernetes Engine",
+  "link": "https://www.googlecloudcommunity.com/gc/Architecture-Framework-Community/Balancing-Agility-and-Cost-in-a-Kubernetes-Environment-with/ba-p/181482",
+  "tags": [
+    "containers",
+    "developer-tools"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "codestronaut"
+  ],
+  "owner": "codestronaut",
+  "repo": "food_review_app",
+  "name": "Food Review App",
+  "shortDescription": "This app is called FoodReview. The main feature is we can discover some restaurants, get details, foods, drinks, and post a review for that restaurant",
+  "longDescription": "This app is called FoodReview. The main feature is we can discover some restaurants, get details, foods, drinks, and post a review for that restaurant",
+  "content": "https://github.com/codestronaut/food_review_app/blob/main/README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}

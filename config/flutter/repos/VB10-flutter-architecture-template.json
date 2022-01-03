@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "vb10"
+  ],
+  "owner": "VB10",
+  "repo": "flutter-architecture-template",
+  "name": "Flutter Arcihecture Template",
+  "shortDescription": "This project has been created professional project from the beginning. I wrote whole topics like localization, patterns, state, folder structure, etc. you can read more detail vb10.dev",
+  "longDescription": "This project has been created professional project from the beginning. I wrote whole topics like localization, patterns, state, folder structure, etc. you can read more detail vb10.dev",
+  "content": "https://github.com/VB10/flutter-architecture-template/blob/master/README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "general",
+    "mobile"
+  ]
+}

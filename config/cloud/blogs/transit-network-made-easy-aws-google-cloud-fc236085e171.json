@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["abhisheksharma7389"],
+  "author": "Abhishek Sharma",
+  "title": "This blog helps you understand \"How you can establish transit connectivity with AWS & GCP\"",
+  "link": "https://blog.searce.com/transit-network-made-easy-aws-google-cloud-fc236085e171",
+  "tags": [
+    "networking",
+    "hybrid-multicloud",
+    "operations"
+  ]
+}

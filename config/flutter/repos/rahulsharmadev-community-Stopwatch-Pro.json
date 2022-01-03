@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rahulsharmadev-community"
+  ],
+  "owner": "rahulsharmadev-community",
+  "repo": "Stopwatch-Pro",
+  "name": "Stopwatch-Pro",
+  "shortDescription": "A stopwatch is a handheld timepiece designed to measure the amount of time that elapses between its activation and deactivation.",
+  "longDescription": "A stopwatch is a handheld timepiece designed to measure the amount of time that elapses between its activation and deactivation.",
+  "content": "https://github.com/rahulsharmadev-community/Stopwatch-Pro/blob/beta/README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ]
+}
