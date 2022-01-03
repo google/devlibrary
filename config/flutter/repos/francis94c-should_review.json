@@ -9,7 +9,7 @@
   "name": "should_review",
   "shortDescription": "should_review is a Flutter package that helps determine whether to prompt a user to rate your app based on given criteria like days, number of times app was launched, or custom criteria.",
   "longDescription": "should_review is a Flutter package that helps determine whether to prompt a user to rate your app based on given criteria like days, number of times app was launched, or custom criteria.",
-  "content": "https://github.com/francis94c/should_review/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "mobile",
