@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "PietechSolution"
+  ],
+  "owner": "PietechSolution",
+  "repo": "Getwidget",
+  "name": "Getwidget",
+  "shortDescription": "Getwidget is Flutter opensource UI widget library with ready to use component like Bootstrap framework.",
+  "longDescription": "Getwidget is Flutter opensource UI widget library with ready to use component like Bootstrap framework. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}
