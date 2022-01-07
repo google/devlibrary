@@ -148,6 +148,14 @@
             though: the volume of submissions may vary over time, but we’ll make
             it a point to always get back to you.
           </p>
+          <p class="mt-6 font-bold">How can I update content on the site?</p>
+          <p class="mt-4">
+            All of the content on DevLibrary is open source, so you can update
+            content by sending us a Pull Request here:
+            <a href="https://github.com/google/devlibrary">
+              https://github.com/google/devlibrary
+            </a>
+          </p>
           <p class="mt-6 font-bold">
             Is there any reward or recognition for contributors?
           </p>
