@@ -117,14 +117,14 @@
           <p class="mt-4">
             Dev Library is an open-source platform showcasing a developer’s work with Google technologies. 
             It hosts GitHub projects and Blogs from external sites (Medium, Hashnode, Dev.to, personal sites) built using any of the Google Technologies like:
-            <li>
-            <ul> Angular </ul>
-            <ul> Android </ul>
-            <ul> Flutter </ul>
-            <ul> Firebase </ul>
-            <ul> Machine Learning </ul>
-            <ul> Cloud </ul>
-            </li>
+            <ul>
+            <li> Angular </li>
+            <li> Android </li>
+            <li> Flutter </li>
+            <li> Firebase </li>
+            <li> Machine Learning </li>
+            <li> Cloud </li>
+            </ul>
             DevLibrary aims to provide visibility to developers by showcasing their content. 
             We hope this visibility helps them reach a wider audience and inspire other developers to learn, contribute and share their knowledge.
           </p>
@@ -145,16 +145,16 @@
          <p class="mt-6 font-bold">Why did my submission get rejected?</p>
           <p class="mt-4">
           Submissions can get rejected due to various reasons. Some common reasons for rejecting content are listed below:
-          <li> 
-          <ul> <b> Absence of a GitHub license </b>: Before submitting a project, ensure you have either added Apache 2.0 or MIT license.</ul>
-          <ul> <b> Incoherent README </b>: Make sure you don’t have an empty README. 
-          To get accepted, we encourage having a properly written, structured, and well-explained README with visuals, if needed. </ul>
-          <ul> <b>Improper Versioning </b>: Make sure your project follows the latest software updates. </ul>
-          <ul><b> Monetised</b>: If in some way we find out that the blogs are behind a paywall (in Medium) or have ads, or are getting monetized in any form, we don’t accept them.</ul>
-          <ul> <b> Localization</b>: Currently, because of being a fairly new platform–we don’t support content in a language other than English. 
-          Although, we are working toward localization–for now–it is not accepted.</ul>
-          <ul> <b> Freshness</b>: If the content submitted by you is fairly older or hasn’t been updated for a long time–chances of rejection are higher. </ul>
-          </li>
+          <ul> 
+          <li> <b> Absence of a GitHub license </b>: Before submitting a project, ensure you have either added Apache 2.0 or MIT license.</li>
+          <li> <b> Incoherent README </b>: Make sure you don’t have an empty README. 
+          To get accepted, we encourage having a properly written, structured, and well-explained README with visuals, if needed. </li>
+          <li> <b>Improper Versioning </b>: Make sure your project follows the latest software updates. </li>
+          <li><b> Monetised</b>: If in some way we find out that the blogs are behind a paywall (in Medium) or have ads, or are getting monetized in any form, we don’t accept them.</li>
+          <li> <b> Localization</b>: Currently, because of being a fairly new platform–we don’t support content in a language other than English. 
+          Although, we are working toward localization–for now–it is not accepted.</li>
+          <li> <b> Freshness</b>: If the content submitted by you is fairly older or hasn’t been updated for a long time–chances of rejection are higher. </li>
+          </ul>
           For an extensive explanation, read our contributor-guidelines.pdf to fix the errors and re-submit. 
         
           </p>
@@ -162,12 +162,12 @@
           <p class="mt-6 font-bold">How to submit my content on the site?</p>
           <p class="mt-4">
             To submit the content:
-            <li>
-            <ol> Navigate to the DevLibrary homepage and click submit. </ol>
-            <ol> You will be redirected to the Advocu Form link. </ol>
-            <ol> Fill in your personal and project details. </ol>
-            <ol> Fill in your personal and project details. </ol>
-            </li>
+            <ol>
+            <li> Navigate to the DevLibrary homepage and click submit. </li>
+            <li> You will be redirected to the Advocu Form link. </li>
+            <li> Fill in your personal and project details. </li>
+            <li> Fill in your personal and project details. </li>
+            </ol>
             You will receive an email once your submission has been curated. 
             <b>Note</b>: Once submitted, you can’t edit the form. 
           </p>
