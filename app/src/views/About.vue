@@ -125,6 +125,7 @@
             <li> Machine Learning </li>
             <li> Cloud </li>
             </ul>
+            <p>
             DevLibrary aims to provide visibility to developers by showcasing their content. 
             We hope this visibility helps them reach a wider audience and inspire other developers to learn, contribute and share their knowledge.
           </p>
@@ -146,15 +147,16 @@
           <p class="mt-4">
           Submissions can get rejected due to various reasons. Some common reasons for rejecting content are listed below:
           <ul> 
-          <li> <b> Absence of a GitHub license </b>: Before submitting a project, ensure you have either added Apache 2.0 or MIT license.</li>
-          <li> <b> Incoherent README </b>: Make sure you don’t have an empty README. 
+          <li> <strong> Absence of a GitHub license </strong>: Before submitting a project, ensure you have either added Apache 2.0 or MIT license.</li>
+          <li> <strong>  Incoherent README </strong>: Make sure you don’t have an empty README. 
           To get accepted, we encourage having a properly written, structured, and well-explained README with visuals, if needed. </li>
-          <li> <b>Improper Versioning </b>: Make sure your project follows the latest software updates. </li>
-          <li><b> Monetised</b>: If in some way we find out that the blogs are behind a paywall (in Medium) or have ads, or are getting monetized in any form, we don’t accept them.</li>
-          <li> <b> Localization</b>: Currently, because of being a fairly new platform–we don’t support content in a language other than English. 
+          <li> <strong> Improper Versioning </strong>: Make sure your project follows the latest software updates. </li>
+          <li><strong>  Monetised</strong>: If in some way we find out that the blogs are behind a paywall (in Medium) or have ads, or are getting monetized in any form, we don’t accept them.</li>
+          <li> <strong>  Localization</strong>: Currently, because of being a fairly new platform–we don’t support content in a language other than English. 
           Although, we are working toward localization–for now–it is not accepted.</li>
-          <li> <b> Freshness</b>: If the content submitted by you is fairly older or hasn’t been updated for a long time–chances of rejection are higher. </li>
+          <li> <strong> Freshness</strong>: If the content submitted by you is fairly older or hasn’t been updated for a long time–chances of rejection are higher. </li>
           </ul>
+          <p>
           For an extensive explanation, read our contributor-guidelines.pdf to fix the errors and re-submit. 
         
           </p>
@@ -168,6 +170,7 @@
             <li> Fill in your personal and project details. </li>
             <li> Fill in your personal and project details. </li>
             </ol>
+            <p>
             You will receive an email once your submission has been curated. 
             <b>Note</b>: Once submitted, you can’t edit the form. 
           </p>
@@ -228,8 +231,8 @@
             <ul> Contributor Badge on Google Developer Profile </ul>
             <ul> Stamp of Google on your work </ul>
             <ul> Feature in our monthly newsletter </ul>
-            
            </li>
+           <p>
            And many more surprises, on the way.
           </p>
           <p class="mt-6 font-bold">
@@ -262,7 +265,7 @@
             site may prove useful to you as it references curated open source
             projects and libraries that you can re-use and learn from.
           </p>
-          <p class="mt-20"></p>
+          
         </div>
       </div>
     </div>
