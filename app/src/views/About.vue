@@ -120,26 +120,26 @@
             external sites (Medium, Hashnode, Dev.to, personal sites) built
             using any of the Google Technologies like:
           </p>
-          <li>
-            <ul>
+          <ul class="ml-6 mt-2 list-disc">
+            <li>
               Angular
-            </ul>
-            <ul>
+            </li>
+            <li>
               Android
-            </ul>
-            <ul>
+            </li>
+            <li>
               Flutter
-            </ul>
-            <ul>
+            </li>
+            <li>
               Firebase
-            </ul>
-            <ul>
+            </li>
+            <li>
               Machine Learning
-            </ul>
-            <ul>
+            </li>
+            <li>
               Cloud
-            </ul>
-          </li>
+            </li>
+          </ul>
 
           <p>
             DevLibrary aims to provide visibility to developers by showcasing
@@ -169,40 +169,40 @@
             Submissions can get rejected due to various reasons. Some common
             reasons for rejecting content are listed below:
           </p>
-          <li>
-            <ul>
+          <ul class="ml-6 mt-2 list-disc">
+            <li>
               <strong> Absence of a GitHub license </strong>
               : Before submitting a project, ensure you have either added Apache
               2.0 or MIT license.
-            </ul>
-            <ul>
+            </li>
+            <li>
               <strong> Incoherent README </strong>
               : Make sure you don’t have an empty README. To get accepted, we
               encourage having a properly written, structured, and
               well-explained README with visuals, if needed.
-            </ul>
-            <ul>
+            </li>
+            <li>
               <strong> Improper Versioning </strong>
               : Make sure your project follows the latest software updates.
-            </ul>
-            <ul>
+            </li>
+            <li>
               <strong> Monetised</strong>
               : If in some way we find out that the blogs are behind a paywall
               (in Medium) or have ads, or are getting monetized in any form, we
               don’t accept them.
-            </ul>
-            <ul>
+            </li>
+            <li>
               <strong> Localization</strong>
               : Currently, because of being a fairly new platform–we don’t
               support content in a language other than English. Although, we are
               working toward localization–for now–it is not accepted.
-            </ul>
-            <ul>
+            </li>
+            <li>
               <strong> Freshness</strong>
               : If the content submitted by you is fairly older or hasn’t been
               updated for a long time–chances of rejection are higher.
-            </ul>
-          </li>
+            </li>
+          </ul>
 
           <p>
             For an extensive explanation, read our contributor-guidelines.pdf to
@@ -211,20 +211,20 @@
 
           <p class="mt-6 font-bold">How to submit my content on the site?</p>
           <p class="mt-4">To submit the content:</p>
-          <li>
-            <ol>
+          <ol class="ml-6 mt-2 list-disc">
+            <li>
               Navigate to the DevLibrary homepage and click submit.
-            </ol>
-            <ol>
+            </li>
+            <li>
               You will be redirected to the Advocu Form link.
-            </ol>
-            <ol>
+            </li>
+            <li>
               Fill in your personal and project details.
-            </ol>
-            <ol>
+            </li>
+            <li>
               Click Submit.
-            </ol>
-          </li>
+            </li>
+          </ol>
 
           <p>
             You will receive an email once your submission has been curated.
@@ -290,20 +290,20 @@
             What is hard work without any recognition! If you become an author
             at Dev Library, you receive:
           </p>
-          <li>
-            <ul>
+          <ul class="ml-6 mt-2 list-disc">
+            <li>
               Visibility of your work
-            </ul>
-            <ul>
+            </li>
+            <li>
               Contributor Badge on Google Developer Profile
-            </ul>
-            <ul>
+            </li>
+            <li>
               Stamp of Google on your work
-            </ul>
-            <ul>
+            </li>
+            <li>
               Feature in our monthly newsletter
-            </ul>
-          </li>
+            </li>
+          </ul>
 
           <p>And many more surprises!</p>
 
