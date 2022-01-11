@@ -113,74 +113,220 @@
         <h1>Frequently Asked Questions</h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg">
+          <p class="mt-6 font-bold">What is Dev Library?</p>
+          <p class="mt-4">
+            Dev Library is an open-source platform showcasing a developer’s work
+            with Google technologies. It hosts GitHub projects and Blogs from
+            external sites (Medium, Hashnode, Dev.to, personal sites) built
+            using any of the Google Technologies like:
+          </p>
+          <ul class="ml-6 mt-2 list-disc">
+            <li>
+              Angular
+            </li>
+            <li>
+              Android
+            </li>
+            <li>
+              Flutter
+            </li>
+            <li>
+              Firebase
+            </li>
+            <li>
+              Machine Learning
+            </li>
+            <li>
+              Cloud
+            </li>
+          </ul>
+
+          <p>
+            DevLibrary aims to provide visibility to developers by showcasing
+            their content. We hope this visibility helps them reach a wider
+            audience and inspire other developers to learn, contribute and share
+            their knowledge.
+          </p>
+
           <p class="mt-6 font-bold">What is the purpose of this site?</p>
           <p class="mt-4">
             We want to enable developers all around the world to showcase their
             use of Google technologies and for all developers to find
             inspiration and tools to use in their own projects.
           </p>
+
           <p class="mt-6 font-bold">
-            Does this replace Google’s technical documentation and guides?
+            Will this remove the need for documentations and guides?
           </p>
           <p class="mt-4">
             Not at all! This site is a complement to Google’s official
             documentation. We hope you’ll find inspiring and useful pieces of
             code built by developers worldwide.
           </p>
-          <p class="mt-6 font-bold">How do I submit content to the site?</p>
+
+          <p class="mt-6 font-bold">Why did my submission get rejected?</p>
           <p class="mt-4">
-            You can submit your content by clicking
-            <b class="font-bold">Submit</b> at the top of any page. We aim to
-            reply within 2-4 weeks.
+            Submissions can get rejected due to various reasons. Some common
+            reasons for rejecting content are listed below:
           </p>
+          <ul class="ml-6 mt-2 list-disc">
+            <li>
+              <strong> Absence of a GitHub license </strong>
+              : Before submitting a project, ensure you have either added Apache
+              2.0 or MIT license.
+            </li>
+            <li>
+              <strong> Incoherent README </strong>
+              : Make sure you don’t have an empty README. To get accepted, we
+              encourage having a properly written, structured, and
+              well-explained README with visuals, if needed.
+            </li>
+            <li>
+              <strong> Improper Versioning </strong>
+              : Make sure your project follows the latest software updates.
+            </li>
+            <li>
+              <strong> Monetised</strong>
+              : If in some way we find out that the blogs are behind a paywall
+              (in Medium) or have ads, or are getting monetized in any form, we
+              don’t accept them.
+            </li>
+            <li>
+              <strong> Localization</strong>
+              : Currently, because of being a fairly new platform–we don’t
+              support content in a language other than English. Although, we are
+              working toward localization–for now–it is not accepted.
+            </li>
+            <li>
+              <strong> Freshness</strong>
+              : If the content submitted by you is fairly older or hasn’t been
+              updated for a long time–chances of rejection are higher.
+            </li>
+          </ul>
+
+          <p>
+            For an extensive explanation, read our contributor-guidelines.pdf to
+            fix the errors and re-submit.
+          </p>
+
+          <p class="mt-6 font-bold">How to submit my content on the site?</p>
+          <p class="mt-4">To submit the content:</p>
+          <ol class="ml-6 mt-2 list-disc">
+            <li>
+              Navigate to the DevLibrary homepage and click submit.
+            </li>
+            <li>
+              You will be redirected to the Advocu Form link.
+            </li>
+            <li>
+              Fill in your personal and project details.
+            </li>
+            <li>
+              Click Submit.
+            </li>
+          </ol>
+
+          <p>
+            You will receive an email once your submission has been curated.
+            <b>Note</b>: Once submitted, you can’t edit the form.
+          </p>
+
+          <p class="mt-6 font-bold">
+            How many submissions can an individual make?
+          </p>
+          <p class="mt-4">
+            The more the merrier. You can make as many submissions as you want.
+            We have no limit to quality content being served on our site.
+          </p>
+
+          <p class="mt-6 font-bold">
+            What is the process of selection/rejection of content?
+          </p>
+          <p class="mt-4">
+            Once you make the submission of your work (GitHub or Blog), internal
+            Google experts from each product area review it. Check it for
+            quality, freshness, and uniqueness. If it passes all the checks,
+            they select the content to go on the site. You then receive an email
+            about the acceptance of your work.
+          </p>
+
           <p class="mt-6 font-bold">How does a submission get selected?</p>
           <p class="mt-4">
             Each submission will be reviewed by Google product experts to
             determine if it is high-quality, relevant, and unique.
           </p>
+
           <p class="mt-6 font-bold">
-            How long does it take for content to be approved and appear on the
-            site?
+            When will I get updates about the rejection/acceptance of my
+            content?
           </p>
           <p class="mt-4">
-            You should be hearing from us within a couple of weeks of having
-            submitted your content. Don’t panic if you don’t hear from us
-            though: the volume of submissions may vary over time, but we’ll make
-            it a point to always get back to you.
+            As soon as you submit your content, you receive an email from the
+            Advocu team confirming your submission. Curators generally take 1-2
+            weeks to curate the content. Once done, you receive an email for the
+            Acceptance/Rejection of your work. If you don’t see an email, make
+            sure to check your spam or promotions folder. Also, allowlist
+            DevLibrary emails to refrain from missing out on the updates from
+            the next time onward.
           </p>
-          <p class="mt-6 font-bold">How can I update content on the site?</p>
+
+          <p class="mt-6 font-bold">
+            How long does it take for content to appear on the site?
+          </p>
           <p class="mt-4">
-            All of the content on DevLibrary is open source, so you can update
-            content by sending us a Pull Request here:
-            <a href="https://github.com/google/devlibrary">
-              https://github.com/google/devlibrary
-            </a>
+            Once approved, the content gets on the site within a week of
+            approval.
           </p>
+
+          <p class="mt-6 font-bold">
+            Can I submit content in different product categories?
+          </p>
+          <p class="mt-4">Yes! YOU CAN.</p>
+
           <p class="mt-6 font-bold">
             Is there any reward or recognition for contributors?
           </p>
           <p class="mt-4">
-            If your content is selected, we hope that the increased visibility
-            that your content gets constitutes an extra token of appreciation.
+            What is hard work without any recognition! If you become an author
+            at Dev Library, you receive:
           </p>
+          <ul class="ml-6 mt-2 list-disc">
+            <li>
+              Visibility of your work
+            </li>
+            <li>
+              Contributor Badge on Google Developer Profile
+            </li>
+            <li>
+              Stamp of Google on your work
+            </li>
+            <li>
+              Feature in our monthly newsletter
+            </li>
+          </ul>
+
+          <p>And many more surprises!</p>
+
           <p class="mt-6 font-bold">
             How do I request for content to be removed?
           </p>
           <p class="mt-4">
-            Fill out
-            <a href="https://forms.gle/FPQg4s8DUjEdqyQR7" target="blank">
-              this form
+            To remove your content, please raise a Pull Request on the Dev
+            Library’s GitHub repo. In case you are unable to do this, please
+            fill out the
+            <a href="https://forms.gle/MdMEj7hkdWFLUBrf7" target="blank">
+              Contact Us form
             </a>
             and we will get back to you in 48 hours for next steps.
           </p>
-          <p class="mt-6 font-bold">
-            How do I report an error in the technical documentation?
-          </p>
+
+          <p class="mt-6 font-bold">How do I raise an issue?</p>
           <p class="mt-4">
-            Each piece of content on this site is authored by a different
-            developer and hosted on an external platform (GitHub, Medium, etc).
-            Please use the feedback mechanisms available on those platforms in
-            order to help improve content directly.
+            To raise an issue, please post your issue here on the Dev Library
+            repo. In case you are unable to do this, please fill out the
+            <a href="https://forms.gle/MdMEj7hkdWFLUBrf7" target="blank">
+              Contact Us form</a
+            >.
           </p>
           <p class="mt-6 font-bold">
             I want to learn how to code, is this the right resource for me?
