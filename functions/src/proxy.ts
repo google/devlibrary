@@ -134,7 +134,7 @@ function diagnoseMissingDocument(path: string) {
   // Repo page:
   //  /products/<product>/repos/<repo>/pages/<page path base64>
 
-  const segments = path.split("/").filter(x => x && x.length > 0);
+  const segments = path.split("/").filter((x) => x && x.length > 0);
   const first = segments[0];
 
   if (first === "authors") {
