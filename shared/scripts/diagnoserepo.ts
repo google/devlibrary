@@ -6,9 +6,10 @@ import { getRepoContent, getRepoLicense } from "./addproject";
 
 export async function diagnoseRepo(metadata: RepoMetadata) {
   const { owner, repo, content } = metadata;
-  console.log();
   console.log(`Repo: https://github.com/${owner}/${repo}`);
   console.log();
+
+  let hasError = false;
 
   // 1) Check the repo's license
   const license = await getRepoLicense(owner, repo);
@@ -20,9 +21,11 @@ export async function diagnoseRepo(metadata: RepoMetadata) {
       console.log(
         `❌ Error: ${owner}/${repo} has invalid license type: ${key}`
       );
+      hasError = true;
     }
   } else {
     console.log(`❌ Error: ${owner}/${repo} does not have a license.`);
+    hasError = true;
   }
 
   // 2) Check that the content paths actually exist
@@ -38,7 +41,12 @@ export async function diagnoseRepo(metadata: RepoMetadata) {
       console.log(`✅ Valid content ${p}`);
     } else {
       console.log(`❌ Error: ${owner}/${repo} has no content path ${p}`);
+      hasError = true;
     }
+  }
+
+  if (hasError) {
+    process.exit(1);
   }
 }
 
@@ -54,9 +62,11 @@ export async function main(args: string[]) {
     const configFilePath = args[i];
     const absPath = path.resolve(configFilePath);
 
+    console.log(`File: ${configFilePath}`);
     const fileContent = fs.readFileSync(absPath).toString();
     const metadata = JSON.parse(fileContent) as RepoMetadata;
     await diagnoseRepo(metadata);
+    console.log();
   }
 }
 
