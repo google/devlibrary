@@ -224,7 +224,7 @@ async function refreshRepoInternal(
     );
 
     // Delete the repo and exit early
-    deleteRepoData(product, id);
+    await deleteRepoData(product, id);
     return;
   }
 
