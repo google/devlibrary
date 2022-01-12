@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "patilshreyas"
+  ],
+  "author": "Shreyas Patil",
+  "title": "This is about properly filtering and modifying text input while using TextField in Jetpack Compose",
+  "link": "https://medium.com/@patilshreyas/filtering-and-modifying-text-input-in-jetpack-compose-way-8f7eeedd958",
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "ui"
+  ]
+}

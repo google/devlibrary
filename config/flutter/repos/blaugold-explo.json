@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "blaugold"
+  ],
+  "owner": "blaugold",
+  "repo": "explo",
+  "name": "Explo",
+  "shortDescription": "Explo allows you to explore the render tree of a Flutter app in 3D, through an exploded representation.",
+  "longDescription": "Explo allows you to explore the render tree of a Flutter app in 3D, through an exploded representation.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "general"
+  ]
+}

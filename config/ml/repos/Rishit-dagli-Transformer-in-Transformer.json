@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rishit-dagli"
+  ],
+  "owner": "Rishit-dagli",
+  "repo": "Transformer-in-Transformer",
+  "name": "Transformer in Transformer",
+  "shortDescription": "A TensorFlow/Keras implementation of the Transformer in Transformer paper for image classification, attention inside local patches: pixel-level attention paired with patch level attention",
+  "longDescription": "A TensorFlow/Keras implementation of the Transformer in Transformer paper for image classification, attention inside local patches: pixel-level attention paired with patch level attention",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "theory"
+  ]
+}
