@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rishit-dagli"
+  ],
+  "owner": "Rishit-dagli",
+  "repo": "CPPE-Dataset",
+  "name": "CPPE 5",
+  "shortDescription": "CPPE - 5 (Medical Personal Protective Equipment) is a new challenging dataset with the goal to allow the study of subordinate categorization of medical personal protective equipments",
+  "longDescription": "CPPE - 5 (Medical Personal Protective Equipment) is a new challenging dataset with the goal to allow the study of subordinate categorization of medical personal protective equipments",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "tpu"
+  ]
+}

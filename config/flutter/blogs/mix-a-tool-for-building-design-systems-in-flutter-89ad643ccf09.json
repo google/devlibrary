@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["sbis04"],
+  "author": "Souvik Biswas",
+  "title": "Mix helps you to build design systems in Flutter expressively and effortlessly. It offers primitive building blocks to help developers and designers create beautiful and consistent user interfaces.",
+  "link": "https://medium.com/flutter-community/mix-a-tool-for-building-design-systems-in-flutter-89ad643ccf09",
+  "tags": [
+    "plugins",
+    "widgets",
+    "mobile"
+  ]
+}

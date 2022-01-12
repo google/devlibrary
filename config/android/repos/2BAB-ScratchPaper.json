@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "2bab"
+  ],
+  "owner": "2BAB",
+  "repo": "ScratchPaper",
+  "name": "ScratchPaper",
+  "shortDescription": "A Gradle Plugin for adding variant/version/git-commit-id/etc. information to APK launcher icon.",
+  "longDescription": "A Gradle Plugin for adding variant/version/git-commit-id/etc. information to APK launcher icon.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools",
+    "kotlin"
+  ]
+}

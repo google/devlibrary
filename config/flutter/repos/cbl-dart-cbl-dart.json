@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "cbl-dart",
+  "repo": "cbl-dart",
+  "name": "Couchbase Lite for Dart and Flutter",
+  "shortDescription": "Couchbase Lite is an embedded, NoSQL JSON Document Style database, supporting Blobs, Encryption, N1QL Queries, Live Queries, Full-Text Search and Data Sync.",
+  "longDescription": "Couchbase Lite is an embedded, NoSQL JSON Document Style database, supporting Blobs, Encryption, N1QL Queries, Live Queries, Full-Text Search and Data Sync.",
+  "content": "packages/cbl/README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "plugins"
+  ]
+}

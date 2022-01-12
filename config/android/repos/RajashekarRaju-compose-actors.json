@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rajashekarraju"
+  ],
+  "owner": "RajashekarRaju",
+  "repo": "compose-actors",
+  "name": "Compose Actors",
+  "shortDescription": "Android app built with jetpack 🚀 compose follows new revamped guide to app architecture. Implemented with State, Coroutines ➰, ViewModels, Repository pattern, Light/Dark theme 🌈 MD3, Animations etc",
+  "longDescription": "Android app built with jetpack 🚀 compose follows new revamped guide to app architecture. Implemented with State, Coroutines ➰, ViewModels, Repository pattern, Light/Dark theme 🌈 MD3, Animations etc",
+  "content": "https://github.com/RajashekarRaju/compose-actors/blob/master/README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "ui"
+  ]
+}
