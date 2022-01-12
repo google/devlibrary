@@ -9,7 +9,7 @@
   "name": "Explore",
   "shortDescription": "Sample app for demonstrating how to integrate Google Sign-In using Firebase in Flutter Web. It also supports a responsive design that adjusts the widgets based on the window size.",
   "longDescription": "Sample app for demonstrating how to integrate Google Sign-In using Firebase in Flutter Web. It also supports a responsive design that adjusts the widgets based on the window size.",
-  "content": "https://github.com/sbis04/explore/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "firebase",

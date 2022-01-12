@@ -9,10 +9,10 @@
   "name": "Neuro-Symbolic Sudoku Solver",
   "shortDescription": "PyTorch implementation for the Neuro-Symbolic Sudoku Solver leveraging the power of Neural Logic Machines (NLM developed by Google). This project applies NLM to more complex Sudoku problem.",
   "longDescription": "PyTorch implementation for the Neuro-Symbolic Sudoku Solver leveraging the power of Neural Logic Machines (NLM developed by Google). This project applies NLM to more complex Sudoku problem.",
-  "content": "https://github.com/ashutosh1919/neuro-symbolic-sudoku-solver/blob/main/NLM_final_paper.pdf",
+  "content": "README.md",
   "pages": [],
   "tags": [
-    "xai",
-    "game"
+    "vision",
+    "nlp"
   ]
 }
