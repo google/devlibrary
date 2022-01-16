@@ -7,7 +7,7 @@
   "name": "Onesignal-ngx",
   "shortDescription": "npm package that helps integrate push notifications into your Angular applications using OneSignal as a push notification provider.",
   "longDescription": "npm package that helps integrate push notifications into your Angular applications using OneSignal as a push notification provider.",
-  "content": "https://github.com/OneSignal/onesignal-ngx/blob/main/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "libraries"
