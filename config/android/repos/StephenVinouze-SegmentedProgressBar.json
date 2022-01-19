@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "stephenvinouze"
+  ],
+  "owner": "StephenVinouze",
+  "repo": "SegmentedProgressBar",
+  "name": "SegmentedProgressBar",
+  "shortDescription": "Beautiful progress bar with segments. Highly customizable. Fully written with Jetpack Compose",
+  "longDescription": "Beautiful progress bar with segments. Highly customizable. Fully written with Jetpack Compose",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui",
+    "kotlin",
+    "compose"
+  ]
+}

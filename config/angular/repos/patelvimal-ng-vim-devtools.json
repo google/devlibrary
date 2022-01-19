@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "patelvimal"
+  ],
+  "owner": "patelvimal",
+  "repo": "ng-vim-devtools",
+  "name": "@ng-vim/devtools",
+  "shortDescription": "A schematic to integrate husky, prettier and commit-lint in your angular application",
+  "longDescription": "A schematic to integrate husky, prettier and commit-lint in your angular application",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}
