@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["googlesamples"],
+  "owner": "googlesamples",
+  "repo": "android-media-controller",
+  "name": "Media Controller Test",
+  "shortDescription": "Create a simple MediaController that connects to a MediaBrowserService in order to test inter-app media controls. This tool is described in the Android documentation: Using the media controller test a",
+  "longDescription": "Create a simple MediaController that connects to a MediaBrowserService in order to test inter-app media controls. This tool is described in the Android documentation: Using the media controller test a",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "architecture"
+  ]
+}

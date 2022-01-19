@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["googlesamples"],
+  "owner": "googlesamples",
+  "repo": "android-custom-lint-rules",
+  "name": "Custom Lint Rules",
+  "shortDescription": "The lint source code contains a lot of documentation on how to write custom checks; this git repository contains a snapshot of this documentation which you can read here:",
+  "longDescription": "The lint source code contains a lot of documentation on how to write custom checks; this git repository contains a snapshot of this documentation which you can read here:",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "architecture"
+  ]
+}
