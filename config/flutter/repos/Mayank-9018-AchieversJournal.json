@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mayank-9018"
+  ],
+  "owner": "Mayank-9018",
+  "repo": "AchieversJournal",
+  "name": "AchieversJournal",
+  "shortDescription": "A Simplistic goals tracker app.",
+  "longDescription": "A Simplistic goals tracker app.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "firebase",
+    "widgets"
+  ]
+}

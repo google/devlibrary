@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "dusskapark"
+  ],
+  "owner": "dusskapark",
+  "repo": "figma-ml",
+  "name": "Figma-ML",
+  "shortDescription": "A Design System Plugin Made with TensorFlow JS - like spell check for design systems.",
+  "longDescription": "A Design System Plugin Made with TensorFlow JS - like spell check for design systems.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "tfjs",
+    "vision",
+    "js"
+  ]
+}
