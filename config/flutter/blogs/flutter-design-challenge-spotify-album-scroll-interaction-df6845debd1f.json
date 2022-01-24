@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "takrutvik"
+  ],
+  "author": "Rutvik Tak",
+  "title": "Building custom scroll interaction inspired by the Spotify mobile app using Slivers in Flutter with detailed explanation of the implementation.",
+  "link": "https://medium.com/@TakRutvik/flutter-design-challenge-spotify-album-scroll-interaction-df6845debd1f",
+  "tags": [
+    "widgets",
+    "mobile",
+    "samples"
+  ]
+}

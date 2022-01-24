@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ashishrawat2911"
+  ],
+  "owner": "ashishrawat2911",
+  "repo": "flutter_commerce",
+  "name": "flutter_commerce",
+  "shortDescription": "An Ecommerce application built in Flutter using Firebase.",
+  "longDescription": "An Ecommerce application built in Flutter using Firebase.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "firebase",
+    "web"
+  ]
+}

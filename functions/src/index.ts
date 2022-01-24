@@ -91,7 +91,7 @@ async function refreshAllProjects() {
         product,
         id,
         metadata,
-        force: false
+        force: false,
       });
     }
 
@@ -100,7 +100,7 @@ async function refreshAllProjects() {
         product,
         id,
         metadata,
-        force: false
+        force: false,
       });
     }
 
@@ -166,6 +166,9 @@ async function refreshRepoInternal(
 
   // Get the existing repo data from the database
   const existing = await getRepoData(product, id);
+  if (!existing) {
+    console.log(`[${product}/${id}] is new.`);
+  }
 
   // Get the latest repo stats from GitHub
   const ghRepo = await github.getRepo(metadata.owner, metadata.repo);
@@ -182,7 +185,7 @@ async function refreshRepoInternal(
 
   const recentlyPushed =
     existing && stats.lastUpdated > existing.stats.lastUpdated;
-  if (existing && recentlyPushed) {
+  if (recentlyPushed) {
     console.log(
       `[${product}/${id}] has been updated since last pull (lastUpdated = ${stats.lastUpdated}).`
     );
@@ -195,7 +198,7 @@ async function refreshRepoInternal(
   const metadataChanged = existing && !equal(existing.metadata, metadata);
   if (existing && metadataChanged) {
     console.log(`[${product}/${id}] repo has metadata changes.`);
-    console.log("existing", JSON.stringify(existing.metadata));
+    console.log("old", JSON.stringify(existing.metadata));
     console.log("new", JSON.stringify(metadata));
   } else {
     console.log(`[${product}/${id}] does not have metadata changes.`);
@@ -207,7 +210,7 @@ async function refreshRepoInternal(
   //  - It was recently pushed (on their side)
   //
   // If the repo is not recently changed, we can exit early to save API calls
-  const shouldUpdate = recentlyPushed || metadataChanged || force;
+  const shouldUpdate = !existing || recentlyPushed || metadataChanged || force;
   if (!shouldUpdate) {
     console.log(`[${product}/${id}] skipping update.`);
     return;
@@ -221,7 +224,7 @@ async function refreshRepoInternal(
     );
 
     // Delete the repo and exit early
-    deleteRepoData(product, id);
+    await deleteRepoData(product, id);
     return;
   }
 

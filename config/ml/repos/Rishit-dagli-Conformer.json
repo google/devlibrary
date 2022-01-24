@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rishit-dagli"
+  ],
+  "owner": "Rishit-dagli",
+  "repo": "Conformer",
+  "name": "Conformer",
+  "shortDescription": "A TensorFlow/Keras implementation of Conformer which achieves the best of both worlds: transformers for content-based global interactions and CNNs to exploit local features",
+  "longDescription": "A TensorFlow/Keras implementation of Conformer which achieves the best of both worlds: transformers for content-based global interactions and CNNs to exploit local features",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    
+    "theory"
+  ]
+}

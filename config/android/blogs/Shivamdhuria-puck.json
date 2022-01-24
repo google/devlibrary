@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["shivamdhuria"],
+  "author": "Shivam Dhuria",
+  "title": "GitHub - Shivamdhuria/puck: Make composables draggable",
+  "link": "https://github.com/Shivamdhuria/puck",
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

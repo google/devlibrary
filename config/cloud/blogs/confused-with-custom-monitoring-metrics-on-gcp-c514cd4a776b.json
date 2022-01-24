@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["winter-code"],
+  "author": "Arpana Mehta",
+  "title": "Learn to create custom dashboards using the Google Cloud Monitoring APIs -- using Python",
+  "link": "https://medium.com/google-cloud/confused-with-custom-monitoring-metrics-on-gcp-c514cd4a776b",
+  "tags": [
+    "operations"
+  ]
+}

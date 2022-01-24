@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "birjuvachhani"
+  ],
+  "owner": "BirjuVachhani",
+  "repo": "adaptive_theme",
+  "name": "Adaptive Theme",
+  "shortDescription": "Easiest way to add support for light and dark theme in your Flutter app. It allows to manually set light or dark theme and also lets you define themes based on the system.",
+  "longDescription": "Easiest way to add support for light and dark theme in your Flutter app. It allows to manually set light or dark theme and also lets you define themes based on the system.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "web",
+    "general"
+  ]
+}

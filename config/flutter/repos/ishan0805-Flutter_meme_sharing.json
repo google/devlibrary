@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ishan0805"
+  ],
+  "owner": "ishan0805",
+  "repo": "Flutter_meme_sharing",
+  "name": "Flutter_meme_sharing",
+  "shortDescription": "It is full stack application for the purpose of meme sharing. It's front end is built with flutter and back end with FastApi (python).  Domain Driven Design is used with Riverpod .",
+  "longDescription": "It is full stack application for the purpose of meme sharing. It's front end is built with flutter and back end with FastApi (python).  Domain Driven Design is used with Riverpod .",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web",
+    "general",
+    "mobile"
+  ]
+}

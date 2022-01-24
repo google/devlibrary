@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sayannath"
+  ],
+  "owner": "sayannath",
+  "repo": "Image-Scene-TF-Hub",
+  "name": "Image Scene Classification",
+  "shortDescription": "The Image Scene Classification model can classify the images based on the scene. This includes the following categories like Portrait, Group Portrait, Kids, Dogs, Cats, Macro, Food, Beach, Mountains,",
+  "longDescription": "The Image Scene Classification model can classify the images based on the scene. This includes the following categories like Portrait, Group Portrait, Kids, Dogs, Cats, Macro, Food, Beach, Mountains,",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "mobile"
+  ]
+}

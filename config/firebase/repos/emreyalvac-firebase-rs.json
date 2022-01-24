@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "emreyalvac"
+  ],
+  "owner": "emreyalvac",
+  "repo": "firebase-rs",
+  "name": "Rust based Firebase Realtime Database Library",
+  "shortDescription": "Rust based Firebase Realtime Database Library",
+  "longDescription": "Rust based Firebase Realtime Database Library",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "admin"
+  ]
+}

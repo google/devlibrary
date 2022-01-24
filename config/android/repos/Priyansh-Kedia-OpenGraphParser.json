@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "priyansh-kedia"
+  ],
+  "owner": "Priyansh-Kedia",
+  "repo": "OpenGraphParser",
+  "name": "OpenGraphParser",
+  "shortDescription": "An easy-to-use library to get Open Graph tags for web links in Android.",
+  "longDescription": "An easy-to-use library to get Open Graph tags for web links in Android.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}
