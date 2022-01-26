@@ -5,7 +5,7 @@
     "shaileshkumarmishra"
   ],
   "author": "Shailesh Mishra",
-  "title": "Reduce DB upgrade downtime to less than 10 minutes using DMS on Google Cloud at no extra cost. Best practice of using Data migration service and secure connectivity between DB and clients.",
+  "title": "Guide to using Google Cloud Data Migration Service",
   "link": "https://medium.com/@shaileshkumarmishra/reduce-db-upgrade-downtime-to-less-than-10-minutes-using-dms-on-google-cloud-8704681e45ac",
   "tags": [
     "databases",
