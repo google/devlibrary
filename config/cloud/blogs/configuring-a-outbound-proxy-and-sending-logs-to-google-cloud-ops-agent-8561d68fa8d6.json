@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "ajiteshk"
+  ],
+  "author": "Ajitesh Kumar",
+  "title": "Configuring an Outbound Proxy and Sending logs to Google Cloud Ops Agent",
+  "link": "https://medium.com/@ajiteshk/configuring-a-outbound-proxy-and-sending-logs-to-google-cloud-ops-agent-8561d68fa8d6",
+  "tags": [
+    "compute"
+  ]
+}
