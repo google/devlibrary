@@ -150,27 +150,28 @@ export async function main() {
   const lastPullDate = new Date(advocuMetadata.lastPullTime);
   console.log(`Last pull: ${lastPullDate.toISOString()}`);
 
-  const url = `${API_HOST}${PATH_GET_APPLICATIONS}?status=${ApplicationStatus.CONTENT_VERIFICATION_APPROVED}`;
+  const params = {
+    status: ApplicationStatus.CONTENT_VERIFICATION_APPROVED,
+    from: lastPullDate.toISOString(),
+  };
+  const encodedParams = Object.entries(params)
+    .map((entry) => {
+      return `${encodeURIComponent(entry[0])}=${encodeURIComponent(entry[1])}`;
+    })
+    .join("&");
+
+  const url = `${API_HOST}${PATH_GET_APPLICATIONS}?${encodedParams}`;
   const res = await fetch(url, {
     headers: {
       Authorization: `Bearer ${advocuToken}`,
     },
   });
 
-  // TODO: Do this filtering in the API
   const applications = (await res.json()) as Application[];
-  const newApplications = applications.filter((a) => {
-    const reviewDate = a.steps.contentVerification.dates.review;
-    if (!reviewDate) {
-      return false;
-    }
-
-    return new Date(reviewDate).getTime() > lastPullDate.getTime();
-  });
-  console.log(`New items: ${newApplications.length}`);
+  console.log(`New items: ${applications.length}`);
 
   // For each new application, add the project and the author files
-  for (const a of newApplications) {
+  for (const a of applications) {
     console.log();
     const product = a.productCategory;
 
