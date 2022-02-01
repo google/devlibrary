@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["xavidop"],
+  "author": "Xavier Portilla Edo",
+  "title": "Local Debugging on a Google Action - DZone AI",
+  "link": "https://dzone.com/articles/local-debugging-on-a-google-action",
+  "tags": [
+    "actions-on-google",
+    "google-assistant",
+    "assistant-conversation"
+  ]
+}

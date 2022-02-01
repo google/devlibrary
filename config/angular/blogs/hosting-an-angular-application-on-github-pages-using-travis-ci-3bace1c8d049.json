@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "author": "Rodrigo Kamada",
+  "title": "Hosting an Angular application on GitHub Pages using Travis CI",
+  "link": "https://rodrigokamada.medium.com/hosting-an-angular-application-on-github-pages-using-travis-ci-3bace1c8d049",
+  "tags": [
+    "demos"
+  ]
+}
