@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["iamjosephmj"],
   "author": "Joseph James",
   "title": "GitHub - iamjosephmj/kotlin-design-patterns: This repo is a beginner handbook for learning design patterns in Kotlin",
   "link": "https://github.com/iamjosephmj/kotlin-design-patterns",
