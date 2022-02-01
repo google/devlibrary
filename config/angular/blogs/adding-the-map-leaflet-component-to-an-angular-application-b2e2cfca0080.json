@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "author": "Rodrigo Kamada",
+  "title": "Adding the map Leaflet component to an Angular application",
+  "link": "https://rodrigokamada.medium.com/adding-the-map-leaflet-component-to-an-angular-application-b2e2cfca0080",
+  "tags": [
+    "demos"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "xavidop"
+  ],
+  "owner": "xavidop",
+  "repo": "google-action-type-importer",
+  "name": "Google Action Type Importer",
+  "shortDescription": "This CLI allows you to transform your Alexa Custom Slots into Google Action Types.",
+  "longDescription": "This CLI allows you to transform your Alexa Custom Slots into Google Action Types.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "assistant-conversation",
+    "actions-on-google",
+    "google-assistant"
+  ]
+}

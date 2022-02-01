@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "owner": "rodrigokamada",
+  "repo": "angular-recaptcha-v3",
+  "name": "Angular Google reCAPTCHA v3",
+  "shortDescription": "Hosting an Angular application on GitHub Pages using GitHub Actions",
+  "longDescription": "Hosting an Angular application on GitHub Pages using GitHub Actions",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

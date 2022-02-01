@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "author": "Rodrigo Kamada",
+  "title": "Hosting an Angular application on GitHub Pages using GitHub Actions",
+  "link": "https://rodrigokamada.medium.com/hosting-an-angular-application-on-github-pages-using-github-actions-da072698b8b9",
+  "tags": [
+    "demos"
+  ]
+}

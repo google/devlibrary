@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "author": "Rodrigo Kamada",
+  "title": "Adding the internationalization (i18n) component to an Angular application",
+  "link": "https://rodrigokamada.medium.com/adding-the-internationalization-i18n-component-to-an-angular-application-320fd8caad0f",
+  "tags": [
+    "demos",
+    "getting-started"
+  ]
+}

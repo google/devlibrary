@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "hi-manshu"
+  ],
+  "owner": "hi-manshu",
+  "repo": "kalendar",
+  "name": "Kalendar",
+  "shortDescription": "It's a Jetpack Compose's Elementary Calendar SDK with multiple different options.",
+  "longDescription": "It's a Jetpack Compose's Elementary Calendar SDK with multiple different options.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}
