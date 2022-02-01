@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akshay2211"
+  ],
+  "owner": "akshay2211",
+  "repo": "BubbleTabBar",
+  "name": "BubbleTabBar",
+  "shortDescription": "BubbleTabBar is a bottom navigation bar with customizable bubble-like tabs",
+  "longDescription": "BubbleTabBar is a bottom navigation bar with customizable bubble-like tabs",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui",
+    "modern-android-development",
+    "kotlin"
+  ]
+}

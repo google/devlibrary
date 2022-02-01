@@ -52,6 +52,12 @@ const styles: Record<string, ProductStyle> = {
     text: "text-ml-text",
     iconBorder: "border-ml-accent",
   },
+ assistant: {
+    bg: "bg-assistant-bg",
+    text: "text-assistant-text",
+    iconBorder: "border-assistant-accent",
+  },
+
 };
 
 // Listing these classes here means that PurgeCSS will not
