@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "author": "Rodrigo Kamada",
+  "title": "Authentication using the Amazon Cognito to an Angular application",
+  "link": "https://rodrigokamada.medium.com/authentication-using-the-amazon-cognito-to-an-angular-application-591eea4f4275",
+  "tags": [
+    "demos"
+  ]
+}
