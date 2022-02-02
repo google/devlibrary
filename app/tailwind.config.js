@@ -67,8 +67,6 @@ module.exports = {
           accent: "#9AA0A6",
           bg: "#4285F4",
           text: "#FFFFFF",
-
-
         },
         gblue: {
           50: "#e8f0fe",

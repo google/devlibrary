@@ -122,27 +122,13 @@
             using any of the Google Technologies like:
           </p>
           <ul class="ml-6 mt-2 list-disc">
-            <li>
-              Angular
-            </li>
-            <li>
-              Android
-            </li>
-            <li>
-              Flutter
-            </li>
-            <li>
-              Firebase
-            </li>
-            <li>
-              Machine Learning
-            </li>
-            <li>
-              Cloud
-            </li>
-            <li>
-            Google Assistant
-            </li>
+            <li>Angular</li>
+            <li>Android</li>
+            <li>Flutter</li>
+            <li>Firebase</li>
+            <li>Machine Learning</li>
+            <li>Cloud</li>
+            <li>Google Assistant</li>
           </ul>
 
           <p>
@@ -216,18 +202,10 @@
           <p class="mt-6 font-bold">How to submit my content on the site?</p>
           <p class="mt-4">To submit the content:</p>
           <ol class="ml-6 mt-2 list-disc">
-            <li>
-              Navigate to the DevLibrary homepage and click submit.
-            </li>
-            <li>
-              You will be redirected to the Advocu Form link.
-            </li>
-            <li>
-              Fill in your personal and project details.
-            </li>
-            <li>
-              Click Submit.
-            </li>
+            <li>Navigate to the DevLibrary homepage and click submit.</li>
+            <li>You will be redirected to the Advocu Form link.</li>
+            <li>Fill in your personal and project details.</li>
+            <li>Click Submit.</li>
           </ol>
 
           <p>
@@ -295,18 +273,10 @@
             at Dev Library, you receive:
           </p>
           <ul class="ml-6 mt-2 list-disc">
-            <li>
-              Visibility of your work
-            </li>
-            <li>
-              Contributor Badge on Google Developer Profile
-            </li>
-            <li>
-              Stamp of Google on your work
-            </li>
-            <li>
-              Feature in our monthly newsletter
-            </li>
+            <li>Visibility of your work</li>
+            <li>Contributor Badge on Google Developer Profile</li>
+            <li>Stamp of Google on your work</li>
+            <li>Feature in our monthly newsletter</li>
           </ul>
 
           <p>And many more surprises!</p>
