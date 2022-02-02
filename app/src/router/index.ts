@@ -87,7 +87,7 @@ const router = new VueRouter({
 router.afterEach((to, from) => {
   if (to.path !== from.path) {
     console.log(`router: ${from.path} --> ${to.path}`);
-    routeChange(to.path, to.name || "Unknown");
+    routeChange(to);
   }
 });
 

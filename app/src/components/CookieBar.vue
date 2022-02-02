@@ -71,7 +71,7 @@ export default class CookieBar extends Vue {
 
   public grantConsent() {
     // After optIn make sure we trigger a page view to capture the current page
-    pageView(this.$route.path, this.$route.name || "Unknown");
+    pageView(this.$route);
   }
 }
 </script>

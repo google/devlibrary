@@ -3,14 +3,14 @@
  * https://developers.google.com/analytics/devguides/collection/gtagjs/single-page-applications
  */
 
-export function routeChange(path: string, title?: string) {
-  gtag("set", "page_path", path);
-  if (title) {
-    gtag("set", "page_title", title);
-  }
+import { Route } from "vue-router";
+
+export function routeChange(route: Route) {
+  gtag("set", "page_path", route.path);
+  gtag("set", "page_title", route.name || "Unknown");
 }
 
-export function pageView(path: string, title?: string) {
-  routeChange(path, title);
+export function pageView(route: Route) {
+  routeChange(route);
   gtag("event", "page_view");
 }
