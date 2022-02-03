@@ -24,6 +24,7 @@ import Repo from "../views/Repo.vue";
 import Authors from "../views/Authors.vue";
 import Author from "../views/Author.vue";
 import FourOhFour from "../views/FourOhFour.vue";
+import { routeChange } from "@/plugins/gtag";
 
 Vue.use(VueRouter);
 
@@ -81,6 +82,13 @@ const router = new VueRouter({
   scrollBehavior() {
     return { x: 0, y: 0 };
   },
+});
+
+router.afterEach((to, from) => {
+  if (to.path !== from.path) {
+    console.log(`router: ${from.path} --> ${to.path}`);
+    routeChange(to);
+  }
 });
 
 export default router;
