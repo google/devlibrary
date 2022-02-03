@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "owner": "rodrigokamada",
+  "repo": "angular-leaflet",
+  "name": "Angular Leaflet",
+  "shortDescription": "Adding the map Leaflet component to an Angular application",
+  "longDescription": "Adding the map Leaflet component to an Angular application",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

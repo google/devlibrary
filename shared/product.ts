@@ -289,4 +289,37 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
     ],
   },
+  assistant: {
+    key: ProductKey.ASSISTANT,
+    name: "Google Assistant",
+    description: "App Actions let users launch and control Android apps with their voice, using Google Assistant.",
+    docsUrl: "https://developers.google.com/assistant/docs",
+    tags: [
+        {
+            label: "App actions",
+            value: "app-actions",
+        },
+        {
+            label: "Conversational Actions",
+            value: "assistant-conversation",
+        },
+        {
+            label: "Smart Home",
+            value: "smart-home",
+        },
+        {
+            label: "Web Content Actions",
+            value: "web-content-actions",
+        },
+        {
+            label: "Actions on Google",
+            value: "actions-on-google",
+        },
+        {
+            label: "Google Assistant",
+            value: "google-assistant",
+        },
+        
+    ],
+},
 };

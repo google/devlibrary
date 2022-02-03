@@ -15,7 +15,6 @@
  */
 
 import Vue from "vue";
-import VueGtag from "vue-gtag";
 
 import App from "./App.vue";
 import router from "./router";
@@ -29,19 +28,6 @@ import "@/assets/css/fonts.css";
 
 // Icons
 import "@/plugins/icons";
-
-// Analytics
-Vue.use(
-  VueGtag,
-  {
-    config: { id: "G-2BDY03FSVV" },
-
-    // Disable until the user accepts cookies
-    // https://matteo-gabriele.gitbook.io/vue-gtag/opt-in-out
-    enabled: false,
-  },
-  router
-);
 
 // Media Queries
 // eslint-disable-next-line

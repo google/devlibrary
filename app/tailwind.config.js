@@ -62,6 +62,12 @@ module.exports = {
           bg: "#073042",
           text: "#FFFFFF",
         },
+
+        assistant: {
+          accent: "#9AA0A6",
+          bg: "#4285F4",
+          text: "#FFFFFF",
+        },
         gblue: {
           50: "#e8f0fe",
           100: "#d2e3fc",
