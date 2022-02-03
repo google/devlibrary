@@ -5,7 +5,7 @@
     "sourabhsjain"
   ],
   "author": "Sourabh Jain",
-  "title": "BigQuery is google cloud’s data warehouse offering that supports storage and processing of both structured and semi-structured data at scale.",
+  "title": "Processing semi-structured data with Google BigQuery",
   "link": "https://sourabhsjain.medium.com/processing-semi-structured-data-with-google-bigquery-1670686e1ae7",
   "tags": [
     "data-analytics"
