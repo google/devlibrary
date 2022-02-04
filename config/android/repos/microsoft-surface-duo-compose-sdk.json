@@ -4,13 +4,13 @@
   "authorIds": ["joyl1216"],
   "owner": "microsoft",
   "repo": "surface-duo-compose-sdk",
-  "name": "TwoPaneLayout",
-  "shortDescription": "a UI component built in Jetpack Compose, which contains the layouts that help you create UI for dual-screen, foldable and large-screen devices. TwoPaneLayout provides a two-pane layout for use at the top level of a UI. The two panes can be horizontal or vertical, based on the orientation of the device. TwoPaneLayout supports the use of the layout parameter layout_weight on child views to determine how to divide two panes to cover the whole display area.",
-  "longDescription": "a UI component built in Jetpack Compose, which contains the layouts that help you create UI for dual-screen, foldable and large-screen devices. TwoPaneLayout provides a two-pane layout for use at the top level of a UI. The two panes can be horizontal or vertical, based on the orientation of the device. TwoPaneLayout supports the use of the layout parameter layout_weight on child views to determine how to divide two panes to cover the whole display area.",
+  "name": "Surface Duo Jetpack Compose SDK",
+  "shortDescription": "This repo contains components built with Jetpack Compose for the Microsoft Surface Duo and other large screen and foldable devices.",
+  "longDescription": "This repo contains components built with Jetpack Compose for the Microsoft Surface Duo and other large screen and foldable devices.",
   "content": "README.md",
   "pages": [],
   "tags": [
-    "compose"
+    "compose", "foldable"
   ]
 }
 
