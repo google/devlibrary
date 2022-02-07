@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 export function renderDaysAgo(lastUpdated: number) {
