@@ -17,25 +17,17 @@
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
-export function renderMonthsAgo(lastUpdated: number) {
+export function renderDaysAgo(lastUpdated: number) {
   const now = new Date().getTime();
-  const monthsAgo = new Date().getMonth();
 
   const diff = now - lastUpdated;
   const daysAgo = Math.floor(diff / DAY_MS);
- 
 
-  if (monthsAgo <= 0) {
+  if (daysAgo <= 0) {
     return "today";
-  } else if (monthsAgo === 1) {
+  } else if (daysAgo === 1) {
     return "yesterday";
-  } else if(monthsAgo<=30)
-  {
+  } else {
     return `${daysAgo} days ago`;
   }
-  else {
-    return `${monthsAgo} months ago`;
-  }
-console.log(daysAgo)
 }
-
