@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "lakhankumawat"
+  ],
+  "owner": "Lakhankumawat",
+  "repo": "meditation_app_ui",
+  "name": "meditation_app_ui",
+  "shortDescription": "Medit8 is a mobile application built using flutter framework . ☑️ Glassmorphism UI Enabled. 👨‍💻 Optimized & Refactored Code .",
+  "longDescription": "Medit8 is a mobile application built using flutter framework . ☑️ Glassmorphism UI Enabled. 👨‍💻 Optimized & Refactored Code .",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "samples",
+    "mobile"
+  ]
+}
