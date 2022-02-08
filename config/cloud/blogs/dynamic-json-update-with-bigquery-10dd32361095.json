@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sourabhsjain"
+  ],
+  "author": "Sourabh Jain",
+  "title": "Dynamic update of semi-structured data in BigQuery",
+  "link": "https://sourabhsjain.medium.com/dynamic-json-update-with-bigquery-10dd32361095",
+  "tags": [
+    "data-analytics"
+  ]
+}

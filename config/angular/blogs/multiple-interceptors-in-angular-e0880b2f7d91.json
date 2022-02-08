@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["hossein13m"],
+  "author": "Hossein Mousavi",
+  "title": "One of the amazing features that Angular provides is the interceptors, but what does an Interceptor do, and can we implement multiple of them in our Angular project?",
+  "link": "https://medium.com/codex/multiple-interceptors-in-angular-e0880b2f7d91",
+  "tags": [
+    "libraries"
+  ]
+}
