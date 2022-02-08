@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["pranav-dhopey"],
+  "author": "Pranav Dhopey",
+  "title": "Kubernetes backup and restore with Velero",
+  "link": "https://blog.searce.com/kubernetes-backup-and-restore-with-velero-d7ad266ff7",
+  "tags": [
+    "containers"
+  ]
+}

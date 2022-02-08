@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "hi-manshu"
+  ],
+  "owner": "hi-manshu",
+  "repo": "Pluck",
+  "name": "Pluck",
+  "shortDescription": "Pluck, a library helps you to pick image via Galley/Camera built using Compose",
+  "longDescription": "Pluck, a library helps you to pick image via Galley/Camera built using Compose",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "compose",
+    "modern-android-development"
+  ]
+}
