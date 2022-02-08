@@ -70,13 +70,7 @@ function replaceEmojis(md: string, emojis: Record<string, string>): string {
   for (const k of Object.keys(emojis)) {
     const withColons = `:${k}:`;
     const asEmoji = emojis[k];
-    const contentList = content.split("```");
-    contentList.forEach((val, ind) => {
-      if (ind % 2 === 0) {
-        contentList[ind] = val.replace(new RegExp(withColons, "g"), asEmoji);
-      }
-    });
-    content = contentList.join("```");
+    content = content.replace(new RegExp(withColons, "g"), asEmoji);
   }
 
   return content;
