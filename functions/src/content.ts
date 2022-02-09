@@ -73,7 +73,7 @@ function replaceEmojis(md: string, emojis: Record<string, string>): string {
     const withColons = `:${k}:`;
     const asEmoji = emojis[k];
     content.forEach((val, ind) => {
-      if (val.includes("```")) {
+      if (val.trim().startsWith("```")) {
         isInCodeBlock = !isInCodeBlock;
       }
       if (!isInCodeBlock) {
