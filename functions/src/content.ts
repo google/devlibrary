@@ -66,20 +66,23 @@ export function renderContent(
 }
 
 function replaceEmojis(md: string, emojis: Record<string, string>): string {
-  let content = md;
+  let content = md.split("\n");
+  let isInCodeBlock = false;
+  
   for (const k of Object.keys(emojis)) {
     const withColons = `:${k}:`;
     const asEmoji = emojis[k];
-    const contentList = content.split("```");
-    contentList.forEach((val, ind) => {
-      if (ind % 2 === 0) {
-        contentList[ind] = val.replace(new RegExp(withColons, "g"), asEmoji);
+    content.forEach((val, ind) => {
+      if (val.includes("```")) {
+        isInCodeBlock = !isInCodeBlock;
+      }
+      if (!isInCodeBlock) {
+        content[ind] = val.replace(new RegExp(withColons, "g"), asEmoji);
       }
     });
-    content = contentList.join("```");
   }
 
-  return content;
+  return content.join("\n");
 }
 
 /**
