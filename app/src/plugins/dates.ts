@@ -31,7 +31,7 @@ export function renderDaysAgo(lastUpdated: number) {
     const lastUpdatedDate = new Date(lastUpdated);
     let monthsAgo = (now.getFullYear() - lastUpdatedDate.getFullYear()) * 12;
     monthsAgo = monthsAgo + now.getMonth() - lastUpdatedDate.getMonth();
-    return `${monthsAgo} months ago`;
+    return `${monthsAgo} month${monthsAgo === 1 ? '' : 's'} ago`;
   } else {
     return `${daysAgo} days ago`;
   }
