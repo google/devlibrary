@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["codestronaut"],
+  "author": "Aditya Rohman",
+  "title": "This article is about a practical guide on how to implement clean architecture and test-driven development on a Flutter project to get a better workflow and a better app result.",
+  "link": "https://aditya-rohman.medium.com/flutter-clean-architecture-test-driven-development-practical-guide-445f388e8604",
+  "tags": [
+    "mobile",
+    "general",
+    "samples"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "owner": "rodrigokamada",
+  "repo": "angular-recaptcha-v2",
+  "name": "angular-recaptcha-v2",
+  "shortDescription": "Application example built with Angular 13 and adding the Google reCAPTCHA v2 component using the ng-recaptcha library.",
+  "longDescription": "Application example built with Angular 13 and adding the Google reCAPTCHA v2 component using the ng-recaptcha library.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}
