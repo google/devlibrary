@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["infiniteoverflow"],
   "author": "Aswin Gopinathan",
   "title": "Build APIs for various HTTP Methods in Dart",
   "link": "https://dev.to/infiniteoverflow/build-apis-for-various-http-methods-in-dart-n87",

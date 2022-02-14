@@ -5,8 +5,8 @@
     "roaakdm"
   ],
   "author": "Roaa Khaddam",
-  "title": "Creating a functional theme switcher with the ability to change the primary color of the app using Provider. Also, how to change the primary color swatch and get MaterialColor from Color.",
-  "link": "https://medium.com/@roaakdm/fd334dd7d761",
+  "title": "Create a theme and primary color switcher for your Flutter app using provider",
+  "link": "https://medium.com/@roaakdm/create-a-theme-and-primary-color-switcher-for-your-flutter-app-using-provider-fd334dd7d761",
   "tags": [
     "mobile",
     "widgets",

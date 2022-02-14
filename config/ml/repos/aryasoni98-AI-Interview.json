@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "aryasoni98"
+  ],
+  "owner": "aryasoni98",
+  "repo": "AI-Interview",
+  "name": "AI Interview Mock-Up System",
+  "shortDescription": "We developped a AI interview emotion recognition platform to analyze the emotions of job candidates.",
+  "longDescription": "We developped a AI interview emotion recognition platform to analyze the emotions of job candidates.",
+  "content": "https://github.com/aryasoni98/AI-Interview/blob/master/README.md",
+  "pages": [],
+  "tags": [
+    "python",
+    "js",
+    "mlops"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["ivywalobwa"],
+  "author": "Ives Walobwa",
+  "title": "Handling gestures in Flutter - LogRocket Blog",
+  "link": "https://blog.logrocket.com/handling-gestures-flutter-gesturedetector/",
+  "tags": [
+    "widgets"
+  ]
+}
