@@ -9,11 +9,10 @@
   "name": "AI Interview Mock-Up System",
   "shortDescription": "We developped a AI interview emotion recognition platform to analyze the emotions of job candidates.",
   "longDescription": "We developped a AI interview emotion recognition platform to analyze the emotions of job candidates.",
-  "content": "https://github.com/aryasoni98/AI-Interview/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
-    "python",
-    "js",
-    "mlops"
+    "vision",
+    "nlp"
   ]
 }
