@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "shivamdhuria"
+  ],
+  "owner": "Shivamdhuria",
+  "repo": "palette",
+  "name": "Palette",
+  "shortDescription": "An aesthetic color picker library made in Jetpack Compose.",
+  "longDescription": "An aesthetic color picker library made in Jetpack Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

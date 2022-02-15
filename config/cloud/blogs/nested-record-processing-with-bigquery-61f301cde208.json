@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sourabhsjain"
+  ],
+  "author": "Sourabh Jain",
+  "title": "Nested record processing with BigQuery",
+  "link": "https://sourabhsjain.medium.com/nested-record-processing-with-bigquery-61f301cde208",
+  "tags": [
+    "data-analytics"
+  ]
+}

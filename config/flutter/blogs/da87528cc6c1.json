@@ -5,8 +5,8 @@
     "roaakdm"
   ],
   "author": "Roaa Khaddam",
-  "title": "The ‘physics’ widget param is found in all scrollable widgets (e.g. ListView). In this article, I go over the variation of ScrollPhysics that this param can take and what that variation does.",
-  "link": "https://medium.com/@roaakdm/da87528cc6c1",
+  "title": "Flutter ScrollPhysics variations and use-cases.",
+  "link": "https://medium.com/@roaakdm/flutter-scrollphysics-variations-use-cases-da87528cc6c1",
   "tags": [
     "general",
     "widgets",
