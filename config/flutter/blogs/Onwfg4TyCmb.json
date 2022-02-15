@@ -2,11 +2,11 @@
   "version": 1,
   "source": "medium",
   "authorIds": [
-    "link"
+    "adityathakurxd"
   ],
   "author": "Aditya Thakur",
-  "title": "Chat is an integral component in any mobile application. In this tutorial, we’ll build a simple chat feature that can be easily integrated into your projects. Our goal is to minimize developer effort.",
-  "link": "https://link.medium.com/Onwfg4TyCmb",
+  "title": "",
+  "link": "https://adityathakurxd.medium.com/how-to-create-a-chat-application-in-flutter-324bfcca7614",
   "tags": [
     "firebase",
     "samples",

@@ -1,9 +1,9 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["ganesh-s-p006"],
   "author": "Ganesh .s.p",
-  "title": "Keyboard shortcuts are often used to improve our development speeds and in this article I will give you Visual Studio Code shortcuts for faster development in Flutter",
+  "title": "Flutter visual studio code shortcuts for fast and efficient development",
   "link": "https://medium.com/flutter-community/flutter-visual-studio-code-shortcuts-for-fast-and-efficient-development-7235bc6c3b7d",
   "tags": [
     "mobile",

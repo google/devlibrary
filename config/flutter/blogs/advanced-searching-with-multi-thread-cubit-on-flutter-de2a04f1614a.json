@@ -3,7 +3,7 @@
   "source": "medium",
   "authorIds": ["vb10"],
   "author": "Veli Bacık",
-  "title": "It created multi-thread things with search algorithms. You can show how to implement search with debounce with new thread by us.",
+  "title": "Advanced searching with multi-thread cubit on Flutter",
   "link": "https://medium.com/flutter-community/advanced-searching-with-multi-thread-cubit-on-flutter-de2a04f1614a",
   "tags": [
     "mobile",
