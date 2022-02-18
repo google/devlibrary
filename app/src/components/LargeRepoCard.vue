@@ -18,11 +18,18 @@
   <div class="flex flex-col card card-clickable p-4">
     <!-- Author photo and name -->
     <div class="frc">
-      <CircleImage
-        :lazy="true"
-        size="card-avatar"
-        class="mr-2"
-        :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
+    <template v-if="authorId">
+        <router-link :to="`https://avatars.githubusercontent.com/${repo.metadata.owner}`" class="frc">
+          <CircleImage
+            :lazy="true"
+            size="card-avatar"
+            class="mr-2"
+            :src="authorPhotoUrl"
+          />
+          <span class="font-display text-lg">{{ repo.metadata.author }}</span>
+        </router-link>
+      </template>
+
       />
       <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
 

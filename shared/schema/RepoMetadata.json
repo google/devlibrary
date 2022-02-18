@@ -52,6 +52,12 @@
         "pattern": "^[a-z-]+$"
       }
     },
+    "expertise":
+  {
+"type": "string",
+"description": "'beginner' or 'intermediate' or 'expert'"
+
+  },
     "pages": {
       "type": "array",
       "description": "Information about additional pages in the project other than the main page.",
@@ -89,5 +95,5 @@
       }
     }
   },
-  "required": [ "owner", "repo", "name", "shortDescription", "longDescription", "content", "tags" ]
+  "required": [ "owner", "repo", "name", "shortDescription", "longDescription", "content", "tags", "expertise"]
 }

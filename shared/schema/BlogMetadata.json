@@ -42,5 +42,12 @@
       }
     }
   },
-  "required": [ "author", "title", "link", "tags" ]
+
+  "expertise":
+  {
+"type": "string",
+"description": "'beginner' or 'intermediate' or 'expert'"
+
+  },
+  "required": [ "author", "title", "link", "tags", "expertise"]
 }

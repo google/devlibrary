@@ -60,6 +60,17 @@
             :maxSelections="10"
           />
         </div>
+
+        <div class="section">
+          <p class="font-display font-medium text-sm mb-2 px-2">Expertise/p>
+
+          <CheckboxGroup
+            prefix="expertise"
+            :keys="product.expertise.map((e) => e.label)"
+            :values="product.expertise.map((e) => e.value)"
+            v-model="expertise"
+          />
+        </div>
       </div>
     </div>
   </div>
