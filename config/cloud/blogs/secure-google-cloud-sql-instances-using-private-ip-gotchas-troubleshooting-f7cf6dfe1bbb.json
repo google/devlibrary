@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "shaileshkumarmishra"
+  ],
+  "author": "Shailesh Mishra",
+  "title": "Secure Google Cloud SQL Instances using Private IP: Gotchas & troubleshooting",
+  "link": "https://medium.com/@shaileshkumarmishra/secure-google-cloud-sql-instances-using-private-ip-gotchas-troubleshooting-f7cf6dfe1bbb",
+  "tags": [
+    "databases"
+  ]
+}
