@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sourabhsjain"
+  ],
+  "author": "Sourabh Jain",
+  "title": "Deployment topologies for data fusion with shared VPCs",
+  "link": "https://sourabhsjain.medium.com/deployment-topologies-for-data-fusion-with-shared-vpcs-8e85a90bd58e",
+  "tags": [
+    "data-analytics",
+    "hybrid-multicloud"
+  ]
+}

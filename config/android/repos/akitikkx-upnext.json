@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akitikkx"
+  ],
+  "owner": "akitikkx",
+  "repo": "upnext",
+  "name": "Upnext: TV Series Manager",
+  "shortDescription": "Upnext: TV Series Manager is an MVVM Android app that allows users to be able to view show schedules, popular, trending and most anticipated shows with favorite functionality provided by Trakt API",
+  "longDescription": "Upnext: TV Series Manager is an MVVM Android app that allows users to be able to view show schedules, popular, trending and most anticipated shows with favorite functionality provided by Trakt API",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "compose",
+    "modern-android-development"
+  ]
+}

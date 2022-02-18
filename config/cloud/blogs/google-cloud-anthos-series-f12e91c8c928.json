@@ -1,9 +1,11 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": ["pushkarbk"],
+  "authorIds": [
+    "pushkarbk"
+  ],
   "author": "Pushkar Kothavade",
-  "title": "Multi-part Anthos Series specific for the Digital Native Customers",
+  "title": "Google Cloud Anthos Series",
   "link": "https://medium.com/google-cloud/google-cloud-anthos-series-f12e91c8c928",
   "tags": [
     "containers"
