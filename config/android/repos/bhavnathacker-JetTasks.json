@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bhavnathacker"
+  ],
+  "owner": "bhavnathacker",
+  "repo": "JetTasks",
+  "name": "JetTasks",
+  "shortDescription": "A sample TODO list app to demonstrate Modern Android Development Best Practices using MVVM,Jetpack Compose, Jetpack Navigation,Kotlin Flow, Kotlin Coroutines, Room, Jetpack (Proto)DataStore and Hilt.",
+  "longDescription": "A sample TODO list app to demonstrate Modern Android Development Best Practices using MVVM,Jetpack Compose, Jetpack Navigation,Kotlin Flow, Kotlin Coroutines, Room, Jetpack (Proto)DataStore and Hilt.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}
