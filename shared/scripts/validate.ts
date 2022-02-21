@@ -103,6 +103,19 @@ function validateTags(
   }
 }
 
+function validateExpertise(
+  fPath: string,
+  metadata: RepoMetadata | BlogMetadata,
+  product: ProductConfig
+  )
+  {
+const expertise = product.expertise.map((e)=> e.value);
+if(!metadata.expertise)
+{
+  return;
+}
+  }
+
 function validateAuthor(fPath: string, metadata: RepoMetadata | BlogMetadata) {
   if (!metadata.authorIds) {
     return;
