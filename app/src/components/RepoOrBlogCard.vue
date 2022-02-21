@@ -21,6 +21,7 @@
     :repo="project.data"
     :showTags="showTags"
     :showLogo="showLogo"
+    :showExpertise="showExpertise"
   />
 
   <LargeBlogCard
@@ -29,6 +30,7 @@
     :blog="project.data"
     :showTags="showTags"
     :showLogo="showLogo"
+    :showExpertise="showExpertise"
   />
 </template>
 

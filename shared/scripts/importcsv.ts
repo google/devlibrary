@@ -12,6 +12,7 @@ async function addRepoFromCsv(record: any) {
     longDescription: record.longDescription,
     content: record.content,
     tags: record.tags.split(",").map((t: string) => t.trim()),
+    expertise: record.expertise
   };
 
   const projectUrl = `https://github.com/${record.owner}/${record.repo}`;
@@ -32,6 +33,7 @@ async function addBlogFromCsv(record: any) {
     title: record.title,
     author: record.author,
     tags: record.tags.split(",").map((t: string) => t.trim()),
+    expertise: record.expertise
   };
 
   try {

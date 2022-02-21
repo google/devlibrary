@@ -75,6 +75,13 @@
         v-show="showFilterOverlay"
         class="mobile-only scrim"
       >
+
+      <!-- Expertise (Dekstop) -->
+      <div v-if="$mq === 'desktop'" class="lg:col-span-2">
+        <ProjectExpertise v-model="expertise" :product="product" />
+      </div>
+
+
         <!-- scrim -->
       </div>
       <transition name="slide-in-left">
@@ -175,6 +182,8 @@
               </div>
             </MaterialButton>
           </div>
+
+          
         </div>
       </div>
     </div>

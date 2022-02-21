@@ -46,6 +46,17 @@
           />
         </div>
 
+         <div class="section">
+          <p class="font-display font-medium text-sm mb-2 px-2">Expertise</p>
+
+          <CheckboxGroup
+            prefix="expertise"
+            :keys="['Beginner', 'Intermediate', 'Expert']"
+            :values="['beginner', 'intermediate', 'expert]"
+            v-model="expertise"
+          />
+        </div>
+
         <div class="section">
           <p class="frc font-display font-medium text-sm mb-2 px-2">
             Category

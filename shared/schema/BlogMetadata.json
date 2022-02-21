@@ -42,5 +42,9 @@
       }
     }
   },
-  "required": [ "author", "title", "link", "tags" ]
+  "expertise": {
+    "type": "string",
+    "description": "The expertise of the articles or projects"
+},
+  "required": [ "author", "title", "link", "tags" , "expertise"]
 }

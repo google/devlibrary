@@ -38,4 +38,10 @@ export interface BlogMetadata {
    */
   tags: [string, ...string[]];
   [k: string]: unknown;
-}
+ /**
+   * The expertise of the projects
+   */
+  expertise: string;
+ }
+  
+ 

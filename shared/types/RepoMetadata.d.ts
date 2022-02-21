@@ -48,6 +48,7 @@ export interface RepoMetadata {
   /**
    * Information about additional pages in the project other than the main page.
    */
+
   pages?: {
     /**
      * Name of the page, ex: 'Installation
@@ -74,4 +75,9 @@ export interface RepoMetadata {
     [k: string]: unknown;
   }[];
   [k: string]: unknown;
+
+    /**
+   * The expertise of the projects
+   */
+     expertise: string;
 }

@@ -21,7 +21,13 @@ export enum ProductKey {
   FIREBASE = "firebase",
   FLUTTER = "flutter",
   ML = "ml",
-  ASSISTANT='assistant'
+  ASSISTANT="assistant"
+}
+
+
+export interface ProductExpertise{
+  label: string;
+  value: string
 }
 
 export interface ProductTag {
@@ -38,6 +44,7 @@ export interface ProductConfig {
   description: string;
   docsUrl: string;
   tags: ProductTag[];
+  expertise: ProductExpertise;
 }
 
 import { AuthorMetadata } from "./types/AuthorMetadata";
