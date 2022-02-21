@@ -156,6 +156,10 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "web",
       },
       {
+        label: "Desktop",
+        value: "desktop",
+      },
+      {
         label: "Widgets",
         value: "widgets",
       },
@@ -167,6 +171,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         label: "Samples",
         value: "samples",
       },
+
     ],
   },
   cloud: {
@@ -292,7 +297,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
   assistant: {
     key: ProductKey.ASSISTANT,
     name: "Google Assistant",
-    description: "App Actions let users launch and control Android apps with their voice, using Google Assistant.",
+    description: "Google Assistant lets developers add voice-first functionality to their apps.",
     docsUrl: "https://developers.google.com/assistant/docs",
     tags: [
         {

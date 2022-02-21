@@ -55,10 +55,10 @@
           </p>
           <p class="mt-4">
             If your question is not answered below and you need to contact us,
-            you can email the team at
-            <a href="mailto:library-google-dev@google.com"
-              >library-google-dev@google.com</a
-            >
+           fill 
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuN1VqnMXszkW37Wylsskv8GZgta9zKqSfB1rqCHrgKxqDzw/viewform?resourcekey=0-V-7D7mf0f5jF2ApHTVWNrg"
+              >this form</a
+            > to write your queries to us. 
           </p>
           <p class="mt-8 flex flex-wrap gap-4">
             <a href="https://forms.gle/2JoN6csvyvnDC8Nd9" target="_blank">
@@ -195,7 +195,7 @@
           </ul>
 
           <p>
-            For an extensive explanation, read our contributor-guidelines.pdf to
+            For an extensive explanation, read our <a href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf">contributor guidelines</a>to
             fix the errors and re-submit.
           </p>
 
