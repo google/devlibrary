@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { ProductConfig, ProductKey } from "./types";
+import { ProductConfig, ProductKey, ProductExpertise} from "./types";
 
 export const ALL_PRODUCTS: Record<string, ProductConfig> = {
   firebase: {
@@ -53,6 +53,22 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "flutter",
       },
     ],
+  expertise:
+  [
+    {
+      label: "Beginner",
+      value: "BEGINNER",
+
+    },
+    {
+      label: "Intermediate",
+      value: "INTERMEDIATE",
+    },
+    {
+      label: "Advanced",
+      value: "ADVANCED",
+    },
+  ],
   },
   ml: {
     key: ProductKey.ML,
@@ -94,6 +110,22 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "theory",
       },
     ],
+    expertise:
+  [
+    {
+      label: "Beginner",
+      value: "BEGINNER",
+
+    },
+    {
+      label: "Intermediate",
+      value: "INTERMEDIATE",
+    },
+    {
+      label: "Advanced",
+      value: "ADVANCED",
+    },
+  ],
   },
   angular: {
     key: ProductKey.ANGULAR,
@@ -131,6 +163,22 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "demos",
       },
     ],
+    expertise:
+  [
+    {
+      label: "Beginner",
+      value: "BEGINNER",
+
+    },
+    {
+      label: "Intermediate",
+      value: "INTERMEDIATE",
+    },
+    {
+      label: "Advanced",
+      value: "ADVANCED",
+    },
+  ],
   },
   flutter: {
     key: ProductKey.FLUTTER,
@@ -168,6 +216,22 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "samples",
       },
     ],
+    expertise:
+  [
+    {
+      label: "Beginner",
+      value: "BEGINNER",
+
+    },
+    {
+      label: "Intermediate",
+      value: "INTERMEDIATE",
+    },
+    {
+      label: "Advanced",
+      value: "ADVANCED",
+    },
+  ],
   },
   cloud: {
     key: ProductKey.CLOUD,
@@ -251,6 +315,22 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "storage",
       },
     ],
+    expertise:
+  [
+    {
+      label: "Beginner",
+      value: "BEGINNER",
+
+    },
+    {
+      label: "Intermediate",
+      value: "INTERMEDIATE",
+    },
+    {
+      label: "Advanced",
+      value: "ADVANCED",
+    },
+  ],
   },
   android: {
     key: ProductKey.ANDROID,
@@ -288,6 +368,22 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "ui",
       },
     ],
+    expertise:
+  [
+    {
+      label: "Beginner",
+      value: "BEGINNER",
+
+    },
+    {
+      label: "Intermediate",
+      value: "INTERMEDIATE",
+    },
+    {
+      label: "Advanced",
+      value: "ADVANCED",
+    },
+  ],
   },
   assistant: {
     key: ProductKey.ASSISTANT,
@@ -321,5 +417,21 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         },
         
     ],
+    expertise:
+  [
+    {
+      label: "Beginner",
+      value: "BEGINNER",
+
+    },
+    {
+      label: "Intermediate",
+      value: "INTERMEDIATE",
+    },
+    {
+      label: "Advanced",
+      value: "ADVANCED",
+    },
+  ],
 },
 };

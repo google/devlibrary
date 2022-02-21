@@ -27,7 +27,7 @@ export enum ProductKey {
 
 export interface ProductExpertise{
   label: string;
-  value: string
+  value: string;
 }
 
 export interface ProductTag {
@@ -44,7 +44,7 @@ export interface ProductConfig {
   description: string;
   docsUrl: string;
   tags: ProductTag[];
-  expertise: ProductExpertise;
+  expertise: ProductExpertise[];
 }
 
 import { AuthorMetadata } from "./types/AuthorMetadata";
