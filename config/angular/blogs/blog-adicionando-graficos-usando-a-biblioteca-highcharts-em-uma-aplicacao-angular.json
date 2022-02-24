@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": ["rodrigokamada"],
+  "authorIds": [
+    "rodrigokamada"
+  ],
   "author": "Rodrigo Kamada",
   "title": "Adicionando gráficos usando a biblioteca Highcharts em uma aplicação Angular",
   "link": "https://rodrigo.kamada.com.br/blog/adicionando-graficos-usando-a-biblioteca-highcharts-em-uma-aplicacao-angular",

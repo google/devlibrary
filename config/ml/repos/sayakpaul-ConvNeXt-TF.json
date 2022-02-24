@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sayakpaul"
+  ],
+  "owner": "sayakpaul",
+  "repo": "ConvNeXt-TF",
+  "name": "ConvNeXt models TensorFlow",
+  "shortDescription": "The project implements ConvNeXt models in TensorFlow and Keras and demonstrates their performance on the ImageNet-1k dataset. Additionally, it provides useful utility scripts.",
+  "longDescription": "The project implements ConvNeXt models in TensorFlow and Keras and demonstrates their performance on the ImageNet-1k dataset. Additionally, it provides useful utility scripts.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "library"
+  ]
+}
