@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["skydoves"],
+  "author": "Jaewoong Eum",
+  "title": "Exploring Jetpack window manager for foldable devices",
+  "link": "https://medium.com/proandroiddev/exploring-jetpack-windowmanager-for-foldable-devices-2a28fa25fe93",
+  "tags": [
+    "ui",
+    "compose"
+  ]
+}
