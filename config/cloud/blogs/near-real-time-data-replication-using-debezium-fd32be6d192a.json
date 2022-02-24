@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "medium",
-  "authorIds": ["saurabh8774"],
+  "authorIds": [
+    "saurabh8774"
+  ],
   "author": "Saurabh Gupta",
   "title": "Near Real Time Data Replication using Debezium - Introduction and Implementation",
   "link": "https://medium.com/google-cloud/near-real-time-data-replication-using-debezium-fd32be6d192a",

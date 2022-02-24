@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "soumik12345"
+  ],
+  "owner": "soumik12345",
+  "repo": "tf2_gans",
+  "name": "GauGAN in TensorFlow",
+  "shortDescription": "The project implements GauGAN in TensorFlow and demonstrates its results with the Facades dataset.",
+  "longDescription": "The project implements GauGAN in TensorFlow and demonstrates its results with the Facades dataset.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision"
+  ]
+}
