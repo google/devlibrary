@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": ["bachiirc"],
+  "authorIds": [
+    "bachiirc"
+  ],
   "author": "Bachir Chihani",
   "title": "Object Detection on custom dataset with EfficientNet",
   "link": "https://dzlab.github.io/notebooks/tensorflow/vision/object-detection/2021/03/02/Object_Detection_custom_dataset.html",

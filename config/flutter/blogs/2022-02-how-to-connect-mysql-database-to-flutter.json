@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": ["lkrjangid1"],
+  "authorIds": [
+    "lkrjangid1"
+  ],
   "author": "lokesh jangid",
   "title": "How to connect mysql database to flutter",
   "link": "https://flutdev.blogspot.com/2022/02/how-to-connect-mysql-database-to-flutter.html?m=1",
