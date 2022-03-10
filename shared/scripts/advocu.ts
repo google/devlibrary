@@ -15,23 +15,26 @@
  */
 
 import * as fs from "fs";
-import * as path from "path";
 import fetch from "node-fetch";
-import { getConfigDir } from "./util";
+import * as path from "path";
+
+import { BlogMetadata } from "../types/BlogMetadata";
 import { RepoMetadata } from "../types/RepoMetadata";
+
 import {
   addMediumBlog,
   addOtherBlog,
   addRepo,
   parseGithubUrl,
 } from "./addproject";
-import { BlogMetadata } from "../types/BlogMetadata";
+import { getConfigDir } from "./util";
 
 const ADVOCU_METADATA_FILE_NAME = "advocu.json";
 
 // Advocu API Staging
-// For usage, see: https://api-devlibrary-stage.k8s01.nexo.zone/swagger-ui/index.htm
-// const API_HOST = "https://api-devlibrary-stage.k8s01.nexo.zone";
+// For usage, see:
+// https://api-devlibrary-stage.k8s01.nexo.zone/swagger-ui/index.htm const
+// API_HOST = "https://api-devlibrary-stage.k8s01.nexo.zone";
 
 // Advodu API Prod
 // For usage, see: https://api-devlibrary.advocu.com/swagger-ui/index.html
@@ -74,10 +77,7 @@ interface Application {
     };
   };
   productCategory: string;
-  blogPost: {
-    url: string;
-    description: string;
-  } | null;
+  blogPost: { url: string; description: string } | null;
   github: {
     repositoryUrl: string;
     profileUrls: string[];
@@ -188,20 +188,25 @@ export async function main() {
       const metadata = applicationToBlogMetadata(a);
 
       console.log(`Adding ${product} blog ${projectUrl}`);
-      if (projectUrl.includes("medium.com")) {
-        await addMediumBlog(
-          product,
-          projectUrl,
-          /* projectId= */ undefined,
-          metadata
-        );
-      } else {
-        await addOtherBlog(
-          product,
-          projectUrl,
-          /* projectId= */ undefined,
-          metadata
-        );
+      try {
+        if (projectUrl.includes("medium.com")) {
+          await addMediumBlog(
+            product,
+            projectUrl,
+            /* projectId= */ undefined,
+            metadata
+          );
+        } else {
+          await addOtherBlog(
+            product,
+            projectUrl,
+            /* projectId= */ undefined,
+            metadata
+          );
+        }
+      } catch (e) {
+        console.error(`Problem occurred when adding a project: ${e}`);
+        console.error(e);
       }
     }
   }
