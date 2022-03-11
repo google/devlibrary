@@ -21,7 +21,7 @@ export enum ProductKey {
   FIREBASE = "firebase",
   FLUTTER = "flutter",
   ML = "ml",
-  ASSISTANT='assistant'
+  ASSISTANT = "assistant",
 }
 
 export interface ProductTag {
