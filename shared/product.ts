@@ -171,7 +171,6 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         label: "Samples",
         value: "samples",
       },
-
     ],
   },
   cloud: {
@@ -297,34 +296,34 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
   assistant: {
     key: ProductKey.ASSISTANT,
     name: "Google Assistant",
-    description: "Google Assistant lets developers add voice-first functionality to their apps.",
+    description:
+      "Google Assistant lets developers add voice-first functionality to their apps.",
     docsUrl: "https://developers.google.com/assistant/docs",
     tags: [
-        {
-            label: "App actions",
-            value: "app-actions",
-        },
-        {
-            label: "Conversational Actions",
-            value: "assistant-conversation",
-        },
-        {
-            label: "Smart Home",
-            value: "smart-home",
-        },
-        {
-            label: "Web Content Actions",
-            value: "web-content-actions",
-        },
-        {
-            label: "Actions on Google",
-            value: "actions-on-google",
-        },
-        {
-            label: "Google Assistant",
-            value: "google-assistant",
-        },
-        
+      {
+        label: "App actions",
+        value: "app-actions",
+      },
+      {
+        label: "Conversational Actions",
+        value: "assistant-conversation",
+      },
+      {
+        label: "Smart Home",
+        value: "smart-home",
+      },
+      {
+        label: "Web Content Actions",
+        value: "web-content-actions",
+      },
+      {
+        label: "Actions on Google",
+        value: "actions-on-google",
+      },
+      {
+        label: "Google Assistant",
+        value: "google-assistant",
+      },
     ],
-},
+  },
 };
