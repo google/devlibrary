@@ -13,7 +13,7 @@ Each task is done by changing a `.json` file in this repository.
 
 Although all curation can be done by hand, there are some scripts in this
 repository to make your life easier. To run them you will need Node.js version
-15.x. The easiest way to get Node is to use
+12.x. The easiest way to get Node is to use
 [nvm](https://github.com/nvm-sh/nvm).
 
 After installing node, run `npm install` in the `shared` directory of this
