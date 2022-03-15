@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [],
+  "author": "Mansi Kalaria",
+  "title": "In this blog post, I have covered about using local databases in Flutter using shared preferences and sqflite package.",
+  "link": "https://medium.com/p/93f1d15abc9a",
+  "tags": [
+    "mobile"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Bachir Chihani",
+  "title": "Demystifying TFX Standard Components",
+  "link": "https://dzlab.github.io/ml/2020/09/08/tfx-pipelines/",
+  "tags": [
+    "tf",
+    "tfx"
+  ]
+}

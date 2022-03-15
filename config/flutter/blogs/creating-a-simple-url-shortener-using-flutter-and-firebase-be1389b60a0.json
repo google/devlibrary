@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "tamilkannancv"
+  ],
+  "author": "Tamil Kannan C V",
+  "title": "Simple and easy to use URL shortener using Firebase and Flutter. It creates a shortest URL with your own custom domain if needed, here we are going to host the web app in Firebase hosting service.",
+  "link": "https://tamilkannancv.medium.com/creating-a-simple-url-shortener-using-flutter-and-firebase-be1389b60a0",
+  "tags": [
+    "firebase",
+    "web",
+    "plugins"
+  ]
+}

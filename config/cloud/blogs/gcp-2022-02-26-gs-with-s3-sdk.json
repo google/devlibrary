@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Bachir Chihani",
+  "title": "Access Google Storage as an S3 endpoint",
+  "link": "https://dzlab.github.io/gcp/2022/02/26/gs-with-s3-sdk/",
+  "tags": [
+    "storage",
+    "migration"
+  ]
+}

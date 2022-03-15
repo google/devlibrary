@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [],
+  "author": "Hossein Mousavi",
+  "title": "Forms are major parts of every Angular project and in this article, we want to implement a Reactive Angular form with a custom and dynamic validator.",
+  "link": "https://medium.com/angular-in-depth/angular-forms-reactive-form-including-angular-material-and-custom-validator-9ef324cc3b08",
+  "tags": [
+    "libraries"
+  ]
+}

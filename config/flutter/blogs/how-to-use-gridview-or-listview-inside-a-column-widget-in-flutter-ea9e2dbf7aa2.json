@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rgtechno"
+  ],
+  "author": "Rahul Gandhi",
+  "title": "How to use GridView or ListView inside a Column Widget in Flutter? \nUnderstand & Solve the most common RenderFlow Errors caused due to ListView & GridView Type widgets through this concise blog post.",
+  "link": "https://rgtechno.medium.com/how-to-use-gridview-or-listview-inside-a-column-widget-in-flutter-ea9e2dbf7aa2",
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ]
+}

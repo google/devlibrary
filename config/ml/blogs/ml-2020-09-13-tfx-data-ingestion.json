@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Bachir Chihani",
+  "title": "Data Ingestion with TensorFlow eXtended (TFX)",
+  "link": "https://dzlab.github.io/ml/2020/09/13/tfx-data-ingestion/",
+  "tags": [
+    "tf",
+    "tfx"
+  ]
+}

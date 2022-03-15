@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [],
+  "author": "Daniyal Dolare",
+  "title": "This blogs demonstrate effective use of Future and FutureBuilder widget that flutter documentation emphasise on.",
+  "link": "https://daniyal-dolare.medium.com/how-to-use-future-builder-effectively-in-flutter-9c0550d2affd",
+  "tags": [
+    "widgets",
+    "general",
+    "samples"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [],
+  "author": "Arpana Mehta",
+  "title": "Fetching monitoring metrics data from GCP to your application",
+  "link": "https://medium.com/google-cloud/fetching-monitoring-metrics-data-from-gcp-into-your-application-using-python-214358b0047e",
+  "tags": [
+    "developer-tools",
+    "operations"
+  ]
+}

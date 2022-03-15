@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Bachir Chihani",
+  "title": "Swin Transformer Explained with a TensorFlow implementation",
+  "link": "https://dzlab.github.io/notebooks/tensorflow/vision/classification/2022/02/27/Swin_Transfomer.html",
+  "tags": [
+    "tf",
+    "vision",
+    "segmentation"
+  ]
+}

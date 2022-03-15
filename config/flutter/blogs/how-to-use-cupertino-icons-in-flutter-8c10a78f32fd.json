@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sahil_pal07"
+  ],
+  "author": "Sahil Pal",
+  "title": "This blogpost is a simple tutorial to use the cupertino icons in your flutter application for a good user experience and optimizing the space of the screen.",
+  "link": "https://medium.com/@sahil_pal07/how-to-use-cupertino-icons-in-flutter-8c10a78f32fd",
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}
