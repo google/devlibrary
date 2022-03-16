@@ -4,20 +4,28 @@
 
 There are two major curation tasks:
 
-  * Adding/updating/removing projects
-  * Adding/updating/removing authors
+*   Adding/updating/removing projects
+*   Adding/updating/removing authors
 
 Each task is done by changing a `.json` file in this repository.
 
 ## Setup
 
-Although all curation can be done by hand, there are some scripts in this repository to make your life easier. To run them you will need Node.js version 12.x. The easiest way to get Node is to use [nvm](https://github.com/nvm-sh/nvm).
+Although all curation can be done by hand, there are some scripts in this
+repository to make your life easier. To run them you will need Node.js version
+12.x. The easiest way to get Node is to use
+[nvm](https://github.com/nvm-sh/nvm).
 
-After installing node, run `npm install` in the `shared` directory of this repository.
+After installing node, run `npm install` in the `shared` directory of this
+repository.
 
 ## Import from Advocu
 
-In most cases `.json` files should not be added manually, instead they should be generated based on curation data from the Advocu API. In order to use this API you will need to have the `ADVOCU_TOKEN` environment variable set on your machine to a valid Advocu API token. If you don't know how to do this or what the value should be ask a team member.
+In most cases `.json` files should not be added manually, instead they should be
+generated based on curation data from the Advocu API. In order to use this API
+you will need to have the `ADVOCU_TOKEN` environment variable set on your
+machine to a valid Advocu API token. If you don't know how to do this or what
+the value should be ask a team member.
 
 Next look at the file `config/advocu.json`:
 
@@ -27,7 +35,9 @@ Next look at the file `config/advocu.json`:
 }
 ```
 
-This file holds a timestamp for the last time that the Advocu API data was pulled. It should be changed and checked in to the repository after each pull. If you want to include older entries, simply change the timestamp manually.
+This file holds a timestamp for the last time that the Advocu API data was
+pulled. It should be changed and checked in to the repository after each pull.
+If you want to include older entries, simply change the timestamp manually.
 
 Finally run the following script:
 
@@ -57,7 +67,8 @@ Writing new file: /Users/samstern/Projects/ugc.dev/config/ml/repos/samadon1-hear
 Success! Please 'git commit' any changes and push the new config files.
 ```
 
-After this you will have new files in the `config` directory including a modified `config/advocu.json`. Commit the files and create a pull reuqest.
+After this you will have new files in the `config` directory including a
+modified `config/advocu.json`. Commit the files and create a pull reuqest.
 
 ## Projects
 
@@ -65,9 +76,10 @@ After this you will have new files in the `config` directory including a modifie
 
 In order to locate the `.json` file for a project, you must know three things:
 
-  * **product** - a simple identifier like `firebase`, `angular`, `flutter`
-  * **type** - either `blog` or `repo`.
-  * **id** - a unique identifier for the project, this can be anything and is normally automatically generated.
+*   **product** - a simple identifier like `firebase`, `angular`, `flutter`
+*   **type** - either `blog` or `repo`.
+*   **id** - a unique identifier for the project, this can be anything and is
+    normally automatically generated.
 
 So for example:
 
@@ -80,7 +92,8 @@ config/firebase/repos/jsayol-FireSQL.json
 
 ### Adding/Updating
 
-To add a new project, run the `addproject` script from within the `shared` directory of this repo:
+To add a new project, run the `addproject` script from within the `shared`
+directory of this repo:
 
 ```bash
 # The <product> argument is angular, firebase, ml, etc
@@ -88,17 +101,20 @@ To add a new project, run the `addproject` script from within the `shared` direc
 npm run addproject <product> <url>
 ```
 
-This will create a basic `.json` file in the correct location, you should then examine the file and fill in any missing fields.
+This will create a basic `.json` file in the correct location, you should then
+examine the file and fill in any missing fields.
 
 ### Deleting
 
-To delete a project simply delete the `.json` file and it will be removed from the site within 24 hours.
+To delete a project simply delete the `.json` file and it will be removed from
+the site within 24 hours.
 
 ## Authors
 
 ### Location
 
-An author is identified by their unique ID, which should almost always be their GitHub or Medium username. Each author has a `.json` file:
+An author is identified by their unique ID, which should almost always be their
+GitHub or Medium username. Each author has a `.json` file:
 
 ```bash
 # Author file for "bob123"
@@ -120,7 +136,8 @@ The author file has both optional and required fields:
 }
 ```
 
-Each project may have zero or more authors, specified by the `authorIds` array in the project `.json` file:
+Each project may have zero or more authors, specified by the `authorIds` array
+in the project `.json` file:
 
 ```js
 {
@@ -132,7 +149,8 @@ Each project may have zero or more authors, specified by the `authorIds` array i
 
 ### Adding/Updating
 
-To add a new author, run the `addauthor` script from within the `shared` directory of this repo:
+To add a new author, run the `addauthor` script from within the `shared`
+directory of this repo:
 
 ```bash
 # The <source> argument is either "github" or "medium"
@@ -140,8 +158,10 @@ To add a new author, run the `addauthor` script from within the `shared` directo
 npm run addauthor <source> <username>
 ```
 
-This will create a basic `.json` file in the correct location, you should then examine the file and fill in any missing fields.
+This will create a basic `.json` file in the correct location, you should then
+examine the file and fill in any missing fields.
 
 ### Deleting
 
-To delete an author simply delete the `.json` file and it will be removed from the site within 24 hours.
+To delete an author simply delete the `.json` file and it will be removed from
+the site within 24 hours.
