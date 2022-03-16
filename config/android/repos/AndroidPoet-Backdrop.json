@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "androidpoet"
+  ],
+  "owner": "AndroidPoet",
+  "repo": "Backdrop",
+  "name": "Backdrop",
+  "shortDescription": "🌲 Change boring backgrounds with Blurhash(Fully Optimized)",
+  "longDescription": "🌲 Change boring backgrounds with Blurhash(Fully Optimized)",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "architecture",
+    "modern-android-development",
+    "kotlin"
+  ]
+}
