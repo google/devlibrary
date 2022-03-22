@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["colinrtwhite"],
   "owner": "coil-kt",
   "repo": "coil",
   "name": "Coil",
