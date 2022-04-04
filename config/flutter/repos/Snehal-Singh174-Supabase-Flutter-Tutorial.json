@@ -9,7 +9,7 @@
   "name": "Supabase Flutter Authentication",
   "shortDescription": "The Project Describes how to use the Authentication Feature provided by Supabase an open-source alternative to firebase.",
   "longDescription": "The Project Describes how to use the Authentication Feature provided by Supabase an open-source alternative to firebase.",
-  "content": "https://github.com/Snehal-Singh174/Supabase-Flutter-Tutorial#readme",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "mobile"
