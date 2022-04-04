@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kojofosu"
+  ],
+  "owner": "kojofosu",
+  "repo": "Quantitizer",
+  "name": "Quantitizer",
+  "shortDescription": "A number stepper built with Kotlin for android projects.",
+  "longDescription": "A number stepper built with Kotlin for android projects.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "ui"
+  ]
+}
