@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "murhafsousli"
+  ],
+  "owner": "MurhafSousli",
+  "repo": "ngx-highlightjs",
+  "name": "Angular Highlight.js Module",
+  "shortDescription": "Angular syntax highlighting module",
+  "longDescription": "Angular syntax highlighting module",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}
