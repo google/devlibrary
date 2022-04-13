@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "nilesh"
+  ],
+  "author": "Nilesh Kumar",
+  "title": "Building A Toggle-Theme Switch Button In Flutter To Toggle Between Dark & Light Mode",
+  "link": "https://medium.com/@nilesh-kr/building-a-toggle-theme-switch-button-in-flutter-to-toggle-between-dark-light-mode-f61bf956866a",
+  "tags": [
+    "general",
+    "mobile",
+    "widgets"
+  ]
+}
