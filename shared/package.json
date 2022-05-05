@@ -7,6 +7,7 @@
     "addproject": "ts-node ./scripts/addproject.ts",
     "advocu": "ts-node ./scripts/advocu.ts",
     "backfill": "ts-node ./scripts/backfill.ts",
+    "backfillmetadata": "ts-node ./scripts/backfillmetadata.ts",
     "diagnoserepo": "ts-node ./scripts/diagnoserepo.ts",
     "importcsv": "ts-node ./scripts/importcsv.ts",
     "refreshproject": "ts-node ./scripts/refreshproject.ts",
