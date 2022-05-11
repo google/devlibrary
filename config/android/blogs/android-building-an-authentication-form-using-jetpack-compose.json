@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["joebirch"],
   "author": "Joe Birch",
   "title": "Building an Authentication Form using Jetpack Compose",
   "link": "https://joebirch.co/android/building-an-authentication-form-using-jetpack-compose/",
