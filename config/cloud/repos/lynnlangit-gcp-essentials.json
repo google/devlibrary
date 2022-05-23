@@ -9,7 +9,7 @@
   "name": "GCP Essentials",
   "shortDescription": "Example gcloud statements for GCP services",
   "longDescription": "Example gcloud statements for GCP services",
-  "content": "https://github.com/lynnlangit/gcp-essentials/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "serverless-computing",
