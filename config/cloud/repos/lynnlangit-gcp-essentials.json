@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "lynnlangit"
+  ],
+  "owner": "lynnlangit",
+  "repo": "gcp-essentials",
+  "name": "GCP Essentials",
+  "shortDescription": "Example gcloud statements for GCP services",
+  "longDescription": "Example gcloud statements for GCP services",
+  "content": "https://github.com/lynnlangit/gcp-essentials/blob/master/README.md",
+  "pages": [],
+  "tags": [
+    "serverless-computing",
+    "developer-tools",
+    "compute"
+  ]
+}

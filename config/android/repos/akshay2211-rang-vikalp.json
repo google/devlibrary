@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akshay2211"
+  ],
+  "owner": "akshay2211",
+  "repo": "rang-vikalp",
+  "name": "rang-vikalp",
+  "shortDescription": "RangVikalp is a minimal colour selection tool build completely upon jetpack compose",
+  "longDescription": "RangVikalp is a minimal colour selection tool build completely upon jetpack compose",
+  "content": "https://raw.githubusercontent.com/akshay2211/rang-vikalp/master/README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui",
+    "kotlin"
+  ]
+}
