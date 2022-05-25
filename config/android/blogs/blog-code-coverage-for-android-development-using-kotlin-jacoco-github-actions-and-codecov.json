@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["wise4mgod"],
   "author": "wisdom nwokocha",
   "title": "Code Coverage for Android Development Using Kotlin, JaCoCo, GitHub Actions, and Codecov - Codecov",
   "link": "https://about.codecov.io/blog/code-coverage-for-android-development-using-kotlin-jacoco-github-actions-and-codecov/",
