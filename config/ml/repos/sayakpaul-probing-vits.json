@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sayakpaul"
+  ],
+  "owner": "sayakpaul",
+  "repo": "probing-vits",
+  "name": "Probing Vision Transformers",
+  "shortDescription": "In this repository, we provide tools to probe into the representations learned by different families of Vision Transformers (supervised pre-training with ImageNet-21k, ImageNet-1k, distillation, etc.)",
+  "longDescription": "In this repository, we provide tools to probe into the representations learned by different families of Vision Transformers (supervised pre-training with ImageNet-21k, ImageNet-1k, distillation, etc.)",
+  "content": "https://github.com/sayakpaul/probing-vits/blob/main/README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "tf"
+  ]
+}
