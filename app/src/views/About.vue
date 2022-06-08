@@ -195,7 +195,7 @@
           </ul>
 
           <p>
-            For an extensive explanation, read our <a href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf">contributor guidelines</a>to
+            For an extensive explanation, read our <a href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf">contributor guidelines</a> to
             fix the errors and re-submit.
           </p>
 
