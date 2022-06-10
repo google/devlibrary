@@ -339,11 +339,7 @@ export default class Product extends Vue {
           operator: "array-contains-any",
           value: tags,
         },
-        {
-          fieldPath: "metadata.expertise",
-          operator: "array-contains-any",
-          value: tags,
-        },
+        
       ];
     }
 
