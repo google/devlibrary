@@ -74,7 +74,7 @@ async function fetchQuery(collectionPath: string, q: FirestoreQuery) {
   });
 
   const res = await fetch(
-    `${getApiHost()}/api/queryProxy?${params.toString()}`
+    `${getApiHost()}/api/queryProxy?${params.toString()}`, {mode:'no-cors', },
   );
   return await res.json();
 }
