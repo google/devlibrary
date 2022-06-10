@@ -47,7 +47,7 @@ export const queryProxy = functions
   })
   .https.onRequest(async (req, res) => {
     // Allow CORS
-    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Origin', '*');
 
     // Cache at browser for 10 minutes (600s) and on CDN for 12 hours (43200s)
     res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
