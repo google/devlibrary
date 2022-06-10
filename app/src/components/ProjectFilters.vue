@@ -40,7 +40,7 @@
           <CheckboxGroup
             prefix="expertiseLevel"
             :keys="['Beginner', 'Intermediate', 'Advanced']"
-            :values="['beginner', 'intermediate', 'advanced']"
+            :values="['Beginner', 'Intermediate', 'Advanced']"
             v-model="expertiseLevel"
           />
         </div>
