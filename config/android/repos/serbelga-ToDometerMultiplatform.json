@@ -9,7 +9,7 @@
   "name": "ToDometer Multiplatform",
   "shortDescription": "Kotlin Multiplatform project: A meter to-do list built with Android Jetpack, Compose UI Multiplatform, Wear Compose, SQLDelight, Koin Multiplatform...",
   "longDescription": "Kotlin Multiplatform project: A meter to-do list built with Android Jetpack, Compose UI Multiplatform, Wear Compose, SQLDelight, Koin Multiplatform...",
-  "content": "https://github.com/serbelga/ToDometerMultiplatform/tree/main#readme",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "kotlin",

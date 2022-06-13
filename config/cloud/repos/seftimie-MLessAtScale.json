@@ -9,7 +9,7 @@
   "name": "MLess at Scale",
   "shortDescription": "MLess at Scale: uses BigQuery ML to create and train a model, then exports it to GCP Storage, and finally deploying in a serverless env to Cloud Run using Cloud Build.",
   "longDescription": "MLess at Scale: uses BigQuery ML to create and train a model, then exports it to GCP Storage, and finally deploying in a serverless env to Cloud Run using Cloud Build.",
-  "content": "https://github.com/seftimie/MLessAtScale/blob/main/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "ai-ml",
