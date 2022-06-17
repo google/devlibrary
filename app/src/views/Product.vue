@@ -340,7 +340,19 @@ export default class Product extends Vue {
           value: tags,
         },
         
+        
       ];
+
+      q.where = [ ...q.where,
+        {
+          fieldPath: "metadata.expertise",
+          operator: "array-contains-any",
+          value: tags,
+        },
+        
+      ];
+
+      
     }
 
     return q;
