@@ -326,4 +326,37 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
     ],
   },
+  golang: {
+    key: ProductKey.GOLANG,
+    name: "Golang",
+    description:
+      "Go is an open source programming language supported by Google. Use Go to build fast, reliable, and efficient software at scale",
+    docsUrl: "https://go.dev/doc/",
+    tags: [
+      {
+        label: "Web Development",
+        value: "web-development",
+      },
+      {
+        label: "Cloud",
+        value: "cloud",
+      },
+      {
+        label: "Network Services",
+        value: "network-services",
+      },
+      {
+        label: "Development Operations (DevOps)",
+        value: "development-operations",
+      },
+      {
+        label: "Site Reliability Engineering",
+        value: "site-reliability-engineering",
+      },
+      {
+        label: "Command-line Interfaces (CLIs)",
+        value: "command-line-interfaces",
+      },
+    ],
+  },
 };

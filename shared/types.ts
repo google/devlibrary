@@ -22,6 +22,7 @@ export enum ProductKey {
   FLUTTER = "flutter",
   ML = "ml",
   ASSISTANT = "assistant",
+  GOLANG = "golang"
 }
 
 export interface ProductTag {
