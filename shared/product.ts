@@ -330,7 +330,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.GOLANG,
     name: "Golang",
     description:
-      "Go is an open source programming language supported by Google. Use Go to build fast, reliable, and efficient software at scale",
+      "Go is an open source programming language supported by Google. Use Go programming language to build fast, reliable, and efficient software at scale.",
     docsUrl: "https://go.dev/doc/",
     tags: [
       {
