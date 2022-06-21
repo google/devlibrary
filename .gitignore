@@ -5,3 +5,5 @@ node_modules
 .DS_Store
 emulator-data
 .runtimeconfig.json
+
+functions/firebase-export-1655100519347QhDJMF/
