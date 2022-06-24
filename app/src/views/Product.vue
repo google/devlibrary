@@ -278,6 +278,7 @@ export default class Product extends Vue {
       q,
       this.perPage
     );
+    console.log('repoData:',repoData);
     const reposPromise = nextPage(repoData);
 
     const blogData = emptyPageResponse<BlogData>(
@@ -343,15 +344,7 @@ export default class Product extends Vue {
         
       ];
 
-      q.where = [ ...q.where,
-        {
-          fieldPath: "metadata.expertise",
-          operator: "array-contains-any",
-          value: tags,
-        },
-        
-      ];
-
+      
       
     }
 
