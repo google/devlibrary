@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["patilshreyas"],
+  "authorIds": [
+    "patilshreyas"
+  ],
   "author": "Shreyas Patil",
   "title": "Promise compose compiler and imply when you'll change 🤞",
   "link": "https://blog.shreyaspatil.dev/promise-compose-compiler-and-imply-when-youll-change",

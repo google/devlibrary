@@ -52,6 +52,7 @@ function updateProjects(urlToMetadata: Map<string, PartialData>) {
       .filter((f) => f.endsWith(".json"));
     for (const repoFile of repoFiles) {
       console.log(`[${p}] ${repoFile}`);
+      
 
       const repoMetadata = JSON.parse(
         fs.readFileSync(path.join(reposDir, repoFile), "utf-8")
@@ -59,6 +60,10 @@ function updateProjects(urlToMetadata: Map<string, PartialData>) {
       const repoLink = `https://github.com/${repoMetadata.owner}/${repoMetadata.repo}`;
       if(urlToMetadata.has(repoLink)) {
         const partialData = urlToMetadata.get(repoLink);
+        writeOrUpdateJSON(path.join(reposDir, repoFile), partialData);
+      }
+      else {
+        const partialData ={ expertise: 'INTERMEDIATE' };
         writeOrUpdateJSON(path.join(reposDir, repoFile), partialData);
       }
     }
@@ -73,9 +78,12 @@ function updateProjects(urlToMetadata: Map<string, PartialData>) {
         fs.readFileSync(path.join(blogsDir, blogFile), "utf-8")
       );
       const blogLink = blogMetadata.link;
-
       if(urlToMetadata.has(blogLink)) {
         const partialData = urlToMetadata.get(blogLink);
+        writeOrUpdateJSON(path.join(blogsDir, blogFile), partialData);
+      }
+      else {
+        const partialData = { expertise: 'INTERMEDIATE' }
         writeOrUpdateJSON(path.join(blogsDir, blogFile), partialData);
       }
     }

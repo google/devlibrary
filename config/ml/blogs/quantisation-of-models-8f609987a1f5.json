@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["sayannath"],
+  "authorIds": [
+    "sayannath"
+  ],
   "author": "Sayan Nath",
   "title": "Quantisation of Models",
   "link": "https://medium.com/analytics-vidhya/quantisation-of-models-8f609987a1f5",

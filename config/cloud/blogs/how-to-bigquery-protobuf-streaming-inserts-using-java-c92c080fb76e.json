@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["ram-cloudside"],
+  "authorIds": [
+    "ram-cloudside"
+  ],
   "author": "Ram Devaraj",
   "title": "How to: BigQuery Protobuf Streaming Inserts using Java",
   "link": "https://blog.thecloudside.com/how-to-bigquery-protobuf-streaming-inserts-using-java-c92c080fb76e",

@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["kkumar"],
+  "authorIds": [
+    "kkumar"
+  ],
   "author": "Kushal Kumar R",
   "title": "Android Drag and Drop Tutorial: Moving Views and Data",
   "link": "https://www.raywenderlich.com/24508555-android-drag-and-drop-tutorial-moving-views-and-data",

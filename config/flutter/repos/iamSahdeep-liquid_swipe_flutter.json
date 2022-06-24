@@ -1,4 +1,5 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "github",
   "authorIds": [
@@ -12,6 +13,8 @@
   "content": "README.md",
   "pages": [],
   "tags": [
-    "plugins","web","widgets"
+    "plugins",
+    "web",
+    "widgets"
   ]
 }

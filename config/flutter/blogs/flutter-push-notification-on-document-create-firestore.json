@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["theindianappguy"],
+  "authorIds": [
+    "theindianappguy"
+  ],
   "author": "Sanskar Tiwari",
   "title": "Flutter Push Notification on document create Firestore - FlutterNerd",
   "link": "https://flutternerd.com/flutter-push-notification-on-document-create-firestore/",

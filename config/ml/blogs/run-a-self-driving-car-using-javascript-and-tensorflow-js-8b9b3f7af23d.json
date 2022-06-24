@@ -1,4 +1,5 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
   "authorIds": [
@@ -8,6 +9,9 @@
   "title": "Run a self-driving car using JavaScript and TensorFlow.js",
   "link": "https://medium.com/p/run-a-self-driving-car-using-javascript-and-tensorflow-js-8b9b3f7af23d?sk=549ee7230aa2b05fead0e68210982cf8",
   "tags": [
-    "mobile","nlp","vision","library"
+    "mobile",
+    "nlp",
+    "vision",
+    "library"
   ]
 }

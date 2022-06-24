@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["madhankumaravelu93"],
+  "authorIds": [
+    "madhankumaravelu93"
+  ],
   "author": "Madhan K",
   "title": "Scaling tests on Google Kubernetes Engine with Cloud Build",
   "link": "https://medium.com/p/624d955f6698",

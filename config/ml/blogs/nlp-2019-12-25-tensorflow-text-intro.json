@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["bachiirc"],
+  "authorIds": [
+    "bachiirc"
+  ],
   "author": "Bachir Chihani",
   "title": "Building models with tf.text",
   "link": "https://dzlab.github.io/nlp/2019/12/25/tensorflow-text-intro/",

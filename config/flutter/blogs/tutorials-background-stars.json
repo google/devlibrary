@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["roaakdm"],
+  "authorIds": [
+    "roaakdm"
+  ],
   "author": "Roaa Khaddam",
   "title": "Background Stars",
   "link": "https://dashtronaut.app/tutorials/background-stars/",
