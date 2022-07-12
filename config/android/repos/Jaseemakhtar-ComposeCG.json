@@ -9,7 +9,7 @@
   "name": "ComposeCG",
   "shortDescription": "Jetpack Compose Canvas - Canvas interactions, animations etc.",
   "longDescription": "Jetpack Compose Canvas - Canvas interactions, animations etc.",
-  "content": "https://github.com/Jaseemakhtar/ComposeCG#readme",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "modern-android-development",
