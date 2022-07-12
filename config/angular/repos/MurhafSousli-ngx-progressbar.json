@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "murhafsousli"
+  ],
+  "owner": "MurhafSousli",
+  "repo": "ngx-progressbar",
+  "name": "ngx-progressbar",
+  "shortDescription": "A nanoscopic progress bar. Featuring realistic trickle animations to convince your users that something is happening!",
+  "longDescription": "A nanoscopic progress bar. Featuring realistic trickle animations to convince your users that something is happening!",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}
