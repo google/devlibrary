@@ -9,7 +9,7 @@
   "name": "composePPT",
   "shortDescription": "An experimental UI toolkit for generating PowerPoint presentation files(.pptx) using Compose.",
   "longDescription": "An experimental UI toolkit for generating PowerPoint presentation files(.pptx) using Compose.",
-  "content": "https://github.com/fgiris/composePPT/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "kotlin",
