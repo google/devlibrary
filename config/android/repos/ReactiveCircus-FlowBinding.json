@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "github",
-  "authorIds": ["ychescale9"],
+  "authorIds": [
+    "ychescale9"
+  ],
   "owner": "ReactiveCircus",
   "repo": "FlowBinding",
   "name": "FlowBinding",

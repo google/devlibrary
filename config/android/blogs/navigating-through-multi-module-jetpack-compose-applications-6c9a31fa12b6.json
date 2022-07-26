@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["morfly"],
+  "authorIds": [
+    "morfly"
+  ],
   "author": "Pavlo Stavytskyi",
   "title": "Navigating through multi-module Jetpack Compose applications.",
   "link": "https://proandroiddev.com/navigating-through-multi-module-jetpack-compose-applications-6c9a31fa12b6",

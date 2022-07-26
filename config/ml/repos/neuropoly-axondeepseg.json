@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["vasudev-sharma"],
+  "authorIds": [
+    "vasudev-sharma"
+  ],
   "owner": "neuropoly",
   "repo": "axondeepseg",
   "name": "axondeepseg",

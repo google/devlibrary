@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["navczydev"],
+  "authorIds": [
+    "navczydev"
+  ],
   "author": "Nav Singh",
   "title": "Boost App start up time with Jetpack StartUp Library",
   "link": "https://medium.com/nerd-for-tech/boost-app-start-up-time-with-jetpack-startup-library-f1d61bdb640b",

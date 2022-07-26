@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["waterplea"],
+  "authorIds": [
+    "waterplea"
+  ],
   "author": "Alexander Inkin",
   "title": "Taiga UI: A year in Open Source",
   "link": "https://dev.to/angular/taiga-ui-a-year-in-open-source-416l",

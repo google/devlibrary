@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["pjwelcome"],
+  "authorIds": [
+    "pjwelcome"
+  ],
   "author": "Peter-John Welcome",
   "title": "Using AutoML Vision in your Android app",
   "link": "https://medium.datadriveninvestor.com/using-automl-vision-in-your-android-app-1d68316c3495",

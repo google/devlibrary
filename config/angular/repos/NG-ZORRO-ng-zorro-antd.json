@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["vthinkxie"],
+  "authorIds": [
+    "vthinkxie"
+  ],
   "owner": "NG-ZORRO",
   "repo": "ng-zorro-antd",
   "name": "ng-zorro-antd",

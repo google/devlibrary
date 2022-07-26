@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["murari045"],
+  "authorIds": [
+    "murari045"
+  ],
   "author": "Murari Ramuka",
   "title": "Self Healing Data Pipeline",
   "link": "https://medium.com/google-cloud/self-healing-data-pipeline-d54f78983bc8",

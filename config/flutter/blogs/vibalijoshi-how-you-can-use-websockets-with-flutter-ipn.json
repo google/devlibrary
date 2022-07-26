@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["vibalijoshi"],
+  "authorIds": [
+    "vibalijoshi"
+  ],
   "author": "Vibali Joshi",
   "title": "How you can use WebSockets with Flutter",
   "link": "https://dev.to/vibalijoshi/how-you-can-use-websockets-with-flutter-ipn",

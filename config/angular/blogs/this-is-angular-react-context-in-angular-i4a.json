@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["ezzabuzaid"],
+  "authorIds": [
+    "ezzabuzaid"
+  ],
   "author": "Ezz Abuzaid",
   "title": "React Context In Angular",
   "link": "https://dev.to/this-is-angular/react-context-in-angular-i4a",

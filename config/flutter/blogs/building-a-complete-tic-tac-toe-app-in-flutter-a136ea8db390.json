@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["champ96k"],
+  "authorIds": [
+    "champ96k"
+  ],
   "author": "Tushar Ramesh Nikam",
   "title": "Building Complete Tic-Tac-Toe app in Flutter with Splash Screen",
   "link": "https://champ96k.medium.com/building-a-complete-tic-tac-toe-app-in-flutter-a136ea8db390",

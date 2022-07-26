@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["shijimolak_16208"],
+  "authorIds": [
+    "shijimolak_16208"
+  ],
   "author": "Shijimol A K",
   "title": "Google Cloud Anthos Series -Part6\nPart-6: Anthos Multi-cluster Ingress",
   "link": "https://medium.com/p/bbb70e2f9979",

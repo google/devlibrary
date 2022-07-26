@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["akshay18"],
+  "authorIds": [
+    "akshay18"
+  ],
   "author": "Akshay Kumar U",
   "title": "Roadmap to Flutter Developer Journey",
   "link": "https://akshay18.hashnode.dev/a-roadmap-to-flutter-developer-journey",

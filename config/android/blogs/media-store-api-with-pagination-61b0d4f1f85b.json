@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["priyansh-kedia"],
+  "authorIds": [
+    "priyansh-kedia"
+  ],
   "author": "Priyansh Kedia",
   "title": "Media Store API with Pagination",
   "link": "https://proandroiddev.com/media-store-api-with-pagination-61b0d4f1f85b",

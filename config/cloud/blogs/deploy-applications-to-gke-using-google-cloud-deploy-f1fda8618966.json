@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["sanketbisne"],
+  "authorIds": [
+    "sanketbisne"
+  ],
   "author": "Sanket Bisne",
   "title": "Deploy applications to GKE using Google Cloud Deploy",
   "link": "https://blog.searce.com/deploy-applications-to-gke-using-google-cloud-deploy-f1fda8618966",

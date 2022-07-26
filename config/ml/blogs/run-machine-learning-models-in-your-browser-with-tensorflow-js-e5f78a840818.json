@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["omrigm"],
+  "authorIds": [
+    "omrigm"
+  ],
   "author": "Omri Grossman",
   "title": "Run Machine Learning models in your browser with TensorFlow.js",
   "link": "https://alibabatech.medium.com/run-machine-learning-models-in-your-browser-with-tensorflow-js-e5f78a840818",

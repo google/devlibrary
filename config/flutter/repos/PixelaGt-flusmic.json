@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["pblinux"],
+  "authorIds": [
+    "pblinux"
+  ],
   "owner": "PixelaGt",
   "repo": "flusmic",
   "name": "Flusmic",

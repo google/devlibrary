@@ -1,11 +1,17 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["asjadanis128"],
+  "authorIds": [
+    "asjadanis128"
+  ],
   "author": "Asjad Anis",
   "title": "Machine Learning in Production",
   "link": "https://towardsdatascience.com/machine-learning-in-production-95e1999bba84",
   "tags": [
-    "mobile","nlp","library", "theory"
+    "mobile",
+    "nlp",
+    "library",
+    "theory"
   ]
 }

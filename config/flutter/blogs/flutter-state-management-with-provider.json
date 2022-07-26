@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["akshay18"],
+  "authorIds": [
+    "akshay18"
+  ],
   "author": "Akshay Kumar U",
   "title": "Flutter: State Management with Provider",
   "link": "https://akshay18.hashnode.dev/flutter-state-management-with-provider",

@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["rajashwin"],
+  "authorIds": [
+    "rajashwin"
+  ],
   "author": "Ashwin Raj",
   "title": "The Perfect Recipe for Classification Using Logistic Regression",
   "link": "https://towardsdatascience.com/the-perfect-recipe-for-classification-using-logistic-regression-f8648e267592",

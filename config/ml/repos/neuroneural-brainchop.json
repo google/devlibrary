@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["neuroneural"],
+  "authorIds": [
+    "neuroneural"
+  ],
   "owner": "neuroneural",
   "repo": "brainchop",
   "name": "Brainchop",

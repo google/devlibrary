@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "github",
-  "authorIds": ["ebrehault"],
+  "authorIds": [
+    "ebrehault"
+  ],
   "owner": "guillotinaweb",
   "repo": "ngx-schema-form",
   "name": "ngx-schema-form",

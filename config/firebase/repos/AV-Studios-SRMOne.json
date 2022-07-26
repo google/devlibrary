@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["adityathakurxd"],
+  "authorIds": [
+    "adityathakurxd"
+  ],
   "owner": "AV-Studios",
   "repo": "SRMOne",
   "name": "SRMOne",

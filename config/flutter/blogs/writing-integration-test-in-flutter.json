@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["o-ifeanyi"],
+  "authorIds": [
+    "o-ifeanyi"
+  ],
   "author": "Onuoha Ifeanyichukwu",
   "title": "Writing Integration Test In Flutter",
   "link": "https://o-ifeanyi.hashnode.dev/writing-integration-test-in-flutter",

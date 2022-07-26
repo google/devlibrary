@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["markostanimirovic"],
+  "authorIds": [
+    "markostanimirovic"
+  ],
   "author": "Marko Stanimirović",
   "title": "DRY Way to Manage Subscriptions in Angular Components",
   "link": "https://dev.to/this-is-angular/dry-way-to-manage-subscriptions-in-angular-components-256j",

@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["rupeshurmaliya"],
+  "authorIds": [
+    "rupeshurmaliya"
+  ],
   "author": "Rupesh Urmaliya",
   "title": "Write a Custom Gradle Plug-In for Your Android App (Part 1)",
   "link": "https://betterprogramming.pub/write-a-custom-gradle-plugin-part-1-22b37c3b7326",

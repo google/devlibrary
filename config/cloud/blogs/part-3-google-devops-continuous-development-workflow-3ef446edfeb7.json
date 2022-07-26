@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["pushkarbk"],
+  "authorIds": [
+    "pushkarbk"
+  ],
   "author": "Pushkar Kothavade",
   "title": "Google Cloud DevOps Series - Part-3: Google DevOps-Continuous Development Workflow",
   "link": "https://medium.com/google-cloud/part-3-google-devops-continuous-development-workflow-3ef446edfeb7",

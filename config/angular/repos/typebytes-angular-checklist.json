@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["d3lm"],
+  "authorIds": [
+    "d3lm"
+  ],
   "owner": "typebytes",
   "repo": "angular-checklist",
   "name": "angular-checklist",

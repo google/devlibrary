@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["rajashekarraju"],
+  "authorIds": [
+    "rajashekarraju"
+  ],
   "author": "Rajasekhar K E",
   "title": "Reveal effect animations in compose jetpack android | Developers Breach",
   "link": "https://developersbreach.com/reveal-effect-animations-compose-android/",

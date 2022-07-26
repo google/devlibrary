@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["laxmankadam074"],
+  "authorIds": [
+    "laxmankadam074"
+  ],
   "author": "Laxman  Kadam",
   "title": "Gitlab CI/CD to deploy applications on GKE using shared runner",
   "link": "https://blog.searce.com/gitlab-ci-cd-to-deploy-applications-on-gke-using-shared-runner-47f8c42817ac",

@@ -37,5 +37,9 @@ export interface BlogMetadata {
    * Array of product-specific string tags
    */
   tags: [string, ...string[]];
+  /**
+   * The expertise of the articles or projects
+   */
+  expertise: string;
   [k: string]: unknown;
 }

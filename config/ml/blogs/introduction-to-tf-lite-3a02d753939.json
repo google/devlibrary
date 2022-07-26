@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["sayannath"],
+  "authorIds": [
+    "sayannath"
+  ],
   "author": "Sayan Nath",
   "title": "Introduction to TF-Lite",
   "link": "https://medium.com/analytics-vidhya/introduction-to-tf-lite-3a02d753939",

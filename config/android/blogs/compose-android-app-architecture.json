@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["rajashekarraju"],
+  "authorIds": [
+    "rajashekarraju"
+  ],
   "author": "Rajasekhar K E",
   "title": "Architecture for Compose android apps – new revamped principles | Developers Breach",
   "link": "https://developersbreach.com/compose-android-app-architecture/",

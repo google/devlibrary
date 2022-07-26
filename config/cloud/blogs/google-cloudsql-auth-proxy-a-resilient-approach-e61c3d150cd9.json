@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "medium",
-  "authorIds": ["garg-ravish"],
+  "authorIds": [
+    "garg-ravish"
+  ],
   "author": "Ravish Garg",
   "title": "Let's clear the misconceptions around Google CloudSQL Auth Proxy.",
   "link": "https://medium.com/google-cloud/google-cloudsql-auth-proxy-a-resilient-approach-e61c3d150cd9",

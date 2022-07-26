@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "github",
-  "authorIds": ["sanskar10100"],
+  "authorIds": [
+    "sanskar10100"
+  ],
   "owner": "AshwiniApp",
   "repo": "Ashwini",
   "name": "Ashwini",

@@ -1,12 +1,14 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["rajashwin"],
+  "authorIds": [
+    "rajashwin"
+  ],
   "author": "Ashwin Raj",
   "title": "An Exhaustive Guide to Decision Tree Classification in Python 3.x",
   "link": "https://towardsdatascience.com/an-exhaustive-guide-to-classification-using-decision-trees-8d472e77223f",
   "tags": [
-  
     "vision",
     "library"
   ]

@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["cyclostone5945"],
+  "authorIds": [
+    "cyclostone5945"
+  ],
   "author": "Arpit Shrotriya",
   "title": "Integrating Flutter and TensorflowLite My First Experience.",
   "link": "https://cyclostone5945.medium.com/integrating-flutter-and-tensorflowlite-my-first-experience-102110879848",

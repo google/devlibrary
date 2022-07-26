@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["rishit-dagli"],
+  "authorIds": [
+    "rishit-dagli"
+  ],
   "author": "Rishit Dagli",
   "title": "How to Monitor Machine Learning Projects on Your Mobile Device📱",
   "link": "https://www.freecodecamp.org/news/how-to-monitor-ml-projects-on-mobile-devices/",

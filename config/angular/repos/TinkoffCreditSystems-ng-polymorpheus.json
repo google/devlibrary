@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["waterplea"],
+  "authorIds": [
+    "waterplea"
+  ],
   "owner": "TinkoffCreditSystems",
   "repo": "ng-polymorpheus",
   "name": "ng-polymorpheus",

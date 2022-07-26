@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["dominicbartl"],
+  "authorIds": [
+    "dominicbartl"
+  ],
   "owner": "freshfox",
   "repo": "firestore-storage",
   "name": "Firestore Storage",

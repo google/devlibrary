@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["vbuberen"],
+  "authorIds": [
+    "vbuberen"
+  ],
   "owner": "ChuckerTeam",
   "repo": "chucker",
   "name": "Chucker",

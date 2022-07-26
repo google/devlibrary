@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["farmaker47"],
+  "authorIds": [
+    "farmaker47"
+  ],
   "author": "George Soloupis",
   "title": "Estimating musical scores (pitch) in android with TensorFlow’s SPICE model",
   "link": "https://farmaker47.medium.com/estimating-musical-scores-pitch-in-android-with-tensorflows-spice-model-4d712ded96f8",

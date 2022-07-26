@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["sayannath"],
+  "authorIds": [
+    "sayannath"
+  ],
   "author": "Sayan Nath",
   "title": "Theme Changer using Provider in Flutter",
   "link": "https://medium.com/iot-lab-kiit/theme-changer-using-provider-in-flutter-b5c9efff7d0c",

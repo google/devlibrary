@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["josharsh"],
+  "authorIds": [
+    "josharsh"
+  ],
   "author": "Harsh Joshi",
   "title": "Approaches to Serverless Deployment",
   "link": "https://dev.to/josharsh/approaches-to-serverless-deployment-kn2",

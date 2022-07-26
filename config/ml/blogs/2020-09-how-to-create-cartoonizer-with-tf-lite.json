@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["sayakpaul"],
+  "authorIds": [
+    "sayakpaul"
+  ],
   "author": "Sayak Paul",
   "title": "How to Create a Cartoonizer with TensorFlow Lite",
   "link": "https://blog.tensorflow.org/2020/09/how-to-create-cartoonizer-with-tf-lite.html",

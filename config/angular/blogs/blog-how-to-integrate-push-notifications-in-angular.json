@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["patricio"],
+  "authorIds": [
+    "patricio"
+  ],
   "author": "Patricio Vargas",
   "title": "Add push notifications to your Angular app",
   "link": "https://onesignal.com/blog/how-to-integrate-push-notifications-in-angular/",

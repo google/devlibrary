@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["chinmaykb"],
+  "authorIds": [
+    "chinmaykb"
+  ],
   "author": "Chinmay Kabi",
   "title": "Implementing route guards in Flutter web apps - LogRocket Blog",
   "link": "https://blog.logrocket.com/implementing-route-guards-flutter-web-apps/",
