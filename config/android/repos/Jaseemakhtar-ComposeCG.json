@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jaseemakhtar"
+  ],
+  "owner": "Jaseemakhtar",
+  "repo": "ComposeCG",
+  "name": "ComposeCG",
+  "shortDescription": "Jetpack Compose Canvas - Canvas interactions, animations etc.",
+  "longDescription": "Jetpack Compose Canvas - Canvas interactions, animations etc.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "compose"
+  ]
+}
