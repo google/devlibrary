@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["sbis04"],
+  "authorIds": [
+    "sbis04"
+  ],
   "author": "Souvik Biswas",
   "title": "Learn how Mux helps to handle all the complex steps of the video streaming process and integrate it with Flutter.",
   "link": "https://medium.com/flutter-community/integrating-video-streaming-with-flutter-using-mux-5ba707cca847",

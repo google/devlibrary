@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["swapnakategaru"],
+  "authorIds": [
+    "swapnakategaru"
+  ],
   "author": "Swapna K E",
   "title": "Convolutional Neural Network | Deep Learning | Developers Breach",
   "link": "https://developersbreach.com/convolution-neural-network-deep-learning/",

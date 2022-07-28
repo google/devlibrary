@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["ajiteshk"],
+  "authorIds": [
+    "ajiteshk"
+  ],
   "author": "Ajitesh Kumar",
   "title": "Near real time data replication using debezium on GKE",
   "link": "https://medium.com/google-cloud/near-real-time-data-replication-using-debezium-on-gke-634ee1d3e1aa",

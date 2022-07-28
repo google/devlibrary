@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["davidnet"],
+  "authorIds": [
+    "davidnet"
+  ],
   "owner": "poets-ai",
   "repo": "elegy",
   "name": "Elegy",

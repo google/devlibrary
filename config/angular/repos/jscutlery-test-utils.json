@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["yjaaidi"],
+  "authorIds": [
+    "yjaaidi"
+  ],
   "owner": "jscutlery",
   "repo": "test-utils",
   "name": "JSCutlery Test Utils",

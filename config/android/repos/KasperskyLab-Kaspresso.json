@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "github",
-  "authorIds": ["matzuk"],
+  "authorIds": [
+    "matzuk"
+  ],
   "owner": "KasperskyLab",
   "repo": "Kaspresso",
   "name": "Kaspresso",

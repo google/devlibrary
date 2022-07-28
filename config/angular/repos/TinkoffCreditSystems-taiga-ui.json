@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["waterplea"],
+  "authorIds": [
+    "waterplea"
+  ],
   "owner": "TinkoffCreditSystems",
   "repo": "taiga-ui",
   "name": "Taiga UI",

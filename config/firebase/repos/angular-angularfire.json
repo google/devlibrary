@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["davideast"],
+  "authorIds": [
+    "davideast"
+  ],
   "owner": "angular",
   "repo": "angularfire",
   "name": "AngularFire",

@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["ebrehault"],
+  "authorIds": [
+    "ebrehault"
+  ],
   "owner": "plone",
   "repo": "pastanaga-angular",
   "name": "pastanaga-angular",

@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["bachiirc"],
+  "authorIds": [
+    "bachiirc"
+  ],
   "author": "Bachir Chihani",
   "title": "Data Validation with TensorFlow eXtended (TFX)",
   "link": "https://dzlab.github.io/ml/2020/11/03/tfx-data-validation/",

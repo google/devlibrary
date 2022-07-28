@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["theindianappguy"],
+  "authorIds": [
+    "theindianappguy"
+  ],
   "author": "Sanskar Tiwari",
   "title": "Build a Recipe App with Flutter - FlutterNerd",
   "link": "https://flutternerd.com/build-a-recipe-app-with-flutter/",

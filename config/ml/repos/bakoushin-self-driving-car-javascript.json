@@ -1,4 +1,5 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
   "authorIds": [
@@ -12,6 +13,12 @@
   "content": "README.md",
   "pages": [],
   "tags": [
-    "mobile","nlp","vision","library","notebook","collection","web"
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web"
   ]
 }

@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["garg_gunjan"],
+  "authorIds": [
+    "garg_gunjan"
+  ],
   "author": "Gunjan Garg",
   "title": "Process images with Google Cloud AI",
   "link": "https://medium.com/google-cloud/process-images-with-google-cloud-ai-c8a9ff159d99",

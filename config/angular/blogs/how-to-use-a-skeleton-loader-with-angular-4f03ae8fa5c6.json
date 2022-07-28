@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["angulartraining"],
+  "authorIds": [
+    "angulartraining"
+  ],
   "author": "Alain Chautard",
   "title": "How to use a skeleton loader with Angular?",
   "link": "https://blog.angulartraining.com/how-to-use-a-skeleton-loader-with-angular-4f03ae8fa5c6",

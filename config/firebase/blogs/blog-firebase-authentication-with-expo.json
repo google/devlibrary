@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["amanhimself"],
+  "authorIds": [
+    "amanhimself"
+  ],
   "author": "Aman Mittal",
   "title": "How To Integrate Firebase Authentication With an Expo App",
   "link": "https://amanhimself.dev/blog/firebase-authentication-with-expo/",

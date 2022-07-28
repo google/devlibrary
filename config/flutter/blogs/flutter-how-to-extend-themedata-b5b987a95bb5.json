@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["crizantlai"],
+  "authorIds": [
+    "crizantlai"
+  ],
   "author": "Crizant Lai",
   "title": "Flutter: How to extend ThemeData",
   "link": "https://crizantlai.medium.com/flutter-how-to-extend-themedata-b5b987a95bb5",

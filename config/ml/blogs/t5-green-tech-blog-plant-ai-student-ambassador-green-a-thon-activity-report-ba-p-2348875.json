@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["rishit-dagli"],
+  "authorIds": [
+    "rishit-dagli"
+  ],
   "author": "Rishit Dagli",
   "title": "Plant AI: Student Ambassador Green-A-Thon activity report",
   "link": "https://techcommunity.microsoft.com/t5/green-tech-blog/plant-ai-student-ambassador-green-a-thon-activity-report/ba-p/2348875",

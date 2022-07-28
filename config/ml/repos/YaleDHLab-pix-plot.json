@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["douglasduhaime"],
+  "authorIds": [
+    "douglasduhaime"
+  ],
   "owner": "YaleDHLab",
   "repo": "pix-plot",
   "name": "PixPlot",
@@ -10,6 +13,9 @@
   "content": "README.md",
   "pages": [],
   "tags": [
-   "nlp","vision","library","collection"
+    "nlp",
+    "vision",
+    "library",
+    "collection"
   ]
 }

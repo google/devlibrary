@@ -1,11 +1,17 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["nyandwi"],
+  "authorIds": [
+    "nyandwi"
+  ],
   "author": "Jean de Dieu Nyandwi",
   "title": "Deep Learning for Humans — Possible With TensorFlow and Keras Ecosystem",
   "link": "https://jeande.medium.com/deep-learning-for-humans-possible-with-tensorflow-and-keras-ecosystem-badd6856f844",
   "tags": [
-    "nlp","vision","library","collection"
+    "nlp",
+    "vision",
+    "library",
+    "collection"
   ]
 }

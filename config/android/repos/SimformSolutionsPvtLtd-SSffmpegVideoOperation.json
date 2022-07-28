@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["simform-solutions"],
+  "authorIds": [
+    "simform-solutions"
+  ],
   "owner": "SimformSolutionsPvtLtd",
   "repo": "SSffmpegVideoOperation",
   "name": "SSffmpegVideoOperation",

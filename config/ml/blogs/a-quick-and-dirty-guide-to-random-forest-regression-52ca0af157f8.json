@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["rajashwin"],
+  "authorIds": [
+    "rajashwin"
+  ],
   "author": "Ashwin Raj",
   "title": "A Quick and Dirty Guide to Random Forest Regression",
   "link": "https://towardsdatascience.com/a-quick-and-dirty-guide-to-random-forest-regression-52ca0af157f8",

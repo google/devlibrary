@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "github",
-  "authorIds": ["osipxd"],
+  "authorIds": [
+    "osipxd"
+  ],
   "owner": "RedMadRobot",
   "repo": "redmadrobot-android-ktx",
   "name": "red_mad_robot Android KTX",

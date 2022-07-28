@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["manekinekko"],
+  "authorIds": [
+    "manekinekko"
+  ],
   "owner": "xlayers",
   "repo": "xlayers",
   "name": "xLayers",

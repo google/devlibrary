@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["rishit-dagli"],
+  "authorIds": [
+    "rishit-dagli"
+  ],
   "author": "Rishit Dagli",
   "title": "Keras documentation: Image classification with Swin Transformers",
   "link": "https://keras.io/examples/vision/swin_transformers/",

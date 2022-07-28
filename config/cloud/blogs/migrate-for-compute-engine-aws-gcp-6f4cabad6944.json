@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["abhisheksharma7389"],
+  "authorIds": [
+    "abhisheksharma7389"
+  ],
   "author": "Abhishek Sharma",
   "title": "Migrate for Compute Engine | AWS →GCP",
   "link": "https://blog.searce.com/migrate-for-compute-engine-aws-gcp-6f4cabad6944",

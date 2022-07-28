@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["vb10"],
+  "authorIds": [
+    "vb10"
+  ],
   "author": "Veli Bacık",
   "title": "Drive to a great way with Flutter",
   "link": "https://medium.com/flutter-community/drive-to-a-great-way-with-flutter-bc46d611b2b",

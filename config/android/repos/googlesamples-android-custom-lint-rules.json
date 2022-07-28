@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["googlesamples"],
+  "authorIds": [
+    "googlesamples"
+  ],
   "owner": "googlesamples",
   "repo": "android-custom-lint-rules",
   "name": "Custom Lint Rules",

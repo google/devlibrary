@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["voval_jain"],
+  "authorIds": [
+    "voval_jain"
+  ],
   "author": "Voval Jain",
   "title": "Connecting Clouds | AWS & GCP",
   "link": "https://blog.searce.com/connecting-clouds-aws-gcp-771eb25a2dc3",

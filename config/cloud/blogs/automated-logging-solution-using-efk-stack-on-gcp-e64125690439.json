@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["onkar17"],
+  "authorIds": [
+    "onkar17"
+  ],
   "author": "Onkar  Naik",
   "title": "Automated Logging Solution Using EFK Stack on GCP",
   "link": "https://blog.searce.com/automated-logging-solution-using-efk-stack-on-gcp-e64125690439",

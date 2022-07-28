@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "medium",
-  "authorIds": ["nishugoel"],
+  "authorIds": [
+    "nishugoel"
+  ],
   "author": "Nishu Goel",
   "title": "Step-by-step guide to creating your first library in Angular",
   "link": "https://medium.com/angular-in-depth/step-by-step-guide-to-creating-your-first-library-in-angular-6827276bfc9f",

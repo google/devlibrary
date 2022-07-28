@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["developerspace"],
+  "authorIds": [
+    "developerspace"
+  ],
   "author": "Darshan Bhanushali",
   "title": "WebRTC Sample in Kotlin",
   "link": "https://proandroiddev.com/webrtc-sample-in-kotlin-e584681ed7fc",

@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["nancy-chauhan"],
+  "authorIds": [
+    "nancy-chauhan"
+  ],
   "author": "Nancy Chauhan",
   "title": "Improve observability using Stackdriver metrics programmatically",
   "link": "https://nancy-chauhan.medium.com/improve-observability-using-stackdriver-metrics-programmatically-a29bfd7051e0",

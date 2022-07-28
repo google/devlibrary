@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["ahmedsellami526"],
+  "authorIds": [
+    "ahmedsellami526"
+  ],
   "author": "Ahmed Sellami",
   "title": "List animations in Compose: Swipe to delete | Developers Breach",
   "link": "https://developersbreach.com/swipe-to-delete-compose/",

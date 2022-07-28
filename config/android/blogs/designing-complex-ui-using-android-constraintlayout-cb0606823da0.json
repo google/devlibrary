@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["sbis04"],
+  "authorIds": [
+    "sbis04"
+  ],
   "author": "Souvik Biswas",
   "title": "Designing complex UI using Android ConstraintLayout",
   "link": "https://proandroiddev.com/designing-complex-ui-using-android-constraintlayout-cb0606823da0",

@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["crizantlai"],
+  "authorIds": [
+    "crizantlai"
+  ],
   "author": "Crizant Lai",
   "title": "Flutter: Establishing coding standards in your team",
   "link": "https://medium.com/nerd-for-tech/flutter-establishing-coding-standards-in-your-team-fe2f0a2808a2",

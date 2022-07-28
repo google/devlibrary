@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "medium",
-  "authorIds": ["jaimil-dev8819"],
+  "authorIds": [
+    "jaimil-dev8819"
+  ],
   "author": "Jaimil Patel",
   "title": "Receive sharing photos, videos, text, URLs, or any other file types from another app.",
   "link": "https://medium.com/flutter-community/receive-sharing-files-to-flutter-app-from-another-app-7a84c0c0cd88",

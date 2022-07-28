@@ -1,11 +1,17 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["m_prth"],
+  "authorIds": [
+    "m_prth"
+  ],
   "author": "Parth Mistry",
   "title": "TensorFlow installation with GPU Support on Python 3.7 in Windows",
   "link": "https://chatbotslife.com/tensorflow-installation-with-gpu-support-on-python-3-7-in-windows-734e6eeefa94",
   "tags": [
-    "mobile","nlp","vision","library"
+    "mobile",
+    "nlp",
+    "vision",
+    "library"
   ]
 }

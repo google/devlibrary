@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["ahmedsellami526"],
+  "authorIds": [
+    "ahmedsellami526"
+  ],
   "author": "Ahmed Sellami",
   "title": "List animations in Compose: Add an item | Developers Breach",
   "link": "https://developersbreach.com/add-item-animation-compose/",

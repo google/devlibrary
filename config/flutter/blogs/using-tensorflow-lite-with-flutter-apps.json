@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["amishakirti6410"],
+  "authorIds": [
+    "amishakirti6410"
+  ],
   "author": "Amisha Kirti",
   "title": "Using Tensorflow Lite with Flutter Apps",
   "link": "https://amishakirti6410.hashnode.dev/using-tensorflow-lite-with-flutter-apps",

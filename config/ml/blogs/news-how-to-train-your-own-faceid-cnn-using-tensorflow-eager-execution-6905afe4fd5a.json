@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["quincylarson"],
+  "authorIds": [
+    "quincylarson"
+  ],
   "author": "Quincy Larson",
   "title": "How to train your own FaceID ConvNet using TensorFlow Eager execution",
   "link": "https://www.freecodecamp.org/news/how-to-train-your-own-faceid-cnn-using-tensorflow-eager-execution-6905afe4fd5a/",

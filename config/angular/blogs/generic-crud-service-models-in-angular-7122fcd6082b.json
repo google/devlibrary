@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["nikosanif"],
+  "authorIds": [
+    "nikosanif"
+  ],
   "author": "Nikos Anifantis",
   "title": "Generic CRUD Service & Models in Angular",
   "link": "https://nikosanif.medium.com/generic-crud-service-models-in-angular-7122fcd6082b",

@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["grepleigh"],
+  "authorIds": [
+    "grepleigh"
+  ],
   "author": "Leigh Johnson",
   "title": "Soft-launching an AI/ML Product as a Solo Founder",
   "link": "https://towardsdatascience.com/soft-launching-an-ai-ml-product-as-a-solo-founder-87ee81bbe6f6?source=friends_link&sk=97a9841f5d56baa159faca5d2f66c537",

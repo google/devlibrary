@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["apoorva-murde"],
+  "authorIds": [
+    "apoorva-murde"
+  ],
   "author": "Apoorva Murde",
   "title": "Getting Started: Atlantis with Terraform and GitHub",
   "link": "https://blog.searce.com/getting-started-atlantis-with-terraform-and-github-4e99ab190655",

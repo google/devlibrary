@@ -36,6 +36,15 @@
         </div>
 
         <div class="section">
+          <p class="font-display font-medium text-sm mb-2 px-2">Expertise Level</p>
+          <CheckboxGroup
+            prefix="expertiseLevel"
+            :keys="['Beginner', 'Intermediate', 'Advanced']"
+            :values="['Beginner', 'Intermediate', 'Advanced']"
+            v-model="expertiseLevel"
+          />
+        </div>
+        <div class="section">
           <p class="font-display font-medium text-sm mb-2 px-2">Type</p>
 
           <CheckboxGroup
@@ -88,12 +97,14 @@ export default class ProjectFilters extends Vue {
   public sort = "updated";
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
+  public expertiseLevel: CheckboxGroupEntry[] = [];
 
   get value() {
     return {
       sort: this.sort,
       types: this.types,
       categories: this.categories,
+      expertiseLevel : this.expertiseLevel,
     };
   }
 

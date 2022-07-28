@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["shivamdhuria"],
+  "authorIds": [
+    "shivamdhuria"
+  ],
   "author": "Shivam Dhuria",
   "title": "GitHub - Shivamdhuria/puck: Make composables draggable",
   "link": "https://github.com/Shivamdhuria/puck",

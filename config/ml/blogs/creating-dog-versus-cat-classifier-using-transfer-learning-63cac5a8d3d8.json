@@ -1,4 +1,5 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
   "authorIds": [
@@ -8,6 +9,8 @@
   "title": "Creating Dog versus Cat Classifier using Transfer Learning",
   "link": "https://medium.com/tesseract-coding/creating-dog-versus-cat-classifier-using-transfer-learning-63cac5a8d3d8",
   "tags": [
-    "mobile", "nlp", "library"
+    "mobile",
+    "nlp",
+    "library"
   ]
 }

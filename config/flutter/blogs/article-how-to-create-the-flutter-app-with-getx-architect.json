@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["md-sarfaraj"],
+  "authorIds": [
+    "md-sarfaraj"
+  ],
   "author": "MD Sarfaraj",
   "title": "How To Create The Flutter App With Getx Architect",
   "link": "https://www.c-sharpcorner.com/article/how-to-create-the-flutter-app-with-getx-architect/",
@@ -10,5 +13,3 @@
     "mobile"
   ]
 }
-
-

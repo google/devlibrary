@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["bachiirc"],
+  "authorIds": [
+    "bachiirc"
+  ],
   "author": "Bachir Chihani",
   "title": "TensorFlow Distributed Training on Kubeflow",
   "link": "https://dzlab.github.io/ml/2020/07/18/kubeflow-training/",

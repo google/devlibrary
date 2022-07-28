@@ -141,6 +141,16 @@
               <font-awesome-icon icon="times" class="ml-px" size="sm" />
             </div>
           </div>
+          <div v-for="item in filters.expertiseLevel" :key="item.value">
+            <div
+              v-if="item.checked"
+              class="mr-2 mb-4 filter-chip"
+              @click="removeFilterExpertise(item.value)"
+            >
+              <span class="mr-2">{{ item.key }}</span>
+              <font-awesome-icon icon="times" class="ml-px" size="sm" />
+            </div>
+          </div>
         </div>
 
         <div id="projects">
@@ -237,6 +247,7 @@ export default class Product extends Vue {
     sort: SORT_ADDED,
     types: [] as CheckboxGroupEntry[],
     categories: [] as CheckboxGroupEntry[],
+    expertiseLevel : [] as CheckboxGroupEntry[],
   };
 
   private pagesToShow = 1;
@@ -267,6 +278,7 @@ export default class Product extends Vue {
       q,
       this.perPage
     );
+    console.log('repoData:',repoData);
     const reposPromise = nextPage(repoData);
 
     const blogData = emptyPageResponse<BlogData>(
@@ -287,12 +299,13 @@ export default class Product extends Vue {
 
   get queryTags(): string[] | null {
     // If no selection, consider them all checked
-    const noneChecked = this.filters.categories.every((c) => !c.checked);
-    if (noneChecked) {
+    const noneCategoryChecked = this.filters.categories.every((c) => !c.checked);
+    const noneExpertiseChecked = this.filters.expertiseLevel.every((c) => !c.checked);
+    if (noneCategoryChecked && noneExpertiseChecked) {
       return null;
     }
 
-    return this.filters.categories.filter((x) => x.checked).map((x) => x.value);
+    return this.filters.categories.filter((x) => x.checked).map((x) => x.value).concat(this.filters.expertiseLevel.filter((x) => x.checked).map((x) => x.value));
   }
 
   get queryOrderBy(): string {
@@ -327,7 +340,17 @@ export default class Product extends Vue {
           operator: "array-contains-any",
           value: tags,
         },
+        {
+          fieldPath: "metadata.expertise",
+          operator: "array-contains-any",
+          value: tags,
+        },
+        
+        
       ];
+
+      
+      
     }
 
     return q;
@@ -377,8 +400,19 @@ export default class Product extends Vue {
     }
   }
 
+  public removeFilterExpertise(value: string) {
+    const f = this.filters.expertiseLevel.find((x) => x.value === value);
+    if (f) {
+      f.checked = false;
+    }
+  }
+
   public resetFilters() {
     for (const c of this.filters.categories) {
+      c.checked = false;
+    }
+
+    for (const c of this.filters.expertiseLevel) {
       c.checked = false;
     }
 
@@ -406,6 +440,14 @@ export default class Product extends Vue {
     return (
       this.showAllTypes ||
       this.filters.types.some((t) => t.value === "open-source" && t.checked)
+    );
+  }
+
+  get showBeginer(): boolean {
+    console.log('a',this.showAllTypes)
+    return (
+      this.showAllTypes ||
+      this.filters.types.some((t) => t.value === "beginner" && t.checked)
     );
   }
 

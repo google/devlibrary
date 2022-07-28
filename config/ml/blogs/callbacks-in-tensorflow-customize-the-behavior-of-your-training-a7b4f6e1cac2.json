@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["aqsakausar30"],
+  "authorIds": [
+    "aqsakausar30"
+  ],
   "author": "Aqsa Kausar",
   "title": "In this blog, you’ll learn what Keras callback is, when it is called, what it can do and how it can be used to customize the behavior of your model training",
   "link": "https://medium.com/red-buffer/callbacks-in-tensorflow-customize-the-behavior-of-your-training-a7b4f6e1cac2?source=friends_link&sk=70f7ac27822decacafe2364f30a3c095",

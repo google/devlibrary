@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["vb10"],
+  "authorIds": [
+    "vb10"
+  ],
   "author": "Veli Bacık",
   "title": "Layered architecture to advanced Flutter apps.",
   "link": "https://medium.com/flutter-community/layered-architecture-to-advanced-flutter-apps-d8d4db2bd1c7",
