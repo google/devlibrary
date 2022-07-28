@@ -57,6 +57,11 @@ const styles: Record<string, ProductStyle> = {
     text: "text-assistant-text",
     iconBorder: "border-assistant-accent",
   },
+  golang: {
+    bg: "bg-golang-bg",
+    text: "text-golang-text",
+    iconBorder: "border-golang-accent",
+  },
 };
 
 // Listing these classes here means that PurgeCSS will not
