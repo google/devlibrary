@@ -15,170 +15,173 @@
 -->
 
 <template>
-  <HeaderBodyLayout
-    style="
-      --header-bg-image-desktop: url('/img/banners/desktop/product-wide.png');
-      --header-bg-image-mobile: url('/img/banners/mobile/product-wide.png');
-    "
-  >
-    <template v-slot:header>
-      <!-- Header (Mobile) -->
-      <div class="mobile-only header-image">
-        <div class="mobile-only frc px-std py-4 border-b border-gray-100">
-          <ProductLogo size="small" :productKey="product.key" />
+  <div>
+    <Breadcrumbs :links="getBreadcrumbs()" />
+    <HeaderBodyLayout
+      style="
+        --header-bg-image-desktop: url('/img/banners/desktop/product-wide.png');
+        --header-bg-image-mobile: url('/img/banners/mobile/product-wide.png');
+      "
+    >
+      <template v-slot:header>
+        <!-- Header (Mobile) -->
+        <div class="mobile-only header-image">
+          <div class="mobile-only frc px-std py-4 border-b border-gray-100">
+            <ProductLogo size="small" :productKey="product.key" />
 
-          <h1 class="ml-2">
-            {{ product.name }}
-          </h1>
-        </div>
-      </div>
-
-      <!-- Header (Desktop) -->
-      <div class="desktop-only header-image">
-        <div
-          class="lg:py-4 xl:py-10 px-std grid grid-cols-10 gap-4 border-b border-gray-100"
-        >
-          <div class="col-span-4 pt-2">
-            <div class="frc">
-              <ProductLogo
-                class="mr-4"
-                size="medium"
-                :productKey="product.key"
-              />
-              <h1>
-                {{ product.name }}
-              </h1>
-            </div>
-
-            <p class="mt-2">{{ product.description }}</p>
-            <a :href="product.docsUrl" target="blank">
-              <MaterialButton type="secondary" class="mt-8">
-                Official docs
-                <font-awesome-icon icon="external-link-alt" class="ml-1" />
-              </MaterialButton>
-            </a>
+            <h1 class="ml-2">
+              {{ product.name }}
+            </h1>
           </div>
         </div>
-      </div>
-    </template>
 
-    <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
-      <!-- Filters (Desktop) -->
-      <div v-if="$mq === 'desktop'" class="lg:col-span-2">
-        <ProjectFilters v-model="filters" :product="product" />
-      </div>
+        <!-- Header (Desktop) -->
+        <div class="desktop-only header-image">
+          <div
+            class="lg:py-4 xl:py-10 px-std grid grid-cols-10 gap-4 border-b border-gray-100"
+          >
+            <div class="col-span-4 pt-2">
+              <div class="frc">
+                <ProductLogo
+                  class="mr-4"
+                  size="medium"
+                  :productKey="product.key"
+                />
+                <h1>
+                  {{ product.name }}
+                </h1>
+              </div>
 
-      <!-- Filters (Mobile) -->
-      <div
-        v-if="$mq === 'mobile'"
-        v-show="showFilterOverlay"
-        class="mobile-only scrim"
-      >
-        <!-- scrim -->
-      </div>
-      <transition name="slide-in-left">
+              <p class="mt-2">{{ product.description }}</p>
+              <a :href="product.docsUrl" target="blank">
+                <MaterialButton type="secondary" class="mt-8">
+                  Official docs
+                  <font-awesome-icon icon="external-link-alt" class="ml-1" />
+                </MaterialButton>
+              </a>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <!-- Body -->
+      <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
+        <!-- Filters (Desktop) -->
+        <div v-if="$mq === 'desktop'" class="lg:col-span-2">
+          <ProjectFilters v-model="filters" :product="product" />
+        </div>
+
+        <!-- Filters (Mobile) -->
         <div
           v-if="$mq === 'mobile'"
           v-show="showFilterOverlay"
-          class="mobile-only fixed right-0 top-0 pt-20 w-full h-full"
+          class="mobile-only scrim"
         >
-          <div class="bg-white rounded-l overflow-hidden w-2/3 ml-auto">
-            <ProjectFilters
-              v-model="filters"
-              :product="product"
-              :mobile="true"
-            />
-            <div
-              class="border-t border-gray-200 flex flex-row-reverse gap-2 p-2"
-            >
-              <MaterialButton
-                type="primary"
-                @click.native="showFilterOverlay = false"
-                >Done</MaterialButton
-              >
-
-              <MaterialButton type="secondary" @click.native="resetFilters()"
-                >Reset</MaterialButton
-              >
-            </div>
-          </div>
+          <!-- scrim -->
         </div>
-      </transition>
-
-      <!-- Cards -->
-      <div v-show="hasContent" class="col-span-10 lg:col-span-8">
-        <!-- Filter Chips -->
-        <div v-if="filters" class="flex flex-row flex-wrap">
-          <!-- Show filters button (mobile) -->
-          <div class="mobile-only">
-            <div class="flex flex-row mr-2 mb-4">
-              <div class="filter-chip" @click="showFilterOverlay = true">
-                <font-awesome-icon icon="filter" size="sm" class="mr-2" />
-                <span>Filters</span>
-              </div>
-            </div>
-          </div>
-
-          <div v-for="item in filters.types" :key="item.value">
-            <div
-              v-if="item.checked"
-              class="mr-2 mb-4 filter-chip"
-              @click="removeFilterType(item.value)"
-            >
-              <span class="mr-2">{{ item.key }}</span>
-              <font-awesome-icon icon="times" class="ml-px" size="sm" />
-            </div>
-          </div>
-
-          <div v-for="item in filters.categories" :key="item.value">
-            <div
-              v-if="item.checked"
-              class="mr-2 mb-4 filter-chip"
-              @click="removeFilterCategory(item.value)"
-            >
-              <span class="mr-2">{{ item.key }}</span>
-              <font-awesome-icon icon="times" class="ml-px" size="sm" />
-            </div>
-          </div>
-        </div>
-
-        <div id="projects">
+        <transition name="slide-in-left">
           <div
-            v-if="visibleProjects.length === 0"
-            class="mt-4 frc justify-center py-20 text-gray-400"
+            v-if="$mq === 'mobile'"
+            v-show="showFilterOverlay"
+            class="mobile-only fixed right-0 top-0 pt-20 w-full h-full"
           >
-            <font-awesome-icon
-              :icon="['fas', 'exclamation-circle']"
-              class="mr-2"
-            />
-            <span>No projects matching your filters.</span>
-          </div>
+            <div class="bg-white rounded-l overflow-hidden w-2/3 ml-auto">
+              <ProjectFilters
+                v-model="filters"
+                :product="product"
+                :mobile="true"
+              />
+              <div
+                class="border-t border-gray-200 flex flex-row-reverse gap-2 p-2"
+              >
+                <MaterialButton
+                  type="primary"
+                  @click.native="showFilterOverlay = false"
+                  >Done</MaterialButton
+                >
 
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <RepoOrBlogCard
-              v-for="project in visibleProjects"
-              :key="project.data.id"
-              :project="project"
-            />
-          </div>
-
-          <div class="flex flex-row justify-center mt-4 lg:mt-6">
-            <MaterialButton
-              v-if="canLoadMore"
-              type="text"
-              @click.native="loadMore"
-            >
-              <div class="frc">
-                <span>Load more</span>
-                <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
+                <MaterialButton type="secondary" @click.native="resetFilters()"
+                  >Reset</MaterialButton
+                >
               </div>
-            </MaterialButton>
+            </div>
+          </div>
+        </transition>
+
+        <!-- Cards -->
+        <div v-show="hasContent" class="col-span-10 lg:col-span-8">
+          <!-- Filter Chips -->
+          <div v-if="filters" class="flex flex-row flex-wrap">
+            <!-- Show filters button (mobile) -->
+            <div class="mobile-only">
+              <div class="flex flex-row mr-2 mb-4">
+                <div class="filter-chip" @click="showFilterOverlay = true">
+                  <font-awesome-icon icon="filter" size="sm" class="mr-2" />
+                  <span>Filters</span>
+                </div>
+              </div>
+            </div>
+
+            <div v-for="item in filters.types" :key="item.value">
+              <div
+                v-if="item.checked"
+                class="mr-2 mb-4 filter-chip"
+                @click="removeFilterType(item.value)"
+              >
+                <span class="mr-2">{{ item.key }}</span>
+                <font-awesome-icon icon="times" class="ml-px" size="sm" />
+              </div>
+            </div>
+
+            <div v-for="item in filters.categories" :key="item.value">
+              <div
+                v-if="item.checked"
+                class="mr-2 mb-4 filter-chip"
+                @click="removeFilterCategory(item.value)"
+              >
+                <span class="mr-2">{{ item.key }}</span>
+                <font-awesome-icon icon="times" class="ml-px" size="sm" />
+              </div>
+            </div>
+          </div>
+
+          <div id="projects">
+            <div
+              v-if="visibleProjects.length === 0"
+              class="mt-4 frc justify-center py-20 text-gray-400"
+            >
+              <font-awesome-icon
+                :icon="['fas', 'exclamation-circle']"
+                class="mr-2"
+              />
+              <span>No projects matching your filters.</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              <RepoOrBlogCard
+                v-for="project in visibleProjects"
+                :key="project.data.id"
+                :project="project"
+              />
+            </div>
+
+            <div class="flex flex-row justify-center mt-4 lg:mt-6">
+              <MaterialButton
+                v-if="canLoadMore"
+                type="text"
+                @click.native="loadMore"
+              >
+                <div class="frc">
+                  <span>Load more</span>
+                  <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
+                </div>
+              </MaterialButton>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </HeaderBodyLayout>
+    </HeaderBodyLayout>
+  </div>
 </template>
 
 <script lang="ts">
@@ -196,6 +199,7 @@ import UIModule from "@/store/ui";
 import MaterialButton from "@/components/MaterialButton.vue";
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import ProjectFilters from "@/components/ProjectFilters.vue";
+import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import RadioGroup from "@/components/RadioGroup.vue";
 import CheckboxGroup, {
   CheckboxGroupEntry,
@@ -213,6 +217,7 @@ import {
 import { ProductConfig } from "../../../shared/types";
 import { ALL_PRODUCTS } from "../../../shared/product";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
+import { BreadcrumbLink } from "../../../shared/types";
 import { getStyle, ProductStyle } from "@/model/product";
 
 const SORT_ADDED = "added";
@@ -227,10 +232,18 @@ const SORT_UPDATED = "updated";
     HeaderBodyLayout,
     ProductLogo,
     ProjectFilters,
+    Breadcrumbs,
   },
 })
 export default class Product extends Vue {
   private uiModule = getModule(UIModule, this.$store);
+
+  public getBreadcrumbs(): BreadcrumbLink[] {
+    return [
+      {name: "Products", clickable: false},
+      {name: this.product.name, clickable: true},
+    ];
+  }
 
   public productLoaded = false;
   public urlParams = new URLSearchParams(window.location.search);
