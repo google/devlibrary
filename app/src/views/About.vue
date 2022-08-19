@@ -336,7 +336,7 @@ import { BreadcrumbLink } from "../../../shared/types";
 })
 export default class About extends Vue {
   public getBreadcrumbs(): BreadcrumbLink[] {
-    return [{name: 'About', clickable: true}];
+    return [{name: "About", clickable: true}];
   }
 }
 </script>

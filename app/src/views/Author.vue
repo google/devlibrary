@@ -137,7 +137,12 @@ import {
   queryAuthorProjects,
   wrapInHolders,
 } from "@/plugins/data";
-import { AuthorData, BlogData, BreadcrumbLink, RepoData } from "../../../shared/types";
+import {
+  AuthorData,
+  BlogData,
+  BreadcrumbLink,
+  RepoData,
+} from "../../../shared/types";
 
 @Component({
   components: {
@@ -154,8 +159,8 @@ export default class Author extends Vue {
 
   public getBreadcrumbs(): BreadcrumbLink[] {
     return [
-      {name: 'Authors', clickable: true},
-      {name: this.author?.metadata?.name ?? 'Author', clickable: true}
+      { name: "Authors", clickable: true },
+      { name: this.author?.metadata?.name ?? "Author", clickable: true },
     ];
   }
 
