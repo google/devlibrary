@@ -15,23 +15,67 @@
 -->
 
 <template>
-  <HeaderBodyLayout>
-    <template v-if="loaded" v-slot:header>
-      <!-- Header (Desktop) -->
-      <div class="desktop-only">
-        <div
-          :class="[productStyle.bg, productStyle.text]"
-          class="py-20 grid grid-cols-10 gap-4"
-        >
-          <div class="col-start-2 col-span-7">
-            <h1 :class="[productStyle.text]">
-              {{ repo.metadata.name }}
-            </h1>
-            <p class="mt-2">
-              {{ repo.metadata.longDescription }}
-            </p>
+  <div>
+    <Breadcrumbs v-if="loaded" :links="getBreadcrumbs()" />
+    <HeaderBodyLayout>
+      <template v-if="loaded" v-slot:header>
+        <!-- Header (Desktop) -->
+        <div class="desktop-only">
+          <div
+            :class="[productStyle.bg, productStyle.text]"
+            class="py-20 grid grid-cols-10 gap-4"
+          >
+            <div class="col-start-2 col-span-7">
+              <h1 :class="[productStyle.text]">
+                {{ repo.metadata.name }}
+              </h1>
+              <p class="mt-2">
+                {{ repo.metadata.longDescription }}
+              </p>
 
-            <p v-if="authors.length > 0" class="flex gap-2 mt-2">
+              <p v-if="authors.length > 0" class="flex gap-2 mt-2">
+                <AuthorLink
+                  v-for="author in authors"
+                  :key="author.id"
+                  :author="author"
+                  class="opacity-80 hover:opacity-100"
+                />
+              </p>
+
+              <a
+                target="blank"
+                :href="`https://github.com/${repo.metadata.owner}/${repo.metadata.repo}`"
+              >
+                <MaterialButton type="secondary" class="mt-8">
+                  View on GitHub
+                  <font-awesome-icon icon="external-link-alt" class="ml-1" />
+                </MaterialButton>
+              </a>
+            </div>
+
+            <div class="col-start-9 col-span-2">
+              <p class="pt-1">
+                {{ repo.stats.stars }}
+                <font-awesome-icon fixed-width icon="star" />
+              </p>
+              <p class="pt-1">
+                {{ repo.stats.forks }}
+                <font-awesome-icon fixed-width icon="code-branch" />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Header (Mobile) -->
+        <div class="mobile-only">
+          <div :class="[productStyle.bg, productStyle.text]" class="py-4 px-8">
+            <h2 :class="[productStyle.text]" class="mb-2">
+              {{ repo.metadata.name }}
+            </h2>
+            <p class="opacity-80 text-sm">
+              {{ repo.metadata.shortDescription }}
+            </p>
+            <p v-if="authors.length > 0" class="flex gap-2 mt-4">
               <AuthorLink
                 v-for="author in authors"
                 :key="author.id"
@@ -39,139 +83,100 @@
                 class="opacity-80 hover:opacity-100"
               />
             </p>
-
-            <a
-              target="blank"
-              :href="`https://github.com/${repo.metadata.owner}/${repo.metadata.repo}`"
-            >
-              <MaterialButton type="secondary" class="mt-8">
-                View on GitHub
-                <font-awesome-icon icon="external-link-alt" class="ml-1" />
-              </MaterialButton>
-            </a>
-          </div>
-
-          <div class="col-start-9 col-span-2">
-            <p class="pt-1">
-              {{ repo.stats.stars }}
-              <font-awesome-icon fixed-width icon="star" />
-            </p>
-            <p class="pt-1">
-              {{ repo.stats.forks }}
-              <font-awesome-icon fixed-width icon="code-branch" />
-            </p>
           </div>
         </div>
-      </div>
+      </template>
 
-      <!-- Header (Mobile) -->
-      <div class="mobile-only">
-        <div :class="[productStyle.bg, productStyle.text]" class="py-4 px-8">
-          <h2 :class="[productStyle.text]" class="mb-2">
-            {{ repo.metadata.name }}
-          </h2>
-          <p class="opacity-80 text-sm">
-            {{ repo.metadata.shortDescription }}
-          </p>
-          <p v-if="authors.length > 0" class="flex gap-2 mt-4">
-            <AuthorLink
-              v-for="author in authors"
-              :key="author.id"
-              :author="author"
-              class="opacity-80 hover:opacity-100"
-            />
-          </p>
-        </div>
-      </div>
-    </template>
-
-    <template v-if="loaded" v-slot:sidebar>
-      <!-- Side bar -->
-      <div>
-        <p class="uppercase font-medium mt-4 mb-2">{{ product.name }}</p>
-        <ul class="text-sm">
-          <li>
-            <router-link :to="`/products/${productKey}`"
-              >All Projects</router-link
-            >
-          </li>
-          <li><a :href="product.docsUrl" target="_blank">Official Docs</a></li>
-        </ul>
-
-        <p class="uppercase font-medium mt-4 mb-2">Project</p>
-        <ul class="text-sm">
-          <li><router-link :to="fullPagePath()">Home</router-link></li>
-          <li v-for="p in repo.metadata.pages" :key="p.path">
-            <router-link :to="fullPagePath(p.path)">{{ p.name }}</router-link>
-          </li>
-          <li>
-            <router-link :to="fullPagePath('license')">License</router-link>
-          </li>
-        </ul>
-
-        <div v-if="repo.metadata.links">
-          <p class="uppercase font-medium mt-4 mb-2">Links</p>
+      <template v-if="loaded" v-slot:sidebar>
+        <!-- Side bar -->
+        <div>
+          <p class="uppercase font-medium mt-4 mb-2">{{ product.name }}</p>
           <ul class="text-sm">
-            <li v-for="l in repo.metadata.links" :key="l.href">
-              <a :href="l.href" target="_blank">{{ l.title }}</a>
+            <li>
+              <router-link :to="`/products/${productKey}`"
+                >All Projects</router-link
+              >
+            </li>
+            <li><a :href="product.docsUrl" target="_blank">Official Docs</a></li>
+          </ul>
+
+          <p class="uppercase font-medium mt-4 mb-2">Project</p>
+          <ul class="text-sm">
+            <li><router-link :to="fullPagePath()">Home</router-link></li>
+            <li v-for="p in repo.metadata.pages" :key="p.path">
+              <router-link :to="fullPagePath(p.path)">{{ p.name }}</router-link>
+            </li>
+            <li>
+              <router-link :to="fullPagePath('license')">License</router-link>
             </li>
           </ul>
+
+          <div v-if="repo.metadata.links">
+            <p class="uppercase font-medium mt-4 mb-2">Links</p>
+            <ul class="text-sm">
+              <li v-for="l in repo.metadata.links" :key="l.href">
+                <a :href="l.href" target="_blank">{{ l.title }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </template>
+
+      <!-- Body -->
+      <div class="grid grid-cols-10 gap-4 mb-10 lg:mb-20">
+        <div
+          v-if="content != null"
+          class="col-span-10 px-8 lg:px-0 lg:col-start-2 lg:col-span-8"
+        >
+          <template v-for="(s, i) in content.sections">
+            <!-- Only show headers for sections after the first one -->
+            <h2
+              v-if="i > 0 && s.name.length > 0"
+              class="mt-8 mb-2"
+              :key="`header-${s.name}`"
+            >
+              {{ s.name }}
+            </h2>
+            <!-- The 'prose' class comes from the Tailwind typography plugin -->
+            <div
+              v-if="s.content.length > 0"
+              class="prose mt-4 lg:mt-8"
+              :key="`content-${s.name}`"
+              v-html="sanitize(s.content)"
+            ></div>
+          </template>
+        </div>
+
+        <!-- For debugging only: refresh content button -->
+        <div v-if="showRefreshButton" class="fixed z-50 bottom-4 right-4">
+          <MaterialButton
+            type="primary"
+            class="mt-8"
+            @click.native="refreshContent()"
+          >
+            Refresh
+          </MaterialButton>
         </div>
       </div>
-    </template>
-
-    <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-10 lg:mb-20">
-      <div
-        v-if="content != null"
-        class="col-span-10 px-8 lg:px-0 lg:col-start-2 lg:col-span-8"
-      >
-        <template v-for="(s, i) in content.sections">
-          <!-- Only show headers for sections after the first one -->
-          <h2
-            v-if="i > 0 && s.name.length > 0"
-            class="mt-8 mb-2"
-            :key="`header-${s.name}`"
-          >
-            {{ s.name }}
-          </h2>
-          <!-- The 'prose' class comes from the Tailwind typography plugin -->
-          <div
-            v-if="s.content.length > 0"
-            class="prose mt-4 lg:mt-8"
-            :key="`content-${s.name}`"
-            v-html="sanitize(s.content)"
-          ></div>
-        </template>
-      </div>
-
-      <!-- For debugging only: refresh content button -->
-      <div v-if="showRefreshButton" class="fixed z-50 bottom-4 right-4">
-        <MaterialButton
-          type="primary"
-          class="mt-8"
-          @click.native="refreshContent()"
-        >
-          Refresh
-        </MaterialButton>
-      </div>
-    </div>
-  </HeaderBodyLayout>
+    </HeaderBodyLayout>
+  </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 import DOMPurify from "dompurify";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import AuthorLink from "@/components/AuthorLink.vue";
 import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
+import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import UIModule from "@/store/ui";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
 import {
   AuthorData,
+  BreadcrumbLink,
   RepoData,
   RepoPage,
   ProductConfig,
@@ -190,6 +195,7 @@ declare const hljs: any;
     MaterialButton,
     AuthorLink,
     HeaderBodyLayout,
+    Breadcrumbs,
   },
 })
 export default class Repo extends Vue {
@@ -197,6 +203,15 @@ export default class Repo extends Vue {
   public repo: RepoData | null = null;
   public content: RepoPage | null = null;
   public authors: AuthorData[] = [];
+
+  public getBreadcrumbs(): BreadcrumbLink[] {
+    return [
+      {name: "Products", clickable: false},
+      {name: this.product?.name ?? 'Product', clickable: true},
+      {name: "Repos", clickable: false},
+      {name: this.repo?.metadata.name ?? 'Repo', clickable: true},
+    ];
+  }
 
   private productKey!: string;
   private id!: string;

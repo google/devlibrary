@@ -16,6 +16,7 @@
 
 <template>
   <div class="about">
+    <Breadcrumbs :links="getBreadcrumbs()"></Breadcrumbs>
     <div
       id="header"
       class="grid gap-4 grid-cols-6 py-6 lg:py-10 border-b border-gray-100"
@@ -324,13 +325,20 @@
 import { Component, Vue } from "vue-property-decorator";
 
 import MaterialButton from "@/components/MaterialButton.vue";
+import Breadcrumbs from "@/components/Breadcrumbs.vue";
+import { BreadcrumbLink } from "../../../shared/types";
 
 @Component({
   components: {
     MaterialButton,
+    Breadcrumbs,
   },
 })
-export default class About extends Vue {}
+export default class About extends Vue {
+  public getBreadcrumbs(): BreadcrumbLink[] {
+    return [{name: 'About', clickable: true}];
+  }
+}
 </script>
 
 <style scoped lang="postcss">

@@ -16,6 +16,7 @@
 
 <template>
   <div>
+    <Breadcrumbs :links="getBreadcrumbs()" />
     <!-- Header -->
     <div
       class="header-image py-10 lg:py-20 px-std border-b border-gray-100"
@@ -137,18 +138,24 @@ import UIModule from "@/store/ui";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import CircleImage from "@/components/CircleImage.vue";
+import Breadcrumbs from "@/components/Breadcrumbs.vue";
 
-import { AuthorData } from "../../../shared/types";
+import { AuthorData, BreadcrumbLink } from "../../../shared/types";
 import { queryAuthors } from "@/plugins/data";
 
 @Component({
   components: {
     MaterialButton,
     CircleImage,
+    Breadcrumbs,
   },
 })
 export default class Authors extends Vue {
   private uiModule = getModule(UIModule, this.$store);
+
+  public getBreadcrumbs(): BreadcrumbLink[] {
+    return [{name: 'Authors', clickable: true}];
+  }
 
   public authorFilter = "";
   public authors: AuthorData[] = [];
