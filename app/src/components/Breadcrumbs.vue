@@ -25,10 +25,14 @@
           <font-awesome-icon icon="chevron-right" size="sm" />
         </li>
         <li :key="index" class="last:text-mgray-800 text-gray-400">
-          <a class="hover:underline" v-if="link.clickable" :href="linkPath(index)">
-            {{link.name}}
+          <a
+            class="hover:underline"
+            v-if="link.clickable"
+            :href="linkPath(index)"
+          >
+            {{ link.name }}
           </a>
-          <p v-else>{{link.name}}</p>
+          <p v-else>{{ link.name }}</p>
         </li>
       </template>
     </ol>
@@ -44,14 +48,11 @@ export default class Breadcrumbs extends Vue {
   @Prop() links!: BreadcrumbLink[];
 
   public linkPath(index: number): string {
-    console.log(index)
-    console.log('index')
-    console.log('../'.repeat(this.links.length - index - 1))
     if (index === this.links.length - 1) {
-      return '';
+      return "";
     }
 
-    return './' + '../'.repeat(this.links.length - index - 2);
+    return "./" + "../".repeat(this.links.length - index - 2);
   }
 }
 </script>

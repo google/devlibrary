@@ -240,8 +240,8 @@ export default class Product extends Vue {
 
   public getBreadcrumbs(): BreadcrumbLink[] {
     return [
-      {name: "Products", clickable: false},
-      {name: this.product.name, clickable: true},
+      { name: "Products", clickable: false },
+      { name: this.product.name, clickable: true },
     ];
   }
 

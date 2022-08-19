@@ -97,7 +97,9 @@
                 >All Projects</router-link
               >
             </li>
-            <li><a :href="product.docsUrl" target="_blank">Official Docs</a></li>
+            <li>
+              <a :href="product.docsUrl" target="_blank">Official Docs</a>
+            </li>
           </ul>
 
           <p class="uppercase font-medium mt-4 mb-2">Project</p>
@@ -206,10 +208,10 @@ export default class Repo extends Vue {
 
   public getBreadcrumbs(): BreadcrumbLink[] {
     return [
-      {name: "Products", clickable: false},
-      {name: this.product?.name ?? 'Product', clickable: true},
-      {name: "Repos", clickable: false},
-      {name: this.repo?.metadata.name ?? 'Repo', clickable: true},
+      { name: "Products", clickable: false },
+      { name: this.product?.name ?? "Product", clickable: true },
+      { name: "Repos", clickable: false },
+      { name: this.repo?.metadata.name ?? "Repo", clickable: true },
     ];
   }
 
