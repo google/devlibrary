@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "santosh-kumar-perumal"
+  ],
+  "owner": "Santosh-Kumar-Perumal",
+  "repo": "CI-CD",
+  "name": "Cloud Run continuous Deployment with GitHubActions",
+  "shortDescription": "Cloud Run continuous Deployment with GitHubActions.\nContainerise your app using Docker push the code to GitHub trigger a build with cloud build and push the image to GCR and deploy the app to CloudRun",
+  "longDescription": "Cloud Run continuous Deployment with GitHubActions.\nContainerise your app using Docker push the code to GitHub trigger a build with cloud build and push the image to GCR and deploy the app to CloudRun",
+  "content": "https://github.com/Santosh-Kumar-Perumal/CI-CD#readme",
+  "pages": [],
+  "tags": [
+    "compute"
+  ]
+}
