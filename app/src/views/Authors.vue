@@ -67,7 +67,7 @@
       >
         <!-- Author Card -->
         <div
-          v-for="author in authors"
+          v-for="author in authors.slice(0, displayedAuthors)"
           v-show="showAuthor(author)"
           :key="author.id"
           class="card card-clickable px-5 py-4 flex flex-col items-center text-center"
@@ -114,6 +114,12 @@
       </div>
     </div>
 
+    <!-- Pagination -->
+    <div v-show="displayedAuthors < authors.length" class="my-2 flex flex-col items-center place-content-center">
+      <div class="mb-2 font-medium font-display">Displaying {{ displayedAuthors }} of {{ authors.length }} authors.</div>
+      <MaterialButton type="text" @click.native="addDisplayedAuthors">Load more</MaterialButton>
+    </div>
+
     <!-- Link -->
     <p class="text-xs px-std mt-2 mb-6 text-mgray-700" v-show="loaded">
       If your content is in the Dev Library and you're missing from this page,
@@ -152,6 +158,7 @@ export default class Authors extends Vue {
 
   public authorFilter = "";
   public authors: AuthorData[] = [];
+  public displayedAuthors = 60;
 
   mounted() {
     this.uiModule.waitFor(this.loadContent());
@@ -167,6 +174,10 @@ export default class Authors extends Vue {
       .includes(this.authorFilter.toLowerCase());
   }
 
+  public addDisplayedAuthors() {
+    this.displayedAuthors += 60;
+  }
+
   get loaded() {
     return this.authors.length > 0;
   }
@@ -179,8 +190,6 @@ export default class Authors extends Vue {
   }
 
   private async loadContent() {
-    // TODO: When we get more authors we will probably want to paginate this, but it's ok
-    //       for now.
     const res = await queryAuthors({
       orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
     });
