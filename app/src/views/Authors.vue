@@ -67,7 +67,7 @@
       >
         <!-- Author Card -->
         <div
-          v-for="author in authors.slice(0, displayedAuthors)"
+          v-for="author in visibleAuthors"
           v-show="showAuthor(author)"
           :key="author.id"
           class="card card-clickable px-5 py-4 flex flex-col items-center text-center"
@@ -116,14 +116,18 @@
 
     <!-- Pagination -->
     <div
-      v-show="displayedAuthors < authors.length"
-      class="my-2·flex·flex-col·items-center·place-content-center"
+      v-show="canLoadMore"
+      class="mt-2 mb-6 flex flex-col items-center place-content-center"
     >
-      <div class="mb-2 font-medium font-display">
-        Displaying {{ displayedAuthors }} of {{ authors.length }} authors.
-      </div>
-      <MaterialButton type="text" @click.native="addDisplayedAuthors">
-        Load more
+      <MaterialButton
+        v-if="canLoadMore"
+        type="text"
+        @click.native="loadMore"
+      >
+        <div class="frc">
+          <span>Load more</span>
+          <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
+        </div>
       </MaterialButton>
     </div>
 
@@ -152,7 +156,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 import CircleImage from "@/components/CircleImage.vue";
 
 import { AuthorData } from "../../../shared/types";
-import { queryAuthors } from "@/plugins/data";
+import { emptyPageResponse, nextPage, PagedResponse, queryAuthors, wrapInHolders } from "@/plugins/data";
 
 @Component({
   components: {
@@ -164,11 +168,28 @@ export default class Authors extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
   public authorFilter = "";
-  public authors: AuthorData[] = [];
-  public displayedAuthors = 60;
+
+  private pagesToShow = 1;
+  public authorData: PagedResponse<AuthorData> = emptyPageResponse<AuthorData>(
+    `/authors`,
+    {},
+    60
+  );
 
   mounted() {
-    this.uiModule.waitFor(this.loadContent());
+    const authorData = emptyPageResponse<AuthorData>(
+      `/authors`,
+      {
+        orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
+      },
+      60,
+    );
+    const authorsPromise = nextPage(authorData);
+    const reloadPromise = Promise.all([authorsPromise]).then(() => {
+      this.pagesToShow = 1;
+      this.authorData = authorData;
+    });
+    this.uiModule.waitFor(reloadPromise);
   }
 
   public showAuthor(a: AuthorData): boolean {
@@ -179,10 +200,6 @@ export default class Authors extends Vue {
     return a.metadata.name
       .toLowerCase()
       .includes(this.authorFilter.toLowerCase());
-  }
-
-  public addDisplayedAuthors() {
-    this.displayedAuthors += 60;
   }
 
   get loaded() {
@@ -196,18 +213,42 @@ export default class Authors extends Vue {
     );
   }
 
-  private async loadContent() {
-    const res = await queryAuthors({
-      orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
-    });
+  get hasContent() {
+    return this.authorData.currentPage >= 0;
+  }
 
-    this.authors = res.docs
-      .map((d) => d.data)
-      .sort((a, b) => {
-        return a.metadata.name
-          .toLowerCase()
-          .localeCompare(b.metadata.name.toLowerCase());
-      });
+  get canLoadMore() {
+    const canLoadMoreRemote = this.authorData.hasNext;
+
+    const canLoadMoreLocal =
+      this.visibleAuthors.length < this.authors.length;
+
+    return canLoadMoreRemote || canLoadMoreLocal;
+  }
+
+  public async loadMore() {
+    const promises = [];
+
+    if (this.authorData.hasNext) {
+
+      promises.push(nextPage(this.authorData));
+    }
+
+    await this.uiModule.waitFor(Promise.all(promises));
+    this.pagesToShow++;
+  }
+
+  get authors(): AuthorData[] {
+    console.log(this.authorData);
+    if (this.authorData.pages.length <= 0) {
+      return [];
+    }
+    return this.authorData.pages.flatMap((p) => p);
+  }
+
+  get visibleAuthors(): AuthorData[] {
+    const maxToShow = 60 * this.pagesToShow;
+    return this.authors.slice(0, maxToShow);
   }
 }
 </script>
