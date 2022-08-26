@@ -115,9 +115,16 @@
     </div>
 
     <!-- Pagination -->
-    <div v-show="displayedAuthors < authors.length" class="my-2 flex flex-col items-center place-content-center">
-      <div class="mb-2 font-medium font-display">Displaying {{ displayedAuthors }} of {{ authors.length }} authors.</div>
-      <MaterialButton type="text" @click.native="addDisplayedAuthors">Load more</MaterialButton>
+    <div
+      v-show="displayedAuthors < authors.length"
+      class="my-2·flex·flex-col·items-center·place-content-center"
+    >
+      <div class="mb-2 font-medium font-display">
+        Displaying {{ displayedAuthors }} of {{ authors.length }} authors.
+      </div>
+      <MaterialButton type="text" @click.native="addDisplayedAuthors">
+        Load more
+      </MaterialButton>
     </div>
 
     <!-- Link -->
