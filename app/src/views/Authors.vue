@@ -147,7 +147,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
 import UIModule from "@/store/ui";
@@ -156,7 +156,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 import CircleImage from "@/components/CircleImage.vue";
 
 import { AuthorData } from "../../../shared/types";
-import { emptyPageResponse, nextPage, PagedResponse, queryAuthors, wrapInHolders } from "@/plugins/data";
+import { emptyPageResponse, nextPage, PagedResponse, queryAuthors } from "@/plugins/data";
 
 @Component({
   components: {
