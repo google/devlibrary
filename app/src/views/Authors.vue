@@ -119,10 +119,7 @@
       v-show="canLoadMore && authorFilter === ''"
       class="mt-2 mb-6 flex flex-col items-center place-content-center"
     >
-      <MaterialButton v-if="canLoadMore"
-        type="text"
-        @click.native="loadMore"
-      >
+      <MaterialButton v-if="canLoadMore" type="text" @click.native="loadMore">
         <div class="frc">
           <span>Load more</span>
           <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
@@ -236,14 +233,13 @@ export default class Authors extends Vue {
   get canLoadMore() {
     const canLoadMoreRemote = this.authorData.hasNext;
 
-    const canLoadMoreLocal =
-      this.visibleAuthors.length < this.authors.length;
+    const canLoadMoreLocal = this.visibleAuthors.length < this.authors.length;
 
     return canLoadMoreRemote || canLoadMoreLocal;
   }
 
   get displayedAuthors() {
-    if (this.authorFilter != '') {
+    if (this.authorFilter != "") {
       return this.allAuthors;
     } else {
       return this.visibleAuthors;
