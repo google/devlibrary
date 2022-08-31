@@ -67,7 +67,7 @@
       >
         <!-- Author Card -->
         <div
-          v-for="author in visibleAuthors"
+          v-for="author in displayedAuthors"
           v-show="showAuthor(author)"
           :key="author.id"
           class="card card-clickable px-5 py-4 flex flex-col items-center text-center"
@@ -116,7 +116,7 @@
 
     <!-- Pagination -->
     <div
-      v-show="canLoadMore"
+      v-show="canLoadMore && authorFilter === ''"
       class="mt-2 mb-6 flex flex-col items-center place-content-center"
     >
       <MaterialButton
@@ -147,7 +147,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
 import UIModule from "@/store/ui";
@@ -170,13 +170,14 @@ export default class Authors extends Vue {
   public authorFilter = "";
 
   private pagesToShow = 1;
+  public allAuthors: AuthorData[] = [];
   public authorData: PagedResponse<AuthorData> = emptyPageResponse<AuthorData>(
     `/authors`,
     {},
     60
   );
 
-  mounted() {
+  async mounted() {
     const authorData = emptyPageResponse<AuthorData>(
       `/authors`,
       {
@@ -190,6 +191,17 @@ export default class Authors extends Vue {
       this.authorData = authorData;
     });
     this.uiModule.waitFor(reloadPromise);
+
+    const res = await queryAuthors({
+      orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
+    });
+    this.allAuthors = res.docs
+      .map((d) => d.data)
+      .sort((a, b) => {
+        return a.metadata.name
+          .toLowerCase()
+          .localeCompare(b.metadata.name.toLowerCase());
+      });
   }
 
   public showAuthor(a: AuthorData): boolean {
@@ -209,7 +221,7 @@ export default class Authors extends Vue {
   get showNoMatchesMessage() {
     return (
       this.authorFilter.length > 0 &&
-      !this.authors.some((a) => this.showAuthor(a))
+      !this.allAuthors.some((a) => this.showAuthor(a))
     );
   }
 
@@ -226,6 +238,14 @@ export default class Authors extends Vue {
     return canLoadMoreRemote || canLoadMoreLocal;
   }
 
+  get displayedAuthors() {
+    if (this.authorFilter != '') {
+      return this.allAuthors;
+    } else {
+      return this.visibleAuthors;
+    }
+  }
+
   public async loadMore() {
     const promises = [];
 
@@ -239,7 +259,6 @@ export default class Authors extends Vue {
   }
 
   get authors(): AuthorData[] {
-    console.log(this.authorData);
     if (this.authorData.pages.length <= 0) {
       return [];
     }
