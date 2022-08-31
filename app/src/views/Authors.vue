@@ -119,8 +119,7 @@
       v-show="canLoadMore && authorFilter === ''"
       class="mt-2 mb-6 flex flex-col items-center place-content-center"
     >
-      <MaterialButton
-        v-if="canLoadMore"
+      <MaterialButton v-if="canLoadMore"
         type="text"
         @click.native="loadMore"
       >
@@ -156,7 +155,12 @@ import MaterialButton from "@/components/MaterialButton.vue";
 import CircleImage from "@/components/CircleImage.vue";
 
 import { AuthorData } from "../../../shared/types";
-import { emptyPageResponse, nextPage, PagedResponse, queryAuthors } from "@/plugins/data";
+import {
+  emptyPageResponse,
+  nextPage,
+  PagedResponse,
+  queryAuthors,
+} from "@/plugins/data";
 
 @Component({
   components: {
@@ -183,7 +187,7 @@ export default class Authors extends Vue {
       {
         orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
       },
-      60,
+      60
     );
     const authorsPromise = nextPage(authorData);
     const reloadPromise = Promise.all([authorsPromise]).then(() => {
