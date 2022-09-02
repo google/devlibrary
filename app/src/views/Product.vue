@@ -231,7 +231,9 @@ const SORT_UPDATED = "updated";
 })
 export default class Product extends Vue {
   private uiModule = getModule(UIModule, this.$store);
-
+  
+  public productLoaded = false;
+  public urlParams = new URLSearchParams(window.location.search);
   public showFilterOverlay = false;
   public filters = {
     sort: SORT_ADDED,
@@ -282,7 +284,65 @@ export default class Product extends Vue {
       this.blogData = blogData;
     });
 
-    this.uiModule.waitFor(reloadPromise);
+    this.uiModule.waitFor(reloadPromise).then(() => {
+      this.productLoaded = true;
+    });
+  }
+
+  @Watch("productLoaded")
+  public async onProductLoadedChanged() {
+    const selectedSort = this.urlParams.get('sort');
+    const selectedTypes = this.urlParams.get('type');
+    const selectedCategories = this.urlParams.get('category');
+
+    if (selectedSort !== null) {
+      document.getElementById(`sort-${selectedSort}`)?.click();
+    }
+    if (selectedTypes !== null) {
+      const selectedTypesArray = selectedTypes.split(',');
+      for (const selectedType of selectedTypesArray) {
+        document.getElementById(selectedType)?.click();
+      }
+    }
+    if (selectedCategories !== null) {
+      const selectedCategoriesArray = selectedCategories.split(',');
+      for (const selectedCategory of selectedCategoriesArray) {
+        document.getElementById(selectedCategory)?.click();
+      }
+    }
+  }
+
+  @Watch("filters", {deep: true})
+  public async onFiltersTypeChanged() {
+    let hasTypeParams = false, hasCategoryParams = false;
+    let typeParams = '', categoryParams = '';
+    let url = `?sort=${this.filters.sort}`;
+    
+    for (const filterType of this.filters.types) {
+      if (filterType.checked) {
+        if (hasTypeParams) {
+          typeParams += ',';
+        }
+        typeParams += `${filterType.id}`;
+        hasTypeParams = true;
+      }
+    }
+    for (const filterCategory of this.filters.categories) {
+      if (filterCategory.checked) {
+        if (hasCategoryParams) {
+          categoryParams += ',';
+        }
+        categoryParams += `${filterCategory.id}`;
+        hasCategoryParams = true;
+      }
+    }
+    if (hasTypeParams) {
+      url += `&type=${typeParams}`;
+    }
+    if (hasCategoryParams) {
+      url += `&category=${categoryParams}`;
+    }
+    window.history.replaceState(null, '', url);
   }
 
   get queryTags(): string[] | null {
