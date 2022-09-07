@@ -249,12 +249,38 @@ export default class Repo extends Vue {
 
     const content = await fetchRepoPage(this.productKey, this.id, pageKey);
     if (content) {
+      for (const section of content.sections) {
+        let indexCursor = 0;
+        while (section.content.substring(indexCursor).includes('<img src="https://github.com')) {
+          const startIndex = section.content.substring(indexCursor).indexOf('<img src="https://github.com') + indexCursor + 10;
+          const endIndex = startIndex + section.content.substring(startIndex).indexOf('"');
+          const imageHtml = section.content.substring(startIndex, endIndex);
+          const imageExists = await this.imageExists(imageHtml);
+          if (!imageExists) {
+            const formattedImageHtml = imageHtml.replace('https://github.com', 'https://raw.githubusercontent.com').replace('/blob', '');
+            section.content = section.content.replace(imageHtml, formattedImageHtml);
+          }
+          indexCursor = endIndex;
+        }
+      }
       this.content = content;
     } else {
       this.$router.push("/404");
       return;
     }
   }
+
+  public async imageExists(imgUrl: string) {
+    if (!imgUrl) {
+        return false;
+    }
+    return new Promise(res => {
+        const image = new Image();
+        image.onload = () => res(true);
+        image.onerror = () => res(false);
+        image.src = imgUrl;
+    });
+}
 
   public fullPagePath(path?: string) {
     const base = `/products/${this.productKey}/repos/${this.repo?.id}`;
