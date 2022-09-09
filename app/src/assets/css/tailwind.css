@@ -149,6 +149,16 @@
     background-repeat: no-repeat;
   }
 
+  .dynamic-author-image {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    font-size: 50px;
+    height: 9rem;
+    justify-content: center;
+    width: 9rem;
+  }
+
   @screen lg {
     .header-image {
       background-image: var(--header-bg-image-desktop);

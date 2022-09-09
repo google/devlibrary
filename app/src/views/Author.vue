@@ -60,10 +60,15 @@
           <div class="col-span-9">
             <div class="flex flex-row gap-8 items-center">
               <CircleImage
+                v-if="authorImageLoaded"
                 class="border-none"
                 size="large"
                 :src="author.metadata.photoURL"
               />
+              <div
+                v-else
+                v-html="dynamicAuthorImage">
+              </div>
 
               <div>
                 <h1>
@@ -149,6 +154,7 @@ export default class Author extends Vue {
 
   public id!: string;
   public author: AuthorData | null = null;
+  public authorImageLoaded = false;
 
   public blogs: BlogData[] = [];
   public repos: RepoData[] = [];
@@ -176,6 +182,33 @@ export default class Author extends Vue {
     this.blogs = blogs.docs.map((d) => d.data);
     this.repos = repos.docs.map((d) => d.data);
     this.author = author;
+
+    this.authorImageLoaded = await this.getImage();
+  }
+
+  public async getImage() {
+    if (this.author) {
+      const imageExists = await this.imageExists(this.author.metadata.photoURL);
+      if (!imageExists) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  public async imageExists(imgUrl: string) {
+    if (!imgUrl) {
+      return false;
+    }
+    return new Promise((res) => {
+      const image = new Image();
+      image.onload = () => res(true);
+      image.onerror = () => res(false);
+      image.src = imgUrl;
+    });
   }
 
   get loaded() {
@@ -190,6 +223,21 @@ export default class Author extends Vue {
     }
 
     return "Dev Library contributor";
+  }
+
+  get dynamicAuthorImage() {
+    const name = this.author?.metadata.name.replace(/[()]/gi, '');
+    const separatedNames = name?.split(' ');
+    let imageHtml = "<div class=\"dynamic-author-image\">";
+    if (separatedNames && separatedNames?.length > 0) {
+      imageHtml += separatedNames[0].charAt(0);
+      if (separatedNames && separatedNames?.length > 1) {
+        imageHtml += separatedNames[1].charAt(0);
+      }
+    }
+    imageHtml += "</div>"
+    
+    return imageHtml;
   }
 
   get expertise() {
