@@ -19,11 +19,14 @@
     <!-- Author photo and name -->
     <div class="frc">
       <CircleImage
+        v-if="authorImageLoaded"
         :lazy="true"
         size="card-avatar"
         class="mr-2"
         :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
       />
+      <div v-else v-html="dynamicAuthorImage">
+      </div>
       <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
 
       <ProductLogo
@@ -104,6 +107,12 @@ export default class LargeRepoCard extends Vue {
   @Prop({ default: true }) showTags!: boolean;
   @Prop({ default: false }) showLogo!: boolean;
 
+  public authorImageLoaded = false;
+
+  async mounted() {
+    this.authorImageLoaded = await this.getImage();
+  }
+
   public renderDaysAgo(lastUpdated: number) {
     return dates.renderDaysAgo(lastUpdated);
   }
@@ -112,8 +121,48 @@ export default class LargeRepoCard extends Vue {
     return product.getTag(this.repo.product, value);
   }
 
+  public async getImage() {
+    if (this.repo.metadata.owner) {
+      const imageExists = await this.imageExists(`https://avatars.githubusercontent.com/${this.repo.metadata.owner}`);
+      if (!imageExists) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  public async imageExists(imgUrl: string) {
+    if (!imgUrl) {
+      return false;
+    }
+    return new Promise((res) => {
+      const image = new Image();
+      image.onload = () => res(true);
+      image.onerror = () => res(false);
+      image.src = imgUrl;
+    });
+  }
+
   get link() {
     return `/products/${this.repo.product}/repos/${this.repo.id}`;
+  }
+
+  get dynamicAuthorImage() {
+    const name = this.repo.metadata.owner.replace(/[()]/gi, "");
+    const separatedNames = name?.split(" ");
+    let imageHtml = "<div class=\"dynamic-author-image-small\">";
+    if (separatedNames && separatedNames?.length > 0) {
+      imageHtml += separatedNames[0].charAt(0);
+      if (separatedNames && separatedNames?.length > 1) {
+        imageHtml += separatedNames[1].charAt(0);
+      }
+    }
+    imageHtml += "</div>"
+    
+    return imageHtml;
   }
 }
 </script>

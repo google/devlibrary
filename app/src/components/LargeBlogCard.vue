@@ -22,11 +22,14 @@
       <template v-if="authorId">
         <router-link :to="`/authors/${authorId}`" class="frc">
           <CircleImage
+            v-if="authorImageLoaded"
             :lazy="true"
             size="card-avatar"
             class="mr-2"
             :src="authorPhotoUrl"
           />
+          <div v-else v-html="dynamicAuthorImage">
+          </div>
           <span class="font-display text-lg">{{ blog.metadata.author }}</span>
         </router-link>
       </template>
@@ -116,12 +119,43 @@ export default class LargeBlogCard extends Vue {
   @Prop({ default: true }) showTags!: boolean;
   @Prop({ default: false }) showLogo!: boolean;
 
+  public authorImageLoaded = false;
+
+  async mounted() {
+    this.authorImageLoaded = await this.getImage();
+  }
+
   public renderDaysAgo(lastUpdated: number) {
     return dates.renderDaysAgo(lastUpdated);
   }
 
   public getTag(value: string) {
     return product.getTag(this.blog.product, value);
+  }
+
+  public async getImage() {
+    if (this.authorPhotoUrl) {
+      const imageExists = await this.imageExists(this.authorPhotoUrl);
+      if (!imageExists) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  public async imageExists(imgUrl: string) {
+    if (!imgUrl) {
+      return false;
+    }
+    return new Promise((res) => {
+      const image = new Image();
+      image.onload = () => res(true);
+      image.onerror = () => res(false);
+      image.src = imgUrl;
+    });
   }
 
   get authorId() {
@@ -141,6 +175,21 @@ export default class LargeBlogCard extends Vue {
     }
 
     return undefined;
+  }
+
+  get dynamicAuthorImage() {
+    const name = this.blog.metadata.author.replace(/[()]/gi, "");
+    const separatedNames = name?.split(" ");
+    let imageHtml = "<div class=\"dynamic-author-image-small\">";
+    if (separatedNames && separatedNames?.length > 0) {
+      imageHtml += separatedNames[0].charAt(0);
+      if (separatedNames && separatedNames?.length > 1) {
+        imageHtml += separatedNames[1].charAt(0);
+      }
+    }
+    imageHtml += "</div>"
+    
+    return imageHtml;
   }
 }
 </script>

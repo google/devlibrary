@@ -26,10 +26,13 @@
       <div class="mobile-only header-image py-6">
         <div class="flex flex-col items-center gap-2">
           <CircleImage
+            v-if="authorImageLoaded"
             class="border-white"
             size="medium"
             :src="author.metadata.photoURL"
           />
+          <div v-else v-html="dynamicAuthorImage">
+          </div>
 
           <!-- Name and bio -->
           <div class="px-6 py-2 text-center max-w-lg">
@@ -65,9 +68,7 @@
                 size="large"
                 :src="author.metadata.photoURL"
               />
-              <div
-                v-else
-                v-html="dynamicAuthorImage">
+              <div v-else v-html="dynamicAuthorImage">
               </div>
 
               <div>
@@ -226,8 +227,8 @@ export default class Author extends Vue {
   }
 
   get dynamicAuthorImage() {
-    const name = this.author?.metadata.name.replace(/[()]/gi, '');
-    const separatedNames = name?.split(' ');
+    const name = this.author?.metadata.name.replace(/[()]/gi, "");
+    const separatedNames = name?.split(" ");
     let imageHtml = "<div class=\"dynamic-author-image\">";
     if (separatedNames && separatedNames?.length > 0) {
       imageHtml += separatedNames[0].charAt(0);

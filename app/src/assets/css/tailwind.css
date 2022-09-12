@@ -153,10 +153,21 @@
     align-items: center;
     border-radius: 50%;
     display: flex;
-    font-size: 50px;
+    font-size: 60px;
     height: 9rem;
     justify-content: center;
     width: 9rem;
+  }
+
+  .dynamic-author-image-small {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    font-size: 12px;
+    height: 24px;
+    justify-content: center;
+    margin-right: 8px;
+    width: 24px;
   }
 
   @screen lg {
