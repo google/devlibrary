@@ -90,6 +90,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 import CircleImage from "@/components/CircleImage.vue";
+import { ColorJson } from "../assets/ts/profile-colors";
 
 import * as dates from "@/plugins/dates";
 import * as product from "@/model/product";
@@ -146,6 +147,17 @@ export default class LargeRepoCard extends Vue {
     });
   }
 
+  private getHashCode(text: string): number {
+    let hash = 0, i, chr, len;
+    if (text.length == 0) return hash;
+    for (i = 0, len = text.length; i < len; i++) {
+      chr   = text.charCodeAt(i);
+      hash  = ((hash << 5) - hash) + chr;
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  }
+
   get link() {
     return `/products/${this.repo.product}/repos/${this.repo.id}`;
   }
@@ -153,7 +165,12 @@ export default class LargeRepoCard extends Vue {
   get dynamicAuthorImage() {
     const name = this.repo.metadata.owner.replace(/[()]/gi, "");
     const separatedNames = name?.split(" ");
-    let imageHtml = "<div class=\"dynamic-author-image-small\">";
+
+    const hash = this.getHashCode(this.repo.metadata.owner || "");
+    const colorData = ColorJson[hash % ColorJson.length]
+
+    let imageHtml = `<div class="dynamic-author-image-small"
+      style="background-color: ${colorData.background}; color: ${colorData.color}">`;
     if (separatedNames && separatedNames?.length > 0) {
       imageHtml += separatedNames[0].charAt(0);
       if (separatedNames && separatedNames?.length > 1) {
