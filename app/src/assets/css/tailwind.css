@@ -159,6 +159,16 @@
     width: 9rem;
   }
 
+  .dynamic-author-image-medium {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    font-size: 30px;
+    height: 60px;
+    justify-content: center;
+    width: 60px;
+  }
+
   .dynamic-author-image-small {
     align-items: center;
     border-radius: 50%;
