@@ -190,21 +190,22 @@ export default class LargeBlogCard extends Vue {
   }
 
   get dynamicAuthorImage() {
-    const name = this.blog.metadata.author.replace(/[()]/gi, "");
+    const name = this.blog.metadata.author.replace(/[().]/gi, "");
     const separatedNames = name?.split(" ");
 
-    const hash = this.getHashCode(this.blog.metadata.author || "");
-    const colorData = ColorJson[hash % ColorJson.length]
-
-    let imageHtml = `<div class="dynamic-author-image-small"
-      style="background-color: ${colorData.background}; color: ${colorData.color}">`;
+    let initials = "";
     if (separatedNames && separatedNames?.length > 0) {
-      imageHtml += separatedNames[0].charAt(0);
+      initials += separatedNames[0].charAt(0).toUpperCase();
       if (separatedNames && separatedNames?.length > 1) {
-        imageHtml += separatedNames[1].charAt(0);
+        initials += separatedNames[1].charAt(0).toUpperCase();
       }
     }
-    imageHtml += "</div>"
+
+    const hash = this.getHashCode(initials || "");
+    const colorData = ColorJson[hash % ColorJson.length]
+    const imageHtml = `<div class="dynamic-author-image-small"
+      style="background-color: ${colorData.background}; color: ${colorData.color}">
+      ${initials}</div>`;
     
     return imageHtml;
   }
