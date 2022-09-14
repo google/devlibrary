@@ -141,16 +141,6 @@
               <font-awesome-icon icon="times" class="ml-px" size="sm" />
             </div>
           </div>
-          <div v-for="item in filters.expertiseLevel" :key="item.value">
-            <div
-              v-if="item.checked"
-              class="mr-2 mb-4 filter-chip"
-              @click="removeFilterExpertise(item.value)"
-            >
-              <span class="mr-2">{{ item.key }}</span>
-              <font-awesome-icon icon="times" class="ml-px" size="sm" />
-            </div>
-          </div>
         </div>
 
         <div id="projects">
@@ -249,7 +239,7 @@ export default class Product extends Vue {
     sort: SORT_ADDED,
     types: [] as CheckboxGroupEntry[],
     categories: [] as CheckboxGroupEntry[],
-    expertiseLevel : [] as CheckboxGroupEntry[],
+    expertiseLevel: [] as CheckboxGroupEntry[],
   };
 
   private pagesToShow = 1;
@@ -280,7 +270,6 @@ export default class Product extends Vue {
       q,
       this.perPage
     );
-    console.log('repoData:',repoData);
     const reposPromise = nextPage(repoData);
 
     const blogData = emptyPageResponse<BlogData>(
@@ -304,11 +293,15 @@ export default class Product extends Vue {
   @Watch("productLoaded")
   public async onProductLoadedChanged() {
     const selectedSort = this.urlParams.get("sort");
+    const selectedExpertise = this.urlParams.get("expertise");
     const selectedTypes = this.urlParams.get("type");
     const selectedCategories = this.urlParams.get("category");
 
     if (selectedSort !== null) {
       document.getElementById(`sort-${selectedSort}`)?.click();
+    }
+    if (selectedExpertise !== null) {
+      document.getElementById(`expertiseLevel-${selectedExpertise}`)?.click();
     }
     if (selectedTypes !== null) {
       const selectedTypesArray = selectedTypes.split(",");
@@ -326,13 +319,21 @@ export default class Product extends Vue {
 
   @Watch("filters", { deep: true })
   public async onFiltersTypeChanged() {
-    console.log('filters', this.filters);
     let hasTypeParams = false;
     let hasCategoryParams = false;
+    let hasExpertiseParams = false;
     let typeParams = "";
     let categoryParams = "";
+    let expertiseParams = "";
     let url = `?sort=${this.filters.sort}`;
 
+    if (
+      typeof this.filters.expertiseLevel === "string" &&
+      this.filters.expertiseLevel != ""
+    ) {
+      hasExpertiseParams = true;
+      expertiseParams += `${this.filters.expertiseLevel}`;
+    }
     for (const filterType of this.filters.types) {
       if (filterType.checked) {
         if (hasTypeParams) {
@@ -351,6 +352,9 @@ export default class Product extends Vue {
         hasCategoryParams = true;
       }
     }
+    if (hasExpertiseParams) {
+      url += `&expertise=${expertiseParams}`;
+    }
     if (hasTypeParams) {
       url += `&type=${typeParams}`;
     }
@@ -362,7 +366,9 @@ export default class Product extends Vue {
 
   get queryTags(): string[] | null {
     // If no selection, consider them all checked
-    const noneCategoryChecked = this.filters.categories.every((c) => !c.checked);
+    const noneCategoryChecked = this.filters.categories.every(
+      (c) => !c.checked
+    );
     if (noneCategoryChecked) {
       return null;
     }
@@ -404,7 +410,10 @@ export default class Product extends Vue {
     };
 
     if (tags) {
-      tags = tags?.filter((tag) => tag !== 'Beginner' && tag !== 'Intermediate' && tag !== 'Advanced');
+      tags = tags?.filter(
+        (tag) =>
+          tag !== "Beginner" && tag !== "Intermediate" && tag !== "Advanced"
+      );
       if (tags.length > 0) {
         q.where = [
           {
@@ -423,11 +432,13 @@ export default class Product extends Vue {
           value: expertise.toUpperCase(),
         });
       } else {
-        q.where = [{
-          fieldPath: "metadata.expertise",
-          operator: "==",
-          value: expertise.toUpperCase(),
-        }];
+        q.where = [
+          {
+            fieldPath: "metadata.expertise",
+            operator: "==",
+            value: expertise.toUpperCase(),
+          },
+        ];
       }
     }
 
@@ -478,20 +489,17 @@ export default class Product extends Vue {
     }
   }
 
-  public removeFilterExpertise(value: string) {
-    const f = this.filters.expertiseLevel.find((x) => x.value === value);
-    if (f) {
-      f.checked = false;
-    }
-  }
-
   public resetFilters() {
     for (const c of this.filters.categories) {
       c.checked = false;
     }
 
-    for (const c of this.filters.expertiseLevel) {
-      c.checked = false;
+    const el = document.getElementById(
+      `expertiseLevel-${this.filters.expertiseLevel}`
+    ) as HTMLInputElement | null;
+    if (el) {
+      el.checked = false;
+      this.filters.expertiseLevel = [];
     }
 
     for (const t of this.filters.types) {
@@ -518,14 +526,6 @@ export default class Product extends Vue {
     return (
       this.showAllTypes ||
       this.filters.types.some((t) => t.value === "open-source" && t.checked)
-    );
-  }
-
-  get showBeginer(): boolean {
-    console.log('a',this.showAllTypes)
-    return (
-      this.showAllTypes ||
-      this.filters.types.some((t) => t.value === "beginner" && t.checked)
     );
   }
 
