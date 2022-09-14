@@ -67,7 +67,7 @@
       >
         <!-- Author Card -->
         <div
-          v-for="author in authors"
+          v-for="author in displayedAuthors"
           v-show="showAuthor(author)"
           :key="author.id"
           class="card card-clickable px-5 py-4 flex flex-col items-center text-center"
@@ -114,6 +114,19 @@
       </div>
     </div>
 
+    <!-- Pagination -->
+    <div
+      v-show="canLoadMore && authorFilter === ''"
+      class="mt-2 mb-6 flex flex-col items-center place-content-center"
+    >
+      <MaterialButton v-if="canLoadMore" type="text" @click.native="loadMore">
+        <div class="frc">
+          <span>Load more</span>
+          <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
+        </div>
+      </MaterialButton>
+    </div>
+
     <!-- Link -->
     <p class="text-xs px-std mt-2 mb-6 text-mgray-700" v-show="loaded">
       If your content is in the Dev Library and you're missing from this page,
@@ -139,7 +152,12 @@ import MaterialButton from "@/components/MaterialButton.vue";
 import CircleImage from "@/components/CircleImage.vue";
 
 import { AuthorData } from "../../../shared/types";
-import { queryAuthors } from "@/plugins/data";
+import {
+  emptyPageResponse,
+  nextPage,
+  PagedResponse,
+  queryAuthors,
+} from "@/plugins/data";
 
 @Component({
   components: {
@@ -151,10 +169,40 @@ export default class Authors extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
   public authorFilter = "";
-  public authors: AuthorData[] = [];
 
-  mounted() {
-    this.uiModule.waitFor(this.loadContent());
+  private pagesToShow = 1;
+  public allAuthors: AuthorData[] = [];
+  public authorData: PagedResponse<AuthorData> = emptyPageResponse<AuthorData>(
+    `/authors`,
+    {},
+    60
+  );
+
+  async mounted() {
+    const authorData = emptyPageResponse<AuthorData>(
+      `/authors`,
+      {
+        orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
+      },
+      60
+    );
+    const authorsPromise = nextPage(authorData);
+    const reloadPromise = Promise.all([authorsPromise]).then(() => {
+      this.pagesToShow = 1;
+      this.authorData = authorData;
+    });
+    this.uiModule.waitFor(reloadPromise);
+
+    const res = await queryAuthors({
+      orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
+    });
+    this.allAuthors = res.docs
+      .map((d) => d.data)
+      .sort((a, b) => {
+        return a.metadata.name
+          .toLowerCase()
+          .localeCompare(b.metadata.name.toLowerCase());
+      });
   }
 
   public showAuthor(a: AuthorData): boolean {
@@ -174,24 +222,52 @@ export default class Authors extends Vue {
   get showNoMatchesMessage() {
     return (
       this.authorFilter.length > 0 &&
-      !this.authors.some((a) => this.showAuthor(a))
+      !this.allAuthors.some((a) => this.showAuthor(a))
     );
   }
 
-  private async loadContent() {
-    // TODO: When we get more authors we will probably want to paginate this, but it's ok
-    //       for now.
-    const res = await queryAuthors({
-      orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
-    });
+  get hasContent() {
+    return this.authorData.currentPage >= 0;
+  }
 
-    this.authors = res.docs
-      .map((d) => d.data)
-      .sort((a, b) => {
-        return a.metadata.name
-          .toLowerCase()
-          .localeCompare(b.metadata.name.toLowerCase());
-      });
+  get canLoadMore() {
+    const canLoadMoreRemote = this.authorData.hasNext;
+
+    const canLoadMoreLocal = this.visibleAuthors.length < this.authors.length;
+
+    return canLoadMoreRemote || canLoadMoreLocal;
+  }
+
+  get displayedAuthors() {
+    if (this.authorFilter != "") {
+      return this.allAuthors;
+    } else {
+      return this.visibleAuthors;
+    }
+  }
+
+  public async loadMore() {
+    const promises = [];
+
+    if (this.authorData.hasNext) {
+
+      promises.push(nextPage(this.authorData));
+    }
+
+    await this.uiModule.waitFor(Promise.all(promises));
+    this.pagesToShow++;
+  }
+
+  get authors(): AuthorData[] {
+    if (this.authorData.pages.length <= 0) {
+      return [];
+    }
+    return this.authorData.pages.flatMap((p) => p);
+  }
+
+  get visibleAuthors(): AuthorData[] {
+    const maxToShow = 60 * this.pagesToShow;
+    return this.authors.slice(0, maxToShow);
   }
 }
 </script>
