@@ -68,6 +68,19 @@
             v-model="categories"
             :maxSelections="10"
           />
+
+          <!-- Clear Filters Button-->
+          <div class="flex flex-row justify-center mt-4 lg:mt-6">
+            <MaterialButton
+              v-if="filtersChanged"
+              type="text"
+              @click.native="resetFilters()"
+            >
+              <div class="frc">
+                <span>Reset filters</span>
+              </div>
+            </MaterialButton>
+          </div>
         </div>
       </div>
     </div>
@@ -82,12 +95,14 @@ import CheckboxGroup, {
   CheckboxGroupEntry,
 } from "@/components/CheckboxGroup.vue";
 import { ProductConfig } from "../../../shared/types";
+import MaterialButton from "@/components/MaterialButton.vue";
 
 @Component({
   components: {
     RadioGroup,
     CheckboxGroup,
     InfoCircle,
+    MaterialButton,
   },
 })
 export default class ProjectFilters extends Vue {
@@ -98,6 +113,9 @@ export default class ProjectFilters extends Vue {
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
   public expertiseLevel: CheckboxGroupEntry[] = [];
+  public filtersChanged = false;
+  public defaultFilters = { sort: "", types: [], categories: []};
+  public loaded = false;
 
   get value() {
     return {
@@ -108,8 +126,25 @@ export default class ProjectFilters extends Vue {
     };
   }
 
-  @Watch("value")
+  public resetFilters() {
+    this.sort = this.defaultFilters.sort;
+    this.types = JSON.parse(JSON.stringify(this.defaultFilters.types));
+    this.categories = JSON.parse(JSON.stringify(this.defaultFilters.categories));
+    this.filtersChanged = false;
+  }
+
+  @Watch("value", { deep: true })
   public onValueChange() {
+    if (!this.loaded) {
+      this.defaultFilters = JSON.parse(JSON.stringify(this.value));
+      this.loaded = true;
+    }
+
+    if (JSON.stringify(this.defaultFilters) != JSON.stringify(this.value)) {
+      this.filtersChanged = true;
+    } else {
+      this.filtersChanged = false;
+    }
     this.$emit("input", this.value);
   }
 }
