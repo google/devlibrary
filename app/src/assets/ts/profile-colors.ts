@@ -1,66 +1,86 @@
 export const ColorJson = [
 	{
-		"background": "#f44336",
-		"color": "black"
-	},
-	{
-		"background": "#e91e63",
-		"color": "black"
-	},
-	{
-		"background": "#9c27b0",
+		"background": "#AA48BC",
 		"color": "white"
 	},
 	{
-		"background": "#673ab7",
+		"background": "#7A1FA2",
 		"color": "white"
 	},
 	{
-		"background": "#3f51b5",
+		"background": "#798F9C",
 		"color": "white"
 	},
 	{
-		"background": "#2196f3",
-		"color": "black"
+		"background": "#475A66",
+		"color": "white"
 	},
 	{
-		"background": "#03a9f4",
-		"color": "black"
+		"background": "#EC417A",
+		"color": "white"
 	},
 	{
-		"background": "#00bcd4",
-		"color": "black"
+		"background": "#C2165B",
+		"color": "white"
 	},
 	{
-		"background": "#009688",
-		"color": "black"
+		"background": "#5C6BC0",
+		"color": "white"
 	},
 	{
-		"background": "#4caf50",
-		"color": "black"
+		"background": "#0388D1",
+		"color": "white"
 	},
 	{
-		"background": "#8bc34a",
-		"color": "black"
+		"background": "#01579C",
+		"color": "white"
 	},
 	{
-		"background": "#cddc39",
-		"color": "black"
+		"background": "#0098A6",
+		"color": "white"
 	},
 	{
-		"background": "#ffeb3b",
-		"color": "black"
+		"background": "#00887B",
+		"color": "white"
 	},
 	{
-		"background": "#ffc107",
-		"color": "black"
+		"background": "#014C3F",
+		"color": "white"
 	},
 	{
-		"background": "#ff9800",
-		"color": "black"
+		"background": "#689F38",
+		"color": "white"
 	},
 	{
-		"background": "#ff5722",
-		"color": "black"
+		"background": "#33691D",
+		"color": "white"
+	},
+	{
+		"background": "#8C6E63",
+		"color": "white"
+	},
+	{
+		"background": "#5D4039",
+		"color": "white"
+	},
+	{
+		"background": "#7E58C2",
+		"color": "white"
+	},
+	{
+		"background": "#512DA7",
+		"color": "white"
+	},
+	{
+		"background": "#EF6C01",
+		"color": "white"
+	},
+	{
+		"background": "#F5511F",
+		"color": "white"
+	},
+	{
+		"background": "#BF360D",
+		"color": "white"
 	}
 ];

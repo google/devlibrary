@@ -153,17 +153,17 @@
     align-items: center;
     border-radius: 50%;
     display: flex;
-    font-size: 60px;
-    height: 9rem;
+    font-size: 70px;
+    height: 130px;
     justify-content: center;
-    width: 9rem;
+    width: 130px;
   }
 
   .dynamic-author-image-medium {
     align-items: center;
     border-radius: 50%;
     display: flex;
-    font-size: 30px;
+    font-size: 34px;
     height: 60px;
     justify-content: center;
     width: 60px;
@@ -173,7 +173,7 @@
     align-items: center;
     border-radius: 50%;
     display: flex;
-    font-size: 12px;
+    font-size: 14px;
     height: 24px;
     justify-content: center;
     margin-right: 8px;

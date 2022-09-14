@@ -245,9 +245,6 @@ export default class Author extends Vue {
     let initials = "";
     if (separatedNames && separatedNames?.length > 0) {
       initials += separatedNames[0].charAt(0).toUpperCase();
-      if (separatedNames && separatedNames?.length > 1) {
-        initials += separatedNames[1].charAt(0).toUpperCase();
-      }
     }
 
     const hash = this.getHashCode(initials || "");
