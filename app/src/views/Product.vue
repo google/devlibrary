@@ -326,6 +326,7 @@ export default class Product extends Vue {
 
   @Watch("filters", { deep: true })
   public async onFiltersTypeChanged() {
+    console.log('filters', this.filters);
     let hasTypeParams = false;
     let hasCategoryParams = false;
     let typeParams = "";
@@ -362,12 +363,18 @@ export default class Product extends Vue {
   get queryTags(): string[] | null {
     // If no selection, consider them all checked
     const noneCategoryChecked = this.filters.categories.every((c) => !c.checked);
-    const noneExpertiseChecked = this.filters.expertiseLevel.every((c) => !c.checked);
-    if (noneCategoryChecked && noneExpertiseChecked) {
+    if (noneCategoryChecked) {
       return null;
     }
 
-    return this.filters.categories.filter((x) => x.checked).map((x) => x.value).concat(this.filters.expertiseLevel.filter((x) => x.checked).map((x) => x.value));
+    return this.filters.categories.filter((x) => x.checked).map((x) => x.value);
+  }
+
+  get queryExpertise(): string | null {
+    if (this.filters.expertiseLevel == null) {
+      return null;
+    }
+    return this.filters.expertiseLevel.toString();
   }
 
   get queryOrderBy(): string {
@@ -384,7 +391,8 @@ export default class Product extends Vue {
 
   get queryParams(): FirestoreQuery {
     const orderBy = this.queryOrderBy;
-    const tags = this.queryTags;
+    let tags = this.queryTags;
+    const expertise = this.queryExpertise;
 
     const q: FirestoreQuery = {
       orderBy: [
@@ -396,23 +404,31 @@ export default class Product extends Vue {
     };
 
     if (tags) {
-      q.where = [
-        {
-          fieldPath: "metadata.tags",
-          operator: "array-contains-any",
-          value: tags,
-        },
-        {
+      tags = tags?.filter((tag) => tag !== 'Beginner' && tag !== 'Intermediate' && tag !== 'Advanced');
+      if (tags.length > 0) {
+        q.where = [
+          {
+            fieldPath: "metadata.tags",
+            operator: "array-contains-any",
+            value: tags,
+          },
+        ];
+      }
+    }
+    if (expertise) {
+      if (q.where) {
+        q.where?.push({
           fieldPath: "metadata.expertise",
-          operator: "array-contains-any",
-          value: tags,
-        },
-        
-        
-      ];
-
-      
-      
+          operator: "==",
+          value: expertise.toUpperCase(),
+        });
+      } else {
+        q.where = [{
+          fieldPath: "metadata.expertise",
+          operator: "==",
+          value: expertise.toUpperCase(),
+        }];
+      }
     }
 
     return q;

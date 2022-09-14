@@ -37,11 +37,12 @@
 
         <div class="section">
           <p class="font-display font-medium text-sm mb-2 px-2">Expertise Level</p>
-          <CheckboxGroup
+          <RadioGroup
             prefix="expertiseLevel"
             :keys="['Beginner', 'Intermediate', 'Advanced']"
             :values="['Beginner', 'Intermediate', 'Advanced']"
             v-model="expertiseLevel"
+            :start-empty="true"
           />
         </div>
         <div class="section">
