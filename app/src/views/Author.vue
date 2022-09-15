@@ -240,6 +240,8 @@ export default class Author extends Vue {
   }
 
   get dynamicAuthorImage() {
+    // Test on preview branch
+    console.log('testing');
     const name = this.author?.metadata.name.replace(/[().]/gi, "");
     const separatedNames = name?.split(" ");
 
