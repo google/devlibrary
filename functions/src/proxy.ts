@@ -162,6 +162,7 @@ function diagnoseMissingDocument(path: string) {
 }
 
 export const docProxy = functions.https.onRequest(async (req, res) => {
+  console.log('testing', req, res);
   // Allow CORS
   res.header("Access-Control-Allow-Origin", "*");
 
