@@ -91,10 +91,6 @@
         {
           "fieldPath": "metadata.name",
           "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "__name__",
-          "order": "DESCENDING"
         }
       ]
     }
