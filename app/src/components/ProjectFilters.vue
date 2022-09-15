@@ -130,9 +130,9 @@ export default class ProjectFilters extends Vue {
   get value() {
     return {
       sort: this.sort,
+      expertiseLevel: this.expertiseLevel,
       types: this.types,
       categories: this.categories,
-      expertiseLevel: this.expertiseLevel,
     };
   }
 
