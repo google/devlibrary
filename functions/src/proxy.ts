@@ -162,14 +162,18 @@ function diagnoseMissingDocument(path: string) {
 }
 
 export const docProxy = functions.https.onRequest(async (req, res) => {
-  console.log('testing', req, res);
   // Allow CORS
   res.header("Access-Control-Allow-Origin", "*");
 
   // Cache at browser for 10 minutes (600s) and on CDN for 12 hours (43200s)
   res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
 
-  const path = req.query.path as string;
+  let path = req.query.path as string;
+  // functions.logger.log("mypath: ");
+  // functions.logger.log(path);
+  path = path.replace(/[&]/g, "&amp;").replace(/[<]/g, "&lt;").replace(/[>]/g, "&gt;");
+  // functions.logger.log("mypath2: ");
+  // functions.logger.log(path);
   if (!path) {
     res.status(400).send('Parameter "path" is required');
     return;
