@@ -60,7 +60,8 @@ export const queryProxy = functions
     }
 
     // The "path" param is the collection to query
-    const path = req.query.path as string;
+    let path = req.query.path as string;
+    path = path.replace(/[&]/g, "&amp;").replace(/[<]/g, "&lt;").replace(/[>]/g, "&gt;");
     if (!path) {
       res.status(400).send('Parameter "path" is required');
       return;
@@ -169,11 +170,7 @@ export const docProxy = functions.https.onRequest(async (req, res) => {
   res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
 
   let path = req.query.path as string;
-  // functions.logger.log("mypath: ");
-  // functions.logger.log(path);
   path = path.replace(/[&]/g, "&amp;").replace(/[<]/g, "&lt;").replace(/[>]/g, "&gt;");
-  // functions.logger.log("mypath2: ");
-  // functions.logger.log(path);
   if (!path) {
     res.status(400).send('Parameter "path" is required');
     return;
@@ -190,7 +187,7 @@ export const docProxy = functions.https.onRequest(async (req, res) => {
 
   const snap = await admin.firestore().doc(path).get();
   if (!snap.exists) {
-    const msg = `(testing) Could not find document at path "${path}"`;
+    const msg = `Could not find document at path "${path}"`;
     functions.logger.error(msg);
     functions.logger.error(diagnoseMissingDocument(path));
 
