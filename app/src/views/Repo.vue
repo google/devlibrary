@@ -262,8 +262,8 @@ export default class Repo extends Vue {
               .indexOf('src="https://github.com') +
             indexCursor +
             5;
-          const endIndex = startIndex +
-            section.content.substring(startIndex).indexOf('"');
+          const endIndex =
+            startIndex + section.content.substring(startIndex).indexOf('"');
           const imageHtml = section.content.substring(startIndex, endIndex);
           const imageExists = await this.imageExists(imageHtml);
           if (!imageExists) {
