@@ -190,7 +190,7 @@ export const docProxy = functions.https.onRequest(async (req, res) => {
 
   const snap = await admin.firestore().doc(path).get();
   if (!snap.exists) {
-    const msg = `Could not find document at path "${path}"`;
+    const msg = `(testing) Could not find document at path "${path}"`;
     functions.logger.error(msg);
     functions.logger.error(diagnoseMissingDocument(path));
 
