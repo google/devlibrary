@@ -28,8 +28,7 @@
             class="mr-2"
             :src="authorPhotoUrl"
           />
-          <div v-else v-html="dynamicAuthorImage">
-          </div>
+          <div v-else v-html="dynamicAuthorImage"></div>
           <span class="font-display text-lg">{{ blog.metadata.author }}</span>
         </router-link>
       </template>
@@ -160,11 +159,14 @@ export default class LargeBlogCard extends Vue {
   }
 
   private getHashCode(text: string): number {
-    let hash = 0, i, chr, len;
+    let hash = 0,
+      i,
+      chr,
+      len;
     if (text.length == 0) return hash;
     for (i = 0, len = text.length; i < len; i++) {
-      chr   = text.charCodeAt(i);
-      hash  = ((hash << 5) - hash) + chr;
+      chr = text.charCodeAt(i);
+      hash = (hash << 5) - hash + chr;
       hash |= 0;
     }
     return Math.abs(hash);
@@ -199,11 +201,11 @@ export default class LargeBlogCard extends Vue {
     }
 
     const hash = this.getHashCode(initials || "");
-    const colorData = ColorJson[hash % ColorJson.length]
+    const colorData = ColorJson[hash % ColorJson.length];
     const imageHtml = `<div class="dynamic-author-image-small"
       style="background-color: ${colorData.background}; color: ${colorData.color}">
       ${initials}</div>`;
-    
+
     return imageHtml;
   }
 }

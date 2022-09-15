@@ -79,8 +79,7 @@
             class="flex-shrink-0 avatar border-none"
             size="small"
           />
-          <div v-else v-html="getDynamicAuthorImage(author)">
-          </div>
+          <div v-else v-html="getDynamicAuthorImage(author)"></div>
           <div>
             <div class="mt-2 wrap-lines-1 font-medium font-display">
               {{ author.metadata.name }}
@@ -174,7 +173,7 @@ export default class Authors extends Vue {
 
   public authorFilter = "";
 
-  public authorImageLoaded: any = {};
+  public authorImageLoaded: { [key: string]: boolean } = {};
 
   private pagesToShow = 1;
   public allAuthors: AuthorData[] = [];
@@ -262,7 +261,6 @@ export default class Authors extends Vue {
     const promises = [];
 
     if (this.authorData.hasNext) {
-
       promises.push(nextPage(this.authorData));
     }
 
@@ -296,11 +294,14 @@ export default class Authors extends Vue {
   }
 
   private getHashCode(text: string): number {
-    let hash = 0, i, chr, len;
+    let hash = 0,
+      i,
+      chr,
+      len;
     if (text.length == 0) return hash;
     for (i = 0, len = text.length; i < len; i++) {
-      chr   = text.charCodeAt(i);
-      hash  = ((hash << 5) - hash) + chr;
+      chr = text.charCodeAt(i);
+      hash = (hash << 5) - hash + chr;
       hash |= 0;
     }
     return Math.abs(hash);
@@ -316,11 +317,11 @@ export default class Authors extends Vue {
     }
 
     const hash = this.getHashCode(initials || "");
-    const colorData = ColorJson[hash % ColorJson.length]
+    const colorData = ColorJson[hash % ColorJson.length];
     const imageHtml = `<div class="dynamic-author-image-medium"
       style="background-color: ${colorData.background}; color: ${colorData.color}">
       ${initials}</div>`;
-    
+
     return imageHtml;
   }
 

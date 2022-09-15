@@ -25,8 +25,7 @@
         class="mr-2"
         :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
       />
-      <div v-else v-html="dynamicAuthorImage">
-      </div>
+      <div v-else v-html="dynamicAuthorImage"></div>
       <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
 
       <ProductLogo
@@ -124,7 +123,9 @@ export default class LargeRepoCard extends Vue {
 
   public async getImage() {
     if (this.repo.metadata.owner) {
-      const imageExists = await this.imageExists(`https://avatars.githubusercontent.com/${this.repo.metadata.owner}`);
+      const imageExists = await this.imageExists(
+        `https://avatars.githubusercontent.com/${this.repo.metadata.owner}`
+      );
       if (!imageExists) {
         return false;
       } else {
@@ -148,11 +149,14 @@ export default class LargeRepoCard extends Vue {
   }
 
   private getHashCode(text: string): number {
-    let hash = 0, i, chr, len;
+    let hash = 0,
+      i,
+      chr,
+      len;
     if (text.length == 0) return hash;
     for (i = 0, len = text.length; i < len; i++) {
-      chr   = text.charCodeAt(i);
-      hash  = ((hash << 5) - hash) + chr;
+      chr = text.charCodeAt(i);
+      hash = (hash << 5) - hash + chr;
       hash |= 0;
     }
     return Math.abs(hash);
@@ -172,11 +176,11 @@ export default class LargeRepoCard extends Vue {
     }
 
     const hash = this.getHashCode(initials || "");
-    const colorData = ColorJson[hash % ColorJson.length]
+    const colorData = ColorJson[hash % ColorJson.length];
     const imageHtml = `<div class="dynamic-author-image-small"
       style="background-color: ${colorData.background}; color: ${colorData.color}">
       ${initials}</div>`;
-    
+
     return imageHtml;
   }
 }
