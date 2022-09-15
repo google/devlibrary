@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["ajiteshk"],
+  "authorIds": [
+    "ajiteshk"
+  ],
   "author": "Ajitesh Kumar",
   "title": "Google CloudBuild : Build Specific Micro Services In a MonoRepo",
   "link": "https://medium.com/p/63a7f961ac63",
