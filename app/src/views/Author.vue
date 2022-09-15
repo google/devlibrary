@@ -26,10 +26,12 @@
       <div class="mobile-only header-image py-6">
         <div class="flex flex-col items-center gap-2">
           <CircleImage
+            v-if="authorImageLoaded"
             class="border-white"
             size="medium"
             :src="author.metadata.photoURL"
           />
+          <div v-else v-html="dynamicAuthorImage"></div>
 
           <!-- Name and bio -->
           <div class="px-6 py-2 text-center max-w-lg">
@@ -60,10 +62,12 @@
           <div class="col-span-9">
             <div class="flex flex-row gap-8 items-center">
               <CircleImage
+                v-if="authorImageLoaded"
                 class="border-none"
                 size="large"
                 :src="author.metadata.photoURL"
               />
+              <div v-else v-html="dynamicAuthorImage"></div>
 
               <div>
                 <h1>
@@ -127,6 +131,7 @@ import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import CircleImage from "@/components/CircleImage.vue";
 import AuthorExpertiseCard from "@/components/AuthorExpertiseCard.vue";
+import { ColorJson } from "../assets/ts/profile-colors";
 
 import {
   fetchAuthor,
@@ -149,6 +154,7 @@ export default class Author extends Vue {
 
   public id!: string;
   public author: AuthorData | null = null;
+  public authorImageLoaded = false;
 
   public blogs: BlogData[] = [];
   public repos: RepoData[] = [];
@@ -176,6 +182,47 @@ export default class Author extends Vue {
     this.blogs = blogs.docs.map((d) => d.data);
     this.repos = repos.docs.map((d) => d.data);
     this.author = author;
+
+    this.authorImageLoaded = await this.getImage();
+  }
+
+  public async getImage() {
+    if (this.author) {
+      const imageExists = await this.imageExists(this.author.metadata.photoURL);
+      if (!imageExists) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  public async imageExists(imgUrl: string) {
+    if (!imgUrl) {
+      return false;
+    }
+    return new Promise((res) => {
+      const image = new Image();
+      image.onload = () => res(true);
+      image.onerror = () => res(false);
+      image.src = imgUrl;
+    });
+  }
+
+  private getHashCode(text: string): number {
+    let hash = 0,
+      i,
+      chr,
+      len;
+    if (text.length == 0) return hash;
+    for (i = 0, len = text.length; i < len; i++) {
+      chr = text.charCodeAt(i);
+      hash = (hash << 5) - hash + chr;
+      hash |= 0;
+    }
+    return Math.abs(hash);
   }
 
   get loaded() {
@@ -190,6 +237,24 @@ export default class Author extends Vue {
     }
 
     return "Dev Library contributor";
+  }
+
+  get dynamicAuthorImage() {
+    const name = this.author?.metadata.name.replace(/[().]/gi, "");
+    const separatedNames = name?.split(" ");
+
+    let initials = "";
+    if (separatedNames && separatedNames?.length > 0) {
+      initials += separatedNames[0].charAt(0).toUpperCase();
+    }
+
+    const hash = this.getHashCode(initials || "");
+    const colorData = ColorJson[hash % ColorJson.length];
+    const imageHtml = `<div class="dynamic-author-image"
+      style="background-color: ${colorData.background}; color: ${colorData.color}">
+      ${initials}</div>`;
+
+    return imageHtml;
   }
 
   get expertise() {
