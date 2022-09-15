@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sbis04"
+  ],
+  "owner": "sbis04",
+  "repo": "flutter-parallax-cards",
+  "name": "Flutter Parallax Cards",
+  "shortDescription": "Flutter app showcasing a parallax effect using the device accelerometers.",
+  "longDescription": "Flutter app showcasing a parallax effect using the device accelerometers.",
+  "content": "https://github.com/sbis04/flutter-parallax-cards/blob/main/README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}
