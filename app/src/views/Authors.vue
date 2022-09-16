@@ -175,7 +175,7 @@ export default class Authors extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
   public getBreadcrumbs(): BreadcrumbLink[] {
-    return [{ name: "Authors", clickable: true }];
+    return [{ name: "Authors" }];
   }
 
   public authorFilter = "";

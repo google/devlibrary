@@ -185,8 +185,8 @@ export default class Author extends Vue {
 
   public getBreadcrumbs(): BreadcrumbLink[] {
     return [
-      { name: "Authors", clickable: true },
-      { name: this.author?.metadata?.name ?? "Author", clickable: true },
+      { name: "Authors"},
+      { name: this.author?.metadata?.name ?? "Author"},
     ];
   }
 

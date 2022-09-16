@@ -25,14 +25,9 @@
           <font-awesome-icon icon="chevron-right" size="sm" />
         </li>
         <li :key="index" class="last:text-mgray-800 text-gray-400">
-          <a
-            class="hover:underline"
-            v-if="link.clickable"
-            :href="linkPath(index)"
-          >
+          <a class="hover:underline" :href="linkPath(index)">
             {{ link.name }}
           </a>
-          <p v-else>{{ link.name }}</p>
         </li>
       </template>
     </ol>

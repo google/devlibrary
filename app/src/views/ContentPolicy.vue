@@ -186,7 +186,7 @@ import { BreadcrumbLink } from "../../../shared/types";
 })
 export default class ContentPolicy extends Vue {
   public getBreadcrumbs(): BreadcrumbLink[] {
-    return [{ name: "Content Policy", clickable: true }];
+    return [{ name: "Content Policy" }];
   }
 }
 </script>

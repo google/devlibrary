@@ -139,5 +139,4 @@ export type BlogOrRepoDataHolder = BlogDataHolder | RepoDataHolder;
 
 export interface BreadcrumbLink {
   name: string;
-  clickable: boolean;
 }
