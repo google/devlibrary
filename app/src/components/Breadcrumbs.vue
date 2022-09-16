@@ -22,7 +22,7 @@
       </li>
       <template v-for="(link, index) in links">
         <li :key="`s-${index}`" aria-hidden="true">
-          <font-awesome-icon icon="chevron-right" size="sm" />
+          <font-awesome-icon icon="chevron-right" class="pb-0.5" size="sm" />
         </li>
         <li :key="index" class="last:text-mgray-800 text-gray-400">
           <a class="hover:underline" :href="linkPath(index)">

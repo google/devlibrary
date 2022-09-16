@@ -16,46 +16,25 @@
 
 <template>
   <div>
-  <Breadcrumbs v-if="loaded" :links="getBreadcrumbs()" />
-  <HeaderBodyLayout
-    style="
-      --header-bg-image-desktop: url('/img/banners/desktop/author-wide.png');
-      --header-bg-image-mobile: url('/img/banners/mobile/author-wide.png');
-    "
-  >
-    <template v-if="loaded" v-slot:header>
-      <!-- Header (Mobile) -->
-      <div class="mobile-only header-image py-6">
-        <div class="flex flex-col items-center gap-2">
-          <CircleImage
-            v-if="authorImageLoaded"
-            class="border-white"
-            size="medium"
-            :src="author.metadata.photoURL"
-          />
-          <div v-else v-html="dynamicAuthorImage"></div>
-
-          <!-- Name and bio -->
-          <div class="px-6 py-2 text-center max-w-lg">
-            <h3>
-              {{ author.metadata.name }}
-            </h3>
-            <p class="text-sm mt-2">
-              {{ bio }}
-            </p>
-          </div>
-
-          <!-- Info card -->
-          <div class="px-6 w-full flex flex-row justify-center">
-            <AuthorExpertiseCard
-              v-if="loaded"
-              class="w-full"
-              :expertise="expertise"
-              :author="author"
+    <Breadcrumbs v-if="loaded" :links="getBreadcrumbs()" />
+    <HeaderBodyLayout
+      style="
+        --header-bg-image-desktop: url('/img/banners/desktop/author-wide.png');
+        --header-bg-image-mobile: url('/img/banners/mobile/author-wide.png');
+      "
+    >
+      <template v-if="loaded" v-slot:header>
+        <!-- Header (Mobile) -->
+        <div class="mobile-only header-image py-6">
+          <div class="flex flex-col items-center gap-2">
+            <CircleImage
+              v-if="authorImageLoaded"
+              class="border-white"
+              size="medium"
+              :src="author.metadata.photoURL"
             />
-          </div>
-        </div>
-      </div>
+            <div v-else v-html="dynamicAuthorImage"></div>
+
             <!-- Name and bio -->
             <div class="px-6 py-2 text-center max-w-lg">
               <h3>
@@ -185,8 +164,8 @@ export default class Author extends Vue {
 
   public getBreadcrumbs(): BreadcrumbLink[] {
     return [
-      { name: "Authors"},
-      { name: this.author?.metadata?.name ?? "Author"},
+      { name: "Authors" },
+      { name: this.author?.metadata?.name ?? "Author" },
     ];
   }
 
