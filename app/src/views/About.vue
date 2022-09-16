@@ -342,7 +342,7 @@ import { BreadcrumbLink } from "../../../shared/types";
 })
 export default class About extends Vue {
   public getBreadcrumbs(): BreadcrumbLink[] {
-    return [{ name: "About" }];
+    return [{ name: "About", path: "" }];
   }
 }
 </script>

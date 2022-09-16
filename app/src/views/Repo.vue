@@ -208,8 +208,8 @@ export default class Repo extends Vue {
 
   public getBreadcrumbs(): BreadcrumbLink[] {
     return [
-      { name: this.product?.name ?? "Product" },
-      { name: this.repo?.metadata.name ?? "Repo" },
+      { name: this.product?.name ?? "Product", path: "../" },
+      { name: this.repo?.metadata.name ?? "Repo", path: "" },
     ];
   }
 

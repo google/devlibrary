@@ -25,7 +25,7 @@
           <font-awesome-icon icon="chevron-right" class="pb-0.5" size="sm" />
         </li>
         <li :key="index" class="last:text-mgray-800 text-gray-400">
-          <a class="hover:underline" :href="linkPath(index)">
+          <a class="hover:underline" :href="link.path">
             {{ link.name }}
           </a>
         </li>
@@ -41,14 +41,6 @@ import { BreadcrumbLink } from "../../../shared/types";
 @Component
 export default class Breadcrumbs extends Vue {
   @Prop() links!: BreadcrumbLink[];
-
-  public linkPath(index: number): string {
-    if (index === this.links.length - 1) {
-      return "";
-    }
-
-    return "./" + "../".repeat(this.links.length - index - 2);
-  }
 }
 </script>
 

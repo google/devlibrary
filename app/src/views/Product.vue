@@ -239,7 +239,7 @@ export default class Product extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
   public getBreadcrumbs(): BreadcrumbLink[] {
-    return [{ name: this.product.name }];
+    return [{ name: this.product.name, path: "" }];
   }
 
   public productLoaded = false;
