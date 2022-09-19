@@ -35,7 +35,9 @@
     <div id="pagebody" class="mb-4 px-std">
       <!-- Search bar -->
       <div class="frc">
-        <div class="mt-4 frc rounded-lg max-w-lg border border-gray-200 px-2 w-80">
+        <div
+          class="mt-4 frc rounded-lg max-w-lg border border-gray-200 px-2 w-80"
+        >
           <font-awesome-icon
             icon="search"
             size="sm"
@@ -56,7 +58,12 @@
             class="text-mgray-700 cursor-pointer opacity-70"
           />
         </div>
-        <MaterialButton @click.native="authorFilter = tempAuthorFilter" type="primary" class="ml-2 mt-4" id="authorSearchButton">
+        <MaterialButton
+          @click.native="authorFilter = tempAuthorFilter"
+          type="primary"
+          class="ml-2 mt-4"
+          id="authorSearchButton"
+        >
           <font-awesome-icon icon="search" class="ml-1" />
           Search
         </MaterialButton>
@@ -199,13 +206,13 @@ export default class Authors extends Vue {
   );
 
   async mounted() {
-    const searchButton = document.getElementById('authorSearchBar');
-    searchButton?.addEventListener('keypress', function(event) {
+    const searchButton = document.getElementById("authorSearchBar");
+    searchButton?.addEventListener("keypress", function (event) {
       if (event.key === "Enter") {
         event.preventDefault();
         document.getElementById("authorSearchButton")?.click();
       }
-    })
+    });
     const authorData = emptyPageResponse<AuthorData>(
       `/authors`,
       {
@@ -279,7 +286,7 @@ export default class Authors extends Vue {
     }
   }
 
-  public setTempAuthorFilter(event: any) {
+  public setTempAuthorFilter(event: { target: { value: string } }) {
     this.tempAuthorFilter = event.target.value;
   }
 
