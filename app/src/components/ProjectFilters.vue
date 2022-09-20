@@ -29,8 +29,8 @@
 
           <RadioGroup
             prefix="sort"
-            :keys="['Recently Updated', 'Recently Added']"
-            :values="['updated', 'added']"
+            :keys="['Recently Updated', 'Recently Added', 'GitHub Stars']"
+            :values="['updated', 'added', 'stars']"
             v-model="sort"
           />
         </div>

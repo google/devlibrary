@@ -222,6 +222,7 @@ import { getStyle, ProductStyle } from "@/model/product";
 
 const SORT_ADDED = "added";
 const SORT_UPDATED = "updated";
+const SORT_STARS = "stars";
 
 @Component({
   components: {
@@ -368,15 +369,15 @@ export default class Product extends Vue {
   }
 
   get queryOrderBy(): string {
-    if (this.filters.sort === SORT_ADDED) {
-      return "stats.dateAdded";
+    switch (this.filters.sort) {
+      case SORT_UPDATED:
+        return "stats.lastUpdated";
+      case SORT_STARS:
+        return "stats.stars";
+      case SORT_ADDED:
+      default:
+        return "stats.dateAdded";
     }
-
-    if (this.filters.sort === SORT_UPDATED) {
-      return "stats.lastUpdated";
-    }
-
-    return "stats.dateAdded";
   }
 
   get queryParams(): FirestoreQuery {
@@ -514,6 +515,17 @@ export default class Product extends Vue {
 
       if (this.filters.sort === SORT_ADDED) {
         return dataB.stats.dateAdded - dataA.stats.dateAdded;
+      } else if (this.filters.sort === SORT_STARS) {
+        if ("stars" in dataA.stats && "stars" in dataB.stats) {
+          return dataB.stats.stars - dataA.stats.stars;
+        }
+        if ("stars" in dataA.stats) {
+          return -1;
+        }
+        if ("stars" in dataB.stats) {
+          return 1;
+        }
+        return 0;
       } else {
         return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
       }
