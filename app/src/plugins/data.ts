@@ -35,6 +35,7 @@ import { hostingRoot } from "./firebase";
 // eslint-disable-next-line
 const lodashGet = require("lodash.get");
 
+// Saving all authors to avoid multiple db requests
 let allAuthors: QueryResult<AuthorData>;
 
 export interface PagedResponse<T> {
@@ -189,7 +190,6 @@ export async function fetchRepo(
 ): Promise<RepoData | undefined> {
   const repoPath = `/products/${product}/repos/${id}`;
   const json = await fetchDoc(repoPath);
-
   if (json) {
     return json as RepoData;
   }
@@ -202,7 +202,6 @@ export async function fetchRepoPage(
 ): Promise<RepoPage | undefined> {
   const pagePath = `/products/${product}/repos/${id}/pages/${pageKey}`;
   const json = await fetchDoc(pagePath);
-
   if (json) {
     return json as RepoPage;
   }
@@ -223,7 +222,6 @@ export async function queryBlogs(
 ): Promise<QueryResult<BlogData>> {
   const collectionPath = `/products/${product}/blogs`;
   const json = await fetchQuery(collectionPath, q);
-
   return json as QueryResult<BlogData>;
 }
 
@@ -233,7 +231,6 @@ export async function queryRepos(
 ): Promise<QueryResult<RepoData>> {
   const collectionPath = `/products/${product}/repos`;
   const json = await fetchQuery(collectionPath, q);
-
   return json as QueryResult<RepoData>;
 }
 
@@ -263,7 +260,6 @@ export async function queryAuthorProjects(authorId: string) {
     blogs,
     repos,
   };
-
 }
 
 export async function queryAuthorsByProduct(
