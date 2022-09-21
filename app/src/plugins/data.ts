@@ -35,6 +35,8 @@ import { hostingRoot } from "./firebase";
 // eslint-disable-next-line
 const lodashGet = require("lodash.get");
 
+let allAuthors: QueryResult<AuthorData>;
+
 export interface PagedResponse<T> {
   collectionPath: string;
   q: FirestoreQuery;
@@ -211,7 +213,7 @@ export async function queryAuthors(
 ): Promise<QueryResult<AuthorData>> {
   const collectionPath = `/authors`;
   const json = await fetchQuery(collectionPath, q);
-
+  allAuthors = json as QueryResult<AuthorData>;
   return json as QueryResult<AuthorData>;
 }
 
@@ -235,9 +237,9 @@ export async function queryRepos(
   return json as QueryResult<RepoData>;
 }
 
+
 export async function queryAuthorProjects(authorId: string) {
   const normalizedId = authorId.toLowerCase();
-
   const q: FirestoreQuery = {
     scope: "COLLECTION_GROUP",
     where: [
@@ -257,12 +259,41 @@ export async function queryAuthorProjects(authorId: string) {
 
   const blogs = (await fetchQuery("blogs", q)) as QueryResult<BlogData>;
   const repos = (await fetchQuery("repos", q)) as QueryResult<RepoData>;
-
   return {
     blogs,
     repos,
   };
+
 }
+
+export async function queryAuthorsByProduct(
+  products: string[]
+  ): Promise<QueryResult<AuthorData>>{
+  const authorResults: any = [];
+  for(const author of allAuthors.docs){
+    const res = await queryAuthorProjects(author.id);
+    
+    const blogProducts: string[] = [];
+    const repoProducts: string[] = [];
+
+    Object.keys(res.blogs.docs).forEach(blogIndex => {
+     blogProducts.push(res.blogs.docs[Number(blogIndex)].data.product)
+    })  
+
+    Object.keys(res.repos.docs).forEach(repoIndex => {
+      repoProducts.push(res.repos.docs[Number(repoIndex)].data.product)
+    })  
+
+    if(products.every(repo => repoProducts.includes(repo))){
+      authorResults.push(author);
+    }
+    if(products.every(blog => blogProducts.includes(blog))){
+      authorResults.push(author);
+    }
+  }
+  return authorResults as QueryResult<AuthorData>;
+}
+
 
 /**
  * See: https://stackoverflow.com/a/2450976/324977
