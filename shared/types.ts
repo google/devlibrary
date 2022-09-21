@@ -136,3 +136,8 @@ export interface RepoDataHolder {
 }
 
 export type BlogOrRepoDataHolder = BlogDataHolder | RepoDataHolder;
+
+export interface BreadcrumbLink {
+  name: string;
+  path: string;
+}

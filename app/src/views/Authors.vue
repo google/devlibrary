@@ -16,6 +16,7 @@
 
 <template>
   <div>
+    <Breadcrumbs :links="getBreadcrumbs()" />
     <!-- Header -->
     <div
       class="header-image py-10 lg:py-20 px-std border-b border-gray-100"
@@ -73,11 +74,13 @@
           class="card card-clickable px-5 py-4 flex flex-col items-center text-center"
         >
           <CircleImage
+            v-if="authorImageLoaded[author.id]"
             :src="author.metadata.photoURL"
             :lazy="true"
             class="flex-shrink-0 avatar border-none"
             size="small"
           />
+          <div v-else v-html="getDynamicAuthorImage(author)"></div>
           <div>
             <div class="mt-2 wrap-lines-1 font-medium font-display">
               {{ author.metadata.name }}
@@ -150,8 +153,10 @@ import UIModule from "@/store/ui";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import CircleImage from "@/components/CircleImage.vue";
+import Breadcrumbs from "@/components/Breadcrumbs.vue";
 
-import { AuthorData } from "../../../shared/types";
+import { ColorJson } from "../assets/ts/profile-colors";
+import { AuthorData, BreadcrumbLink } from "../../../shared/types";
 import {
   emptyPageResponse,
   nextPage,
@@ -163,12 +168,19 @@ import {
   components: {
     MaterialButton,
     CircleImage,
+    Breadcrumbs,
   },
 })
 export default class Authors extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
+  public getBreadcrumbs(): BreadcrumbLink[] {
+    return [{ name: "Authors", path: "" }];
+  }
+
   public authorFilter = "";
+
+  public authorImageLoaded: { [key: string]: boolean } = {};
 
   private pagesToShow = 1;
   public allAuthors: AuthorData[] = [];
@@ -187,8 +199,11 @@ export default class Authors extends Vue {
       60
     );
     const authorsPromise = nextPage(authorData);
-    const reloadPromise = Promise.all([authorsPromise]).then(() => {
+    const reloadPromise = Promise.all([authorsPromise]).then(async () => {
       this.pagesToShow = 1;
+      for (const author of authorData.pages.flatMap((p) => p)) {
+        this.authorImageLoaded[author.id] = await this.getImage(author);
+      }
       this.authorData = authorData;
     });
     this.uiModule.waitFor(reloadPromise);
@@ -203,6 +218,9 @@ export default class Authors extends Vue {
           .toLowerCase()
           .localeCompare(b.metadata.name.toLowerCase());
       });
+    for (const author of this.allAuthors) {
+      this.authorImageLoaded[author.id] = await this.getImage(author);
+    }
   }
 
   public showAuthor(a: AuthorData): boolean {
@@ -250,12 +268,68 @@ export default class Authors extends Vue {
     const promises = [];
 
     if (this.authorData.hasNext) {
-
       promises.push(nextPage(this.authorData));
     }
 
     await this.uiModule.waitFor(Promise.all(promises));
     this.pagesToShow++;
+  }
+
+  public async getImage(author: AuthorData) {
+    if (author) {
+      const imageExists = await this.imageExists(author.metadata.photoURL);
+      if (!imageExists) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  public async imageExists(imgUrl: string) {
+    if (!imgUrl) {
+      return false;
+    }
+    return new Promise((res) => {
+      const image = new Image();
+      image.onload = () => res(true);
+      image.onerror = () => res(false);
+      image.src = imgUrl;
+    });
+  }
+
+  private getHashCode(text: string): number {
+    let hash = 0,
+      i,
+      chr,
+      len;
+    if (text.length == 0) return hash;
+    for (i = 0, len = text.length; i < len; i++) {
+      chr = text.charCodeAt(i);
+      hash = (hash << 5) - hash + chr;
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  }
+
+  public getDynamicAuthorImage(author: AuthorData) {
+    const name = author?.metadata.name.replace(/[().]/gi, "");
+    const separatedNames = name?.split(" ");
+
+    let initials = "";
+    if (separatedNames && separatedNames?.length > 0) {
+      initials += separatedNames[0].charAt(0).toUpperCase();
+    }
+
+    const hash = this.getHashCode(initials || "");
+    const colorData = ColorJson[hash % ColorJson.length];
+    const imageHtml = `<div class="dynamic-author-image-medium"
+      style="background-color: ${colorData.background}; color: ${colorData.color}">
+      ${initials}</div>`;
+
+    return imageHtml;
   }
 
   get authors(): AuthorData[] {

@@ -38,6 +38,7 @@ import {
   faExclamationCircle,
   faFilter,
   faChevronDown,
+  faChevronRight,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
@@ -62,6 +63,7 @@ library.add(
   faExclamationCircle,
   faFilter,
   faChevronDown,
+  faChevronRight,
   faInfoCircle,
 
   faGithub,
