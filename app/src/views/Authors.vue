@@ -16,6 +16,7 @@
 
 <template>
   <div>
+    <Breadcrumbs :links="getBreadcrumbs()" />
     <!-- Header -->
     <div
       class="header-image py-10 lg:py-20 px-std border-b border-gray-100"
@@ -67,17 +68,19 @@
       >
         <!-- Author Card -->
         <div
-          v-for="author in authors"
+          v-for="author in displayedAuthors"
           v-show="showAuthor(author)"
           :key="author.id"
           class="card card-clickable px-5 py-4 flex flex-col items-center text-center"
         >
           <CircleImage
+            v-if="authorImageLoaded[author.id]"
             :src="author.metadata.photoURL"
             :lazy="true"
             class="flex-shrink-0 avatar border-none"
             size="small"
           />
+          <div v-else v-html="getDynamicAuthorImage(author)"></div>
           <div>
             <div class="mt-2 wrap-lines-1 font-medium font-display">
               {{ author.metadata.name }}
@@ -114,6 +117,19 @@
       </div>
     </div>
 
+    <!-- Pagination -->
+    <div
+      v-show="canLoadMore && authorFilter === ''"
+      class="mt-2 mb-6 flex flex-col items-center place-content-center"
+    >
+      <MaterialButton v-if="canLoadMore" type="text" @click.native="loadMore">
+        <div class="frc">
+          <span>Load more</span>
+          <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
+        </div>
+      </MaterialButton>
+    </div>
+
     <!-- Link -->
     <p class="text-xs px-std mt-2 mb-6 text-mgray-700" v-show="loaded">
       If your content is in the Dev Library and you're missing from this page,
@@ -137,24 +153,74 @@ import UIModule from "@/store/ui";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import CircleImage from "@/components/CircleImage.vue";
+import Breadcrumbs from "@/components/Breadcrumbs.vue";
 
-import { AuthorData } from "../../../shared/types";
-import { queryAuthors } from "@/plugins/data";
+import { ColorJson } from "../assets/ts/profile-colors";
+import { AuthorData, BreadcrumbLink } from "../../../shared/types";
+import {
+  emptyPageResponse,
+  nextPage,
+  PagedResponse,
+  queryAuthors,
+} from "@/plugins/data";
 
 @Component({
   components: {
     MaterialButton,
     CircleImage,
+    Breadcrumbs,
   },
 })
 export default class Authors extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
-  public authorFilter = "";
-  public authors: AuthorData[] = [];
+  public getBreadcrumbs(): BreadcrumbLink[] {
+    return [{ name: "Authors", path: "" }];
+  }
 
-  mounted() {
-    this.uiModule.waitFor(this.loadContent());
+  public authorFilter = "";
+
+  public authorImageLoaded: { [key: string]: boolean } = {};
+
+  private pagesToShow = 1;
+  public allAuthors: AuthorData[] = [];
+  public authorData: PagedResponse<AuthorData> = emptyPageResponse<AuthorData>(
+    `/authors`,
+    {},
+    60
+  );
+
+  async mounted() {
+    const authorData = emptyPageResponse<AuthorData>(
+      `/authors`,
+      {
+        orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
+      },
+      60
+    );
+    const authorsPromise = nextPage(authorData);
+    const reloadPromise = Promise.all([authorsPromise]).then(async () => {
+      this.pagesToShow = 1;
+      for (const author of authorData.pages.flatMap((p) => p)) {
+        this.authorImageLoaded[author.id] = await this.getImage(author);
+      }
+      this.authorData = authorData;
+    });
+    this.uiModule.waitFor(reloadPromise);
+
+    const res = await queryAuthors({
+      orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
+    });
+    this.allAuthors = res.docs
+      .map((d) => d.data)
+      .sort((a, b) => {
+        return a.metadata.name
+          .toLowerCase()
+          .localeCompare(b.metadata.name.toLowerCase());
+      });
+    for (const author of this.allAuthors) {
+      this.authorImageLoaded[author.id] = await this.getImage(author);
+    }
   }
 
   public showAuthor(a: AuthorData): boolean {
@@ -174,24 +240,108 @@ export default class Authors extends Vue {
   get showNoMatchesMessage() {
     return (
       this.authorFilter.length > 0 &&
-      !this.authors.some((a) => this.showAuthor(a))
+      !this.allAuthors.some((a) => this.showAuthor(a))
     );
   }
 
-  private async loadContent() {
-    // TODO: When we get more authors we will probably want to paginate this, but it's ok
-    //       for now.
-    const res = await queryAuthors({
-      orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
-    });
+  get hasContent() {
+    return this.authorData.currentPage >= 0;
+  }
 
-    this.authors = res.docs
-      .map((d) => d.data)
-      .sort((a, b) => {
-        return a.metadata.name
-          .toLowerCase()
-          .localeCompare(b.metadata.name.toLowerCase());
-      });
+  get canLoadMore() {
+    const canLoadMoreRemote = this.authorData.hasNext;
+
+    const canLoadMoreLocal = this.visibleAuthors.length < this.authors.length;
+
+    return canLoadMoreRemote || canLoadMoreLocal;
+  }
+
+  get displayedAuthors() {
+    if (this.authorFilter != "") {
+      return this.allAuthors;
+    } else {
+      return this.visibleAuthors;
+    }
+  }
+
+  public async loadMore() {
+    const promises = [];
+
+    if (this.authorData.hasNext) {
+      promises.push(nextPage(this.authorData));
+    }
+
+    await this.uiModule.waitFor(Promise.all(promises));
+    this.pagesToShow++;
+  }
+
+  public async getImage(author: AuthorData) {
+    if (author) {
+      const imageExists = await this.imageExists(author.metadata.photoURL);
+      if (!imageExists) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  public async imageExists(imgUrl: string) {
+    if (!imgUrl) {
+      return false;
+    }
+    return new Promise((res) => {
+      const image = new Image();
+      image.onload = () => res(true);
+      image.onerror = () => res(false);
+      image.src = imgUrl;
+    });
+  }
+
+  private getHashCode(text: string): number {
+    let hash = 0,
+      i,
+      chr,
+      len;
+    if (text.length == 0) return hash;
+    for (i = 0, len = text.length; i < len; i++) {
+      chr = text.charCodeAt(i);
+      hash = (hash << 5) - hash + chr;
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  }
+
+  public getDynamicAuthorImage(author: AuthorData) {
+    const name = author?.metadata.name.replace(/[().]/gi, "");
+    const separatedNames = name?.split(" ");
+
+    let initials = "";
+    if (separatedNames && separatedNames?.length > 0) {
+      initials += separatedNames[0].charAt(0).toUpperCase();
+    }
+
+    const hash = this.getHashCode(initials || "");
+    const colorData = ColorJson[hash % ColorJson.length];
+    const imageHtml = `<div class="dynamic-author-image-medium"
+      style="background-color: ${colorData.background}; color: ${colorData.color}">
+      ${initials}</div>`;
+
+    return imageHtml;
+  }
+
+  get authors(): AuthorData[] {
+    if (this.authorData.pages.length <= 0) {
+      return [];
+    }
+    return this.authorData.pages.flatMap((p) => p);
+  }
+
+  get visibleAuthors(): AuthorData[] {
+    const maxToShow = 60 * this.pagesToShow;
+    return this.authors.slice(0, maxToShow);
   }
 }
 </script>

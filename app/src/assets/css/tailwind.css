@@ -149,6 +149,37 @@
     background-repeat: no-repeat;
   }
 
+  .dynamic-author-image {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    font-size: 70px;
+    height: 130px;
+    justify-content: center;
+    width: 130px;
+  }
+
+  .dynamic-author-image-medium {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    font-size: 34px;
+    height: 60px;
+    justify-content: center;
+    width: 60px;
+  }
+
+  .dynamic-author-image-small {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    font-size: 14px;
+    height: 24px;
+    justify-content: center;
+    margin-right: 8px;
+    width: 24px;
+  }
+
   @screen lg {
     .header-image {
       background-image: var(--header-bg-image-desktop);
