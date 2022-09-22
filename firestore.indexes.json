@@ -85,6 +85,34 @@
       ]
     },
     {
+      "collectionGroup": "repos",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "metadata.expertise",
+          "arrayConfig": "ASCENDING"
+        },
+        {
+          "fieldPath": "stats.lastUpdated",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "blogs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "metadata.expertise",
+          "arrayConfig": "ASCENDING"
+        },
+        {
+          "fieldPath": "stats.lastUpdated",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
       "collectionGroup": "authors",
       "queryScope": "COLLECTION",
       "fields": [
