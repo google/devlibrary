@@ -15,7 +15,9 @@
 -->
 
 <template>
-  <div class="flex flex-col card card-clickable p-4">
+  <div class="flex flex-col card card-clickable p-4"
+       :id="`${blog.id}-card`"
+  >
     <!-- Author photo and name -->
     <div class="frc">
       <!-- Link to author (if present) -->
@@ -123,6 +125,21 @@ export default class LargeBlogCard extends Vue {
 
   async mounted() {
     this.authorImageLoaded = await this.getImage();
+    if (this.isStale(this.blog.stats.lastUpdated)) {
+      document.getElementById(`${this.blog.id}-card`)!.style.backgroundColor = "#F8F9FA";
+    }
+  }
+
+  public isStale(lastUpdated: number) {
+    const daysAgo = dates.renderDaysAgo(lastUpdated);
+    console.log(daysAgo);
+    if (daysAgo.includes("months ago")) {
+      const monthsAgo = daysAgo.split(" months ago");
+      if (parseInt(monthsAgo[0]) > 18) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public renderDaysAgo(lastUpdated: number) {

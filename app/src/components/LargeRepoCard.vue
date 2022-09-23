@@ -15,7 +15,9 @@
 -->
 
 <template>
-  <div class="flex flex-col card card-clickable p-4">
+  <div class="flex flex-col card card-clickable p-4"
+       :id="`${repo.id}-card`"
+  >
     <!-- Author photo and name -->
     <div class="frc">
       <CircleImage
@@ -111,6 +113,21 @@ export default class LargeRepoCard extends Vue {
 
   async mounted() {
     this.authorImageLoaded = await this.getImage();
+    if (this.isStale(this.repo.stats.lastUpdated)) {
+      document.getElementById(`${this.repo.id}-card`)!.style.backgroundColor = "#F8F9FA";
+    }
+  }
+
+  public isStale(lastUpdated: number) {
+    const daysAgo = dates.renderDaysAgo(lastUpdated);
+    console.log(daysAgo);
+    if (daysAgo.includes("months ago")) {
+      const monthsAgo = daysAgo.split(" months ago");
+      if (parseInt(monthsAgo[0]) > 18) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public renderDaysAgo(lastUpdated: number) {
