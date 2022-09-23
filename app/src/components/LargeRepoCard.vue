@@ -112,15 +112,14 @@ export default class LargeRepoCard extends Vue {
   public authorImageLoaded = false;
 
   async mounted() {
-    this.authorImageLoaded = await this.getImage();
     if (this.isStale(this.repo.stats.lastUpdated)) {
       document.getElementById(`${this.repo.id}-card`)!.style.backgroundColor = "#F8F9FA";
     }
+    this.authorImageLoaded = await this.getImage();
   }
 
   public isStale(lastUpdated: number) {
     const daysAgo = dates.renderDaysAgo(lastUpdated);
-    console.log(daysAgo);
     if (daysAgo.includes("months ago")) {
       const monthsAgo = daysAgo.split(" months ago");
       if (parseInt(monthsAgo[0]) > 18) {
