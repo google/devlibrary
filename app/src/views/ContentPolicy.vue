@@ -16,6 +16,7 @@
 
 <template>
   <div>
+    <Breadcrumbs :links="getBreadcrumbs()" />
     <!-- Header -->
     <div class="grid grid-cols-10 gap-4 border-b border-gray-100">
       <div class="col-start-2 col-span-8">
@@ -175,11 +176,19 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import Breadcrumbs from "@/components/Breadcrumbs.vue";
+import { BreadcrumbLink } from "../../../shared/types";
 
 @Component({
-  components: {},
+  components: {
+    Breadcrumbs,
+  },
 })
-export default class ContentPolicy extends Vue {}
+export default class ContentPolicy extends Vue {
+  public getBreadcrumbs(): BreadcrumbLink[] {
+    return [{ name: "Content Policy", path: "" }];
+  }
+}
 </script>
 
 <style scoped lang="postcss">
