@@ -125,7 +125,7 @@ export default class LargeBlogCard extends Vue {
 
   async mounted() {
     if (this.isStale(this.blog.stats.lastUpdated)) {
-      document.getElementById(`${this.blog.id}-card`)!.style.backgroundColor = "#F8F9FA";
+      document.getElementById(`${this.blog.id}-card`)!.className += " stale-card";
     }
     this.authorImageLoaded = await this.getImage();
   }

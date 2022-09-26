@@ -44,7 +44,7 @@
     </router-link>
 
     <!-- Tags -->
-    <div v-if="showTags" class="mt-4 frc flex-wrap gap-2">
+    <div v-if="showTags" class="card-tags mt-4 frc flex-wrap gap-2">
       <TagChip
         v-for="t in repo.metadata.tags"
         :key="t"
@@ -113,7 +113,7 @@ export default class LargeRepoCard extends Vue {
 
   async mounted() {
     if (this.isStale(this.repo.stats.lastUpdated)) {
-      document.getElementById(`${this.repo.id}-card`)!.style.backgroundColor = "#F8F9FA";
+      document.getElementById(`${this.repo.id}-card`)!.className += " stale-card";
     }
     this.authorImageLoaded = await this.getImage();
   }
