@@ -147,7 +147,8 @@
     color: #5F6368;
   }
 
-  .stale-card img.card-avatar {
+  .stale-card img.card-avatar,
+  .stale-card .product-logo > img {
     filter: grayscale(1);
   }
 

@@ -34,7 +34,7 @@
         v-if="showLogo"
         size="xtiny"
         :productKey="repo.product"
-        class="ml-auto"
+        class="product-logo ml-auto"
       />
     </div>
 

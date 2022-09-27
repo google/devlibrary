@@ -49,7 +49,7 @@
         v-if="showLogo"
         size="xtiny"
         :productKey="blog.product"
-        class="ml-auto"
+        class="product-logo ml-auto"
       />
     </div>
 
