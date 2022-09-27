@@ -60,7 +60,8 @@ export const queryProxy = functions
     }
 
     // The "path" param is the collection to query
-    const path = req.query.path as string;
+    let path = req.query.path as string;
+    path = path.replace(/[&]/g, "&amp;").replace(/[<]/g, "&lt;").replace(/[>]/g, "&gt;");
     if (!path) {
       res.status(400).send('Parameter "path" is required');
       return;
@@ -168,7 +169,8 @@ export const docProxy = functions.https.onRequest(async (req, res) => {
   // Cache at browser for 10 minutes (600s) and on CDN for 12 hours (43200s)
   res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
 
-  const path = req.query.path as string;
+  let path = req.query.path as string;
+  path = path.replace(/[&]/g, "&amp;").replace(/[<]/g, "&lt;").replace(/[>]/g, "&gt;");
   if (!path) {
     res.status(400).send('Parameter "path" is required');
     return;
