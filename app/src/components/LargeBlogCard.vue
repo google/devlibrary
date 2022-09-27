@@ -59,7 +59,7 @@
     </a>
 
     <!-- Tags -->
-    <div v-if="showTags" class="frc mt-4 flex-wrap gap-2">
+    <div v-if="showTags" class="card-tags frc mt-4 flex-wrap gap-2">
       <TagChip
         v-for="t in blog.metadata.tags"
         :key="t"
