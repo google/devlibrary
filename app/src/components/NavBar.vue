@@ -59,10 +59,6 @@
             <span class="header">Authors</span>
           </router-link>
 
-          <a :href="submitLink" target="_blank" class="section">
-            <span class="header">Submit</span>
-          </a>
-
           <router-link to="/about" class="section">
             <span class="header">About</span>
           </router-link>
@@ -127,10 +123,6 @@
         ><span>Authors</span></router-link
       >
 
-      <div class="block nav-item nav-item-link" @click="showSubmitDialog">
-        Submit
-      </div>
-
       <router-link class="block nav-item nav-item-link" to="/about"
         ><span>About</span></router-link
       >
@@ -143,7 +135,13 @@
 
       <!-- Search Bar -->
       <transition name="appear">
-        <SearchBar v-if="!showSideMenu" />
+        <MaterialButton
+          @click.native="showSubmitDialog"
+          type="primary"
+          v-if="!showSideMenu"
+        >
+          Submit your content
+        </MaterialButton>
       </transition>
     </div>
   </div>
@@ -152,13 +150,13 @@
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
 
-import SearchBar from "@/components/SearchBar.vue";
+import MaterialButton from "@/components/MaterialButton.vue";
 import { ALL_PRODUCTS } from "../../../shared/product";
 import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
 
 @Component({
   components: {
-    SearchBar,
+    MaterialButton,
   },
 })
 export default class NavBar extends Vue {
