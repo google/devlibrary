@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ookami-kb"
+  ],
+  "owner": "ookami-kb",
+  "repo": "storybook_flutter",
+  "name": "storybook_flutter",
+  "shortDescription": "A cross-platform storybook for showcasing widgets.",
+  "longDescription": "A cross-platform storybook for showcasing widgets.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets"
+  ]
+}

@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["jsayol"],
+  "authorIds": [
+    "jsayol"
+  ],
   "owner": "jsayol",
   "repo": "FireSQL",
   "name": "FireSQL",
@@ -9,5 +11,7 @@
   "longDescription": "Query Firestore using SQL syntax",
   "content": "README.md",
   "pages": [],
-  "tags": ["web"]
+  "tags": [
+    "web"
+  ]
 }

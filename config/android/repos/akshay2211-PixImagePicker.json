@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akshay2211"
+  ],
+  "owner": "akshay2211",
+  "repo": "PixImagePicker",
+  "name": "PixImagePicker",
+  "shortDescription": "Pix is a Whatsapp image picker replica. with this, you can integrate an image picker just like WhatsApp.",
+  "longDescription": "Pix is a Whatsapp image picker replica. with this, you can integrate an image picker just like WhatsApp.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "ui"
+  ]
+}

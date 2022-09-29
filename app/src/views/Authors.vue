@@ -16,66 +16,68 @@
 
 <template>
   <div>
+    <Breadcrumbs :links="getBreadcrumbs()" />
     <!-- Header -->
-    <div class="grid grid-cols-10 gap-4 bg-gray-50 border-b border-gray-100">
-      <div class="col-start-2 col-span-8">
-        <div class="py-10">
-          <h1 class="text-2xl lg:text-3xl font-semibold">Authors</h1>
-          <p class="mt-1">
-            All content on Dev Library is contributed by our incredible authors!
-          </p>
         </div>
-      </div>
-    </div>
-
-    <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-8" v-if="loaded">
-      <!-- Author Cards -->
-      <div class="col-start-2 col-span-8">
-        <div
-          class="py-6 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        <MaterialButton
+          @click.native="authorFilter = tempAuthorFilter"
+          type="primary"
+          class="ml-2 mt-4"
+          id="authorSearchButton"
         >
-          <div
-            v-for="author in authors"
-            :key="author.id"
-            class="card px-3 py-3 flex flex-row items-center"
-          >
+          <font-awesome-icon icon="search" class="ml-1" />
+          Search
+        </MaterialButton>
+      </div>
+      <div
+        v-if="showNoMatchesMessage"
+        class="text-mgray-700 opacity-70 py-8 px-1"
+      >
+        <font-awesome-icon :icon="['fas', 'exclamation-circle']" class="mr-1" />
+        No authors matching your search.
+      </div>
+
+
+        >
+          <CircleImage
+            v-if="authorImageLoaded[author.id]"
+            :src="author.metadata.photoURL"
+            :lazy="true"
+            class="flex-shrink-0 avatar border-none"
+            size="small"
+          />
+          <div v-else v-html="getDynamicAuthorImage(author)"></div>
+          <div>
+            <div class="mt-2 wrap-lines-1 font-medium font-display">
+              {{ author.metadata.name }}
+            </div>
+
+            <!-- Icons -->
+            <div class="mt-2 flex flex-row justify-center gap-2 text-sm">
+              <a
+                v-if="author.metadata.githubURL"
+                :href="author.metadata.githubURL"
+                target="_blank"
+                class="icon-link"
+              >
+                <font-awesome-icon :icon="['fab', 'github']" />
+              </a>
+              <a
+                v-if="author.metadata.mediumURL"
+                :href="author.metadata.mediumURL"
+                target="_blank"
+                class="icon-link"
+              >
+                <font-awesome-icon :icon="['fab', 'medium']" />
+              </a>
+            </div>
+
             <router-link
               :to="`/authors/${author.id}`"
-              class="flex-shrink-0 mr-2"
+              class="mt-2 flex flex-row justify-center"
             >
-              <CircleImage
-                :src="author.metadata.photoURL"
-                class="border-gray-200"
-                size="small"
-              />
+              <MaterialButton type="text">View profile</MaterialButton>
             </router-link>
-            <div>
-              <router-link
-                :to="`/authors/${author.id}`"
-                class="wrap-lines-1 text-lg font-bold font-display"
-              >
-                {{ author.metadata.name }}
-              </router-link>
-              <div class="flex flex-row gap-2 text-sm">
-                <a
-                  v-if="author.metadata.githubURL"
-                  :href="author.metadata.githubURL"
-                  target="_blank"
-                  class="icon-link"
-                >
-                  <font-awesome-icon :icon="['fab', 'github']" />
-                </a>
-                <a
-                  v-if="author.metadata.mediumURL"
-                  :href="author.metadata.mediumURL"
-                  target="_blank"
-                  class="icon-link"
-                >
-                  <font-awesome-icon :icon="['fab', 'medium']" />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -92,6 +94,32 @@
         >.
       </p>
     </div>
+
+    <!-- Pagination -->
+    <div
+      v-show="canLoadMore && authorFilter === ''"
+      class="mt-2 mb-6 flex flex-col items-center place-content-center"
+    >
+      <MaterialButton v-if="canLoadMore" type="text" @click.native="loadMore">
+        <div class="frc">
+          <span>Load more</span>
+          <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
+        </div>
+      </MaterialButton>
+    </div>
+
+    <!-- Link -->
+    <p class="text-xs px-std mt-2 mb-6 text-mgray-700" v-show="loaded">
+      If your content is in the Dev Library and you're missing from this page,
+      or if you're on this page and would like to update your information, open
+      an Issue or send us a Pull Request
+      <a
+        href="https://github.com/google/devlibrary"
+        class="cursor-pointer underline"
+        target="_blank"
+        >here</a
+      >.
+    </p>
   </div>
 </template>
 
@@ -103,44 +131,215 @@ import UIModule from "@/store/ui";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import CircleImage from "@/components/CircleImage.vue";
+import Breadcrumbs from "@/components/Breadcrumbs.vue";
 
-import { AuthorData } from "../../../shared/types";
-import { queryAuthors } from "@/plugins/data";
+import { ColorJson } from "../assets/ts/profile-colors";
+import { AuthorData, BreadcrumbLink } from "../../../shared/types";
+import {
+  emptyPageResponse,
+  nextPage,
+  PagedResponse,
+  queryAuthors,
+} from "@/plugins/data";
 
 @Component({
   components: {
     MaterialButton,
     CircleImage,
+    Breadcrumbs,
   },
 })
 export default class Authors extends Vue {
   private uiModule = getModule(UIModule, this.$store);
 
-  public authors: AuthorData[] = [];
+  public getBreadcrumbs(): BreadcrumbLink[] {
+    return [{ name: "Authors", path: "" }];
+  }
 
-  mounted() {
-    this.uiModule.waitFor(this.loadContent());
+  public authorFilter = "";
+  public tempAuthorFilter = "";
+
+  public authorImageLoaded: { [key: string]: boolean } = {};
+
+  private pagesToShow = 1;
+  public allAuthors: AuthorData[] = [];
+  public authorData: PagedResponse<AuthorData> = emptyPageResponse<AuthorData>(
+    `/authors`,
+    {},
+    60
+  );
+
+  async mounted() {
+    const searchButton = document.getElementById("authorSearchBar");
+    searchButton?.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("authorSearchButton")?.click();
+      }
+    });
+    const authorData = emptyPageResponse<AuthorData>(
+      `/authors`,
+      {
+        orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
+      },
+      60
+    );
+    const authorsPromise = nextPage(authorData);
+    const reloadPromise = Promise.all([authorsPromise]).then(async () => {
+      this.pagesToShow = 1;
+      for (const author of authorData.pages.flatMap((p) => p)) {
+        this.authorImageLoaded[author.id] = await this.getImage(author);
+      }
+      this.authorData = authorData;
+    });
+    this.uiModule.waitFor(reloadPromise);
+
+    const res = await queryAuthors({
+      orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
+    });
+    this.allAuthors = res.docs
+      .map((d) => d.data)
+      .sort((a, b) => {
+        return a.metadata.name
+          .toLowerCase()
+          .localeCompare(b.metadata.name.toLowerCase());
+      });
+    for (const author of this.allAuthors) {
+      this.authorImageLoaded[author.id] = await this.getImage(author);
+    }
+  }
+
+  public showAuthor(a: AuthorData): boolean {
+    if (this.authorFilter.length === 0) {
+      return true;
+    }
+
+    return a.metadata.name
+      .toLowerCase()
+      .includes(this.authorFilter.toLowerCase());
   }
 
   get loaded() {
     return this.authors.length > 0;
   }
 
-  private async loadContent() {
-    // TODO: When we get more authors we will probably want to paginate this, but it's ok
-    //       for now.
-    const res = await queryAuthors({
-      orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
-    });
+  get showNoMatchesMessage() {
+    return (
+      this.authorFilter.length > 0 &&
+      !this.allAuthors.some((a) => this.showAuthor(a))
+    );
+  }
 
-    this.authors = res.docs.map((d) => d.data);
+  get hasContent() {
+    return this.authorData.currentPage >= 0;
+  }
+
+  get canLoadMore() {
+    const canLoadMoreRemote = this.authorData.hasNext;
+
+    const canLoadMoreLocal = this.visibleAuthors.length < this.authors.length;
+
+    return canLoadMoreRemote || canLoadMoreLocal;
+  }
+
+  get displayedAuthors() {
+    if (this.authorFilter != "") {
+      return this.allAuthors;
+    } else {
+      return this.visibleAuthors;
+    }
+  }
+
+  public setTempAuthorFilter(event: { target: { value: string } }) {
+    this.tempAuthorFilter = event.target.value;
+  }
+
+  public async loadMore() {
+    const promises = [];
+
+    if (this.authorData.hasNext) {
+      promises.push(nextPage(this.authorData));
+    }
+
+    await this.uiModule.waitFor(Promise.all(promises));
+    this.pagesToShow++;
+  }
+
+  public async getImage(author: AuthorData) {
+    if (author) {
+      const imageExists = await this.imageExists(author.metadata.photoURL);
+      if (!imageExists) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  public async imageExists(imgUrl: string) {
+    if (!imgUrl) {
+      return false;
+    }
+    return new Promise((res) => {
+      const image = new Image();
+      image.onload = () => res(true);
+      image.onerror = () => res(false);
+      image.src = imgUrl;
+    });
+  }
+
+  private getHashCode(text: string): number {
+    let hash = 0,
+      i,
+      chr,
+      len;
+    if (text.length == 0) return hash;
+    for (i = 0, len = text.length; i < len; i++) {
+      chr = text.charCodeAt(i);
+      hash = (hash << 5) - hash + chr;
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  }
+
+  public getDynamicAuthorImage(author: AuthorData) {
+    const name = author?.metadata.name.replace(/[().]/gi, "");
+    const separatedNames = name?.split(" ");
+
+    let initials = "";
+    if (separatedNames && separatedNames?.length > 0) {
+      initials += separatedNames[0].charAt(0).toUpperCase();
+    }
+
+    const hash = this.getHashCode(initials || "");
+    const colorData = ColorJson[hash % ColorJson.length];
+    const imageHtml = `<div class="dynamic-author-image-medium"
+      style="background-color: ${colorData.background}; color: ${colorData.color}">
+      ${initials}</div>`;
+
+    return imageHtml;
+  }
+
+  get authors(): AuthorData[] {
+    if (this.authorData.pages.length <= 0) {
+      return [];
+    }
+    return this.authorData.pages.flatMap((p) => p);
+  }
+
+  get visibleAuthors(): AuthorData[] {
+    const maxToShow = 60 * this.pagesToShow;
+    return this.authors.slice(0, maxToShow);
   }
 }
 </script>
 
 <style scoped lang="postcss">
-.card {
-  @apply rounded overflow-hidden border border-gray-50 shadow transition-shadow hover:shadow-lg;
+.avatar {
+  width: 60px;
+  height: 60px;
 }
 
 .icon-link {
@@ -151,11 +350,11 @@ a {
   @apply cursor-pointer;
 }
 
-.wrap-lines-1 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+input {
+  outline: none;
+}
+
+#pagebody {
+  min-height: 60vh;
 }
 </style>

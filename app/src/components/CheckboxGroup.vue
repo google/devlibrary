@@ -16,24 +16,42 @@
 
 <template>
   <div>
-    <div
+    <!-- See: https://material.io/components/checkboxes/web#checkboxes -->
+    <label
       v-for="entry in entries"
+      :for="entry.id"
       :key="entry.key"
-      class="flex flex-row items-center"
+      class="mdc-form-field frc cursor-pointer"
     >
-      <input
-        type="checkbox"
-        v-model="entry.checked"
-        @input="emitValue"
-        :id="entry.id"
-      />
-      <label :for="entry.id" class="ml-2 text-sm">{{ entry.key }}</label>
-    </div>
+      <div class="mdc-checkbox">
+        <input
+          type="checkbox"
+          class="mdc-checkbox__native-control"
+          v-model="entry.checked"
+          @input="emitValue"
+          :id="entry.id"
+          :disabled="!entry.checked && numChecked >= maxSelections"
+        />
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path
+              class="mdc-checkbox__checkmark-path"
+              fill="none"
+              d="M1.73,12.91 8.1,19.28 22.79,4.59"
+            />
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <span class="text-sm wrap-lines-1">{{ entry.key }}</span>
+    </label>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+
+import { waitForMaterialStyles } from "@/plugins/preload";
 
 export interface CheckboxGroupEntry {
   key: string;
@@ -53,9 +71,22 @@ export default class CheckboxGroup extends Vue {
   /** Internal value for each key (ex: android, web) */
   @Prop() values!: string[];
 
+  /** Maximum number of selections allowed */
+  @Prop({ default: 100 }) maxSelections!: number;
+
+  @Prop() value!: string;
+
+  @Watch("value", {deep: true})
+  public onValueChange(val: any) {
+    this.entries = val;
+    this.emitValue();
+  }
+
   public entries: CheckboxGroupEntry[] = [];
 
-  mounted() {
+  async mounted() {
+    await waitForMaterialStyles();
+
     for (let i = 0; i < this.keys.length; i++) {
       const key = this.keys[i];
       const value = this.values[i];
@@ -81,5 +112,11 @@ export default class CheckboxGroup extends Vue {
   public emitValue() {
     this.$emit("input", this.entries);
   }
+
+  get numChecked() {
+    return this.entries.filter((e) => e.checked).length;
+  }
 }
 </script>
+
+<style scoped lang="postcss"></style>

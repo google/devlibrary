@@ -15,46 +15,79 @@
 -->
 
 <template>
-  <div class="flex flex-col">
-    <!-- Card -->
-    <div
-      class="flex-grow flex flex-col rounded shadow transition-shadow hover:shadow-lg overflow-hidden"
-    >
-      <!-- author / medium header -->
-      <div class="bg-gray-200 text-black px-3 py-2">
-        <font-awesome-icon :icon="['fab', 'medium']" size="lg" class="mr-2" />
-        <span>{{ blog.metadata.author }}</span>
-      </div>
+  <div class="flex flex-col card card-clickable p-4">
+    <!-- Author photo and name -->
+    <div class="frc">
+      <!-- Link to author (if present) -->
+      <template v-if="authorId">
+        <router-link :to="`/authors/${authorId}`" class="frc">
+          <CircleImage
+            v-if="authorImageLoaded"
+            :lazy="true"
+            size="card-avatar"
+            class="mr-2"
+            :src="authorPhotoUrl"
+          />
+          <div v-else v-html="dynamicAuthorImage"></div>
+          <span class="font-display text-lg">{{ blog.metadata.author }}</span>
+        </router-link>
+      </template>
 
-      <!-- blog name -->
-      <div class="flex-grow flex flex-row mt-2 px-3">
-        <a
-          :href="blog.metadata.link"
-          target="_blank"
-          class="text-lg font-medium flex-grow wrap-lines-3"
+      <!-- Standard avatar -->
+      <template v-else>
+        <div
+          class="w-6 h-6 mr-2 bg-gray-200 text-gray-400 rounded-full frc justify-center"
         >
-          {{ blog.metadata.title }}</a
-        >
-      </div>
+          <font-awesome-icon icon="user" />
+        </div>
+        <span class="font-display text-lg">{{ blog.metadata.author }}</span>
+      </template>
 
-      <!-- link and time to read -->
-      <div class="flex flex-row pl-3 mt-6 text-sm items-baseline">
-        <span class="flex-grow"><!-- spacer --></span>
-        <a :href="blog.metadata.link" target="_blank"
-          ><MaterialButton type="text">
-            Read Post
-            <font-awesome-icon
-              icon="external-link-alt"
-              class="ml-1"
-              size="sm"
-            /> </MaterialButton
-        ></a>
-      </div>
+      <ProductLogo
+        v-if="showLogo"
+        size="xtiny"
+        :productKey="blog.product"
+        class="ml-auto"
+      />
     </div>
 
-    <!-- Card tags -->
-    <div class="mt-2 flex flex-row items-center">
-      <TagChip v-for="t in blog.metadata.tags" :key="t" :tag="getTag(t)" />
+    <!-- Title -->
+    <a :href="blog.metadata.link" class="mt-4 wrap-lines-3">
+      <h3>{{ blog.metadata.title }}</h3>
+    </a>
+
+    <!-- Tags -->
+    <div v-if="showTags" class="frc mt-4 flex-wrap gap-2">
+      <TagChip
+        v-for="t in blog.metadata.tags"
+        :key="t"
+        :label="getTag(t).label"
+        :textColor="getTag(t).textColor"
+        :bgColor="getTag(t).bgColor"
+      />
+    </div>
+
+    <span class="flex-grow"><!-- spacer --></span>
+
+    <!-- Timestamp -->
+    <div class="frc mt-4 text-sm gap-1 text-mgray-700">
+      <font-awesome-icon
+        :icon="['fas', 'clipboard-list']"
+        size="lg"
+        class="mr-1 text-gray-500"
+      />
+      <span>Blog</span>
+      <span>•</span>
+      <span class="flex-grow wrap-lines-1"
+        >Updated {{ renderDaysAgo(blog.stats.lastUpdated) }}</span
+      >
+    </div>
+
+    <!-- Button -->
+    <div class="mt-6 flex flex-row-reverse">
+      <a :href="blog.metadata.link" target="_blank"
+        ><MaterialButton type="secondary"> Read post </MaterialButton></a
+      >
     </div>
   </div>
 </template>
@@ -62,32 +95,120 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import { BlogData } from "../../../shared/types";
+
 import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
+import CircleImage from "@/components/CircleImage.vue";
+import ProductLogo from "@/components/ProductLogo.vue";
+import { ColorJson } from "../assets/ts/profile-colors";
+
+import * as dates from "@/plugins/dates";
 import * as product from "@/model/product";
+import { getApiHost } from "@/plugins/data";
 
 @Component({
   components: {
     MaterialButton,
     TagChip,
+    ProductLogo,
+    CircleImage,
   },
 })
 export default class LargeBlogCard extends Vue {
   @Prop() blog!: BlogData;
+  @Prop({ default: true }) showTags!: boolean;
+  @Prop({ default: false }) showLogo!: boolean;
+
+  public authorImageLoaded = false;
+
+  async mounted() {
+    this.authorImageLoaded = await this.getImage();
+  }
+
+  public renderDaysAgo(lastUpdated: number) {
+    return dates.renderDaysAgo(lastUpdated);
+  }
 
   public getTag(value: string) {
     return product.getTag(this.blog.product, value);
   }
+
+  public async getImage() {
+    if (this.authorPhotoUrl) {
+      const imageExists = await this.imageExists(this.authorPhotoUrl);
+      if (!imageExists) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  public async imageExists(imgUrl: string) {
+    if (!imgUrl) {
+      return false;
+    }
+    return new Promise((res) => {
+      const image = new Image();
+      image.onload = () => res(true);
+      image.onerror = () => res(false);
+      image.src = imgUrl;
+    });
+  }
+
+  private getHashCode(text: string): number {
+    let hash = 0,
+      i,
+      chr,
+      len;
+    if (text.length == 0) return hash;
+    for (i = 0, len = text.length; i < len; i++) {
+      chr = text.charCodeAt(i);
+      hash = (hash << 5) - hash + chr;
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  }
+
+  get authorId() {
+    if (
+      this.blog.metadata.authorIds &&
+      this.blog.metadata.authorIds.length > 0
+    ) {
+      return this.blog.metadata.authorIds[0];
+    }
+
+    return undefined;
+  }
+
+  get authorPhotoUrl() {
+    if (this.authorId) {
+      return `${getApiHost()}/api/authorPhoto?id=${this.authorId}`;
+    }
+
+    return undefined;
+  }
+
+  get dynamicAuthorImage() {
+    const name = this.blog.metadata.author.replace(/[().]/gi, "");
+    const separatedNames = name?.split(" ");
+
+    let initials = "";
+    if (separatedNames && separatedNames?.length > 0) {
+      initials += separatedNames[0].charAt(0).toUpperCase();
+    }
+
+    const hash = this.getHashCode(initials || "");
+    const colorData = ColorJson[hash % ColorJson.length];
+    const imageHtml = `<div class="dynamic-author-image-small"
+      style="background-color: ${colorData.background}; color: ${colorData.color}">
+      ${initials}</div>`;
+
+    return imageHtml;
+  }
 }
 </script>
 
-<style scoped lang="postcss">
-/** See: https://stackoverflow.com/a/13924997/324977 */
-.wrap-lines-3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-</style>
+<style scoped lang="postcss"></style>

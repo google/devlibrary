@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "samedhi"
+  ],
+  "owner": "samedhi",
+  "repo": "firemore",
+  "name": "firemore",
+  "shortDescription": "Firemore is a library for writing clojurescript applications using Google Firestore.\n\nPlease go to firemore.org for the interactive version of this documentation.",
+  "longDescription": "Firemore is a library for writing clojurescript applications using Google Firestore.\n\nPlease go to firemore.org for the interactive version of this documentation.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web"
+  ]
+}

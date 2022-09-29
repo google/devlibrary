@@ -1,11 +1,17 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "opensource9ja",
-    "repo": "danfojs",
-    "name": "danfojs",
-    "shortDescription": "danfo.js is an open source, JavaScript library providing high performance, intuitive, and easy to use data structures for manipulating and processing structured data.",
-    "longDescription": "danfo.js is an open source, JavaScript library providing high performance, intuitive, and easy to use data structures for manipulating and processing structured data.",
-    "content": "README.md",
-    "tags": ["web"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "risenw"
+  ],
+  "owner": "opensource9ja",
+  "repo": "danfojs",
+  "name": "danfojs",
+  "shortDescription": "danfo.js is an open source, JavaScript library providing high performance, intuitive, and easy to use data structures for manipulating and processing structured data.",
+  "longDescription": "danfo.js is an open source, JavaScript library providing high performance, intuitive, and easy to use data structures for manipulating and processing structured data.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "library"
+  ]
+}

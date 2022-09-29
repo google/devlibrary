@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "timtech4u"
+  ],
+  "author": "Timothy Olaleke",
+  "title": "Building a Slack reminder app with Cloud Functions and Cloud Scheduler",
+  "link": "https://cloud.google.com/community/tutorials/slack-bot-cloud-functions-scheduler",
+  "tags": [
+    "serverless-computing"
+  ]
+}

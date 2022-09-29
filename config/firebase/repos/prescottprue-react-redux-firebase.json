@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["prescottprue"],
+  "authorIds": [
+    "prescottprue"
+  ],
   "owner": "prescottprue",
   "repo": "react-redux-firebase",
   "name": "react-redux-firebase",
@@ -9,5 +11,7 @@
   "longDescription": "Redux bindings for Firebase. Includes React Hooks and Higher Order Components.",
   "content": "README.md",
   "pages": [],
-  "tags": ["web"]
+  "tags": [
+    "web"
+  ]
 }

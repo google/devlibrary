@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["sbis04"],
+  "author": "Souvik Biswas",
+  "title": "Mix a tool for building design systems in Flutter",
+  "link": "https://medium.com/flutter-community/mix-a-tool-for-building-design-systems-in-flutter-89ad643ccf09",
+  "tags": [
+    "plugins",
+    "widgets",
+    "mobile"
+  ]
+}

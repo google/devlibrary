@@ -47,15 +47,19 @@ async function listConfigFiles(
     const typePath = path.join(configPath, type);
 
     const typeFiles = fs.readdirSync(typePath);
-    return typeFiles.map((f) => path.join(typePath, f));
+    return typeFiles
+      .filter((f) => f.endsWith(".json"))
+      .map((f) => path.join(typePath, f));
   }
 
-  return await github.getDirectoryContent(
+  const ghFiles = await github.getDirectoryContent(
     "google",
     "devlibrary",
     "main",
     `config/${product}/${type}`
   );
+
+  return ghFiles.filter((f) => f.endsWith(".json"));
 }
 
 async function readConfigFile(filePath: string): Promise<string> {
@@ -63,12 +67,7 @@ async function readConfigFile(filePath: string): Promise<string> {
     return fs.readFileSync(filePath).toString();
   }
 
-  return await github.getFileContent(
-    "google",
-    "devlibrary",
-    "main",
-    filePath
-  );
+  return await github.getFileContent("google", "devlibrary", "main", filePath);
 }
 
 export async function loadAuthorMetadata() {

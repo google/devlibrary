@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["ebrehault"],
+  "owner": "plone",
+  "repo": "pastanaga-angular",
+  "name": "pastanaga-angular",
+  "shortDescription": "UI component library implementing the Pastanaga design system",
+  "longDescription": "UI component library implementing the Pastanaga design system",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "components"
+  ]
+}

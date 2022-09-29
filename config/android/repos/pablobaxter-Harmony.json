@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pablobaxter"
+  ],
+  "owner": "pablobaxter",
+  "repo": "Harmony",
+  "name": "Harmony",
+  "shortDescription": "Process Independent and Safe SharedPreferences Library ",
+  "longDescription": "Process Independent and Safe SharedPreferences Library ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

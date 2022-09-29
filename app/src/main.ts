@@ -15,7 +15,6 @@
  */
 
 import Vue from "vue";
-import VueGtag from "vue-gtag";
 
 import App from "./App.vue";
 import router from "./router";
@@ -30,20 +29,22 @@ import "@/assets/css/fonts.css";
 // Icons
 import "@/plugins/icons";
 
-// Analytics
-Vue.use(
-  VueGtag,
-  {
-    config: { id: "G-2BDY03FSVV" },
-
-    // Disable until the user accepts cookies
-    // https://matteo-gabriele.gitbook.io/vue-gtag/opt-in-out
-    enabled: false,
+// Media Queries
+// eslint-disable-next-line
+import VueMq from "vue-mq";
+Vue.use(VueMq, {
+  breakpoints: {
+    // Tailwind: sm-640, md=768, lg=1024
+    mobile: 1024,
+    desktop: Infinity,
   },
-  router
-);
+});
 
 Vue.config.productionTip = false;
+
+if (process.env.NODE_ENV === "development") {
+  Vue.config.performance = true;
+}
 
 new Vue({
   router,

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "merlinnot"
+  ],
+  "owner": "merlinnot",
+  "repo": "firestore-extensions",
+  "name": "firestore-extensions",
+  "shortDescription": "A collection of Firestore utilities.",
+  "longDescription": "A collection of Firestore utilities.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web",
+    "node"
+  ]
+}

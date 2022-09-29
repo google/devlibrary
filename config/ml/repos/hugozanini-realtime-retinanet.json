@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "zaninihugo"
+  ],
+  "owner": "hugozanini",
+  "repo": "realtime-retinanet",
+  "name": "Few-shot learning: Creating a real-time object detector using TensorFlow, Python and JavaScript",
+  "shortDescription": "Take a few pictures of an object using your webcam, label the images and train a few-shot learning model to run in real-time",
+  "longDescription": "Take a few pictures of an object using your webcam, label the images and train a few-shot learning model to run in real-time",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision"
+  ]
+}

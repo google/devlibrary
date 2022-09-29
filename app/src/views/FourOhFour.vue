@@ -17,7 +17,12 @@
 <template>
   <div class="bg-white">
     <div class="flex flex-row justify-center my-20">
-      <img alt="404 image" src="@/assets/404.svg" class="max-w-md" />
+      <img
+        alt="404 image"
+        src="@/assets/404.svg"
+        class="w-96"
+        style="max-width: 90%"
+      />
     </div>
   </div>
 </template>

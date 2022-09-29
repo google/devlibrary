@@ -44,7 +44,7 @@ export function get(...keys: string[]) {
       `No config value for ${key} in ${JSON.stringify(functions.config())}`
     );
 
-    return ""
+    return "";
   }
 
   if (typeof val === "string") {

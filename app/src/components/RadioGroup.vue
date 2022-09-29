@@ -16,26 +16,37 @@
 
 <template>
   <div>
-    <div
+    <!-- See: https://material.io/components/radio-buttons/web#radio-buttons -->
+    <label
+      class="mdc-form-field frc cursor-pointer"
       v-for="entry in entries"
+      :for="entry.id"
       :key="entry.id"
-      class="flex flex-row items-center"
     >
-      <input
-        type="radio"
-        :id="entry.id"
-        :name="prefix"
-        :value="entry.value"
-        v-model="choice"
-        @input="onInput"
-      />
-      <label :for="entry.id" class="ml-2 text-sm">{{ entry.key }}</label>
-    </div>
+      <div class="mdc-radio">
+        <input
+          class="mdc-radio__native-control"
+          type="radio"
+          :id="entry.id"
+          :name="prefix"
+          :value="entry.value"
+          v-model="choice"
+          @input="onInput"
+        />
+        <div class="mdc-radio__background">
+          <div class="mdc-radio__outer-circle"></div>
+          <div class="mdc-radio__inner-circle"></div>
+        </div>
+      </div>
+      <label class="text-sm">{{ entry.key }}</label>
+    </label>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+
+import { waitForMaterialStyles } from "@/plugins/preload";
 
 export interface RadioGroupEntry {
   key: string;
@@ -48,11 +59,20 @@ export default class RadioGroup extends Vue {
   @Prop() prefix!: string;
   @Prop() keys!: string[];
   @Prop() values!: string[];
+  @Prop() value!: string;
+
+  @Watch("value")
+  public onValueChange(val: string) {
+    this.choice = val;
+    this.emitValue(val);
+  }
 
   private choice = "";
   public entries: RadioGroupEntry[] = [];
 
-  mounted() {
+  async mounted() {
+    await waitForMaterialStyles();
+
     for (let i = 0; i < this.keys.length; i++) {
       const key = this.keys[i];
       const value = this.values[i];
@@ -88,3 +108,5 @@ export default class RadioGroup extends Vue {
   }
 }
 </script>
+
+<style scoped lang="postcss"></style>

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "owner": "rodrigokamada",
+  "repo": "angular-github-actions-amazon-s3",
+  "name": "angular-github-actions-amazon-s3",
+  "shortDescription": "Application example built with Angular 13 and hosted on Amazon S3 (Simple Storage Service) using GitHub Actions.",
+  "longDescription": "Application example built with Angular 13 and hosted on Amazon S3 (Simple Storage Service) using GitHub Actions.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

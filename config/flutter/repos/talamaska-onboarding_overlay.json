@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "talamaska"
+  ],
+  "owner": "talamaska",
+  "repo": "onboarding_overlay",
+  "name": "onboarding_overlay",
+  "shortDescription": "An onboarding overlay that can help developers showcase features of their app.",
+  "longDescription": "An onboarding overlay that can help developers showcase features of their app.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}

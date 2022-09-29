@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "owner": "rodrigokamada",
+  "repo": "angular-logger",
+  "name": "angular-logger",
+  "shortDescription": "Application example built with Angular 13 and adding the log component using the ngx-logger library.",
+  "longDescription": "Application example built with Angular 13 and adding the log component using the ngx-logger library.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

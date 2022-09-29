@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "yogeshhk"
+  ],
+  "owner": "yogeshhk",
+  "repo": "TeachingDataScience",
+  "name": "Teaching Data Science",
+  "shortDescription": "Repository for LaTeX course notes for Python, Machine Learning, Deep Learning, Natural Language Processing, etc. Core content is in the form for Beamer slides, which in turn can get compiled into presentation mode as well as two-column course notes mode.",
+  "longDescription": "Repository for LaTeX course notes for Python, Machine Learning, Deep Learning, Natural Language Processing, etc. Core content is in the form for Beamer slides, which in turn can get compiled into presentation mode as well as two-column course notes mode.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "collection",
+    "theory"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "vipulasri"
+  ],
+  "owner": "vipulasri",
+  "repo": "Timeline-View",
+  "name": "Timeline-View",
+  "shortDescription": "Android Timeline View is used to display views like Tracking of shipment/order, steppers etc.",
+  "longDescription": "Android Timeline View is used to display views like Tracking of shipment/order, steppers etc.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

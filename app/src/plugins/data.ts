@@ -17,7 +17,10 @@
 import {
   AuthorData,
   BlogData,
+  BlogDataHolder,
+  BlogOrRepoDataHolder,
   RepoData,
+  RepoDataHolder,
   RepoPage,
   SearchResult,
 } from "../../../shared/types";
@@ -42,7 +45,7 @@ export interface PagedResponse<T> {
   lastDoc: QueryResultDocument<T> | null;
 }
 
-function getApiHost(): string {
+export function getApiHost(): string {
   // In development the hosting emulator runs at port 5000
   // while the Vue dev server runs elsewhere. In prod this is
   // not an issue
@@ -51,19 +54,23 @@ function getApiHost(): string {
     : hostingRoot();
 }
 
-async function fetchDoc(docPath: string) {
+async function fetchDoc(docPath: string): Promise<object | undefined> {
   const params = new URLSearchParams({
     path: docPath,
   });
 
   const res = await fetch(`${getApiHost()}/api/docProxy?${params.toString()}`);
+  if (!res.ok) {
+    return undefined;
+  }
   return await res.json();
 }
 
 async function fetchQuery(collectionPath: string, q: FirestoreQuery) {
   const params = new URLSearchParams({
     path: collectionPath,
-    q: btoa(JSON.stringify(q)),
+    // The unescape() and encodeURIComponent() deal with UTF-8
+    q: btoa(unescape(encodeURIComponent(JSON.stringify(q)))),
   });
 
   const res = await fetch(
@@ -164,32 +171,39 @@ export async function nextPage<T>(res: PagedResponse<T>) {
   res.currentPage = res.currentPage + 1;
 }
 
-export async function fetchAuthor(id: string): Promise<AuthorData> {
-  const repoPath = `/authors/${id}`;
-  const json = await fetchDoc(repoPath);
-
-  return json as AuthorData;
+export async function fetchAuthor(id: string): Promise<AuthorData | undefined> {
+  // We are case insensitive on Author IDs in URL paths
+  const normalizedId = id.toLowerCase();
+  const authorPath = `/authors/${normalizedId}`;
+  const json = await fetchDoc(authorPath);
+  if (json) {
+    return json as AuthorData;
+  }
 }
 
 export async function fetchRepo(
   product: string,
   id: string
-): Promise<RepoData> {
+): Promise<RepoData | undefined> {
   const repoPath = `/products/${product}/repos/${id}`;
   const json = await fetchDoc(repoPath);
 
-  return json as RepoData;
+  if (json) {
+    return json as RepoData;
+  }
 }
 
 export async function fetchRepoPage(
   product: string,
   id: string,
   pageKey: string
-): Promise<RepoPage> {
+): Promise<RepoPage | undefined> {
   const pagePath = `/products/${product}/repos/${id}/pages/${pageKey}`;
   const json = await fetchDoc(pagePath);
 
-  return json as RepoPage;
+  if (json) {
+    return json as RepoPage;
+  }
 }
 
 export async function queryAuthors(
@@ -222,13 +236,15 @@ export async function queryRepos(
 }
 
 export async function queryAuthorProjects(authorId: string) {
+  const normalizedId = authorId.toLowerCase();
+
   const q: FirestoreQuery = {
     scope: "COLLECTION_GROUP",
     where: [
       {
         fieldPath: "metadata.authorIds",
         operator: "array-contains",
-        value: authorId,
+        value: normalizedId,
       },
     ],
     orderBy: [
@@ -264,4 +280,19 @@ export function shuffleArr<T>(arr: T[]): T[] {
   }
 
   return arr;
+}
+
+export function wrapInHolders(
+  blogs: BlogData[],
+  repos: RepoData[]
+): BlogOrRepoDataHolder[] {
+  const blogHolders: BlogDataHolder[] = blogs.map((data) => {
+    return { type: "blog", data };
+  });
+
+  const repoHolders: RepoDataHolder[] = repos.map((data) => {
+    return { type: "repo", data };
+  });
+
+  return [...blogHolders, ...repoHolders];
 }

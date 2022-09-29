@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sayakpaul"
+  ],
+  "owner": "sayakpaul",
+  "repo": "TF-2.0-Hacks",
+  "name": "TF-2.0-Hacks",
+  "shortDescription": "The repository consists of Jupyter Notebooks exploring different features of TensorFlow 2. ",
+  "longDescription": "The repository consists of Jupyter Notebooks exploring different features of TensorFlow 2. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "collection"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "patilsiddhesh"
+  ],
+  "owner": "PatilSiddhesh",
+  "repo": "Holi",
+  "name": "Holi",
+  "shortDescription": "An open-source library of colors, gradients and utils built using Jetpack Compose for Android. Has around 450 colors to choose from including material colors, standard HTML colors and, a custom gradient mixer for easy gradient building.",
+  "longDescription": "An open-source library of colors, gradients and utils built using Jetpack Compose for Android. Has around 450 colors to choose from including material colors, standard HTML colors and, a custom gradient mixer for easy gradient building.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

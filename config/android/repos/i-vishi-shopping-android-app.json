@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "i-vishi"
+  ],
+  "owner": "i-vishi",
+  "repo": "shopping-android-app",
+  "name": "shopping-android-app",
+  "shortDescription": "A sample e-commerce android application written in Kotlin where users can sell and buy products.",
+  "longDescription": "A sample e-commerce android application written in Kotlin where users can sell and buy products.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

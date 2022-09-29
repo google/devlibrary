@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "bachiirc"
+  ],
+  "author": "Bachir Chihani",
+  "title": "Super-Resolution with TensorFlow",
+  "link": "https://dzlab.github.io/notebooks/tensorflow/generative/artistic/2021/05/10/Super_Resolution_SRCNN.html",
+  "tags": [
+    "vision",
+    "gan",
+    "tf"
+  ]
+}

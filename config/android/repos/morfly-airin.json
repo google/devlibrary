@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "morfly"
+  ],
+  "owner": "morfly",
+  "repo": "airin",
+  "name": "Airin",
+  "shortDescription": "A framework for automated migration of your projects to Bazel build system. Includes a standalone Starlark code generator.",
+  "longDescription": "A framework for automated migration of your projects to Bazel build system. Includes a standalone Starlark code generator.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

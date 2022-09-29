@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "guolindev"
+  ],
+  "owner": "guolindev",
+  "repo": "LitePal",
+  "name": "LitePal",
+  "shortDescription": "An Android library that makes developers use SQLite database extremely easy.",
+  "longDescription": "An Android library that makes developers use SQLite database extremely easy.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

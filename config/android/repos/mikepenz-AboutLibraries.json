@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mikepenz"
+  ],
+  "owner": "mikepenz",
+  "repo": "AboutLibraries",
+  "name": "AboutLibraries",
+  "shortDescription": "About\nAboutLibraries automatically collects all dependencies and licenses of any gradle project (Kotlin Multi Platform), and provides easy to integrate UI components for Android",
+  "longDescription": "About\nAboutLibraries automatically collects all dependencies and licenses of any gradle project (Kotlin Multi Platform), and provides easy to integrate UI components for Android",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "build-tools"
+  ]
+}

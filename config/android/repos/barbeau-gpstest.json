@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "barbeau"
+  ],
+  "owner": "barbeau",
+  "repo": "gpstest",
+  "name": "GPSTest",
+  "shortDescription": "GPSTest displays real-time information for GNSS and SBAS satellites in view of your device. A vital open-source testing tool for platform engineers, developers, and power users, GPSTest gives you direct insight into how your device computes it's location, including support for dual-frequency (L5 and E5a) signals, and helps you measure actual GNSS accuracy. Privacy-sensitive - no ads or trackers are included, data stays on your device unless you choose to share it.",
+  "longDescription": "GPSTest displays real-time information for GNSS and SBAS satellites in view of your device. A vital open-source testing tool for platform engineers, developers, and power users, GPSTest gives you direct insight into how your device computes it's location, including support for dual-frequency (L5 and E5a) signals, and helps you measure actual GNSS accuracy. Privacy-sensitive - no ads or trackers are included, data stays on your device unless you choose to share it.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "samples"
+  ]
+}

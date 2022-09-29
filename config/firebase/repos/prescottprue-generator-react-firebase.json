@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["prescottprue"],
+  "authorIds": [
+    "prescottprue"
+  ],
   "owner": "prescottprue",
   "repo": "generator-react-firebase",
   "name": "generator-react-firebase",
@@ -9,5 +11,7 @@
   "longDescription": "React Firebase (Redux optional) yeoman generator.",
   "content": "README.md",
   "pages": [],
-  "tags": ["web"]
+  "tags": [
+    "web"
+  ]
 }

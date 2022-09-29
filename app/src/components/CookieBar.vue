@@ -23,15 +23,15 @@
       We serve cookies on this site to analyze traffic, remember your
       preferences, and optimize your experience.
     </p>
-    <div class="flex flex-row mt-2 text-blue-500">
+    <div class="flex flex-row mt-2 text-gblue-600">
       <span class="flex-grow"><!-- spacer --></span>
       <a
         href="https://policies.google.com/technologies/cookies"
         target="_blank"
       >
-        <MaterialButton>More Details</MaterialButton>
+        <MaterialButton type="text">More details</MaterialButton>
       </a>
-      <MaterialButton @click.native="onAccepted">OK</MaterialButton>
+      <MaterialButton type="text" @click.native="onAccepted">OK</MaterialButton>
     </div>
   </div>
 </template>
@@ -40,6 +40,7 @@
 import { Component, Vue } from "vue-property-decorator";
 
 import MaterialButton from "@/components/MaterialButton.vue";
+import { pageView } from "@/plugins/gtag";
 
 @Component({
   components: {
@@ -69,20 +70,8 @@ export default class CookieBar extends Vue {
   }
 
   public grantConsent() {
-    // See:
-    // - https://developers.google.com/analytics/devguides/collection/analyticsjs/user-opt-out
-    // - https://matteo-gabriele.gitbook.io/vue-gtag/opt-in-out
-    this.$gtag.optIn();
-
     // After optIn make sure we trigger a page view to capture the current page
-    this.$gtag.pageview({
-      // eslint-disable-next-line
-      page_title: this.$route.name || "Unknown", 
-      // eslint-disable-next-line
-      page_path: this.$route.path,
-      // eslint-disable-next-line
-      page_location: window.location.href
-    });
+    pageView(this.$route);
   }
 }
 </script>

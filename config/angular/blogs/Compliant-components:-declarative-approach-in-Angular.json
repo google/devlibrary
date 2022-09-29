@@ -1,9 +1,13 @@
 {
-    "version": 1.0,
-    "source": "medium",
-    "author": "Alexander Inkin",
-    "title": "Compliant components: declarative approach in Angular",
-    "link": "https://medium.com/its-tinkoff/compliant-components-declarative-approach-in-angular-520c2bf95522",
-    "tags": ["components"]
-    }
-    
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "waterplea"
+  ],
+  "author": "Alexander Inkin",
+  "title": "Compliant components: declarative approach in Angular",
+  "link": "https://medium.com/its-tinkoff/compliant-components-declarative-approach-in-angular-520c2bf95522",
+  "tags": [
+    "components"
+  ]
+}

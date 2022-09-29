@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "phuurl"
+  ],
+  "author": "Phil Corbett",
+  "title": "Add a lifecycle rule for a Cloud Storage bucket",
+  "link": "https://cloud.google.com/community/tutorials/cloud-storage-bucket-lifecycle",
+  "tags": [
+    "storage"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["markostanimirovic"],
+  "author": "Marko Stanimirović",
+  "title": "Building Count-Up Animation with Angular and RxJS",
+  "link": "https://dev.to/angular/building-count-up-animation-with-angular-and-rxjs-240k",
+  "tags": [
+    "demos"
+  ]
+}

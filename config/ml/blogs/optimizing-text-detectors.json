@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["sayakpaul"],
+  "author": "Sayak Paul",
+  "title": "A Battle of Text Detectors for Mobile Deployments: CRAFT vs. EAST",
+  "link": "https://sayak.dev/optimizing-text-detectors/",
+  "tags": [
+    "mobile"
+  ]
+}

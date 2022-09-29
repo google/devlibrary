@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["rupeshurmaliya"],
+  "author": "Rupesh Urmaliya",
+  "title": "Write a Custom Gradle Plugin (Part 2)",
+  "link": "https://medium.com/geekculture/write-a-custom-gradle-plugin-part-2-1732ac39ff96",
+  "tags": [
+    "build-tools",
+    "compose"
+  ]
+}

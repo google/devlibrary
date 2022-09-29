@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rexfordasamoah51"
+  ],
+  "owner": "Rexfordasamoah51",
+  "repo": "News360",
+  "name": "News360",
+  "shortDescription": "News360 is a mobile app built with Flutter. Due to fewer couple data around for building news app for my country. I try using the magic of dart Scraping in order for me to populate the data inside the",
+  "longDescription": "News360 is a mobile app built with Flutter. Due to fewer couple data around for building news app for my country. I try using the magic of dart Scraping in order for me to populate the data inside the",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "firebase",
+    "samples"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "patilshreyas"
+  ],
+  "owner": "PatilShreyas",
+  "repo": "NotyKT",
+  "name": "NotyKT",
+  "shortDescription": "NotyKT is a complete Kotlin-stack (Backend + Android) application built to demonstrate the use of Modern development tools with best practices implementation",
+  "longDescription": "NotyKT is a complete Kotlin-stack (Backend + Android) application built to demonstrate the use of Modern development tools with best practices implementation",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "compose"
+  ]
+}

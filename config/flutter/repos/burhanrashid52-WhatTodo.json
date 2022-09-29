@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "burhanrashid52"
+  ],
+  "owner": "burhanrashid52",
+  "repo": "WhatTodo",
+  "name": "WhatTodo",
+  "shortDescription": "A Simple To-do app design in flutter to keep track of your task on daily basis. You can add project, labels and due-date to your tasks",
+  "longDescription": "A Simple To-do app design in flutter to keep track of your task on daily basis. You can add project, labels and due-date to your tasks",
+  "content": "README.md",
+  "tags": [
+    "mobile"
+  ]
+}

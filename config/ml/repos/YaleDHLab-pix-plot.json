@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["douglasduhaime"],
+  "owner": "YaleDHLab",
+  "repo": "pix-plot",
+  "name": "PixPlot",
+  "shortDescription": "PixPlot combines Tensorflow and WebGL to visualize large image collections in an interactive web environment. ",
+  "longDescription": "PixPlot combines Tensorflow and WebGL to visualize large image collections in an interactive web environment. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+   "nlp","vision","library","collection"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "foso"
+  ],
+  "owner": "Foso",
+  "repo": "Jetpack-Compose-Playground",
+  "name": "Jetpack Compose Playground",
+  "shortDescription": "Community-driven collection of Jetpack Compose example code and tutorials ",
+  "longDescription": "Community-driven collection of Jetpack Compose example code and tutorials ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

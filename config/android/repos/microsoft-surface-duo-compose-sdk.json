@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["joyl1216"],
+  "owner": "microsoft",
+  "repo": "surface-duo-compose-sdk",
+  "name": "Surface Duo Jetpack Compose SDK",
+  "shortDescription": "This repo contains components built with Jetpack Compose for the Microsoft Surface Duo and other large screen and foldable devices.",
+  "longDescription": "This repo contains components built with Jetpack Compose for the Microsoft Surface Duo and other large screen and foldable devices.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}
+

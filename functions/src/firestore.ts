@@ -37,7 +37,7 @@ async function getIdSet(ref: admin.firestore.Query) {
   const snap = await ref.get();
   const ids = snap.docs.map((d) => d.id);
   return ids;
-};
+}
 
 export async function listAuthorIds() {
   const db = admin.firestore();

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akexorcist"
+  ],
+  "owner": "akexorcist",
+  "repo": "SnapTimePicker",
+  "name": "Snap Time Picker",
+  "shortDescription": "Another Material Time Picker",
+  "longDescription": "Another Material Time Picker",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

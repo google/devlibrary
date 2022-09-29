@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gabriel-thecode"
+  ],
+  "owner": "gabriel-TheCode",
+  "repo": "AestheticDialogs",
+  "name": "Aesthetic Dialogs",
+  "shortDescription": "📱 An Android Library built in Kotlin for 💫fluid, 😍beautiful, 🎨custom Dialogs.",
+  "longDescription": "📱 An Android Library built in Kotlin for 💫fluid, 😍beautiful, 🎨custom Dialogs.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

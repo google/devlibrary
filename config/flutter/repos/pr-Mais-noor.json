@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pr-mais"
+  ],
+  "owner": "pr-Mais",
+  "repo": "noor",
+  "name": "noor",
+  "shortDescription": "Noor is an islamic mobile app, consists of four main pages: home, favorite, alsabha, and settings. The data is structured in Cards that are easy to read, and has some actions that can be performed with the card content.",
+  "longDescription": "Noor is an islamic mobile app, consists of four main pages: home, favorite, alsabha, and settings. The data is structured in Cards that are easy to read, and has some actions that can be performed with the card content.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "general", "samples"
+  ]
+}

@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["prescottprue"],
+  "authorIds": [
+    "prescottprue"
+  ],
   "owner": "prescottprue",
   "repo": "cypress-firebase",
   "name": "cypress-firebase",
@@ -9,5 +11,7 @@
   "longDescription": "Utilities to help testing firebase projects with cypress.",
   "content": "README.md",
   "pages": [],
-  "tags": ["web"]
+  "tags": [
+    "web"
+  ]
 }

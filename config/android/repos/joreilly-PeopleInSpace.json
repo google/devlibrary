@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "joreilly"
+  ],
+  "owner": "joreilly",
+  "repo": "PeopleInSpace",
+  "name": "PeopleInSpace",
+  "shortDescription": "Minimal Kotlin Multiplatform project using Jetpack Compose and SwiftUI.",
+  "longDescription": "Minimal Kotlin Multiplatform project using Jetpack Compose and SwiftUI.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin"
+  ]
+}

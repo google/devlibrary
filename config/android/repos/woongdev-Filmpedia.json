@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "woongdev"
+  ],
+  "owner": "woongdev",
+  "repo": "Filmpedia",
+  "name": "Filmpedia",
+  "shortDescription": "Android movie information application using famous android tech stacks like Kotlin, Retrofit, Jetpack, MVVM and others.",
+  "longDescription": "Android movie information application using famous android tech stacks like Kotlin, Retrofit, Jetpack, MVVM and others.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

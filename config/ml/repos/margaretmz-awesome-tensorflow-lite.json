@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "margaretmz"
+  ],
+  "owner": "margaretmz",
+  "repo": "awesome-tensorflow-lite",
+  "name": "An awesome list for TensorFlow Lite",
+  "shortDescription": "An awesome list of TensorFlow Lite models with sample apps, helpful tools and learning resources.",
+  "longDescription": "An awesome list of TensorFlow Lite models with sample apps, helpful tools and learning resources.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "library",
+    "mobile"
+  ]
+}

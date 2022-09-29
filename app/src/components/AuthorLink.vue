@@ -19,9 +19,6 @@
     tag="span"
     :to="`/authors/${author.id}`"
     :key="author.id"
-    class="inline-flex gap-2 items-center cursor-pointer text-sm font-display pl-2 pr-2 py-1 border rounded-full hover:shadow"
-  >
-    <CircleImage size="xsmall" :src="author.metadata.photoURL" />
     <span>{{ author.metadata.name }}</span>
   </router-link>
 </template>

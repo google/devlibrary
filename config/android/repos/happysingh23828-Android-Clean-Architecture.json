@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "happysingh23828"
+  ],
+  "owner": "happysingh23828",
+  "repo": "Android-Clean-Architecture",
+  "name": "Android-Clean-Architecture",
+  "shortDescription": "This is a sample movie list Android application 📱 built to demonstrate use of Clean Architecture tools. Dedicated to all Android Developers with ❤️.",
+  "longDescription": "This is a sample movie list Android application 📱 built to demonstrate use of Clean Architecture tools. Dedicated to all Android Developers with ❤️.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

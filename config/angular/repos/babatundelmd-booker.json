@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "babatundelmd"
+  ],
+  "owner": "babatundelmd",
+  "repo": "booker",
+  "name": "Booker",
+  "shortDescription": "A simple library application with CRUD operations, services and snapshot testing with Cypress.",
+  "longDescription": "A simple library application with CRUD operations, services and snapshot testing with Cypress.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "frameworks",
+    "gettingstarted"
+  ]
+}

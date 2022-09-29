@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sbis04"
+  ],
+  "owner": "sbis04",
+  "repo": "flutterfire-samples",
+  "name": "FlutterFire Samples",
+  "shortDescription": "Firebase + Flutter sample apps with code snippets.",
+  "longDescription": "Firebase + Flutter sample apps with code snippets, supported by comprehensive articles for each implementation.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "flutter"
+  ]
+}

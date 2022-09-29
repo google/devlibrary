@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kaustubhpatange"
+  ],
+  "owner": "KaustubhPatange",
+  "repo": "navigator",
+  "name": "navigator",
+  "shortDescription": "A small navigation library for Android to ease the use of fragment transactions & handling backStack (also available for Jetpack Compose).",
+  "longDescription": "A small navigation library for Android to ease the use of fragment transactions & handling backStack (also available for Jetpack Compose).",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

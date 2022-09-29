@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "theapache64"
+  ],
+  "owner": "theapache64",
+  "repo": "stackzy",
+  "name": "stackzy",
+  "shortDescription": "A cross-platform desktop application to identify libraries used inside an android application built using Compose Desktop",
+  "longDescription": "A cross-platform desktop application to identify libraries used inside an android application built using Compose Desktop",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

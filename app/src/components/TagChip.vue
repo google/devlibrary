@@ -15,25 +15,22 @@
 -->
 
 <template>
-  <span>
-    <div
-      :class="[color]"
-      class="inline-block ml-3 mr-1 h-3 w-3 rounded-full"
-    ></div>
-    <span class="text-gray-500">{{ tag.key }}</span>
-  </span>
+  <div class="bg-gray-100 frc rounded-sm px-2 py-1" :class="[bgColor]">
+    <span
+      class="text-gray-500 whitespace-nowrap text-sm"
+      :class="[textColor]"
+      >{{ label }}</span
+    >
+  </div>
 </template>
 
 <script lang="ts">
-import { ProductTag } from "@/model/product";
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class TagChip extends Vue {
-  @Prop() tag!: ProductTag;
-
-  get color() {
-    return this.tag.color || "bg-gray-500";
-  }
+  @Prop() label!: string;
+  @Prop() textColor!: string;
+  @Prop() bgColor!: string;
 }
 </script>

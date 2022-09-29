@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pavankjadda"
+  ],
+  "owner": "pavankjadda",
+  "repo": "Angular-Async-Await",
+  "name": "https://github.com/pavankjadda/Angular-Async-Await",
+  "shortDescription": "Synchronous HTTP calls in Angular 7+ using Async and Await",
+  "longDescription": "Synchronous HTTP calls in Angular 7+ using Async and Await",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ericksumargo"
+  ],
+  "owner": "ErickSumargo",
+  "repo": "Dads",
+  "name": "Dads",
+  "shortDescription": "App with dad joke content, built with various modern tech-stacks, Jetpack libraries, and support Multiplatform.",
+  "longDescription": "App with dad joke content, built with various modern tech-stacks, Jetpack libraries, and support Multiplatform.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}

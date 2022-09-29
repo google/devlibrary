@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "stevermeister"
+  ],
+  "owner": "stevermeister",
+  "repo": "ngx-wig",
+  "name": "ngx-wig",
+  "shortDescription": "Lightweight WYSIWYG Editor with only Angular in it's dependencies.",
+  "longDescription": "Lightweight WYSIWYG Editor with only Angular in it's dependencies.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

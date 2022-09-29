@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "arkivanov"
+  ],
+  "owner": "arkivanov",
+  "repo": "MVIKotlin",
+  "name": "MVIKotlin",
+  "shortDescription": "About\nExtendable MVI framework for Kotlin Multiplatform with powerful debugging tools (logging and time travel)",
+  "longDescription": "About\nExtendable MVI framework for Kotlin Multiplatform with powerful debugging tools (logging and time travel)",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin"
+  ]
+}

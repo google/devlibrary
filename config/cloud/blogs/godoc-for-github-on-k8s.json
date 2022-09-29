@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "richarddli"
+  ],
+  "author": "Richard Li",
+  "title": "Deploy a private GoDoc server on Google Kubernetes Engine",
+  "link": "https://cloud.google.com/community/tutorials/godoc-for-github-on-k8s",
+  "tags": [
+    "containers"
+  ]
+}

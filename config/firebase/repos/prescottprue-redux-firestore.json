@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["prescottprue"],
+  "authorIds": [
+    "prescottprue"
+  ],
   "owner": "prescottprue",
   "repo": "redux-firestore",
   "name": "redux-firestore",
@@ -9,5 +11,7 @@
   "longDescription": "Redux bindings for Firestore.",
   "content": "README.md",
   "pages": [],
-  "tags": ["web"]
+  "tags": [
+    "web"
+  ]
 }

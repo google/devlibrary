@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "galeone"
+  ],
+  "author": "Paolo Galeone",
+  "title": "Deploy and Train TensorFlow models in Go: Human Activity Recognition case study",
+  "link": "https://pgaleone.eu/tensorflow/go/2020/11/27/deploy-train-tesorflow-models-in-go-human-activity-recognition/",
+  "tags": [
+    "mobile"
+  ]
+}

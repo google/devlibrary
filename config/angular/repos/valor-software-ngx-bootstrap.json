@@ -1,12 +1,15 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "valor-software",
-    "repo": "ngx-bootstrap",
-    "name": "ngx-bootstrap",
-    "shortDescription": "Angular powered Bootstrap components. The first Angular library published to npm outside of Google.",
-    "longDescription": "Angular powered Bootstrap components. The first Angular library published to npm outside of Google.",
-    "content": "README.md",
-    "tags": ["frameworks"]
-    }
-    
+  "version": 1,
+  "source": "github",
+  "authorIds": ["valorkin"],
+  "owner": "valor-software",
+  "repo": "ngx-bootstrap",
+  "name": "ngx-bootstrap",
+  "shortDescription": "Angular powered Bootstrap components. The first Angular library published to npm outside of Google.",
+  "longDescription": "Angular powered Bootstrap components. The first Angular library published to npm outside of Google.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "frameworks"
+  ]
+}

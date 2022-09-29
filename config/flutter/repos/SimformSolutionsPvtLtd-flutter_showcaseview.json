@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["simform-solutions"],
+  "owner": "SimformSolutionsPvtLtd",
+  "repo": "flutter_showcaseview",
+  "name": "flutter_showcaseview",
+  "shortDescription": "A Flutter package allows you to Showcase/Highlight your widgets step by step.",
+  "longDescription": "A Flutter package allows you to Showcase/Highlight your widgets step by step.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "plugins",
+    "web"
+  ]
+}

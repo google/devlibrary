@@ -1,6 +1,7 @@
 {
   "version": 1,
   "source": "github",
+  "authorIds": [],
   "owner": "FirebaseExtended",
   "repo": "remote-styles",
   "name": "remote-styles",
@@ -8,5 +9,7 @@
   "longDescription": "Conditionally load CSS from Firebase Remote Config.",
   "content": "README.md",
   "pages": [],
-  "tags": ["web"]
+  "tags": [
+    "web"
+  ]
 }

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "omar2205",
+  "title": "Set up an Arma 3 server on Compute Engine",
+  "link": "https://cloud.google.com/community/tutorials/setup-arma-server-compute-engine",
+  "tags": [
+    "compute"
+  ]
+}

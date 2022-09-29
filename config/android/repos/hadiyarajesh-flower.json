@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "hadiyarajesh"
+  ],
+  "owner": "hadiyarajesh",
+  "repo": "flower",
+  "name": "flower",
+  "shortDescription": "Super cool Android library to manage networking and database caching with ease. It allows developers to use remote resources on-the-fly OR Combine remote resources and local persistence data caching in single place with fault tolerant architecture",
+  "longDescription": "Super cool Android library to manage networking and database caching with ease. It allows developers to use remote resources on-the-fly OR Combine remote resources and local persistence data caching in single place with fault tolerant architecture",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

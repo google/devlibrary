@@ -16,8 +16,20 @@
         "function": "queryProxy"
       },
       {
+        "source": "/api/emojis",
+        "function": "emojis"
+      },
+      {
         "source": "/api/elasticSearch",
         "function": "elasticSearch"
+      },
+      {
+        "source": "/api/authorPhoto",
+        "function": "authorPhoto"
+      },
+      {
+        "source": "/api/sitemap",
+        "function": "sitemap"
       },
       {
         "source": "**",

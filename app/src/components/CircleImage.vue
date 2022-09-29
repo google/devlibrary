@@ -15,7 +15,7 @@
 -->
 
 <template>
-  <img :src="src" :class="[size]" class="bg-white overflow-hidden" />
+
 </template>
 
 <script lang="ts">
@@ -25,19 +25,11 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 export default class CircleImage extends Vue {
   @Prop() size!: string;
   @Prop() src!: string;
+  @Prop({ default: false }) lazy!: boolean;
 }
 </script>
 
 <style scoped lang="postcss">
 .xsmall {
-  @apply object-contain w-5 h-5 rounded-full;
-}
-
-.small {
-  @apply object-contain w-12 h-12 border-2 rounded-full;
-}
-
-.large {
-  @apply object-contain w-36 h-36 border-4 rounded-full;
 }
 </style>

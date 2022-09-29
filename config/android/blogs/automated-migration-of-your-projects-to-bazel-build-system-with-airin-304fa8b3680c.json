@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["morfly"],
+  "author": "Pavlo Stavytskyi",
+  "title": "Automated migration of your projects to Bazel build system",
+  "link": "https://proandroiddev.com/automated-migration-of-your-projects-to-bazel-build-system-with-airin-304fa8b3680c",
+  "tags": [
+    "build-tools"
+  ]
+}

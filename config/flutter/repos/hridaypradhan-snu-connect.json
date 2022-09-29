@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "hridaypradhan"
+  ],
+  "owner": "hridaypradhan",
+  "repo": "snu-connect",
+  "name": "SNU Connect",
+  "shortDescription": "Connect with fellow Shiv Nadar University students to work on projects, play your favourite sports and games, meet to run errands and more!",
+  "longDescription": "Connect with fellow Shiv Nadar University students to work on projects, play your favourite sports and games, meet to run errands and more!",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "firebase"
+  ]
+}

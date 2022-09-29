@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "osipxd"
+  ],
+  "owner": "osipxd",
+  "repo": "encrypted-datastore",
+  "name": "osipxd/encrypted-datastore",
+  "shortDescription": "Extensions to encrypt DataStore using Tink.\nThis tiny library will be maintained until an official solution for DataStore encryption will be released by Google.",
+  "longDescription": "Extensions to encrypt DataStore using Tink.\nThis tiny library will be maintained until an official solution for DataStore encryption will be released by Google.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "samples"
+  ]
+}

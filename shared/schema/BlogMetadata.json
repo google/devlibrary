@@ -4,11 +4,20 @@
   "description": "BlogMetadata",
   "type": "object",
   "properties": {
+    "version": {
+      "type": "number",
+      "description": "Internal schema version"
+    },
+    "source": {
+      "type": "string",
+      "description": "'medium' or 'other'"
+    },
     "authorIds": {
       "type": "array",
       "description": "The Dev Library ID of the author(s)",
       "items": {
-        "type": "string"
+        "type": "string",
+        "pattern": "^[a-z0-9\\-_]+$"
       }
     },
     "author": {
@@ -29,7 +38,7 @@
       "description": "Array of product-specific string tags",
       "items": {
         "type": "string",
-        "pattern": "[a-z]*"
+        "pattern": "^[a-z-]+$"
       }
     }
   },

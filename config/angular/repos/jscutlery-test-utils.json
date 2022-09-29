@@ -1,17 +1,22 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "jscutlery",
-    "repo": "test-utils",
-    "name": "JSCutlery Test Utils",
-    "shortDescription": "Tools that make testing cheaper.",
-    "longDescription": "Tools that make testing cheaper, including Cypress Mount which brings Angular support to Cypress Component Testing",
-    "content": "README.md",
-    "pages": [
-        {
-            "name": "Cypress Mount",
-            "path": "packages/cypress-mount/README.md"
-        }
-    ],
-    "tags": ["components","performance","gettingstarted"]
+  "version": 1,
+  "source": "github",
+  "authorIds": ["yjaaidi"],
+  "owner": "jscutlery",
+  "repo": "test-utils",
+  "name": "JSCutlery Test Utils",
+  "shortDescription": "Tools that make testing cheaper.",
+  "longDescription": "Tools that make testing cheaper, including Cypress Mount which brings Angular support to Cypress Component Testing",
+  "content": "README.md",
+  "pages": [
+    {
+      "name": "Cypress Mount",
+      "path": "packages/cypress-mount/README.md"
     }
+  ],
+  "tags": [
+    "components",
+    "performance",
+    "gettingstarted"
+  ]
+}

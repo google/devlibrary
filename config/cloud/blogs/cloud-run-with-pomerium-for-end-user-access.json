@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "travisgroth",
+    "desimone"
+  ],
+  "author": "Travis Groth, Bobby DeSimone",
+  "title": "Authorizing end users in Cloud Run with Pomerium",
+  "link": "https://cloud.google.com/community/tutorials/cloud-run-with-pomerium-for-end-user-access",
+  "tags": [
+    "serverless-computing"
+  ]
+}

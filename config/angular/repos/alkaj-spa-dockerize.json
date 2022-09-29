@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "alkaj"
+  ],
+  "owner": "alkaj",
+  "repo": "spa-dockerize",
+  "name": "SPA Dockerizer",
+  "shortDescription": "Turn your Angular project into a docker image runing NGINX to serve your site with render-tron prerendering enabled for search engines.",
+  "longDescription": "Turn your Angular project into a docker image runing NGINX to serve your site with render-tron prerendering enabled for search engines.",
+  "content": "readme.md",
+  "pages": [],
+  "tags": [
+    "frameworks",
+    "performance",
+    "gettingstarted"
+  ]
+}

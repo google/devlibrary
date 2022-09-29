@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "niloysikdar"
+  ],
+  "owner": "niloysikdar",
+  "repo": "Plaso-Connect",
+  "name": "Plaso-Connect",
+  "shortDescription": "Plaso Connect is an application which acts as a one-stop solution where the people requiring blood plasma/oxygen can directly find and contact the donors and healthcare units as per their requirements. It also has dashboard for showing live Covid stats.",
+  "longDescription": "Plaso Connect is an application which acts as a one-stop solution where the people requiring blood plasma/oxygen can directly find and contact the donors and healthcare units as per their requirements. It also has dashboard for showing live Covid stats.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "samples"
+  ]
+}

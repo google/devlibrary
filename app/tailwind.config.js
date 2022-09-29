@@ -52,10 +52,44 @@ module.exports = {
           bg: "#F1F3F4",
           text: "#1F2937",
         },
+        cloud: {
+          accent: "#EA4335",
+          bg: "#4285F4",
+          text: "#FFFFFF",
+        },
+        android: {
+          accent: "#3FDC84",
+          bg: "#073042",
+          text: "#FFFFFF",
+        },
+
+        assistant: {
+          accent: "#9AA0A6",
+          bg: "#4285F4",
+          text: "#FFFFFF",
+        },
+        gblue: {
+          50: "#e8f0fe",
+          100: "#d2e3fc",
+          200: "#aecbfa",
+          300: "#8ab4f8",
+          400: "#669df6",
+          500: "#4285f4",
+          600: "#1a73e8",
+          700: "#1967d2",
+          800: "#185abc",
+          900: "#174ea6",
+        },
+        mgray: {
+          900: "#202124",
+          800: "#3c4043",
+          700: "#5f6368",
+        },
       },
       typography: {
         DEFAULT: {
           css: {
+            maxWidth: null,
             "blockquote p::before": {
               display: "none",
             },
@@ -65,13 +99,22 @@ module.exports = {
             "code::after": {
               display: "none",
             },
+            table: {
+              width: null,
+            },
+            thead: null,
+            "thead th": null,
+            "thead th:first-child": null,
+            "thead th:last-child": null,
           },
         },
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      textColor: ['last'],
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sayannath"
+  ],
+  "owner": "sayannath",
+  "repo": "MIRNet-Flutter",
+  "name": "MIRNet-Flutter",
+  "shortDescription": "MIRNet model is used to enhance a low-light image.Used MIRNet TF-Lite model from TF-Hub, implemented MIRNet TF-Lite Model with Flutter App.",
+  "longDescription": "MIRNet model is used to enhance a low-light image.Used MIRNet TF-Lite model from TF-Hub, implemented MIRNet TF-Lite Model with Flutter App.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "samples"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gantman"
+  ],
+  "owner": "GantMan",
+  "repo": "rps_tfjs_demo",
+  "name": "TensorFlow.js Rock Paper Scissors",
+  "shortDescription": "Train a Rock Paper Scissors classifier directly in the browser.  Learn how to use the TFJS visor and watch a model train in real time. https://rps-tfjs.netlify.app/",
+  "longDescription": "Train a Rock Paper Scissors classifier directly in the browser.  Learn how to use the TFJS visor and watch a model train in real time. https://rps-tfjs.netlify.app/",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision"
+  ]
+}

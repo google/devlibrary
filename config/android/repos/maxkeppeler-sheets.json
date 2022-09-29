@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "maxkeppeler"
+  ],
+  "owner": "maxkeppeler",
+  "repo": "sheets",
+  "name": "Sheets",
+  "shortDescription": "Sheets offers a range of beautiful sheets (dialogs & bottom sheets) for quick use in your project. It supports a wide range of customization of sheets and a base to build custom sheet on existing functionality.",
+  "longDescription": "Sheets offers a range of beautiful sheets (dialogs & bottom sheets) for quick use in your project. It supports a wide range of customization of sheets and a base to build custom sheet on existing functionality.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

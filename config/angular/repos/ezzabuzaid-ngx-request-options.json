@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ezzabuzaid"
+  ],
+  "owner": "ezzabuzaid",
+  "repo": "ngx-request-options",
+  "name": "ngx-request-options",
+  "shortDescription": "Attache extra data to the HTTP Request request and utilize it in the interceptors.",
+  "longDescription": "Attache extra data to the HTTP Request request and utilize it in the interceptors.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

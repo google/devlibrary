@@ -1,2 +1,4 @@
 User-Agent: *
 Allow: /
+
+Sitemap: https://ugc-site-prod.web.app/api/sitemap

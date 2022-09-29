@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "Landscapist",
+  "name": "Landscapist",
+  "shortDescription": "Jetpack Compose image loading library which can fetch and display network images using Glide, Coil, Fresco",
+  "longDescription": "Jetpack Compose image loading library which can fetch and display network images using Glide, Coil, Fresco",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

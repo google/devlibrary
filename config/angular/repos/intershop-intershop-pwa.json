@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "intershop",
+  "repo": "intershop-pwa",
+  "name": "Intershop PWA",
+  "shortDescription": "The Intershop PWA is an Angular based progressive web app storefront for the Intershop Commerce Suite.",
+  "longDescription": "The Intershop PWA is an Angular based progressive web app storefront for the Intershop Commerce Suite.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos",
+    "performance"
+  ]
+}

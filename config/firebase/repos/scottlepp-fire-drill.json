@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["scotlepp"],
+  "authorIds": [
+    "scottlepp"
+  ],
   "owner": "scottlepp",
   "repo": "fire-drill",
   "name": "FireDrill",
@@ -9,5 +11,7 @@
   "longDescription": "Find, Edit, Add, Remove, Import, Export, and Report on your Firebase data.",
   "content": "README.md",
   "pages": [],
-  "tags": ["admin"]
+  "tags": [
+    "admin"
+  ]
 }

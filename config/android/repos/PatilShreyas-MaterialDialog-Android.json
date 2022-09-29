@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "patilshreyas"
+  ],
+  "owner": "PatilShreyas",
+  "repo": "MaterialDialog-Android",
+  "name": "Material Dialog - Android",
+  "shortDescription": "Android Library to implement animated, beautiful, stylish Material Dialog in android apps easily.",
+  "longDescription": "Android Library to implement animated, beautiful, stylish Material Dialog in android apps easily.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

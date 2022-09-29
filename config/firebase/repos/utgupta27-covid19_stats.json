@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "utgupta27"
+  ],
+  "owner": "utgupta27",
+  "repo": "covid19_stats",
+  "name": "covid19_stats",
+  "shortDescription": "Application for Viewing daily COVID-19 Statistics of India & can find the available vaccine centers of a given pin-code. COVID-19 case-data & case-time-series is provided by Ministry of Health and Family Welfare, Government of India.",
+  "longDescription": "Application for Viewing daily COVID-19 Statistics of India & can find the available vaccine centers of a given pin-code. COVID-19 case-data & case-time-series is provided by Ministry of Health and Family Welfare, Government of India.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "android",
+    "ios",
+    "web",
+    "flutter"
+  ]
+}

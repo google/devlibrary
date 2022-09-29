@@ -18,8 +18,10 @@ import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import { PubSub } from "@google-cloud/pubsub";
 
+import equal from "fast-deep-equal";
+
 import { loadAuthorMetadata, loadProjectMetadata } from "./metadata";
-import { loadBlogStats, loadRepoStats } from "./stats";
+import { loadBlogStats, makeRepoStats } from "./stats";
 import {
   deleteAuthorData,
   deleteBlogData,
@@ -40,7 +42,6 @@ import * as github from "./github";
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { AuthorData, ProductKey, RepoPage } from "../../shared/types";
-import { index, indexAuthor } from "./search";
 
 // See: https://firebase.google.com/docs/functions/writing-and-viewing-logs#console-log
 require("firebase-functions/lib/logger/compat");
@@ -50,10 +51,16 @@ admin.initializeApp();
 const pubsub = new PubSub();
 
 /** Proxy functions */
-export { queryProxy, docProxy } from "./proxy";
+export { queryProxy, docProxy, emojis } from "./proxy";
 
 /** Search functions */
 export { elasticSearch } from "./search";
+
+/** Photo functions */
+export { authorPhoto } from "./photos";
+
+/** Sitemap generator */
+export { sitemap } from "./sitemap";
 
 /**
  * Return elements of a that are not in b
@@ -77,6 +84,7 @@ async function refreshAllProjects() {
         product,
         id,
         metadata,
+        force: false,
       });
     }
 
@@ -85,6 +93,7 @@ async function refreshAllProjects() {
         product,
         id,
         metadata,
+        force: false,
       });
     }
 
@@ -100,6 +109,7 @@ async function refreshAllProjects() {
     for (const b of blogsToDelete) {
       console.log(`Deleting ${product} blog ${b}`);
       await deleteBlogData(product, b);
+      await unIndexBlog(b);
     }
 
     const newRepoIds = Object.keys(repos);
@@ -107,6 +117,7 @@ async function refreshAllProjects() {
     for (const r of reposToDelete) {
       console.log(`Deleting ${product} repo ${r}`);
       await deleteRepoData(product, r);
+      await unIndexRepo(r);
     }
   }
 }
@@ -117,7 +128,7 @@ async function refreshAllAuthors() {
   for (const id in authors) {
     const data: AuthorData = {
       id,
-      metadata: authors[id]
+      metadata: authors[id],
     };
 
     await saveAuthorData(id, data);
@@ -132,6 +143,7 @@ async function refreshAllAuthors() {
   for (const a of authorsToDelete) {
     console.log(`Deleting author ${a}`);
     await deleteAuthorData(a);
+    await unIndexAuthor(a);
   }
 
   // TODO: Author search indexing
@@ -140,27 +152,22 @@ async function refreshAllAuthors() {
 async function refreshRepoInternal(
   product: string,
   id: string,
-  metadata: RepoMetadata
+  metadata: RepoMetadata,
+  force: boolean = false
 ) {
   console.log("Refreshing repo", product, id);
 
-  // Get the existing repo
+  // Get the existing repo data from the database
   const existing = await getRepoData(product, id);
-
-  // If the repo doesn't have the right license, exit early
-  const license = await github.getRepoLicense(metadata.owner, metadata.repo);
-  if (!(license.key === "mit" || license.key === "apache-2.0")) {
-    console.warn(
-      `Invalid license ${license.key} for repo ${metadata.owner}/${metadata.repo}`
-    );
-    if (existing) {
-      await deleteRepoData(product, id);
-      return;
-    }
+  if (!existing) {
+    console.log(`[${product}/${id}] is new.`);
   }
 
+  // Get the latest repo stats from GitHub
+  const ghRepo = await github.getRepo(metadata.owner, metadata.repo);
+  const stats = makeRepoStats(existing, ghRepo);
+
   // First save the repo's stats and metadata
-  const stats = await loadRepoStats(metadata, existing);
   const repo = {
     id,
     product,
@@ -168,6 +175,51 @@ async function refreshRepoInternal(
     stats,
   };
   await saveRepoData(product, repo);
+
+  const recentlyPushed =
+    existing && stats.lastUpdated > existing.stats.lastUpdated;
+  if (recentlyPushed) {
+    console.log(
+      `[${product}/${id}] has been updated since last pull (lastUpdated = ${stats.lastUpdated}).`
+    );
+  } else {
+    console.log(
+      `[${product}/${id}] not recently pushed (lastUpdated = ${stats.lastUpdated}).`
+    );
+  }
+
+  const metadataChanged = existing && !equal(existing.metadata, metadata);
+  if (existing && metadataChanged) {
+    console.log(`[${product}/${id}] repo has metadata changes.`);
+    console.log("old", JSON.stringify(existing.metadata));
+    console.log("new", JSON.stringify(metadata));
+  } else {
+    console.log(`[${product}/${id}] does not have metadata changes.`);
+  }
+
+  // We consider the repo recently changed if any of:
+  //  - It did not exist before
+  //  - It had a recent metadata change (on our side)
+  //  - It was recently pushed (on their side)
+  //
+  // If the repo is not recently changed, we can exit early to save API calls
+  const shouldUpdate = !existing || recentlyPushed || metadataChanged || force;
+  if (!shouldUpdate) {
+    console.log(`[${product}/${id}] skipping update.`);
+    return;
+  }
+
+  // First check the license
+  const license = await github.getRepoLicense(metadata.owner, metadata.repo);
+  if (!(license.key === "mit" || license.key === "apache-2.0")) {
+    console.warn(
+      `Invalid license ${license.key} for repo ${metadata.owner}/${metadata.repo}`
+    );
+
+    // Delete the repo and exit early
+    await deleteRepoData(product, id);
+    return;
+  }
 
   // Then save a document for each page
   const pages = [
@@ -178,7 +230,14 @@ async function refreshRepoInternal(
     ...(metadata.pages || []),
   ];
 
-  const branch = await github.getDefaultBranch(metadata.owner, metadata.repo);
+  const branch = ghRepo.default_branch || "master";
+
+  let emojis = {};
+  try {
+    emojis = await github.getEmojiMap();
+  } catch (e) {
+    console.warn("Failed to get emojis from GitHub", e);
+  }
 
   for (const p of pages) {
     // Get Markdown from GitHub
@@ -190,7 +249,14 @@ async function refreshRepoInternal(
     );
 
     // Render into a series of HTML "sections"
-    const sections = content.renderContent(product, repo, p.path, md, branch);
+    const sections = content.renderContent(
+      product,
+      repo,
+      p.path,
+      md,
+      branch,
+      emojis
+    );
 
     const data: RepoPage = {
       name: p.name,
@@ -247,6 +313,7 @@ if (process.env.FUNCTIONS_EMULATOR) {
     async (request, response) => {
       const product = request.query["product"] as string | undefined;
       const id = request.query["id"] as string | undefined;
+      const forceParam = request.query["force"] as string | undefined;
 
       if (!(product && id)) {
         response.status(400).send("Must include product and id query params");
@@ -260,9 +327,13 @@ if (process.env.FUNCTIONS_EMULATOR) {
         response
           .status(404)
           .send(`Repo /products/${product}/repos/${id} not found`);
+        return;
       }
 
-      await refreshRepoInternal(product, id, metadata);
+      // Force is default, ?force=false overrides it
+      const force = forceParam === "false" ? false : true;
+
+      await refreshRepoInternal(product, id, metadata, force);
       response.status(200).send(`Refreshed /products/${product}/repos/${id}`);
     }
   );
@@ -303,6 +374,7 @@ export const refreshRepo = functions.pubsub
     const product = message.json.product as string;
     const id = message.json.id as string;
     const metadata = message.json.metadata as RepoMetadata;
+    const force = !!message.json.force;
 
-    await refreshRepoInternal(product, id, metadata);
+    await refreshRepoInternal(product, id, metadata, force);
   });

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "teerasej"
+  ],
+  "owner": "teerasej",
+  "repo": "dart-flutter-buddhist-datetime-dateformat",
+  "name": "Buddhist's datetime format for Dart & Flutter",
+  "shortDescription": "Easy show date and time format in buddhist's year format. Fully integrated with Dart's native datetime",
+  "longDescription": "Easy show date and time format in buddhist's year format. Fully integrated with Dart's native datetime",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets"
+  ]
+}

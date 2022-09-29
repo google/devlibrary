@@ -20,10 +20,8 @@
       <NavBar class="z-20 relative" />
       <ProgressBar class="z-10" />
     </div>
-    <router-view
-      class="main-content flex-grow z-0 relative"
-      :key="$route.fullPath"
-    />
+    <router-view class="flex-grow z-0 relative" :key="$route.fullPath" />
+    <SubmitDialog />
     <CookieBar class="fixed z-10 bottom-0 left-0" />
     <FooterBar class="z-0" />
   </div>
@@ -35,6 +33,7 @@ import NavBar from "@/components/NavBar.vue";
 import ProgressBar from "@/components/ProgressBar.vue";
 import FooterBar from "@/components/FooterBar.vue";
 import CookieBar from "@/components/CookieBar.vue";
+import SubmitDialog from "@/components/SubmitDialog.vue";
 
 @Component({
   components: {
@@ -42,40 +41,10 @@ import CookieBar from "@/components/CookieBar.vue";
     ProgressBar,
     FooterBar,
     CookieBar,
+    SubmitDialog,
   },
 })
 export default class App extends Vue {}
 </script>
 
-<style lang="postcss">
-#app {
-  min-height: 100vh;
-}
-
-body {
-  @apply text-gray-800;
-}
-
-.desktop-only {
-  @apply hidden;
-  @apply lg:block;
-}
-
-.mobile-only {
-  @apply block;
-  @apply lg:hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply font-display;
-}
-
-a {
-  @apply cursor-pointer;
-}
-</style>
+<style lang="postcss"></style>

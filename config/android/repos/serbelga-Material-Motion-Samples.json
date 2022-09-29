@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "serbelga"
+  ],
+  "owner": "serbelga",
+  "repo": "Material-Motion-Samples",
+  "name": "Material Motion Samples",
+  "shortDescription": "A collection of samples using Material Motion for Android",
+  "longDescription": "A collection of samples using Material Motion for Android",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

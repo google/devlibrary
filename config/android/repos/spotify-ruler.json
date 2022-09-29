@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "spotify",
+  "repo": "ruler",
+  "name": "ruler",
+  "shortDescription": "Gradle plugin which helps you analyze the size of your Android apps.",
+  "longDescription": "Gradle plugin which helps you analyze the size of your Android apps.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

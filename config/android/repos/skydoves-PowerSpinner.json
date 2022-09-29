@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "PowerSpinner",
+  "name": "PowerSpinner",
+  "shortDescription": "A lightweight dropdown popup spinner, fully customizable with an arrow and animations for Android.",
+  "longDescription": "A lightweight dropdown popup spinner, fully customizable with an arrow and animations for Android.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

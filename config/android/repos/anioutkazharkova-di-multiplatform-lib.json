@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "anioutkazharkova"
+  ],
+  "owner": "anioutkazharkova",
+  "repo": "di-multiplatform-lib",
+  "name": "di-multiplatform-lib",
+  "shortDescription": "Lightweight dependency injection framework for Kotlin Multiplatform application\nMultiplatform-DI helps you to use DI in your KMM application easily, to provide shared common architecture solution that works both in iOS and Android native applications. Support common work for iOS and Android in common module",
+  "longDescription": "Lightweight dependency injection framework for Kotlin Multiplatform application\nMultiplatform-DI helps you to use DI in your KMM application easily, to provide shared common architecture solution that works both in iOS and Android native applications. Support common work for iOS and Android in common module",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin"
+  ]
+}

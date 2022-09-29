@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "tejasmorkar"
+  ],
+  "owner": "tejasmorkar",
+  "repo": "sketch-to-color",
+  "name": "sketch-to-color",
+  "shortDescription": "Sketch to Color Image generation is an image-to-image translation model using Conditional Generative Adversarial Networks. The model was trained on the Anime Sketch-Colorization Pair Dataset available on Kaggle which contains 14.2k pairs of Sketch-Color Anime Images. The training of the model was done for 150 epochs which took approximately 23 hours on a single GeForce GTX 1060 6GB Graphic Card and 16 GB RAM.",
+  "longDescription": "Sketch to Color Image generation is an image-to-image translation model using Conditional Generative Adversarial Networks. The model was trained on the Anime Sketch-Colorization Pair Dataset available on Kaggle which contains 14.2k pairs of Sketch-Color Anime Images. The training of the model was done for 150 epochs which took approximately 23 hours on a single GeForce GTX 1060 6GB Graphic Card and 16 GB RAM.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "library"
+  ]
+}

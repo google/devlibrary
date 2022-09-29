@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "guolindev"
+  ],
+  "owner": "guolindev",
+  "repo": "Glance",
+  "name": "Glance",
+  "shortDescription": "A simple and handy Android database debugging library. Debug your database on mobile.",
+  "longDescription": "A simple and handy Android database debugging library. Debug your database on mobile.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

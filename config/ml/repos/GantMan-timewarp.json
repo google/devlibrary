@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gantman"
+  ],
+  "owner": "GantMan",
+  "repo": "timewarp",
+  "name": "TimeWarpScan.me",
+  "shortDescription": "Recreating the fancy time warp scan filter from TikTok in TensorFlow.js",
+  "longDescription": "Recreating the fancy time warp scan filter from TikTok in TensorFlow.js",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web",
+    "vision"
+  ]
+}

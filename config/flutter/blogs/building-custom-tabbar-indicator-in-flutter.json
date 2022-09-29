@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["divyanshub024"],
+  "author": "Divyanshu Bhargava",
+  "title": "Building Custom TabBar Indicator in Flutter",
+  "link": "https://www.divyanshu.dev/building-custom-tabbar-indicator-in-flutter",
+  "tags": [
+    "widgets"
+  ]
+}

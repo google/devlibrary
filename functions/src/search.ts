@@ -20,14 +20,13 @@ import { Client } from "@elastic/elasticsearch";
 import * as config from "./config";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
-import { AuthorData, AuthorSearchResult, BlogSearchResult, RepoSearchResult, SearchResult } from "../../shared/types";
 
 const client = new Client({
   cloud: {
     id: config.get("elastic", "id"),
     username: config.get("elastic", "username"),
     password: config.get("elastic", "password"),
-  }
+  },
 });
 
 export async function index(
@@ -41,12 +40,12 @@ export async function index(
   //       ID this would be an issue.
   for (const [id, repo] of Object.entries(repos)) {
     const p = client.index({
-      index: "repos",
+      index: INDEX_REPOS,
       id,
       body: {
         id,
         product,
-        metadata: repo
+        metadata: repo,
       },
     });
     promises.push(p);
@@ -54,12 +53,12 @@ export async function index(
 
   for (const [id, blog] of Object.entries(blogs)) {
     const p = client.index({
-      index: "blogs",
+      index: INDEX_BLOGS,
       id,
       body: {
         id,
         product,
-        metadata: blog
+        metadata: blog,
       },
     });
     promises.push(p);
@@ -69,25 +68,20 @@ export async function index(
 
   // We need to force an index refresh at this point, otherwise we will not
   // get any result in the consequent search
-  await client.indices.refresh({ index: "repos" });
-  await client.indices.refresh({ index: "blogs" });
+  await client.indices.refresh({ index: INDEX_REPOS });
+  await client.indices.refresh({ index: INDEX_BLOGS });
 }
 
 export async function indexAuthor(author: AuthorData) {
   const { id, metadata } = author;
   await client.index({
-    index: "authors",
-    id,
-    body: {
-      id,
-      metadata
+
     },
   });
 }
 
-export async function search(term: string, limit: number): Promise<SearchResult[]> {
   const reposRes = await client.search({
-    index: "repos",
+    index: INDEX_REPOS,
     body: {
       query: {
         query_string: {
@@ -106,16 +100,24 @@ export async function search(term: string, limit: number): Promise<SearchResult[
   });
 
   const blogsRes = await client.search({
-    index: "blogs",
+    index: INDEX_BLOGS,
     body: {
       query: {
         query_string: {
           query: `*${term}*`,
-          fields: [
-            "metadata.author^0.5", 
-            "metadata.title^2", 
-            "metadata.tags"
-          ],
+          fields: ["metadata.author^0.5", "metadata.title^2", "metadata.tags"],
+        },
+      },
+    },
+  });
+
+  const authorsRes = await client.search({
+    index: INDEX_AUTHORS,
+    body: {
+      query: {
+        query_string: {
+          query: `*${term}*`,
+          fields: ["metadata.name"],
         },
       },
     },
@@ -175,16 +177,20 @@ export async function search(term: string, limit: number): Promise<SearchResult[
   return sorted.slice(0, limit);
 }
 
-export const elasticSearch = functions.https.onRequest(async (req, res) => {
-  // Allow CORS
-  res.header("Access-Control-Allow-Origin", "*");
+export const elasticSearch = functions
+  .runWith({
+    minInstances: 1,
+  })
+  .https.onRequest(async (req, res) => {
+    // Allow CORS
+    res.header("Access-Control-Allow-Origin", "*");
 
-  // Cache at browser for 10 minutes (600s) and on CDN for 12 hours (43200s)
-  res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
+    // Cache at browser for 10 minutes (600s) and on CDN for 12 hours (43200s)
+    res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
 
-  // The "q" param is the search term
-  const q = req.query.q as string;
+    // The "q" param is the search term
+    const q = req.query.q as string;
 
-  const result = await search(q, 5);
-  res.json(result);
-});
+    const result = await search(q, 5);
+    res.json(result);
+  });

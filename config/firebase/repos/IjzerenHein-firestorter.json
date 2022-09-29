@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["IjzerenHein"],
+  "authorIds": [
+    "ijzerenhein"
+  ],
   "owner": "IjzerenHein",
   "repo": "firestorter",
   "name": "Firestorter",
@@ -9,5 +11,7 @@
   "longDescription": "Use Google Firestore in React with zero effort, using MobX.",
   "content": "README.md",
   "pages": [],
-  "tags": ["web"]
+  "tags": [
+    "web"
+  ]
 }

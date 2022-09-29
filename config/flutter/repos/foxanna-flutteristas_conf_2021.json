@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "foxanna"
+  ],
+  "owner": "foxanna",
+  "repo": "flutteristas_conf_2021",
+  "name": "Space Launches",
+  "shortDescription": "Mobile application that displays a list of the upcoming space mission launches, implemented with Flutter and showcasing code-generation application in API models, API services, dependency injection, and navigation.",
+  "longDescription": "Mobile application that displays a list of the upcoming space mission launches, implemented with Flutter and showcasing code-generation application in API models, API services, dependency injection, and navigation.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "samples"
+  ]
+}

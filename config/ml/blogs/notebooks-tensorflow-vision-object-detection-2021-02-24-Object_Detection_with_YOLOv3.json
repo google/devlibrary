@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "bachiirc"
+  ],
+  "author": "Bachir Chihani",
+  "title": "Object Detection with YOLOv3 in Tensorflow",
+  "link": "https://dzlab.github.io/notebooks/tensorflow/vision/object-detection/2021/02/24/Object_Detection_with_YOLOv3.html",
+  "tags": [
+    "vision",
+    "tf"
+  ]
+}

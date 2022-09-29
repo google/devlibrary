@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "drit"
+  ],
+  "author": "Dritan Suljoti",
+  "title": "Catchpoint data pipeline to Cloud Monitoring",
+  "link": "https://cloud.google.com/community/tutorials/catchpoint-to-cloud-monitoring",
+  "tags": [
+    "operations"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rishit-dagli"
+  ],
+  "owner": "Rishit-dagli",
+  "repo": "Face-Recognition_Flutter",
+  "name": "Face Recognition Flutter",
+  "shortDescription": "This repo shows how one could get started using Firebase ML Kit in their Flutter app very easily, showing an example of implementing Face Recognition using Firebase ML Kit in a sample Flutter app.",
+  "longDescription": "This repo shows how one could get started using Firebase ML Kit in their Flutter app very easily, showing an example of implementing Face Recognition using Firebase ML Kit in a sample Flutter app.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "samples"
+  ]
+}

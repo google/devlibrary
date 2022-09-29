@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "samadon1"
+  ],
+  "owner": "samadon1",
+  "repo": "heartmri",
+  "name": "Cardiac MRI Image Segmentation",
+  "shortDescription": "In medical imagery analysis it is often important to separate the pixels corresponding to different types of tissue, blood or abnormal cells so that we can isolate a particular organ. In this project",
+  "longDescription": "In medical imagery analysis it is often important to separate the pixels corresponding to different types of tissue, blood or abnormal cells so that we can isolate a particular organ. In this project",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    
+    "nlp",
+    "vision"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rishit-dagli"
+  ],
+  "owner": "Rishit-dagli",
+  "repo": "Perceiver",
+  "name": "Perceiver",
+  "shortDescription": "This project implements DeepMind's new Perceiver Model: General Perception with Iterative Attention in TensorFlow which solves the Transformers Quadratic compute and memory bottleneck.",
+  "longDescription": "This project implements DeepMind's new Perceiver Model: General Perception with Iterative Attention in TensorFlow which solves the Transformers Quadratic compute and memory bottleneck.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "theory"
+  ]
+}

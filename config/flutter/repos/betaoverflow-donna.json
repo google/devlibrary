@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["aniket762"],
+  "owner": "betaoverflow",
+  "repo": "donna",
+  "name": "Donna",
+  "shortDescription": "Donna transforms your smart devices into intelligent communicators. Supports people with disabilities by allowing them to interact with ease. ",
+  "longDescription": "Donna transforms your smart devices into intelligent communicators. Supports people with disabilities by allowing them to interact with ease. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "mobile"
+  ]
+}

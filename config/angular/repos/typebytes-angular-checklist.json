@@ -1,11 +1,16 @@
 {
-  "version": 1.0,
+  "version": 1,
   "source": "github",
+  "authorIds": ["d3lm"],
   "owner": "typebytes",
   "repo": "angular-checklist",
   "name": "angular-checklist",
   "shortDescription": "angular-checklist",
   "longDescription": "angular-checklist",
   "content": "README.md",
-  "tags": ["components", "frameworks"]
+  "pages": [],
+  "tags": [
+    "components",
+    "frameworks"
+  ]
 }

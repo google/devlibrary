@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ryuukenshi"
+  ],
+  "owner": "RyuuKenshi",
+  "repo": "flutter_collapsible_sidebar",
+  "name": "flutter_collapsible_sidebar",
+  "shortDescription": "A collapsible sidebar for Flutter apps implementing the Material Design.",
+  "longDescription": "A collapsible sidebar for Flutter apps implementing the Material Design.",
+  "content": "README.md",
+  "tags": [
+    "mobile"
+  ]
+}

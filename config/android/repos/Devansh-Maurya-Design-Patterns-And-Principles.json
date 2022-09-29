@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "devansh-maurya"
+  ],
+  "owner": "Devansh-Maurya",
+  "repo": "Design-Patterns-And-Principles",
+  "name": "Design-Patterns-And-Principles",
+  "shortDescription": "A collection of a number of design patterns and design principles written in Kotlin.",
+  "longDescription": "A collection of a number of design patterns and design principles written in Kotlin.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}

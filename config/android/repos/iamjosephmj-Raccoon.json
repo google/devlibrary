@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "iamjosephmj"
+  ],
+  "owner": "iamjosephmj",
+  "repo": "Raccoon",
+  "name": "Raccoon",
+  "shortDescription": "Raccoon is a lightweight response mocking framework that can be easily integrated into the Android UI tests.",
+  "longDescription": "Raccoon is a lightweight response mocking framework that can be easily integrated into the Android UI tests.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

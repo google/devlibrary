@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "felipelujan"
+  ],
+  "author": "Juan Felipe Lujan",
+  "title": "Deploy React and Nginx to Cloud Run",
+  "link": "https://cloud.google.com/community/tutorials/deploy-react-nginx-cloud-run",
+  "tags": [
+    "serverless-computing"
+  ]
+}

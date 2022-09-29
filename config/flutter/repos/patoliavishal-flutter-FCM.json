@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "patoliavishal"
+  ],
+  "owner": "patoliavishal",
+  "repo": "flutter-FCM",
+  "name": "flutter-FCM",
+  "shortDescription": "A Flutter sample app for demonstrating how to handle firebase push notifications in the background and foreground. ",
+  "longDescription": "A Flutter sample app for demonstrating how to handle firebase push notifications in the background and foreground. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "samples",
+    "mobile"
+  ]
+}

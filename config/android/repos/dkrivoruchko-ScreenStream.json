@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "dkrivoruchko"
+  ],
+  "owner": "dkrivoruchko",
+  "repo": "ScreenStream",
+  "name": "ScreenStream",
+  "shortDescription": "The application allows viewing the device screen in your web browser. The main idea is to show your device screen during presentations and demos. No need of any additional software except for this app and a web browser. ",
+  "longDescription": "The application allows viewing the device screen in your web browser. The main idea is to show your device screen during presentations and demos. No need of any additional software except for this app and a web browser. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

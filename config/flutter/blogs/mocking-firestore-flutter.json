@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "victoreronmosele"
+  ],
+  "author": "Victor Eronmosele",
+  "title": "Mocking and Testing Firestore Operations in Flutter Unit Tests | Part 1 (Documents and Collections)",
+  "link": "https://blog.victoreronmosele.com/mocking-firestore-flutter",
+  "tags": [
+    "firebase",
+    "mobile"
+  ]
+}

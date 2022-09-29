@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["matzuk"],
+  "owner": "KasperskyLab",
+  "repo": "Kaspresso",
+  "name": "Kaspresso",
+  "shortDescription": "Kaspresso is a framework for native UI testing. Based on Espresso and UI Automator, it provides a wide range of additional useful features, such as flakiness control and faster execution of UI Automator commands.",
+  "longDescription": "Kaspresso is a framework for native UI testing. Based on Espresso and UI Automator, it provides a wide range of additional useful features, such as flakiness control and faster execution of UI Automator commands.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools",
+    "compose",
+    "architecture",
+    "kotlin",
+    "samples",
+    "modern-android-development",
+    "ui"
+  ]
+}

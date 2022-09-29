@@ -16,10 +16,13 @@
 # https://github.com/firebase/firebase-tools
 
 name: Firebase Hosting Preview
-on: pull_request
+on: 
+  pull_request:
+    paths:
+      - 'app/**'
 jobs:
   build_and_preview:
-    if: ${{ github.repository == 'google/devlibrary' }}
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -30,6 +33,7 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_UGC_SITE_DEV }}'
+          expires: 3d
           projectId: ugc-site-dev
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels

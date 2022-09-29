@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "trungk18"
+  ],
+  "owner": "trungk18",
+  "repo": "angular-spotify",
+  "name": "angular-spotify",
+  "shortDescription": "Angular Spotify is not only a simplified Spotify client built with Angular, but also an example of a modern, real-world Angular codebase.",
+  "longDescription": "Angular Spotify is not only a simplified Spotify client built with Angular, but also an example of a modern, real-world Angular codebase.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

@@ -15,10 +15,29 @@
  */
 
 export enum ProductKey {
-  FIREBASE = "firebase",
-  ML = "ml",
+  ANDROID = "android",
   ANGULAR = "angular",
-  FLUTTER = "flutter"
+  CLOUD = "cloud",
+  FIREBASE = "firebase",
+  FLUTTER = "flutter",
+  ML = "ml",
+  ASSISTANT = "assistant",
+}
+
+export interface ProductTag {
+  // The human-readable name (Android, Node.js)
+  label: string;
+
+  // The database value (android, node)
+  value: string;
+}
+
+export interface ProductConfig {
+  key: ProductKey;
+  name: string;
+  description: string;
+  docsUrl: string;
+  tags: ProductTag[];
 }
 
 import { AuthorMetadata } from "./types/AuthorMetadata";
@@ -101,4 +120,3 @@ export interface AuthorSearchResult {
   };
 }
 
-export type SearchResult = BlogSearchResult | RepoSearchResult | AuthorSearchResult;

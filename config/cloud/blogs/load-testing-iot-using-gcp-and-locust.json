@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "csgcp"
+  ],
+  "author": "Chris Scott",
+  "title": "Load-testing an IoT application using Google Cloud and Locust",
+  "link": "https://cloud.google.com/community/tutorials/load-testing-iot-using-gcp-and-locust",
+  "tags": [
+    "iot"
+  ]
+}

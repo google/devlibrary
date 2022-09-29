@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sayannath"
+  ],
+  "owner": "sayannath",
+  "repo": "Zero-DCE-TFLite",
+  "name": "Zero-DCE-TFLite",
+  "shortDescription": "Conversion of TF-Lite model from ZERO-DCE Model. This repository contains the TF-Lite of the ZERO-DCE model.",
+  "longDescription": "Conversion of TF-Lite model from ZERO-DCE Model. This repository contains the TF-Lite of the ZERO-DCE model.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision"
+  ]
+}

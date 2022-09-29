@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sridhar-sp"
+  ],
+  "owner": "sridhar-sp",
+  "repo": "compose-neumorphism",
+  "name": "Neumorphism using Jetpack Compose",
+  "shortDescription": "A Jetpack compose library to create \"Neumorphic\" design.\n\"Neumorphism\" is a ui design concept which uses shadows to create awesome looking UI.",
+  "longDescription": "A Jetpack compose library to create \"Neumorphic\" design.\n\"Neumorphism\" is a ui design concept which uses shadows to create awesome looking UI.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui",
+    "kotlin"
+  ]
+}

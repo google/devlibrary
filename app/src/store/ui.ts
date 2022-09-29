@@ -16,11 +16,16 @@
 
 import { Module, VuexModule, Mutation, Action } from "vuex-module-decorators";
 
+// 10 frames
+const MIN_LOADING_MS = 160;
+
 @Module({
   name: "ui",
 })
 export default class UIModule extends VuexModule {
   public loading = false;
+
+  private loadingTimeout = -1;
 
   @Action({ rawError: true })
   async waitFor(promise: Promise<unknown>) {
@@ -39,6 +44,13 @@ export default class UIModule extends VuexModule {
 
   @Mutation
   endLoading() {
-    this.loading = false;
+    if (this.loadingTimeout >= 0) {
+      clearTimeout(this.loadingTimeout);
+      this.loadingTimeout = -1;
+    }
+
+    this.loadingTimeout = setTimeout(() => {
+      this.loading = false;
+    }, MIN_LOADING_MS);
   }
 }

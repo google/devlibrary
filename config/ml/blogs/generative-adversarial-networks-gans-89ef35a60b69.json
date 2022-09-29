@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "tejasmorkar"
+  ],
+  "author": "Tejas Morkar",
+  "title": "Sketch-to-Color Image Generation | GANs",
+  "link": "https://towardsdatascience.com/generative-adversarial-networks-gans-89ef35a60b69",
+  "tags": [
+    "vision",
+    "nlp"
+  ]
+}

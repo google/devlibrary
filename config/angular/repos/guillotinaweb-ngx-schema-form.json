@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["ebrehault"],
+  "owner": "guillotinaweb",
+  "repo": "ngx-schema-form",
+  "name": "ngx-schema-form",
+  "shortDescription": "Form generation library based on the JSON Schema standard",
+  "longDescription": "Form generation library based on the JSON Schema standard",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

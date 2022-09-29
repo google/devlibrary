@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ethiel97"
+  ],
+  "owner": "Ethiel97",
+  "repo": "flutter_desktop_notes_app",
+  "name": "Flutter Desktop Notes App",
+  "shortDescription": "Beautiful Desktop app UI built with Flutter",
+  "longDescription": "Beautiful Desktop app UI built with Flutter",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "general",
+    "samples"
+  ]
+}

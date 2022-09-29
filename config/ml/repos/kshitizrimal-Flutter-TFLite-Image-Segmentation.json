@@ -1,11 +1,17 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "kshitizrimal",
-    "repo": "Flutter-TFLite-Image-Segmentation",
-    "name": "Flutter-TFLite-Image-Segmentation",
-    "shortDescription": "Flutter TF Segmentation is an example app that uses Flutter for the ios/android app and uses TensorFlow Lite for Image segmentation.",
-    "longDescription": "Flutter TF Segmentation is an example app that uses Flutter for the ios/android app and uses TensorFlow Lite for Image segmentation.",
-    "content": "README.md",
-    "tags": ["mobile"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kshitizrimal"
+  ],
+  "owner": "kshitizrimal",
+  "repo": "Flutter-TFLite-Image-Segmentation",
+  "name": "Flutter-TFLite-Image-Segmentation",
+  "shortDescription": "Flutter TF Segmentation is an example app that uses Flutter for the ios/android app and uses TensorFlow Lite for Image segmentation.",
+  "longDescription": "Flutter TF Segmentation is an example app that uses Flutter for the ios/android app and uses TensorFlow Lite for Image segmentation.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bbariskilic"
+  ],
+  "owner": "BBarisKilic",
+  "repo": "VChat",
+  "name": "VChat",
+  "shortDescription": "A modern voice chat application. The project has been written solely in Dart Language.",
+  "longDescription": "A modern voice chat application. The project has been written solely in Dart Language.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "samples",
+    "mobile"
+  ]
+}

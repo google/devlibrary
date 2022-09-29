@@ -51,13 +51,38 @@ export function renderContent(
   repo: RepoData,
   page: string,
   content: string,
-  branch: string
+  branch: string,
+  emojis: Record<string, string> = {}
 ) {
-  const html = marked(content);
+  const withEmojis = replaceEmojis(content, emojis);
+  const html = marked(withEmojis);
   const sanitizedHtml = sanitizeHtml(product, repo, page, html, branch);
-  const sections = htmlToSections(sanitizedHtml);
+
+  // TODO: We no longer use the concept of "sections" at all so we could
+  //       eventually remove this but there's no need to do that urgently.
+  const sections = htmlToSections(repo, sanitizedHtml);
 
   return sections;
+}
+
+function replaceEmojis(md: string, emojis: Record<string, string>): string {
+  let content = md.split("\n");
+  let isInCodeBlock = false;
+  
+  for (const k of Object.keys(emojis)) {
+    const withColons = `:${k}:`;
+    const asEmoji = emojis[k];
+    content.forEach((val, ind) => {
+      if (val.trim().startsWith("```")) {
+        isInCodeBlock = !isInCodeBlock;
+      }
+      if (!isInCodeBlock) {
+        content[ind] = val.replace(new RegExp(withColons, "g"), asEmoji);
+      }
+    });
+  }
+
+  return content.join("\n");
 }
 
 /**
@@ -107,6 +132,27 @@ function sanitizeHtml(
     $(el).addClass("prettyprint");
   });
 
+  // Fix checkbox lists by adding 'li-task' class to target
+  $('li > input[type="checkbox"]').each((_: number, el: cheerio.Element) => {
+    $(el).parent().addClass("li-task");
+  });
+
+  // Workaround for:
+  // https://github.com/tailwindlabs/tailwindcss/issues/506
+  $("img[height]").each((_: number, el: cheerio.Element) => {
+    if (el.type === "text") {
+      return;
+    }
+
+    modifyAttr(el, "style", (style) => {
+      let height = el.attribs["height"];
+      if (!height.endsWith("px")) {
+        height += "px";
+      }
+      return `height: ${height};` + style;
+    });
+  });
+
   // Resolve all relative links to github
   $("a").each((_: number, el: cheerio.Element) => {
     if (el.type === "text") {
@@ -123,8 +169,6 @@ function sanitizeHtml(
     if (isRelativeLink(href)) {
       // Check if the link is to a page within the repo
       const repoRelative = path.join(pageDir, href);
-
-      console.log(`Relative link on page ${page}: ${href} --> ${repoRelative}`);
       el.attribs["href"] = repoRelative;
 
       const repoRelativeWithoutHash =
@@ -141,15 +185,8 @@ function sanitizeHtml(
 
           return res;
         });
-
-        console.log(
-          `Sanitizing relative project link ${repoRelative} --> ${el.attribs["href"]}`
-        );
       } else {
         modifyAttr(el, "href", (h) => urljoin(renderedBaseUrl, h));
-        console.log(
-          `Sanitizing relative GitHub link ${repoRelative} --> ${el.attribs["href"]}`
-        );
       }
     }
   });
@@ -174,9 +211,6 @@ function sanitizeHtml(
       $(el).addClass("hidden");
     }
 
-    // Add the image-parent class to the parent
-    $(el).parent().addClass("img-parent");
-
     // If the image link is relative, make sure it's pointing to GH
     modifyAttr(el, "src", (s) => {
       let res = s;
@@ -189,7 +223,6 @@ function sanitizeHtml(
         return res;
       }
 
-      res = res.toLowerCase();
       res = urljoin(rawBaseUrl, res);
       return res;
     });
@@ -203,7 +236,7 @@ function modifyAttr(
   attrib: string,
   fn: (a: string) => string
 ) {
-  const val = el.attribs[attrib];
+  const val = el.attribs[attrib] || "";
   el.attribs[attrib] = fn(val);
 }
 
@@ -220,38 +253,32 @@ function isRelativeLink(href: string): boolean {
 /**
  * Turn HTML into a sections objects.
  */
-function htmlToSections(html: string): RepoPageSection[] {
+function htmlToSections(repo: RepoData, html: string): RepoPageSection[] {
   const $ = cheerio.load(html);
-  const sections: RepoPageSection[] = [];
 
-  let $headerChildren = $("div", "<div></div>");
+  // We want to remove any big headers on the page where the content is
+  // equal to either the project name or the repo name
+  const $h1s = $("h1");
+  const $h2s = $("h2");
 
-  let $h1 = $("h1").first();
-  $h1.nextUntil("h2").each((_: number, el: any) => {
-    $headerChildren = $headerChildren.append(el);
-  });
+  const headers = [...$h1s.toArray(), ...$h2s.toArray()];
+  for (const h of headers) {
+    const el = $(h);
+    const hText = el.text().trim().toLowerCase();
 
-  // The first section is the header
-  const header = {
-    name: $h1.text(),
-    content: $headerChildren.html()!,
-  };
-  sections.push(header);
+    if (
+      hText === repo.metadata.repo.toLowerCase() ||
+      hText === repo.metadata.name.toLowerCase()
+    ) {
+      console.log(`Removing header ${el.html()}`);
+      el.remove();
+    }
+  }
 
-  $("h2").each((_: number, el: cheerio.Element) => {
-    let $sibchils = $("div", "<div></div>");
-
-    $(el)
-      .nextUntil("h2")
-      .each((_: number, el: any) => {
-        $sibchils = $sibchils.append(el);
-      });
-
-    sections.push({
-      name: $(el).text(),
-      content: $sibchils.html()!,
-    });
-  });
-
-  return sections;
+  return [
+    {
+      name: "README",
+      content: $.html(),
+    },
+  ];
 }

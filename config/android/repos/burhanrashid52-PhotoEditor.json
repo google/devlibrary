@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "burhanrashid52"
+  ],
+  "owner": "burhanrashid52",
+  "repo": "PhotoEditor",
+  "name": "PhotoEditor",
+  "shortDescription": "A Photo Editor library with simple, easy support for image editing using Paints, Text, Filters, Emoji and Sticker like stories.",
+  "longDescription": "A Photo Editor library with simple, easy support for image editing using Paints, Text, Filters, Emoji and Sticker like stories.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

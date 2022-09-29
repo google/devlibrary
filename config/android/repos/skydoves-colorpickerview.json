@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "colorpickerview",
+  "name": "ColorPickerView",
+  "shortDescription": "Android color picker for getting colors from any images by tapping on the desired color.",
+  "longDescription": "Android color picker for getting colors from any images by tapping on the desired color.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

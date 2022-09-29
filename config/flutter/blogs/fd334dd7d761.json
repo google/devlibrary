@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "roaakdm"
+  ],
+  "author": "Roaa Khaddam",
+  "title": "Create a theme and primary color switcher for your Flutter app using provider",
+  "link": "https://medium.com/@roaakdm/create-a-theme-and-primary-color-switcher-for-your-flutter-app-using-provider-fd334dd7d761",
+  "tags": [
+    "mobile",
+    "widgets",
+    "web"
+  ]
+}

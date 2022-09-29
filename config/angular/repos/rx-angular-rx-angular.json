@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rx-angular"
+  ],
+  "owner": "rx-angular",
+  "repo": "rx-angular",
+  "name": "rx-angular",
+  "shortDescription": "RxAngular offers a comprehensive toolset for handling fully reactive Angular applications with the main focus on runtime performance and template rendering.",
+  "longDescription": "RxAngular offers a comprehensive toolset for handling fully reactive Angular applications with the main focus on runtime performance and template rendering.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "performance",
+    "libraries"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "zekrotja"
+  ],
+  "owner": "zekrotja",
+  "repo": "shinpuru",
+  "name": "shinpuru",
+  "shortDescription": "shinpuru is a multi-purpose Discord bot with a lot of moderation, security and fun features which all can be accessed and controlled via a Web Interface.",
+  "longDescription": "shinpuru is a multi-purpose Discord bot with a lot of moderation, security and fun features which all can be accessed and controlled via a Web Interface.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

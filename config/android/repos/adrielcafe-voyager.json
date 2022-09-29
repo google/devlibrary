@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "adrielcafe"
+  ],
+  "owner": "adrielcafe",
+  "repo": "voyager",
+  "name": "Voyager",
+  "shortDescription": "A lightweight and pragmatic navigation library built for, and seamlessly integrated with, Jetpack Compose.",
+  "longDescription": "A lightweight and pragmatic navigation library built for, and seamlessly integrated with, Jetpack Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "compose"
+  ]
+}

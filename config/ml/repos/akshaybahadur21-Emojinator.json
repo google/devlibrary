@@ -1,11 +1,17 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "akshaybahadur21",
-    "repo": "Emojinator",
-    "name": "Emojinator",
-    "shortDescription": "A simple real time emoji classifier for humans. ",
-    "longDescription": "A simple real time emoji classifier for humans. ",
-    "content": "readme.md",
-    "tags": ["vision"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akshaybahadur21"
+  ],
+  "owner": "akshaybahadur21",
+  "repo": "Emojinator",
+  "name": "Emojinator",
+  "shortDescription": "A simple real time emoji classifier for humans. ",
+  "longDescription": "A simple real time emoji classifier for humans. ",
+  "content": "readme.md",
+  "pages": [],
+  "tags": [
+    "vision"
+  ]
+}

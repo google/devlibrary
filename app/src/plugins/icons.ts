@@ -33,6 +33,7 @@ import {
   faTimesCircle,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import { faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
@@ -47,7 +48,6 @@ library.add(
   faAngleRight,
   faTimesCircle,
   faUser,
-
   faGithub,
   faMedium
 );

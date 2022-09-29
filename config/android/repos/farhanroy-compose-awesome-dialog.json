@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "farhanroy"
+  ],
+  "owner": "farhanroy",
+  "repo": "compose-awesome-dialog",
+  "name": "Compose Awesome Dialog",
+  "shortDescription": "A library for Android Native that uses Jetpack Compose for its UI toolkit. This Awesome Compose Dialog displays a material Dialog equipped with animations to make it more beautiful\n\nYou no longer need",
+  "longDescription": "A library for Android Native that uses Jetpack Compose for its UI toolkit. This Awesome Compose Dialog displays a material Dialog equipped with animations to make it more beautiful\n\nYou no longer need",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

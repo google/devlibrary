@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["radi-cho"],
+  "authorIds": [
+    "radi-cho"
+  ],
   "owner": "radi-cho",
   "repo": "tfjs-firebase",
   "name": "tfjs-firebase",
@@ -9,5 +11,7 @@
   "longDescription": "Train model with data from Firestore, save it to Cloud Storage and make predictions in Cloud Functions - entirely using NodeJS.",
   "content": "README.md",
   "pages": [],
-  "tags": ["node"]
+  "tags": [
+    "node"
+  ]
 }

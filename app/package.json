@@ -8,11 +8,13 @@
     "build:production": "vue-cli-service build --mode=production",
     "build:ugc-site-dev": "npm run build:staging",
     "build:ugc-site-prod": "npm run build:production",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "format": "vue-cli-service lint --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "core-js": "^3.6.5",
@@ -21,7 +23,7 @@
     "lodash.get": "^4.4.2",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
-    "vue-gtag": "^1.11.0",
+    "vue-mq": "^1.0.1",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
@@ -30,6 +32,7 @@
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@tailwindcss/typography": "^0.4.0",
     "@types/dompurify": "^2.2.1",
+    "@types/gtag.js": "0.0.8",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@vue/cli-plugin-babel": "~4.5.0",

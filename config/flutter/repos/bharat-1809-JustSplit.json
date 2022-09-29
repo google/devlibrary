@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bharat-1809"
+  ],
+  "owner": "bharat-1809",
+  "repo": "JustSplit",
+  "name": "JustSplit",
+  "shortDescription": "JustSplit is an expense splitting application built in Flutter and uses Firebase as the backend service. JustSplit's mission is to reduce the stress and awkwardness that money places on our most important relationships.",
+  "longDescription": "JustSplit is an expense splitting application built in Flutter and uses Firebase as the backend service. JustSplit's mission is to reduce the stress and awkwardness that money places on our most important relationships.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "plugins",
+    "mobile",
+    "samples"
+  ]
+}

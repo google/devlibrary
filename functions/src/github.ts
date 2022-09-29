@@ -15,7 +15,17 @@
  */
 
 import { Octokit } from "@octokit/rest";
+import fetch from "node-fetch";
+
 import * as config from "./config";
+import { getProjectId } from "./project";
+
+export interface GitHubRepo {
+  default_branch: string;
+  stargazers_count: number;
+  forks_count: number;
+  pushed_at: string;
+}
 
 let _gh: Octokit | undefined = undefined;
 
@@ -29,13 +39,20 @@ function gh(): Octokit {
   return _gh;
 }
 
-export async function getRepo(owner: string, repo: string) {
-  const res = await gh().repos.get({
-    owner,
-    repo,
-  }).catch((e) => {
-    throw new Error(`Unable to get repo ${owner}/${repo}: ${JSON.stringify(e)}`);
-  })
+export async function getRepo(
+  owner: string,
+  repo: string
+): Promise<GitHubRepo> {
+  const res = await gh()
+    .repos.get({
+      owner,
+      repo,
+    })
+    .catch((e) => {
+      throw new Error(
+        `Unable to get repo ${owner}/${repo}: ${JSON.stringify(e)}`
+      );
+    });
 
   return res.data;
 }
@@ -80,14 +97,20 @@ export async function getFileContent(
   branch: string,
   path: string
 ): Promise<string> {
-  const res = await gh().repos.getContent({
-    owner,
-    repo,
-    path,
-    ref: branch,
-  }).catch((e) => {
-    throw new Error(`Unable to fetch file "${path}@${branch}" from "${owner}/${repo}": ${JSON.stringify(e)}`);
-  });
+  const res = await gh()
+    .repos.getContent({
+      owner,
+      repo,
+      path,
+      ref: branch,
+    })
+    .catch((e) => {
+      throw new Error(
+        `Unable to fetch file "${path}@${branch}" from "${owner}/${repo}": ${JSON.stringify(
+          e
+        )}`
+      );
+    });
 
   if (Array.isArray(res.data)) {
     throw new Error(
@@ -107,6 +130,41 @@ export async function getFileContent(
     (res.data as any).encoding
   );
   return buffer.toString("utf-8");
+}
+
+export async function getEmojiMap(): Promise<Record<string, string>> {
+  // We proxy this through our own function to reduce API calls
+  const emojisUrl =
+    process.env.FUNCTIONS_EMULATOR === "true"
+      ? `http://localhost:5000/api/emojis`
+      : `https://${getProjectId()}.web.app/api/emojis`;
+  const res = await fetch(emojisUrl);
+
+  // This is a map from emoji shortcode to image URL, for example:
+  // 1st_place_medal: "https://github.githubassets.com/images/icons/emoji/unicode/1f947.png?v8",
+  // algeria: "https://github.githubassets.com/images/icons/emoji/unicode/1f1e9-1f1ff.png?v8",
+  const urlMap = (await res.json()) as Record<string, string>;
+
+  const map: Record<string, string> = {};
+
+  for (const k of Object.keys(urlMap)) {
+    const url = urlMap[k];
+    if (!url.includes("/emoji/unicode/")) {
+      continue;
+    }
+
+    const segments = url.split("/");
+    const lastSegment = segments[segments.length - 1];
+    const withoutExtension = lastSegment.split(".png")[0];
+
+    const codepointStrings = withoutExtension.split("-");
+    const codepoints = codepointStrings.map((str) => Number.parseInt(str, 16));
+    const emoji = String.fromCodePoint(...codepoints);
+
+    map[k] = emoji;
+  }
+
+  return map;
 }
 
 export async function getDirectoryContent(

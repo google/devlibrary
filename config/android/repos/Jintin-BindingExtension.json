@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jintin"
+  ],
+  "owner": "Jintin",
+  "repo": "BindingExtension",
+  "name": "BindingExtension",
+  "shortDescription": "Android ViewBinding extension to provide simpler usage in Activity, Fragment and ViewHolder.",
+  "longDescription": "Android ViewBinding extension to provide simpler usage in Activity, Fragment and ViewHolder.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

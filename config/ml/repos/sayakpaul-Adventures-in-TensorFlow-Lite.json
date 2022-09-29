@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sayakpaul"
+  ],
+  "owner": "sayakpaul",
+  "repo": "Adventures-in-TensorFlow-Lite",
+  "name": "Adventures-in-TensorFlow-Lite",
+  "shortDescription": "The repository is a collection of Colab Notebooks demonstrating non-trivial model conversion workflows in TensorFlow Lite. ",
+  "longDescription": "The repository is a collection of Colab Notebooks demonstrating non-trivial model conversion workflows in TensorFlow Lite. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "collection"
+  ]
+}

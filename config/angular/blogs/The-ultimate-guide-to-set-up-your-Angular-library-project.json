@@ -1,9 +1,11 @@
 {
-    "version": 1.0,
-    "source": "medium",
-    "author": "Kevin Kreuzer",
-    "title": "The ultimate guide to set up your Angular library project",
-    "link": "https://medium.com/angular-in-depth/the-ultimate-guide-to-set-up-your-angular-library-project-399d95b63500",
-    "tags": ["gettingstarted"]
-    }
-    
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["kreuzerk"],
+  "author": "Kevin Kreuzer",
+  "title": "The ultimate guide to set up your Angular library project",
+  "link": "https://medium.com/angular-in-depth/the-ultimate-guide-to-set-up-your-angular-library-project-399d95b63500",
+  "tags": [
+    "gettingstarted"
+  ]
+}

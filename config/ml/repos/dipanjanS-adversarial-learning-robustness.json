@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "dipanjans"
+  ],
+  "owner": "dipanjanS",
+  "repo": "adversarial-learning-robustness",
+  "name": "Adversarial Robustness in Deep Learning",
+  "shortDescription": "This repository is a collection of workshop materials on the topic of \"Adversarial Robustness in Deep Learning\". ",
+  "longDescription": "This repository is a collection of workshop materials on the topic of \"Adversarial Robustness in Deep Learning\". ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "theory"
+  ]
+}

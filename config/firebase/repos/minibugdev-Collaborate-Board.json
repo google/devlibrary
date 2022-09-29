@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "minibugdev"
+  ],
+  "owner": "minibugdev",
+  "repo": "Collaborate-Board",
+  "name": "Collaborate Board of Android",
+  "shortDescription": "Realtime collaborate board based on Firebase developed and written in Kotlin.",
+  "longDescription": "Simple realtime collaborate board based on Firebase developed and written in Kotlin.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "android"
+  ]
+}

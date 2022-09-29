@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "shivaylamba"
+  ],
+  "owner": "mexili",
+  "repo": "aiden",
+  "name": "Aiden",
+  "shortDescription": "Aiden is a web app utilising tensorflow.js, browser-based Machine Learning library, to enable accessible physiotherapy for the Visually Impaired and other people as well - talking through exercises by responding to users' postures in real-time.\n",
+  "longDescription": "Aiden is a web app utilising tensorflow.js, browser-based Machine Learning library, to enable accessible physiotherapy for the Visually Impaired and other people as well - talking through exercises by responding to users' postures in real-time.\n",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web",
+    "theory"
+  ]
+}

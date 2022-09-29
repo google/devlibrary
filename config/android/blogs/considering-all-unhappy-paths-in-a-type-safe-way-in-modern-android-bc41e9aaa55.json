@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": ["rafaelamcosta"],
+  "author": "Rafael Costa",
+  "title": "Make use of sealed interfaces to have type safe and flexible error handling in Android projects.",
+  "link": "https://proandroiddev.com/considering-all-unhappy-paths-in-a-type-safe-way-in-modern-android-bc41e9aaa55",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "architecture"
+  ]
+}

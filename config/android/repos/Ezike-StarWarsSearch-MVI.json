@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ezike"
+  ],
+  "owner": "Ezike",
+  "repo": "StarWarsSearch-MVI",
+  "name": "Star wars search mvi ",
+  "shortDescription": "Android app that searches and displays data from the star wars api, using MVI architecture, Jetpack libraries and Kotlin Coroutines and Flow. ",
+  "longDescription": "Android app that searches and displays data from the star wars api, using MVI architecture, Jetpack libraries and Kotlin Coroutines and Flow. ",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

@@ -1,11 +1,18 @@
 {
-"version": 1.0,
-"source": "github",
-"owner": "huan",
-"repo": "swift-MNIST",
-"name": "swift-MNIST",
-"shortDescription": "Swift Module for MNIST Dataset",
-"longDescription": "Swift Module for MNIST Dataset",
-"content": "README.md",
-"tags": ["vision","library"]
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "huan"
+  ],
+  "owner": "huan",
+  "repo": "swift-MNIST",
+  "name": "swift-MNIST",
+  "shortDescription": "Swift Module for MNIST Dataset",
+  "longDescription": "Swift Module for MNIST Dataset",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "library"
+  ]
 }

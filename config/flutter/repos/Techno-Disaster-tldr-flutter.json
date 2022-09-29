@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "techno-disaster"
+  ],
+  "owner": "Techno-Disaster",
+  "repo": "tldr-flutter",
+  "name": "tldr-flutter",
+  "shortDescription": "simplified man-pages, a tldr.sh client",
+  "longDescription": "simplified man-pages, a tldr.sh client",
+  "content": "README.md",
+  "tags": [
+    "mobile"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "karan6190"
+  ],
+  "author": "Karan Sharma",
+  "title": "Deploying machine learning models on Kubernetes",
+  "link": "https://cloud.google.com/community/tutorials/kubernetes-ml-ops",
+  "tags": [
+    "ai-ml",
+    "containers"
+  ]
+}

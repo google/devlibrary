@@ -1,11 +1,16 @@
 {
-    "version": 1.0,
-    "source": "github",
-    "owner": "ngworker",
-    "repo": "lumberjack",
-    "name": "lumberjack",
-    "shortDescription": "Lumberjack is a versatile Angular logging library, specifically designed to be extended and customized. It provides a few simple log drivers (logging mechanisms, transports, log drivers) out-of-the-box. It's easy to enable the built-in log drivers or create and use custom log drivers.",
-    "longDescription": "Lumberjack is a versatile Angular logging library, specifically designed to be extended and customized. It provides a few simple log drivers (logging mechanisms, transports, log drivers) out-of-the-box. It's easy to enable the built-in log drivers or create and use custom log drivers.",
-    "content": "README.md",
-    "tags": ["frameworks", "performance"]
-    }
+  "version": 1,
+  "source": "github",
+  "authorIds": ["santoshyadavdev"],
+  "owner": "ngworker",
+  "repo": "lumberjack",
+  "name": "lumberjack",
+  "shortDescription": "Lumberjack is a versatile Angular logging library, specifically designed to be extended and customized. It provides a few simple log drivers (logging mechanisms, transports, log drivers) out-of-the-box. It's easy to enable the built-in log drivers or create and use custom log drivers.",
+  "longDescription": "Lumberjack is a versatile Angular logging library, specifically designed to be extended and customized. It provides a few simple log drivers (logging mechanisms, transports, log drivers) out-of-the-box. It's easy to enable the built-in log drivers or create and use custom log drivers.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "frameworks",
+    "performance"
+  ]
+}

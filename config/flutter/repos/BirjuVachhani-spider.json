@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "birjuvachhani"
+  ],
+  "owner": "BirjuVachhani",
+  "repo": "spider",
+  "name": "Spider",
+  "shortDescription": "A small dart command line tool to generate dart references of assets from assets folder in a Flutter project.",
+  "longDescription": "A small dart command line tool to generate dart references of assets from assets folder in a Flutter project.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "general"
+  ]
+}

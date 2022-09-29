@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": ["layzeedk"],
+  "owner": "ngworker",
+  "repo": "ngworker",
+  "name": "Spectacular",
+  "shortDescription": "Spectacular Angular integration testing. Spectacular's specialized test harnesses enable integration testing of Angulars-specific classes.\n\nTry feature testing by combining Spectacular with Angular Testing Library or Angular Component Harnesses. Test as a user and scope your test to an entire routed feature module.",
+  "longDescription": "Spectacular Angular integration testing. Spectacular's specialized test harnesses enable integration testing of Angulars-specific classes.\n\nTry feature testing by combining Spectacular with Angular Testing Library or Angular Component Harnesses. Test as a user and scope your test to an entire routed feature module.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

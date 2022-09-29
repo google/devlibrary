@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "arunkumar9t2"
+  ],
+  "owner": "arunkumar9t2",
+  "repo": "scabbard",
+  "name": "arunkumar9t2/scabbard",
+  "shortDescription": "A tool to visualize Dagger 2 dependency graphs for Kotlin/Java",
+  "longDescription": "A tool to visualize Dagger 2 dependency graphs for Kotlin/Java",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

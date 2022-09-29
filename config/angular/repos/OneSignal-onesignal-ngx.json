@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "OneSignal",
+  "repo": "onesignal-ngx",
+  "name": "Onesignal-ngx",
+  "shortDescription": "npm package that helps integrate push notifications into your Angular applications using OneSignal as a push notification provider.",
+  "longDescription": "npm package that helps integrate push notifications into your Angular applications using OneSignal as a push notification provider.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}
+

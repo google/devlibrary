@@ -1,8 +1,13 @@
 {
-    "version": 1.0,
-      "source": "medium",
-      "author": "Arnaldo Gualberto",
-      "title": "How to deal with Unbalanced Image Datasets in less than 20 lines of code",
-      "link": "https://medium.com/analytics-vidhya/how-to-apply-data-augmentation-to-deal-with-unbalanced-datasets-in-20-lines-of-code-ada8521320c9",
-      "tags": ["vision"]
-    }
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "arnaldog12"
+  ],
+  "author": "Arnaldo Gualberto",
+  "title": "How to deal with Unbalanced Image Datasets in less than 20 lines of code",
+  "link": "https://medium.com/analytics-vidhya/how-to-apply-data-augmentation-to-deal-with-unbalanced-datasets-in-20-lines-of-code-ada8521320c9",
+  "tags": [
+    "vision"
+  ]
+}

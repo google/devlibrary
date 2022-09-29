@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gurupreet"
+  ],
+  "owner": "Gurupreet",
+  "repo": "ComposeCookBook",
+  "name": "ComposeCookBook",
+  "shortDescription": "A Collection on all Jetpack compose UI elements, Layouts, Widgets and Demo screens to see it's potential",
+  "longDescription": "A Collection on all Jetpack compose UI elements, Layouts, Widgets and Demo screens to see it's potential",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

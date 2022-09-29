@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["rosariopfernandes"],
+  "authorIds": [
+    "rosariopfernandes"
+  ],
   "owner": "rosariopfernandes",
   "repo": "firecoil",
   "name": "firecoil",
@@ -9,5 +11,7 @@
   "longDescription": "Display images stored in Cloud Storage for Firebase using Coil.",
   "content": "README.md",
   "pages": [],
-  "tags": ["android"]
+  "tags": [
+    "android"
+  ]
 }

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sinedied"
+  ],
+  "owner": "sinedied",
+  "repo": "ngx-foldable",
+  "name": "ngx-foldable",
+  "shortDescription": "ngx-foldable is a set of components and services to help you build dual-screen experiences for foldable or dual-screen devices, such as the Surface Duo",
+  "longDescription": "ngx-foldable is a set of components and services to help you build dual-screen experiences for foldable or dual-screen devices, such as the Surface Duo",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "components"
+  ]
+}

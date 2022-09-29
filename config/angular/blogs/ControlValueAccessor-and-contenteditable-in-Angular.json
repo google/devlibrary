@@ -1,8 +1,14 @@
 {
-  "version": 1.0,
+  "version": 1,
   "source": "medium",
+  "authorIds": [
+    "waterplea"
+  ],
   "author": "Alexander Inkin",
   "title": "ControlValueAccessor and contenteditable in Angular",
   "link": "https://medium.com/its-tinkoff/controlvalueaccessor-and-contenteditable-in-angular-6ebf50b7475e",
-  "tags": ["components", "performance"]
+  "tags": [
+    "components",
+    "performance"
+  ]
 }

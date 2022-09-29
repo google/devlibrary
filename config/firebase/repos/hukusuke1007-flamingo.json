@@ -1,7 +1,9 @@
 {
   "version": 1,
   "source": "github",
-  "authorIds": ["hukusuke1007"],
+  "authorIds": [
+    "hukusuke1007"
+  ],
   "owner": "hukusuke1007",
   "repo": "flamingo",
   "name": "Flamingo",
@@ -9,5 +11,7 @@
   "longDescription": "A Firestore model framework library for Flutter",
   "content": "README.md",
   "pages": [],
-  "tags": ["android", "ios", "web"]
+  "tags": [
+    "flutter"
+  ]
 }

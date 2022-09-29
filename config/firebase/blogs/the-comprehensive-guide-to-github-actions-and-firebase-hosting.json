@@ -1,9 +1,13 @@
 {
-  "version": 1.0,
+  "version": 1,
   "source": "medium",
-  "authorIds": ["davideast"],
+  "authorIds": [
+    "davideast"
+  ],
   "author": "David East",
   "title": "The comprehensive guide to GitHub Actions and Firebase Hosting",
   "link": "https://medium.com/firebase-developers/the-comprehensive-guide-to-github-actions-and-firebase-hosting-818502d86c31",
-  "tags": ["web"]
+  "tags": [
+    "web"
+  ]
 }

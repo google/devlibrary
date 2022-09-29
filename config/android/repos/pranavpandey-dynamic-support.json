@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pranavpandey"
+  ],
+  "owner": "pranavpandey",
+  "repo": "dynamic-support",
+  "name": "Dynamic Support",
+  "shortDescription": "A complete library to build Android apps with a built-in theme engine.",
+  "longDescription": "A complete library to build Android apps with a built-in theme engine.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "cerlymarco"
+  ],
+  "owner": "cerlymarco",
+  "repo": "keras-hypetune",
+  "name": "keras-hypetune",
+  "shortDescription": "A friendly python package for Keras Hyperparameters Tuning based only on NumPy and Hyperopt.",
+  "longDescription": "A friendly python package for Keras Hyperparameters Tuning based only on NumPy and Hyperopt.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "nlp"
+  ]
+}

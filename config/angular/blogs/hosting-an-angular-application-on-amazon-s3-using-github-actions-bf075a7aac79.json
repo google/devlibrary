@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "author": "Rodrigo Kamada",
+  "title": "Hosting an Angular application on Amazon S3 using GitHub Actions",
+  "link": "https://rodrigokamada.medium.com/hosting-an-angular-application-on-amazon-s3-using-github-actions-bf075a7aac79",
+  "tags": [
+    "demos"
+  ]
+}
