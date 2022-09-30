@@ -205,10 +205,16 @@
   }
 
   @screen lg {
-    .header-image {
+    .homepage-header {
       background: var(--header-bg-image-desktop) no-repeat #f1f3f4;
       background-size: auto 111%;
       background-position: top right;
+    }
+
+    .header-image:not(.homepage-header) {
+      background-image: var(--header-bg-image-desktop);
+      background-position: right;
+      background-size: contain;
     }
   }
 
