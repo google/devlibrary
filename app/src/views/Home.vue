@@ -115,10 +115,6 @@
     <!-- Products -->
     <div id="all-products"></div>
     <h1 class="ml-12 mt-10">All products</h1>
-    <p class="lg:w-5/12 ml-12 mt-2 lg:mt-6 pr-4 lg:pr-0">
-      Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris
-      sit amet orci. Aenean dignissim pellentesque felis.
-    </p>
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-std">
       <div
         v-for="p in products"

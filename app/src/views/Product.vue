@@ -141,8 +141,7 @@
               class="ml-2"
               id="productSearchButton"
             >
-              <font-awesome-icon icon="search" class="ml-1" />
-              Search
+              Go
             </MaterialButton>
           </div>
           <!-- Filter Chips -->

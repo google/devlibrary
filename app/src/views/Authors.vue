@@ -64,8 +64,7 @@
           class="ml-2 mt-4"
           id="authorSearchButton"
         >
-          <font-awesome-icon icon="search" class="ml-1" />
-          Search
+          Go
         </MaterialButton>
       </div>
       <div

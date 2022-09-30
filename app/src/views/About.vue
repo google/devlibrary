@@ -54,22 +54,9 @@
             This platform will evolve as we receive more submissions and we are
             working to accept a wider range of content, so stay tuned!
           </p>
-          <p class="mt-4">
-            If your question is not answered below and you need to contact us,
-            fill
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeuN1VqnMXszkW37Wylsskv8GZgta9zKqSfB1rqCHrgKxqDzw/viewform?resourcekey=0-V-7D7mf0f5jF2ApHTVWNrg"
-              >this form</a
-            >
-            to write your queries to us.
-          </p>
           <p class="mt-8 flex flex-wrap gap-4">
-            <a href="https://forms.gle/2JoN6csvyvnDC8Nd9" target="_blank">
-              <MaterialButton type="primary"> Send feedback </MaterialButton>
-            </a>
-
             <a href="mailto:library-google-dev@google.com">
-              <MaterialButton type="secondary"> Contact us </MaterialButton>
+              <MaterialButton @click.native="showSubmitDialog" type="primary">Submit your content</MaterialButton>
             </a>
           </p>
         </div>
@@ -333,6 +320,7 @@ import { Component, Vue } from "vue-property-decorator";
 import MaterialButton from "@/components/MaterialButton.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import { BreadcrumbLink } from "../../../shared/types";
+import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
 
 @Component({
   components: {
@@ -343,6 +331,10 @@ import { BreadcrumbLink } from "../../../shared/types";
 export default class About extends Vue {
   public getBreadcrumbs(): BreadcrumbLink[] {
     return [{ name: "About", path: "" }];
+  }
+
+  public showSubmitDialog() {
+    EVENT_BUS.$emit(NAME_SHOW_SUBMIT_DIALOG);
   }
 }
 </script>
