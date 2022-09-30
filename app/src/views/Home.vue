@@ -67,6 +67,11 @@
     </div>
 
     <!-- Products -->
+    <h1 class="ml-12 mt-10">All products</h1>
+    <p class="lg:w-5/12 ml-12 mt-2 lg:mt-6 pr-4 lg:pr-0">
+      Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris
+      sit amet orci. Aenean dignissim pellentesque felis.
+    </p>
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-std">
       <div
         v-for="p in products"
@@ -117,7 +122,7 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-std py-8"
     >
       <div class="col-span-1 lg:col-span-2 lg:px-2">
-        <h2>Recently Added</h2>
+        <h2>Latest projects</h2>
         <div class="desktop-only">
           <p class="text-mgray-800 font-sans text-sm mt-2 mb-4 lg:w-3/4">
             Check out the latest projects we've added to the Dev Library. To see
@@ -135,12 +140,23 @@
         </div>
       </div>
       <RepoOrBlogCard
-        v-for="p in recentProjects"
+        v-for="p in recentProjects.slice(0, displayedLatestProducts)"
         :key="p.id"
         :project="p"
         :showLogo="true"
         :showTags="false"
       />
+    </div>
+    <div
+      v-show="displayedLatestProducts < recentProjects.length"
+      class="mt-2 mb-6 flex flex-col items-center place-content-center"
+    >
+      <MaterialButton type="text" @click.native="incrementDisplayedLatestProducts">
+        <div class="frc">
+          <span>Load more</span>
+          <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
+        </div>
+      </MaterialButton>
     </div>
   </div>
 </template>
@@ -190,6 +206,7 @@ export default class Home extends Vue {
   public recentBlogs: Record<string, BlogData[]> = {};
   public recentRepos: Record<string, RepoData[]> = {};
   public featuredProducts: BlogOrRepoDataHolder[] = [];
+  public displayedLatestProducts = 6;
 
   public newsletterEmail = "";
 
@@ -263,6 +280,10 @@ export default class Home extends Vue {
 
   public showSubmitDialog() {
     EVENT_BUS.$emit(NAME_SHOW_SUBMIT_DIALOG);
+  }
+
+  public incrementDisplayedLatestProducts() {
+    this.displayedLatestProducts += 4;
   }
 
   get hasContent() {
