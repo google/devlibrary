@@ -204,6 +204,14 @@
     width: 24px;
   }
 
+  .value-prop-cards {
+    background: #9AA0A6;
+  }
+
+  .value-prop-cards button {
+    margin-top: auto;
+  }
+
   @screen lg {
     .homepage-header {
       background: var(--header-bg-image-desktop) no-repeat #f1f3f4;
