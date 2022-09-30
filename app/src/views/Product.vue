@@ -110,6 +110,41 @@
 
         <!-- Cards -->
         <div v-show="hasContent" class="col-span-10 lg:col-span-8">
+          <!-- Search bar -->
+          <div class="frc mb-4">
+            <div
+              class="frc rounded-lg max-w-lg border border-gray-200 px-2 w-80"
+            >
+              <font-awesome-icon
+                icon="search"
+                size="sm"
+                class="text-mgray-700 opacity-70"
+              />
+              <input
+                class="px-2 py-1 flex-grow"
+                type="text"
+                id="productSearchBar"
+                @input="setTempSearchFilter"
+                :value="searchFilter"
+                placeholder="Search"
+              />
+              <font-awesome-icon
+                v-if="searchFilter.length > 0"
+                @click="searchFilter = ''"
+                icon="times-circle"
+                class="text-mgray-700 cursor-pointer opacity-70"
+              />
+            </div>
+            <MaterialButton
+              @click.native="searchFilter = tempSearchFilter"
+              type="primary"
+              class="ml-2"
+              id="productSearchButton"
+            >
+              <font-awesome-icon icon="search" class="ml-1" />
+              Search
+            </MaterialButton>
+          </div>
           <!-- Filter Chips -->
           <div v-if="filters" class="flex flex-row flex-wrap">
             <!-- Show filters button (mobile) -->
@@ -147,7 +182,7 @@
 
           <div id="projects">
             <div
-              v-if="visibleProjects.length === 0"
+              v-if="displayedProjects.length === 0"
               class="mt-4 frc justify-center py-20 text-gray-400"
             >
               <font-awesome-icon
@@ -159,13 +194,16 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <RepoOrBlogCard
-                v-for="project in visibleProjects"
+                v-for="project in displayedProjects"
                 :key="project.data.id"
                 :project="project"
               />
             </div>
 
-            <div class="flex flex-row justify-center mt-4 lg:mt-6">
+            <div
+              class="flex flex-row justify-center mt-4 lg:mt-6"
+              v-show="canLoadMore && searchFilter === ''"
+            >
               <MaterialButton
                 v-if="canLoadMore"
                 type="text"
@@ -212,6 +250,8 @@ import {
   nextPage,
   emptyPageResponse,
   wrapInHolders,
+  queryRepos,
+  queryBlogs,
 } from "@/plugins/data";
 
 import { ProductConfig } from "../../../shared/types";
@@ -251,10 +291,14 @@ export default class Product extends Vue {
     types: [] as CheckboxGroupEntry[],
     categories: [] as CheckboxGroupEntry[],
   };
+  public searchFilter = "";
+  public tempSearchFilter = "";
 
   private pagesToShow = 1;
   private perPage = 12;
 
+  public allRepos: RepoData[] = [];
+  public allBlogs: BlogData[] = [];
   public repoData: PagedResponse<RepoData> = emptyPageResponse<RepoData>(
     `/products/${this.product.key}/repos`,
     {},
@@ -269,35 +313,57 @@ export default class Product extends Vue {
   mounted() {
     // Loading will be handled by the first "onQueryParamsChanged" firing
     // which will happen when the page loads and the default values hit
+    const searchButton = document.getElementById("productSearchBar");
+    searchButton?.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("productSearchButton")?.click();
+      }
+    });
   }
 
   @Watch("queryParams")
   public async onQueryParamsChanged(q: FirestoreQuery) {
     console.log("onQueryParamsChanged", q);
 
-    const repoData = emptyPageResponse<RepoData>(
-      `/products/${this.product.key}/repos`,
-      q,
-      this.perPage
-    );
-    const reposPromise = nextPage(repoData);
+    if (this.searchFilter === "") {
+      if (!this.productLoaded) {
+        const repoData = await queryRepos(this.product.key, q);
+        this.allRepos = repoData.docs.map((d) => d.data);
+        const blogData = await queryBlogs(this.product.key, q);
+        this.allBlogs = blogData.docs.map((d) => d.data);
+      }
+      const repoData = emptyPageResponse<RepoData>(
+        `/products/${this.product.key}/repos`,
+        q,
+        this.perPage
+      );
+      const reposPromise = nextPage(repoData);
 
-    const blogData = emptyPageResponse<BlogData>(
-      `/products/${this.product.key}/blogs`,
-      q,
-      this.perPage
-    );
-    const blogsPromise = nextPage(blogData);
+      const blogData = emptyPageResponse<BlogData>(
+        `/products/${this.product.key}/blogs`,
+        q,
+        this.perPage
+      );
+      const blogsPromise = nextPage(blogData);
 
-    const reloadPromise = Promise.all([reposPromise, blogsPromise]).then(() => {
-      this.pagesToShow = 1;
-      this.repoData = repoData;
-      this.blogData = blogData;
-    });
+      const reloadPromise = Promise.all([reposPromise, blogsPromise]).then(
+        () => {
+          this.pagesToShow = 1;
+          this.repoData = repoData;
+          this.blogData = blogData;
+        }
+      );
 
-    this.uiModule.waitFor(reloadPromise).then(() => {
-      this.productLoaded = true;
-    });
+      this.uiModule.waitFor(reloadPromise).then(() => {
+        this.productLoaded = true;
+      });
+    } else {
+      const repoData = await queryRepos(this.product.key, q);
+      this.allRepos = repoData.docs.map((d) => d.data);
+      const blogData = await queryBlogs(this.product.key, q);
+      this.allBlogs = blogData.docs.map((d) => d.data);
+    }
   }
 
   @Watch("productLoaded")
@@ -421,6 +487,37 @@ export default class Product extends Vue {
     return canLoadMoreRemote || canLoadMoreLocal;
   }
 
+  get displayedProjects() {
+    if (this.searchFilter != "") {
+      return this.allSortedProjects.filter((project) => {
+        const filter = this.searchFilter.toLowerCase();
+        if (project.type === "repo") {
+          if (
+            project.data.metadata.name.toLowerCase().includes(filter) ||
+            project.data.metadata.repo.toLowerCase().includes(filter) ||
+            project.data.metadata.owner.toLowerCase().includes(filter) ||
+            project.data.metadata.longDescription.toLowerCase().includes(filter)
+          ) {
+            return project;
+          }
+        } else {
+          if (
+            project.data.metadata.author.toLowerCase().includes(filter) ||
+            project.data.metadata.title.toLowerCase().includes(filter)
+          ) {
+            return project;
+          }
+        }
+      });
+    } else {
+      return this.visibleProjects;
+    }
+  }
+
+  public setTempSearchFilter(event: { target: { value: string } }) {
+    this.tempSearchFilter = event.target.value;
+  }
+
   public async loadMore() {
     const promises = [];
 
@@ -526,6 +623,24 @@ export default class Product extends Vue {
           return 1;
         }
         return 0;
+      } else {
+        return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
+      }
+    });
+  }
+
+  get allSortedProjects(): BlogOrRepoDataHolder[] {
+    const blogs = this.showBlogPosts ? this.allBlogs : [];
+    const repos = this.showOpenSource ? this.allRepos : [];
+    const projects = wrapInHolders(blogs, repos);
+
+    // Locally join and sort
+    return projects.sort((a, b) => {
+      const dataA = a.data;
+      const dataB = b.data;
+
+      if (this.filters.sort === SORT_ADDED) {
+        return dataB.stats.dateAdded - dataA.stats.dateAdded;
       } else {
         return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
       }

@@ -15,7 +15,9 @@
 -->
 
 <template>
-  <div class="flex flex-col card card-clickable p-4">
+  <div class="flex flex-col card card-clickable p-4"
+       :id="`${repo.id}-card`"
+  >
     <!-- Author photo and name -->
     <div class="frc">
       <CircleImage
@@ -32,7 +34,7 @@
         v-if="showLogo"
         size="xtiny"
         :productKey="repo.product"
-        class="ml-auto"
+        class="product-logo ml-auto"
       />
     </div>
 
@@ -42,7 +44,7 @@
     </router-link>
 
     <!-- Tags -->
-    <div v-if="showTags" class="mt-4 frc flex-wrap gap-2">
+    <div v-if="showTags" class="card-tags mt-4 frc flex-wrap gap-2">
       <TagChip
         v-for="t in repo.metadata.tags"
         :key="t"
@@ -113,7 +115,21 @@ export default class LargeRepoCard extends Vue {
   public authorImageLoaded = false;
 
   async mounted() {
+    if (this.isStale(this.repo.stats.lastUpdated)) {
+      document.getElementById(`${this.repo.id}-card`)!.className += " stale-card";
+    }
     this.authorImageLoaded = await this.getImage();
+  }
+
+  public isStale(lastUpdated: number) {
+    const daysAgo = dates.renderDaysAgo(lastUpdated);
+    if (daysAgo.includes("months ago")) {
+      const monthsAgo = daysAgo.split(" months ago");
+      if (parseInt(monthsAgo[0]) > 18) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public renderDaysAgo(lastUpdated: number) {
