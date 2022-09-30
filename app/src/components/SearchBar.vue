@@ -147,7 +147,6 @@ export default class SearchBar extends Vue {
       };
     } else if (res.type === "blog") {
       return {
-        icon: ["fas", "clipboard-list"],
         title: res.data.metadata.author,
         description: res.data.metadata.title,
         link: res.data.metadata.link,

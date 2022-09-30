@@ -15,12 +15,7 @@
 -->
 
 <template>
-  <img
-    :src="src"
-    :class="[size]"
-    :loading="lazy ? 'lazy' : 'eager'"
-    class="flex-shrink-0 bg-white overflow-hidden object-contain rounded-full"
-  />
+
 </template>
 
 <script lang="ts">
@@ -36,22 +31,5 @@ export default class CircleImage extends Vue {
 
 <style scoped lang="postcss">
 .xsmall {
-  @apply w-5 h-5;
-}
-
-.card-avatar {
-  @apply w-6 h-6;
-}
-
-.small {
-  @apply w-12 h-12 border-2;
-}
-
-.medium {
-  @apply w-20 h-20 border-2;
-}
-
-.large {
-  @apply w-36 h-36 border-4;
 }
 </style>

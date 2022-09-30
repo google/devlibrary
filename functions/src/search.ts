@@ -20,17 +20,6 @@ import { Client } from "@elastic/elasticsearch";
 import * as config from "./config";
 import { RepoMetadata } from "../../shared/types/RepoMetadata";
 import { BlogMetadata } from "../../shared/types/BlogMetadata";
-import {
-  AuthorData,
-  AuthorSearchResult,
-  BlogSearchResult,
-  RepoSearchResult,
-  SearchResult,
-} from "../../shared/types";
-
-const INDEX_AUTHORS = "authors";
-const INDEX_REPOS = "repos";
-const INDEX_BLOGS = "blogs";
 
 const client = new Client({
   cloud: {
@@ -86,40 +75,11 @@ export async function index(
 export async function indexAuthor(author: AuthorData) {
   const { id, metadata } = author;
   await client.index({
-    index: INDEX_AUTHORS,
-    id,
-    body: {
-      id,
-      metadata,
+
     },
   });
 }
 
-export async function unIndexAuthor(id: string) {
-  await client.delete({
-    index: INDEX_AUTHORS,
-    id,
-  });
-}
-
-export async function unIndexBlog(id: string) {
-  await client.delete({
-    index: INDEX_BLOGS,
-    id,
-  });
-}
-
-export async function unIndexRepo(id: string) {
-  await client.delete({
-    index: INDEX_REPOS,
-    id,
-  });
-}
-
-export async function search(
-  term: string,
-  limit: number
-): Promise<SearchResult[]> {
   const reposRes = await client.search({
     index: INDEX_REPOS,
     body: {
@@ -158,6 +118,20 @@ export async function search(
         query_string: {
           query: `*${term}*`,
           fields: ["metadata.name"],
+        },
+      },
+    },
+  });
+
+  const authorsRes = await client.search({
+    index: "authors",
+    body: {
+      query: {
+        query_string: {
+          query: `*${term}*`,
+          fields: [
+            "metadata.name", 
+          ],
         },
       },
     },

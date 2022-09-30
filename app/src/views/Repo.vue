@@ -15,65 +15,10 @@
 -->
 
 <template>
-  <div>
-    <Breadcrumbs v-if="loaded" :links="getBreadcrumbs()" />
-    <HeaderBodyLayout>
-      <template v-if="loaded" v-slot:header>
-        <!-- Header (Desktop) -->
-        <div class="desktop-only">
-          <div
-            :class="[productStyle.bg, productStyle.text]"
-            class="py-20 grid grid-cols-10 gap-4"
-          >
-            <div class="col-start-2 col-span-7">
-              <h1 :class="[productStyle.text]">
-                {{ repo.metadata.name }}
-              </h1>
-              <p class="mt-2">
-                {{ repo.metadata.longDescription }}
-              </p>
 
-              <p v-if="authors.length > 0" class="flex gap-2 mt-2">
-                <AuthorLink
-                  v-for="author in authors"
-                  :key="author.id"
-                  :author="author"
-                  class="opacity-80 hover:opacity-100"
-                />
-              </p>
-
-              <a
-                target="blank"
-                :href="`https://github.com/${repo.metadata.owner}/${repo.metadata.repo}`"
-              >
-                <MaterialButton type="secondary" class="mt-8">
-                  View on GitHub
-                  <font-awesome-icon icon="external-link-alt" class="ml-1" />
-                </MaterialButton>
-              </a>
-            </div>
-
-            <div class="col-start-9 col-span-2">
-              <p class="pt-1">
-                {{ repo.stats.stars }}
-                <font-awesome-icon fixed-width icon="star" />
-              </p>
-              <p class="pt-1">
-                {{ repo.stats.forks }}
-                <font-awesome-icon fixed-width icon="code-branch" />
-              </p>
-            </div>
           </div>
         </div>
 
-        <!-- Header (Mobile) -->
-        <div class="mobile-only">
-          <div :class="[productStyle.bg, productStyle.text]" class="py-4 px-8">
-            <h2 :class="[productStyle.text]" class="mb-2">
-              {{ repo.metadata.name }}
-            </h2>
-            <p class="opacity-80 text-sm">
-              {{ repo.metadata.shortDescription }}
             </p>
             <p v-if="authors.length > 0" class="flex gap-2 mt-4">
               <AuthorLink
@@ -87,10 +32,6 @@
         </div>
       </template>
 
-      <template v-if="loaded" v-slot:sidebar>
-        <!-- Side bar -->
-        <div>
-          <p class="uppercase font-medium mt-4 mb-2">{{ product.name }}</p>
           <ul class="text-sm">
             <li>
               <router-link :to="`/products/${productKey}`"
@@ -171,22 +112,6 @@ import DOMPurify from "dompurify";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import AuthorLink from "@/components/AuthorLink.vue";
-import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
-import Breadcrumbs from "@/components/Breadcrumbs.vue";
-import UIModule from "@/store/ui";
-
-import { ALL_PRODUCTS } from "../../../shared/product";
-import {
-  AuthorData,
-  BreadcrumbLink,
-  RepoData,
-  RepoPage,
-  ProductConfig,
-} from "../../../shared/types";
-import * as util from "../../../shared/util";
-import { fetchAuthor, fetchRepo, fetchRepoPage } from "@/plugins/data";
-import { waitForHljsLoad } from "@/plugins/preload";
-import { getStyle, ProductStyle } from "@/model/product";
 
 // Global HLJS
 // eslint-disable-next-line
@@ -196,8 +121,7 @@ declare const hljs: any;
   components: {
     MaterialButton,
     AuthorLink,
-    HeaderBodyLayout,
-    Breadcrumbs,
+
   },
 })
 export default class Repo extends Vue {
@@ -205,13 +129,6 @@ export default class Repo extends Vue {
   public repo: RepoData | null = null;
   public content: RepoPage | null = null;
   public authors: AuthorData[] = [];
-
-  public getBreadcrumbs(): BreadcrumbLink[] {
-    return [
-      { name: this.product?.name ?? "Product", path: "../" },
-      { name: this.repo?.metadata.name ?? "Repo", path: "" },
-    ];
-  }
 
   private productKey!: string;
   private id!: string;
@@ -255,6 +172,12 @@ export default class Repo extends Vue {
       } catch (e) {
         console.warn(`Failed to fetch author ${aid}`, e);
       }
+    }
+
+    const authorIds = this.repo.metadata.authorIds || [];
+    for (const aid of authorIds) {
+      const data = await fetchAuthor(aid);
+      this.authors.push(data);
     }
 
     const pagePath =

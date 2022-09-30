@@ -18,45 +18,6 @@
   <div>
     <Breadcrumbs :links="getBreadcrumbs()" />
     <!-- Header -->
-    <div
-      class="header-image py-10 lg:py-20 px-std border-b border-gray-100"
-      style="
-        --header-bg-image-desktop: url('/img/banners/desktop/authors-wide.png');
-        --header-bg-image-mobile: url('/img/banners/mobile/authors-wide.png');
-      "
-    >
-      <h1>Authors</h1>
-      <p class="mt-1">
-        All content on Dev Library is contributed by our incredible authors!
-      </p>
-    </div>
-
-    <!-- Body -->
-    <div id="pagebody" class="mb-4 px-std">
-      <!-- Search bar -->
-      <div class="frc">
-        <div
-          class="mt-4 frc rounded-lg max-w-lg border border-gray-200 px-2 w-80"
-        >
-          <font-awesome-icon
-            icon="search"
-            size="sm"
-            class="text-mgray-700 opacity-70"
-          />
-          <input
-            class="px-2 py-1 flex-grow"
-            type="text"
-            id="authorSearchBar"
-            @input="setTempAuthorFilter"
-            :value="authorFilter"
-            placeholder="Search for authors"
-          />
-          <font-awesome-icon
-            v-if="authorFilter.length > 0"
-            @click="authorFilter = ''"
-            icon="times-circle"
-            class="text-mgray-700 cursor-pointer opacity-70"
-          />
         </div>
         <MaterialButton
           @click.native="authorFilter = tempAuthorFilter"
@@ -76,16 +37,7 @@
         No authors matching your search.
       </div>
 
-      <!-- Author Cards -->
-      <div
-        class="py-4 grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
-      >
-        <!-- Author Card -->
-        <div
-          v-for="author in displayedAuthors"
-          v-show="showAuthor(author)"
-          :key="author.id"
-          class="card card-clickable px-5 py-4 flex flex-col items-center text-center"
+
         >
           <CircleImage
             v-if="authorImageLoaded[author.id]"
@@ -129,6 +81,18 @@
           </div>
         </div>
       </div>
+
+      <!-- Link -->
+      <p class="text-sm col-start-2 col-span-8 opacity-50">
+        If you believe you should be on this page, or if you're on this page and would like to update your information,
+        open an Issue or send us a Pull Request
+        <a
+          href="https://github.com/google/devlibrary"
+          class="cursor-pointer underline"
+          target="_blank"
+          >here</a
+        >.
+      </p>
     </div>
 
     <!-- Pagination -->

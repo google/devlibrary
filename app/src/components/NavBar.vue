@@ -87,7 +87,6 @@
         />
       </router-link>
 
-      <span class="mr-4 lg:mr-8"><!-- spacer --></span>
 
       <!-- Home -->
       <router-link class="block nav-item nav-item-link" to="/"

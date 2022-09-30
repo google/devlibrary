@@ -32,14 +32,6 @@ import {
   faAngleRight,
   faTimesCircle,
   faUser,
-  faTimes,
-  faBars,
-  faClipboardList,
-  faExclamationCircle,
-  faFilter,
-  faChevronDown,
-  faChevronRight,
-  faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import { faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
@@ -56,16 +48,6 @@ library.add(
   faAngleRight,
   faTimesCircle,
   faUser,
-  faBookmark,
-  faTimes,
-  faBars,
-  faClipboardList,
-  faExclamationCircle,
-  faFilter,
-  faChevronDown,
-  faChevronRight,
-  faInfoCircle,
-
   faGithub,
   faMedium
 );
