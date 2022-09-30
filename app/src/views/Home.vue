@@ -17,29 +17,53 @@
 <template>
   <div>
     <div
-      class="header-image grid grid-cols-12 py-8 lg:py-10 xl:py-12 px-std border-b border-gray-100"
+      class="homepage-header header-image grid grid-cols-12 py-8 lg:pt-10 lg:pb-12 xl:pt-12 xl:pb-16 px-std border-b border-gray-100"
       style="
         --header-bg-image-desktop: url('/img/banners/desktop/home-wide.png');
         --header-bg-image-mobile: url('/img/banners/mobile/home-wide.png');
       "
     >
-      <div class="col-span-12 lg:col-span-5 px-1">
-        <h1>What will you build?</h1>
+      <div class="col-span-12 lg:col-span-6 px-1">
+        <img src="/img/devlibrary-lockup.png" />
+        <h1 class="text-4xl">
+          The platform for Google-verified open-source projects
+        </h1>
 
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
-          <p class="mt-4 lg:mt-6 pr-4 lg:pr-0">
-            Welcome to Dev Library - a showcase of open-source projects and blog
-            posts built with Google technologies. Created by you, curated by
-            Google engineers.
+          <p class="text-lg mt-4 lg:mt-6 pr-4 lg:pr-0">
+            Explore open-source projects that use or feature Google tools and
+            technologies. Browse confidently knowing that a team of Google
+            engineers reviews each project before it is featured on the site.
           </p>
           <div class="mt-4 lg:mt-6">
-            <MaterialButton type="primary" @click.native="showSubmitDialog"
-              >Submit</MaterialButton
-            >
+            <MaterialButton type="primary">
+              <a href="#all-products" class="section">
+                <span>Browse by product</span>
+              </a>
+            </MaterialButton>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Featured Products and Authors -->
+    <h1 class="ml-12 mt-10">Featured projects and authors</h1>
+    <p class="lg:w-5/12 ml-12 mt-2 lg:mt-6 pr-4 lg:pr-0">
+      View a selection of our favorite content. Click the author name to view
+      their featured author page and preferred way to connect.
+    </p>
+    <div
+      class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 py-6 px-std"
+    >
+      <RepoOrBlogCard
+        v-for="p in featuredProducts"
+        :key="p.data.id"
+        :project="p"
+        :showTags="false"
+        :showLogo="true"
+      >
+      </RepoOrBlogCard>
     </div>
 
     <!-- Products -->
@@ -138,10 +162,16 @@ import {
   queryBlogs,
   shuffleArr,
   wrapInHolders,
+  fetchRepo,
+  fetchBlog,
 } from "@/plugins/data";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
-import { BlogData, RepoData } from "../../../shared/types";
+import {
+  BlogData,
+  BlogOrRepoDataHolder,
+  RepoData,
+} from "../../../shared/types";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
 
@@ -159,6 +189,7 @@ export default class Home extends Vue {
 
   public recentBlogs: Record<string, BlogData[]> = {};
   public recentRepos: Record<string, RepoData[]> = {};
+  public featuredProducts: BlogOrRepoDataHolder[] = [];
 
   public newsletterEmail = "";
 
@@ -172,7 +203,7 @@ export default class Home extends Vue {
     limit: 5,
   };
 
-  mounted() {
+  async mounted() {
     const promises: Promise<unknown>[] = [];
 
     // For each product load 2 recent repos and 2 recent blogs
@@ -181,6 +212,30 @@ export default class Home extends Vue {
       const blogPromise = this.fetchRecentBlogs(product.key);
       const repoPromise = this.fetchRecentRepos(product.key);
       promises.push(blogPromise, repoPromise);
+    }
+
+    const featured1 = await fetchRepo("android", "vinodbaste-Image-compressor");
+    const featured2 = await fetchRepo(
+      "ml",
+      "deep-diver-Continuous-Adaptation-for-Machine-Learning-System-to-Data-Changes"
+    );
+    const featured3 = await fetchRepo("flutter", "raysummee-flutter_cart_bloc");
+    const featured4 = await fetchBlog(
+      "cloud",
+      "gremlin-chaos-engineering-on-google-cloud-2568f9fc70c9"
+    );
+
+    if (featured1 !== undefined) {
+      this.featuredProducts.push({ type: "repo", data: featured1 });
+    }
+    if (featured2 !== undefined) {
+      this.featuredProducts.push({ type: "repo", data: featured2 });
+    }
+    if (featured3 !== undefined) {
+      this.featuredProducts.push({ type: "repo", data: featured3 });
+    }
+    if (featured4 !== undefined) {
+      this.featuredProducts.push({ type: "blog", data: featured4 });
     }
 
     this.uiModule.waitFor(Promise.all(promises));

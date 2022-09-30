@@ -62,10 +62,6 @@
           <router-link to="/about" class="section">
             <span class="header">About</span>
           </router-link>
-
-          <a :href="feedbackLink" target="_blank" class="section">
-            <span class="header">Feedback</span>
-          </a>
         </div>
       </div>
     </transition>
@@ -127,10 +123,6 @@
         ><span>About</span></router-link
       >
 
-      <a class="nav-item nav-item-link" :href="feedbackLink" target="_blank"
-        >Feedback</a
-      >
-
       <span class="flex-grow"><!-- spacer --></span>
 
       <!-- Search Bar -->
@@ -162,8 +154,6 @@ import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
 export default class NavBar extends Vue {
   public showSideMenu = false;
   public showProductsDropdown = false;
-
-  public feedbackLink = "https://forms.gle/2JoN6csvyvnDC8Nd9";
 
   public showSubmitDialog() {
     EVENT_BUS.$emit(NAME_SHOW_SUBMIT_DIALOG);

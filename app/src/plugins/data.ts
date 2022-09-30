@@ -193,6 +193,18 @@ export async function fetchRepo(
   }
 }
 
+export async function fetchBlog(
+  product: string,
+  id: string
+): Promise<BlogData | undefined> {
+  const repoPath = `/products/${product}/blogs/${id}`;
+  const json = await fetchDoc(repoPath);
+
+  if (json) {
+    return json as BlogData;
+  }
+}
+
 export async function fetchRepoPage(
   product: string,
   id: string,
