@@ -15,7 +15,9 @@
 -->
 
 <template>
-  <div class="flex flex-col card card-clickable p-4">
+  <div class="flex flex-col card card-clickable p-4"
+       :id="`${blog.id}-card`"
+  >
     <!-- Author photo and name -->
     <div class="frc">
       <!-- Link to author (if present) -->
@@ -47,7 +49,7 @@
         v-if="showLogo"
         size="xtiny"
         :productKey="blog.product"
-        class="ml-auto"
+        class="product-logo ml-auto"
       />
     </div>
 
@@ -57,7 +59,7 @@
     </a>
 
     <!-- Tags -->
-    <div v-if="showTags" class="frc mt-4 flex-wrap gap-2">
+    <div v-if="showTags" class="card-tags frc mt-4 flex-wrap gap-2">
       <TagChip
         v-for="t in blog.metadata.tags"
         :key="t"
@@ -122,7 +124,21 @@ export default class LargeBlogCard extends Vue {
   public authorImageLoaded = false;
 
   async mounted() {
+    if (this.isStale(this.blog.stats.lastUpdated)) {
+      document.getElementById(`${this.blog.id}-card`)!.className += " stale-card";
+    }
     this.authorImageLoaded = await this.getImage();
+  }
+
+  public isStale(lastUpdated: number) {
+    const daysAgo = dates.renderDaysAgo(lastUpdated);
+    if (daysAgo.includes("months ago")) {
+      const monthsAgo = daysAgo.split(" months ago");
+      if (parseInt(monthsAgo[0]) > 18) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public renderDaysAgo(lastUpdated: number) {

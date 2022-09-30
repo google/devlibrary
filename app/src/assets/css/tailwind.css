@@ -142,6 +142,30 @@
     @apply hover:shadow transition-shadow;
   }
 
+  .stale-card > div,
+  .stale-card > a > h3 {
+    color: #5F6368;
+  }
+
+  .stale-card img.card-avatar,
+  .stale-card .product-logo > img {
+    filter: grayscale(1);
+  }
+
+  .stale-card svg.fa-github,
+  .stale-card svg.fa-clipboard-list,
+  .stale-card .card-tags > div > span {
+    color: #80868B;
+  }
+
+  .stale-card button {
+    color: #80868B !important;
+  }
+
+  .stale-card .card-tags > div {
+    background: #F1F3F4;
+  }
+
   .header-image {
     background-image: var(--header-bg-image-mobile);
     background-position: top;
