@@ -113,7 +113,7 @@
           <!-- Search bar -->
           <div class="frc mb-4">
             <div
-              class="frc rounded-lg max-w-lg border border-gray-200 px-2 w-80"
+              class="frc rounded-lg min-w-0 max-w-lg border border-gray-200 px-2 w-80"
             >
               <font-awesome-icon
                 icon="search"
@@ -121,7 +121,7 @@
                 class="text-mgray-700 opacity-70"
               />
               <input
-                class="px-2 py-1 flex-grow"
+                class="px-2 py-1 flex-grow min-w-0"
                 type="text"
                 id="productSearchBar"
                 @input="setTempSearchFilter"
@@ -138,7 +138,7 @@
             <MaterialButton
               @click.native="searchFilter = tempSearchFilter"
               type="primary"
-              class="ml-2"
+              class="ml-4"
               id="productSearchButton"
             >
               Go

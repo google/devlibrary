@@ -36,7 +36,7 @@
       <!-- Search bar -->
       <div class="frc">
         <div
-          class="mt-4 frc rounded-lg max-w-lg border border-gray-200 px-2 w-80"
+          class="mt-4 frc rounded-lg max-w-lg min-w-0 border border-gray-200 px-2 w-80"
         >
           <font-awesome-icon
             icon="search"
@@ -44,12 +44,12 @@
             class="text-mgray-700 opacity-70"
           />
           <input
-            class="px-2 py-1 flex-grow"
+            class="px-2 py-1 flex-grow min-w-0"
             type="text"
             id="authorSearchBar"
             @input="setTempAuthorFilter"
             :value="authorFilter"
-            placeholder="Search for authors"
+            placeholder="Search"
           />
           <font-awesome-icon
             v-if="authorFilter.length > 0"
@@ -61,7 +61,7 @@
         <MaterialButton
           @click.native="authorFilter = tempAuthorFilter"
           type="primary"
-          class="ml-2 mt-4"
+          class="ml-4 mt-4"
           id="authorSearchButton"
         >
           Go
