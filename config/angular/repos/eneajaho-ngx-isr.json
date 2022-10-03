@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "eneajaho"
+  ],
+  "owner": "eneajaho",
+  "repo": "ngx-isr",
+  "name": "ngx-isr",
+  "shortDescription": "Incremental Static Regeneration (ISR) enables developers and content editors to use static-generation on a per-page basis, without needing to rebuild the entire site.",
+  "longDescription": "Incremental Static Regeneration (ISR) enables developers and content editors to use static-generation on a per-page basis, without needing to rebuild the entire site.",
+  "content": "https://github.com/eneajaho/ngx-isr/blob/main/README.md",
+  "pages": [],
+  "tags": [
+    "performance",
+    "libraries"
+  ]
+}
