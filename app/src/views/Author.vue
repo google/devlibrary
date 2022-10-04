@@ -114,7 +114,7 @@
               :key="project.data.id"
               :project="project"
               :showLogo="true"
-              :showTags="false"
+              :showTags="true"
             />
           </div>
         </div>
