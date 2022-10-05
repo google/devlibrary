@@ -67,7 +67,7 @@
     </transition>
 
     <!-- Nav row -->
-    <div class="frc py-3 lg:py-0 px-4 text-nav">
+    <div class="frc py-3 lg:py-2 px-4 text-nav">
       <div
         class="mr-1 frc align-middle text-gray-400 hover:text-gray-600"
         @click="showSideMenu = true"

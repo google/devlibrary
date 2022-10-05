@@ -205,7 +205,23 @@
   }
 
   .value-prop-cards {
-    background: #9AA0A6;
+    background: #F1F3F4;
+  }
+
+  .value-prop-image {
+    padding: 30px;
+    border-radius: 50%;
+    margin-bottom: 33px;
+    background: #DADCE0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .value-prop-image img {
+    width: 80px;
   }
 
   .value-prop-cards button {
@@ -213,6 +229,11 @@
   }
 
   @screen lg {
+    .homepage-header h1 {
+      font-size: 44px;
+      line-height: 52px;
+    }
+
     .homepage-header {
       background: var(--header-bg-image-desktop) no-repeat #f1f3f4;
       background-size: auto 111%;

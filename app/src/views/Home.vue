@@ -17,7 +17,7 @@
 <template>
   <div>
     <div
-      class="homepage-header header-image grid grid-cols-12 py-8 lg:pt-10 lg:pb-12 xl:pt-12 xl:pb-16 px-std border-b border-gray-100"
+      class="homepage-header header-image grid grid-cols-12 py-8 lg:pt-14 lg:pb-12 xl:pt-14 xl:pb-16 px-std border-b border-gray-100"
       style="
         --header-bg-image-desktop: url('/img/banners/desktop/home-wide.png');
         --header-bg-image-mobile: url('/img/banners/mobile/home-wide.png');
@@ -25,13 +25,13 @@
     >
       <div class="col-span-12 lg:col-span-6 px-1">
         <img src="/img/devlibrary-lockup.png" />
-        <h1 class="text-4xl">
+        <h1 class="text-4xl pt-4">
           The platform for Google-verified open-source projects
         </h1>
 
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
-          <p class="text-lg mt-4 lg:mt-6 pr-4 lg:pr-0">
+          <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
             Explore open-source projects that use or feature Google tools and
             technologies. Browse confidently knowing that a team of Google
             engineers reviews each project before it is featured on the site.
@@ -69,7 +69,9 @@
     <!-- Value Prop Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 px-std md:px-20 lg:px-32 xl:px-44 value-prop-cards">
       <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
-        <img src="../../public/logos/android.png" class="w-1/3" />
+        <div class="value-prop-image">
+          <img src="../../public/logos/placeholder.png" class="w-1/3" />
+        </div>
         <h2 class="text-3xl mb-6">Are you looking for guided learning?</h2>
         <p class="text-lg px-8 pb-8">
           Visit each product page to filter projects by Category, Experience level, or Type
@@ -81,7 +83,9 @@
         </MaterialButton>
       </div>
       <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
-        <img src="../../public/logos/android.png" class="w-1/3" />
+        <div class="value-prop-image">
+          <img src="../../public/logos/placeholder.png" class="w-1/3" />
+        </div>
         <h2 class="text-3xl mb-6">Are you looking for inspiration?</h2>
         <p class="text-lg px-8 pb-8">
           View interviews with featured authors
@@ -99,7 +103,9 @@
         </MaterialButton>
       </div>
       <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
-        <img src="../../public/logos/android.png" class="w-1/3" />
+        <div class="value-prop-image">
+          <img src="../../public/logos/placeholder.png" class="w-1/3" />
+        </div>
         <h2 class="text-3xl mb-6">Are you looking for speakers/experts?</h2>
         <p class="text-lg px-8 pb-8">
           Submit your project to Dev Library
@@ -165,9 +171,9 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-std py-8"
     >
       <div class="col-span-1 lg:col-span-2 lg:px-2">
-        <h2>Latest projects</h2>
+        <h2 class="text-3xl">Latest projects</h2>
         <div class="desktop-only">
-          <p class="text-mgray-800 font-sans text-sm mt-2 mb-4 lg:w-3/4">
+          <p class="mt-2 mb-4 lg:w-3/4 leading-6">
             Check out the latest projects we've added to the Dev Library. To see
             all projects, choose one of the product areas below.
           </p>
@@ -192,7 +198,7 @@
     </div>
     <div
       v-show="displayedLatestProducts < recentProjects.length"
-      class="mt-2 mb-6 flex flex-col items-center place-content-center"
+      class="mt-2 mb-20 flex flex-col items-center place-content-center"
     >
       <MaterialButton type="text" @click.native="incrementDisplayedLatestProducts">
         <div class="frc">
