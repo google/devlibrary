@@ -1,11 +1,17 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["douglasduhaime"],
+  "authorIds": [
+    "douglasduhaime"
+  ],
   "author": "Douglas Duhaime",
   "title": "Visualizing Autoencoders with Tensorflow.js",
   "link": "https://douglasduhaime.com/posts/visualizing-latent-spaces.html",
   "tags": [
-    "mobile","nlp","vision","library"
+    "mobile",
+    "nlp",
+    "vision",
+    "library"
   ]
 }

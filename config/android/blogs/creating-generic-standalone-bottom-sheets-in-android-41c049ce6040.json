@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "medium",
-  "authorIds": ["ydasc815"],
+  "authorIds": [
+    "ydasc815"
+  ],
   "author": "Aditya Pandey",
   "title": "Creating Generic Standalone Bottom Sheets in Android",
   "link": "https://medium.com/dsckiet/creating-generic-standalone-bottom-sheets-in-android-41c049ce6040",

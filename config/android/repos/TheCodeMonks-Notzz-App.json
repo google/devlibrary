@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["spikeysanju"],
+  "authorIds": [
+    "spikeysanju"
+  ],
   "owner": "TheCodeMonks",
   "repo": "Notzz-App",
   "name": "Notzz-App",

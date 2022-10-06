@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["guilhe"],
+  "authorIds": [
+    "guilhe"
+  ],
   "author": "Guilherme Delgado",
   "title": "ViewModel by Dependency Injection: from Dagger to Hilt",
   "link": "https://proandroiddev.com/viewmodel-from-dagger-to-hilt-223056dd9b",

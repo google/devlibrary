@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["snehpandya"],
+  "authorIds": [
+    "snehpandya"
+  ],
   "author": "Sneh Pandya",
   "title": "A guide to using the Map interface in Kotlin - LogRocket Blog",
   "link": "https://blog.logrocket.com/guide-to-map-interface-in-kotlin/",

@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["trungk18"],
+  "authorIds": [
+    "trungk18"
+  ],
   "owner": "angular-vietnam",
   "repo": "100-days-of-angular",
   "name": "100-days-of-angular",

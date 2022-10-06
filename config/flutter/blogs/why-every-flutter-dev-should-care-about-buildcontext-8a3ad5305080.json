@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["nash0x7e2"],
+  "authorIds": [
+    "nash0x7e2"
+  ],
   "author": "Neevash Ramdial",
   "title": "Why every Flutter dev should care about build context",
   "link": "https://medium.com/flutter-community/why-every-flutter-dev-should-care-about-buildcontext-8a3ad5305080",

@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["morfly"],
+  "authorIds": [
+    "morfly"
+  ],
   "author": "Pavlo Stavytskyi",
   "title": "A guide for creating your first Kotlin Symbol Processor (KSP).",
   "link": "https://proandroiddev.com/so-how-do-i-write-a-kotlin-symbol-processor-ksp-b9606e9e3818",

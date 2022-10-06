@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["navczydev"],
+  "authorIds": [
+    "navczydev"
+  ],
   "author": "Nav Singh",
   "title": "Concise codebase using KTX extensions",
   "link": "https://medium.com/nerd-for-tech/concise-codebase-using-ktx-extensions-5e5250e4ce29",

@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["rajashekarraju"],
+  "authorIds": [
+    "rajashekarraju"
+  ],
   "author": "Rajasekhar K E",
   "title": "Firestore collections and documents in RecyclerView Android | Developers Breach",
   "link": "https://developersbreach.com/firestore-collections-documents-recyclerview-android/",

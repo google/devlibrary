@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "github",
-  "authorIds": ["fgatti675"],
+  "authorIds": [
+    "fgatti675"
+  ],
   "owner": "Camberi",
   "repo": "firecms",
   "name": "FireCMS",

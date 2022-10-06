@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["amirisback"],
+  "authorIds": [
+    "amirisback"
+  ],
   "owner": "frogobox",
   "repo": "frogo-consume-api",
   "name": "frogo-consume-api",

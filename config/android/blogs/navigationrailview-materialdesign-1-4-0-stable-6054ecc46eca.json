@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["navczydev"],
+  "authorIds": [
+    "navczydev"
+  ],
   "author": "Nav Singh",
   "title": "NavigationRailView MaterialDesign 1.4.0 Stable 🎉",
   "link": "https://proandroiddev.com/navigationrailview-materialdesign-1-4-0-stable-6054ecc46eca",
