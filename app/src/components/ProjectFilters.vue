@@ -36,6 +36,18 @@
         </div>
 
         <div class="section">
+          <p class="font-display font-medium text-sm mb-2 px-2">
+            Expertise Level
+          </p>
+          <RadioGroup
+            prefix="expertiseLevel"
+            :keys="['Beginner', 'Intermediate', 'Advanced']"
+            :values="['Beginner', 'Intermediate', 'Advanced']"
+            v-model="expertiseLevel"
+            :start-empty="true"
+          />
+        </div>
+        <div class="section">
           <p class="font-display font-medium text-sm mb-2 px-2">Type</p>
 
           <CheckboxGroup
@@ -61,16 +73,18 @@
           />
 
           <!-- Clear Filters Button-->
-          <div class="flex flex-row justify-center mt-4 lg:mt-6">
-            <MaterialButton
-              v-if="filtersChanged"
-              type="text"
-              @click.native="resetFilters()"
-            >
-              <div class="frc">
-                <span>Reset filters</span>
-              </div>
-            </MaterialButton>
+          <div class="desktop-only">
+            <div class="flex flex-row justify-center mt-4 lg:mt-6">
+              <MaterialButton
+                v-if="filtersChanged"
+                type="text"
+                @click.native="resetFilters()"
+              >
+                <div class="frc">
+                  <span>Reset filters</span>
+                </div>
+              </MaterialButton>
+            </div>
           </div>
         </div>
       </div>
@@ -103,13 +117,20 @@ export default class ProjectFilters extends Vue {
   public sort = "updated";
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
+  public expertiseLevel = "";
   public filtersChanged = false;
-  public defaultFilters = { sort: "", types: [], categories: []};
+  public defaultFilters = {
+    sort: "",
+    expertiseLevel: "",
+    types: [],
+    categories: [],
+  };
   public loaded = false;
 
   get value() {
     return {
       sort: this.sort,
+      expertiseLevel: this.expertiseLevel,
       types: this.types,
       categories: this.categories,
     };
@@ -117,8 +138,11 @@ export default class ProjectFilters extends Vue {
 
   public resetFilters() {
     this.sort = this.defaultFilters.sort;
+    this.expertiseLevel = this.defaultFilters.expertiseLevel;
     this.types = JSON.parse(JSON.stringify(this.defaultFilters.types));
-    this.categories = JSON.parse(JSON.stringify(this.defaultFilters.categories));
+    this.categories = JSON.parse(
+      JSON.stringify(this.defaultFilters.categories)
+    );
     this.filtersChanged = false;
   }
 

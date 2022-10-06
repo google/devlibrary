@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["7span"],
+  "authorIds": [
+    "7span"
+  ],
   "owner": "7span",
   "repo": "video-url-validator-dart",
   "name": "Video URL Validator",

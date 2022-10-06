@@ -60,6 +60,7 @@ export default class RadioGroup extends Vue {
   @Prop() keys!: string[];
   @Prop() values!: string[];
   @Prop() value!: string;
+  @Prop() startEmpty!: boolean;
 
   @Watch("value")
   public onValueChange(val: string) {
@@ -85,8 +86,10 @@ export default class RadioGroup extends Vue {
     }
 
     // Default is the first entry
-    this.choice = this.entries[0].value;
-    this.emitValue(this.choice);
+    if (this.startEmpty === undefined || !this.startEmpty) {
+      this.choice = this.entries[0].value;
+      this.emitValue(this.choice);
+    }
   }
 
   public onInput(e: InputEvent) {

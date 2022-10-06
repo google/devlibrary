@@ -288,6 +288,7 @@ export default class Product extends Vue {
     sort: SORT_ADDED,
     types: [] as CheckboxGroupEntry[],
     categories: [] as CheckboxGroupEntry[],
+    expertiseLevel: [] as CheckboxGroupEntry[],
   };
   public searchFilter = "";
   public tempSearchFilter = "";
@@ -367,11 +368,15 @@ export default class Product extends Vue {
   @Watch("productLoaded")
   public async onProductLoadedChanged() {
     const selectedSort = this.urlParams.get("sort");
+    const selectedExpertise = this.urlParams.get("expertise");
     const selectedTypes = this.urlParams.get("type");
     const selectedCategories = this.urlParams.get("category");
 
     if (selectedSort !== null) {
       document.getElementById(`sort-${selectedSort}`)?.click();
+    }
+    if (selectedExpertise !== null) {
+      document.getElementById(`expertiseLevel-${selectedExpertise}`)?.click();
     }
     if (selectedTypes !== null) {
       const selectedTypesArray = selectedTypes.split(",");
@@ -391,10 +396,19 @@ export default class Product extends Vue {
   public async onFiltersTypeChanged() {
     let hasTypeParams = false;
     let hasCategoryParams = false;
+    let hasExpertiseParams = false;
     let typeParams = "";
     let categoryParams = "";
+    let expertiseParams = "";
     let url = `?sort=${this.filters.sort}`;
 
+    if (
+      typeof this.filters.expertiseLevel === "string" &&
+      this.filters.expertiseLevel != ""
+    ) {
+      hasExpertiseParams = true;
+      expertiseParams += `${this.filters.expertiseLevel}`;
+    }
     for (const filterType of this.filters.types) {
       if (filterType.checked) {
         if (hasTypeParams) {
@@ -413,6 +427,9 @@ export default class Product extends Vue {
         hasCategoryParams = true;
       }
     }
+    if (hasExpertiseParams) {
+      url += `&expertise=${expertiseParams}`;
+    }
     if (hasTypeParams) {
       url += `&type=${typeParams}`;
     }
@@ -424,12 +441,21 @@ export default class Product extends Vue {
 
   get queryTags(): string[] | null {
     // If no selection, consider them all checked
-    const noneChecked = this.filters.categories.every((c) => !c.checked);
-    if (noneChecked) {
+    const noneCategoryChecked = this.filters.categories.every(
+      (c) => !c.checked
+    );
+    if (noneCategoryChecked) {
       return null;
     }
 
     return this.filters.categories.filter((x) => x.checked).map((x) => x.value);
+  }
+
+  get queryExpertise(): string | null {
+    if (this.filters.expertiseLevel == null) {
+      return null;
+    }
+    return this.filters.expertiseLevel.toString();
   }
 
   get queryOrderBy(): string {
@@ -446,7 +472,8 @@ export default class Product extends Vue {
 
   get queryParams(): FirestoreQuery {
     const orderBy = this.queryOrderBy;
-    const tags = this.queryTags;
+    let tags = this.queryTags;
+    const expertise = this.queryExpertise;
 
     const q: FirestoreQuery = {
       orderBy: [
@@ -458,13 +485,36 @@ export default class Product extends Vue {
     };
 
     if (tags) {
-      q.where = [
-        {
-          fieldPath: "metadata.tags",
-          operator: "array-contains-any",
-          value: tags,
-        },
-      ];
+      tags = tags?.filter(
+        (tag) =>
+          tag !== "Beginner" && tag !== "Intermediate" && tag !== "Advanced"
+      );
+      if (tags.length > 0) {
+        q.where = [
+          {
+            fieldPath: "metadata.tags",
+            operator: "array-contains-any",
+            value: tags,
+          },
+        ];
+      }
+    }
+    if (expertise) {
+      if (q.where) {
+        q.where?.push({
+          fieldPath: "metadata.expertise",
+          operator: "==",
+          value: expertise.toUpperCase(),
+        });
+      } else {
+        q.where = [
+          {
+            fieldPath: "metadata.expertise",
+            operator: "==",
+            value: expertise.toUpperCase(),
+          },
+        ];
+      }
     }
 
     return q;
@@ -548,6 +598,14 @@ export default class Product extends Vue {
   public resetFilters() {
     for (const c of this.filters.categories) {
       c.checked = false;
+    }
+
+    const el = document.getElementById(
+      `expertiseLevel-${this.filters.expertiseLevel}`
+    ) as HTMLInputElement | null;
+    if (el) {
+      el.checked = false;
+      this.filters.expertiseLevel = [];
     }
 
     for (const t of this.filters.types) {

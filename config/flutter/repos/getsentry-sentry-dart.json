@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["marandaneto"],
+  "authorIds": [
+    "marandaneto"
+  ],
   "owner": "getsentry",
   "repo": "sentry-dart",
   "name": "Sentry SDK",

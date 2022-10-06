@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["galeone"],
+  "authorIds": [
+    "galeone"
+  ],
   "author": "Paolo Galeone",
   "title": "Wrap up of Advent of Code 2021 in pure TensorFlow",
   "link": "https://pgaleone.eu/tensorflow/2022/01/21/advent-of-code-tensorflow-wrap-up/",

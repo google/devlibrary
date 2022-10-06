@@ -1,4 +1,5 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
   "authorIds": [
@@ -11,6 +12,7 @@
   "longDescription": "Google Cloud Platform Machine Learning Samples",
   "content": "README.md",
   "pages": [],
-  "tags": ["collection"
+  "tags": [
+    "collection"
   ]
 }

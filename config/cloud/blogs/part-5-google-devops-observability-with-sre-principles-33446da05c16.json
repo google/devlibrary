@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["pushkarbk"],
+  "authorIds": [
+    "pushkarbk"
+  ],
   "author": "Pushkar Kothavade",
   "title": "Google Cloud DevOps Series - Part-5: Google DevOps-Observability with SRE principles",
   "link": "https://medium.com/google-cloud/part-5-google-devops-observability-with-sre-principles-33446da05c16",

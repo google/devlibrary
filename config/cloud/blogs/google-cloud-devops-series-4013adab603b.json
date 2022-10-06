@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["shijimolak_16208"],
+  "authorIds": [
+    "shijimolak_16208"
+  ],
   "author": "Shijimol A K",
   "title": "Google Cloud DevOps Series - Part 2 :Google Cloud compute options for Kubernetes",
   "link": "https://medium.com/google-cloud/google-cloud-devops-series-4013adab603b",
