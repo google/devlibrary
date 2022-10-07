@@ -157,6 +157,15 @@
               </div>
             </div>
 
+            <div
+              v-if="queryExpertise !== null && queryExpertise !== ''"
+              class="mr-2 mb-4 filter-chip"
+              @click="removeExpertiseLevel"
+            >
+              <span class="mr-2">{{ filters.expertiseLevel.toString() }}</span>
+              <font-awesome-icon icon="times" class="ml-px" size="sm" />
+            </div>
+
             <div v-for="item in filters.types" :key="item.value">
               <div
                 v-if="item.checked"
@@ -596,11 +605,7 @@ export default class Product extends Vue {
     }
   }
 
-  public resetFilters() {
-    for (const c of this.filters.categories) {
-      c.checked = false;
-    }
-
+  public removeExpertiseLevel() {
     const el = document.getElementById(
       `expertiseLevel-${this.filters.expertiseLevel}`
     ) as HTMLInputElement | null;
@@ -608,6 +613,14 @@ export default class Product extends Vue {
       el.checked = false;
       this.filters.expertiseLevel = [];
     }
+  }
+
+  public resetFilters() {
+    for (const c of this.filters.categories) {
+      c.checked = false;
+    }
+
+    this.removeExpertiseLevel();
 
     for (const t of this.filters.types) {
       t.checked = false;
