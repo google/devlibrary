@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["suragch"],
+  "authorIds": [
+    "suragch"
+  ],
   "author": "Suragch",
   "title": "Creating a Flutter widget from scratch",
   "link": "https://medium.com/flutter-community/creating-a-flutter-widget-from-scratch-a9c01c47c630?sk=b804b5b9f77785a5b2c09f277dcdef2c",

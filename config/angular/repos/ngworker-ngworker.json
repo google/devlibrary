@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["layzeedk"],
+  "authorIds": [
+    "layzeedk"
+  ],
   "owner": "ngworker",
   "repo": "ngworker",
   "name": "Spectacular",

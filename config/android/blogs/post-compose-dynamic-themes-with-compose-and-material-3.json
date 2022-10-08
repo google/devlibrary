@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["sidpatil"],
+  "authorIds": [
+    "sidpatil"
+  ],
   "author": "Sid Patil",
   "title": "Dynamic themes with Compose and Material 3",
   "link": "https://siddroid.com/post/compose/dynamic-themes-with-compose-and-material-3/",

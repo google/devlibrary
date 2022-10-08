@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["tom"],
+  "authorIds": [
+    "tom"
+  ],
   "author": "Tom Eustace",
   "title": "Create a websocket connection in a worker thread in angular",
   "link": "https://country-code.ghost.io/opening-websocket-in-webworkers/",

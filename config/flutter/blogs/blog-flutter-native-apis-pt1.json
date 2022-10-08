@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["pr-mais"],
+  "authorIds": [
+    "pr-mais"
+  ],
   "author": "Mais Alheraki",
   "title": "How to use native APIs in Flutter: Platform Channels [Part 1] | Invertase",
   "link": "https://invertase.io/blog/flutter-native-apis-pt1",

@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["vinaygaba"],
+  "authorIds": [
+    "vinaygaba"
+  ],
   "author": "Vinay Gaba",
   "title": "Which lint rules does Jetpack Compose ship with?",
   "link": "https://www.jetpackcompose.app/articles/which-lint-rules-does-jetpack-compose-ship-with",

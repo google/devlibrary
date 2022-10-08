@@ -1,4 +1,5 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
   "authorIds": [
@@ -10,6 +11,7 @@
   "shortDescription": "Cross-platform App built to ease the life of freshers. Developed by the students with near 100% crash-free stats and almost every fresher joining the University using the app to fullest, this project has been a gift to the community",
   "longDescription": "Cross-platform App built to ease the life of freshers. Developed by the students with near 100% crash-free stats and almost every fresher joining the University using the app to fullest, this project has been a gift to the community",
   "content": "README.md",
+  "pages": [],
   "tags": [
     "mobile"
   ]

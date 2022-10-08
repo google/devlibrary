@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["sriyank-siddhartha"],
+  "authorIds": [
+    "sriyank-siddhartha"
+  ],
   "author": "Sriyank Siddhartha",
   "title": "Migrate to Jetpack Compose from XML",
   "link": "https://medium.com/smartherd/migrate-to-jetpack-compose-from-xml-in-android-338207fde452",

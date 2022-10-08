@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["sriyank-siddhartha"],
+  "authorIds": [
+    "sriyank-siddhartha"
+  ],
   "author": "Sriyank Siddhartha",
   "title": "Kotlin Functions vs. Properties: When to use what?",
   "link": "https://medium.com/smartherd/kotlin-functions-vs-properties-when-to-use-what-6d1f9b71a812",

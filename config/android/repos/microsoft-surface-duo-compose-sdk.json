@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["joyl1216"],
+  "authorIds": [
+    "joyl1216"
+  ],
   "owner": "microsoft",
   "repo": "surface-duo-compose-sdk",
   "name": "Surface Duo Jetpack Compose SDK",
@@ -13,4 +16,3 @@
     "compose"
   ]
 }
-

@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["tom"],
+  "authorIds": [
+    "tom"
+  ],
   "author": "Tom Eustace",
   "title": "Serve Content When User is Offline with Service Workers in Angular",
   "link": "https://country-code.ghost.io/use-serviceworker-to-cache-content-for-offline-access/",

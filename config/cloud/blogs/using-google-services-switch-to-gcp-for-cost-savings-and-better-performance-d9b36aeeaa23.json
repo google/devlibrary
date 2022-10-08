@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["gauravmadan"],
+  "authorIds": [
+    "gauravmadan"
+  ],
   "author": "Gaurav Madan",
   "title": "Does your apps consume Google Services ? Switch to GCP for cost savings and better performance !!",
   "link": "https://medium.com/google-cloud/using-google-services-switch-to-gcp-for-cost-savings-and-better-performance-d9b36aeeaa23",

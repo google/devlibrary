@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["iamjosephmj"],
+  "authorIds": [
+    "iamjosephmj"
+  ],
   "author": "Joseph James",
   "title": "GitHub - iamjosephmj/learn-rx: This a repo that helps you to learn Reactive Programming.",
   "link": "https://github.com/iamjosephmj/learn-rx",

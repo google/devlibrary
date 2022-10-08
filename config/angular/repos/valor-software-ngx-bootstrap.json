@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["valorkin"],
+  "authorIds": [
+    "valorkin"
+  ],
   "owner": "valor-software",
   "repo": "ngx-bootstrap",
   "name": "ngx-bootstrap",
