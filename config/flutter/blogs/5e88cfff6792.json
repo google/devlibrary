@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["mkobuolys"],
+  "authorIds": [
+    "mkobuolys"
+  ],
   "author": "Mangirdas Kazlauskas",
   "title": "Flutter Design Patterns",
   "link": "https://medium.com/p/5e88cfff6792",

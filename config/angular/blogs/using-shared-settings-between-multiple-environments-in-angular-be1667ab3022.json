@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["nikosanif"],
+  "authorIds": [
+    "nikosanif"
+  ],
   "author": "Nikos Anifantis",
   "title": "Using shared settings between multiple environments in Angular",
   "link": "https://nikosanif.medium.com/using-shared-settings-between-multiple-environments-in-angular-be1667ab3022",

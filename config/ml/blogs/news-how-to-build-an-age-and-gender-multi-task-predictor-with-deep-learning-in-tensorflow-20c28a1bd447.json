@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["quincylarson"],
+  "authorIds": [
+    "quincylarson"
+  ],
   "author": "Quincy Larson",
   "title": "How to build an age and gender multi-task predictor with deep learning in TensorFlow",
   "link": "https://www.freecodecamp.org/news/how-to-build-an-age-and-gender-multi-task-predictor-with-deep-learning-in-tensorflow-20c28a1bd447/",

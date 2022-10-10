@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["sanskar10100"],
+  "authorIds": [
+    "sanskar10100"
+  ],
   "author": "Sanskar Agrawal",
   "title": "Implementing Periodic Notifications with WorkManager",
   "link": "https://sanskar10100.hashnode.dev/implementing-periodic-notifications-with-workmanager",

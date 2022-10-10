@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["sriyank-siddhartha"],
+  "authorIds": [
+    "sriyank-siddhartha"
+  ],
   "author": "Sriyank Siddhartha",
   "title": "Shape your Image: Circle, Rounded Square, or Cuts at the corner in Android",
   "link": "https://medium.com/smartherd/shape-your-image-circle-rounded-square-or-cuts-at-the-corner-of-image-in-android-cf92f38c217f",

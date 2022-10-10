@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["ezekiasbokove"],
+  "authorIds": [
+    "ezekiasbokove"
+  ],
   "author": "EZEKIAS BOKOVE",
   "title": "Notification system for Cloud Run with Google Chat for CI/CD pipelines.",
   "link": "https://cloud-architecture-design.medium.com/notification-system-for-cloud-run-with-google-chat-7c207fa33809",

@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["ganesh-s-p006"],
+  "authorIds": [
+    "ganesh-s-p006"
+  ],
   "author": "Ganesh .s.p",
   "title": "Flutter visual studio code shortcuts for fast and efficient development",
   "link": "https://medium.com/flutter-community/flutter-visual-studio-code-shortcuts-for-fast-and-efficient-development-7235bc6c3b7d",

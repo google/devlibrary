@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["suratadhikari"],
+  "authorIds": [
+    "suratadhikari"
+  ],
   "author": "Surat Adhikari",
   "title": "Flutter :Linter warnings due to missing const constructors",
   "link": "https://towardsdev.com/flutter-linter-warnings-due-to-missing-const-constructors-82db12c37113",

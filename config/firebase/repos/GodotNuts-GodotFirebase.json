@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "github",
-  "authorIds": ["wolfgangsenff"],
+  "authorIds": [
+    "wolfgangsenff"
+  ],
   "owner": "GodotNuts",
   "repo": "GodotFirebase",
   "name": "Godot Firebase",

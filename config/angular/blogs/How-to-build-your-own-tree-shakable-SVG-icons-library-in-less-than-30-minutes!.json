@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["kreuzerk"],
+  "authorIds": [
+    "kreuzerk"
+  ],
   "author": "Kevin Kreuzer",
   "title": "How to build your own tree shakable SVG icons library in less than 30 minutes!",
   "link": "https://kevinkreuzer.medium.com/how-to-build-your-own-tree-shakable-svg-icons-library-in-less-than-30-minutes-9f7a4a324d29",

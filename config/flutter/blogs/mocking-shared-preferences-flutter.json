@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["victoreronmosele"],
+  "authorIds": [
+    "victoreronmosele"
+  ],
   "author": "Victor Eronmosele",
   "title": "Mocking and Testing Shared Preferences in Flutter Unit Tests",
   "link": "https://blog.victoreronmosele.com/mocking-shared-preferences-flutter",
