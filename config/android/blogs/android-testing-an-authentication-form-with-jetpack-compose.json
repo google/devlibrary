@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["joebirch"],
+  "authorIds": [
+    "joebirch"
+  ],
   "author": "Joe Birch",
   "title": "Testing an Authentication Form with Jetpack Compose",
   "link": "https://joebirch.co/android/testing-an-authentication-form-with-jetpack-compose/",

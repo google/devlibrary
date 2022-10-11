@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["googlesamples"],
+  "authorIds": [
+    "googlesamples"
+  ],
   "owner": "googlesamples",
   "repo": "android-media-controller",
   "name": "Media Controller Test",

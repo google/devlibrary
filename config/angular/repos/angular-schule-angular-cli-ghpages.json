@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["johanneshoppe"],
+  "authorIds": [
+    "johanneshoppe"
+  ],
   "owner": "angular-schule",
   "repo": "angular-cli-ghpages",
   "name": "angular-cli-ghpages",

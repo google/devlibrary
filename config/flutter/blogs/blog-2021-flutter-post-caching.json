@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["immadisairaj"],
+  "authorIds": [
+    "immadisairaj"
+  ],
   "author": "Sai Rajendra Immadi",
   "title": "Flutter Caching with POST Web Api",
   "link": "https://www.immadisairaj.dev/blog/2021/flutter-post-caching/",

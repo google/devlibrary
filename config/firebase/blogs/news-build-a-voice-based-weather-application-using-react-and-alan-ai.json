@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["nishant-kumar"],
+  "authorIds": [
+    "nishant-kumar"
+  ],
   "author": "Nishant Singh",
   "title": "How to Build a Voice-Based Todo App using React, Firebase, and Alan AI",
   "link": "https://www.freecodecamp.org/news/build-a-voice-based-weather-application-using-react-and-alan-ai/",

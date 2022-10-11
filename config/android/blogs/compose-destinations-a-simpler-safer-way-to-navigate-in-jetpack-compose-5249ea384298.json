@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["rafaelamcosta"],
+  "authorIds": [
+    "rafaelamcosta"
+  ],
   "author": "Rafael Costa",
   "title": "Article about Compose Destinations: a KSP library to make using compose navigation simpler and safer.",
   "link": "https://proandroiddev.com/compose-destinations-a-simpler-safer-way-to-navigate-in-jetpack-compose-5249ea384298",

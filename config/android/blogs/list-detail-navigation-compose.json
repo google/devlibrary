@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["rajashekarraju"],
+  "authorIds": [
+    "rajashekarraju"
+  ],
   "author": "Rajasekhar K E",
   "title": "Jetpack Compose Navigation list to detail in android | Developers Breach",
   "link": "https://developersbreach.com/list-detail-navigation-compose/",

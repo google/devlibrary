@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["huan"],
+  "authorIds": [
+    "huan"
+  ],
   "owner": "chatie",
   "repo": "angular",
   "name": "Wechaty Angular Web Component",

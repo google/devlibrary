@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["infiniteoverflow"],
+  "authorIds": [
+    "infiniteoverflow"
+  ],
   "author": "Aswin Gopinathan",
   "title": "Firebase for your Dart Web API",
   "link": "https://dev.to/infiniteoverflow/firebase-for-your-dart-web-api-43mb",

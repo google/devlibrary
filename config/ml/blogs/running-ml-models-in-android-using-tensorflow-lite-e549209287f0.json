@@ -1,4 +1,5 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
   "authorIds": ["ksdkamesh99"],
@@ -6,6 +7,7 @@
   "title": "Running ML Models in Android using Tensorflow Lite",
   "link": "https://medium.com/analytics-vidhya/running-ml-models-in-android-using-tensorflow-lite-e549209287f0",
   "tags": [
-    "mobile", "library"
+    "mobile",
+    "library"
   ]
 }
