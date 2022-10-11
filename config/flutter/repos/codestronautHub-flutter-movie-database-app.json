@@ -2,7 +2,7 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["codestronauthub"],
   "owner": "codestronautHub",
   "repo": "flutter-movie-database-app",
   "name": "Flutter Movie Database",

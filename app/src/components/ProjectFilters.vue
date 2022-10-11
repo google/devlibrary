@@ -113,6 +113,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 export default class ProjectFilters extends Vue {
   @Prop() product!: ProductConfig;
   @Prop({ default: false }) mobile!: boolean;
+  @Prop() value!: { expertiseLevel: string | string[] };
 
   public sort = "updated";
   public types: CheckboxGroupEntry[] = [];
@@ -127,7 +128,7 @@ export default class ProjectFilters extends Vue {
   };
   public loaded = false;
 
-  get value() {
+  get filterValues() {
     return {
       sort: this.sort,
       expertiseLevel: this.expertiseLevel,
@@ -148,17 +149,29 @@ export default class ProjectFilters extends Vue {
 
   @Watch("value", { deep: true })
   public onValueChange() {
+    if (
+      Array.isArray(this.value.expertiseLevel) &&
+      this.value.expertiseLevel.length === 0
+    ) {
+      this.expertiseLevel = "";
+    }
+  }
+
+  @Watch("filterValues", { deep: true })
+  public onFilterValuesChange() {
     if (!this.loaded) {
-      this.defaultFilters = JSON.parse(JSON.stringify(this.value));
+      this.defaultFilters = JSON.parse(JSON.stringify(this.filterValues));
       this.loaded = true;
     }
 
-    if (JSON.stringify(this.defaultFilters) != JSON.stringify(this.value)) {
+    if (
+      JSON.stringify(this.defaultFilters) != JSON.stringify(this.filterValues)
+    ) {
       this.filtersChanged = true;
     } else {
       this.filtersChanged = false;
     }
-    this.$emit("input", this.value);
+    this.$emit("input", this.filterValues);
   }
 }
 </script>
