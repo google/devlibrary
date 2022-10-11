@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["sandrakuria"],
+  "authorIds": [
+    "sandrakuria"
+  ],
   "author": "Sandra Kuria",
   "title": "Introduction to Android Development",
   "link": "https://sandrakuria.hashnode.dev/android-development-understanding-the-vocabulary",

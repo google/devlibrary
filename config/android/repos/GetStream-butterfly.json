@@ -2,7 +2,9 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["getstream"],
+  "authorIds": [
+    "getstream"
+  ],
   "owner": "GetStream",
   "repo": "butterfly",
   "name": "butterfly",

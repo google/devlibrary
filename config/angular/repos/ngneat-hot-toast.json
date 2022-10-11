@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["ngneat"],
+  "authorIds": [
+    "ngneat"
+  ],
   "owner": "ngneat",
   "repo": "hot-toast",
   "name": "@ngneat/hot-toast",

@@ -2,7 +2,9 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["dscnitrourkela"],
+  "authorIds": [
+    "dscnitrourkela"
+  ],
   "owner": "dscnitrourkela",
   "repo": "project-maple",
   "name": "Project-Maple",
