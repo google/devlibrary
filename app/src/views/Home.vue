@@ -47,25 +47,6 @@
       </div>
     </div>
 
-    <!-- Featured Products and Authors -->
-    <h1 class="ml-12 mt-10">Featured projects and authors</h1>
-    <p class="lg:w-5/12 ml-12 mt-2 lg:mt-6 pr-4 lg:pr-0">
-      View a selection of our favorite content. Click the author name to view
-      their featured author page and preferred way to connect.
-    </p>
-    <div
-      class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 py-6 px-std"
-    >
-      <RepoOrBlogCard
-        v-for="p in featuredProducts"
-        :key="p.data.id"
-        :project="p"
-        :showTags="false"
-        :showLogo="true"
-      >
-      </RepoOrBlogCard>
-    </div>
-
     <!-- Value Prop Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 px-std md:px-20 lg:px-32 xl:px-44 value-prop-cards">
       <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
@@ -254,7 +235,6 @@ export default class Home extends Vue {
 
   public recentBlogs: Record<string, BlogData[]> = {};
   public recentRepos: Record<string, RepoData[]> = {};
-  public featuredProducts: BlogOrRepoDataHolder[] = [];
   public displayedLatestProducts = 6;
 
   public newsletterEmail = "";
@@ -278,30 +258,6 @@ export default class Home extends Vue {
       const blogPromise = this.fetchRecentBlogs(product.key);
       const repoPromise = this.fetchRecentRepos(product.key);
       promises.push(blogPromise, repoPromise);
-    }
-
-    const featured1 = await fetchRepo("android", "vinodbaste-Image-compressor");
-    const featured2 = await fetchRepo(
-      "ml",
-      "deep-diver-Continuous-Adaptation-for-Machine-Learning-System-to-Data-Changes"
-    );
-    const featured3 = await fetchRepo("flutter", "raysummee-flutter_cart_bloc");
-    const featured4 = await fetchBlog(
-      "cloud",
-      "gremlin-chaos-engineering-on-google-cloud-2568f9fc70c9"
-    );
-
-    if (featured1 !== undefined) {
-      this.featuredProducts.push({ type: "repo", data: featured1 });
-    }
-    if (featured2 !== undefined) {
-      this.featuredProducts.push({ type: "repo", data: featured2 });
-    }
-    if (featured3 !== undefined) {
-      this.featuredProducts.push({ type: "repo", data: featured3 });
-    }
-    if (featured4 !== undefined) {
-      this.featuredProducts.push({ type: "blog", data: featured4 });
     }
 
     this.uiModule.waitFor(Promise.all(promises));
