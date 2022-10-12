@@ -1,4 +1,5 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
   "authorIds": [
@@ -9,7 +10,7 @@
   "name": "@HostBinding and @HostListener",
   "shortDescription": "This repository aims to describe the feature's of @HostBinding and @HostListener in Angular with an example.",
   "longDescription": "This repository aims to describe the feature's of @HostBinding and @HostListener in Angular with an example.",
-  "content": "https://github.com/PranamBhat/Organization-Chart/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "libraries",
