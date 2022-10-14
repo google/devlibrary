@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["anchitn_19522"],
+  "authorIds": [
+    "anchitn_19522"
+  ],
   "author": "Anchit Nishant",
   "title": "Google Cloud DevOps Series- Part 4: Continuous Integration / Continuous Deployment Workflow.",
   "link": "https://medium.com/google-cloud/part-4-google-devops-continuous-development-workflow-3feb1ea2227e",

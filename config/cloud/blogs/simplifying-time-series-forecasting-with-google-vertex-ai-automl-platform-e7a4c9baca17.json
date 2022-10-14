@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "shivsaxena56"
+  ],
+  "author": "Shiv Kumar Saxena",
+  "title": "Simplifying time series forecasting with Google Vertex AI AutoML Platform",
+  "link": "https://medium.com/@shivsaxena56/simplifying-time-series-forecasting-with-google-vertex-ai-automl-platform-e7a4c9baca17",
+  "tags": [
+    "data-analytics",
+    "ai-ml"
+  ]
+}

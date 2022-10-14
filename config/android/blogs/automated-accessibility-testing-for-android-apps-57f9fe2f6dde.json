@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "monikakumarjethani"
+  ],
+  "author": "Monika Kumar Jethani",
+  "title": "Automated Accessibility testing for Android apps",
+  "link": "https://medium.com/walmartglobaltech/automated-accessibility-testing-for-android-apps-57f9fe2f6dde",
+  "tags": [
+    "modern-android-development",
+    "build-tools"
+  ]
+}

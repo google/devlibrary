@@ -1,7 +1,8 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["soumik12345"],
   "author": "Soumik Rakshit",
   "title": "Keras documentation: Multiclass semantic segmentation using DeepLabV3+",
   "link": "https://keras.io/examples/vision/deeplabv3_plus/",

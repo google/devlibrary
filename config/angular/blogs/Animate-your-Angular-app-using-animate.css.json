@@ -1,4 +1,5 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
   "authorIds": [
@@ -8,7 +9,6 @@
   "title": "Animate your Angular App using Animate.css",
   "link": "https://dev.to/this-is-angular/animate-your-angular-app-using-animate-css-46c5",
   "tags": [
-    
     "components"
   ]
 }

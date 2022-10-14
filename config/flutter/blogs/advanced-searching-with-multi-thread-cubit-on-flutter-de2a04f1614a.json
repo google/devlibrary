@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "medium",
-  "authorIds": ["vb10"],
+  "authorIds": [
+    "vb10"
+  ],
   "author": "Veli Bacık",
   "title": "Advanced searching with multi-thread cubit on Flutter",
   "link": "https://medium.com/flutter-community/advanced-searching-with-multi-thread-cubit-on-flutter-de2a04f1614a",

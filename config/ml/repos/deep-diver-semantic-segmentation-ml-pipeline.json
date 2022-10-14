@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "deep-diver"
+  ],
+  "owner": "deep-diver",
+  "repo": "semantic-segmentation-ml-pipeline",
+  "name": "Semantic Sementation model within ML pipeline",
+  "shortDescription": "This repository shows how to build a Machine Learning Pipeline for Semantic Segmentation task with TensorFlow Extended(TFX) and various GCP products such as Vertex Pipeline, Training, and Enpoint.",
+  "longDescription": "This repository shows how to build a Machine Learning Pipeline for Semantic Segmentation task with TensorFlow Extended(TFX) and various GCP products such as Vertex Pipeline, Training, and Enpoint.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","nlp","vision","library","notebook","collection","web","theory"
+  ]
+}

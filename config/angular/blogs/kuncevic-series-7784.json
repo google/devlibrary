@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["kuncevic"],
+  "authorIds": [
+    "kuncevic"
+  ],
   "author": "Aliaksei Kuncevič",
   "title": "About DEV Community",
   "link": "https://dev.to/kuncevic/series/7784",

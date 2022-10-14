@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["majid-hajian"],
+  "authorIds": [
+    "majid-hajian"
+  ],
   "author": "Majid Hajian",
   "title": "Flutter Authentication and Authorization with Auth0, Part 1: Adding Authentication to an App",
   "link": "https://auth0.com/blog/flutter-authentication-authorization-with-auth0-part-1-adding-authentication-to-an-app/",

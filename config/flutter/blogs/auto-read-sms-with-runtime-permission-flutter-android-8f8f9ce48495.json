@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["mukundjogi"],
+  "authorIds": [
+    "mukundjogi"
+  ],
   "author": "Mukund Jogi",
   "title": "Auto-Read SMS with runtime permission - Flutter(Android)",
   "link": "https://medium.com/7span/auto-read-sms-with-runtime-permission-flutter-android-8f8f9ce48495",

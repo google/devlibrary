@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["navczydev"],
+  "authorIds": [
+    "navczydev"
+  ],
   "author": "Nav Singh",
   "title": "Splash screen-Android 12",
   "link": "https://proandroiddev.com/splash-screen-android-12-173c3c641671",

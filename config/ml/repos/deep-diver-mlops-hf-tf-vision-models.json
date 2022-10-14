@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "deep-diver"
+  ],
+  "owner": "deep-diver",
+  "repo": "mlops-hf-tf-vision-models",
+  "name": "MLOps for Vision Models from 🤗 with TFX",
+  "shortDescription": "This repository shows how to build Machine Learning pipeline for a vision model (TensorFlow) from 🤗 Transformers using the TensorFlow Ecosystem.",
+  "longDescription": "This repository shows how to build Machine Learning pipeline for a vision model (TensorFlow) from 🤗 Transformers using the TensorFlow Ecosystem.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","nlp","vision","library","notebook","collection","web","theory"
+  ]
+}
