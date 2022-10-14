@@ -282,7 +282,7 @@ export default class Author extends Vue {
 
   get projects() {
     return wrapInHolders(this.blogs, this.repos).sort((a, b) => {
-      return b.data.stats.dateAdded - a.data.stats.dateAdded;
+      return b.data.stats.lastUpdated - a.data.stats.lastUpdated;
     });
   }
 }
