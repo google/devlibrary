@@ -203,7 +203,7 @@ export default class Authors extends Vue {
   public authorData: PagedResponse<AuthorData> = emptyPageResponse<AuthorData>(
     `/authors`,
     {},
-    1
+    10
   );
 
   async mounted() {
@@ -219,7 +219,7 @@ export default class Authors extends Vue {
       {
         orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
       },
-      60
+      10
     );
     const authorsPromise = nextPage(authorData);
     const reloadPromise = Promise.all([authorsPromise]).then(async () => {
@@ -367,7 +367,7 @@ export default class Authors extends Vue {
   }
 
   get visibleAuthors(): AuthorData[] {
-    const maxToShow = 1 * this.pagesToShow;
+    const maxToShow = 10 * this.pagesToShow;
     return this.authors.slice(0, maxToShow);
   }
 }
