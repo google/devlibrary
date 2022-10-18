@@ -67,9 +67,9 @@ export const queryProxy = functions
       return;
     }
 
-    console.log('joseph', qEncoded, Buffer.from(qEncoded, "base64").toString("ascii"));
+    console.log('joseph', qEncoded, Buffer.from(qEncoded, "base64").toString("utf-8"));
     const qDecoded = JSON.parse(
-      Buffer.from(qEncoded, "base64").toString("ascii")
+      Buffer.from(qEncoded, "base64").toString("utf-8")
     ) as FirestoreQuery;
 
     // Log out the query
@@ -152,7 +152,7 @@ function diagnoseMissingDocument(path: string) {
       const id = segments[3];
       if (segments.length > 4) {
         const page = segments[5];
-        const pageDecoded = Buffer.from(page, "base64").toString("ascii");
+        const pageDecoded = Buffer.from(page, "base64").toString("utf-8");
         return `Could not find page "${pageDecoded}" on ${product} repo ${id}`;
       } else {
         return `Could not find ${product} repo ${id}`;
