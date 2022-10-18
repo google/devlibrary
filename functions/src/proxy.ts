@@ -67,6 +67,7 @@ export const queryProxy = functions
       return;
     }
 
+    console.log('joseph', qEncoded, Buffer.from(qEncoded, "base64").toString("ascii"));
     const qDecoded = JSON.parse(
       Buffer.from(qEncoded, "base64").toString("ascii")
     ) as FirestoreQuery;
