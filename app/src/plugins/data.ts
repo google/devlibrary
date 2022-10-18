@@ -138,6 +138,7 @@ export async function nextPage<T>(res: PagedResponse<T>) {
     startAfter.push(res.lastDoc.id);
 
     q.startAfter = startAfter;
+    console.log(q.startAfter);
   }
 
   // Load one more than the limit to see if we have anything more
@@ -268,17 +269,17 @@ export async function queryAuthorsByProduct(
   const authorResults: any = [];
   for(const author of allAuthors.docs){
     const res = await queryAuthorProjects(author.id);
-    
+
     const blogProducts: string[] = [];
     const repoProducts: string[] = [];
 
     Object.keys(res.blogs.docs).forEach(blogIndex => {
      blogProducts.push(res.blogs.docs[Number(blogIndex)].data.product)
-    })  
+    })
 
     Object.keys(res.repos.docs).forEach(repoIndex => {
       repoProducts.push(res.repos.docs[Number(repoIndex)].data.product)
-    })  
+    })
 
     if(products.every(repo => repoProducts.includes(repo))){
       authorResults.push(author);
