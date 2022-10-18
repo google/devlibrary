@@ -219,7 +219,7 @@ export default class Authors extends Vue {
       {
         orderBy: [{ fieldPath: "metadata.name", direction: "asc" }],
       },
-      1
+      60
     );
     const authorsPromise = nextPage(authorData);
     const reloadPromise = Promise.all([authorsPromise]).then(async () => {
