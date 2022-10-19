@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["mustapha"],
+  "author": "Mustapha Adekunle",
+  "title": "Designing a Data Schema",
+  "link": "https://dataengineeringgcp.substack.com/p/designing-a-data-schema",
+  "tags": [
+    "databases",
+    "storage",
+    "migration"
+  ]
+}

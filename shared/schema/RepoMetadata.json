@@ -93,5 +93,5 @@
       "description": "The expertise of the articles or projects"
     }
   },
-  "required": [ "owner", "repo", "name", "shortDescription", "longDescription", "content", "tags", "expertise"]
+  "required": [ "owner", "authorIds", "repo", "name", "shortDescription", "longDescription", "content", "tags", "expertise"]
 }

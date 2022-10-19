@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["phlippe"],
+  "author": "Phillip Lippe",
+  "title": "Tutorial 2 (JAX): Introduction to JAX+Flax — UvA DL Notebooks v1.2 documentation",
+  "link": "https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/JAX/tutorial2/Introduction_to_JAX.html",
+  "tags": [
+    "gan",
+    "vision",
+    "nlp"
+  ]
+}
