@@ -2,7 +2,7 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["sandrakuria"],
   "author": "Sandra Kuria",
   "title": "Key components of Angular",
   "link": "https://sandrakuria.hashnode.dev/basic-building-blocks-of-angular",

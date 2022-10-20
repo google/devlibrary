@@ -87,7 +87,8 @@
           class="card card-clickable px-5 py-4 flex flex-col items-center text-center"
         >
           <CircleImage
-            v-if="authorImageLoaded[author.id]"
+            v-if="authorImageLoaded[author.id] ||
+              authorImageLoaded[author.id] == undefined"
             :src="author.metadata.photoURL"
             :lazy="true"
             class="flex-shrink-0 avatar border-none"
