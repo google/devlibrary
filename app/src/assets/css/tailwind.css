@@ -209,19 +209,11 @@
   }
 
   .value-prop-image {
-    padding: 30px;
-    border-radius: 50%;
     margin-bottom: 33px;
-    background: #DADCE0;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .value-prop-image img {
-    width: 80px;
+    width: 200px;
   }
 
   .value-prop-cards button {
@@ -235,7 +227,7 @@
     }
 
     .homepage-header {
-      background: var(--header-bg-image-desktop) no-repeat #f1f3f4;
+      background: var(--header-bg-image-desktop) no-repeat;
       background-size: auto 111%;
       background-position: top right;
     }

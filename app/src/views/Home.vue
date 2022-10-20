@@ -51,7 +51,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 px-std md:px-20 lg:px-32 xl:px-44 value-prop-cards">
       <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
         <div class="value-prop-image">
-          <img src="../../public/logos/placeholder.png" class="w-1/3" />
+          <img src="../../public/img/guided-learning.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">Are you looking for guided learning?</h2>
         <p class="text-lg px-8 pb-8">
@@ -65,7 +65,7 @@
       </div>
       <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
         <div class="value-prop-image">
-          <img src="../../public/logos/placeholder.png" class="w-1/3" />
+          <img src="../../public/img/inspiration.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">Are you looking for inspiration?</h2>
         <p class="text-lg px-8 pb-8">
@@ -85,7 +85,7 @@
       </div>
       <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
         <div class="value-prop-image">
-          <img src="../../public/logos/placeholder.png" class="w-1/3" />
+          <img src="../../public/img/speakers.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">Are you looking for speakers/experts?</h2>
         <p class="text-lg px-8 pb-8">
