@@ -70,12 +70,14 @@
           <p class="mt-6 font-bold">Terms of Service</p>
           <p class="mt-4">
             <a href="https://developers.google.com/terms/site-terms"
+               target="_blank"
               >https://developers.google.com/terms/site-terms</a
             >
           </p>
           <p class="mt-6 font-bold">Privacy Policy</p>
           <p class="mt-4">
             <a href="https://policies.google.com/privacy"
+               target="_blank"
               >https://policies.google.com/privacy</a
             >
           </p>
@@ -84,6 +86,7 @@
             If you think someone is infringing your intellectual property
             rights, you can send a notice that complies with the listed
             <a
+              target="_blank"
               href="https://support.google.com/legal/answer/3463239?hl=en&ref_topic=4558877"
               >Copyright Infringement Notification</a
             >
@@ -92,8 +95,8 @@
             and we’ll take appropriate action. For example, we suspend or close
             the Google Accounts of repeat copyright infringers as described in
             our
-            <a
-              href="https://support.google.com/legal/topic/4558877?hl=en&ref_topic=4556931"
+            <a target="_blank"
+               href="https://support.google.com/legal/topic/4558877?hl=en&ref_topic=4556931"
               >Copyright Help Center</a
             >.
           </p>
@@ -160,8 +163,8 @@
           </p>
           <p class="mt-4">
             No. If you are completely new to computer programming, Google
-            <a href="https://grasshopper.app/">Grasshopper</a> teaches adult
-            learners to write JavaScript, free of charge.
+            <a target="_blank" href="https://grasshopper.app/">Grasshopper</a>
+            teaches adult learners to write JavaScript, free of charge.
           </p>
           <p class="mt-2">
             If you're a beginner developer with some basic coding knowledge, we
@@ -250,8 +253,8 @@
 
           <p class="mt-2">
             For an extensive explanation, read our
-            <a
-              href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf"
+            <a target="_blank"
+               href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf"
               >contributor guidelines</a
             >
             to fix the errors and re-submit.
@@ -290,13 +293,17 @@
           <p class="mt-4">
             To remove your content, please raise a Pull Request on the Dev
             Library’s
-            <a href="https://github.com/google/devlibrary">GitHub repo</a>.
+            <a target="_blank"
+               href="https://github.com/google/devlibrary"
+               >
+              GitHub repo
+            </a>.
           </p>
 
           <p class="mt-6 font-bold">How do I raise another issue?</p>
           <p class="mt-4 mb-20">
             To raise an issue, post your issue on the
-            <a href="https://github.com/google/devlibrary">
+            <a target="_blank" href="https://github.com/google/devlibrary">
               Dev Library repo
             </a>.
           </p>
