@@ -183,6 +183,17 @@ export default class LargeRepoCard extends Vue {
     return Math.abs(hash);
   }
 
+  get authorId() {
+    if (
+      this.repo.metadata.authorIds &&
+      this.repo.metadata.authorIds.length > 0
+    ) {
+      return this.repo.metadata.authorIds[0];
+    }
+
+    return undefined;
+  }
+
   get link() {
     return `/products/${this.repo.product}/repos/${this.repo.id}`;
   }
