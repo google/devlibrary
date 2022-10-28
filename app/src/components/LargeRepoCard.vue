@@ -66,12 +66,9 @@
       <font-awesome-icon :icon="['fab', 'github']" size="lg" class="mr-1" />
       <span>GitHub</span>
       <span>•</span>
-      <span class="break-all wrap-lines-1">Updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span>
-      <span>•</span>
-      <span class="flex-grow wrap-lines-1">
-        {{ repo.stats.stars }}
-        <font-awesome-icon icon="star" size="sm" class="align-baseline" />
-      </span>
+      <span class="flex-grow wrap-lines-1"
+        >Updated {{ renderDaysAgo(repo.stats.lastUpdated) }}</span
+      >
     </div>
 
     <!-- Button -->

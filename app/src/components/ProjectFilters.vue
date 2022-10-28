@@ -25,17 +25,6 @@
 
       <div class="sections">
         <div class="section">
-          <p class="font-display font-medium text-sm mb-2 px-2">Sort</p>
-
-          <RadioGroup
-            prefix="sort"
-            :keys="['Recently Updated', 'Recently Added', 'GitHub Stars']"
-            :values="['updated', 'added', 'stars']"
-            v-model="sort"
-          />
-        </div>
-
-        <div class="section">
           <p class="font-display font-medium text-sm mb-2 px-2">
             Expertise Level
           </p>
@@ -115,13 +104,11 @@ export default class ProjectFilters extends Vue {
   @Prop({ default: false }) mobile!: boolean;
   @Prop() value!: { expertiseLevel: string | string[] };
 
-  public sort = "updated";
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
   public expertiseLevel = "";
   public filtersChanged = false;
   public defaultFilters = {
-    sort: "",
     expertiseLevel: "",
     types: [],
     categories: [],
@@ -130,7 +117,6 @@ export default class ProjectFilters extends Vue {
 
   get filterValues() {
     return {
-      sort: this.sort,
       expertiseLevel: this.expertiseLevel,
       types: this.types,
       categories: this.categories,
@@ -138,7 +124,6 @@ export default class ProjectFilters extends Vue {
   }
 
   public resetFilters() {
-    this.sort = this.defaultFilters.sort;
     this.expertiseLevel = this.defaultFilters.expertiseLevel;
     this.types = JSON.parse(JSON.stringify(this.defaultFilters.types));
     this.categories = JSON.parse(
