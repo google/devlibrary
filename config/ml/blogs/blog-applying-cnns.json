@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["henryndubuaku"],
+  "author": "Henry Ndubuaku",
+  "title": "Applying CNNs To Images For Computer Vision And Text For NLP.",
+  "link": "https://omdena.com/blog/applying-cnns/",
+  "tags": [
+    "vision",
+    "nlp",
+    "tf"
+  ]
+}

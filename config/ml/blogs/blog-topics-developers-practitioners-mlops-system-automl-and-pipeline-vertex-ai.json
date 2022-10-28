@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["deep-diver"],
+  "authorIds": [
+    "deep-diver"
+  ],
   "author": "Chansung Park",
   "title": "MLOps System with AutoML and Pipeline in Vertex AI",
   "link": "https://cloud.google.com/blog/topics/developers-practitioners/mlops-system-automl-and-pipeline-vertex-ai",

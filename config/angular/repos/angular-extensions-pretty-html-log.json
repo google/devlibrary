@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["kreuzerk"],
+  "authorIds": [
+    "kreuzerk"
+  ],
   "owner": "angular-extensions",
   "repo": "pretty-html-log",
   "name": "@angular-extensions/pretty-html-log",

@@ -1,7 +1,8 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["emmarex"],
   "author": "Oluwafemi Tairu",
   "title": "Deploying Machine learning models on Mobile with Tensorflow Lite and Firebase M.L Kit",
   "link": "https://dev.to/emmarex/deploying-machine-learning-models-on-mobile-with-tensorflow-lite-and-firebase-m-l-kit-4647",

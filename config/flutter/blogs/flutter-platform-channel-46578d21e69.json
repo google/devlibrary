@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "shreebhagwat94"
+  ],
+  "author": "Shree Bhagwat",
+  "title": "Flutter Platform Channel - Communicate Flutter with Native Code",
+  "link": "https://medium.com/@shreebhagwat94/flutter-platform-channel-46578d21e69",
+  "tags": [
+    "mobile",
+    "widgets",
+    "plugins"
+  ]
+}

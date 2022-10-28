@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["md-sarfaraj"],
+  "authorIds": [
+    "md-sarfaraj"
+  ],
   "author": "MD Sarfaraj",
   "title": "Flutter State Management With Provider Package",
   "link": "https://www.c-sharpcorner.com/article/flutter-state-management-with-provider-package/",

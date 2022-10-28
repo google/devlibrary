@@ -40,7 +40,11 @@
         "type": "string",
         "pattern": "^[a-z-]+$"
       }
+    },
+    "expertise": {
+      "type": "string",
+      "description": "The expertise of the articles or projects"
     }
   },
-  "required": [ "author", "title", "link", "tags" ]
+  "required": [ "author", "title", "link", "tags", "expertise", "authorIds"]
 }

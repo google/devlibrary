@@ -36,6 +36,18 @@
         </div>
 
         <div class="section">
+          <p class="font-display font-medium text-sm mb-2 px-2">
+            Expertise Level
+          </p>
+          <RadioGroup
+            prefix="expertiseLevel"
+            :keys="['Beginner', 'Intermediate', 'Advanced']"
+            :values="['Beginner', 'Intermediate', 'Advanced']"
+            v-model="expertiseLevel"
+            :start-empty="true"
+          />
+        </div>
+        <div class="section">
           <p class="font-display font-medium text-sm mb-2 px-2">Type</p>
 
           <CheckboxGroup
@@ -61,16 +73,18 @@
           />
 
           <!-- Clear Filters Button-->
-          <div class="flex flex-row justify-center mt-4 lg:mt-6">
-            <MaterialButton
-              v-if="filtersChanged"
-              type="text"
-              @click.native="resetFilters()"
-            >
-              <div class="frc">
-                <span>Reset filters</span>
-              </div>
-            </MaterialButton>
+          <div class="desktop-only">
+            <div class="flex flex-row justify-center mt-4 lg:mt-6">
+              <MaterialButton
+                v-if="filtersChanged"
+                type="text"
+                @click.native="resetFilters()"
+              >
+                <div class="frc">
+                  <span>Reset filters</span>
+                </div>
+              </MaterialButton>
+            </div>
           </div>
         </div>
       </div>
@@ -99,17 +113,25 @@ import MaterialButton from "@/components/MaterialButton.vue";
 export default class ProjectFilters extends Vue {
   @Prop() product!: ProductConfig;
   @Prop({ default: false }) mobile!: boolean;
+  @Prop() value!: { expertiseLevel: string | string[] };
 
   public sort = "updated";
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
+  public expertiseLevel = "";
   public filtersChanged = false;
-  public defaultFilters = { sort: "", types: [], categories: []};
+  public defaultFilters = {
+    sort: "",
+    expertiseLevel: "",
+    types: [],
+    categories: [],
+  };
   public loaded = false;
 
-  get value() {
+  get filterValues() {
     return {
       sort: this.sort,
+      expertiseLevel: this.expertiseLevel,
       types: this.types,
       categories: this.categories,
     };
@@ -117,24 +139,39 @@ export default class ProjectFilters extends Vue {
 
   public resetFilters() {
     this.sort = this.defaultFilters.sort;
+    this.expertiseLevel = this.defaultFilters.expertiseLevel;
     this.types = JSON.parse(JSON.stringify(this.defaultFilters.types));
-    this.categories = JSON.parse(JSON.stringify(this.defaultFilters.categories));
+    this.categories = JSON.parse(
+      JSON.stringify(this.defaultFilters.categories)
+    );
     this.filtersChanged = false;
   }
 
   @Watch("value", { deep: true })
   public onValueChange() {
+    if (
+      Array.isArray(this.value.expertiseLevel) &&
+      this.value.expertiseLevel.length === 0
+    ) {
+      this.expertiseLevel = "";
+    }
+  }
+
+  @Watch("filterValues", { deep: true })
+  public onFilterValuesChange() {
     if (!this.loaded) {
-      this.defaultFilters = JSON.parse(JSON.stringify(this.value));
+      this.defaultFilters = JSON.parse(JSON.stringify(this.filterValues));
       this.loaded = true;
     }
 
-    if (JSON.stringify(this.defaultFilters) != JSON.stringify(this.value)) {
+    if (
+      JSON.stringify(this.defaultFilters) != JSON.stringify(this.filterValues)
+    ) {
       this.filtersChanged = true;
     } else {
       this.filtersChanged = false;
     }
-    this.$emit("input", this.value);
+    this.$emit("input", this.filterValues);
   }
 }
 </script>

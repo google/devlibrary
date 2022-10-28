@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["rajashekarraju"],
+  "authorIds": [
+    "rajashekarraju"
+  ],
   "author": "Rajasekhar K E",
   "title": "Jetpack Compose Hourglass animation on canvas in Android | Developers Breach",
   "link": "https://developersbreach.com/hourglass-animation-canvas-compose/",

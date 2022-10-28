@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["wasabeef"],
+  "authorIds": [
+    "wasabeef"
+  ],
   "owner": "FlutterGen",
   "repo": "flutter_gen",
   "name": "FlutterGen",

@@ -1,4 +1,5 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
   "authorIds": [
@@ -9,7 +10,7 @@
   "name": "ViewModelApp",
   "shortDescription": "This project explains with a simple example of how to implement the view model in kotlin",
   "longDescription": "This project explains with a simple example of how to implement the view model in kotlin",
-  "content": "https://github.com/abhineshchandra1234/ViewModelApp/blob/master/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "kotlin",

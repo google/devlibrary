@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "skydoves"
+  ],
+  "author": "Jaewoong Eum",
+  "title": "Design Patterns and Architecture: The Android Developer Roadmap — Part 4",
+  "link": "https://medium.com/proandroiddev/design-patterns-and-architecture-the-android-developer-roadmap-part-4-a710a29166cd",
+  "tags": [
+    "architecture",
+    "modern-android-development",
+    "kotlin"
+  ]
+}

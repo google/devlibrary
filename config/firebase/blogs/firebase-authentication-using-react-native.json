@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["snehpandya"],
+  "authorIds": [
+    "snehpandya"
+  ],
   "author": "Sneh Pandya",
   "title": "Firebase + React Native Authentication | Codemagic Blog",
   "link": "https://blog.codemagic.io/firebase-authentication-using-react-native/",
