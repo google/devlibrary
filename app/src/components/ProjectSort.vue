@@ -23,7 +23,7 @@
       </MaterialButton>
       <div ref="mdcMenu" class="mdc-menu mdc-menu-surface">
         <ul
-          class="mdc-list"
+          class="mdc-list font-display text-sm"
           role="menu"
           aria-hidden="true"
           aria-orientation="vertical"
