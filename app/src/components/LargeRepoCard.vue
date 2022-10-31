@@ -18,8 +18,24 @@
   <div class="flex flex-col card card-clickable p-4"
        :id="`${repo.id}-card`"
   >
+    <!-- Title -->
+    <router-link :to="link" class="wrap-lines-3">
+      <h3>{{ repo.metadata.repo }}</h3>
+    </router-link>
+
+    <!-- Tags -->
+    <div v-if="showTags" class="card-tags mt-4 frc flex-wrap gap-2">
+      <TagChip
+        v-for="t in repo.metadata.tags"
+        :key="t"
+        :label="getTag(t).label"
+        :textColor="getTag(t).textColor"
+        :bgColor="getTag(t).bgColor"
+      />
+    </div>
+
     <!-- Author photo and name -->
-    <div class="frc">
+    <div class="frc mt-6">
       <!-- Link to author (if present) -->
       <template v-if="authorId">
         <router-link :to="`/authors/${authorId}`" class="frc">
@@ -39,22 +55,6 @@
         size="xtiny"
         :productKey="repo.product"
         class="product-logo ml-auto"
-      />
-    </div>
-
-    <!-- Title -->
-    <router-link :to="link" class="mt-4 wrap-lines-3">
-      <h3>{{ repo.metadata.repo }}</h3>
-    </router-link>
-
-    <!-- Tags -->
-    <div v-if="showTags" class="card-tags mt-4 frc flex-wrap gap-2">
-      <TagChip
-        v-for="t in repo.metadata.tags"
-        :key="t"
-        :label="getTag(t).label"
-        :textColor="getTag(t).textColor"
-        :bgColor="getTag(t).bgColor"
       />
     </div>
 

@@ -18,8 +18,24 @@
   <div class="flex flex-col card card-clickable p-4"
        :id="`${blog.id}-card`"
   >
+    <!-- Title -->
+    <a :href="blog.metadata.link" class="wrap-lines-3">
+      <h3>{{ blog.metadata.title }}</h3>
+    </a>
+
+    <!-- Tags -->
+    <div v-if="showTags" class="card-tags frc mt-4 flex-wrap gap-2">
+      <TagChip
+        v-for="t in blog.metadata.tags"
+        :key="t"
+        :label="getTag(t).label"
+        :textColor="getTag(t).textColor"
+        :bgColor="getTag(t).bgColor"
+      />
+    </div>
+
     <!-- Author photo and name -->
-    <div class="frc">
+    <div class="frc mt-6 mb-4">
       <!-- Link to author (if present) -->
       <template v-if="authorId">
         <router-link :to="`/authors/${authorId}`" class="frc">
@@ -50,22 +66,6 @@
         size="xtiny"
         :productKey="blog.product"
         class="product-logo ml-auto"
-      />
-    </div>
-
-    <!-- Title -->
-    <a :href="blog.metadata.link" class="mt-4 wrap-lines-3">
-      <h3>{{ blog.metadata.title }}</h3>
-    </a>
-
-    <!-- Tags -->
-    <div v-if="showTags" class="card-tags frc mt-4 flex-wrap gap-2">
-      <TagChip
-        v-for="t in blog.metadata.tags"
-        :key="t"
-        :label="getTag(t).label"
-        :textColor="getTag(t).textColor"
-        :bgColor="getTag(t).bgColor"
       />
     </div>
 
