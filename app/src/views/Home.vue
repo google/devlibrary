@@ -24,8 +24,7 @@
       "
     >
       <div class="col-span-12 lg:col-span-6 px-1">
-        <img src="/img/devlibrary-lockup.png" />
-        <h1 class="text-4xl pt-4">
+        <h1 class="text-4xl">
           The platform for Google-curated open-source projects
         </h1>
 
