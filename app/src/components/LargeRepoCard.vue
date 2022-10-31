@@ -50,6 +50,17 @@
           <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
         </router-link>
       </template>
+      <template v-else>
+        <CircleImage
+          v-if="authorImageLoaded"
+          :lazy="true"
+          size="card-avatar"
+          class="mr-2"
+          :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
+        />
+        <div v-else v-html="dynamicAuthorImage"></div>
+        <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
+      </template>
       <ProductLogo
         v-if="showLogo"
         size="xtiny"
