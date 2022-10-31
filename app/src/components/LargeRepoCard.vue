@@ -20,15 +20,20 @@
   >
     <!-- Author photo and name -->
     <div class="frc">
-      <CircleImage
-        v-if="authorImageLoaded"
-        :lazy="true"
-        size="card-avatar"
-        class="mr-2"
-        :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
-      />
-      <div v-else v-html="dynamicAuthorImage"></div>
-      <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
+      <!-- Link to author (if present) -->
+      <template v-if="authorId">
+        <router-link :to="`/authors/${authorId}`" class="frc">
+            <CircleImage
+              v-if="authorImageLoaded"
+              :lazy="true"
+              size="card-avatar"
+              class="mr-2"
+              :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
+            />
+            <div v-else v-html="dynamicAuthorImage"></div>
+            <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
+        </router-link>
+      </template>
 
       <ProductLogo
         v-if="showLogo"
@@ -176,6 +181,17 @@ export default class LargeRepoCard extends Vue {
       hash |= 0;
     }
     return Math.abs(hash);
+  }
+
+  get authorId() {
+    if (
+      this.repo.metadata.authorIds &&
+      this.repo.metadata.authorIds.length > 0
+    ) {
+      return this.repo.metadata.authorIds[0];
+    }
+
+    return undefined;
   }
 
   get link() {
