@@ -182,10 +182,6 @@ export default class LargeRepoCard extends Vue {
     return Math.abs(hash);
   }
 
-  get link() {
-    return `/products/${this.repo.product}/repos/${this.repo.id}`;
-  }
-
   get authorId() {
     if (
       this.repo.metadata.authorIds &&
@@ -195,6 +191,10 @@ export default class LargeRepoCard extends Vue {
     }
 
     return undefined;
+  }
+
+  get link() {
+    return `/products/${this.repo.product}/repos/${this.repo.id}`;
   }
 
   get dynamicAuthorImage() {
