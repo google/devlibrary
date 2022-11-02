@@ -204,7 +204,28 @@
     width: 24px;
   }
 
+  .value-prop-cards {
+    background: #F1F3F4;
+  }
+
+  .value-prop-image {
+    margin-bottom: 33px;
+  }
+
+  .value-prop-image img {
+    width: 200px;
+  }
+
+  .value-prop-cards button {
+    margin-top: auto;
+  }
+
   @screen lg {
+    .homepage-header h1 {
+      font-size: 44px;
+      line-height: 52px;
+    }
+
     .header-image {
       background-image: var(--header-bg-image-desktop);
       background-position: right;
