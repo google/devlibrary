@@ -31,8 +31,8 @@
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
-            Explore open-source projects and content that use or feature Google
-            tools and technologies. We hope this brings you the inspiration you need for your next project!
+            Explore open-source projects and content featuring Google
+            tools and technologies contributed by developers from around the world. Find the inspiration you need for your next project!
           </p>
           <div class="mt-4 lg:mt-6">
             <MaterialButton type="primary">
