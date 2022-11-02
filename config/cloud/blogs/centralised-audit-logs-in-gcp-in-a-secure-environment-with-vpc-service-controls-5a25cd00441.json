@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ouvessvit"
+  ],
+  "author": "Natalie Godec",
+  "title": "Centralised audit logs in GCP in a secure environment with VPC Service Controls",
+  "link": "https://ouvessvit.medium.com/centralised-audit-logs-in-gcp-in-a-secure-environment-with-vpc-service-controls-5a25cd00441",
+  "tags": [
+    "security-identity",
+    "operations"
+  ]
+}

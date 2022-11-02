@@ -1,0 +1,10 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["loicmathieu"],
+  "author": "Loïc Mathieu",
+  "title": "Testing a Java Google Cloud Function | Loic's Blog",
+  "link": "https://www.loicmathieu.fr/wordpress/en/informatique/tester-une-java-google-cloud-function/",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"]
+}
