@@ -25,15 +25,14 @@
     >
       <div class="col-span-12 lg:col-span-6 px-1">
         <h1 class="text-4xl">
-          The platform for Google-curated open-source projects
+          The platform for Google curated open-source projects
         </h1>
 
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
             Explore open-source projects and content that use or feature Google
-            tools and technologies. Browse confidently knowing that our team has
-            looked over all content submissions.
+            tools and technologies. We hope this brings you the inspiration you need for your next project!
           </p>
           <div class="mt-4 lg:mt-6">
             <MaterialButton type="primary">
@@ -66,7 +65,7 @@
         <div class="value-prop-image">
           <img src="../../public/img/speakers.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Are you looking for speakers/experts?</h2>
+        <h2 class="text-3xl mb-6">Are you looking for speakers / experts?</h2>
         <p class="text-lg px-8 pb-8">
           Look for experts in the community
         </p>
