@@ -17,32 +17,88 @@
 <template>
   <div>
     <div
-      class="header-image grid grid-cols-12 py-8 lg:py-10 xl:py-12 px-std border-b border-gray-100"
+      class="homepage-header header-image grid grid-cols-12 py-8 lg:pt-14 lg:pb-12 xl:pt-14 xl:pb-16 px-std border-b border-gray-100"
       style="
         --header-bg-image-desktop: url('/img/banners/desktop/home-wide.png');
         --header-bg-image-mobile: url('/img/banners/mobile/home-wide.png');
       "
     >
-      <div class="col-span-12 lg:col-span-5 px-1">
-        <h1>What will you build?</h1>
+      <div class="col-span-12 lg:col-span-6 px-1">
+        <h1 class="text-4xl">
+          The platform for Google curated open-source projects
+        </h1>
 
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
-          <p class="mt-4 lg:mt-6 pr-4 lg:pr-0">
-            Welcome to Dev Library - a showcase of open-source projects and blog
-            posts built with Google technologies. Created by you, curated by
-            Google engineers.
+          <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
+            Explore open-source projects and content featuring Google
+            tools and technologies contributed by developers from around the world. Find the inspiration you need for your next project!
           </p>
           <div class="mt-4 lg:mt-6">
-            <MaterialButton type="primary" @click.native="showSubmitDialog"
-              >Submit</MaterialButton
-            >
+            <MaterialButton type="primary">
+              <a href="#all-products" class="section">
+                <span>Browse by product</span>
+              </a>
+            </MaterialButton>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Value Prop Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 px-std md:px-20 lg:px-32 xl:px-44 value-prop-cards">
+      <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
+        <div class="value-prop-image">
+          <img src="../../public/img/guided-learning.svg" class="w-1/3" />
+        </div>
+        <h2 class="text-3xl mb-6">Are you looking for guided learning?</h2>
+        <p class="text-lg px-8 pb-8">
+          Visit each product page to filter projects by Content Type, Category or Expertise level.
+        </p>
+        <MaterialButton type="text" class="mb-12">
+          <div class="frc">
+            <a href="#all-products" class="text-lg">See all products</a>
+          </div>
+        </MaterialButton>
+      </div>
+      <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
+        <div class="value-prop-image">
+          <img src="../../public/img/speakers.svg" class="w-1/3" />
+        </div>
+        <h2 class="text-3xl mb-6">Are you looking for speakers / experts?</h2>
+        <p class="text-lg px-8 pb-8">
+          Find and connect with product experts, speakers and authors in the community.
+        </p>
+        <MaterialButton type="text" class="mb-12">
+          <div class="frc">
+            <a
+              href="/authors"
+              class="text-lg"
+            >
+              Browse authors
+            </a>
+          </div>
+        </MaterialButton>
+      </div>
+      <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
+        <div class="value-prop-image">
+          <img src="../../public/img/inspiration.svg" class="w-1/3" />
+        </div>
+        <h2 class="text-3xl mb-6">Are you looking to showcase your work?</h2>
+        <p class="text-lg px-8 pb-8">
+          Submit your projects and blogs to Dev Library to inspire other developers.
+        </p>
+        <MaterialButton type="text" class="mb-12">
+          <div class="frc">
+            <a href="/about" class="text-lg">Learn more</a>
+          </div>
+        </MaterialButton>
+      </div>
+    </div>
+
     <!-- Products -->
+    <div id="all-products"></div>
+    <h1 class="ml-12 mt-10">All products</h1>
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-std">
       <div
         v-for="p in products"
@@ -93,9 +149,9 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-std py-8"
     >
       <div class="col-span-1 lg:col-span-2 lg:px-2">
-        <h2>Recently Added</h2>
+        <h2 class="text-3xl">Latest projects</h2>
         <div class="desktop-only">
-          <p class="text-mgray-800 font-sans text-sm mt-2 mb-4 lg:w-3/4">
+          <p class="mt-2 mb-4 lg:w-3/4 leading-6">
             Check out the latest projects we've added to the Dev Library. To see
             all projects, choose one of the product areas below.
           </p>
@@ -111,12 +167,23 @@
         </div>
       </div>
       <RepoOrBlogCard
-        v-for="p in recentProjects"
+        v-for="p in recentProjects.slice(0, displayedLatestProducts)"
         :key="p.id"
         :project="p"
         :showLogo="true"
         :showTags="false"
       />
+    </div>
+    <div
+      v-show="displayedLatestProducts < recentProjects.length"
+      class="mt-2 mb-20 flex flex-col items-center place-content-center"
+    >
+      <MaterialButton type="text" @click.native="incrementDisplayedLatestProducts">
+        <div class="frc">
+          <span>Load more</span>
+          <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
+        </div>
+      </MaterialButton>
     </div>
   </div>
 </template>
@@ -138,10 +205,16 @@ import {
   queryBlogs,
   shuffleArr,
   wrapInHolders,
+  fetchRepo,
+  fetchBlog,
 } from "@/plugins/data";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
-import { BlogData, RepoData } from "../../../shared/types";
+import {
+  BlogData,
+  BlogOrRepoDataHolder,
+  RepoData,
+} from "../../../shared/types";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
 
@@ -159,6 +232,7 @@ export default class Home extends Vue {
 
   public recentBlogs: Record<string, BlogData[]> = {};
   public recentRepos: Record<string, RepoData[]> = {};
+  public displayedLatestProducts = 6;
 
   public newsletterEmail = "";
 
@@ -172,7 +246,7 @@ export default class Home extends Vue {
     limit: 5,
   };
 
-  mounted() {
+  async mounted() {
     const promises: Promise<unknown>[] = [];
 
     // For each product load 2 recent repos and 2 recent blogs
@@ -208,6 +282,10 @@ export default class Home extends Vue {
 
   public showSubmitDialog() {
     EVENT_BUS.$emit(NAME_SHOW_SUBMIT_DIALOG);
+  }
+
+  public incrementDisplayedLatestProducts() {
+    this.displayedLatestProducts += 4;
   }
 
   get hasContent() {

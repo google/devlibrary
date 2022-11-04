@@ -1,0 +1,10 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["max-makhrov"],
+  "author": "Max Makhrov",
+  "title": "This report shows the use of the new LAMBDA + BYROW function in Google Sheets. Byrow function calculates rows individually and lets you to convert any static formula to ArrayFormula.",
+  "link": "https://max-makhrov.medium.com/how-to-convert-any-formula-to-arrayformula-in-google-sheets-d20f5430b2ff",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"]
+}

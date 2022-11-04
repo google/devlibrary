@@ -67,8 +67,8 @@ export default class SubmitDialog extends Vue {
 
   goToForm() {
     this.show = false;
-    window.location.href =
-      "https://devlibrary.advocu.com/home/applications/form";
+    window.open("https://devlibrary.advocu.com/home/applications/form",
+      "_blank");
   }
 }
 </script>

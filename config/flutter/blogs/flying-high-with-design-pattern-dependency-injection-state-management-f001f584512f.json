@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["sametcilingir"],
+  "author": "Samet Çilingir",
+  "title": "Flying High With Design Pattern & Dependency Injection & State Management",
+  "link": "https://medium.com/flutter-community/flying-high-with-design-pattern-dependency-injection-state-management-f001f584512f",
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}

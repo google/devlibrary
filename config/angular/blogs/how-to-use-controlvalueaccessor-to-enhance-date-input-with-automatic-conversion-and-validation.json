@@ -1,0 +1,12 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["shhdharmen"],
+  "author": "Dharmen Shah",
+  "title": "How to use ControlValueAccessor to enhance date input with automatic conversion and validation",
+  "link": "https://blog.shhdharmen.me/how-to-use-controlvalueaccessor-to-enhance-date-input-with-automatic-conversion-and-validation",
+  "tags": [
+    "demos"
+  ]
+}

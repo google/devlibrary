@@ -18,28 +18,8 @@
   <div class="flex flex-col card card-clickable p-4"
        :id="`${repo.id}-card`"
   >
-    <!-- Author photo and name -->
-    <div class="frc">
-      <CircleImage
-        v-if="authorImageLoaded"
-        :lazy="true"
-        size="card-avatar"
-        class="mr-2"
-        :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
-      />
-      <div v-else v-html="dynamicAuthorImage"></div>
-      <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
-
-      <ProductLogo
-        v-if="showLogo"
-        size="xtiny"
-        :productKey="repo.product"
-        class="product-logo ml-auto"
-      />
-    </div>
-
     <!-- Title -->
-    <router-link :to="link" class="mt-4 wrap-lines-3">
+    <router-link :to="link" class="wrap-lines-3">
       <h3>{{ repo.metadata.repo }}</h3>
     </router-link>
 
@@ -51,6 +31,41 @@
         :label="getTag(t).label"
         :textColor="getTag(t).textColor"
         :bgColor="getTag(t).bgColor"
+      />
+    </div>
+
+    <!-- Author photo and name -->
+    <div class="frc mt-6">
+      <!-- Link to author (if present) -->
+      <template v-if="authorId">
+        <router-link :to="`/authors/${authorId}`" class="frc">
+          <CircleImage
+            v-if="authorImageLoaded"
+            :lazy="true"
+            size="card-avatar"
+            class="mr-2"
+            :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
+          />
+          <div v-else v-html="dynamicAuthorImage"></div>
+          <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
+        </router-link>
+      </template>
+      <template v-else>
+        <CircleImage
+          v-if="authorImageLoaded"
+          :lazy="true"
+          size="card-avatar"
+          class="mr-2"
+          :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
+        />
+        <div v-else v-html="dynamicAuthorImage"></div>
+        <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
+      </template>
+      <ProductLogo
+        v-if="showLogo"
+        size="xtiny"
+        :productKey="repo.product"
+        class="product-logo ml-auto"
       />
     </div>
 
@@ -176,6 +191,17 @@ export default class LargeRepoCard extends Vue {
       hash |= 0;
     }
     return Math.abs(hash);
+  }
+
+  get authorId() {
+    if (
+      this.repo.metadata.authorIds &&
+      this.repo.metadata.authorIds.length > 0
+    ) {
+      return this.repo.metadata.authorIds[0];
+    }
+
+    return undefined;
   }
 
   get link() {
