@@ -17,7 +17,7 @@
 <template>
   <div class="flex flex-col bg-white relative">
     <div class="ml-6 mdc-menu-surface--anchor">
-      <MaterialButton @click.native="menu.open = true">
+      <MaterialButton class="sort-dropdown" @click.native="menu.open = true">
         {{ sortLabelMap.get(sortBy) }}
         <font-awesome-icon icon="chevron-down" size="sm" />
       </MaterialButton>
@@ -35,7 +35,7 @@
             :key="item"
             @click="sortBy = item"
             role="menuitem"
-            class="mdc-list-item px-3 py-2 whitespace-nowrap"
+            class="sort-dropdown mdc-list-item px-3 py-2 whitespace-nowrap"
           >
             <span class="mdc-list-item__ripple"></span>
             <span class="mdc-list-item__text">{{
@@ -52,7 +52,7 @@
 import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 import MaterialButton from "@/components/MaterialButton.vue";
 import { ProductConfig } from "../../../shared/types";
-import { MDCMenu } from "@material/menu";
+import { MDCMenu, Corner } from "@material/menu";
 
 export const SORT_UPDATED = "updated";
 export const SORT_ADDED = "added";
@@ -78,6 +78,7 @@ export default class ProjectFilters extends Vue {
 
   mounted() {
     this.menu = new MDCMenu(this.$refs.mdcMenu as Element);
+    this.menu.setAnchorCorner(Corner.BOTTOM_LEFT);
   }
 
   @Watch("sortBy")
@@ -87,4 +88,8 @@ export default class ProjectFilters extends Vue {
 }
 </script>
 
-<style scoped lang="postcss"></style>
+<style scoped lang="postcss">
+.sort-dropdown {
+  width: 180px;
+}
+</style>
