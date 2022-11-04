@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "doitintl"
+  ],
+  "owner": "doitintl",
+  "repo": "ferent",
+  "name": "Ferent",
+  "shortDescription": "A Clojure library to calculate metrics  of dependency between projects.",
+  "longDescription": "A Clojure library to calculate metrics  of dependency between projects.",
+  "content": "README",
+  "pages": [],
+  "tags": [
+    "operations"
+  ]
+}
