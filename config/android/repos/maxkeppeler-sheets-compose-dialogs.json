@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "maxkeppeler"
+  ],
+  "owner": "maxkeppeler",
+  "repo": "sheets-compose-dialogs",
+  "name": "Sheets-Compose-Dialogs",
+  "shortDescription": "An Android library that offers dialogs & views for various use cases - build with Jetpack Compose for Compose projects. All of the dialogs & views are easy and quick to implement.",
+  "longDescription": "An Android library that offers dialogs & views for various use cases - build with Jetpack Compose for Compose projects. All of the dialogs & views are easy and quick to implement.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui",
+    "compose",
+    "kotlin"
+  ]
+}
