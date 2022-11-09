@@ -406,6 +406,11 @@ export default class Product extends Vue {
 
   @Watch("sortBy")
   public onSortByChanged() {
+    if (this.sortBy === SORT_STARS) {
+      for (const type of this.filters.types) {
+        type.checked = type.value === "open-source";
+      }
+    }
     this.onFiltersTypeChanged();
   }
 

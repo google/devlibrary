@@ -17,11 +17,11 @@
 <template>
   <div class="flex flex-col bg-white relative">
     <div class="ml-6 mdc-menu-surface--anchor">
-      <MaterialButton class="sort-dropdown" @click.native="menu.open = true">
-        {{ sortLabelMap.get(sortBy) }}
+      <MaterialButton class="text-left" @click.native="menu.open = true">
+        Sort by: {{ sortLabelMap.get(sortBy) }}
         <font-awesome-icon icon="chevron-down" size="sm" />
       </MaterialButton>
-      <div ref="mdcMenu" class="mdc-menu mdc-menu-surface">
+      <div ref="mdcMenu" class="mdc-menu mdc-menu-surface w-full">
         <ul
           class="mdc-list font-display text-sm"
           role="menu"
@@ -35,7 +35,7 @@
             :key="item"
             @click="sortBy = item"
             role="menuitem"
-            class="sort-dropdown mdc-list-item px-3 py-2 whitespace-nowrap"
+            class="mdc-list-item px-7 py-2 whitespace-nowrap"
           >
             <span class="mdc-list-item__ripple"></span>
             <span class="mdc-list-item__text">{{
@@ -88,8 +88,4 @@ export default class ProjectFilters extends Vue {
 }
 </script>
 
-<style scoped lang="postcss">
-.sort-dropdown {
-  width: 180px;
-}
-</style>
+<style scoped lang="postcss"></style>
