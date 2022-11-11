@@ -304,7 +304,8 @@
           <p class="mt-4 mb-20">
             To raise an issue, post your issue on the
             <a target="_blank" href="https://github.com/google/devlibrary">
-              Dev Library repo
+              Dev Library repo or fill<a href="https://docs.google.com/forms/d/e/1FAIpQLSeuN1VqnMXszkW37Wylsskv8GZgta9zKqSfB1rqCHrgKxqDzw/viewform?resourcekey=0-V-7D7mf0f5jF2ApHTVWNrg"
+              >this form</a> to write your queries to us.
             </a>.
           </p>
         </div>
