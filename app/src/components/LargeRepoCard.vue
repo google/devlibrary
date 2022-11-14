@@ -20,7 +20,7 @@
   >
     <!-- Title -->
     <router-link :to="link" class="wrap-lines-3">
-      <h3>{{ repo.metadata.repo }}</h3>
+      <h3>{{ repo.metadata.name }}</h3>
     </router-link>
 
     <!-- Tags -->
