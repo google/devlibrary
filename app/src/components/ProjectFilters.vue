@@ -164,6 +164,8 @@ export default class ProjectFilters extends Vue {
 <style scoped lang="postcss">
 .desktop {
   @apply border-gray-200;
+  position: sticky;
+  top: 80px;
 }
 
 .mobile .sections {
