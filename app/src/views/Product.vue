@@ -75,7 +75,7 @@
         <div
           v-if="$mq === 'mobile'"
           v-show="showFilterOverlay"
-          class="mobile-only scrim"
+          class="mobile-only scrim z-10"
         >
           <!-- scrim -->
         </div>
@@ -83,7 +83,7 @@
           <div
             v-if="$mq === 'mobile'"
             v-show="showFilterOverlay"
-            class="mobile-only fixed right-0 top-0 pt-20 w-full h-full"
+            class="mobile-only fixed right-0 top-0 pt-20 w-full h-full z-10"
           >
             <div class="bg-white rounded-l overflow-hidden w-2/3 ml-auto">
               <ProjectFilters
