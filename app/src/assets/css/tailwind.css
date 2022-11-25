@@ -43,7 +43,6 @@
   }
 
   #app {
-
   }
   h1,
   h2,
@@ -130,7 +129,8 @@
     margin-bottom: 0;
   }
 
-  input:active, input:focus-visible {
+  input:active,
+  input:focus-visible {
     outline: none;
   }
 
@@ -144,7 +144,7 @@
 
   .stale-card > div,
   .stale-card > a > h3 {
-    color: #5F6368;
+    color: #5f6368;
   }
 
   .stale-card img.card-avatar,
@@ -155,15 +155,15 @@
   .stale-card svg.fa-github,
   .stale-card svg.fa-clipboard-list,
   .stale-card .card-tags > div > span {
-    color: #80868B;
+    color: #80868b;
   }
 
   .stale-card button {
-    color: #80868B !important;
+    color: #80868b !important;
   }
 
   .stale-card .card-tags > div {
-    background: #F1F3F4;
+    background: #f1f3f4;
   }
 
   .header-image {
@@ -205,7 +205,7 @@
   }
 
   .value-prop-cards {
-    background: #F1F3F4;
+    background: #f1f3f4;
   }
 
   .value-prop-image {

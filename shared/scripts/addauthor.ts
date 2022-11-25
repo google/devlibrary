@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-import * as cheerio from 'cheerio';
-import * as fs from 'fs';
-import fetch from 'node-fetch';
-import ogs from 'open-graph-scraper';
-import * as path from 'path';
+import * as cheerio from "cheerio";
+import * as fs from "fs";
+import fetch from "node-fetch";
+import ogs from "open-graph-scraper";
+import * as path from "path";
 
-import {getConfigDir, writeOrUpdateJSON} from './util';
+import { getConfigDir, writeOrUpdateJSON } from "./util";
 
 // https://medium.com/@username
 const RE_AUTHOR_AT = /https:\/\/medium\.com\/@([\w]+)/;
@@ -30,18 +30,18 @@ const RE_AUTHOR_SUBDOMAIN = /https:\/\/([\w]+)\.medium\.com/;
 
 export function normalizeAuthorId(id: string) {
   // Replace all '.' with '-'
-  return id.split('.').join('-').toLowerCase();
+  return id.split(".").join("-").toLowerCase();
 }
 
 function authorFilePath(normalizedId: string) {
-  return path.join(getConfigDir(), 'authors', `${normalizedId}.json`);
+  return path.join(getConfigDir(), "authors", `${normalizedId}.json`);
 }
 
 export function authorExists(owner: string) {
   return fs.existsSync(authorFilePath(normalizeAuthorId(owner)));
 }
 
-function extractAuthorFromLink(href: string): string|undefined {
+function extractAuthorFromLink(href: string): string | undefined {
   const atMatch = href.match(RE_AUTHOR_AT);
   if (atMatch && atMatch.length >= 1) {
     return atMatch[1];
@@ -55,15 +55,16 @@ function extractAuthorFromLink(href: string): string|undefined {
   return undefined;
 }
 
-export async function getMediumPostAuthor(url: string):
-    Promise<string|undefined> {
+export async function getMediumPostAuthor(
+  url: string
+): Promise<string | undefined> {
   const res = await fetch(url);
   const html = await res.text();
   const $ = cheerio.load(html);
 
   // As a primary, use the author link on the page
   const authorLink = $.root().find('link[rel="author"]');
-  const href = authorLink?.attr('href');
+  const href = authorLink?.attr("href");
   if (href) {
     return extractAuthorFromLink(href);
   }
@@ -72,38 +73,41 @@ export async function getMediumPostAuthor(url: string):
   return extractAuthorFromLink(url);
 }
 
-async function requestAuthorPage(username: string):
-    Promise<{url: string; data: ogs.SuccessResult | ogs.ErrorResult}> {
+async function requestAuthorPage(
+  username: string
+): Promise<{ url: string; data: ogs.SuccessResult | ogs.ErrorResult }> {
   const urls = [
     `https://medium.com/@${username}`,
     `https://${username}.medium.com/`,
   ];
 
-  return ogs({url: urls[0]})
-      .then((data) => ({url: urls[0], data}))
-      .catch(() => ogs({url: urls[1]}).then((data) => ({url: urls[1], data})))
-      .catch((e) => {
-        console.error(e);
-        return Promise.reject(
-            new Error(`Could not resolve any page for author ${username}`));
-      });
+  return ogs({ url: urls[0] })
+    .then((data) => ({ url: urls[0], data }))
+    .catch(() => ogs({ url: urls[1] }).then((data) => ({ url: urls[1], data })))
+    .catch((e) => {
+      console.error(e);
+      return Promise.reject(
+        new Error(`Could not resolve any page for author ${username}`)
+      );
+    });
 }
 
 export async function addMediumAuthor(username: string) {
-  const {url, data} = await requestAuthorPage(username);
+  const { url, data } = await requestAuthorPage(username);
   if (!data.result.success) {
-    console.warn('Could not add author!');
+    console.warn("Could not add author!");
     return;
   }
 
-  const title = data.result.ogTitle || '';
-  const photoURL = data.result.ogImage && 'url' in data.result.ogImage ?
-      data.result.ogImage.url.replace('/max/2400/', '/max/512/') :
-      undefined;
+  const title = data.result.ogTitle || "";
+  const photoURL =
+    data.result.ogImage && "url" in data.result.ogImage
+      ? data.result.ogImage.url.replace("/max/2400/", "/max/512/")
+      : undefined;
 
   const author = {
-    name: title.split(' – ')[0].trim(),
-    bio: '',
+    name: title.split(" – ")[0].trim(),
+    bio: "",
     photoURL,
     mediumURL: url,
   };
@@ -116,26 +120,26 @@ export async function addMediumAuthor(username: string) {
 export async function addGithubAuthor(username: string) {
   // If available, use a GitHub token from the environment
   const headers: Record<string, string> = {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   };
   if (process.env.GITHUB_TOKEN) {
-    headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
+    headers["Authorization"] = `token ${process.env.GITHUB_TOKEN}`;
   }
 
   const res = await fetch(`https://api.github.com/users/${username}`, {
-    method: 'get',
+    method: "get",
     headers,
   });
-  const {name, bio, type} = await res.json();
+  const { name, bio, type } = await res.json();
 
-  if (type === 'Organization') {
-    console.log('Skipping organization', username);
+  if (type === "Organization") {
+    console.log("Skipping organization", username);
     return false;
   }
 
   const author = {
     name: name || username,
-    bio: bio || '',
+    bio: bio || "",
     photoURL: `https://avatars.githubusercontent.com/${username}`,
     githubURL: `https://github.com/${username}`,
   };
@@ -150,17 +154,18 @@ export async function addGithubAuthor(username: string) {
 export async function main(args: string[]) {
   if (args.length < 4) {
     console.error(
-        'Missing required arguments:\nnpm run addauthor <medium | github> <username>');
+      "Missing required arguments:\nnpm run addauthor <medium | github> <username>"
+    );
     return;
   }
 
   const source = args[2];
   const username = args[3];
 
-  if (source === 'github') {
+  if (source === "github") {
     console.log(`GitHub username: ${username}`);
     await addGithubAuthor(username);
-  } else if (source === 'medium') {
+  } else if (source === "medium") {
     console.log(`Medium username: ${username}`);
     await addMediumAuthor(username);
   } else {

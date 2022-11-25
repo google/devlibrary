@@ -56,7 +56,9 @@
           </p>
           <p class="mt-8 flex flex-wrap gap-4">
             <a href="mailto:library-google-dev@google.com">
-              <MaterialButton @click.native="showSubmitDialog" type="primary">Submit your content</MaterialButton>
+              <MaterialButton @click.native="showSubmitDialog" type="primary"
+                >Submit your content</MaterialButton
+              >
             </a>
           </p>
         </div>
@@ -69,15 +71,15 @@
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p class="mt-6 font-bold">Terms of Service</p>
           <p class="mt-4">
-            <a href="https://developers.google.com/terms/site-terms"
-               target="_blank"
+            <a
+              href="https://developers.google.com/terms/site-terms"
+              target="_blank"
               >https://developers.google.com/terms/site-terms</a
             >
           </p>
           <p class="mt-6 font-bold">Privacy Policy</p>
           <p class="mt-4">
-            <a href="https://policies.google.com/privacy"
-               target="_blank"
+            <a href="https://policies.google.com/privacy" target="_blank"
               >https://policies.google.com/privacy</a
             >
           </p>
@@ -95,8 +97,9 @@
             and we’ll take appropriate action. For example, we suspend or close
             the Google Accounts of repeat copyright infringers as described in
             our
-            <a target="_blank"
-               href="https://support.google.com/legal/topic/4558877?hl=en&ref_topic=4556931"
+            <a
+              target="_blank"
+              href="https://support.google.com/legal/topic/4558877?hl=en&ref_topic=4556931"
               >Copyright Help Center</a
             >.
           </p>
@@ -147,15 +150,9 @@
             are rewarded with:
           </p>
           <ul class="ml-6 mt-2 list-disc">
-            <li>
-              Author page
-            </li>
-            <li>
-              Contributor badge on their Google Developer Profile
-            </li>
-            <li>
-              Feature in our monthly newsletter
-            </li>
+            <li>Author page</li>
+            <li>Contributor badge on their Google Developer Profile</li>
+            <li>Feature in our monthly newsletter</li>
           </ul>
 
           <p class="mt-6 font-bold">
@@ -203,9 +200,7 @@
             We have no limit to quality content being served on our site.
           </p>
 
-          <p class="mt-6 font-bold">
-            What happens after I submit?
-          </p>
+          <p class="mt-6 font-bold">What happens after I submit?</p>
           <p class="mt-4">
             Google experts from each product area review submissions for
             quality, freshness, and uniqueness. If it is deemed appropriate,
@@ -219,42 +214,40 @@
           </p>
           <ul class="ml-6 mt-2 list-disc">
             <li>
-              <strong>Absence of a GitHub license</strong>:
-              : Before submitting a project, ensure you have either an Apache
-              2.0 or MIT license.
+              <strong>Absence of a GitHub license</strong>: : Before submitting
+              a project, ensure you have either an Apache 2.0 or MIT license.
             </li>
             <li>
-              <strong>Incoherent README</strong>:
-              Make sure you don't have an empty README. To get accepted, we
-              encourage having a properly written, structured, and
-              well-explained README with visuals, if needed.
+              <strong>Incoherent README</strong>: Make sure you don't have an
+              empty README. To get accepted, we encourage having a properly
+              written, structured, and well-explained README with visuals, if
+              needed.
             </li>
             <li>
-              <strong>Improper Versioning</strong>:
-              Make sure your project follows the latest software updates.
+              <strong>Improper Versioning</strong>: Make sure your project
+              follows the latest software updates.
             </li>
             <li>
-              <strong>Monetised</strong>:
-              If we find out that the blogs are behind a paywall (in Medium),
-              have ads, or are getting monetized in any form, we don’t accept
-              them.
+              <strong>Monetised</strong>: If we find out that the blogs are
+              behind a paywall (in Medium), have ads, or are getting monetized
+              in any form, we don’t accept them.
             </li>
             <li>
-              <strong>Language</strong>:
-              Although we are working toward localization, we currently can only
-              support content in English.
+              <strong>Language</strong>: Although we are working toward
+              localization, we currently can only support content in English.
             </li>
             <li>
-              <strong>Freshness</strong>:
-              If the content is fairly old, or hasn’t been updated for a long
-              time, chances of rejection are higher.
+              <strong>Freshness</strong>: If the content is fairly old, or
+              hasn’t been updated for a long time, chances of rejection are
+              higher.
             </li>
           </ul>
 
           <p class="mt-2">
             For an extensive explanation, read our
-            <a target="_blank"
-               href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf"
+            <a
+              target="_blank"
+              href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf"
               >contributor guidelines</a
             >
             to fix the errors and re-submit.
@@ -293,19 +286,23 @@
           <p class="mt-4">
             To remove your content, please raise a Pull Request on the Dev
             Library’s
-            <a target="_blank"
-               href="https://github.com/google/devlibrary"
-               >
-              GitHub repo
-            </a>.
+            <a target="_blank" href="https://github.com/google/devlibrary">
+              GitHub repo </a
+            >.
           </p>
 
           <p class="mt-6 font-bold">How do I raise another issue?</p>
           <p class="mt-4 mb-20">
             To raise an issue, post your issue on the
             <a target="_blank" href="https://github.com/google/devlibrary">
-              Dev Library repo</a> or fill <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuN1VqnMXszkW37Wylsskv8GZgta9zKqSfB1rqCHrgKxqDzw/viewform?resourcekey=0-V-7D7mf0f5jF2ApHTVWNrg"
-              >this form</a> to write your queries to us.
+              Dev Library repo</a
+            >
+            or fill
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeuN1VqnMXszkW37Wylsskv8GZgta9zKqSfB1rqCHrgKxqDzw/viewform?resourcekey=0-V-7D7mf0f5jF2ApHTVWNrg"
+              >this form</a
+            >
+            to write your queries to us.
           </p>
         </div>
       </div>
