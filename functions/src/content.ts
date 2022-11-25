@@ -68,7 +68,7 @@ export function renderContent(
 function replaceEmojis(md: string, emojis: Record<string, string>): string {
   let content = md.split("\n");
   let isInCodeBlock = false;
-  
+
   for (const k of Object.keys(emojis)) {
     const withColons = `:${k}:`;
     const asEmoji = emojis[k];
