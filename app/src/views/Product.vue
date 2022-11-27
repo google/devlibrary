@@ -144,7 +144,11 @@
               Go
             </MaterialButton>
             <div class="desktop-only">
-              <ProjectSort v-model="sortBy" :product="product" :defaultSort="sortBy" />
+              <ProjectSort
+                v-model="sortBy"
+                :product="product"
+                :defaultSort="sortBy"
+              />
             </div>
           </div>
           <!-- Filter Chips -->
@@ -156,7 +160,11 @@
                   <font-awesome-icon icon="filter" size="sm" class="mr-2" />
                   <span>Filters</span>
                 </div>
-                <ProjectSort v-model="sortBy" :product="product" :defaultSort="sortBy" />
+                <ProjectSort
+                  v-model="sortBy"
+                  :product="product"
+                  :defaultSort="sortBy"
+                />
               </div>
             </div>
 
@@ -249,7 +257,11 @@ import UIModule from "@/store/ui";
 import MaterialButton from "@/components/MaterialButton.vue";
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import ProjectFilters from "@/components/ProjectFilters.vue";
-import ProjectSort, {SORT_ADDED, SORT_UPDATED, SORT_STARS} from "@/components/ProjectSort.vue";
+import ProjectSort, {
+  SORT_ADDED,
+  SORT_UPDATED,
+  SORT_STARS,
+} from "@/components/ProjectSort.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import RadioGroup from "@/components/RadioGroup.vue";
 import CheckboxGroup, {

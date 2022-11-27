@@ -12,21 +12,11 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": [
-      "webpack-env",
-      "@types/gtag.js"
-    ],
+    "types": ["webpack-env", "@types/gtag.js"],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
     "src/**/*.ts",
@@ -36,8 +26,5 @@
     "tests/**/*.tsx",
     "../shared/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "../shared/scripts/*.ts"
-  ]
+  "exclude": ["node_modules", "../shared/scripts/*.ts"]
 }
