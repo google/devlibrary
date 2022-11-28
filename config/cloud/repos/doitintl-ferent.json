@@ -10,7 +10,7 @@
   "name": "Ferent",
   "shortDescription": "A Clojure library to calculate metrics  of dependency between projects.",
   "longDescription": "A Clojure library to calculate metrics  of dependency between projects.",
-  "content": "README",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "operations"
