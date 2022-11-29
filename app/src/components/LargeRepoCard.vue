@@ -15,9 +15,7 @@
 -->
 
 <template>
-  <div class="flex flex-col card card-clickable p-4"
-       :id="`${repo.id}-card`"
-  >
+  <div class="flex flex-col card card-clickable p-4" :id="`${repo.id}-card`">
     <!-- Title -->
     <router-link :to="link" class="wrap-lines-3">
       <h3>{{ repo.metadata.name }}</h3>
@@ -44,7 +42,7 @@
             :lazy="true"
             size="card-avatar"
             class="mr-2"
-            :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
+            :src="authorPhotoUrl"
           />
           <div v-else v-html="dynamicAuthorImage"></div>
           <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
@@ -56,7 +54,7 @@
           :lazy="true"
           size="card-avatar"
           class="mr-2"
-          :src="`https://avatars.githubusercontent.com/${repo.metadata.owner}`"
+          :src="authorPhotoUrl"
         />
         <div v-else v-html="dynamicAuthorImage"></div>
         <span class="font-display text-lg">{{ repo.metadata.owner }}</span>
@@ -106,6 +104,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 import TagChip from "@/components/TagChip.vue";
 import ProductLogo from "@/components/ProductLogo.vue";
 import CircleImage from "@/components/CircleImage.vue";
+import { getApiHost } from "@/plugins/data";
 import { ColorJson } from "../assets/ts/profile-colors";
 
 import * as dates from "@/plugins/dates";
@@ -128,7 +127,8 @@ export default class LargeRepoCard extends Vue {
 
   async mounted() {
     if (this.isStale(this.repo.stats.lastUpdated)) {
-      document.getElementById(`${this.repo.id}-card`)!.className += " stale-card";
+      document.getElementById(`${this.repo.id}-card`)!.className +=
+        " stale-card";
     }
     this.authorImageLoaded = await this.getImage();
   }
@@ -152,11 +152,19 @@ export default class LargeRepoCard extends Vue {
     return product.getTag(this.repo.product, value);
   }
 
+  get authorPhotoUrl(): string {
+    if (this.authorId) {
+      return `${getApiHost()}/api/authorPhoto?id=${this.authorId}`;
+    } else if (this.repo.metadata.owner) {
+      return `https://avatars.githubusercontent.com/${this.repo.metadata.owner}`;
+    }
+
+    return '';
+  }
+
   public async getImage() {
-    if (this.repo.metadata.owner) {
-      const imageExists = await this.imageExists(
-        `https://avatars.githubusercontent.com/${this.repo.metadata.owner}`
-      );
+    if (this.authorPhotoUrl) {
+      const imageExists = await this.imageExists(this.authorPhotoUrl);
       if (!imageExists) {
         return false;
       } else {

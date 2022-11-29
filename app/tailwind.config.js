@@ -113,7 +113,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      textColor: ['last'],
+      textColor: ["last"],
     },
   },
   plugins: [require("@tailwindcss/typography")],

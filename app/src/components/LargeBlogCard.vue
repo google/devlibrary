@@ -15,9 +15,7 @@
 -->
 
 <template>
-  <div class="flex flex-col card card-clickable p-4"
-       :id="`${blog.id}-card`"
-  >
+  <div class="flex flex-col card card-clickable p-4" :id="`${blog.id}-card`">
     <!-- Title -->
     <a :href="blog.metadata.link" class="wrap-lines-3">
       <h3>{{ blog.metadata.title }}</h3>
@@ -125,7 +123,8 @@ export default class LargeBlogCard extends Vue {
 
   async mounted() {
     if (this.isStale(this.blog.stats.lastUpdated)) {
-      document.getElementById(`${this.blog.id}-card`)!.className += " stale-card";
+      document.getElementById(`${this.blog.id}-card`)!.className +=
+        " stale-card";
     }
     this.authorImageLoaded = await this.getImage();
   }
