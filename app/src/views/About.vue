@@ -14,6 +14,8 @@
  limitations under the License.
 -->
 
+
+<!-- About -->
 <template>
   <div class="about">
     <Breadcrumbs :links="getBreadcrumbs()"></Breadcrumbs>
@@ -64,6 +66,9 @@
         </div>
       </div>
     </div>
+
+
+    <!-- Policies -->
     <div class="grid gap-4 grid-cols-6">
       <div class="section mt-6 lg:mt-10">
         <h1>Policies</h1>
@@ -106,6 +111,8 @@
         </div>
       </div>
 
+
+    <!-- Frequently asked questions -->
       <div class="section mt-6 lg:mt-10">
         <h1>Frequently Asked Questions</h1>
 
