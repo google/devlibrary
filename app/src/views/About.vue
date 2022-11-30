@@ -286,7 +286,7 @@
           </p>
 
           <p class="mt-6 font-bold">How do I raise another issue?</p>
-          <p class="mt-4 mb-20">
+          <p class="mt-4">
             To raise an issue, post your issue on the
             <a target="_blank" href="https://github.com/google/devlibrary">
               Dev Library repo</a
@@ -328,7 +328,7 @@
           <p class="mt-4 font-bold">
             Why is the content on my profile grayed out?
           </p>
-          <p class="mt-6">
+          <p class="mt-6 mb-20">
             Content which was last updated more than 18 months back is grayed out. We encourage you to keep your content updated as per the latest product guidelines.
           </p>
         </div>
