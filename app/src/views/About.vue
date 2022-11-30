@@ -112,35 +112,21 @@
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p class="mt-6 font-bold">What is Dev Library?</p>
           <p class="mt-4">
-            Dev Library is a platform for showcasing open-source projects and
-            technical blogs featuring Google technologies.
+            Dev Library is a platform for showcasing open-source projects and technical blogs featuring Google technologies.
           </p>
           <p class="mt-2">
-            Any developer who has built an open-source project using Google's
-            technologies, or has written about a solution they solved using
-            Google's tools, can apply to have their project or content featured
-            on the site.
+            Any developer who has built an open-source project using Google's technologies, or has written about a solution they solved using Google's tools, can apply to have their project or content featured on the site.
           </p>
           <p class="mt-2">
-            Google experts then review each submission for quality, relevance
-            and uniqueness. If approved, the project is included on the site.
+            Google experts then review each submission for quality, relevance and uniqueness. If approved, the project is included on the site.
           </p>
-
           <p class="mt-6 font-bold">What is the purpose of this site?</p>
           <p class="mt-4">
-            We noticed all of the amazing open-source projects being built with
-            Google's tools and technologies. We wanted to create a place that
-            would provide visibility for the talented developers behind the
-            projects, and introduce high-quality projects to a wide audience of
-            developers.
+            We noticed all of the amazing open-source projects being built with Google's tools and technologies. We wanted to create a place that would provide visibility for the talented developers behind the projects, and introduce high-quality projects to a wide audience of developers.
           </p>
           <p class="mt-2">
-            You can browse through the projects and content featured on the site
-            for inspiration, search for a particular product or keyword, or
-            submit your project for review and the possibility of being included
-            on the site.
+            You can browse through the projects and content featured on the site for inspiration, search for a particular product or keyword, or submit your project for review and the possibility of being included on the site.
           </p>
-
           <p class="mt-6 font-bold">
             Are there any benefits to contributing to the site?
           </p>
@@ -150,9 +136,11 @@
             are rewarded with:
           </p>
           <ul class="ml-6 mt-2 list-disc">
-            <li>Author page</li>
+            <li>Dedicated Author page</li>
             <li>Contributor badge on their Google Developer Profile</li>
             <li>Feature in our monthly newsletter</li>
+            <li>Content reviewed by Google engineers</li>
+            <li>Amplification to inspire & help developers to build with Google</li>
           </ul>
 
           <p class="mt-6 font-bold">
@@ -250,7 +238,7 @@
               href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf"
               >contributor guidelines</a
             >
-            to fix the errors and re-submit.
+            to fix the errors, update the content and re-submit.
           </p>
 
           <p class="mt-6 font-bold">
@@ -258,7 +246,7 @@
           </p>
           <p class="mt-4">
             As soon as you submit your content, you will receive an email
-            onfirming your submission. From there, it generally takes 1-2 weeks
+            confirming your submission. From there, it generally takes 2-4 weeks
             for your content to be reviewed. After the review, you will receive
             an email stating whether the project was accepted or not. If you
             don’t see an email, make sure to check your spam or promotions
@@ -267,8 +255,7 @@
           </p>
 
           <p class="mt-6 font-bold">
-            I was approved! How long will it take for my content to appear on
-            the site?
+            My content was approved. How long will it take for my content to appear on the site?
           </p>
           <p class="mt-4">
             Once approved, the content generally appears on the site within one
@@ -303,6 +290,39 @@
               >this form</a
             >
             to write your queries to us.
+          </p>
+          <p class="mt-6 font-bold">
+            What is the best way to reach out to us?
+          </p>
+          <p class="mt-4">
+            Join on our <a target="_blank" href="https://discord.gg/AbwzvEqdCu">Discord server</a>, you will find the dedicated channel #dev-library-discussions. This is the best way to chat with other contributors whether you want to discuss new topics, new projects, share your experience, give feedback, this is the place to go!
+          </p>
+          <p class="mt-6 font-bold">
+            Will I get a notification/ email if my submission gets rejected?
+          </p>
+          <p class="mt-4">
+            Yes, we will send you a rejection email.
+          </p>
+          <p class="mt-6 font-bold">
+            What is the best way to reach out to follow stand-out projects from Dev Library?
+          </p>
+          <p class="mt-4">
+            You can <a target="_blank" href="https://forms.gle/Wco9K4ePqgCW5sre6">subscribe to our newsletter here</a>. We curate some best submissions in each tech stack every month with this newsletter.
+          </p>
+          <p class="mt-4">
+            We have also written some blog posts detailing unique projects and how developers have used the platform to showcase their contributions. You can <a href="http://https://developers.googleblog.com/search/label/Dev%20Library?max-results=12" target="_blank">access the archive here</a>.
+          </p>
+          <p class="mt-4 font-bold">
+            How do I get the  Dev Library Contributor's Badge for my Google Developer Profile?
+          </p>
+          <p class="mt-6">
+            If your content is accepted to be showcased on the platform, you  are eligible for the contributor badge. We will send you an email with instructions to claim your contributor badge. Contributor badges are sent out once every 2-3 months.
+          </p>
+          <p class="mt-4 font-bold">
+            Why is the content on my profile grayed out?
+          </p>
+          <p class="mt-6">
+            Content which was last updated more than 18 months back is grayed out. We encourage you to keep your content updated as per the latest product guidelines.
           </p>
         </div>
       </div>
