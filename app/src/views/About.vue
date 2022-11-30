@@ -113,7 +113,6 @@
 
 
     <!-- Frequently asked questions -->
-    <div class="grid gap-4 grid-cols-6">
       <div class="section mt-6 lg:mt-10">
         <h1>Frequently Asked Questions</h1>
 
@@ -336,7 +335,6 @@
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script lang="ts">
