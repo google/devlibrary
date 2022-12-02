@@ -76,7 +76,7 @@ export default class CheckboxGroup extends Vue {
 
   @Prop() value!: string;
 
-  @Watch("value", {deep: true})
+  @Watch("value", { deep: true })
   public onValueChange(val: any) {
     this.entries = val;
     this.emitValue();
