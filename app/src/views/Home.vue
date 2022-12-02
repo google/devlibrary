@@ -344,6 +344,10 @@ export default class Home extends Vue {
   }
 
   get newsletterLink() {
+    gtag('event', 'conversion', {
+      'event_category' : 'engagement',
+      'event_label' : 'subscribe',
+    });
     return `https://docs.google.com/forms/d/e/1FAIpQLSemI2L4-6KCt0Pbze4sxBMLjXdo8Q3YukHg_dSEhdgb9njtgQ/viewform?usp=pp_url&entry.174388885=${this.newsletterEmail}`;
   }
 }

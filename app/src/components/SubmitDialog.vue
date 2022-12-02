@@ -67,6 +67,10 @@ export default class SubmitDialog extends Vue {
 
   goToForm() {
     this.show = false;
+    gtag('event', 'conversion', {
+      'event_category' : 'engagement',
+      'event_label' : 'submit_your_content',
+    });
     window.open("https://devlibrary.advocu.com/home/applications/form",
       "_blank");
   }
