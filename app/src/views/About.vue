@@ -159,7 +159,7 @@
             teaches adult learners to write JavaScript, free of charge.
           </p>
           <p class="mt-2">
-            If you're a beginner developer with some basic coding knowledge, we
+            If you're a beginner with some basic coding knowledge, we
             encourage you to browse the site. You may learn something useful
             from the open source projects and libraries.
           </p>
@@ -239,7 +239,7 @@
           </ul>
 
           <p class="mt-2">
-            For an extensive explanation, read our
+            For a more detailed explanation, read our
             <a
               target="_blank"
               href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf"
@@ -253,11 +253,11 @@
           </p>
           <p class="mt-4">
             As soon as you submit your content, you will receive an email
-            confirming your submission. From there, it generally takes 2-4 weeks
-            for your content to be reviewed. After the review, you will receive
-            an email stating whether the project was accepted or not. If you
+            confirming that your content has been submitted. It generally takes 2-4 weeks
+            for the content to be reviewed. Post the review we will send out
+            an email stating whether the submission was accepted or not. If you
             don’t see an email, make sure to check your spam or promotions
-            folder. Add DevLibrary emails to your allowlist so you don’t miss
+            folder and add Dev Library emails to your allowlist so you don’t miss
             out on the updates.
           </p>
 
@@ -265,14 +265,9 @@
             My content was approved. How long will it take for my content to appear on the site?
           </p>
           <p class="mt-4">
-            Once approved, the content generally appears on the site within one
+            Once approved, the content is added to the site within one
             week.
           </p>
-
-          <p class="mt-6 font-bold">
-            Can I submit content in different product categories?
-          </p>
-          <p class="mt-4">Yes!</p>
 
           <p class="mt-6 font-bold">
             How do I request for content to be removed?
@@ -299,10 +294,10 @@
             to write your queries to us.
           </p>
           <p class="mt-6 font-bold">
-            What is the best way to reach out to us?
+            What is the best way to connect with other authors?
           </p>
           <p class="mt-4">
-            Join on our <a target="_blank" href="https://discord.gg/AbwzvEqdCu">Discord server</a>, you will find the dedicated channel #dev-library-discussions. This is the best way to chat with other contributors whether you want to discuss new topics, new projects, share your experience, give feedback, this is the place to go!
+            Join on our <a target="_blank" href="https://discord.gg/AbwzvEqdCu">Discord server</a> where you will find the dedicated channel #dev-library-discussions. This is the best way to chat with other contributors whether you want to discuss new topics, new projects, share your experience or give feedback, this is the place to go!
           </p>
           <p class="mt-6 font-bold">
             Will I get a notification/ email if my submission gets rejected?
