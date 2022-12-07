@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": ["joshuafox"],
+  "owner": "doitintl",
+  "repo": "intercloud-throughput",
+  "name": "Intercloud Throughput",
+  "shortDescription": "Why are so few megabits per second flowing from one cloud region to another? Is it distance? Inter-cloud bottlenecks? Test throughput (and latency) between regions of GCP and/or AWS",
+  "longDescription": "Why are so few megabits per second flowing from one cloud region to another? Is it distance? Inter-cloud bottlenecks? Test throughput (and latency) between regions of GCP and/or AWS",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "networking"
+  ]
+}
