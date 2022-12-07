@@ -1,0 +1,12 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["aayushgupta"],
+  "author": "Aayush Gupta",
+  "title": "Working with SELinux on Android",
+  "link": "https://lineageos.org/engineering/HowTo-SELinux/",
+  "tags": [
+    "build-tools"
+  ]
+}
