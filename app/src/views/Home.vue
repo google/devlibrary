@@ -217,6 +217,7 @@ import {
 } from "../../../shared/types";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
+import { conversionEvent } from "@/plugins/gtag";
 
 @Component({
   components: {
@@ -344,6 +345,7 @@ export default class Home extends Vue {
   }
 
   get newsletterLink() {
+    conversionEvent("subscribe");
     return `https://docs.google.com/forms/d/e/1FAIpQLSemI2L4-6KCt0Pbze4sxBMLjXdo8Q3YukHg_dSEhdgb9njtgQ/viewform?usp=pp_url&entry.174388885=${this.newsletterEmail}`;
   }
 }
