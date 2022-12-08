@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "matteomacri18"
+  ],
+  "author": "Matteo Macri",
+  "title": "Create and publish your own Android Library w/ JitPack",
+  "link": "https://medium.com/@matteomacri18/create-and-publish-your-own-android-library-w-jitpack-c96286c12a8f",
+  "tags": [
+    "modern-android-development",
+    "build-tools"
+  ]
+}

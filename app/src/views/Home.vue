@@ -31,8 +31,9 @@
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
-            Explore open-source projects and content featuring Google
-            tools and technologies contributed by developers from around the world. Find the inspiration you need for your next project!
+            Explore open-source projects and content featuring Google tools and
+            technologies contributed by developers from around the world. Find
+            the inspiration you need for your next project!
           </p>
           <div class="mt-4 lg:mt-6">
             <MaterialButton type="primary">
@@ -46,14 +47,19 @@
     </div>
 
     <!-- Value Prop Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 px-std md:px-20 lg:px-32 xl:px-44 value-prop-cards">
-      <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 px-std md:px-20 lg:px-32 xl:px-44 value-prop-cards"
+    >
+      <div
+        class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
+      >
         <div class="value-prop-image">
           <img src="../../public/img/guided-learning.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">Are you looking for guided learning?</h2>
         <p class="text-lg px-8 pb-8">
-          Visit each product page to filter projects by Content Type, Category or Expertise level.
+          Visit each product page to filter projects by Content Type, Category
+          or Expertise level.
         </p>
         <MaterialButton type="text" class="mb-12">
           <div class="frc">
@@ -61,32 +67,33 @@
           </div>
         </MaterialButton>
       </div>
-      <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
+      <div
+        class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
+      >
         <div class="value-prop-image">
           <img src="../../public/img/speakers.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">Are you looking for speakers / experts?</h2>
         <p class="text-lg px-8 pb-8">
-          Find and connect with product experts, speakers and authors in the community.
+          Find and connect with product experts, speakers and authors in the
+          community.
         </p>
         <MaterialButton type="text" class="mb-12">
           <div class="frc">
-            <a
-              href="/authors"
-              class="text-lg"
-            >
-              Browse authors
-            </a>
+            <a href="/authors" class="text-lg"> Browse authors </a>
           </div>
         </MaterialButton>
       </div>
-      <div class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center">
+      <div
+        class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
+      >
         <div class="value-prop-image">
           <img src="../../public/img/inspiration.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">Are you looking to showcase your work?</h2>
         <p class="text-lg px-8 pb-8">
-          Submit your projects and blogs to Dev Library to inspire other developers.
+          Submit your projects and blogs to Dev Library to inspire other
+          developers.
         </p>
         <MaterialButton type="text" class="mb-12">
           <div class="frc">
@@ -178,7 +185,10 @@
       v-show="displayedLatestProducts < recentProjects.length"
       class="mt-2 mb-20 flex flex-col items-center place-content-center"
     >
-      <MaterialButton type="text" @click.native="incrementDisplayedLatestProducts">
+      <MaterialButton
+        type="text"
+        @click.native="incrementDisplayedLatestProducts"
+      >
         <div class="frc">
           <span>Load more</span>
           <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />

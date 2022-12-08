@@ -1,0 +1,12 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["shhdharmen"],
+  "author": "Dharmen Shah",
+  "title": "How to get an attribute value in Angular's components and directives",
+  "link": "https://blog.shhdharmen.me/how-to-get-an-attribute-value-in-angulars-components-and-directives",
+  "tags": [
+    "performance"
+  ]
+}
