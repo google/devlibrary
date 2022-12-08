@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "Cloudy",
+  "name": "Cloudy",
+  "shortDescription": "Jetpack Compose blur effect library, which supports all Android versions.",
+  "longDescription": "Jetpack Compose blur effect library, which supports all Android versions.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui",
+    "modern-android-development"
+  ]
+}
