@@ -2,7 +2,9 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["austennovis"],
+  "authorIds": [
+    "austennovis"
+  ],
   "author": "Austen Novis",
   "title": "Tutorial: Managing Serverless GCP Load Balancers Dynamically with Terraform",
   "link": "https://engineering.premise.com/tutorial-managing-serverless-gcp-load-balancers-dynamically-with-terraform-e15751853312",
