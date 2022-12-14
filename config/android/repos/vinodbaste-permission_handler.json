@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "vinodbaste"
+  ],
+  "owner": "vinodbaste",
+  "repo": "permission_handler",
+  "name": "Permission Handler",
+  "shortDescription": "On most operating systems, permissions aren't just granted to apps at install time. Rather, developers have to ask the user for permissions while the app is running.",
+  "longDescription": "On most operating systems, permissions aren't just granted to apps at install time. Rather, developers have to ask the user for permissions while the app is running.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "build-tools"
+  ]
+}
