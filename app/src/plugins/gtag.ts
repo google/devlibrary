@@ -6,9 +6,9 @@
 import { Route } from "vue-router";
 
 export function conversionEvent(event: string) {
-  gtag('event', 'conversion', {
-    'event_category' : 'engagement',
-    'event_label' : event,
+  gtag("event", "conversion", {
+    event_category : "engagement",
+    event_label : event,
   });
 }
 
