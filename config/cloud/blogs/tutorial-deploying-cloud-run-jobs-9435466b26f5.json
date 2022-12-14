@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["austennovis"],
+  "author": "Austen Novis",
+  "title": "Tutorial: Deploying Cloud Run Jobs",
+  "link": "https://engineering.premise.com/tutorial-deploying-cloud-run-jobs-9435466b26f5",
+  "tags": [
+    "containers",
+    "serverless-computing"
+  ]
+}

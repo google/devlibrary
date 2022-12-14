@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["pritam-sahoo"],
+  "author": "Pritam Sahoo",
+  "title": "Assessing database migration complexities with migVisor Part 2",
+  "link": "https://medium.com/google-cloud/assessing-database-migration-complexities-with-migvisor-part-2-a35889bd3bda",
+  "tags": [
+    "databases",
+    "migration"
+  ]
+}
