@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "wasabeef"
+  ],
+  "owner": "wasabeef",
+  "repo": "flutter_ua_client_hints",
+  "name": "User-Agent Client Hints for Flutter",
+  "shortDescription": "Provide User-Agent Client Hints to a Flutter app.",
+  "longDescription": "Provide User-Agent Client Hints to a Flutter app.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "plugins"
+  ]
+}

@@ -141,6 +141,62 @@
       ]
     },
     {
+      "collectionGroup": "repos",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "metadata.expertise",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "stats.stars",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "blogs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "metadata.expertise",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "stats.stars",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "blogs",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "metadata.tags",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "stats.stars",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "repos",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "metadata.tags",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "stats.stars",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
       "collectionGroup": "authors",
       "queryScope": "COLLECTION",
       "fields": [

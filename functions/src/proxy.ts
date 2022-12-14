@@ -61,7 +61,10 @@ export const queryProxy = functions
 
     // The "path" param is the collection to query
     let path = req.query.path as string;
-    path = path.replace(/[&]/g, "&amp;").replace(/[<]/g, "&lt;").replace(/[>]/g, "&gt;");
+    path = path
+      .replace(/[&]/g, "&amp;")
+      .replace(/[<]/g, "&lt;")
+      .replace(/[>]/g, "&gt;");
     if (!path) {
       res.status(400).send('Parameter "path" is required');
       return;
@@ -170,7 +173,10 @@ export const docProxy = functions.https.onRequest(async (req, res) => {
   res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
 
   let path = req.query.path as string;
-  path = path.replace(/[&]/g, "&amp;").replace(/[<]/g, "&lt;").replace(/[>]/g, "&gt;");
+  path = path
+    .replace(/[&]/g, "&amp;")
+    .replace(/[<]/g, "&lt;")
+    .replace(/[>]/g, "&gt;");
   if (!path) {
     res.status(400).send('Parameter "path" is required');
     return;

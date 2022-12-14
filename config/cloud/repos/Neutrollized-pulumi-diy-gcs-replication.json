@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "neutrollized"
+  ],
+  "owner": "Neutrollized",
+  "repo": "pulumi-diy-gcs-replication",
+  "name": "Pulumi DIY GCS Replication",
+  "shortDescription": "Using IaC (via Pulumi), deploy GCS buckets and Cloud Functions that will perform replication between them (for regions that do not have native replication)",
+  "longDescription": "Using IaC (via Pulumi), deploy GCS buckets and Cloud Functions that will perform replication between them (for regions that do not have native replication)",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "serverless-computing",
+    "storage"
+  ]
+}

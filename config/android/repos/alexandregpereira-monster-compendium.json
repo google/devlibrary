@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "alexandregpereira"
+  ],
+  "owner": "alexandregpereira",
+  "repo": "monster-compendium",
+  "name": "Monster Compendium - D&D 5th Edition Bestiary",
+  "shortDescription": "Monsters Compendium is an Android application contenting information about monsters from the Dungeons & Dragons 5th edition role-playing game.",
+  "longDescription": "Monsters Compendium is an Android application contenting information about monsters from the Dungeons & Dragons 5th edition role-playing game.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "architecture",
+    "modern-android-development"
+  ]
+}
