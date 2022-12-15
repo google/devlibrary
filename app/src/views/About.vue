@@ -312,7 +312,7 @@
             You can <a target="_blank" href="https://forms.gle/Wco9K4ePqgCW5sre6">subscribe to our newsletter here</a>. We curate some best submissions in each tech stack every month with this newsletter.
           </p>
           <p class="mt-4">
-            We have also written some blog posts detailing unique projects and how developers have used the platform to showcase their contributions. You can <a href="http://https://developers.googleblog.com/search/label/Dev%20Library?max-results=12" target="_blank">access the archive here</a>.
+            We have also written some blog posts detailing unique projects and how developers have used the platform to showcase their contributions. You can <a href="https://developers.googleblog.com/search/label/Google%20Dev%20Library" target="_blank">access the archive here</a>.
           </p>
           <p class="mt-4 font-bold">
             How do I get the  Dev Library Contributor's Badge for my Google Developer Profile?
