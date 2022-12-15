@@ -33,7 +33,7 @@ Here you will find ways to engage with other authors and be able to find out the
 - [Join us in Discord](https://discord.gg/AbwzvEqdCu).
 
 ### Blogs
-To get started, here are some blog posts detailing on how developers have used the platform to showcase their contributions. You can [access the archive here](https://developers.googleblog.com/search/label/Dev%20Library?max-results=12). 
+To get started, here are some blog posts detailing on how developers have used the platform to showcase their contributions. You can [access the archive here](https://developers.googleblog.com/search/label/Google%20Dev%20Library). 
 
 - [What is Google’s Dev Library––a new open-source platform for developers](https://developers.googleblog.com/2021/10/what-is-the-dev-library.html)
 - [How is Dev Library useful to the open-source community?](https://developers.googleblog.com/2022/04/dev-library-open-source.html)
