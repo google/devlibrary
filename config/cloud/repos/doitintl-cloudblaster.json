@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "joshuafox"
+  ],
+  "owner": "doitintl",
+  "repo": "cloudblaster",
+  "name": "Cloud Blaster",
+  "shortDescription": "Cloud Blaster helps you delete the unwanted assets in your Google Cloud Platform project, leaving it clean of confusing clutter and saving you money.",
+  "longDescription": "Cloud Blaster helps you delete the unwanted assets in your Google Cloud Platform project, leaving it clean of confusing clutter and saving you money.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "operations"
+  ]
+}

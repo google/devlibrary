@@ -246,7 +246,6 @@ export async function queryRepos(
   return json as QueryResult<RepoData>;
 }
 
-
 export async function queryAuthorProjects(authorId: string) {
   const normalizedId = authorId.toLowerCase();
   const q: FirestoreQuery = {
@@ -276,32 +275,31 @@ export async function queryAuthorProjects(authorId: string) {
 
 export async function queryAuthorsByProduct(
   products: string[]
-  ): Promise<QueryResult<AuthorData>>{
+): Promise<QueryResult<AuthorData>> {
   const authorResults: any = [];
-  for(const author of allAuthors.docs){
+  for (const author of allAuthors.docs) {
     const res = await queryAuthorProjects(author.id);
-    
+
     const blogProducts: string[] = [];
     const repoProducts: string[] = [];
 
-    Object.keys(res.blogs.docs).forEach(blogIndex => {
-     blogProducts.push(res.blogs.docs[Number(blogIndex)].data.product)
-    })  
+    Object.keys(res.blogs.docs).forEach((blogIndex) => {
+      blogProducts.push(res.blogs.docs[Number(blogIndex)].data.product);
+    });
 
-    Object.keys(res.repos.docs).forEach(repoIndex => {
-      repoProducts.push(res.repos.docs[Number(repoIndex)].data.product)
-    })  
+    Object.keys(res.repos.docs).forEach((repoIndex) => {
+      repoProducts.push(res.repos.docs[Number(repoIndex)].data.product);
+    });
 
-    if(products.every(repo => repoProducts.includes(repo))){
+    if (products.every((repo) => repoProducts.includes(repo))) {
       authorResults.push(author);
     }
-    if(products.every(blog => blogProducts.includes(blog))){
+    if (products.every((blog) => blogProducts.includes(blog))) {
       authorResults.push(author);
     }
   }
   return authorResults as QueryResult<AuthorData>;
 }
-
 
 /**
  * See: https://stackoverflow.com/a/2450976/324977

@@ -146,7 +146,7 @@ function applicationToRepoMetadata(a: Application): RepoMetadata {
     longDescription: a.github.description,
     content: a.github.linkToReadme,
     tags: a.tags,
-    expertise: a.expertise,// "INTERMEDIATE",
+    expertise: a.expertise, // "INTERMEDIATE",
   };
 }
 
@@ -164,7 +164,7 @@ function applicationToBlogMetadata(a: Application): BlogMetadata {
     title: a.blogPost.description,
     link: a.blogPost.url,
     tags: a.tags,
-    expertise: a.expertise,//"INTERMEDIATE",
+    expertise: a.expertise, //"INTERMEDIATE",
   };
 }
 

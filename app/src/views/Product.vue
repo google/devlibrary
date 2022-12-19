@@ -75,7 +75,7 @@
         <div
           v-if="$mq === 'mobile'"
           v-show="showFilterOverlay"
-          class="mobile-only scrim"
+          class="mobile-only scrim z-10"
         >
           <!-- scrim -->
         </div>
@@ -83,7 +83,7 @@
           <div
             v-if="$mq === 'mobile'"
             v-show="showFilterOverlay"
-            class="mobile-only fixed right-0 top-0 pt-20 w-full h-full"
+            class="mobile-only fixed right-0 top-0 pt-20 w-full h-full z-10"
           >
             <div class="bg-white rounded-l overflow-hidden w-2/3 ml-auto">
               <ProjectFilters
@@ -143,6 +143,13 @@
             >
               Go
             </MaterialButton>
+            <div class="desktop-only">
+              <ProjectSort
+                v-model="sortBy"
+                :product="product"
+                :defaultSort="sortBy"
+              />
+            </div>
           </div>
           <!-- Filter Chips -->
           <div v-if="filters" class="flex flex-row flex-wrap">
@@ -153,6 +160,11 @@
                   <font-awesome-icon icon="filter" size="sm" class="mr-2" />
                   <span>Filters</span>
                 </div>
+                <ProjectSort
+                  v-model="sortBy"
+                  :product="product"
+                  :defaultSort="sortBy"
+                />
               </div>
             </div>
 
@@ -245,6 +257,11 @@ import UIModule from "@/store/ui";
 import MaterialButton from "@/components/MaterialButton.vue";
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import ProjectFilters from "@/components/ProjectFilters.vue";
+import ProjectSort, {
+  SORT_ADDED,
+  SORT_UPDATED,
+  SORT_STARS,
+} from "@/components/ProjectSort.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import RadioGroup from "@/components/RadioGroup.vue";
 import CheckboxGroup, {
@@ -268,9 +285,6 @@ import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 import { BreadcrumbLink } from "../../../shared/types";
 import { getStyle, ProductStyle } from "@/model/product";
 
-const SORT_ADDED = "added";
-const SORT_UPDATED = "updated";
-
 @Component({
   components: {
     MaterialButton,
@@ -280,6 +294,7 @@ const SORT_UPDATED = "updated";
     HeaderBodyLayout,
     ProductLogo,
     ProjectFilters,
+    ProjectSort,
     Breadcrumbs,
   },
 })
@@ -294,11 +309,11 @@ export default class Product extends Vue {
   public urlParams = new URLSearchParams(window.location.search);
   public showFilterOverlay = false;
   public filters = {
-    sort: SORT_ADDED,
     types: [] as CheckboxGroupEntry[],
     categories: [] as CheckboxGroupEntry[],
     expertiseLevel: [] as CheckboxGroupEntry[],
   };
+  public sortBy = SORT_UPDATED;
   public searchFilter = "";
   public tempSearchFilter = "";
 
@@ -401,6 +416,16 @@ export default class Product extends Vue {
     }
   }
 
+  @Watch("sortBy")
+  public onSortByChanged() {
+    if (this.sortBy === SORT_STARS) {
+      for (const type of this.filters.types) {
+        type.checked = type.value === "open-source";
+      }
+    }
+    this.onFiltersTypeChanged();
+  }
+
   @Watch("filters", { deep: true })
   public async onFiltersTypeChanged() {
     let hasTypeParams = false;
@@ -409,7 +434,7 @@ export default class Product extends Vue {
     let typeParams = "";
     let categoryParams = "";
     let expertiseParams = "";
-    let url = `?sort=${this.filters.sort}`;
+    let url = `?sort=${this.sortBy}`;
 
     if (
       typeof this.filters.expertiseLevel === "string" &&
@@ -468,15 +493,15 @@ export default class Product extends Vue {
   }
 
   get queryOrderBy(): string {
-    if (this.filters.sort === SORT_ADDED) {
-      return "stats.dateAdded";
+    switch (this.sortBy) {
+      case SORT_UPDATED:
+        return "stats.lastUpdated";
+      case SORT_STARS:
+        return "stats.stars";
+      case SORT_ADDED:
+      default:
+        return "stats.dateAdded";
     }
-
-    if (this.filters.sort === SORT_UPDATED) {
-      return "stats.lastUpdated";
-    }
-
-    return "stats.dateAdded";
   }
 
   get queryParams(): FirestoreQuery {
@@ -624,8 +649,6 @@ export default class Product extends Vue {
     for (const t of this.filters.types) {
       t.checked = false;
     }
-
-    this.filters.sort = SORT_UPDATED;
   }
 
   get product(): ProductConfig {
@@ -679,8 +702,19 @@ export default class Product extends Vue {
       const dataA = a.data;
       const dataB = b.data;
 
-      if (this.filters.sort === SORT_ADDED) {
+      if (this.sortBy === SORT_ADDED) {
         return dataB.stats.dateAdded - dataA.stats.dateAdded;
+      } else if (this.sortBy === SORT_STARS) {
+        if ("stars" in dataA.stats && "stars" in dataB.stats) {
+          return dataB.stats.stars - dataA.stats.stars;
+        }
+        if ("stars" in dataA.stats) {
+          return -1;
+        }
+        if ("stars" in dataB.stats) {
+          return 1;
+        }
+        return 0;
       } else {
         return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
       }
@@ -697,7 +731,7 @@ export default class Product extends Vue {
       const dataA = a.data;
       const dataB = b.data;
 
-      if (this.filters.sort === SORT_ADDED) {
+      if (this.sortBy === SORT_ADDED) {
         return dataB.stats.dateAdded - dataA.stats.dateAdded;
       } else {
         return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
