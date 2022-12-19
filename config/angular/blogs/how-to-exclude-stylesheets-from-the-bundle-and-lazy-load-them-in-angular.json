@@ -1,0 +1,12 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["shhdharmen"],
+  "author": "Dharmen Shah",
+  "title": "How to exclude stylesheets from angular bundle?",
+  "link": "https://blog.shhdharmen.me/how-to-exclude-stylesheets-from-the-bundle-and-lazy-load-them-in-angular",
+  "tags": [
+    "performance"
+  ]
+}

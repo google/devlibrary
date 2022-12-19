@@ -1,0 +1,10 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["yrahul3910"],
+  "author": "Rahul Yedida",
+  "title": "How to set up a Linux VM with GUI on Google Cloud - Rahul's blog",
+  "link": "https://blog.ryedida.me/2022/09/14/how-to-set-up-a-linux-vm-with-gui-on-google-cloud/",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"]
+}

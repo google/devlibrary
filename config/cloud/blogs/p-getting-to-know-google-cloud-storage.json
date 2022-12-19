@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["mustapha"],
+  "author": "Mustapha Adekunle",
+  "title": "Getting to know Google Cloud Storage.",
+  "link": "https://dataengineeringgcp.substack.com/p/getting-to-know-google-cloud-storage",
+  "tags": [
+    "storage",
+    "security-identity",
+    "management-tools"
+  ]
+}
