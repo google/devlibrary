@@ -44,8 +44,6 @@ const API_HOST = "https://api-devlibrary.advocu.com";
 // API path to get applications
 const PATH_GET_APPLICATIONS = "/public/applications";
 
-const SENDGRID_API_KEY = "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";
-
 function exitWithError(msg: string, code = 1) {
   console.error(msg);
   process.exit(code);
@@ -94,7 +92,11 @@ interface Application {
 }
 
 const sendAutomatedEmail = (email: string, firstName: string, lastName: string) => {
-  sendgrid.setApiKey(SENDGRID_API_KEY)
+  const sendGridKey = process.env.SENDGRID_API_KEY;
+  if (!sendGridKey) {
+    exitWithError("Error: must set 'SENDGRID_API_KEY' environment variable");
+  }
+  sendgrid.setApiKey(sendGridKey || "");
 
   const text = "Dear " + firstName + ", Congratulations, your content has been published"
     + " on the Google Dev Library platform. You can view it in your Dev Library author profile"
