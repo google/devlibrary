@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "xabaras"
+  ],
+  "owner": "xabaras",
+  "repo": "RecyclerViewSwipeDecorator",
+  "name": "RecyclerViewSwipeDecorator",
+  "shortDescription": "A simple utility class to add a background, an icon and a label to a RecyclerView's item while swiping it left or right.",
+  "longDescription": "A simple utility class to add a background, an icon and a label to a RecyclerView's item while swiping it left or right.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui"
+  ]
+}

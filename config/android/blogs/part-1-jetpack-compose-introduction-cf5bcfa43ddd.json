@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "veroanggra"
+  ],
+  "author": "Veronica Putri Anggraini",
+  "title": "[Part 1] Jetpack Compose — Introduction",
+  "link": "https://veroanggra.medium.com/part-1-jetpack-compose-introduction-cf5bcfa43ddd",
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "ui"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "reactivedroid"
+  ],
+  "author": "Ashwini Kumar",
+  "title": "Dynamic Environment Switching on Android",
+  "link": "https://link.medium.com/X9koK8CwMvb",
+  "tags": [
+    "build-tools",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

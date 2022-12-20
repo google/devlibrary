@@ -1,0 +1,20 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "chatgpt-android",
+  "name": "ChatGPT Android",
+  "shortDescription": "ChatGPT Android demonstrates OpenAI's ChatGPT on Android with Stream Chat SDK for Compose.",
+  "longDescription": "ChatGPT Android demonstrates OpenAI's ChatGPT on Android with Stream Chat SDK for Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "architecture",
+    "modern-android-development"
+  ]
+}

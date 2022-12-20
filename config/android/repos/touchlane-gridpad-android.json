@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "touchlane",
+  "repo": "gridpad-android",
+  "name": "GridPad",
+  "shortDescription": "GridPad is a Jetpack Compose library that allows you to place UI elements in a predefined grid, manage spans in two dimensions, have flexible controls to manage row and column sizes.",
+  "longDescription": "GridPad is a Jetpack Compose library that allows you to place UI elements in a predefined grid, manage spans in two dimensions, have flexible controls to manage row and column sizes.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui"
+  ]
+}

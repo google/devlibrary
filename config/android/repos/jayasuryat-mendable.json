@@ -1,0 +1,20 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jayasuryat"
+  ],
+  "owner": "jayasuryat",
+  "repo": "mendable",
+  "name": "Mendable",
+  "shortDescription": "A CLI tool to convert multi-module Jetpack Compose compiler metrics into beautiful HTML reports",
+  "longDescription": "A CLI tool to convert multi-module Jetpack Compose compiler metrics into beautiful HTML reports",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools",
+    "compose",
+    "kotlin"
+  ]
+}
