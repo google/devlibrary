@@ -326,4 +326,65 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
     ],
   },
+  maps: {
+    key: ProductKey.MAPS,
+    name: "Google Maps",
+    description:
+      "Google Maps lets developers Create real-world, real-time experiences with the latest Maps, Routes, and Places features from Google Maps Platform.",
+    docsUrl: "https://developers.google.com/maps/documentation",
+    tags: [
+      {
+        label: "Maps SDKs",
+        value: "maps-sdks",
+      },
+      {
+        label: "Routes",
+        value: "routes",
+      },
+      {
+        label: "Places",
+        value: "places",
+      },
+      {
+        label: "Static maps",
+        value: "static-maps",
+      },
+      {
+        label: "Distance Matrix",
+        value: "distance-matrix",
+      },
+      {
+        label: "Geocoding",
+        value: "geocoding",
+      },
+      {
+        label: "Street view imagery",
+        value: "street-view-imagery",
+      },
+      {
+        label: "Roads",
+        value: "roads",
+      },
+      {
+        label: "Geolocation",
+        value: "geolocation",
+      },
+      {
+        label: "Elevation",
+        value: "elevation",
+      },
+      {
+        label: "Routes API",
+        value: "routes-api",
+      },
+      {
+        label: "Address Validation",
+        value: "address-validation",
+      },
+      {
+        label: "Time zones",
+        value: "time-zones",
+      },
+    ],
+  },
 };
