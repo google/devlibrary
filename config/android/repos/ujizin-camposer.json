@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ujizin"
+  ],
+  "owner": "ujizin",
+  "repo": "camposer",
+  "name": "Camposer",
+  "shortDescription": "Jetpack Compose camera library for Android, which supports taking photos, recording videos, flash modes, zoom ratio, and among others",
+  "longDescription": "Jetpack Compose camera library for Android, which supports taking photos, recording videos, flash modes, zoom ratio, and among others",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "compose"
+  ]
+}

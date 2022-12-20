@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "shivam-gupta007"
+  ],
+  "owner": "shivam-gupta007",
+  "repo": "Quotify",
+  "name": "Quotify - a quotes app",
+  "shortDescription": "An app that provides motivational quotes on beautiful backgrounds to help users stay motivated.\n\nThis app is built with Jetpack Compose, Material Design 3, Room, Navigation Components, Kotlin Coroutin",
+  "longDescription": "An app that provides motivational quotes on beautiful backgrounds to help users stay motivated.\n\nThis app is built with Jetpack Compose, Material Design 3, Room, Navigation Components, Kotlin Coroutin",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

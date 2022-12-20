@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rhymezxcode"
+  ],
+  "owner": "RhymezxCode",
+  "repo": "NetworkStateObserver",
+  "name": "NetworkStateObserver Android Library",
+  "shortDescription": "A library that helps you check the state of your network, if it is either available, lost, unavailable and also check the reach-ability of your network when your server is either down.",
+  "longDescription": "A library that helps you check the state of your network, if it is either available, lost, unavailable and also check the reach-ability of your network when your server is either down.",
+  "content": "readme.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}
