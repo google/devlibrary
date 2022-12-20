@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["saraswatdivyansh"],
+  "author": "Divyansh Saraswat",
+  "title": "Upload images to Firebase Cloud Storage — WorkManager",
+  "link": "https://medium.com/proandroiddev/upload-images-to-firebase-cloud-storage-workmanager-6586f1ea3f9d",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "architecture"
+  ]
+}

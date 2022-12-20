@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "hardik9850"
+  ],
+  "author": "Hardik Mehta",
+  "title": "Kotlin Coroutines vs JVM Threads",
+  "link": "https://hardik9850.medium.com/jvm-threads-and-kotlin-coroutines-5b17e417bc0",
+  "tags": [
+    "kotlin"
+  ]
+}
