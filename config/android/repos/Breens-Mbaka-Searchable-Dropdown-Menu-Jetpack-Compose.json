@@ -10,7 +10,7 @@
   "name": "Searchable-Dropdown-Menu-Jetpack-Compose",
   "shortDescription": "A Jetpack Compose Android Library to create a dropdown menu that is searchable.",
   "longDescription": "A Jetpack Compose Android Library to create a dropdown menu that is searchable.",
-  "content": "https://github.com/Breens-Mbaka/Searchable-Dropdown-Menu-Jetpack-Compose#readme",
+  "content": "readme.md",
   "pages": [],
   "tags": [
     "compose",
