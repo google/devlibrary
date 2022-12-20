@@ -92,7 +92,7 @@ interface Application {
 }
 
 const sendAutomatedEmail = (email: string, firstName: string, lastName: string) => {
-  const sendGridKey = process.env.SENDGRID_API_KEY;
+  const sendGridKey = process.env.DEVLIBRARYKEY;
   if (!sendGridKey) {
     exitWithError("Error: must set 'SENDGRID_API_KEY' environment variable");
   }
