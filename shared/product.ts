@@ -328,9 +328,9 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
   },
   maps: {
     key: ProductKey.MAPS,
-    name: "Google Maps",
+    name: "Google Maps Platform",
     description:
-      "Google Maps lets developers Create real-world, real-time experiences with the latest Maps, Routes, and Places features from Google Maps Platform.",
+      "Google Maps Platform lets developers create real-world, real-time experiences with the latest Maps, Routes, and Places features from Google Maps.",
     docsUrl: "https://developers.google.com/maps/documentation",
     tags: [
       {
