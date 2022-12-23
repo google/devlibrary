@@ -1,0 +1,19 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "joshuafox"
+  ],
+  "owner": "doitintl",
+  "repo": "QuickQuickstarts",
+  "name": "QuickQuickstarts",
+  "shortDescription": "This project spins up a new deployment of GCP App Engine Standard Env, Flexible Env,  Cloud Run, Functions, GKE, or 4 different AWS technonologies. This gives an easy way to experiment and learn each.",
+  "longDescription": "This project spins up a new deployment of GCP App Engine Standard Env, Flexible Env,  Cloud Run, Functions, GKE, or 4 different AWS technonologies. This gives an easy way to experiment and learn each.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "serverless-computing",
+    "compute"
+  ]
+}

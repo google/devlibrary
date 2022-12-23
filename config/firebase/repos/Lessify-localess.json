@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": ["lessify"],
+  "owner": "Lessify",
+  "repo": "localess",
+  "name": "Localess",
+  "shortDescription": "Translation Management Tools and Content Management Systems with the possibility to collaborate.\nEntirely written in TypeScript and Angular and deployable in Firebase.",
+  "longDescription": "Translation Management Tools and Content Management Systems with the possibility to collaborate.\nEntirely written in TypeScript and Angular and deployable in Firebase.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web",
+    "node",
+    "admin"
+  ]
+}
