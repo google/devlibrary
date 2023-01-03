@@ -22,38 +22,18 @@
         <!-- Header (Desktop) -->
         <div class="desktop-only">
           <div
-            :class="[productStyle.bg, productStyle.text]"
-            class="py-20 grid grid-cols-10 gap-4"
+            class="header-image full-bleed-header-image px-std border-b border-gray-100"
+            style="
+              --header-bg-image-desktop: url('/img/banners/desktop/repo-wide.png');
+            "
           >
-            <div class="col-start-2 col-span-7">
+            <div
+              :class="[productStyle.bg, productStyle.text]"
+              class="py-20 grid grid-cols-10 gap-4"
+            >
               <h1 :class="[productStyle.text]">
                 {{ repo.metadata.name }}
               </h1>
-              <p class="mt-2">
-                {{ repo.metadata.longDescription }}
-              </p>
-
-              <p v-if="authors.length > 0" class="flex gap-2 mt-2">
-                <AuthorLink
-                  v-for="author in authors"
-                  :key="author.id"
-                  :author="author"
-                  class="opacity-80 hover:opacity-100"
-                />
-              </p>
-
-              <a
-                target="blank"
-                :href="`https://github.com/${repo.metadata.owner}/${repo.metadata.repo}`"
-              >
-                <MaterialButton type="secondary" class="mt-8">
-                  View on GitHub
-                  <font-awesome-icon icon="external-link-alt" class="ml-1" />
-                </MaterialButton>
-              </a>
-            </div>
-
-            <div class="col-start-9 col-span-2">
               <p class="pt-1">
                 {{ repo.stats.stars }}
                 <font-awesome-icon fixed-width icon="star" />
@@ -62,6 +42,26 @@
                 {{ repo.stats.forks }}
                 <font-awesome-icon fixed-width icon="code-branch" />
               </p>
+              <p v-if="authors.length > 0" class="flex gap-2 mt-2">
+                <AuthorLink
+                  v-for="author in authors"
+                  :key="author.id"
+                  :author="author"
+                  class="opacity-80 hover:opacity-100"
+                />
+              </p>
+              <p class="mt-2">
+                {{ repo.metadata.longDescription }}
+              </p>
+              <a
+                target="blank"
+                :href="`https://github.com/${repo.metadata.owner}/${repo.metadata.repo}`"
+              >
+                <MaterialButton type="primary" class="mt-8">
+                  View on GitHub
+                  <font-awesome-icon icon="external-link-alt" class="ml-1" />
+                </MaterialButton>
+              </a>
             </div>
           </div>
         </div>
