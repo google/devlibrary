@@ -132,11 +132,6 @@ export async function addGithubAuthor(username: string) {
   });
   const { name, bio, type } = await res.json();
 
-  if (type === "Organization") {
-    console.log("Skipping organization", username);
-    return false;
-  }
-
   const author = {
     name: name || username,
     bio: bio || "",

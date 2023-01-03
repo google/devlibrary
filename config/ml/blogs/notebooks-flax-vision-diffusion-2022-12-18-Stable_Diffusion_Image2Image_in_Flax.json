@@ -1,0 +1,13 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Image2Image with Stable Diffusion in Flax",
+  "link": "https://dzlab.github.io/notebooks/flax/vision/diffusion/2022/12/18/Stable_Diffusion_Image2Image_in_Flax.html",
+  "tags": [
+    "vision",
+    "gan"
+  ]
+}

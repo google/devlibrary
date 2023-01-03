@@ -1,0 +1,13 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Interpolation with Stable Diffusion in Flax",
+  "link": "https://dzlab.github.io/notebooks/flax/vision/diffusion/2022/12/14/Stable_Diffusion_interpolation_Flax.html",
+  "tags": [
+    "vision",
+    "gan"
+  ]
+}
