@@ -21,7 +21,7 @@
     <div
       class="header-image py-10 lg:py-20 px-std border-b border-gray-100"
       style="
-        --header-bg-image-desktop: url('/img/banners/desktop/authors-wide.png');
+        --header-bg-image-desktop: url('/img/banners/desktop/new-authors-wide.png');
         --header-bg-image-mobile: url('/img/banners/mobile/authors-wide.png');
       "
     >
