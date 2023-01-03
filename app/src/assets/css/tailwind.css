@@ -173,6 +173,11 @@
     background-repeat: no-repeat;
   }
 
+  .full-bleed-header-image {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+  }
+
   .dynamic-author-image {
     align-items: center;
     border-radius: 50%;
@@ -234,10 +239,10 @@
     }
 
     .full-bleed-header-image {
-      background-position: unset;
+      background-position: 50%;
       background-size: cover;
-      padding-bottom: 6rem;
-      padding-top: 10rem;
+      padding-bottom: 10rem;
+      padding-top: 6rem;
     }
   }
 
