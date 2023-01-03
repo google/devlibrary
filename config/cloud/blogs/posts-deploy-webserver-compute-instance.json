@@ -2,7 +2,7 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["pradeepbhadani"],
   "author": "Pradeep Bhadani",
   "title": "Deploy Web Server on Google Compute Engine (GCE) with Terraform",
   "link": "https://pbhadani.com/posts/deploy-webserver-compute-instance/",

@@ -2,7 +2,7 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["pradeepbhadani"],
   "author": "Pradeep Bhadani",
   "title": "Enabling GKE Workload Identity",
   "link": "https://pbhadani.com/posts/gke-workload-identity/",
