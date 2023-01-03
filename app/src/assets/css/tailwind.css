@@ -221,7 +221,8 @@
   }
 
   @screen lg {
-    .homepage-header h1 {
+    .homepage-header h1, 
+    .full-bleed-header-image h1 {
       font-size: 44px;
       line-height: 52px;
     }
@@ -230,6 +231,13 @@
       background-image: var(--header-bg-image-desktop);
       background-position: right;
       background-size: contain;
+    }
+
+    .full-bleed-header-image {
+      background-position: unset;
+      background-size: cover;
+      padding-bottom: 6rem;
+      padding-top: 10rem;
     }
   }
 

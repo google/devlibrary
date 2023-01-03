@@ -19,13 +19,13 @@
     <Breadcrumbs :links="getBreadcrumbs()" />
     <!-- Header -->
     <div
-      class="header-image py-10 lg:py-20 px-std border-b border-gray-100"
+      class="header-image py-10 lg:py-20 full-bleed-header-image px-std border-b border-gray-100"
       style="
-        --header-bg-image-desktop: url('/img/banners/desktop/new-authors-wide.png');
+        --header-bg-image-desktop: url('/img/banners/desktop/authors-wide.png');
         --header-bg-image-mobile: url('/img/banners/mobile/authors-wide.png');
       "
     >
-      <h1>Authors</h1>
+      <h1 class="full-bleed-hero-heading">Authors</h1>
       <p class="mt-1">
         All content on Dev Library is contributed by our incredible authors!
       </p>
