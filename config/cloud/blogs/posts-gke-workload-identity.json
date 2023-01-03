@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["pradeepbhadani"],
+  "author": "Pradeep Bhadani",
+  "title": "Enabling GKE Workload Identity",
+  "link": "https://pbhadani.com/posts/gke-workload-identity/",
+  "tags": [
+    "containers",
+    "developer-tools",
+    "security-identity"
+  ]
+}

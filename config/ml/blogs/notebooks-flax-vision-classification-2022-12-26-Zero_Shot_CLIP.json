@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Zero-Shot image classification with CLIP and Flax",
+  "link": "https://dzlab.github.io/notebooks/flax/vision/classification/2022/12/26/Zero_Shot_CLIP.html",
+  "tags": [
+    "vision",
+    "nlp"
+  ]
+}

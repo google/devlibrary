@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pgollangi"
+  ],
+  "owner": "pgollangi",
+  "repo": "FireQL",
+  "name": "FireQL - Query Google Firestore database using SQL",
+  "shortDescription": "FireQL is a library built on top of the official Google Firestore Client SDK that will allow running queries Cloud Firestore database using SQL syntax",
+  "longDescription": "FireQL is a library built on top of the official Google Firestore Client SDK that will allow running queries Cloud Firestore database using SQL syntax",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "databases"
+  ]
+}

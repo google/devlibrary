@@ -130,12 +130,14 @@ export async function addGithubAuthor(username: string) {
     method: "get",
     headers,
   });
-  const { name, bio, type } = await res.json();
+  const { name, bio } = await res.json();
 
-  if (type === "Organization") {
-    console.log("Skipping organization", username);
-    return false;
-  }
+  // If want to ignore Organizations, then replace the above line 133 with below 136 and un-comment 137-140
+  // const { name, bio, type } = await res.json();
+  // if (type === "Organization") {
+  //   console.log("Skipping organization", username);
+  //   return false;
+  // }
 
   const author = {
     name: name || username,
