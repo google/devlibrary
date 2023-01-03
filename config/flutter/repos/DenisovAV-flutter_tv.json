@@ -1,0 +1,18 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "denisovav"
+  ],
+  "owner": "DenisovAV",
+  "repo": "flutter_tv",
+  "name": "flutter_tv",
+  "shortDescription": "GitHub - DenisovAV/flutter_tv",
+  "longDescription": "GitHub - DenisovAV/flutter_tv",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}
