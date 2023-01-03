@@ -244,6 +244,18 @@
       padding-bottom: 10rem;
       padding-top: 6rem;
     }
+
+    .repo-items {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      width: 150px;
+    }
+
+    .repo-item {
+      border: 1px solid #BDC1C6;
+      border-radius: 4px;   
+    }
   }
 
   .scrim {
