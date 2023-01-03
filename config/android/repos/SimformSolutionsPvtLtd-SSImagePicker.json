@@ -10,7 +10,7 @@
   "name": "SSImagePicker",
   "shortDescription": "SSImagePicker is easy to use and configurable library to Pick multiple images from the Gallery or Capture an image using Camera with maximum size, extension, crop, rotate, zoom and compress features.",
   "longDescription": "SSImagePicker is easy to use and configurable library to Pick multiple images from the Gallery or Capture an image using Camera with maximum size, extension, crop, rotate, zoom and compress features.",
-  "content": "https://github.com/SimformSolutionsPvtLtd/SSImagePicker/blob/main/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "ui",
