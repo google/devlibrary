@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rhymezxcode"
+  ],
+  "owner": "RhymezxCode",
+  "repo": "SimpleStore",
+  "name": "SimpleStore Android Library",
+  "shortDescription": "A library to create either a shared preference or data store. it has the ability to encrypt on a go, by just signifying on the builder class.",
+  "longDescription": "A library to create either a shared preference or data store. it has the ability to encrypt on a go, by just signifying on the builder class.",
+  "content": "https://github.com/RhymezxCode/SimpleStore#readme",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}
