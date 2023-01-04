@@ -34,11 +34,11 @@
                 {{ repo.metadata.name }}
               </h1>
               <div class="repo-items">
-                <p class="pt-1 repo-item">
+                <p class="repo-item">
                   <font-awesome-icon fixed-width icon="star" />
                   {{ repo.stats.stars }}
                 </p>
-                <p class="pt-1 repo-item">
+                <p class="repo-item">
                   <font-awesome-icon fixed-width icon="code-branch" />
                   {{ repo.stats.forks }}
                 </p>
@@ -51,7 +51,7 @@
                   class="opacity-80 hover:opacity-100"
                 />
               </p>
-              <p class="mt-2">
+              <p class="mt-2 repo-description">
                 {{ repo.metadata.longDescription }}
               </p>
               <a
