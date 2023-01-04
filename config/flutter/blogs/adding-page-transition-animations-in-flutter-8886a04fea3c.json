@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aayushkedawat"
+  ],
+  "author": "Aayush Kedawat",
+  "title": "Adding Page Transition Animations in Flutter",
+  "link": "https://medium.com/@aayushkedawat/adding-page-transition-animations-in-flutter-8886a04fea3c",
+  "tags": [
+    "mobile",
+    "plugins",
+    "widgets"
+  ]
+}

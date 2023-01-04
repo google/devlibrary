@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["skydoves"],
+  "author": "Jaewoong Eum",
+  "title": "Becoming A Successful Android Open-Source Librarian",
+  "link": "https://medium.com/proandroiddev/becoming-a-successful-open-source-librarian-3a008b50b808",
+  "tags": [
+    "kotlin",
+    "build-tools",
+    "architecture"
+  ]
+}

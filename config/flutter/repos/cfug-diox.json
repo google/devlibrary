@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": ["cfug"],
+  "owner": "cfug",
+  "repo": "diox",
+  "name": "diox",
+  "shortDescription": "A powerful HTTP client for Dart/Flutter, which supports global configuration, interceptors, FormData, request cancellation, file uploading/downloading, timeout, custom adapters, etc.",
+  "longDescription": "A powerful HTTP client for Dart/Flutter, which supports global configuration, interceptors, FormData, request cancellation, file uploading/downloading, timeout, custom adapters, etc.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "web",
+    "plugins"
+  ]
+}

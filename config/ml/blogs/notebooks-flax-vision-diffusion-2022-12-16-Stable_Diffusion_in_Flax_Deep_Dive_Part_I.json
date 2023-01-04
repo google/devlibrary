@@ -1,0 +1,13 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Deep Dive into Stable Diffusion - Part I",
+  "link": "https://dzlab.github.io/notebooks/flax/vision/diffusion/2022/12/16/Stable_Diffusion_in_Flax_Deep_Dive_Part_I.html",
+  "tags": [
+    "vision",
+    "gan"
+  ]
+}

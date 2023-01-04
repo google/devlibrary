@@ -1,0 +1,12 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Mean Shift clustering with JAX",
+  "link": "https://dzlab.github.io/notebooks/jax/clustering/2022/12/15/MeanShift_with_Jax.html",
+  "tags": [
+    "mobile","nlp","vision","library","notebook","collection","web","theory"
+  ]
+}
