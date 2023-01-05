@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "simformsolutionspvtltd"
+  ],
+  "owner": "SimformSolutionsPvtLtd",
+  "repo": "SSImagePicker",
+  "name": "SSImagePicker",
+  "shortDescription": "SSImagePicker is easy to use and configurable library to Pick multiple images from the Gallery or Capture an image using Camera with maximum size, extension, crop, rotate, zoom and compress features.",
+  "longDescription": "SSImagePicker is easy to use and configurable library to Pick multiple images from the Gallery or Capture an image using Camera with maximum size, extension, crop, rotate, zoom and compress features.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui",
+    "kotlin",
+    "modern-android-development"
+  ]
+}
