@@ -258,8 +258,15 @@
       padding: 4px 6px;
     }
 
-    .repo-description {
-      max-width: 600px
+    .hero-description {
+      max-width: 600px;
+    }
+
+    .hero-clipart {
+      position: absolute;
+      width: 252px;
+      top: 17.5px;
+      left: 17.5px
     }
   }
 
