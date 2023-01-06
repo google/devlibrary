@@ -178,6 +178,10 @@
     padding-top: 2.5rem;
   }
 
+  .hero-clipart {
+    display: none;
+  }
+
   .dynamic-author-image {
     align-items: center;
     border-radius: 50%;
@@ -241,8 +245,8 @@
     .full-bleed-header-image {
       background-position: 50%;
       background-size: cover;
-      padding-bottom: 10rem;
-      padding-top: 6rem;
+      padding-bottom: 6rem;
+      padding-top: 4rem;
     }
 
     .repo-items {
@@ -264,9 +268,10 @@
 
     .hero-clipart {
       position: absolute;
+      display: block;
       width: 252px;
-      top: 17.5px;
-      left: 17.5px
+      top: 64px;
+      left: 64vw;
     }
   }
 
