@@ -248,6 +248,10 @@
       height: 300px;
     }
 
+    .repo-hero {
+      padding-bottom: 20rem;
+    }
+
     .repo-items {
       display: flex;
       justify-content: space-between;
@@ -256,7 +260,6 @@
     }
 
     .repo-item {
-      border: 1px solid #BDC1C6;
       border-radius: 4px;   
       padding: 4px 6px;
     }
