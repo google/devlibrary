@@ -13,6 +13,7 @@ If you are a developer who has built an open-source project, or has written abou
 - Google Cloud
 - Machine Learning
 - Google Assistant
+- Google Maps Platform (coming soon)
 
 ### Dev Library Letters : Our Newsletter
 The official newsletter by Dev Library highlights some of the best submissions of the month, spotlights our authors and shares events of interest for Google developer communities.
