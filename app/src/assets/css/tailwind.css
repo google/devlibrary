@@ -245,8 +245,7 @@
     .full-bleed-header-image {
       background-position: 50%;
       background-size: cover;
-      padding-bottom: 6rem;
-      padding-top: 4rem;
+      height: 300px;
     }
 
     .repo-items {
