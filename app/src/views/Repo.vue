@@ -51,7 +51,7 @@
                   class="opacity-80 hover:opacity-100"
                 />
               </p>
-              <p class="mt-2 repo-description">
+              <p class="mt-2 hero-description">
                 {{ repo.metadata.longDescription }}
               </p>
               <a
@@ -66,6 +66,7 @@
             </div>
           </div>
         </div>
+        <img src="/img/banners/desktop/repo-clipart.png" class="hero-clipart"/>
 
         <!-- Header (Mobile) -->
         <div class="mobile-only">
