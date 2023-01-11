@@ -10,7 +10,7 @@
   "name": "wechat_camera_picker",
   "shortDescription": "A camera picker (take photos and videos) for Flutter projects based on WeChat's UI. It's a standalone module of wechat_assets_picker yet it can be run separately.",
   "longDescription": "A camera picker (take photos and videos) for Flutter projects based on WeChat's UI. It's a standalone module of wechat_assets_picker yet it can be run separately.",
-  "content": "https://github.com/fluttercandies/flutter_wechat_camera_picker/blob/main/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "plugins"
