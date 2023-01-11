@@ -178,6 +178,10 @@
     padding-top: 2.5rem;
   }
 
+  .hero-clipart {
+    display: none;
+  }
+
   .dynamic-author-image {
     align-items: center;
     border-radius: 50%;
@@ -241,8 +245,11 @@
     .full-bleed-header-image {
       background-position: 50%;
       background-size: cover;
-      padding-bottom: 10rem;
-      padding-top: 6rem;
+      height: 300px;
+    }
+
+    .repo-hero {
+      padding-bottom: 20rem;
     }
 
     .repo-items {
@@ -253,13 +260,20 @@
     }
 
     .repo-item {
-      border: 1px solid #BDC1C6;
       border-radius: 4px;   
       padding: 4px 6px;
     }
 
-    .repo-description {
-      max-width: 600px
+    .hero-description {
+      max-width: 600px;
+    }
+
+    .hero-clipart {
+      position: absolute;
+      display: block;
+      width: 252px;
+      top: 64px;
+      left: 64vw;
     }
   }
 
