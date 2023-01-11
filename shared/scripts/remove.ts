@@ -17,46 +17,47 @@ import * as path from "path";
 import fetch from "node-fetch";
 import { getConfigDir } from "./util";
 
+const dir = getConfigDir();
+
 const confirmRepoDeleted = async (data: string) => {
   const { owner, repo } = JSON.parse(data);
   const url = "https://github.com/" + owner + "/" + repo;
   const res = await fetch(url);
   if (res.status === 404) return true;
+  return false;
 };
 
-const removeDeletedRepos = (dir = getConfigDir()) => {
-  const jsons: string[] = [];
-  const products: string[] = [
-    "android",
-    "angular",
-    "assistant",
-    "cloud",
-    "firebase",
-    "flutter",
-    "ml",
-  ];
-  products.forEach((product: string) => {
-    const repoDir = dir + "/" + product + "/repos";
-    const files = fs.readdirSync(repoDir);
-    files.map((file) => {
-      const name = repoDir + "/" + file;
-      jsons.push(name);
+const jsons: string[] = [];
+const products: string[] = [
+  "android",
+  "angular",
+  "assistant",
+  "cloud",
+  "firebase",
+  "flutter",
+  "ml",
+];
+products.forEach((product: string) => {
+  const repoDir = dir + "/" + product + "/repos";
+  const files = fs.readdirSync(repoDir);
+  files.map((file) => {
+    const name = repoDir + "/" + file;
+    jsons.push(name);
+  });
+});
+
+jsons.forEach(async (json) => {
+  const data = fs.readFileSync(json, "utf8");
+  const repoDeleted = await confirmRepoDeleted(data);
+  if (repoDeleted === true) {
+    fs.unlink(json, (err) => {
+      if (err) {
+        throw err;
+      }
+      console.log("Deleted " + json + " successfully");
     });
-  });
-
-  jsons.forEach(async (json) => {
-    const data = fs.readFileSync(json, "utf8");
-    const repoDeleted = await confirmRepoDeleted(data);
-    if (repoDeleted === true) {
-      fs.unlink(json, (err) => {
-        if (err) {
-          throw err;
-        }
-        console.log("Deleted " + json + " successfully");
-      });
-    }
-  });
-};
+  }
+});
 
 const getAllFilesButAuthors = (
   dir = getConfigDir(),
@@ -92,33 +93,28 @@ const retrieveEmptyAuthors = async (authors: string[], data: string) => {
   return authors;
 };
 
-const removeEmptyAuthors = (dir = getConfigDir()) => {
-  let authors: string[] = [];
-  const authorsDir = dir + "/authors";
-  const files = fs.readdirSync(authorsDir);
-  files.map((file) => {
-    authors.push(path.parse(file).name);
+let authors: string[] = [];
+const authorsDir = dir + "/authors";
+const files = fs.readdirSync(authorsDir);
+files.map((file) => {
+  authors.push(path.parse(file).name);
+});
+
+const allJsons = getAllFilesButAuthors().filter((file) =>
+  file.endsWith(".json")
+);
+
+allJsons.forEach(async (json) => {
+  const data = fs.readFileSync(json, "utf8");
+  authors = await retrieveEmptyAuthors(authors, data);
+});
+
+authors.forEach((author: string) => {
+  const jsonsToRemove = authorsDir + "/" + author + ".json";
+  fs.unlink(jsonsToRemove, (err) => {
+    if (err) {
+      throw err;
+    }
+    console.log("Deleted " + jsonsToRemove + " successfully");
   });
-
-  const allJsons = getAllFilesButAuthors().filter((file) =>
-    file.endsWith(".json")
-  );
-
-  allJsons.forEach(async (json) => {
-    const data = fs.readFileSync(json, "utf8");
-    authors = await retrieveEmptyAuthors(authors, data);
-  });
-
-  authors.forEach((author: string) => {
-    const jsonsToRemove = authorsDir + "/" + author + ".json";
-    fs.unlink(jsonsToRemove, (err) => {
-      if (err) {
-        throw err;
-      }
-      console.log("Deleted " + jsonsToRemove + " successfully");
-    });
-  });
-};
-
-removeDeletedRepos();
-removeEmptyAuthors();
+});
