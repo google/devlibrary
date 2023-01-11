@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["abhisheksaxena"],
+  "author": "Abhishek Saxena",
+  "title": "Jetpack Compose Migration: Best Practices and Strategies",
+  "link": "https://proandroiddev.com/migration-to-jetpack-compose-for-a-legacy-application-3bf256df2ebe#5a6d-3dc64cafdbdf",
+  "tags": [
+    "compose",
+    "kotlin",
+    "architecture"
+  ]
+}

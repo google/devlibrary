@@ -173,6 +173,15 @@
     background-repeat: no-repeat;
   }
 
+  .full-bleed-header-image {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .hero-clipart {
+    display: none;
+  }
+
   .dynamic-author-image {
     align-items: center;
     border-radius: 50%;
@@ -221,7 +230,8 @@
   }
 
   @screen lg {
-    .homepage-header h1 {
+    .homepage-header h1, 
+    .full-bleed-header-image h1 {
       font-size: 44px;
       line-height: 52px;
     }
@@ -230,6 +240,40 @@
       background-image: var(--header-bg-image-desktop);
       background-position: right;
       background-size: contain;
+    }
+
+    .full-bleed-header-image {
+      background-position: 50%;
+      background-size: cover;
+      height: 300px;
+    }
+
+    .repo-hero {
+      padding-bottom: 20rem;
+    }
+
+    .repo-items {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      width: 150px;
+    }
+
+    .repo-item {
+      border-radius: 4px;   
+      padding: 4px 6px;
+    }
+
+    .hero-description {
+      max-width: 600px;
+    }
+
+    .hero-clipart {
+      position: absolute;
+      display: block;
+      width: 252px;
+      top: 64px;
+      left: 64vw;
     }
   }
 
