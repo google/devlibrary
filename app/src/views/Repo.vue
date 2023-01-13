@@ -22,7 +22,7 @@
         <!-- Header (Desktop) -->
         <div class="desktop-only">
           <div
-            class="header-image full-bleed-header-image px-std border-b border-gray-100"
+            class="header-image full-bleed-header-image repo-hero px-std border-b border-gray-100"
             style="
               --header-bg-image-desktop: url('/img/banners/desktop/repo-wide.png');
             "
