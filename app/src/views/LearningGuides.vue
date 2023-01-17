@@ -137,7 +137,7 @@ export default class LearningGuides extends Vue {
 }
 </script>
 
-<style scoped lang="postcss">
+<!-- <style scoped lang="postcss">
 a {
     @apply underline;
 }
@@ -146,4 +146,4 @@ a {
     @apply px-4 col-span-6;
     @apply lg: px-0 lg:col-start-2 lg:col-span-4;
 }
-</style>
+</style> -->
