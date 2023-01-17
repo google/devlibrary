@@ -19,13 +19,25 @@
 <template>
   <div class="about">
     <Breadcrumbs :links="getBreadcrumbs()"></Breadcrumbs>
+    <!-- Hero -->
+    <div
+      class="header-image full-bleed-header-image px-std border-b border-gray-100"
+      style="
+        --header-bg-image-desktop: url('/img/banners/desktop/about-wide.png');
+        --header-bg-image-mobile: url('/img/banners/mobile/authors-wide.png');
+      "
+    >
+      <h1 class="full-bleed-hero-heading">About</h1>
+      <p class="mt-1 hero-description">
+        Dev Library is a curated platform for technical content written or built using Google technologies like Android, Angular, Flutter, Firebase, Google Cloud, Machine Learning and Google Assistant. 
+      </p>
+    </div>
+    <img src="/img/banners/desktop/about-clipart.png" class="hero-clipart"/>
     <div
       id="header"
       class="grid gap-4 grid-cols-6 py-6 lg:py-10 border-b border-gray-100"
     >
       <div class="section">
-        <h1>About</h1>
-
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p>
             <span

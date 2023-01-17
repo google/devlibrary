@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Simple diffusion in TensorFlow",
+  "link": "https://dzlab.github.io/notebooks/tensorflow/vision/diffusion/2022/12/30/Simple_diffusion_TF.html",
+  "tags": [
+    "vision",
+    "gan",
+    "tf"
+  ]
+}

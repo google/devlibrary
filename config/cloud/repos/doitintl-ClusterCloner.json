@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": ["joshuafox"],
+  "owner": "doitintl",
+  "repo": "ClusterCloner",
+  "name": "Cluster Cloner",
+  "shortDescription": "Kubernetes offers a standard model for orchestrating containers. But the models for infra on which K8s runs are highly nonstandard.  This project clones clusters across clouds, exploring these models.",
+  "longDescription": "Kubernetes offers a standard model for orchestrating containers. But the models for infra on which K8s runs are highly nonstandard.  This project clones clusters across clouds, exploring these models.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compute",
+    "containers"
+  ]
+}
