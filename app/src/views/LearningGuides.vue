@@ -54,7 +54,7 @@ import {
 } from "../../../shared/types";
 
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
-import { BreadcrumbLink, BlogData } from '../../../shared/types';
+import { BreadcrumbLink } from '../../../shared/types';
 
 import {
     PagedResponse,
