@@ -33,37 +33,37 @@
         <img src="/img/banners/desktop/learning-guides-clipart.png" class="hero-clipart" />
     </div>
     <!-- Body -->
-    <!-- <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8"> -->
-    <!-- Cards -->
-    <!-- <div class="col-span-10 lg:col-span-8">
+    <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
+        <!-- Cards -->
+        <div class="col-span-10 lg:col-span-8">
             <div id="projects">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4"> -->
-    <!-- <RepoOrBlogCard v-for="project in displayedProjects" :key="project.data.id" :project="project" /> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <RepoOrBlogCard v-for="project in displayedProjects" :key="project.data.id" :project="project" />
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-// import {
-//     BlogData,
-//     RepoData,
-//     BlogOrRepoDataHolder,
-// } from "../../../shared/types";
+import {
+    BlogData,
+    RepoData,
+    BlogOrRepoDataHolder,
+} from "../../../shared/types";
 
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import { BreadcrumbLink } from '../../../shared/types';
 
-// import {
-//     PagedResponse,
-//     emptyPageResponse,
-//     wrapInHolders,
-// } from "@/plugins/data";
+import {
+    PagedResponse,
+    emptyPageResponse,
+    wrapInHolders,
+} from "@/plugins/data";
 
-// import { ProductConfig } from "../../../shared/types";
-// import { ALL_PRODUCTS } from "../../../shared/product";
+import { ProductConfig } from "../../../shared/types";
+import { ALL_PRODUCTS } from "../../../shared/product";
 
 @Component({
     components: {
@@ -76,64 +76,64 @@ export default class LearningGuides extends Vue {
         return [{ name: "LearningGuides", path: "" }];
     }
 
-    // private perPage = 12;
+    private perPage = 12;
 
-    // get displayedProjects() {
-    //     return this.visibleProjects;
-    // }
-
-
-    // get visibleProjects(): BlogOrRepoDataHolder[] {
-    //     return this.sortedProjects;
-    // }
-
-    // get product(): ProductConfig {
-    //     return ALL_PRODUCTS[this.$route.params["product"]];
-    // }
-
-    // public repoData: PagedResponse<RepoData> = emptyPageResponse<RepoData>(
-    //     `/products/${this.product.key}/repos`,
-    //     {},
-    //     this.perPage
-    // );
-    // public blogData: PagedResponse<BlogData> = emptyPageResponse<BlogData>(
-    //     `/products/${this.product.key}/blogs`,
-    //     {},
-    //     this.perPage
-    // );
-
-    // get repos(): RepoData[] {
-    //     if (this.repoData.pages.length <= 0) {
-    //         return [];
-    //     }
-    //     return this.repoData.pages.flatMap((p) => p);
-    // }
-
-    // get blogs(): BlogData[] {
-    //     if (this.blogData.pages.length <= 0) {
-    //         return [];
-    //     }
-
-    //     return this.blogData.pages.flatMap((p) => p);
-    // }
+    get displayedProjects() {
+        return this.visibleProjects;
+    }
 
 
+    get visibleProjects(): BlogOrRepoDataHolder[] {
+        return this.sortedProjects;
+    }
 
-    // get sortedProjects(): BlogOrRepoDataHolder[] {
-    //     const blogs = this.blogs;
-    //     const repos = this.repos;
-    //     const projects = wrapInHolders(blogs, repos);
-    //     console.log("blogData: " + this.blogData);
-    //     console.log("blogs: " + blogs)
-    //     console.log("projects: " + projects)
+    get product(): ProductConfig {
+        return ALL_PRODUCTS[this.$route.params["product"]];
+    }
 
-    //     // Locally join and sort
-    //     return projects.sort((a, b) => {
-    //         const dataA = a.data;
-    //         const dataB = b.data;
-    //         return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
-    //     });
-    // }
+    public repoData: PagedResponse<RepoData> = emptyPageResponse<RepoData>(
+        `/products/${this.product.key}/repos`,
+        {},
+        this.perPage
+    );
+    public blogData: PagedResponse<BlogData> = emptyPageResponse<BlogData>(
+        `/products/${this.product.key}/blogs`,
+        {},
+        this.perPage
+    );
+
+    get repos(): RepoData[] {
+        if (this.repoData.pages.length <= 0) {
+            return [];
+        }
+        return this.repoData.pages.flatMap((p) => p);
+    }
+
+    get blogs(): BlogData[] {
+        if (this.blogData.pages.length <= 0) {
+            return [];
+        }
+
+        return this.blogData.pages.flatMap((p) => p);
+    }
+
+
+
+    get sortedProjects(): BlogOrRepoDataHolder[] {
+        const blogs = this.blogs;
+        const repos = this.repos;
+        const projects = wrapInHolders(blogs, repos);
+        console.log("blogData: " + JSON.parse(JSON.stringify(this.blogData)));
+        console.log("blogs: " + JSON.parse(JSON.stringify(blogs)))
+        console.log("projects: " + JSON.parse(JSON.stringify(projects)))
+
+        // Locally join and sort
+        return projects.sort((a, b) => {
+            const dataA = a.data;
+            const dataB = b.data;
+            return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
+        });
+    }
 }
 </script>
 
