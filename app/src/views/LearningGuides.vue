@@ -34,14 +34,14 @@
     </div>
     <!-- Body -->
     <!-- <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8"> -->
-        <!-- Cards -->
-        <!-- <div class="col-span-10 lg:col-span-8">
+    <!-- Cards -->
+    <!-- <div class="col-span-10 lg:col-span-8">
             <div id="projects">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4"> -->
-                    <!-- <RepoOrBlogCard v-for="project in displayedProjects" :key="project.data.id" :project="project" /> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
+    <!-- <RepoOrBlogCard v-for="project in displayedProjects" :key="project.data.id" :project="project" /> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
     <!-- </div> -->
 </template>
 
@@ -134,8 +134,7 @@ export default class LearningGuides extends Vue {
     //         return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
     //     });
     // }
-
-
+}
 </script>
 
 <style scoped lang="postcss">
