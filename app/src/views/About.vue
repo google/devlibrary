@@ -55,6 +55,7 @@
             <li>Google Cloud</li>
             <li>Machine Learning</li>
             <li>Google Assistant</li>
+            <li>Google Maps Platform</li>
           </ul>
 
           <p class="mt-4">Currently we accept two kinds of content:</p>
