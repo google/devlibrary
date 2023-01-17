@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "cloud"
+  ],
+  "author": "EZEKIAS BOKOVE",
+  "title": "Implement secure CI/CD with Workload Identity Federation, GitLab CI & Cloud Deploy.",
+  "link": "https://medium.com/@cloud-architecture-design/implement-secure-ci-cd-with-workload-identity-federation-gitlab-ci-cloud-deploy-d5de492ac782",
+  "tags": [
+    "serverless-computing",
+    "security-identity"
+  ]
+}
