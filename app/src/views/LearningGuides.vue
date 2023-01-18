@@ -81,17 +81,24 @@ export default class LearningGuides extends Vue {
 
     // private perPage = 12;
 
-    get displayedProjects() {
+    public async displayedProjects() {
         const repos: RepoData[] = [];
-        console.info(fetchRepo("ml", "YaleDHLab-pix-plot"));
-        console.info(fetchRepo("ml", "victordibia-handtrack"));
-        console.info(fetchRepo("firebase", "radi-cho-tfjs-firebase"));
+        const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
+        if (repoData1) repos.push(repoData1);
+        const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
+        if (repoData2) repos.push(repoData2);
+        const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
+        if (repoData3) repos.push(repoData3);
+        console.info(repos);
+    
         const blogs: BlogData[] = [];
         // console.log(typeof fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"));
         // Promise.resolve(fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai")).then;
-        console.info(fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"));
-        // blogs.push(blogData);
+        const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
+        if (blogData) blogs.push(blogData);
+        console.info(blogs);
         const projects = wrapInHolders(blogs, repos);
+        console.info(projects);
         return projects.sort((a, b) => {
             const dataA = a.data;
             const dataB = b.data;
