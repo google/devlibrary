@@ -18,30 +18,37 @@
 
 <!-- About -->
 <template>
-    <div class="about">
+    <div>
         <Breadcrumbs :links="getBreadcrumbs()" />
-        <!-- Hero -->
-        <div class="header-image full-bleed-header-image px-std border-b border-gray-100" style="
+        <HeaderBodyLayout>
+            <template v-slot:header>
+                <!-- Hero -->
+                <div class="header-image full-bleed-header-image px-std border-b border-gray-100" style="
         --header-bg-image-desktop: url('/img/banners/desktop/learning-guides-wide.png');
         --header-bg-image-mobile: url('/img/banners/mobile/authors-wide.png');
       ">
-            <h1 class="full-bleed-hero-heading">Learning guides</h1>
-            <p class="mt-1 hero-description">
-                Browse through curated collections of high quality resources contributed and authored by developers.
-            </p>
-        </div>
-        <img src="/img/banners/desktop/learning-guides-clipart.png" class="hero-clipart" />
-    </div>
-    <!-- Body -->
-    <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
-        <!-- Cards -->
-        <div class="col-span-10 lg:col-span-8">
-            <div id="projects">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                    <RepoOrBlogCard v-for="project in displayedProjects" :key="project.data.id" :project="project" />
+                    <h1 class="full-bleed-hero-heading">Learning guides</h1>
+                    <p class="mt-1 hero-description">
+                        Browse through curated collections of high quality resources contributed and authored by
+                        developers.
+                    </p>
+                </div>
+                <img src="/img/banners/desktop/learning-guides-clipart.png" class="hero-clipart" />
+
+            </template>
+            <!-- Body -->
+            <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
+                <!-- Cards -->
+                <div class="col-span-10 lg:col-span-8">
+                    <div id="projects">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                            <RepoOrBlogCard v-for="project in displayedProjects" :key="project.data.id"
+                                :project="project" />
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </HeaderBodyLayout>
     </div>
 </template>
 
@@ -56,6 +63,7 @@ import { Component, Vue } from "vue-property-decorator";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import { BreadcrumbLink } from '../../../shared/types';
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
+import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import {
     // PagedResponse,
     // emptyPageResponse,
