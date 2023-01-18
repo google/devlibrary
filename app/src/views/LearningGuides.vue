@@ -99,21 +99,38 @@ export default class LearningGuides extends Vue {
 
     @Watch("filters", { deep: true })
     public async onFiltersTypeChanged() {
-        console.info(this.filters);
+        this.displayProjects();
     }
 
 
     public async displayProjects() {
         const repos: RepoData[] = [];
-        const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
-        if (repoData1) repos.push(repoData1);
-        const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
-        if (repoData2) repos.push(repoData2);
-        const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
-        if (repoData3) repos.push(repoData3);
         const blogs: BlogData[] = [];
-        const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
-        if (blogData) blogs.push(blogData);
+        let repoData: any[] = [];
+        let blogData: any[] = []
+
+        if (this.filters.guideGroup.toString() === "Injecting machine learning into your web apps") {
+            repoData = [
+                ["ml", "YaleDHLab-pix-plot"],
+                ["ml", "victordibia-handtrack"],
+                ["firebase", "radi-cho-tfjs-firebase"]
+            ];
+
+            blogData = [
+                ["cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"]
+            ];
+        }
+
+        await repoData.forEach(async (repo) => {
+            const res = await fetchRepo(repo[0], repo[1]);
+            if (res) repos.push(res);
+        })
+
+        await blogData.forEach(async (blog) => {
+            const res = await fetchBlog(blog[0], blog[1]);
+            if (res) blogs.push(res);
+        })
+
         this.projects = wrapInHolders(blogs, repos);
         this.projects.sort((a, b) => {
             const dataA = a.data;
