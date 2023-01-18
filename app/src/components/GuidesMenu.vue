@@ -35,7 +35,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Prop, Watch } from "vue-property-decorator";
+import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 import PillGroup from "@/components/PillGroup.vue";
 @Component({
     components: {
