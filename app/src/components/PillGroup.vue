@@ -17,15 +17,11 @@
 <template>
     <div>
         <label class="mdc-form-field frc cursor-pointer" v-for="entry in entries" :for="entry.id" :key="entry.id">
-            <div class="mdc-radio">
+            <div class="mdc-radio pill-selection">
                 <input class="mdc-radio__native-control" type="radio" :id="entry.id" :name="prefix" :value="entry.value"
                     v-model="choice" @input="onInput" />
-                <div class="mdc-radio__background">
-                    <div class="mdc-radio__outer-circle"></div>
-                    <div class="mdc-radio__inner-circle"></div>
-                </div>
             </div>
-            <label class="text-sm">{{ entry.key }}</label>
+            <label class="text-sm pill-text pill-selected-text" :id="entry.value">{{ truncate(entry.key, 26) }}</label>
         </label>
     </div>
 </template>
@@ -49,6 +45,11 @@ export default class PillGroup extends Vue {
     @Prop() value!: string;
     @Prop() startEmpty!: boolean;
 
+    public truncate(data: string, num: number) {
+        const res = data.split("").slice(0, num).join("");
+        return res;
+    }
+
     @Watch("value")
     public onValueChange(val: string) {
         this.choice = val;
@@ -60,7 +61,6 @@ export default class PillGroup extends Vue {
 
     async mounted() {
         await waitForMaterialStyles();
-
         for (let i = 0; i < this.keys.length; i++) {
             const key = this.keys[i];
             const value = this.values[i];
@@ -71,10 +71,11 @@ export default class PillGroup extends Vue {
                 id: this.valueId(value),
             });
         }
-
+        
         // Default is the first entry
         if (this.startEmpty === undefined || !this.startEmpty) {
             this.choice = this.entries[0].value;
+            this.applySelectedStyling(this.choice);
             this.emitValue(this.choice);
         }
     }
@@ -82,8 +83,18 @@ export default class PillGroup extends Vue {
     public onInput(e: InputEvent) {
         const value = (e.target as HTMLInputElement).value;
         if (value) {
+            this.applySelectedStyling(value);
             this.emitValue(value);
         }
+    }
+
+    public applySelectedStyling = (value: string) => {
+        const notSelected = document.querySelectorAll('.mdc-form-field *');
+        notSelected.forEach((element) => {
+            element.classList.remove('pill-selected-text');
+        });
+        const selected = document.getElementById(value);
+        selected?.classList.add("pill-selected-text");
     }
 
     /**

@@ -53,6 +53,15 @@
             </transition>
             <!-- Cards -->
             <div class="col-span-10 lg:col-span-8">
+                <!-- Show guides menu button (mobile) -->
+                <div class="mobile-only">
+                    <div class="flex flex-row mr-2 mb-4">
+                        <div class="filter-chip" @click="showFilterOverlay = true">
+                            <font-awesome-icon icon="filter" size="sm" class="mr-2" />
+                            <span>GUIDES MENU</span>
+                        </div>
+                    </div>
+                </div>
                 <div id="projects">
                     <h2 class="guide-selection-heading">{{ filters.guideGroup.toString() }}</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -67,6 +76,7 @@
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
 import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
+import MaterialButton from "@/components/MaterialButton.vue";
 import PillGroup from "@/components/PillGroup.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
@@ -75,6 +85,7 @@ import { wrapInHolders, fetchBlog, fetchRepo } from "@/plugins/data";
 
 @Component({
     components: {
+        MaterialButton,
         RepoOrBlogCard,
         Breadcrumbs,
         GuidesMenu,
@@ -93,21 +104,29 @@ export default class LearningGuides extends Vue {
         guideGroup: [],
     };
 
-    mounted() {
-        this.displayProjects();
-    }
-
     @Watch("filters", { deep: true })
     public async onFiltersTypeChanged() {
-        this.displayProjects();
+        let hasGuideParams = false;
+        let guideParams = "";
+
+        if (
+            typeof this.filters.guideGroup === "string" &&
+            this.filters.guideGroup != ""
+        ) {
+            hasGuideParams = true;
+            guideParams += `${this.filters.guideGroup}`;
+        }
+
+        if (hasGuideParams) {
+            this.displayProjects(guideParams);
+        }
     }
 
-
-    public async displayProjects() {
+    public async displayProjects(guideGroup: string) {
         const repos: RepoData[] = [];
         const blogs: BlogData[] = [];
-
-        if (this.filters.guideGroup.toString() === "Injecting machine learning into your web apps") {
+        // Conditional logic to show projects based on Guide Menu selection
+        if (guideGroup === "Injecting machine learning into your web apps") {
             const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
             if (repoData1) repos.push(repoData1);
             const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
@@ -122,6 +141,8 @@ export default class LearningGuides extends Vue {
                 const dataB = b.data;
                 return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
             });
+        } else {
+            this.projects = [];
         }
     }
 }

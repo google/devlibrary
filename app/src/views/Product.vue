@@ -696,9 +696,6 @@ export default class Product extends Vue {
     const blogs = this.showBlogPosts ? this.blogs : [];
     const repos = this.showOpenSource ? this.repos : [];
     const projects = wrapInHolders(blogs, repos);
-    console.info(this.blogData);
-    console.info( blogs);
-    console.info(projects, null, "  ");
 
     // Locally join and sort
     return projects.sort((a, b) => {
