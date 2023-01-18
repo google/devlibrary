@@ -93,21 +93,31 @@ export default class LearningGuides extends Vue {
         guideGroup: [],
     };
 
-    mounted() {
-        this.displayProjects();
-    }
-
     @Watch("filters", { deep: true })
     public async onFiltersTypeChanged() {
-        this.displayProjects();
+        let hasGuideParams = false;
+        let guideParams = "";
+
+        if (
+            typeof this.filters.guideGroup === "string" &&
+            this.filters.guideGroup != ""
+        ) {
+            hasGuideParams = true;
+            guideParams += `${this.filters.guideGroup}`;
+        }
+
+        if (hasGuideParams) {
+            console.log(guideParams);
+            this.displayProjects(guideParams);
+        }
+
     }
 
-
-    public async displayProjects() {
+    public async displayProjects(guideGroup: string) {
         const repos: RepoData[] = [];
         const blogs: BlogData[] = [];
-
-        if (this.filters.guideGroup.toString() === "Injecting machine learning into your web apps") {
+        console.log(guideGroup);
+        if (guideGroup === "Injecting machine learning into your web apps") {
             const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
             if (repoData1) repos.push(repoData1);
             const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
@@ -122,6 +132,7 @@ export default class LearningGuides extends Vue {
                 const dataB = b.data;
                 return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
             });
+            console.log(this.projects);
         }
     }
 }
