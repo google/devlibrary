@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts">
-import { Prop, Vue, Watch } from "vue-property-decorator";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 
 import { waitForMaterialStyles } from "@/plugins/preload";
 
@@ -41,6 +41,7 @@ export interface PillGroupEntry {
     id: string;
 }
 
+@Component
 export default class PillGroup extends Vue {
     @Prop() prefix!: string;
     @Prop() keys!: string[];
@@ -98,7 +99,6 @@ export default class PillGroup extends Vue {
     }
 
     public valueId(v: string) {
-        console.log(`${this.prefix}-${v}`);
         return `${this.prefix}-${v}`;
     }
 }

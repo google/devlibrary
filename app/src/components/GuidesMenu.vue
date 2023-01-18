@@ -45,10 +45,18 @@ export default class GuidesMenu extends Vue {
     @Prop({ default: false }) mobile!: boolean;
     @Prop() value!: { guideGroup: string | string[] };
     public guideGroup = "";
+    public filtersChanged = false;
+    public defaultFilters = {
+        guideGroup: "",
+    };
+    public loaded = false;
 
-    get guideValues() {
-        return { guideGroup: this.guideGroup };
+    get filterValues() {
+        return {
+            guideGroup: this.guideGroup,
+        };
     }
+
 
     @Watch("value", { deep: true })
     public onValueChange() {
@@ -59,6 +67,23 @@ export default class GuidesMenu extends Vue {
             this.guideGroup = "";
         }
         console.log(this.guideGroup);
+    }
+
+    @Watch("filterValues", { deep: true })
+    public onFilterValuesChange() {
+        if (!this.loaded) {
+            this.defaultFilters = JSON.parse(JSON.stringify(this.filterValues));
+            this.loaded = true;
+        }
+
+        if (
+            JSON.stringify(this.defaultFilters) != JSON.stringify(this.filterValues)
+        ) {
+            this.filtersChanged = true;
+        } else {
+            this.filtersChanged = false;
+        }
+        this.$emit("input", this.filterValues);
     }
 }
 </script>
