@@ -52,7 +52,6 @@ export default class GuidesMenu extends Vue {
     public loaded = false;
 
     get filterValues() {
-        console.log(this.guideGroup);
         return {
             guideGroup: this.guideGroup,
         };
@@ -67,7 +66,6 @@ export default class GuidesMenu extends Vue {
         ) {
             this.guideGroup = "";
         }
-        console.log(this.guideGroup);
     }
 
     @Watch("filterValues", { deep: true })
@@ -84,7 +82,6 @@ export default class GuidesMenu extends Vue {
         } else {
             this.filtersChanged = false;
         }
-        console.log(this.filterValues);
         this.$emit("input", this.filterValues);
     }
 }

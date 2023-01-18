@@ -53,7 +53,6 @@ export default class PillGroup extends Vue {
     public onValueChange(val: string) {
         this.choice = val;
         this.emitValue(val);
-        console.log(val)
     }
 
     private choice = "";
@@ -73,8 +72,6 @@ export default class PillGroup extends Vue {
             });
         }
 
-        console.info(this.entries);
-
         // Default is the first entry
         if (this.startEmpty === undefined || !this.startEmpty) {
             this.choice = this.entries[0].value;
@@ -86,7 +83,6 @@ export default class PillGroup extends Vue {
         const value = (e.target as HTMLInputElement).value;
         if (value) {
             this.emitValue(value);
-            console.log(value);
         }
     }
 
@@ -95,7 +91,6 @@ export default class PillGroup extends Vue {
      */
     public emitValue(value: string) {
         this.$emit("input", value);
-        console.log(value)
     }
 
     public valueId(v: string) {

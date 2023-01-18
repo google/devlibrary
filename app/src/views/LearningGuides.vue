@@ -109,6 +109,7 @@ export default class LearningGuides extends Vue {
         let repoData: any[] = [];
         let blogData: any[] = []
 
+        console.log(this.filters.guideGroup.toString());
         if (this.filters.guideGroup.toString() === "Injecting machine learning into your web apps") {
             repoData = [
                 ["ml", "YaleDHLab-pix-plot"],
@@ -125,11 +126,13 @@ export default class LearningGuides extends Vue {
             const res = await fetchRepo(repo[0], repo[1]);
             if (res) repos.push(res);
         })
+        console.log(repos);
 
         await blogData.forEach(async (blog) => {
             const res = await fetchBlog(blog[0], blog[1]);
             if (res) blogs.push(res);
         })
+        console.log(blogs)
 
         this.projects = wrapInHolders(blogs, repos);
         this.projects.sort((a, b) => {
@@ -137,6 +140,7 @@ export default class LearningGuides extends Vue {
             const dataB = b.data;
             return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
         });
+        console.log(this.projects)
     }
 }
 </script>
