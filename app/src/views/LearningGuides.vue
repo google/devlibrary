@@ -54,7 +54,7 @@
             <!-- Cards -->
             <div class="col-span-10 lg:col-span-8">
                 <div id="projects">
-                    <h2 class="guide-selection-heading">{{ filters.guideGroup.toString() }}</h2>
+                    <h2 class="guide-selection-heading">{{ filterValues.guideGroup.toString() }}</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                         <RepoOrBlogCard v-for="project in projects" :key="project.data.id" :project="project" />
                     </div>
@@ -65,10 +65,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from "vue-property-decorator";
+import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
-import RadioGroup from "@/components/RadioGroup.vue";
-import { SORT_UPDATED } from "@/components/ProjectSort.vue";
+import PillGroup from "@/components/PillGroup.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import GuidesMenu from '@/components/GuidesMenu.vue';
@@ -79,60 +78,54 @@ import { wrapInHolders, fetchBlog, fetchRepo } from "@/plugins/data";
         RepoOrBlogCard,
         Breadcrumbs,
         GuidesMenu,
-        RadioGroup,
+        PillGroup,
     },
 })
 
 export default class LearningGuides extends Vue {
+    @Prop() value!: { guideGroup: string | string[] };
+
     public getBreadcrumbs(): BreadcrumbLink[] {
         return [{ name: "LearningGuides", path: "" }];
     }
 
-    public productLoaded = false;
-    public urlParams = new URLSearchParams(window.location.search);
     public showFilterOverlay = false;
     public projects: BlogOrRepoDataHolder[] = [];
-    public sortBy = SORT_UPDATED;
-    public filters = {
-        guideGroup: [],
+    public guideGroup = "";
+    public filtersChanged = false;
+    public defaultFilters = {
+        guideGroup: "Injecting machine learning into your web apps",
     };
+    public loaded = false;
+
+    get filterValues() {
+        console.log(this.guideGroup);
+        return {
+            guideGroup: this.guideGroup,
+        };
+    }
 
     mounted() {
         this.displayProjects();
     }
 
-    @Watch("productLoaded")
-    public async onProductLoadedChanged() {
-        const selectedGuide = this.urlParams.get("guide");
-
-        if (selectedGuide !== null) {
-            document.getElementById(`guideGroup-${selectedGuide}`)?.click();
+    @Watch("filterValues", { deep: true })
+    public onFilterValuesChange() {
+        if (!this.loaded) {
+            this.defaultFilters = JSON.parse(JSON.stringify(this.filterValues));
+            this.loaded = true;
         }
-
-        console.log(selectedGuide);
-    }
-
-    @Watch("filters", { deep: true })
-    public async onFiltersTypeChanged() {
-        let hasGuideParams = false;
-        let guideParams = "";
-        let url = `?sort=${this.sortBy}`;
 
         if (
-            typeof this.filters.guideGroup === "string" &&
-            this.filters.guideGroup != ""
+            JSON.stringify(this.defaultFilters) != JSON.stringify(this.filterValues)
         ) {
-            hasGuideParams = true;
-            guideParams += `${this.filters.guideGroup}`;
-            console.log(this.filters.guideGroup);
+            this.filtersChanged = true;
+        } else {
+            this.filtersChanged = false;
         }
-
-        if (hasGuideParams) {
-            url += `&expertise=${guideParams}`;
-        }
-        window.history.replaceState(null, "", url);
+        console.log(this.filterValues);
+        this.$emit("input", this.filterValues);
     }
-
 
     public async displayProjects() {
         const repos: RepoData[] = [];
