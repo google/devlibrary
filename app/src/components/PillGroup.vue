@@ -16,15 +16,10 @@
 
 <template>
     <div>
-        <!-- See: https://material.io/components/radio-buttons/web#radio-buttons -->
-        <label class="mdc-form-field frc cursor-pointer" v-for="entry in entries" :for="entry.id" :key="entry.id">
-            <div class="mdc-radio">
-                <input class="mdc-radio__native-control" type="radio" :id="entry.id" :name="prefix" :value="entry.value"
-                    v-model="choice" @input="onInput" />
-                <div class="mdc-radio__background">
-                    <div class="mdc-radio__outer-circle"></div>
-                    <div class="mdc-radio__inner-circle"></div>
-                </div>
+        <label class="frc cursor-pointer" v-for="entry in entries" :for="entry.id" :key="entry.id">
+            <div>
+                <input type="radio" :id="entry.id" :name="prefix" :value="entry.value" v-model="choice"
+                    @input="onInput" />
             </div>
             <label class="text-sm">{{ entry.key }}</label>
         </label>
@@ -32,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+import { Prop, Vue, Watch } from "vue-property-decorator";
 
 import { waitForMaterialStyles } from "@/plugins/preload";
 
@@ -42,7 +37,6 @@ export interface PillGroupEntry {
     id: string;
 }
 
-@Component
 export default class PillGroup extends Vue {
     @Prop() prefix!: string;
     @Prop() keys!: string[];
@@ -54,9 +48,10 @@ export default class PillGroup extends Vue {
     public onValueChange(val: string) {
         this.choice = val;
         this.emitValue(val);
+        console.log(val)
     }
 
-    private choice = "";
+    public choice = "";
     public entries: PillGroupEntry[] = [];
 
     async mounted() {
@@ -73,6 +68,8 @@ export default class PillGroup extends Vue {
             });
         }
 
+        console.info(this.entries);
+
         // Default is the first entry
         if (this.startEmpty === undefined || !this.startEmpty) {
             this.choice = this.entries[0].value;
@@ -84,6 +81,7 @@ export default class PillGroup extends Vue {
         const value = (e.target as HTMLInputElement).value;
         if (value) {
             this.emitValue(value);
+            console.log(value);
         }
     }
 
@@ -92,9 +90,11 @@ export default class PillGroup extends Vue {
      */
     public emitValue(value: string) {
         this.$emit("input", value);
+        console.log(value)
     }
 
     public valueId(v: string) {
+        console.log(`${this.prefix}-${v}`);
         return `${this.prefix}-${v}`;
     }
 }

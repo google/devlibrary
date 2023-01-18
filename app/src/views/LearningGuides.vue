@@ -14,7 +14,6 @@
  limitations under the License.
 -->
 
-
 <template>
     <div>
         <Breadcrumbs :links="getBreadcrumbs()" />
@@ -32,12 +31,11 @@
         <img src="/img/banners/desktop/learning-guides-clipart.png" class="hero-clipart" />
         <!-- Body -->
         <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
-            <!-- Filters (Desktop) -->
+            <!-- Guides Menu (Desktop) -->
             <div v-if="$mq === 'desktop'" class="lg:col-span-2">
                 <GuidesMenu />
             </div>
-
-            <!-- Filters (Mobile) -->
+            <!-- Guides Menu (Mobile) -->
             <div v-if="$mq === 'mobile'" v-show="showFilterOverlay" class="mobile-only scrim z-10">
                 <!-- scrim -->
             </div>
@@ -68,19 +66,11 @@
 
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
-import {
-    SORT_UPDATED,
-} from "@/components/ProjectSort.vue";
-
-import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
+import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import GuidesMenu from '@/components/GuidesMenu.vue';
-import {
-    wrapInHolders,
-    fetchBlog,
-    fetchRepo
-} from "@/plugins/data";
+import { wrapInHolders, fetchBlog, fetchRepo } from "@/plugins/data";
 
 @Component({
     components: {
@@ -95,36 +85,19 @@ export default class LearningGuides extends Vue {
         return [{ name: "LearningGuides", path: "" }];
     }
 
-
-
-    // private perPage = 12;
     public productLoaded = false;
-    public urlParams = new URLSearchParams(window.location.search);
     public showFilterOverlay = false;
     public projects: BlogOrRepoDataHolder[] = [];
     public guideGroup: [] = [];
-    public sortBy = SORT_UPDATED;
 
     mounted() {
         this.displayProjects();
     }
 
-    @Watch("productLoaded")
-    public async onProductLoadedChanged() {
-        const selectedGuides = this.urlParams.get("guides");
-        console.log(selectedGuides);
-        if (selectedGuides !== null) {
-            document.getElementById(`guideGroup-${selectedGuides}`)?.click();
-        }
-    }
-
     @Watch("guideGroup", { deep: true })
     public async onGuideGroupChanged() {
-      
         let hasGuideParams = false;
         let guideParams = "";
-        let url = `?sort=${this.sortBy}`;
-        
 
         if (
             typeof this.guideGroup === "string" &&
@@ -132,16 +105,15 @@ export default class LearningGuides extends Vue {
         ) {
             hasGuideParams = true;
             guideParams += `${this.guideGroup}`;
+            console.log(this.guideGroup);
         }
         if (hasGuideParams) {
-            url += `&guideGroup=${guideParams}`;
+            console.log(hasGuideParams);
         }
-        window.history.replaceState(null, "", url);
+
         console.log(guideParams);
         console.log(this.guideGroup);
     }
-
-
 
     public async displayProjects() {
         const repos: RepoData[] = [];
@@ -151,11 +123,7 @@ export default class LearningGuides extends Vue {
         if (repoData2) repos.push(repoData2);
         const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
         if (repoData3) repos.push(repoData3);
-        // console.info(repos);
-
         const blogs: BlogData[] = [];
-        // console.log(typeof fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"));
-        // Promise.resolve(fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai")).then;
         const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
         if (blogData) blogs.push(blogData);
         this.projects = wrapInHolders(blogs, repos);
@@ -165,18 +133,9 @@ export default class LearningGuides extends Vue {
             return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
         });
     }
-
-
 }
 </script>
 
-<!-- <style scoped lang="postcss">
-a {
-    @apply underline;
-}
+<style scoped lang="postcss">
 
-.section {
-    @apply px-4 col-span-6;
-    @apply lg: px-0 lg:col-start-2 lg:col-span-4;
-}
-</style> -->
+</style>

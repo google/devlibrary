@@ -23,8 +23,10 @@
 
             <div class="sections">
                 <div class="section">
-                    <PillGroup prefix="guideGroup" :keys="['Injecting machine learning into your web apps', 'Group Two']"
-                        :values="['Injecting machine learning into your web apps', 'Group Two']" v-model="guideGroup" :start-empty="false" />
+                    <PillGroup prefix="guideGroup"
+                        :keys="['Injecting machine learning into your web apps', 'Group Two']"
+                        :values="['Injecting machine learning into your web apps', 'Group Two']" v-model="guideGroup"
+                        :start-empty="false" />
                 </div>
             </div>
         </div>
@@ -43,6 +45,14 @@ export default class GuidesMenu extends Vue {
     @Prop({ default: false }) mobile!: boolean;
     @Prop() value!: { guideGroup: string | string[] };
     public guideGroup = "";
+    public filtersChanged = false;
+    public defaultGuideGroup = "";
+    public loaded = false;
+
+    get guideValues() {
+        return { guideGroup: this.guideGroup };
+    }
+
     @Watch("value", { deep: true })
     public onValueChange() {
         if (
@@ -51,6 +61,24 @@ export default class GuidesMenu extends Vue {
         ) {
             this.guideGroup = "";
         }
+        console.log(this.guideGroup);
+    }
+
+    @Watch("guideValues", { deep: true })
+    public onGuideValuesChange() {
+        if (!this.loaded) {
+            this.defaultGuideGroup = this.guideGroup;
+            this.loaded = true;
+        }
+
+        if (
+            this.defaultGuideGroup != this.guideGroup
+        ) {
+            this.filtersChanged = true;
+        } else {
+            this.filtersChanged = false;
+        }
+        this.$emit("input", this.guideGroup);
         console.log(this.guideGroup);
     }
 }
