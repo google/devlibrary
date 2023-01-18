@@ -122,13 +122,13 @@ export default class LearningGuides extends Vue {
             ];
         }
 
-        await repoData.forEach(async (repo) => {
+        repoData.forEach(async (repo) => {
             const res = await fetchRepo(repo[0], repo[1]);
             if (res) repos.push(res);
         })
         console.log(repos);
 
-        await blogData.forEach(async (blog) => {
+        blogData.forEach(async (blog) => {
             const res = await fetchBlog(blog[0], blog[1]);
             if (res) blogs.push(res);
         })
