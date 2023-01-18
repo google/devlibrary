@@ -54,26 +54,16 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-// import {
-// BlogData,
-// RepoData,
-// BlogOrRepoDataHolder,
-// } from "../../../shared/types";
 
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
-import { BreadcrumbLink } from '../../../shared/types';
+import { BlogData, BreadcrumbLink, RepoData } from '../../../shared/types';
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import {
-    // PagedResponse,
-    // emptyPageResponse,
     wrapInHolders,
     fetchBlog,
     fetchRepo
 } from "@/plugins/data";
-
-// import { ProductConfig } from "../../../shared/types";
-// import { ALL_PRODUCTS } from "../../../shared/product";
 
 @Component({
     components: {
@@ -92,12 +82,14 @@ export default class LearningGuides extends Vue {
     // private perPage = 12;
 
     get displayedProjects() {
-        const repos = [];
-        repos.push(fetchRepo("ml", "YaleDHLab-pix-plot"));
-        repos.push(fetchRepo("ml", "victordibia-handtrack"));
-        repos.push(fetchRepo("firebase", "radi-cho-tfjs-firebase"));
-        const blogs = [];
-        blogs.push(fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"));
+        const repos: RepoData[] = [];
+        // repos.push(fetchRepo("ml", "YaleDHLab-pix-plot"));
+        // repos.push(fetchRepo("ml", "victordibia-handtrack"));
+        // repos.push(fetchRepo("firebase", "radi-cho-tfjs-firebase"));
+        const blogs: BlogData[] = [];
+        console.log(typeof fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"));
+        // Promise.resolve(fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai")).then;
+        // if (blogData) blogs.push(blogData);
         const projects = wrapInHolders(blogs, repos);
         return projects.sort((a, b) => {
             const dataA = a.data;
@@ -105,65 +97,6 @@ export default class LearningGuides extends Vue {
             return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
         });
     }
-
-
-    // get visibleProjects() {
-    //     const projects = [];
-    //     const project = {};
-    //     project[0].data.id = "sdklksld";
-    //     project[0].metadata = fetchRepo("firebase", "radi-cho-tfjs-firebase");
-    //     projects.push(project);
-    //     return projects;
-    //     console.info(projects);
-    // }
-
-    // get product(): ProductConfig {
-    //     return ALL_PRODUCTS[this.$route.params["product"]];
-    // }
-
-    // public repoData: PagedResponse<RepoData> = emptyPageResponse<RepoData>(
-    //     `/products/${this.product.key}/repos`,
-    //     {},
-    //     this.perPage
-    // );
-    // public blogData: PagedResponse<BlogData> = emptyPageResponse<BlogData>(
-    //     `/products/${this.product.key}/blogs`,
-    //     {},
-    //     this.perPage
-    // );
-
-    // get repos(): RepoData[] {
-    //     if (this.repoData.pages.length <= 0) {
-    //         return [];
-    //     }
-    //     return this.repoData.pages.flatMap((p) => p);
-    // }
-
-    // get blogs(): BlogData[] {
-    //     if (this.blogData.pages.length <= 0) {
-    //         return [];
-    //     }
-
-    //     return this.blogData.pages.flatMap((p) => p);
-    // }
-
-
-
-    // get sortedProjects(): BlogOrRepoDataHolder[] {
-    //     const blogs = this.blogs;
-    //     const repos = this.repos;
-    //     const projects = wrapInHolders(blogs, repos);
-    //     console.log("blogData: " + JSON.parse(JSON.stringify(this.blogData)));
-    //     console.log("blogs: " + JSON.parse(JSON.stringify(blogs)))
-    //     console.log("projects: " + JSON.parse(JSON.stringify(projects)))
-
-    //     // Locally join and sort
-    //     return projects.sort((a, b) => {
-    //         const dataA = a.data;
-    //         const dataB = b.data;
-    //         return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
-    //     });
-    // }
 }
 </script>
 
