@@ -16,9 +16,9 @@
 
 <template>
     <div>
-        <label class="frc cursor-pointer" v-for="entry in entries" :for="entry.id" :key="entry.id">
-            <div>
-                <input type="radio" :id="entry.id" :name="prefix" :value="entry.value" v-model="choice"
+        <label class="mdc-form-field frc cursor-pointer" v-for="entry in entries" :for="entry.id" :key="entry.id">
+            <div class="mdc-radio">
+                <input class="mdc-radio__native-control" type="radio" :id="entry.id" :name="prefix" :value="entry.value" v-model="choice"
                     @input="onInput" />
             </div>
             <label class="text-sm">{{ entry.key }}</label>
