@@ -88,26 +88,28 @@ export default class LearningGuides extends Vue {
     }
 
     public showFilterOverlay = false;
+    public repos: RepoData[] = [];
+    public blogs: BlogData[] = [];
     public projects: BlogOrRepoDataHolder[] = [];
     public filters = {
         guideGroup: [],
     };
 
-    mounted() {
-        this.displayProjects();
+    async mounted() {
+        await this.displayProjects();
+        await this.fillProjects();
     }
 
     @Watch("filters", { deep: true })
     public async onFiltersTypeChanged() {
-        this.displayProjects();
+        await this.displayProjects();
+        await this.fillProjects();
     }
 
 
     public async displayProjects() {
-        const repos: RepoData[] = [];
-        const blogs: BlogData[] = [];
         let repoData: any[] = [];
-        let blogData: any[] = []
+        let blogData: any[] = [];
 
         console.log(this.filters.guideGroup.toString());
         if (this.filters.guideGroup.toString() === "Injecting machine learning into your web apps") {
@@ -133,8 +135,10 @@ export default class LearningGuides extends Vue {
             if (res) blogs.push(res);
         })
         console.log(blogs)
+    }
 
-        this.projects = wrapInHolders(blogs, repos);
+    public async fillProjects() {
+        this.projects = wrapInHolders(this.blogs, this.repos);
         this.projects.sort((a, b) => {
             const dataA = a.data;
             const dataB = b.data;
