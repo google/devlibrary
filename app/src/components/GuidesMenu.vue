@@ -45,9 +45,6 @@ export default class GuidesMenu extends Vue {
     @Prop({ default: false }) mobile!: boolean;
     @Prop() value!: { guideGroup: string | string[] };
     public guideGroup = "";
-    public filtersChanged = false;
-    public defaultGuideGroup = "";
-    public loaded = false;
 
     get guideValues() {
         return { guideGroup: this.guideGroup };
@@ -61,24 +58,6 @@ export default class GuidesMenu extends Vue {
         ) {
             this.guideGroup = "";
         }
-        console.log(this.guideGroup);
-    }
-
-    @Watch("guideValues", { deep: true })
-    public onGuideValuesChange() {
-        if (!this.loaded) {
-            this.defaultGuideGroup = this.guideGroup;
-            this.loaded = true;
-        }
-
-        if (
-            this.defaultGuideGroup != this.guideGroup
-        ) {
-            this.filtersChanged = true;
-        } else {
-            this.filtersChanged = false;
-        }
-        this.$emit("input", this.guideGroup);
         console.log(this.guideGroup);
     }
 }
