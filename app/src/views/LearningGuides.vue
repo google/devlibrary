@@ -18,45 +18,29 @@
 <template>
     <div>
         <Breadcrumbs :links="getBreadcrumbs()" />
-        <HeaderBodyLayout>
-            <template v-slot:header>
-                <!-- Header (Desktop) -->
-                <div class="desktop-only">
-                    <div class="header-image full-bleed-header-image repo-hero px-std border-b border-gray-100" style="
-              --header-bg-image-desktop: url('/img/banners/desktop/repo-wide.png');
-            ">
-                        <div class="grid">
-                            <h1 class="full-bleed-hero-heading">Learning guides</h1>
-                            <p class="mt-1 hero-description">
-                                Browse through curated collections of high quality resources contributed and authored by
-                                developers.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <img src="/img/banners/desktop/learning-guides-clipart.png" class="hero-clipart" />
-
-                <!-- Header (Mobile) -->
-                <div class="mobile-only">
-                    <h1 class="full-bleed-hero-heading">Learning guides</h1>
-                    <p class="mt-1 hero-description">
-                        Browse through curated collections of high quality resources contributed and authored by
-                        developers.
-                    </p>
-                </div>
-            </template>
-            <!-- Body -->
-            <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
-                <!-- Cards -->
-                <div class="col-span-10 lg:col-span-8">
-                    <div id="projects">
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                            <RepoOrBlogCard v-for="project in projects" :key="project.data.id" :project="project" />
-                        </div>
+        <!-- Header -->
+        <div class="header-image full-bleed-header-image px-std border-b border-gray-100" style="
+     --header-bg-image-desktop: url('/img/banners/desktop/repo-wide.png');
+              --header-bg-image-mobile: url('img/banners/mobile/authors-wide.png');
+      ">
+            <h1 class="full-bleed-hero-heading">Learning guides</h1>
+            <p class="mt-1 hero-description">
+                Browse through curated collections of high quality resources contributed and authored by
+                developers.
+            </p>
+        </div>
+        <img src="/img/banners/desktop/authors-clipart.png" class="hero-clipart" />
+        <!-- Body -->
+        <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
+            <!-- Cards -->
+            <div class="col-span-10 lg:col-span-8">
+                <div id="projects">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                        <RepoOrBlogCard v-for="project in projects" :key="project.data.id" :project="project" />
                     </div>
                 </div>
             </div>
-        </HeaderBodyLayout>
+        </div>
     </div>
 </template>
 
@@ -66,7 +50,6 @@ import { Component, Vue } from "vue-property-decorator";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
-import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import {
     wrapInHolders,
     fetchBlog,
@@ -111,9 +94,7 @@ export default class LearningGuides extends Vue {
         // Promise.resolve(fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai")).then;
         const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
         if (blogData) blogs.push(blogData);
-        console.info(blogs);
         this.projects = wrapInHolders(blogs, repos);
-        console.info(this.projects);
         this.projects.sort((a, b) => {
             const dataA = a.data;
             const dataB = b.data;
