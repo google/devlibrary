@@ -33,40 +33,43 @@
         <img src="/img/banners/desktop/learning-guides-clipart.png" class="hero-clipart" />
     </div>
     <!-- Body -->
-    <!-- <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8"> -->
+    <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
         <!-- Cards -->
-        <!-- <div class="col-span-10 lg:col-span-8">
+        <div class="col-span-10 lg:col-span-8">
             <div id="projects">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4"> -->
-                    <!-- <RepoOrBlogCard v-for="project in displayedProjects" :key="project.data.id" :project="project" /> -->
-                <!-- </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <RepoOrBlogCard v-for="project in displayedProjects" :key="project.data.id" :project="project" />
+                </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 // import {
-//     BlogData,
-//     RepoData,
-//     BlogOrRepoDataHolder,
+// BlogData,
+// RepoData,
+// BlogOrRepoDataHolder,
 // } from "../../../shared/types";
 
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import { BreadcrumbLink } from '../../../shared/types';
-
-// import {
-//     PagedResponse,
-//     emptyPageResponse,
-//     wrapInHolders,
-// } from "@/plugins/data";
+import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
+import {
+    // PagedResponse,
+    // emptyPageResponse,
+    wrapInHolders,
+    fetchBlog,
+    fetchRepo
+} from "@/plugins/data";
 
 // import { ProductConfig } from "../../../shared/types";
 // import { ALL_PRODUCTS } from "../../../shared/product";
 
 @Component({
     components: {
+        RepoOrBlogCard,
         Breadcrumbs,
     },
 })
@@ -76,15 +79,34 @@ export default class LearningGuides extends Vue {
         return [{ name: "LearningGuides", path: "" }];
     }
 
+
+
     // private perPage = 12;
 
-    // get displayedProjects() {
-    //     return this.visibleProjects;
-    // }
+    get displayedProjects() {
+        const repos = [];
+        repos.push(fetchRepo("ml", "YaleDHLab-pix-plot"));
+        repos.push(fetchRepo("ml", "victordibia-handtrack"));
+        repos.push(fetchRepo("firebase", "radi-cho-tfjs-firebase"));
+        const blogs = [];
+        blogs.push(fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"));
+        const projects = wrapInHolders(blogs, repos);
+        return projects.sort((a, b) => {
+            const dataA = a.data;
+            const dataB = b.data;
+            return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
+        });
+    }
 
 
-    // get visibleProjects(): BlogOrRepoDataHolder[] {
-    //     return this.sortedProjects;
+    // get visibleProjects() {
+    //     const projects = [];
+    //     const project = {};
+    //     project[0].data.id = "sdklksld";
+    //     project[0].metadata = fetchRepo("firebase", "radi-cho-tfjs-firebase");
+    //     projects.push(project);
+    //     return projects;
+    //     console.info(projects);
     // }
 
     // get product(): ProductConfig {
