@@ -15,26 +15,35 @@
 -->
 
 
-
-<!-- About -->
 <template>
     <div>
         <Breadcrumbs :links="getBreadcrumbs()" />
         <HeaderBodyLayout>
             <template v-slot:header>
-                <!-- Hero -->
-                <div class="header-image full-bleed-header-image px-std border-b border-gray-100" style="
-        --header-bg-image-desktop: url('/img/banners/desktop/learning-guides-wide.png');
-        --header-bg-image-mobile: url('/img/banners/mobile/authors-wide.png');
-      ">
+                <!-- Header (Desktop) -->
+                <div class="desktop-only">
+                    <div class="header-image full-bleed-header-image repo-hero px-std border-b border-gray-100" style="
+              --header-bg-image-desktop: url('/img/banners/desktop/repo-wide.png');
+            ">
+                        <div class="grid">
+                            <h1 class="full-bleed-hero-heading">Learning guides</h1>
+                            <p class="mt-1 hero-description">
+                                Browse through curated collections of high quality resources contributed and authored by
+                                developers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <img src="/img/banners/desktop/learning-guides-clipart.png" class="hero-clipart" />
+
+                <!-- Header (Mobile) -->
+                <div class="mobile-only">
                     <h1 class="full-bleed-hero-heading">Learning guides</h1>
                     <p class="mt-1 hero-description">
                         Browse through curated collections of high quality resources contributed and authored by
                         developers.
                     </p>
                 </div>
-                <img src="/img/banners/desktop/learning-guides-clipart.png" class="hero-clipart" />
-
             </template>
             <!-- Body -->
             <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
