@@ -19,8 +19,8 @@
         <Breadcrumbs :links="getBreadcrumbs()" />
         <!-- Header -->
         <div class="header-image full-bleed-header-image px-std border-b border-gray-100" style="
-            --header-bg-image-desktop: url('/img/banners/desktop/learning-guides-wide.png');
-            --header-bg-image-mobile: url('img/banners/mobile/authors-wide.png');
+        --header-bg-image-desktop: url('/img/banners/desktop/learning-guides-wide.png');
+        --header-bg-image-mobile: url('img/banners/mobile/authors-wide.png');
         ">
             <h1 class="full-bleed-hero-heading">Learning guides</h1>
             <p class="mt-1 hero-description">
@@ -54,7 +54,7 @@
             <!-- Cards -->
             <div class="col-span-10 lg:col-span-8">
                 <div id="projects">
-                    <h2 class="guide-selection-heading">{{ guideGroup.toString() }}</h2>
+                    <h2 class="guide-selection-heading">{{ filters.guideGroup.toString() }}</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                         <RepoOrBlogCard v-for="project in projects" :key="project.data.id" :project="project" />
                     </div>
@@ -67,6 +67,7 @@
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
 import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
+import { SORT_UPDATED } from "@/components/ProjectSort.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import GuidesMenu from '@/components/GuidesMenu.vue';
@@ -86,34 +87,47 @@ export default class LearningGuides extends Vue {
     }
 
     public productLoaded = false;
+    public urlParams = new URLSearchParams(window.location.search);
     public showFilterOverlay = false;
     public projects: BlogOrRepoDataHolder[] = [];
-    public guideGroup: [] = [];
+    public sortBy = SORT_UPDATED;
+    public filters = {
+        guideGroup: [],
+    };
 
     mounted() {
         this.displayProjects();
     }
 
-    @Watch("guideGroup", { deep: true })
-    public async onGuideGroupChanged() {
+    @Watch("productLoaded")
+    public async onProductLoadedChanged() {
+        const selectedGuide = this.urlParams.get("guide");
+
+        if (selectedGuide !== null) {
+            document.getElementById(`guideGroup-${selectedGuide}`)?.click();
+        }
+    }
+
+    @Watch("filters", { deep: true })
+    public async onFiltersTypeChanged() {
         let hasGuideParams = false;
         let guideParams = "";
+        let url = `?sort=${this.sortBy}`;
 
         if (
-            typeof this.guideGroup === "string" &&
-            this.guideGroup != ""
+            typeof this.filters.guideGroup === "string" &&
+            this.filters.guideGroup != ""
         ) {
             hasGuideParams = true;
-            guideParams += `${this.guideGroup}`;
-            console.log(this.guideGroup);
-        }
-        if (hasGuideParams) {
-            console.log(hasGuideParams);
+            guideParams += `${this.filters.guideGroup}`;
         }
 
-        console.log(guideParams);
-        console.log(this.guideGroup);
+        if (hasGuideParams) {
+            url += `&expertise=${guideParams}`;
+        }
+        window.history.replaceState(null, "", url);
     }
+
 
     public async displayProjects() {
         const repos: RepoData[] = [];
