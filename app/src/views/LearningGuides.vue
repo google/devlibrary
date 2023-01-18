@@ -83,13 +83,14 @@ export default class LearningGuides extends Vue {
 
     get displayedProjects() {
         const repos: RepoData[] = [];
-        // repos.push(fetchRepo("ml", "YaleDHLab-pix-plot"));
-        // repos.push(fetchRepo("ml", "victordibia-handtrack"));
-        // repos.push(fetchRepo("firebase", "radi-cho-tfjs-firebase"));
+        console.info(fetchRepo("ml", "YaleDHLab-pix-plot"));
+        console.info(fetchRepo("ml", "victordibia-handtrack"));
+        console.info(fetchRepo("firebase", "radi-cho-tfjs-firebase"));
         const blogs: BlogData[] = [];
-        console.log(typeof fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"));
+        // console.log(typeof fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"));
         // Promise.resolve(fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai")).then;
-        // if (blogData) blogs.push(blogData);
+        console.info(fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"));
+        // blogs.push(blogData);
         const projects = wrapInHolders(blogs, repos);
         return projects.sort((a, b) => {
             const dataA = a.data;
