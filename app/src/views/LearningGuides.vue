@@ -56,6 +56,7 @@
             <!-- Cards -->
             <div class="col-span-10 lg:col-span-8">
                 <div id="projects">
+                    <h2>Injecting machine learning into your web apps</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                         <RepoOrBlogCard v-for="project in projects" :key="project.data.id" :project="project" />
                     </div>
@@ -71,7 +72,7 @@ import { Component, Vue } from "vue-property-decorator";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
-import GuidesMenu from '../components/GuidesMenu.vue';
+import GuidesMenu from '@/components/GuidesMenu.vue';
 import {
     wrapInHolders,
     fetchBlog,
@@ -82,6 +83,7 @@ import {
     components: {
         RepoOrBlogCard,
         Breadcrumbs,
+        GuidesMenu,
     },
 })
 
