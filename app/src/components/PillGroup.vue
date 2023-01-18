@@ -55,7 +55,7 @@ export default class PillGroup extends Vue {
         console.log(val)
     }
 
-    public choice = "";
+    private choice = "";
     public entries: PillGroupEntry[] = [];
 
     async mounted() {
