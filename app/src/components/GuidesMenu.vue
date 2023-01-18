@@ -23,11 +23,8 @@
 
             <div class="sections">
                 <div class="section">
-                    <p class="font-display font-medium text-sm mb-2 px-2">
-                        Injecting machine learning into your web apps
-                    </p>
-                    <PillGroup prefix="guideGroup" :keys="['injecting machine learning']"
-                        :values="['injecting machine learning']" v-model="guideGroup" :start-empty="false" />
+                    <PillGroup prefix="guideGroup" :keys="['Injecting machine learning into your web apps', 'Group Two']"
+                        :values="['Injecting machine learning into your web apps', 'Group Two']" v-model="guideGroup" :start-empty="false" />
                 </div>
             </div>
         </div>

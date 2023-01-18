@@ -107,12 +107,13 @@ export default class LearningGuides extends Vue {
 
     mounted() {
         this.displayProjects();
+        console.log(this.guideGroup);
     }
 
     @Watch("productLoaded")
     public async onProductLoadedChanged() {
         const selectedGuides = this.urlParams.get("guides");
-
+        console.log(selectedGuides);
         if (selectedGuides !== null) {
             document.getElementById(`guideGroup-${selectedGuides}`)?.click();
         }
@@ -120,9 +121,11 @@ export default class LearningGuides extends Vue {
 
     @Watch("guideGroup", { deep: true })
     public async onGuideGroupChanged() {
+      
         let hasGuideParams = false;
         let guideParams = "";
         let url = `?sort=${this.sortBy}`;
+        
 
         if (
             typeof this.guideGroup === "string" &&
@@ -135,6 +138,8 @@ export default class LearningGuides extends Vue {
             url += `&guideGroup=${guideParams}`;
         }
         window.history.replaceState(null, "", url);
+        console.log(guideParams);
+        console.log(this.guideGroup);
     }
 
 
@@ -147,7 +152,7 @@ export default class LearningGuides extends Vue {
         if (repoData2) repos.push(repoData2);
         const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
         if (repoData3) repos.push(repoData3);
-        console.info(repos);
+        // console.info(repos);
 
         const blogs: BlogData[] = [];
         // console.log(typeof fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"));
