@@ -51,6 +51,7 @@ export default class GuidesMenu extends Vue {
         ) {
             this.guideGroup = "";
         }
+        console.log(this.guideGroup);
     }
 }
 </script>

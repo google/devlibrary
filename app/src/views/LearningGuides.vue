@@ -107,7 +107,6 @@ export default class LearningGuides extends Vue {
 
     mounted() {
         this.displayProjects();
-        console.log(this.guideGroup);
     }
 
     @Watch("productLoaded")
