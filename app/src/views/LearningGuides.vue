@@ -56,7 +56,7 @@
             <!-- Cards -->
             <div class="col-span-10 lg:col-span-8">
                 <div id="projects">
-                    <h2>Injecting machine learning into your web apps</h2>
+                    <h2 class="guide-selection-heading">{{ guideGroup.toString() }}</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                         <RepoOrBlogCard v-for="project in projects" :key="project.data.id" :project="project" />
                     </div>
@@ -67,7 +67,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
+import {
+    SORT_UPDATED,
+} from "@/components/ProjectSort.vue";
 
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
@@ -95,11 +98,43 @@ export default class LearningGuides extends Vue {
 
 
     // private perPage = 12;
+    public productLoaded = false;
+    public urlParams = new URLSearchParams(window.location.search);
     public showFilterOverlay = false;
     public projects: BlogOrRepoDataHolder[] = [];
+    public guideGroup: [] = [];
+    public sortBy = SORT_UPDATED;
 
     mounted() {
         this.displayProjects();
+    }
+
+    @Watch("productLoaded")
+    public async onProductLoadedChanged() {
+        const selectedGuides = this.urlParams.get("guides");
+
+        if (selectedGuides !== null) {
+            document.getElementById(`guideGroup-${selectedGuides}`)?.click();
+        }
+    }
+
+    @Watch("guideGroup", { deep: true })
+    public async onGuideGroupChanged() {
+        let hasGuideParams = false;
+        let guideParams = "";
+        let url = `?sort=${this.sortBy}`;
+
+        if (
+            typeof this.guideGroup === "string" &&
+            this.guideGroup != ""
+        ) {
+            hasGuideParams = true;
+            guideParams += `${this.guideGroup}`;
+        }
+        if (hasGuideParams) {
+            url += `&guideGroup=${guideParams}`;
+        }
+        window.history.replaceState(null, "", url);
     }
 
 

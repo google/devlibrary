@@ -236,6 +236,12 @@
       line-height: 52px;
     }
 
+    .guide-selection-heading {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 32px;
+    }
+
     .header-image {
       background-image: var(--header-bg-image-desktop);
       background-position: right;
