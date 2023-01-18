@@ -20,18 +20,39 @@
         <Breadcrumbs :links="getBreadcrumbs()" />
         <!-- Header -->
         <div class="header-image full-bleed-header-image px-std border-b border-gray-100" style="
-     --header-bg-image-desktop: url('/img/banners/desktop/repo-wide.png');
-              --header-bg-image-mobile: url('img/banners/mobile/authors-wide.png');
-      ">
+            --header-bg-image-desktop: url('/img/banners/desktop/learning-guides-wide.png');
+            --header-bg-image-mobile: url('img/banners/mobile/authors-wide.png');
+        ">
             <h1 class="full-bleed-hero-heading">Learning guides</h1>
             <p class="mt-1 hero-description">
                 Browse through curated collections of high quality resources contributed and authored by
                 developers.
             </p>
         </div>
-        <img src="/img/banners/desktop/authors-clipart.png" class="hero-clipart" />
+        <img src="/img/banners/desktop/learning-guides-clipart.png" class="hero-clipart" />
         <!-- Body -->
         <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
+            <!-- Filters (Desktop) -->
+            <div v-if="$mq === 'desktop'" class="lg:col-span-2">
+                <GuidesMenu />
+            </div>
+
+            <!-- Filters (Mobile) -->
+            <div v-if="$mq === 'mobile'" v-show="showFilterOverlay" class="mobile-only scrim z-10">
+                <!-- scrim -->
+            </div>
+            <transition name="slide-in-left">
+                <div v-if="$mq === 'mobile'" v-show="showFilterOverlay"
+                    class="mobile-only fixed right-0 top-0 pt-20 w-full h-full z-10">
+                    <div class="bg-white rounded-l overflow-hidden w-2/3 ml-auto">
+                        <GuidesMenu :mobile="true" />
+                        <div class="border-t border-gray-200 flex flex-row-reverse gap-2 p-2">
+                            <MaterialButton type="primary" @click.native="showFilterOverlay = false">Done
+                            </MaterialButton>
+                        </div>
+                    </div>
+                </div>
+            </transition>
             <!-- Cards -->
             <div class="col-span-10 lg:col-span-8">
                 <div id="projects">
@@ -50,6 +71,7 @@ import { Component, Vue } from "vue-property-decorator";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
+import GuidesMenu from '../components/GuidesMenu.vue';
 import {
     wrapInHolders,
     fetchBlog,
@@ -71,6 +93,7 @@ export default class LearningGuides extends Vue {
 
 
     // private perPage = 12;
+    public showFilterOverlay = false;
     public projects: BlogOrRepoDataHolder[] = [];
 
     mounted() {
