@@ -108,6 +108,8 @@ export default class LearningGuides extends Vue {
 
 
     public async displayProjects() {
+        this.repos = [];
+        this.blogs = [];
         let repoData: any[] = [];
         let blogData: any[] = [];
 
@@ -126,15 +128,15 @@ export default class LearningGuides extends Vue {
 
         repoData.forEach(async (repo) => {
             const res = await fetchRepo(repo[0], repo[1]);
-            if (res) repos.push(res);
+            if (res) this.repos.push(res);
         })
-        console.log(repos);
+        console.log(this.repos);
 
         blogData.forEach(async (blog) => {
             const res = await fetchBlog(blog[0], blog[1]);
-            if (res) blogs.push(res);
+            if (res) this.blogs.push(res);
         })
-        console.log(blogs)
+        console.log(this.blogs)
     }
 
     public async fillProjects() {
