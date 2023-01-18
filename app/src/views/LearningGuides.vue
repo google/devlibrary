@@ -42,8 +42,7 @@
                 <div class="col-span-10 lg:col-span-8">
                     <div id="projects">
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                            <RepoOrBlogCard v-for="project in displayedProjects" :key="project.data.id"
-                                :project="project" />
+                            <RepoOrBlogCard v-for="project in projects" :key="project.data.id" :project="project" />
                         </div>
                     </div>
                 </div>
@@ -56,7 +55,7 @@
 import { Component, Vue } from "vue-property-decorator";
 
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
-import { BlogData, BreadcrumbLink, RepoData } from '../../../shared/types';
+import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
 import HeaderBodyLayout from "@/components/HeaderBodyLayout.vue";
 import {
@@ -80,8 +79,15 @@ export default class LearningGuides extends Vue {
 
 
     // private perPage = 12;
+    public projects: BlogOrRepoDataHolder[] = [];
 
-    public async displayedProjects() {
+    mounted() {
+        this.displayProjects();
+    }
+
+
+
+    public async displayProjects() {
         const repos: RepoData[] = [];
         const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
         if (repoData1) repos.push(repoData1);
@@ -90,21 +96,23 @@ export default class LearningGuides extends Vue {
         const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
         if (repoData3) repos.push(repoData3);
         console.info(repos);
-    
+
         const blogs: BlogData[] = [];
         // console.log(typeof fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai"));
         // Promise.resolve(fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai")).then;
         const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
         if (blogData) blogs.push(blogData);
         console.info(blogs);
-        const projects = wrapInHolders(blogs, repos);
-        console.info(projects);
-        return projects.sort((a, b) => {
+        this.projects = wrapInHolders(blogs, repos);
+        console.info(this.projects);
+        this.projects.sort((a, b) => {
             const dataA = a.data;
             const dataB = b.data;
             return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
         });
     }
+
+
 }
 </script>
 
