@@ -47,11 +47,12 @@ export default class GuidesMenu extends Vue {
     public guideGroup = "";
     public filtersChanged = false;
     public defaultFilters = {
-        guideGroup: "",
+        guideGroup: "Injecting machine learning into your web apps",
     };
     public loaded = false;
 
     get filterValues() {
+        console.log(this.guideGroup);
         return {
             guideGroup: this.guideGroup,
         };
@@ -83,6 +84,7 @@ export default class GuidesMenu extends Vue {
         } else {
             this.filtersChanged = false;
         }
+        console.log(this.filterValues);
         this.$emit("input", this.filterValues);
     }
 }
