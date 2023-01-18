@@ -67,6 +67,7 @@
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
 import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
+import RadioGroup from "@/components/RadioGroup.vue";
 import { SORT_UPDATED } from "@/components/ProjectSort.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
@@ -78,6 +79,7 @@ import { wrapInHolders, fetchBlog, fetchRepo } from "@/plugins/data";
         RepoOrBlogCard,
         Breadcrumbs,
         GuidesMenu,
+        RadioGroup,
     },
 })
 
@@ -106,6 +108,8 @@ export default class LearningGuides extends Vue {
         if (selectedGuide !== null) {
             document.getElementById(`guideGroup-${selectedGuide}`)?.click();
         }
+
+        console.log(selectedGuide);
     }
 
     @Watch("filters", { deep: true })
@@ -120,6 +124,7 @@ export default class LearningGuides extends Vue {
         ) {
             hasGuideParams = true;
             guideParams += `${this.filters.guideGroup}`;
+            console.log(this.filters.guideGroup);
         }
 
         if (hasGuideParams) {
