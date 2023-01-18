@@ -33,7 +33,7 @@
         <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
             <!-- Guides Menu (Desktop) -->
             <div v-if="$mq === 'desktop'" class="lg:col-span-2">
-                <GuidesMenu />
+                <GuidesMenu v-model="filters" />
             </div>
             <!-- Guides Menu (Mobile) -->
             <div v-if="$mq === 'mobile'" v-show="showFilterOverlay" class="mobile-only scrim z-10">
@@ -43,7 +43,7 @@
                 <div v-if="$mq === 'mobile'" v-show="showFilterOverlay"
                     class="mobile-only fixed right-0 top-0 pt-20 w-full h-full z-10">
                     <div class="bg-white rounded-l overflow-hidden w-2/3 ml-auto">
-                        <GuidesMenu :mobile="true" />
+                        <GuidesMenu :mobile="true" v-model="filters" />
                         <div class="border-t border-gray-200 flex flex-row-reverse gap-2 p-2">
                             <MaterialButton type="primary" @click.native="showFilterOverlay = false">Done
                             </MaterialButton>
@@ -54,7 +54,7 @@
             <!-- Cards -->
             <div class="col-span-10 lg:col-span-8">
                 <div id="projects">
-                    <h2 class="guide-selection-heading">{{ filterValues.guideGroup.toString() }}</h2>
+                    <h2 class="guide-selection-heading">{{ filters.guideGroup.toString() }}</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                         <RepoOrBlogCard v-for="project in projects" :key="project.data.id" :project="project" />
                     </div>
@@ -65,7 +65,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop, Watch } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
 import PillGroup from "@/components/PillGroup.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
@@ -83,49 +83,25 @@ import { wrapInHolders, fetchBlog, fetchRepo } from "@/plugins/data";
 })
 
 export default class LearningGuides extends Vue {
-    @Prop() value!: { guideGroup: string | string[] };
-
     public getBreadcrumbs(): BreadcrumbLink[] {
         return [{ name: "LearningGuides", path: "" }];
     }
 
     public showFilterOverlay = false;
     public projects: BlogOrRepoDataHolder[] = [];
-    public guideGroup = "";
-    public filtersChanged = false;
-    public defaultFilters = {
-        guideGroup: "Injecting machine learning into your web apps",
+    public filters = {
+        guideGroup: [],
     };
-    public loaded = false;
-
-    get filterValues() {
-        console.log(this.guideGroup);
-        return {
-            guideGroup: this.guideGroup,
-        };
-    }
 
     mounted() {
         this.displayProjects();
     }
 
-    @Watch("filterValues", { deep: true })
-    public onFilterValuesChange() {
-        if (!this.loaded) {
-            this.defaultFilters = JSON.parse(JSON.stringify(this.filterValues));
-            this.loaded = true;
-        }
-
-        if (
-            JSON.stringify(this.defaultFilters) != JSON.stringify(this.filterValues)
-        ) {
-            this.filtersChanged = true;
-        } else {
-            this.filtersChanged = false;
-        }
-        console.log(this.filterValues);
-        this.$emit("input", this.filterValues);
+    @Watch("filters", { deep: true })
+    public async onFiltersTypeChanged() {
+        console.info(this.filters);
     }
+
 
     public async displayProjects() {
         const repos: RepoData[] = [];
