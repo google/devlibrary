@@ -110,7 +110,6 @@ export default class LearningGuides extends Vue {
             console.log(guideParams);
             this.displayProjects(guideParams);
         }
-
     }
 
     public async displayProjects(guideGroup: string) {
@@ -118,12 +117,12 @@ export default class LearningGuides extends Vue {
         const blogs: BlogData[] = [];
         console.log(guideGroup);
         if (guideGroup === "Injecting machine learning into your web apps") {
-            const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
-            if (repoData1) repos.push(repoData1);
-            const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
-            if (repoData2) repos.push(repoData2);
-            const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
-            if (repoData3) repos.push(repoData3);
+            const repoData = [["ml", "YaleDHLab-pix-plot"], ["ml", "victordibia-handtrack"], ["firebase", "radi-cho-tfjs-firebase"]];
+            repoData.forEach(async (repo) => {
+                const res = await fetchRepo(repo[0], repo[1]);
+                if (res) repos.push(res);
+            })
+
             const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
             if (blogData) blogs.push(blogData);
             this.projects = wrapInHolders(blogs, repos);
@@ -132,6 +131,9 @@ export default class LearningGuides extends Vue {
                 const dataB = b.data;
                 return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
             });
+            console.log(this.projects);
+        } else {
+            this.projects = [];
             console.log(this.projects);
         }
     }
