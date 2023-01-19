@@ -2,7 +2,7 @@
   "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["ezzabuzaid"],
   "author": "Ezz Abuzaid",
   "title": "Advance Angular Dynamic Component",
   "link": "https://dev.to/this-is-angular/advance-angular-dynamic-component-12e",
