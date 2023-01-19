@@ -21,7 +21,7 @@
                 <input class="mdc-radio__native-control" type="radio" :id="entry.id" :name="prefix" :value="entry.value"
                     v-model="choice" @input="onInput" />
             </div>
-            <label class="text-sm pill-text" :id="entry.value">{{ truncate(entry.key, 26) }}</label>
+            <label class="text-sm pill-text pill-selected-text" :id="entry.value">{{ truncate(entry.key, 26) }}</label>
         </label>
     </div>
 </template>
@@ -60,9 +60,7 @@ export default class PillGroup extends Vue {
     public entries: PillGroupEntry[] = [];
 
     async mounted() {
-        await this.applySelectedStyling(this.entries[0].value);
         await waitForMaterialStyles();
-
         for (let i = 0; i < this.keys.length; i++) {
             const key = this.keys[i];
             const value = this.values[i];
@@ -73,10 +71,11 @@ export default class PillGroup extends Vue {
                 id: this.valueId(value),
             });
         }
-
+        
         // Default is the first entry
         if (this.startEmpty === undefined || !this.startEmpty) {
             this.choice = this.entries[0].value;
+            this.applySelectedStyling(this.choice);
             this.emitValue(this.choice);
         }
     }
