@@ -238,12 +238,12 @@
   .pill-text {
     border-radius: 16px;
     padding : 6px 16px;
+    width: 100%;
   }
 
   .pill-selected-text {
     color: #041E49;
     background: #D3E3FD;
-    width: 100%;
   }
 
   .guide-selection-heading {
