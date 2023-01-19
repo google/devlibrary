@@ -13,7 +13,8 @@
     "validate": "ts-node ./scripts/validate.ts",
     "build": "ts-node ./scripts/generate.ts",
     "deploy:firebase": "firebase --project=$FIREBASE_PROJECT deploy --force",
-    "format": "prettier --write *.ts ./scripts/*.ts"
+    "format": "prettier --write *.ts ./scripts/*.ts",
+    "remove": "ts-node ./scripts/remove.ts"
   },
   "author": "",
   "license": "Apache-2.0",
