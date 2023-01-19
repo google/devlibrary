@@ -229,6 +229,22 @@
     margin-top: auto;
   }
 
+  .pill-selection {
+    position: absolute;
+    width: 100%;
+    margin-left: -10px;
+  }
+
+  .pill-text {
+    border-radius: "16px";
+    padding : "6px 16px";
+  }
+
+  .pill-selected-text {
+    color: "#041E49";
+    background : "#D3E3FD";
+  }
+
   @screen lg {
     .homepage-header h1, 
     .full-bleed-header-image h1 {
@@ -240,12 +256,6 @@
       font-size: 32px;
       line-height: 40px;
       margin-bottom: 32px;
-    }
-
-    .pill-selection {
-      position: absolute;
-      width: 100%;
-      margin-left: -10px;
     }
 
     .header-image {

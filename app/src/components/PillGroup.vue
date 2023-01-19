@@ -21,7 +21,7 @@
                 <input class="mdc-radio__native-control" type="radio" :id="entry.id" :name="prefix" :value="entry.value"
                     v-model="choice" @input="onInput" />
             </div>
-            <label class="text-sm" :id="entry.value">{{ truncate(entry.key, 26) }}</label>
+            <label class="text-sm pill-text" :id="entry.value">{{ truncate(entry.key, 26) }}</label>
         </label>
     </div>
 </template>
@@ -76,6 +76,12 @@ export default class PillGroup extends Vue {
         // Default is the first entry
         if (this.startEmpty === undefined || !this.startEmpty) {
             this.choice = this.entries[0].value;
+            const notSelected = document.querySelectorAll('.mdc-form-field *');
+            notSelected.forEach((element) => {
+                element.classList.remove('pill-selected-text');
+            });
+            const selected = document.getElementById(this.choice);
+            selected?.classList.add("pill-selected-text");
             this.emitValue(this.choice);
         }
     }
@@ -83,13 +89,12 @@ export default class PillGroup extends Vue {
     public onInput(e: InputEvent) {
         const value = (e.target as HTMLInputElement).value;
         if (value) {
-            const d = document.getElementById(value);
-            if (d) {
-                d.style.color = "#041E49";
-                d.style.background = "#D3E3FD";
-                d.style.borderRadius = "16px";
-                d.style.padding = "6px 16px";
-            }
+            const notSelected = document.querySelectorAll('.mdc-form-field *');
+            notSelected.forEach((element) => {
+                element.classList.remove('pill-selected-text');
+            });
+            const selected = document.getElementById(value);
+            selected?.classList.add("pill-selected-text");
             this.emitValue(value);
         }
     }
