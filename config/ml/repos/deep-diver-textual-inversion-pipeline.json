@@ -12,9 +12,5 @@
   "longDescription": "This repository demonstrates how to manage multiple models and their prototype applications of fine-tuned Stable Diffusion on new concepts by Textual Inversion.",
   "content": "README.md",
   "pages": [],
-  "tags": [
-    "mlops",
-    "tf",
-    "tfx"
-  ]
+  "tags": ["mobile","nlp","vision","library","notebook","collection","web","theory"]
 }
