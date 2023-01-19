@@ -1,0 +1,20 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "deep-diver"
+  ],
+  "owner": "deep-diver",
+  "repo": "keras-sd-serving",
+  "name": "Various ways of serving Stable Diffusion",
+  "shortDescription": "This repository shows a various ways to deploy Stable Diffusion  with TF Serving, Hugging Face Endpoint, and FastAPI.",
+  "longDescription": "This repository shows a various ways to deploy Stable Diffusion  with TF Serving, Hugging Face Endpoint, and FastAPI.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mlops",
+    "tf",
+    "tfx"
+  ]
+}
