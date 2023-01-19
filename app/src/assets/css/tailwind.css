@@ -236,13 +236,14 @@
   }
 
   .pill-text {
-    border-radius: "16px";
-    padding : "6px 16px";
+    border-radius: 16px;
+    padding : 6px 16px;
   }
 
   .pill-selected-text {
-    color: "#041E49";
-    background : "#D3E3FD";
+    color: #041E49;
+    background: #D3E3FD;
+    width: 100%;
   }
 
   @screen lg {

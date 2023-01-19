@@ -76,6 +76,7 @@
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
 import { BlogData, BreadcrumbLink, RepoData, BlogOrRepoDataHolder } from '../../../shared/types';
+import MaterialButton from "@/components/MaterialButton.vue";
 import PillGroup from "@/components/PillGroup.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import RepoOrBlogCard from "@/components/RepoOrBlogCard.vue";
@@ -84,6 +85,7 @@ import { wrapInHolders, fetchBlog, fetchRepo } from "@/plugins/data";
 
 @Component({
     components: {
+        MaterialButton,
         RepoOrBlogCard,
         Breadcrumbs,
         GuidesMenu,
@@ -118,7 +120,6 @@ export default class LearningGuides extends Vue {
         if (hasGuideParams) {
             this.displayProjects(guideParams);
         }
-
     }
 
     public async displayProjects(guideGroup: string) {

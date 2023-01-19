@@ -76,12 +76,7 @@ export default class PillGroup extends Vue {
         // Default is the first entry
         if (this.startEmpty === undefined || !this.startEmpty) {
             this.choice = this.entries[0].value;
-            const notSelected = document.querySelectorAll('.mdc-form-field *');
-            notSelected.forEach((element) => {
-                element.classList.remove('pill-selected-text');
-            });
-            const selected = document.getElementById(this.choice);
-            selected?.classList.add("pill-selected-text");
+            this.applySelectedStyling(this.choice);
             this.emitValue(this.choice);
         }
     }
@@ -89,14 +84,18 @@ export default class PillGroup extends Vue {
     public onInput(e: InputEvent) {
         const value = (e.target as HTMLInputElement).value;
         if (value) {
-            const notSelected = document.querySelectorAll('.mdc-form-field *');
-            notSelected.forEach((element) => {
-                element.classList.remove('pill-selected-text');
-            });
-            const selected = document.getElementById(value);
-            selected?.classList.add("pill-selected-text");
+            this.applySelectedStyling(value);
             this.emitValue(value);
         }
+    }
+
+    public applySelectedStyling = (value: string) => {
+        const notSelected = document.querySelectorAll('.mdc-form-field *');
+        notSelected.forEach((element) => {
+            element.classList.remove('pill-selected-text');
+        });
+        const selected = document.getElementById(value);
+        selected?.classList.add("pill-selected-text");
     }
 
     /**
