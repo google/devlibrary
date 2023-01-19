@@ -17,15 +17,11 @@
 <template>
     <div>
         <label class="mdc-form-field frc cursor-pointer" v-for="entry in entries" :for="entry.id" :key="entry.id">
-            <div class="mdc-radio">
+            <div class="mdc-radio pill-selection">
                 <input class="mdc-radio__native-control" type="radio" :id="entry.id" :name="prefix" :value="entry.value"
                     v-model="choice" @input="onInput" />
-                <div class="mdc-radio__background">
-                    <div class="mdc-radio__outer-circle"></div>
-                    <div class="mdc-radio__inner-circle"></div>
-                </div>
             </div>
-            <label class="text-sm">{{ entry.key }}</label>
+            <label class="text-sm pill-text">{{ entry.key || truncate(entry.key, 26) }}</label>
         </label>
     </div>
 </template>
@@ -48,6 +44,11 @@ export default class PillGroup extends Vue {
     @Prop() values!: string[];
     @Prop() value!: string;
     @Prop() startEmpty!: boolean;
+
+    public truncate(data: string, num: number) {
+        const res = data.split("").slice(0, num).join("");
+        return res;
+    }
 
     @Watch("value")
     public onValueChange(val: string) {

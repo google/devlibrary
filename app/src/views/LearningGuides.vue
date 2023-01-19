@@ -53,6 +53,15 @@
             </transition>
             <!-- Cards -->
             <div class="col-span-10 lg:col-span-8">
+                <!-- Show guides menu button (mobile) -->
+                <div class="mobile-only">
+                    <div class="flex flex-row mr-2 mb-4">
+                        <div class="filter-chip" @click="showFilterOverlay = true">
+                            <font-awesome-icon icon="filter" size="sm" class="mr-2" />
+                            <span>GUIDES MENU</span>
+                        </div>
+                    </div>
+                </div>
                 <div id="projects">
                     <h2 class="guide-selection-heading">{{ filters.guideGroup.toString() }}</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -107,22 +116,22 @@ export default class LearningGuides extends Vue {
         }
 
         if (hasGuideParams) {
-            console.log(guideParams);
             this.displayProjects(guideParams);
         }
+
     }
 
     public async displayProjects(guideGroup: string) {
         const repos: RepoData[] = [];
         const blogs: BlogData[] = [];
-        console.log(guideGroup);
+        // Conditional logic to show projects based on Guide Menu selection
         if (guideGroup === "Injecting machine learning into your web apps") {
-            const repoData = [["ml", "YaleDHLab-pix-plot"], ["ml", "victordibia-handtrack"], ["firebase", "radi-cho-tfjs-firebase"]];
-            repoData.forEach(async (repo) => {
-                const res = await fetchRepo(repo[0], repo[1]);
-                if (res) repos.push(res);
-            })
-
+            const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
+            if (repoData1) repos.push(repoData1);
+            const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
+            if (repoData2) repos.push(repoData2);
+            const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
+            if (repoData3) repos.push(repoData3);
             const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
             if (blogData) blogs.push(blogData);
             this.projects = wrapInHolders(blogs, repos);
@@ -131,10 +140,8 @@ export default class LearningGuides extends Vue {
                 const dataB = b.data;
                 return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
             });
-            console.log(this.projects);
         } else {
             this.projects = [];
-            console.log(this.projects);
         }
     }
 }

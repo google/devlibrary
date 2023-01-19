@@ -242,6 +242,19 @@
       margin-bottom: 32px;
     }
 
+    .pill-selection {
+      position: absolute;
+      width: 100%;
+      margin-left: -10px;
+    }
+
+    .pill-text {
+      color: #041E49;
+      background: #D3E3FD;
+      border-radius: 16px;
+      padding: 6px; 16px;
+    }
+
     .header-image {
       background-image: var(--header-bg-image-desktop);
       background-position: right;
