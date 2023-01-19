@@ -246,6 +246,10 @@
     width: 100%;
   }
 
+  .guide-selection-heading {
+    margin-bottom: 32px;
+  }
+
   @screen lg {
     .homepage-header h1, 
     .full-bleed-header-image h1 {

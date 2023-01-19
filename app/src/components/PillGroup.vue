@@ -60,6 +60,7 @@ export default class PillGroup extends Vue {
     public entries: PillGroupEntry[] = [];
 
     async mounted() {
+        await this.applySelectedStyling(this.entries[0].value);
         await waitForMaterialStyles();
 
         for (let i = 0; i < this.keys.length; i++) {
@@ -76,7 +77,6 @@ export default class PillGroup extends Vue {
         // Default is the first entry
         if (this.startEmpty === undefined || !this.startEmpty) {
             this.choice = this.entries[0].value;
-            this.applySelectedStyling(this.choice);
             this.emitValue(this.choice);
         }
     }
