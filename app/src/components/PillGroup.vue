@@ -53,9 +53,8 @@ export default class PillGroup extends Vue {
 
     @Watch("value")
     public onValueChange(val: string) {
-        console.log(val);
         this.choice = val;
-        this.applySelectedStyling(val);
+        // this.applySelectedStyling(val);
         this.emitValue(val);
     }
 
@@ -84,32 +83,29 @@ export default class PillGroup extends Vue {
 
     public onInput(e: InputEvent) {
         const value = (e.target as HTMLInputElement).value;
-        console.log(value);
         if (value) {
-            this.applySelectedStyling(value);
+            // this.applySelectedStyling(value);
             this.emitValue(value);
         }
     }
 
-    public applySelectedStyling = (value: string) => {
-        const notSelected = document.querySelectorAll('.mdc-form-field *');
-        notSelected.forEach((element) => {
-            element.classList.remove('pill-selected-text');
-        });
-        const selected = document.getElementById(value);
-        selected?.classList.add("pill-selected-text");
-    }
+    // public applySelectedStyling = (value: string) => {
+    //     const notSelected = document.querySelectorAll('.mdc-form-field *');
+    //     notSelected.forEach((element) => {
+    //         element.classList.remove('pill-selected-text');
+    //     });
+    //     const selected = document.getElementById(value);
+    //     selected?.classList.add("pill-selected-text");
+    // }
 
     /**
      * Emit the special 'input' event which allows us to use v-model on the group
      */
     public emitValue(value: string) {
-        console.log(value);
         this.$emit("input", value);
     }
 
     public valueId(v: string) {
-        console.log(`${this.prefix}-${v}`);
         return `${this.prefix}-${v}`;
     }
 }
