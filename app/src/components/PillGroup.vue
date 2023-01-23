@@ -54,7 +54,6 @@ export default class PillGroup extends Vue {
     @Watch("value")
     public onValueChange(val: string) {
         this.choice = val;
-        // this.applySelectedStyling(val);
         this.emitValue(val);
     }
 
@@ -84,19 +83,9 @@ export default class PillGroup extends Vue {
     public onInput(e: InputEvent) {
         const value = (e.target as HTMLInputElement).value;
         if (value) {
-            // this.applySelectedStyling(value);
             this.emitValue(value);
         }
     }
-
-    // public applySelectedStyling = (value: string) => {
-    //     const notSelected = document.querySelectorAll('.mdc-form-field *');
-    //     notSelected.forEach((element) => {
-    //         element.classList.remove('pill-selected-text');
-    //     });
-    //     const selected = document.getElementById(value);
-    //     selected?.classList.add("pill-selected-text");
-    // }
 
     /**
      * Emit the special 'input' event which allows us to use v-model on the group
