@@ -126,11 +126,14 @@ export default class LearningGuides extends Vue {
         const repos: RepoData[] = [];
         const blogs: BlogData[] = [];
         // Conditional logic to show projects based on Guide Menu selection
+        console.log(guideGroup);
         if (guideGroup === "Injecting machine learning into your web apps") {
             const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
             if (repoData1) repos.push(repoData1);
+            console.log(repoData1);
             const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
             if (repoData2) repos.push(repoData2);
+            console.log(repoData2);
             const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
             if (repoData3) repos.push(repoData3);
             const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
