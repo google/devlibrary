@@ -141,11 +141,12 @@ export default class LearningGuides extends Vue {
                 const dataB = b.data;
                 return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
             });
-        } if (guideGroup === "Group Two") {
+        } if (guideGroup === "Group two") {
             const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
             if (repoData3) repos.push(repoData3);
             const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
             if (blogData) blogs.push(blogData);
+            this.projects = wrapInHolders(blogs, repos);
         } else {
             this.projects = [];
         }
