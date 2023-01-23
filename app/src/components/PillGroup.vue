@@ -62,6 +62,9 @@ export default class PillGroup extends Vue {
     async mounted() {
         await waitForMaterialStyles();
         for (let i = 0; i < this.keys.length; i++) {
+            if (i === 0) {
+                await this.applySelectedStyling(this.values[i]);
+            }
             const key = this.keys[i];
             const value = this.values[i];
 
@@ -71,11 +74,10 @@ export default class PillGroup extends Vue {
                 id: this.valueId(value),
             });
         }
-        
+
         // Default is the first entry
         if (this.startEmpty === undefined || !this.startEmpty) {
             this.choice = this.entries[0].value;
-            this.applySelectedStyling(this.choice);
             this.emitValue(this.choice);
         }
     }
