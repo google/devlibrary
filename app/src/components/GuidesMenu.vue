@@ -24,8 +24,8 @@
             <div class="sections">
                 <div class="section">
                     <PillGroup prefix="guideGroup"
-                        :keys="['Injecting machine learning into your web apps', 'Group two']"
-                        :values="['Injecting machine learning into your web apps', 'Group two']" v-model="guideGroup"
+                        :keys="['Injecting machine learning into your web apps', 'Group two', 'Group three']"
+                        :values="['Injecting machine learning into your web apps', 'Group two', 'Group three']" v-model="guideGroup"
                         :start-empty="false" />
                 </div>
             </div>

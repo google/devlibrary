@@ -151,6 +151,12 @@ export default class LearningGuides extends Vue {
             const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
             if (blogData) blogs.push(blogData);
             addAndSortProjects(blogs, repos);
+        } else if (guideGroup === "Group three") {
+            const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
+            if (repoData1) repos.push(repoData1);
+            const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
+            if (repoData2) repos.push(repoData2);
+            addAndSortProjects(blogs, repos);
         } else {
             this.projects = [];
         }
