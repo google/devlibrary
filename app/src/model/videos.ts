@@ -15,35 +15,35 @@ const getEmbedUrl = (videoId: string) =>
 const getVideoUrl = (videoId: string) => `https://youtu.be/${videoId}`;
 
 const PROMO_VIDEO_MAIN: PromoVideoId = {
-  title: "Get Started with Google Dev Library",
-  videoId: "XrIuuJ6YFzY&list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
+  title: "Get Started with Google Dev Library and Hear from the Authors",
+  videoId: "XrIuuJ6YFzY?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
 };
 
 const PROMO_VIDEO_PLAYLIST: PromoVideoId[] = [
   {
-    title: "Meet Google Cloud Author : Natalie Godec",
+    title: "Meet Dev Library Google Cloud Author : Natalie Godec",
     videoId: "YjKgg_aqHUw?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
-    title: "Meet Angular Author : Shai Reznik",
+    title: "Meet Dev Library Angular Author : Shai Reznik",
     videoId: "XnemWL1Ru6k?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
     title:
-      "Meet Flutter Author : Anna (Domashych) Leushchenko",
+      "Meet Dev Library Flutter Author : Anna (Domashych) Leushchenko",
     videoId: "6nls0arzRrk?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
-    title: "Meet ML Author: Doug Duhaime",
+    title: "Meet Dev Library ML Author: Doug Duhaime",
     videoId: "JfekADinZ1U?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
-    title: "Meet ML Author:Shweta Bhatt",
+    title: "Meet Dev Library ML Author:Shweta Bhatt",
     videoId: "qzd8KyyzfeI?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
     title:
-      "Meet Angular Author : Vanessa Aristizabal",
+      "Meet Dev Library Angular Author : Vanessa Aristizabal",
     videoId: "Qd1A6JnEcuA?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
 ];
