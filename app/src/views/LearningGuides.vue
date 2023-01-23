@@ -22,7 +22,7 @@
         --header-bg-image-desktop: url('/img/banners/desktop/learning-guides-wide.png');
         --header-bg-image-mobile: url('img/banners/mobile/authors-wide.png');
         ">
-            <h1 class="full-bleed-hero-heading">Learning guides</h1>
+            <h1 class="full-bleed-hero-heading">Learning Guides</h1>
             <p class="mt-1 hero-description">
                 Browse through curated collections of high quality resources contributed and authored by
                 developers.
@@ -95,7 +95,7 @@ import { wrapInHolders, fetchBlog, fetchRepo } from "@/plugins/data";
 
 export default class LearningGuides extends Vue {
     public getBreadcrumbs(): BreadcrumbLink[] {
-        return [{ name: "LearningGuides", path: "" }];
+        return [{ name: "Learning Guides", path: "" }];
     }
 
     public showFilterOverlay = false;
@@ -141,6 +141,11 @@ export default class LearningGuides extends Vue {
                 const dataB = b.data;
                 return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
             });
+        } if (guideGroup === "Group Two") {
+            const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
+            if (repoData3) repos.push(repoData3);
+            const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
+            if (blogData) blogs.push(blogData);
         } else {
             this.projects = [];
         }

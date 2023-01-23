@@ -52,7 +52,7 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: "/learning-guides",
-    name: "Learning guides",
+    name: "Learning Guides",
     component: LearningGuides,
   },
   {
