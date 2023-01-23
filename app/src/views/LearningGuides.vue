@@ -125,26 +125,32 @@ export default class LearningGuides extends Vue {
     public async displayProjects(guideGroup: string) {
         const repos: RepoData[] = [];
         const blogs: BlogData[] = [];
+        const addAndSortProjects = (blogs: BlogData[], repos: RepoData[]) => {
+            this.projects = wrapInHolders(blogs, repos);
+            this.projects.sort((a, b) => {
+                const dataA = a.data;
+                const dataB = b.data;
+                return dataB.stats.lastUpdated - dataA.stats.lastUpdated;
+            });
+        }
+
         // Conditional logic to show projects based on Guide Menu selection
-        console.log(guideGroup);
         if (guideGroup === "Injecting machine learning into your web apps") {
             const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
             if (repoData1) repos.push(repoData1);
-            console.log(repoData1);
             const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
             if (repoData2) repos.push(repoData2);
-            console.log(repoData2);
             const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
             if (repoData3) repos.push(repoData3);
             const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
             if (blogData) blogs.push(blogData);
-            this.projects = wrapInHolders(blogs, repos);
+            addAndSortProjects(blogs, repos);
         } else if (guideGroup === "Group two") {
             const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
             if (repoData3) repos.push(repoData3);
             const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
             if (blogData) blogs.push(blogData);
-            this.projects = wrapInHolders(blogs, repos);
+            addAndSortProjects(blogs, repos);
         } else {
             this.projects = [];
         }

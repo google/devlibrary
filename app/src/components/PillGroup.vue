@@ -52,7 +52,9 @@ export default class PillGroup extends Vue {
 
     @Watch("value")
     public onValueChange(val: string) {
+        console.log(val);
         this.choice = val;
+        this.applySelectedStyling(val);
         this.emitValue(val);
     }
 
@@ -62,9 +64,6 @@ export default class PillGroup extends Vue {
     async mounted() {
         await waitForMaterialStyles();
         for (let i = 0; i < this.keys.length; i++) {
-            if (i === 0) {
-                await this.applySelectedStyling(this.values[i]);
-            }
             const key = this.keys[i];
             const value = this.values[i];
 
@@ -84,6 +83,7 @@ export default class PillGroup extends Vue {
 
     public onInput(e: InputEvent) {
         const value = (e.target as HTMLInputElement).value;
+        console.log(value);
         if (value) {
             this.applySelectedStyling(value);
             this.emitValue(value);
@@ -103,10 +103,12 @@ export default class PillGroup extends Vue {
      * Emit the special 'input' event which allows us to use v-model on the group
      */
     public emitValue(value: string) {
+        console.log(value);
         this.$emit("input", value);
     }
 
     public valueId(v: string) {
+        console.log(`${this.prefix}-${v}`);
         return `${this.prefix}-${v}`;
     }
 }
