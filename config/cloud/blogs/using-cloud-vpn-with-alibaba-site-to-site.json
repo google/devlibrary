@@ -2,7 +2,7 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["epluscloudservices"],
   "author": "epluscloudservices",
   "title": "Google Cloud VPN interop guide for Alibaba Cloud VPN Gateway",
   "link": "https://cloud.google.com/community/tutorials/using-cloud-vpn-with-alibaba-site-to-site",

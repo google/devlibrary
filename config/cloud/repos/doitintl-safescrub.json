@@ -2,7 +2,7 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["joshuafox"],
   "owner": "doitintl",
   "repo": "safescrub",
   "name": "Safe Scrub",
