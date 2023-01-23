@@ -15,35 +15,35 @@ const getEmbedUrl = (videoId: string) =>
 const getVideoUrl = (videoId: string) => `https://youtu.be/${videoId}`;
 
 const PROMO_VIDEO_MAIN: PromoVideoId = {
-  title: "Introductions to some of the contributors to Google's Dev Library",
-  videoId: "l2Yxy_6pOAs?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
+  title: "Get Started with Google Dev Library",
+  videoId: "XrIuuJ6YFzY&list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
 };
 
 const PROMO_VIDEO_PLAYLIST: PromoVideoId[] = [
   {
-    title: "Interview with Natalie Godec, contributor to Google's Dev Library",
+    title: "Meet Google Cloud Author : Natalie Godec",
     videoId: "YjKgg_aqHUw?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
-    title: "Interview with Shai Reznik, contributor to Google's Dev Library",
+    title: "Meet Angular Author : Shai Reznik",
     videoId: "XnemWL1Ru6k?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
     title:
-      "Interview with Anna (Domashych) Leushchenko, contributor to Google's Dev Library",
+      "Meet Flutter Author : Anna (Domashych) Leushchenko",
     videoId: "6nls0arzRrk?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
-    title: "Interview with Doug Duhaime, contributor to Google's Dev Library",
+    title: "Meet ML Author: Doug Duhaime",
     videoId: "JfekADinZ1U?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
-    title: "Interview with Shweta Bhatt, contributor to Google's Dev Library",
+    title: "Meet ML Author:Shweta Bhatt",
     videoId: "qzd8KyyzfeI?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
     title:
-      "Interview with Vanessa Aristizabal, contributor to Google's Dev Library",
+      "Meet Angular Author : Vanessa Aristizabal",
     videoId: "Qd1A6JnEcuA?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
 ];
