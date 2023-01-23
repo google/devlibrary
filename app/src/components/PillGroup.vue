@@ -21,7 +21,8 @@
                 <input class="mdc-radio__native-control" type="radio" :id="entry.id" :name="prefix" :value="entry.value"
                     v-model="choice" @input="onInput" />
             </div>
-            <label class="text-sm pill-text pill-selected-text" :id="entry.value">{{ truncate(entry.key, 26) }}</label>
+            <label class="text-sm pill-text" :class="[entry.value === choice ? 'pill-selected-text' : '']"
+                :id="entry.value">{{ truncate(entry.key, 26) }}</label>
         </label>
     </div>
 </template>
