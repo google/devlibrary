@@ -139,7 +139,7 @@ export default class LearningGuides extends Vue {
             const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
             if (blogData) blogs.push(blogData);
             this.projects = wrapInHolders(blogs, repos);
-        } if (guideGroup === "Group two") {
+        } else if (guideGroup === "Group two") {
             const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
             if (repoData3) repos.push(repoData3);
             const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
