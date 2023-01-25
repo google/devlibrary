@@ -64,6 +64,7 @@
                 </div>
                 <div id="projects">
                     <h2 class="guide-selection-heading">{{ filters.guideGroup.toString() }}</h2>
+                    <p class="guide-selection-description">{{ filters.guideGroup.toString() }}</p>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                         <RepoOrBlogCard v-for="project in projects" :key="project.data.id" :project="project" />
                     </div>
@@ -123,6 +124,7 @@ export default class LearningGuides extends Vue {
     }
 
     public async displayProjects(guideGroup: string) {
+        let description: string = "";
         const repos: RepoData[] = [];
         const blogs: BlogData[] = [];
         const addAndSortProjects = (blogs: BlogData[], repos: RepoData[]) => {
@@ -136,6 +138,7 @@ export default class LearningGuides extends Vue {
 
         // Conditional logic to show projects based on Guide Menu selection
         if (guideGroup === "Injecting machine learning into your web apps") {
+            description = "Discover different ways to add ML into your web apps with the help of community authored projects.";
             const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
             if (repoData1) repos.push(repoData1);
             const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
@@ -146,12 +149,14 @@ export default class LearningGuides extends Vue {
             if (blogData) blogs.push(blogData);
             addAndSortProjects(blogs, repos);
         } else if (guideGroup === "Group two") {
+            description = "Group two description";
             const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
             if (repoData3) repos.push(repoData3);
             const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
             if (blogData) blogs.push(blogData);
             addAndSortProjects(blogs, repos);
         } else if (guideGroup === "Group three") {
+            description = "Group three description";
             const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
             if (repoData1) repos.push(repoData1);
             const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
