@@ -99,7 +99,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.ANGULAR,
     name: "Angular",
     description:
-      "Angular simplifies web app development by using a structured, modular approach and libraries. These libraries provide reusable UI components, utility functions, and services, making it easier to build and maintain complex web apps. This page is a curated-collection of blogs, Open Source projects, and tutorials contributed by Angular developers around the world.",
+      "Angular simplifies web app development by using a structured, modular approach and libraries. These libraries provide reusable UI components, utility functions, and services, making it easier to build and maintain complex web apps. Dev Library has a curated collection of Angular blogs, open source projects, and tutorials contributed by developers around the world. Explore Dev Library today for your next project!",
     docsUrl: "https://angular.io/",
     tags: [
       {
