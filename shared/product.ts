@@ -58,7 +58,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.ML,
     name: "Machine Learning",
     description:
-      "Machine Learning provides new ways of solving problems that are not solvable with traditional computational approaches. Google provides a wide range of Machine Learning technologies and products for developers to use and develop for their projects.",
+      " Google provides a wide range of Machine Learning technologies and products for developers to use and develop for their projects. These include TensorFlow, TensorFlow.js, TensorFlow Lite, TensorFlow Extended, JAX, Keras and Mediapipe. /nDev Library has a curated collection of Machine Learning blogs, open source projects, and tutorials contributed by developers around the world. Explore today for your next project!",
     docsUrl: "https://ai.google/tools/",
     tags: [
       {
@@ -99,7 +99,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.ANGULAR,
     name: "Angular",
     description:
-      "Angular is an open-source framework for developing large-scale frontend applications.",
+      "Angular simplifies web app development by using a structured, modular approach and libraries. These libraries provide reusable UI components, utility functions, and services, making it easier to build and maintain complex web apps. Dev Library has a curated collection of Angular blogs, open source projects, and tutorials contributed by developers around the world. Explore Dev Library today for your next project!",
     docsUrl: "https://angular.io/",
     tags: [
       {
