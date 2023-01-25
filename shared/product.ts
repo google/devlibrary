@@ -99,7 +99,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.ANGULAR,
     name: "Angular",
     description:
-      "Angular is an open-source framework for developing large-scale frontend applications.",
+      "Angular simplifies web app development by using a structured, modular approach and libraries. These libraries provide reusable UI components, utility functions, and services, making it easier to build and maintain complex web apps. This page has a curated-collection of blogs, Open Source projects, and tutorials contributed by Angular developers around the world.",
     docsUrl: "https://angular.io/",
     tags: [
       {
