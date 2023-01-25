@@ -1,0 +1,16 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "akpatel5129"
+  ],
+  "author": "Akshat Patel",
+  "title": "Server-driven UI in Flutter (An experiment on remote widgets",
+  "link": "https://medium.com/@akpatel5129/server-driven-ui-in-flutter-an-experiment-on-remote-widgets-652ea2cb3d4b",
+  "tags": [
+    "plugins",
+    "widgets",
+    "samples"
+  ]
+}

@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["victoreronmosele"],
+  "authorIds": [
+    "victoreronmosele"
+  ],
   "author": "Victor Eronmosele",
   "title": "Mocking callbacks in Dart/Flutter unit tests",
   "link": "https://blog.victoreronmosele.com/mocking-callbacks-dart",

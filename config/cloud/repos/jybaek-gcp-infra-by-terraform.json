@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jybaek"
+  ],
+  "owner": "jybaek",
+  "repo": "gcp-infra-by-terraform",
+  "name": "GCP Infrastructure by terraform",
+  "shortDescription": "Provides sample modules for creating GCP infrastructure with Terraform. Assemble modules to complete your desired GCP infrastructure!",
+  "longDescription": "Provides sample modules for creating GCP infrastructure with Terraform. Assemble modules to complete your desired GCP infrastructure!",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compute",
+    "containers",
+    "storage"
+  ]
+}

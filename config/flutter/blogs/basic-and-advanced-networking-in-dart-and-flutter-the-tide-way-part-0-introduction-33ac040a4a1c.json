@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "foxanna"
+  ],
+  "author": "Anna Leushchenko",
+  "title": "Basic and advanced networking in Dart and Flutter - the Tide way",
+  "link": "https://medium.com/tide-engineering-team/basic-and-advanced-networking-in-dart-and-flutter-the-tide-way-part-0-introduction-33ac040a4a1c",
+  "tags": [
+    "mobile",
+    "general",
+    "samples"
+  ]
+}

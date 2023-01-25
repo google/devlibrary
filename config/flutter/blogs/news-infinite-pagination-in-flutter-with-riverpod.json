@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "takrutvik"
+  ],
+  "author": "Rutvik tak",
+  "title": "Infinite Pagination in Flutter with Firebase, Riverpod, and Freeze",
+  "link": "https://www.freecodecamp.org/news/infinite-pagination-in-flutter-with-riverpod/",
+  "tags": [
+    "mobile",
+    "firebase",
+    "general"
+  ]
+}

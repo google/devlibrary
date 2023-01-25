@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "alexstyl"
+  ],
+  "owner": "alexstyl",
+  "repo": "contactstore",
+  "name": "Contact Store",
+  "shortDescription": "Contact Store is a modern API that makes access to contacts on Android devices simple to use.",
+  "longDescription": "Contact Store is a modern API that makes access to contacts on Android devices simple to use.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "kotlin"
+  ]
+}

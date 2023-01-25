@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "anovis"
+  ],
+  "owner": "anovis",
+  "repo": "goblet",
+  "name": "Goblet",
+  "shortDescription": "Goblet is a framework for writing serverless rest apis in python in google cloud. It allows you to quickly create and deploy python apis backed by cloudfunctions and cloudrun.",
+  "longDescription": "Goblet is a framework for writing serverless rest apis in python in google cloud. It allows you to quickly create and deploy python apis backed by cloudfunctions and cloudrun.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "api-management",
+    "serverless-computing",
+    "developer-tools"
+  ]
+}

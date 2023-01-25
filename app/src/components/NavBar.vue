@@ -59,23 +59,15 @@
             <span class="header">Authors</span>
           </router-link>
 
-          <a :href="submitLink" target="_blank" class="section">
-            <span class="header">Submit</span>
-          </a>
-
           <router-link to="/about" class="section">
             <span class="header">About</span>
           </router-link>
-
-          <a :href="feedbackLink" target="_blank" class="section">
-            <span class="header">Feedback</span>
-          </a>
         </div>
       </div>
     </transition>
 
     <!-- Nav row -->
-    <div class="frc py-3 lg:py-0 px-4 text-nav">
+    <div class="frc py-3 lg:py-2 px-4 text-nav">
       <div
         class="mr-1 frc align-middle text-gray-400 hover:text-gray-600"
         @click="showSideMenu = true"
@@ -127,23 +119,21 @@
         ><span>Authors</span></router-link
       >
 
-      <div class="block nav-item nav-item-link" @click="showSubmitDialog">
-        Submit
-      </div>
-
       <router-link class="block nav-item nav-item-link" to="/about"
         ><span>About</span></router-link
-      >
-
-      <a class="nav-item nav-item-link" :href="feedbackLink" target="_blank"
-        >Feedback</a
       >
 
       <span class="flex-grow"><!-- spacer --></span>
 
       <!-- Search Bar -->
       <transition name="appear">
-        <SearchBar v-if="!showSideMenu" />
+        <MaterialButton
+          @click.native="showSubmitDialog"
+          type="primary"
+          v-if="!showSideMenu"
+        >
+          Submit your content
+        </MaterialButton>
       </transition>
     </div>
   </div>
@@ -152,20 +142,18 @@
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
 
-import SearchBar from "@/components/SearchBar.vue";
+import MaterialButton from "@/components/MaterialButton.vue";
 import { ALL_PRODUCTS } from "../../../shared/product";
 import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
 
 @Component({
   components: {
-    SearchBar,
+    MaterialButton,
   },
 })
 export default class NavBar extends Vue {
   public showSideMenu = false;
   public showProductsDropdown = false;
-
-  public feedbackLink = "https://forms.gle/2JoN6csvyvnDC8Nd9";
 
   public showSubmitDialog() {
     EVENT_BUS.$emit(NAME_SHOW_SUBMIT_DIALOG);

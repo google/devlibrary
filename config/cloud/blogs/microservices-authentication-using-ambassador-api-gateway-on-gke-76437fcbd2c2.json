@@ -1,0 +1,10 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["onkar17"],
+  "author": "Onkar Naik",
+  "title": "Microservices Authentication Using Ambassador API Gateway on GKE",
+  "link": "https://blog.searce.com/microservices-authentication-using-ambassador-api-gateway-on-gke-76437fcbd2c2",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"]
+}

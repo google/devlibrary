@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "victoreronmosele"
+  ],
+  "author": "Victor Eronmosele",
+  "title": "How to Write Better Flutter Tests By Using Custom Matchers | AdevaIT",
+  "link": "https://adevait.com/flutter/write-flutter-tests-custom-matchers",
+  "tags": [
+    "mobile"
+  ]
+}

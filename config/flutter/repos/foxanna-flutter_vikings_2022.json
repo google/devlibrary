@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "foxanna"
+  ],
+  "owner": "foxanna",
+  "repo": "flutter_vikings_2022",
+  "name": "Space Flight News app",
+  "shortDescription": "Mobile application that displays a list of recent space-flight related news obtained from the Spaceflight News API, created with Flutter. It demonstrates the usage of various code-generating packages.",
+  "longDescription": "Mobile application that displays a list of recent space-flight related news obtained from the Spaceflight News API, created with Flutter. It demonstrates the usage of various code-generating packages.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "samples",
+    "general"
+  ]
+}

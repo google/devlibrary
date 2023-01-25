@@ -1,0 +1,10 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["charles-xavier-verleyen"],
+  "author": "Charles Verleyen",
+  "title": "dbt at scale on Google Cloud — Part 1",
+  "link": "https://medium.com/astrafy/dbt-at-scale-on-google-cloud-part-1-54f8655443a7",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"]
+}

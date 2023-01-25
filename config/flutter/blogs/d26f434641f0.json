@@ -1,0 +1,12 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["verry_codes"],
+  "author": "Verena Zaiser",
+  "title": "How I’m using Cubits from the Bloc library to manage my states",
+  "link": "https://medium.com/p/d26f434641f0",
+  "tags": [
+    "mobile"
+  ]
+}

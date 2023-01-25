@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "robingenz"
+  ],
+  "owner": "robingenz",
+  "repo": "capacitor-firebase",
+  "name": "Capacitor Firebase",
+  "shortDescription": "A Capacitor Firebase is a collection of Capacitor plugins that make it easier for you to use Firebase in your Capacitor project.",
+  "longDescription": "A Capacitor Firebase is a collection of Capacitor plugins that make it easier for you to use Firebase in your Capacitor project.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "android",
+    "ios",
+    "web"
+  ]
+}

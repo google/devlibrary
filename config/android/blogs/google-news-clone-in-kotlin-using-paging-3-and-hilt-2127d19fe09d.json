@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "saraswatdivyansh"
+  ],
+  "author": "Divyansh Saraswat",
+  "title": "Google news clone in Kotlin using Paging 3 and Hilt",
+  "link": "https://medium.com/@saraswatdivyansh/google-news-clone-in-kotlin-using-paging-3-and-hilt-2127d19fe09d",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "architecture"
+  ]
+}

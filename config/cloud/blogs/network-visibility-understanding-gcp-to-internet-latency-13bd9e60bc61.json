@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "gauravmadan"
+  ],
+  "author": "Gaurav Madan",
+  "title": "Network Visibility : Understanding ‘GCP to Internet’ Latency",
+  "link": "https://medium.com/google-cloud/network-visibility-understanding-gcp-to-internet-latency-13bd9e60bc61",
+  "tags": [
+    "networking",
+    "operations",
+    "migration"
+  ]
+}

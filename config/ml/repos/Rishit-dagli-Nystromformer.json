@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rishit-dagli"
+  ],
+  "owner": "Rishit-dagli",
+  "repo": "Nystromformer",
+  "name": "Nystromformer",
+  "shortDescription": "A TensorFlow/ Keras implementation of Nystromformer, a transformer variant that uses the Nyström method to approximate standard self-attention with O(n) complexity which allows for better scalability.",
+  "longDescription": "A TensorFlow/ Keras implementation of Nystromformer, a transformer variant that uses the Nyström method to approximate standard self-attention with O(n) complexity which allows for better scalability.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "library",
+    "python",
+    "tf"
+  ]
+}

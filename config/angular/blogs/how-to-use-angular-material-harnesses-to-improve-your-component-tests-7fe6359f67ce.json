@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "angulartraining"
+  ],
+  "author": "Alain Chautard",
+  "title": "How to use Angular Material harnesses to improve your component tests",
+  "link": "https://blog.angulartraining.com/how-to-use-angular-material-harnesses-to-improve-your-component-tests-7fe6359f67ce",
+  "tags": [
+    "libraries"
+  ]
+}

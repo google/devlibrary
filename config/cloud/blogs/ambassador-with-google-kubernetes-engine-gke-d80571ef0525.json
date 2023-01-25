@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "abhisheksharma7389"
+  ],
+  "author": "Abhishek Sharma",
+  "title": "Ambassador with Google Kubernetes Engine(GKE)",
+  "link": "https://blog.searce.com/ambassador-with-google-kubernetes-engine-gke-d80571ef0525",
+  "tags": [
+    "networking",
+    "operations",
+    "api-management"
+  ]
+}

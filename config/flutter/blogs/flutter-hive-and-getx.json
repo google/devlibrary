@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["jocelin-fowe"],
+  "author": "Jocelin Fowe",
+  "title": "Flutter, Hive And Getx",
+  "link": "https://jocelinfowe.hashnode.dev/flutter-hive-and-getx",
+  "tags": [
+    "mobile",
+    "general",
+    "samples"
+  ]
+}

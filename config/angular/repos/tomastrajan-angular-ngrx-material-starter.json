@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "tomastrajan"
+  ],
+  "owner": "tomastrajan",
+  "repo": "angular-ngrx-material-starter",
+  "name": "Angular, NgRx & Angular Material Starter",
+  "shortDescription": "Angular, NgRx and Angular Components (previously known as Material) Starter projects which shows you how to implement application with routing, custom themes, translations, state management and more",
+  "longDescription": "Angular, NgRx and Angular Components (previously known as Material) Starter projects which shows you how to implement application with routing, custom themes, translations, state management and more",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "demos"
+  ]
+}

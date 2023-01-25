@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "gowtamk01"
+  ],
+  "author": "Gowtam Karri",
+  "title": "Google Sign-in in Flutter",
+  "link": "https://medium.com/@gowtamk01/google-sign-in-in-flutter-be1916f16e6",
+  "tags": [
+    "general",
+    "firebase"
+  ]
+}

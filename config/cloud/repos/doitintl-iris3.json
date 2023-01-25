@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": ["joshuafox"],
+  "owner": "doitintl",
+  "repo": "iris3",
+  "name": "Iris3",
+  "shortDescription": "Iris automatically assigns labels to Google Cloud resources for manageability and easier billing reporting. For example, it can label your GCE VMs with name, zone, and machine type.",
+  "longDescription": "Iris automatically assigns labels to Google Cloud resources for manageability and easier billing reporting. For example, it can label your GCE VMs with name, zone, and machine type.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "management-tools"
+  ]
+}

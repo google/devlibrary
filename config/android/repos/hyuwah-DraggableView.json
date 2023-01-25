@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "hyuwah"
+  ],
+  "owner": "hyuwah",
+  "repo": "DraggableView",
+  "name": "DraggableView",
+  "shortDescription": "DraggableView is an Android library to make floating draggable view easy.\nThis library basically wrap your view into DraggableView object, overriding it's onTouchListener and adds some extra utilities",
+  "longDescription": "DraggableView is an Android library to make floating draggable view easy.\nThis library basically wrap your view into DraggableView object, overriding it's onTouchListener and adds some extra utilities",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui",
+    "kotlin"
+  ]
+}

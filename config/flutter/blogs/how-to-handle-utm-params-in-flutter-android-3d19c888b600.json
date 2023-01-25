@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "mukundjogi"
+  ],
+  "author": "Mukund Jogi",
+  "title": "How to handle UTM Params in Flutter (Android)",
+  "link": "https://medium.com/7span/how-to-handle-utm-params-in-flutter-android-3d19c888b600",
+  "tags": [
+    "mobile"
+  ]
+}

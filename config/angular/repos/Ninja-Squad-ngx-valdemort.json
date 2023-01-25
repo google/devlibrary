@@ -1,0 +1,18 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ninja-squad"
+  ],
+  "owner": "Ninja-Squad",
+  "repo": "ngx-valdemort",
+  "name": "ngx-valdemort",
+  "shortDescription": "ngx-valdemort gives you simpler, cleaner validation error messages for your Angular components.",
+  "longDescription": "ngx-valdemort gives you simpler, cleaner validation error messages for your Angular components.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

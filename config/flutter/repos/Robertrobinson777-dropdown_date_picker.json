@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "robertrobinson777"
+  ],
+  "owner": "Robertrobinson777",
+  "repo": "dropdown_date_picker",
+  "name": "Datepicker drop-down",
+  "shortDescription": "A Datepicker Drop-down for Flutter with customisable options.",
+  "longDescription": "A Datepicker Drop-down for Flutter with customisable options.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "plugins",
+    "mobile",
+    "widgets"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "wajahatkarim"
+  ],
+  "author": "Wajahat Karim",
+  "title": "Setting up Dark Theme for Your App",
+  "link": "https://wajahatkarim.com/2022/06/dark-theme-setup/",
+  "tags": [
+    "modern-android-development"
+  ]
+}

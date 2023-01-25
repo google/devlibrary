@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": [
+    "manuelernest0"
+  ],
   "author": "Manuel Ernesto",
   "title": "Dark Mode on Android App with Kotlin",
   "link": "https://proandroiddev.com/dark-mode-on-android-app-with-kotlin-dc759fc5f0e1",

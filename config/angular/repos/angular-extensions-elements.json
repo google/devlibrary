@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "angular-extensions"
+  ],
+  "owner": "angular-extensions",
+  "repo": "elements",
+  "name": "Angular eXtensions Elements",
+  "shortDescription": "The easiest way to lazy-load Angular Elements or any other web components in your Angular application!",
+  "longDescription": "The easiest way to lazy-load Angular Elements or any other web components in your Angular application!",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

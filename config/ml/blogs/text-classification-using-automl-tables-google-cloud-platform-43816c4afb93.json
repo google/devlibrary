@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "nishitkamdar"
+  ],
+  "author": "Nishit Kamdar",
+  "title": "Text Classification using Google Cloud Platform's AutoML Tables",
+  "link": "https://medium.com/google-cloud/text-classification-using-automl-tables-google-cloud-platform-43816c4afb93",
+  "tags": [
+    "vision"
+  ]
+}

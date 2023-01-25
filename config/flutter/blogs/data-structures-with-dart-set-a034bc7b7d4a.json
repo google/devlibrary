@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "daria"
+  ],
+  "author": "Daria Orlova",
+  "title": "Data structures with Dart: Set",
+  "link": "https://medium.com/@daria.orlova/data-structures-with-dart-set-a034bc7b7d4a",
+  "tags": [
+    "mobile",
+    "general"
+  ]
+}

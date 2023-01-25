@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "mohamed"
+  ],
+  "author": "Mohamed Abulgasem",
+  "title": "The magic of RxJava with a bit of Kotlin awesome collections tools",
+  "link": "https://medium.com/@mohamed-abulgasem/the-magic-of-rxjava-with-a-bit-of-kotlin-awesome-collections-tools-bbd93b3c6878",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}

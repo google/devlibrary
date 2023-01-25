@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "sanskar10100"
+  ],
+  "author": "Sanskar Agrawal",
+  "title": "QueryBuilder: How I wrote a runtime SQL query generator for an Android app",
+  "link": "https://sanskar10100.hashnode.dev/querybuilder-how-i-wrote-a-runtime-sql-query-generator-for-an-android-app",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "architecture"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "anchitn_19522"
+  ],
+  "author": "Anchit Nishant",
+  "title": "Google Cloud Anthos Series: Anthos Multi-cloud & Hybrid story",
+  "link": "https://medium.com/google-cloud/google-cloud-anthos-series-anthos-multi-cloud-hybrid-story-fc70ce352c40",
+  "tags": [
+    "hybrid-multicloud",
+    "containers",
+    "operations"
+  ]
+}

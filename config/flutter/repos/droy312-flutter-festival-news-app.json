@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "droy312"
+  ],
+  "owner": "droy312",
+  "repo": "flutter-festival-news-app",
+  "name": "Flutter Festival News App",
+  "shortDescription": "This is complete news app made using Flutter and Firebase with the mission to simplify app making for beginners, so that they can step into real world app development",
+  "longDescription": "This is complete news app made using Flutter and Firebase with the mission to simplify app making for beginners, so that they can step into real world app development",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "firebase",
+    "mobile"
+  ]
+}

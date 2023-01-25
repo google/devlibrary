@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "deep-diver"
+  ],
+  "owner": "deep-diver",
+  "repo": "ml-deployment-k8s-tfserving",
+  "name": "Deploying ML models with TFServing, Docker, GKE",
+  "shortDescription": "This project shows how to serve a TensorFlow image classification model as RESTful and gRPC based service with TFServing, Docker, and Kubernetes.",
+  "longDescription": "This project shows how to serve a TensorFlow image classification model as RESTful and gRPC based service with TFServing, Docker, and Kubernetes.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "mlops",
+    "tf"
+  ]
+}

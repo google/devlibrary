@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["pier"],
+  "authorIds": [
+    "pier"
+  ],
   "author": "Quincy Larson",
   "title": "How to Deploy Machine Learning Models on Mobile and Embedded Devices",
   "link": "https://www.freecodecamp.org/news/machine-learning-for-mobile-and-embedded-devices/",

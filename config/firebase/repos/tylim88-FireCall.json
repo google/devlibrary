@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "tylim88"
+  ],
+  "owner": "tylim88",
+  "repo": "FireCall",
+  "name": "FireCall",
+  "shortDescription": "Write callable functions with opinionated error handling.",
+  "longDescription": "Write callable functions with opinionated error handling.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "node"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "milansurelia"
+  ],
+  "author": "Milan Surelia",
+  "title": "How to integrate CI/CD in Flutter using Codemagic Workflow Editor — A Practical Guide",
+  "link": "https://medium.com/7span/how-to-integrate-ci-cd-in-flutter-using-codemagic-workflow-editor-a-practical-guide-d67088aef5f2",
+  "tags": [
+    "mobile"
+  ]
+}

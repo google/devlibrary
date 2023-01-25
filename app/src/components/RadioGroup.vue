@@ -44,7 +44,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 
 import { waitForMaterialStyles } from "@/plugins/preload";
 
@@ -59,6 +59,14 @@ export default class RadioGroup extends Vue {
   @Prop() prefix!: string;
   @Prop() keys!: string[];
   @Prop() values!: string[];
+  @Prop() value!: string;
+  @Prop() startEmpty!: boolean;
+
+  @Watch("value")
+  public onValueChange(val: string) {
+    this.choice = val;
+    this.emitValue(val);
+  }
 
   private choice = "";
   public entries: RadioGroupEntry[] = [];
@@ -78,8 +86,10 @@ export default class RadioGroup extends Vue {
     }
 
     // Default is the first entry
-    this.choice = this.entries[0].value;
-    this.emitValue(this.choice);
+    if (this.startEmpty === undefined || !this.startEmpty) {
+      this.choice = this.entries[0].value;
+      this.emitValue(this.choice);
+    }
   }
 
   public onInput(e: InputEvent) {

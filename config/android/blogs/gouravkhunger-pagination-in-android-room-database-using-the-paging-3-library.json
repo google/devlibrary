@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "gouravkhunger"
+  ],
+  "author": "Gourav Khunger",
+  "title": "Pagination in Android Room Database using the Paging 3 Library",
+  "link": "https://genicsblog.com/gouravkhunger/pagination-in-android-room-database-using-the-paging-3-library",
+  "tags": [
+    "modern-android-development",
+    "architecture"
+  ]
+}

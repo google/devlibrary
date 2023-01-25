@@ -1,0 +1,12 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["danywalls"],
+  "author": "Dany Paredes",
+  "title": "How to Build Compound Components in Angular",
+  "link": "https://www.danywalls.com/how-to-build-compound-components-in-angular",
+  "tags": [
+    "demos"
+  ]
+}

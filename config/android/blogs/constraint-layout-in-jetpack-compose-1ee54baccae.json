@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sakethh"
+  ],
+  "author": "Saketh Pathike",
+  "title": "Constraint Layout in Jetpack Compose: Create complex and responsive android layouts on the fly.",
+  "link": "https://sakethh.medium.com/constraint-layout-in-jetpack-compose-1ee54baccae",
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

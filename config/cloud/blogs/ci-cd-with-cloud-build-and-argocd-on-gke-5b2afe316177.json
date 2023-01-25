@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "pranav-dhopey"
+  ],
+  "author": "Pranav Dhopey",
+  "title": "CI/CD with Cloud Build and ArgoCD on GKE",
+  "link": "https://blog.searce.com/ci-cd-with-cloud-build-and-argocd-on-gke-5b2afe316177",
+  "tags": [
+    "containers",
+    "management-tools"
+  ]
+}

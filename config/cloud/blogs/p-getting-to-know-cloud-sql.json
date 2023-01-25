@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["mustapha"],
+  "author": "Mustapha Adekunle",
+  "title": "Getting to know Cloud SQL.",
+  "link": "https://dataengineeringgcp.substack.com/p/getting-to-know-cloud-sql?sd=pf",
+  "tags": [
+    "databases",
+    "migration",
+    "compute"
+  ]
+}

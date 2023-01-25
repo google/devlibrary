@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sahil_pal07"
+  ],
+  "author": "Sahil Pal",
+  "title": "How to use cupertino icons in Flutter",
+  "link": "https://medium.com/@sahil_pal07/how-to-use-cupertino-icons-in-flutter-8c10a78f32fd",
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}

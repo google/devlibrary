@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "yash-garg"
+  ],
+  "author": "Yash Garg",
+  "title": "Flutter Integration Testing using GitHub Actions",
+  "link": "https://yashgarg.dev/pensieve/flutter-testing",
+  "tags": [
+    "mobile",
+    "general",
+    "widgets"
+  ]
+}

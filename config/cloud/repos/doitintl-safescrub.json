@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": ["joshuafox"],
+  "owner": "doitintl",
+  "repo": "safescrub",
+  "name": "Safe Scrub",
+  "shortDescription": "Safe Scrub helps you delete the unwanted resources in your Google Cloud Platform project, leaving it clean of confusing clutter and saving you money.",
+  "longDescription": "Safe Scrub helps you delete the unwanted resources in your Google Cloud Platform project, leaving it clean of confusing clutter and saving you money.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "developer-tools"
+  ]
+}

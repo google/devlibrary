@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["javierluraschi"],
+  "authorIds": [
+    "javierluraschi"
+  ],
   "owner": "hal9ai",
   "repo": "hal9ai",
   "name": "hal9ai",
@@ -10,6 +13,10 @@
   "content": "README.md",
   "pages": [],
   "tags": [
-   "nlp","vision","library","web","theory"
+    "nlp",
+    "vision",
+    "library",
+    "web",
+    "theory"
   ]
 }

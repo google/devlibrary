@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "pushkarbk"
+  ],
+  "author": "Pushkar Kothavade",
+  "title": "Migrate for Anthos and GKE",
+  "link": "https://medium.com/@pushkarbk/google-cloud-anthos-series-part8-2af3bdce0c9b",
+  "tags": [
+    "containers"
+  ]
+}

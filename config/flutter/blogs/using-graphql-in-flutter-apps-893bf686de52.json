@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "iamksgokul"
+  ],
+  "author": "Gokul Ks",
+  "title": "Using GraphQL in Flutter Apps",
+  "link": "https://medium.com/@iamksgokul/using-graphql-in-flutter-apps-893bf686de52",
+  "tags": [
+    "mobile",
+    "web",
+    "general"
+  ]
+}

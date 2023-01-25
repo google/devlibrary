@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "daniyal-dolare"
+  ],
+  "author": "Daniyal Dolare",
+  "title": "How to use future builder effectively in Flutter?",
+  "link": "https://daniyal-dolare.medium.com/how-to-use-future-builder-effectively-in-flutter-9c0550d2affd",
+  "tags": [
+    "widgets",
+    "general",
+    "samples"
+  ]
+}

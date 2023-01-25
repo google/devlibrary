@@ -1,9 +1,12 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["navczydev"],
+  "authorIds": [
+    "navczydev"
+  ],
   "author": "Nav Singh",
-  "title": "ActivityResult API Android…",
+  "title": "Learn about ActivityResult API in Android",
   "link": "https://medium.com/nerd-for-tech/activityresult-api-android-87308971c277",
   "tags": [
     "modern-android-development"

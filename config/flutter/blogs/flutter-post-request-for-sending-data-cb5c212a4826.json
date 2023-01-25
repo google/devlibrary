@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "surajadkhari"
+  ],
+  "author": "Suraj Adhikari",
+  "title": "Flutter: Post a request for sending data with http",
+  "link": "https://medium.com/@surajadkhari/flutter-post-request-for-sending-data-cb5c212a4826",
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ]
+}

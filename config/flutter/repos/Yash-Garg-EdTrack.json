@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "yash-garg"
+  ],
+  "owner": "Yash-Garg",
+  "repo": "EdTrack",
+  "name": "EdTrack",
+  "shortDescription": "A minimal and beautiful Android application to track attendance & view details of a student from Edumarshal.",
+  "longDescription": "A minimal and beautiful Android application to track attendance & view details of a student from Edumarshal.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "general",
+    "widgets"
+  ]
+}

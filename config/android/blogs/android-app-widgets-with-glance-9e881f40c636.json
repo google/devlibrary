@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sridhar-sp"
+  ],
+  "author": "sridhar subramaniam",
+  "title": "Android app widgets with Glance",
+  "link": "https://medium.com/@sridhar-sp/android-app-widgets-with-glance-9e881f40c636",
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "ui"
+  ]
+}

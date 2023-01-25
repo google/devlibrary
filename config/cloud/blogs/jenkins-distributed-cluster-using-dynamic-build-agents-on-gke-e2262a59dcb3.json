@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "onkar17"
+  ],
+  "author": "Onkar Naik",
+  "title": "Jenkins Distributed Cluster Using Dynamic Build Agents On GKE",
+  "link": "https://medium.com/searce/jenkins-distributed-cluster-using-dynamic-build-agents-on-gke-e2262a59dcb3",
+  "tags": [
+    "containers",
+    "operations",
+    "management-tools"
+  ]
+}

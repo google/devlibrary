@@ -42,7 +42,8 @@ export default class MaterialButton extends Vue {
 }
 
 .primary {
-  @apply text-white bg-gblue-600;
+  @apply text-white bg-gblue-600 border-none;
+  padding-block: 7px;
 }
 
 .primary:hover {

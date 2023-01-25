@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "msasikanth"
+  ],
+  "author": "Sasikanth Miriyampalli",
+  "title": "How we improved search performance on Simple by 10x",
+  "link": "https://obvious.in/blog/how-we-improved-search-performance-on-simple-by-10x",
+  "tags": [
+    "build-tools"
+  ]
+}

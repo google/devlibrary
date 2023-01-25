@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "eng-mouaz-m-alshahmeh"
+  ],
+  "owner": "Eng-Mouaz-M-AlShahmeh",
+  "repo": "tetris_flutter_game",
+  "name": "Tetris Flutter Game",
+  "shortDescription": "Tetris Flutter Game have points, levels, cleans, next steps, clock timer, controllers, reset and sounds off or on.",
+  "longDescription": "Tetris Flutter Game have points, levels, cleans, next steps, clock timer, controllers, reset and sounds off or on.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ]
+}

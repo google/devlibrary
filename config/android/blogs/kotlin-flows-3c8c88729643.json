@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "wambuinjumbi"
+  ],
+  "author": "wambui njumbi",
+  "title": "Kotlin Flows",
+  "link": "https://medium.com/@wambuinjumbi/kotlin-flows-3c8c88729643",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "architecture"
+  ]
+}

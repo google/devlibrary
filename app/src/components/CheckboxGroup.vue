@@ -49,7 +49,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 
 import { waitForMaterialStyles } from "@/plugins/preload";
 
@@ -73,6 +73,14 @@ export default class CheckboxGroup extends Vue {
 
   /** Maximum number of selections allowed */
   @Prop({ default: 100 }) maxSelections!: number;
+
+  @Prop() value!: string;
+
+  @Watch("value", { deep: true })
+  public onValueChange(val: any) {
+    this.entries = val;
+    this.emitValue();
+  }
 
   public entries: CheckboxGroupEntry[] = [];
 

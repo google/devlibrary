@@ -25,16 +25,17 @@
 
       <div class="sections">
         <div class="section">
-          <p class="font-display font-medium text-sm mb-2 px-2">Sort</p>
-
+          <p class="font-display font-medium text-sm mb-2 px-2">
+            Expertise Level
+          </p>
           <RadioGroup
-            prefix="sort"
-            :keys="['Recently Updated', 'Recently Added']"
-            :values="['updated', 'added']"
-            v-model="sort"
+            prefix="expertiseLevel"
+            :keys="['Beginner', 'Intermediate', 'Advanced']"
+            :values="['Beginner', 'Intermediate', 'Advanced']"
+            v-model="expertiseLevel"
+            :start-empty="true"
           />
         </div>
-
         <div class="section">
           <p class="font-display font-medium text-sm mb-2 px-2">Type</p>
 
@@ -59,6 +60,21 @@
             v-model="categories"
             :maxSelections="10"
           />
+
+          <!-- Clear Filters Button-->
+          <div class="desktop-only">
+            <div class="flex flex-row justify-center mt-4 lg:mt-6">
+              <MaterialButton
+                v-if="filtersChanged"
+                type="text"
+                @click.native="resetFilters()"
+              >
+                <div class="frc">
+                  <span>Reset filters</span>
+                </div>
+              </MaterialButton>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -73,33 +89,74 @@ import CheckboxGroup, {
   CheckboxGroupEntry,
 } from "@/components/CheckboxGroup.vue";
 import { ProductConfig } from "../../../shared/types";
+import MaterialButton from "@/components/MaterialButton.vue";
 
 @Component({
   components: {
     RadioGroup,
     CheckboxGroup,
     InfoCircle,
+    MaterialButton,
   },
 })
 export default class ProjectFilters extends Vue {
   @Prop() product!: ProductConfig;
   @Prop({ default: false }) mobile!: boolean;
+  @Prop() value!: { expertiseLevel: string | string[] };
 
-  public sort = "updated";
   public types: CheckboxGroupEntry[] = [];
   public categories: CheckboxGroupEntry[] = [];
+  public expertiseLevel = "";
+  public filtersChanged = false;
+  public defaultFilters = {
+    expertiseLevel: "",
+    types: [],
+    categories: [],
+  };
+  public loaded = false;
 
-  get value() {
+  get filterValues() {
     return {
-      sort: this.sort,
+      expertiseLevel: this.expertiseLevel,
       types: this.types,
       categories: this.categories,
     };
   }
 
-  @Watch("value")
+  public resetFilters() {
+    this.expertiseLevel = this.defaultFilters.expertiseLevel;
+    this.types = JSON.parse(JSON.stringify(this.defaultFilters.types));
+    this.categories = JSON.parse(
+      JSON.stringify(this.defaultFilters.categories)
+    );
+    this.filtersChanged = false;
+  }
+
+  @Watch("value", { deep: true })
   public onValueChange() {
-    this.$emit("input", this.value);
+    if (
+      Array.isArray(this.value.expertiseLevel) &&
+      this.value.expertiseLevel.length === 0
+    ) {
+      this.expertiseLevel = "";
+    }
+  }
+
+  @Watch("filterValues", { deep: true })
+  public onFilterValuesChange() {
+    if (!this.loaded) {
+      this.defaultFilters = JSON.parse(JSON.stringify(this.filterValues));
+      this.loaded = true;
+    }
+
+    if (
+      JSON.stringify(this.defaultFilters) != JSON.stringify(this.filterValues)
+    ) {
+      this.filtersChanged = true;
+    } else {
+      this.filtersChanged = false;
+    }
+    this.$emit("input", this.filterValues);
   }
 }
 </script>
@@ -107,6 +164,8 @@ export default class ProjectFilters extends Vue {
 <style scoped lang="postcss">
 .desktop {
   @apply border-gray-200;
+  position: sticky;
+  top: 80px;
 }
 
 .mobile .sections {

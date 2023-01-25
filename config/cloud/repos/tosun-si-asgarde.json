@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "tosun-si"
+  ],
+  "owner": "tosun-si",
+  "repo": "asgarde",
+  "name": "Asgarde",
+  "shortDescription": "Asgarde allows simplifying error handling with Apache Beam Java, with less code, more concise and expressive code.",
+  "longDescription": "Asgarde allows simplifying error handling with Apache Beam Java, with less code, more concise and expressive code.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "data-analytics",
+    "developer-tools",
+    "serverless-computing"
+  ]
+}

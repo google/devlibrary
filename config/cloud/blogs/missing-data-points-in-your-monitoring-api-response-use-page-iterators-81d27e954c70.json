@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "winter-code"
+  ],
+  "author": "Arpana Mehta",
+  "title": "Learn to use 'iterators' to retrieve all your data in a single monitoring API call",
+  "link": "https://medium.com/google-cloud/missing-data-points-in-your-monitoring-api-response-use-page-iterators-81d27e954c70",
+  "tags": [
+    "operations"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "shreebhagwat94"
+  ],
+  "author": "Shree Bhagwat",
+  "title": "Handle Internet Connectivity In Flutter With Riverpod",
+  "link": "https://medium.com/@shreebhagwat94/handle-internet-connectivity-in-flutter-with-riverpod-bbde21c187dc",
+  "tags": [
+    "mobile",
+    "general",
+    "samples"
+  ]
+}

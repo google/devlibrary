@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "mtabishk999"
+  ],
+  "author": "Muhammad Tabish Khanday",
+  "title": "TLS/SSL connection using Self-Signed Certificates with Dart and Flutter",
+  "link": "https://mtabishk999.medium.com/tls-ssl-connection-using-self-signed-certificates-with-dart-and-flutter-6e7c46ea1a36",
+  "tags": [
+    "mobile",
+    "general",
+    "samples"
+  ]
+}

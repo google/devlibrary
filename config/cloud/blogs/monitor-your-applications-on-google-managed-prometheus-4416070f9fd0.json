@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "sanketbisne"
+  ],
+  "author": "sanket bisne",
+  "title": "Monitor your applications on Google Managed Prometheus",
+  "link": "https://blog.searce.com/monitor-your-applications-on-google-managed-prometheus-4416070f9fd0",
+  "tags": [
+    "migration",
+    "management-tools",
+    "developer-tools"
+  ]
+}

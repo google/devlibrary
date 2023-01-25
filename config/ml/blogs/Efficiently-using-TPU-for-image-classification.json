@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["dimitreoliveira"],
+  "authorIds": [
+    "dimitreoliveira"
+  ],
   "author": "Dimitre Andrew Aires de Oliveira",
   "title": "Efficiently using TPU for image classification",
   "link": "https://medium.com/swlh/efficiently-using-tpu-for-image-classification-ed20d2970893",

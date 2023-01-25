@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pranambhat"
+  ],
+  "owner": "PranamBhat",
+  "repo": "HostBinding-and-HostListener",
+  "name": "@HostBinding and @HostListener",
+  "shortDescription": "This repository aims to describe the feature's of @HostBinding and @HostListener in Angular with an example.",
+  "longDescription": "This repository aims to describe the feature's of @HostBinding and @HostListener in Angular with an example.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries",
+    "demos"
+  ]
+}

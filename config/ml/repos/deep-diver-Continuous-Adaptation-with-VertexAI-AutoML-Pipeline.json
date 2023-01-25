@@ -1,0 +1,25 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "deep-diver"
+  ],
+  "owner": "deep-diver",
+  "repo": "Continuous-Adaptation-with-VertexAI-AutoML-Pipeline",
+  "name": "Continuous Adaptation with VertexAI's AutoML and P",
+  "shortDescription": "This repository contains two notebooks to demonstrate how to automate to produce a new AutoML model when the new dataset comes in. This project uses Vertex AI in general, Vertex Managed Dataset, Verte",
+  "longDescription": "This repository contains two notebooks to demonstrate how to automate to produce a new AutoML model when the new dataset comes in. This project uses Vertex AI in general, Vertex Managed Dataset, Verte",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web",
+    "theory"
+  ]
+}

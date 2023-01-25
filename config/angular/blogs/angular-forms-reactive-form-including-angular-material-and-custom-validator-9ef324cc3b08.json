@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "hossein13m"
+  ],
+  "author": "Hossein Mousavi",
+  "title": "Angular Reactive Form including Angular Material and Custom Validation",
+  "link": "https://medium.com/angular-in-depth/angular-forms-reactive-form-including-angular-material-and-custom-validator-9ef324cc3b08",
+  "tags": [
+    "libraries"
+  ]
+}

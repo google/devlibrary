@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pr-mais"
+  ],
+  "owner": "pr-Mais",
+  "repo": "dartpad_workshops",
+  "name": "DartPad Workshop: add type-safety to Firestore usi",
+  "shortDescription": "Adding type-safety to our Dart code prevents many exceptions. This's a guided DartPad workshop that will give you insights into how to use converters to write safe Firestore queries in Flutter.",
+  "longDescription": "Adding type-safety to our Dart code prevents many exceptions. This's a guided DartPad workshop that will give you insights into how to use converters to write safe Firestore queries in Flutter.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "firebase",
+    "mobile",
+    "samples"
+  ]
+}

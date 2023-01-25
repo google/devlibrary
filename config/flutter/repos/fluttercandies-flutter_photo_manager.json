@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "alexv525"
+  ],
+  "owner": "fluttercandies",
+  "repo": "flutter_photo_manager",
+  "name": "photo_manager",
+  "shortDescription": "A Flutter plugin that provides images, videos, and audio abstraction management APIs without interface integration, available on Android, iOS, and macOS.",
+  "longDescription": "A Flutter plugin that provides images, videos, and audio abstraction management APIs without interface integration, available on Android, iOS, and macOS.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "plugins"
+  ]
+}

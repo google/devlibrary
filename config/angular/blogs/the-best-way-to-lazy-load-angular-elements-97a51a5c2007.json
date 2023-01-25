@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "tomastrajan"
+  ],
+  "author": "Tomas Trajan",
+  "title": "The best way to lazy load Angular elements",
+  "link": "https://tomastrajan.medium.com/the-best-way-to-lazy-load-angular-elements-97a51a5c2007?sk=49d52032ee54eff98cb31b851ec0f481",
+  "tags": [
+    "performance"
+  ]
+}

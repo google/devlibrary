@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rajashekarraju"
+  ],
+  "owner": "RajashekarRaju",
+  "repo": "hangman-compose",
+  "name": "Hangman Game built with Compose for Android.",
+  "shortDescription": "Hangman Game for Android 🤖 build with Compose 🚀 and  jetpack components, Room for saving game history, preferences for loading game settings, ViewModels for persisting game state and Koin for DI.",
+  "longDescription": "Hangman Game for Android 🤖 build with Compose 🚀 and  jetpack components, Room for saving game history, preferences for loading game settings, ViewModels for persisting game state and Koin for DI.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "kotlin"
+  ]
+}

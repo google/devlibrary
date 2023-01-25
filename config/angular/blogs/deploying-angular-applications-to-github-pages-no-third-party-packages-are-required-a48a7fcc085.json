@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "nagasainath"
+  ],
+  "author": "Naga Sainath Sayini",
+  "title": "Deploying Angular applications to GitHub Pages: No third-party packages are required",
+  "link": "https://medium.com/@nagasainath/deploying-angular-applications-to-github-pages-no-third-party-packages-are-required-a48a7fcc085",
+  "tags": [
+    "demos"
+  ]
+}

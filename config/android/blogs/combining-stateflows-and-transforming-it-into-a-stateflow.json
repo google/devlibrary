@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "patilshreyas"
+  ],
+  "author": "Shreyas Patil",
+  "title": "Combining StateFlows and transforming it into a StateFlow",
+  "link": "https://blog.shreyaspatil.dev/combining-stateflows-and-transforming-it-into-a-stateflow",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "lakshydeep-14"
+  ],
+  "author": "Lakshydeep Vikram Sah",
+  "title": "Customize Google Map Marker Icon In Flutter",
+  "link": "https://medium.com/geekculture/change-google-map-marker-icon-in-flutter-c68b2e4da31e",
+  "tags": [
+    "mobile",
+    "plugins",
+    "web"
+  ]
+}

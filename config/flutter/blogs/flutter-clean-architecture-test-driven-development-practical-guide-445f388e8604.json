@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "codestronaut"
+  ],
+  "author": "Aditya Rohman",
+  "title": "Power Up Your Flutter Development Process by Implementing Clean Architecture and Test-Driven Development",
+  "link": "https://betterprogramming.pub/flutter-clean-architecture-test-driven-development-practical-guide-445f388e8604",
+  "tags": [
+    "general",
+    "mobile"
+  ]
+}

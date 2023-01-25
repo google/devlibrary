@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "v9vek"
+  ],
+  "owner": "V9vek",
+  "repo": "Body-Scan",
+  "name": "Body Scan",
+  "shortDescription": "Body Scan is a minimal Android app made with Jetpack Compose. The main purpose of this project is to showcase the Canvas API and this project is an interesting implementation of path clipping.",
+  "longDescription": "Body Scan is a minimal Android app made with Jetpack Compose. The main purpose of this project is to showcase the Canvas API and this project is an interesting implementation of path clipping.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose"
+  ]
+}

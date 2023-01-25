@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "sanketbisne"
+  ],
+  "author": "sanket bisne",
+  "title": "Deep Dive into CI/CD with GKE through Google Cloud Build and Google Cloud Deploy(Part 2)",
+  "link": "https://blog.searce.com/deep-dive-into-ci-cd-with-gke-through-google-cloud-build-and-google-cloud-deploy-part-2-e2b03e9b02c8",
+  "tags": [
+    "migration",
+    "containers",
+    "developer-tools"
+  ]
+}

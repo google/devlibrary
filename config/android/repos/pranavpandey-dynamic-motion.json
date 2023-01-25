@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pranavpandey"
+  ],
+  "owner": "pranavpandey",
+  "repo": "dynamic-motion",
+  "name": "Dynamic Motion",
+  "shortDescription": "A library to provide additional functionality for Android MotionLayout.",
+  "longDescription": "A library to provide additional functionality for Android MotionLayout.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui",
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "flavioarfaria"
+  ],
+  "owner": "flavioarfaria",
+  "repo": "Catalog",
+  "name": "Catalog",
+  "shortDescription": "Generate type-safe, user-friendly extensions to resolve Android resources.",
+  "longDescription": "Generate type-safe, user-friendly extensions to resolve Android resources.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools",
+    "kotlin"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "raysummee"
+  ],
+  "owner": "raysummee",
+  "repo": "flutter_cart_bloc",
+  "name": "Flutter Cart Bloc",
+  "shortDescription": "Make a cart application using bloc in flutter",
+  "longDescription": "Make a cart application using bloc in flutter",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}

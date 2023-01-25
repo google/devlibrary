@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "serbelga"
+  ],
+  "owner": "serbelga",
+  "repo": "ToDometerMultiplatform",
+  "name": "ToDometer Multiplatform",
+  "shortDescription": "Kotlin Multiplatform project: A meter to-do list built with Android Jetpack, Compose UI Multiplatform, Wear Compose, SQLDelight, Koin Multiplatform...",
+  "longDescription": "Kotlin Multiplatform project: A meter to-do list built with Android Jetpack, Compose UI Multiplatform, Wear Compose, SQLDelight, Koin Multiplatform...",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "compose"
+  ]
+}

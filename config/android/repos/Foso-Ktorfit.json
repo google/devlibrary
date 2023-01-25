@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "foso"
+  ],
+  "owner": "Foso",
+  "repo": "Ktorfit",
+  "name": "Ktorfit",
+  "shortDescription": "HTTP client / Kotlin Symbol Processor for Kotlin Multiplatform (Js, Jvm, Android, Native, iOS) using KSP and Ktor clients inspired by Retrofit",
+  "longDescription": "HTTP client / Kotlin Symbol Processor for Kotlin Multiplatform (Js, Jvm, Android, Native, iOS) using KSP and Ktor clients inspired by Retrofit",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin"
+  ]
+}

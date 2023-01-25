@@ -1,7 +1,8 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": [],
+  "authorIds": ["getstream"],
   "owner": "GetStream",
   "repo": "butterfly",
   "name": "butterfly",

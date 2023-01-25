@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "lperezp"
+  ],
+  "author": "Luis Eduardo Perez Pacherrez",
+  "title": "Computación en la nube en Google Cloud Platform",
+  "link": "https://lperezp.medium.com/computaci%C3%B3n-en-la-nube-46e3b6ca53da",
+  "tags": [
+    "compute",
+    "serverless-computing"
+  ]
+}

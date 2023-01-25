@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "patilshreyas"
+  ],
+  "author": "Shreyas Patil",
+  "title": "Leveraging the Semaphore concept in Coroutines to limit the parallelism 🔀",
+  "link": "https://blog.shreyaspatil.dev/leveraging-the-semaphore-concept-in-coroutines-to-limit-the-parallelism",
+  "tags": [
+    "kotlin"
+  ]
+}

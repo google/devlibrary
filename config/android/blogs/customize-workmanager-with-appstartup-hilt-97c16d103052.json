@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "saraswatdivyansh"
+  ],
+  "author": "Divyansh Saraswat",
+  "title": "Customize WorkManager with App startup and Hilt",
+  "link": "https://proandroiddev.com/customize-workmanager-with-appstartup-hilt-97c16d103052",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "architecture"
+  ]
+}

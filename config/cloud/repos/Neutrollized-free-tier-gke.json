@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "neutrollized"
+  ],
+  "owner": "Neutrollized",
+  "repo": "free-tier-gke",
+  "name": "Free Tier GKE",
+  "shortDescription": "This repo contains an explanation of how the user can take advantage of Google generous free-tier to provision a very affordable GKE cluster for themselves. Includes Terraform code & examples.",
+  "longDescription": "This repo contains an explanation of how the user can take advantage of Google generous free-tier to provision a very affordable GKE cluster for themselves. Includes Terraform code & examples.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "containers",
+    "networking",
+    "security-identity"
+  ]
+}

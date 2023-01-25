@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "wajahatkarim3"
+  ],
+  "owner": "wajahatkarim3",
+  "repo": "Flippable",
+  "name": "Flippable",
+  "shortDescription": "A Jetpack Compose library for animating a flip transition between the front and back of something, such as a card.",
+  "longDescription": "A Jetpack Compose library for animating a flip transition between the front and back of something, such as a card.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

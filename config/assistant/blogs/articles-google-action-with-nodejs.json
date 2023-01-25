@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "xavidop"
+  ],
+  "author": "Xavier Portilla Edo",
+  "title": "Google Action With Node.js - DZone AI",
+  "link": "https://dzone.com/articles/google-action-with-nodejs",
+  "tags": [
+    "assistant-conversation",
+    "actions-on-google",
+    "google-assistant"
+  ]
+}

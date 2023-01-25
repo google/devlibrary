@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["gnomeontherun"],
+  "authorIds": [
+    "gnomeontherun"
+  ],
   "owner": "vmware",
   "repo": "clarity",
   "name": "Clarity Design System",

@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "patilshreyas"
+  ],
+  "owner": "PatilShreyas",
+  "repo": "mutekt",
+  "name": "Mutekt",
+  "shortDescription": "Simplify mutating \"immutable\" state models",
+  "longDescription": "Simplify mutating \"immutable\" state models",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "deep-diver"
+  ],
+  "owner": "deep-diver",
+  "repo": "segformer-tf-transformers",
+  "name": "Usage of TF based SegFormer in transformers",
+  "shortDescription": "This repository demonstrates how to use TensorFlow based SegFormer model in 🤗 transformers package with Jupyter Notebook and Gradio application.",
+  "longDescription": "This repository demonstrates how to use TensorFlow based SegFormer model in 🤗 transformers package with Jupyter Notebook and Gradio application.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web",
+    "theory"
+  ]
+}

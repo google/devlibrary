@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kasem-sm"
+  ],
+  "owner": "kasem-sm",
+  "repo": "SlimeKT",
+  "name": "SlimeKT",
+  "shortDescription": "Kotlin Powered Open Source Project. SlimeKT is an article sharing platform. The backend is made using Ktor and frontend using Jetpack Compose.",
+  "longDescription": "Kotlin Powered Open Source Project. SlimeKT is an article sharing platform. The backend is made using Ktor and frontend using Jetpack Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

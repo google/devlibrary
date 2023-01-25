@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sakethh"
+  ],
+  "author": "Saketh Pathike",
+  "title": "Understanding MVVM and why it actually makes sense!",
+  "link": "https://sakethh.medium.com/understanding-mvvm-and-why-it-actually-makes-sense-39d966d08fbb",
+  "tags": [
+    "architecture",
+    "modern-android-development",
+    "kotlin"
+  ]
+}

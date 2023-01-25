@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "surajsau"
+  ],
+  "owner": "surajsau",
+  "repo": "ML-Android",
+  "name": "ML Android",
+  "shortDescription": "Implementing various ML usecases using TFLite & Google MLKit in Android using strictly Jetpack Compose",
+  "longDescription": "Implementing various ML usecases using TFLite & Google MLKit in Android using strictly Jetpack Compose",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "vision"
+  ]
+}

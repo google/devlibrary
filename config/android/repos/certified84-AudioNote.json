@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "certified84"
+  ],
+  "owner": "certified84",
+  "repo": "AudioNote",
+  "name": "AudioNote",
+  "shortDescription": "An open source simple Audi note taking android application built to demonstrate android development best practices",
+  "longDescription": "An open source simple Audi note taking android application built to demonstrate android development best practices",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "architecture",
+    "modern-android-development"
+  ]
+}

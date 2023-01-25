@@ -1,0 +1,12 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["jriera"],
+  "author": "Jordi Riera",
+  "title": "Angular Dependency Injection Understood I - No needles involved, no worries",
+  "link": "https://dev.to/renaisense_/angular-dependency-injection-understood-i-no-needles-involved-no-worries-4c5h",
+  "tags": [
+    "components","frameworks","router","performance","gettingstarted","libraries","demos"
+  ]
+}

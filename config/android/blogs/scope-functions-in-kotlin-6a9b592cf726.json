@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "abhineshchandra1234"
+  ],
+  "author": "abhinesh chandra",
+  "title": "Scope functions in Kotlin",
+  "link": "https://medium.com/@abhineshchandra1234/scope-functions-in-kotlin-6a9b592cf726",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "architecture"
+  ]
+}

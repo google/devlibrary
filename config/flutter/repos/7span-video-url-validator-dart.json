@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "7span"
+  ],
+  "owner": "7span",
+  "repo": "video-url-validator-dart",
+  "name": "Video URL Validator",
+  "shortDescription": "A Dart Plugin to validate Video URLs from Popular Video Platforms. \n\nSupported Platforms:\nYoutube\nFacebook\nVimeo\nDailymotion\nWistia",
+  "longDescription": "A Dart Plugin to validate Video URLs from Popular Video Platforms. \n\nSupported Platforms:\nYoutube\nFacebook\nVimeo\nDailymotion\nWistia",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "plugins",
+    "mobile",
+    "web"
+  ]
+}

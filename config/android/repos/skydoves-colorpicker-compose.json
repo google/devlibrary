@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "colorpicker-compose",
+  "name": "colorpicker-compose",
+  "shortDescription": "Jetpack Compose color picker library for getting colors from any images by tapping on the desired color.",
+  "longDescription": "Jetpack Compose color picker library for getting colors from any images by tapping on the desired color.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui"
+  ]
+}

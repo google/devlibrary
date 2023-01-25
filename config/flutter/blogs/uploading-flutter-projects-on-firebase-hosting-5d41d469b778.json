@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ayeshaiftikhar"
+  ],
+  "author": "Ayesha Iftikhar",
+  "title": "Uploading Flutter Projects on Firebase Hosting",
+  "link": "https://medium.com/flutterevo/uploading-flutter-projects-on-firebase-hosting-5d41d469b778",
+  "tags": [
+    "firebase",
+    "web",
+    "general"
+  ]
+}

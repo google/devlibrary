@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "morfly"
+  ],
+  "author": "Pavlo Stavytskyi",
+  "title": "Bazel for Android. Part 2 — Multi-module projects",
+  "link": "https://proandroiddev.com/bazel-for-android-part-2-multi-module-projects-4495bb6826f7",
+  "tags": [
+    "build-tools",
+    "modern-android-development"
+  ]
+}

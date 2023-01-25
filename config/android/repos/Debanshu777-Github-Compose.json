@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "debanshu777"
+  ],
+  "owner": "Debanshu777",
+  "repo": "Github-Compose",
+  "name": "Github Compose",
+  "shortDescription": "Build with Ktor Client + SQLDelight + Kotlinx Serialization with the freshness of Material3 using Koin and Dagger HIlt built to demonstrate the use of Modern development tools with best practices",
+  "longDescription": "Build with Ktor Client + SQLDelight + Kotlinx Serialization with the freshness of Material3 using Koin and Dagger HIlt built to demonstrate the use of Modern development tools with best practices",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "architecture"
+  ]
+}

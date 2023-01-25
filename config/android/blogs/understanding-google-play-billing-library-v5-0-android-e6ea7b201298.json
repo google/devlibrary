@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["sindkarp"],
+  "author": "Priya Sindkar",
+  "title": "Understanding Google Play Billing Library v5.0- Android",
+  "link": "https://medium.com/novumlogic/understanding-google-play-billing-library-v5-0-android-e6ea7b201298",
+  "tags": [
+    "build-tools",
+    "modern-android-development"
+  ]
+}

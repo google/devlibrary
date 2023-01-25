@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "wajahatkarim"
+  ],
+  "author": "Wajahat Karim",
+  "title": "Minimal DI Setup for Your App Using Hilt",
+  "link": "https://wajahatkarim.com/2022/06/minimal-hilt-setup/",
+  "tags": [
+    "modern-android-development"
+  ]
+}

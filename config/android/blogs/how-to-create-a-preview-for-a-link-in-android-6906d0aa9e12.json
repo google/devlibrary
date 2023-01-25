@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["priyansh-kedia"],
+  "authorIds": [
+    "priyansh-kedia"
+  ],
   "author": "Priyansh Kedia",
   "title": "How to create a preview for a link in Android",
   "link": "https://proandroiddev.com/how-to-create-a-preview-for-a-link-in-android-6906d0aa9e12",

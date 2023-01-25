@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "tomastrajan"
+  ],
+  "author": "Tomas Trajan",
+  "title": "How to buld epic Angular app with clean architecture?",
+  "link": "https://tomastrajan.medium.com/how-to-build-epic-angular-app-with-clean-architecture-91640ed1656?sk=44ebaed856c0a663160ff669e94e4d05",
+  "tags": [
+    "performance"
+  ]
+}

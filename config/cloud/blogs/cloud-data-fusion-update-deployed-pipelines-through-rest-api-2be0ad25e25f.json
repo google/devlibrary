@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "jtaras"
+  ],
+  "author": "Justin Taras",
+  "title": "Cloud Data Fusion: Update deployed pipelines through REST API",
+  "link": "https://jtaras.medium.com/cloud-data-fusion-update-deployed-pipelines-through-rest-api-2be0ad25e25f",
+  "tags": [
+    "data-analytics"
+  ]
+}

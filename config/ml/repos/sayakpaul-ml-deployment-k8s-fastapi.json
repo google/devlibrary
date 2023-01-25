@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sayakpaul"
+  ],
+  "owner": "sayakpaul",
+  "repo": "ml-deployment-k8s-fastapi",
+  "name": "Deploying ML models with GKE and GitHub Actions",
+  "shortDescription": "This project shows how to serve an ONNX-optimized image classification model as a RESTful web service with FastAPI, Docker, and Kubernetes (k8s).",
+  "longDescription": "This project shows how to serve an ONNX-optimized image classification model as a RESTful web service with FastAPI, Docker, and Kubernetes (k8s).",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision"
+  ]
+}

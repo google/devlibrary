@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "murhafsousli"
+  ],
+  "owner": "MurhafSousli",
+  "repo": "ngx-gallery",
+  "name": "Angular Gallery",
+  "shortDescription": "Simplifies the process of creating beautiful image galleries for the web and mobile devices.",
+  "longDescription": "Simplifies the process of creating beautiful image galleries for the web and mobile devices.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

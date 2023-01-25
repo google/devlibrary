@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "himanshusharma89"
+  ],
+  "author": "Himanshu Sharma",
+  "title": "Flutter: How to scroll an ExpansionTile when it is expanded?",
+  "link": "https://medium.com/flutter-community/flutter-how-to-scroll-an-expansiontile-when-it-is-expanded-ad706cfb80a6",
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}

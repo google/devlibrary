@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rcjuancarlosuwu"
+  ],
+  "owner": "rcjuancarlosuwu",
+  "repo": "face_id_animation",
+  "name": "Face ID Animation",
+  "shortDescription": "Using Flutter, the sky's the limit! Planned to use a Lottie/Rive animation for a face id animation, but ended up using Flutter Custom Painter.",
+  "longDescription": "Using Flutter, the sky's the limit! Planned to use a Lottie/Rive animation for a face id animation, but ended up using Flutter Custom Painter.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}

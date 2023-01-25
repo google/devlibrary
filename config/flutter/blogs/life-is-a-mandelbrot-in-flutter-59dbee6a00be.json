@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ankitmahato"
+  ],
+  "author": "Ankit Mahato",
+  "title": "Life is a Mandelbrot! in Flutter.",
+  "link": "https://medium.com/flutter-community/life-is-a-mandelbrot-in-flutter-59dbee6a00be",
+  "tags": [
+    "widgets",
+    "samples",
+    "mobile"
+  ]
+}

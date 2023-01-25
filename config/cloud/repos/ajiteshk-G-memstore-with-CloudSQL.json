@@ -1,4 +1,5 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
   "authorIds": [
@@ -9,7 +10,7 @@
   "name": "Memory Store With Cloud SQL (Read Through Cache)",
   "shortDescription": "This showcases a small code on how to connect to MemoryStore and implement read through cache with CloudSQL as backend",
   "longDescription": "This showcases a small code on how to connect to MemoryStore and implement read through cache with CloudSQL as backend",
-  "content": "blob/main/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "databases",

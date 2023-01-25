@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "avnishnishad"
+  ],
+  "author": "Avnish Nishad",
+  "title": "Flutter: Streams and StreamBuilder",
+  "link": "https://medium.com/@avnishnishad/flutter-understanding-the-stream-and-streambuilder-a2f8b69efa15",
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ]
+}

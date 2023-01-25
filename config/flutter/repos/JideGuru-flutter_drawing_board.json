@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jideguru"
+  ],
+  "owner": "JideGuru",
+  "repo": "flutter_drawing_board",
+  "name": "Let's Draw",
+  "shortDescription": "Let's Draw is a simple drawing app where users can use freehand, line, and shape tools to draw art on the canvas. The demo is available at https://letsdraw.jideguru.dev/#/",
+  "longDescription": "Let's Draw is a simple drawing app where users can use freehand, line, and shape tools to draw art on the canvas. The demo is available at https://letsdraw.jideguru.dev/#/",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "web",
+    "samples"
+  ]
+}

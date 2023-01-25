@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aryanirani123"
+  ],
+  "author": "Aryan Irani",
+  "title": "Read and write data in Google Sheets using the Google Sheets API and Python",
+  "link": "https://aryanirani123.medium.com/read-and-write-data-in-google-sheets-using-python-and-the-google-sheets-api-6e206a242f20",
+  "tags": [
+    "api-management"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "eng-mouaz-m-alshahmeh"
+  ],
+  "author": "Mouaz Al-Shahmeh",
+  "title": "Importance of Flutter State Management",
+  "link": "https://medium.com/@m.m.shahmeh/importance-of-flutter-state-management-84775dc86d89",
+  "tags": [
+    "mobile",
+    "web",
+    "widgets"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "snehpandya"
+  ],
+  "author": "Sneh Pandya",
+  "title": "How to optimize Android app performance? Tips & Tools | Codemagic Blog",
+  "link": "https://blog.codemagic.io/android-app-optimization-tips/",
+  "tags": [
+    "modern-android-development",
+    "architecture",
+    "build-tools"
+  ]
+}

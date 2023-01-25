@@ -1,0 +1,12 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["pranambhat"],
+  "author": "Pranam Bhat",
+  "title": "How To Deploy And Host An Angular Application On Firebase",
+  "link": "https://www.c-sharpcorner.com/article/how-to-deploy-and-host-an-angular-application-on-firebase/",
+  "tags": [
+    "demos"
+  ]
+}

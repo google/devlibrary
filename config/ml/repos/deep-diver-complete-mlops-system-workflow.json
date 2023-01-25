@@ -1,0 +1,25 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "deep-diver"
+  ],
+  "owner": "deep-diver",
+  "repo": "complete-mlops-system-workflow",
+  "name": "Complete MLOps System Workflow with GCP and TFX",
+  "shortDescription": "This repository shows how to build a complete MLOps system with TensorFlow eXtended(TFX) and various GCP products.",
+  "longDescription": "This repository shows how to build a complete MLOps system with TensorFlow eXtended(TFX) and various GCP products.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web",
+    "theory"
+  ]
+}

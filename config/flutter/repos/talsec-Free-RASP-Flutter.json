@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [],
+  "owner": "talsec",
+  "repo": "Free-RASP-Flutter",
+  "name": "freeRASP",
+  "shortDescription": "freeRASP for Flutter is a mobile in-app protection and security monitoring SDK. It aims to cover the main aspects of RASP (Runtime App Self Protection) and application shielding.",
+  "longDescription": "freeRASP for Flutter is a mobile in-app protection and security monitoring SDK. It aims to cover the main aspects of RASP (Runtime App Self Protection) and application shielding.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "samples",
+    "mobile",
+    "widgets"
+  ]
+}

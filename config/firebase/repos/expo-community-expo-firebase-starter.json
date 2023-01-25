@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "expo-community"
+  ],
+  "owner": "expo-community",
+  "repo": "expo-firebase-starter",
+  "name": "Expo Firebase Starter Kit",
+  "shortDescription": "Expo Firebase starter kit is a quicker way to bootstrap React Native apps with Firebase.",
+  "longDescription": "Expo Firebase starter kit is a quicker way to bootstrap React Native apps with Firebase.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ios",
+    "android"
+  ]
+}

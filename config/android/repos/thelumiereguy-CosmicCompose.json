@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "thelumiereguy"
+  ],
+  "owner": "thelumiereguy",
+  "repo": "CosmicCompose",
+  "name": "Cosmic Compose",
+  "shortDescription": "Cosmic Compose is a minimal Android app made with Jetpack Compose. The purpose of this project is to demonstrate the usage of Layout composable.",
+  "longDescription": "Cosmic Compose is a minimal Android app made with Jetpack Compose. The purpose of this project is to demonstrate the usage of Layout composable.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

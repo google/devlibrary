@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "github",
-  "authorIds": ["simform-solutions"],
+  "authorIds": [
+    "simformsolutionspvtltd"
+  ],
   "owner": "SimformSolutionsPvtLtd",
   "repo": "flutter_showcaseview",
   "name": "flutter_showcaseview",

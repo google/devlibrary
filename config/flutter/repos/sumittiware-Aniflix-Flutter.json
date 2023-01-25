@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sumittiware"
+  ],
+  "owner": "sumittiware",
+  "repo": "Aniflix-Flutter",
+  "name": "Aniflix",
+  "shortDescription": "Aniflix (Netfilix Clone made with Flutter and AniApi)\n->Video Streaming\n->Local Database with Hive",
+  "longDescription": "Aniflix (Netfilix Clone made with Flutter and AniApi)\n->Video Streaming\n->Local Database with Hive",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "general"
+  ]
+}

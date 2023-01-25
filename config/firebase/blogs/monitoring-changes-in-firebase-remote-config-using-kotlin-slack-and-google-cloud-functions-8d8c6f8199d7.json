@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["nateebel"],
+  "author": "Nate Ebel",
+  "title": "Monitoring Changes In Firebase Remote Config Using Kotlin, Slack, and Google Cloud Functions",
+  "link": "https://engineering.premise.com/monitoring-changes-in-firebase-remote-config-using-kotlin-slack-and-google-cloud-functions-8d8c6f8199d7",
+  "tags": [
+    "web",
+    "admin"
+  ]
+}

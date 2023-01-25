@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "sbis04"
+  ],
+  "author": "Souvik Biswas",
+  "title": "Flutter camera plugin: A deep dive with examples - LogRocket Blog",
+  "link": "https://blog.logrocket.com/flutter-camera-plugin-deep-dive-with-examples/",
+  "tags": [
+    "plugins",
+    "mobile",
+    "samples"
+  ]
+}

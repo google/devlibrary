@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aryanirani123"
+  ],
+  "author": "Aryan Irani",
+  "title": "Get Google Classroom Data into your Google Sheet using the Google Classroom API and Google Apps Script",
+  "link": "https://aryanirani123.medium.com/get-classroom-data-into-your-google-sheet-using-google-apps-script-93a60b3533f0",
+  "tags": [
+    "api-management",
+    "developer-tools"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "suratadhikari"
+  ],
+  "author": "Surat Adhikari",
+  "title": "Flutter fetch API with Dio Package",
+  "link": "https://medium.com/towardsdev/flutter-fetch-api-with-dio-package-651e0ea43b0e",
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}

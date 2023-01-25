@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "myric-september"
+  ],
+  "author": "Myric September",
+  "title": "Bite-size Jetpack Compose: Navigation",
+  "link": "https://proandroiddev.com/bite-size-jetpack-compose-navigation-c010d3431ad2",
+  "tags": [
+    "kotlin",
+    "compose",
+    "ui"
+  ]
+}

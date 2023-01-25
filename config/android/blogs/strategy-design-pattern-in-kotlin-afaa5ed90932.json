@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["abhisheksaxena"],
+  "author": "Abhishek Saxena",
+  "title": "Strategy Design Pattern In Kotlin",
+  "link": "https://proandroiddev.com/strategy-design-pattern-in-kotlin-afaa5ed90932",
+  "tags": [
+    "architecture",
+    "kotlin"
+  ]
+}

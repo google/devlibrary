@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "radi-cho"
+  ],
+  "owner": "radi-cho",
+  "repo": "create-tf-app",
+  "name": "create-tf-app",
+  "shortDescription": "Set up and maintain a machine learning project in Tensorflow with a single script",
+  "longDescription": "Set up and maintain a machine learning project in Tensorflow with a single script",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","nlp","vision","library","notebook","collection","web","theory"
+  ]
+}

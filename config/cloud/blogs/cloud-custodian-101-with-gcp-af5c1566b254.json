@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "harshmanvar"
+  ],
+  "author": "Harsh Manvar",
+  "title": "Cloud Custodian with GCP",
+  "link": "https://medium.com/@harsh.manvar111/cloud-custodian-101-with-gcp-af5c1566b254",
+  "tags": [
+    "api-management",
+    "management-tools",
+    "operations"
+  ]
+}

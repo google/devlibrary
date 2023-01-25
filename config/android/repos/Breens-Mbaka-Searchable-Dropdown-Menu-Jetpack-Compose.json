@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "breens-mbaka"
+  ],
+  "owner": "Breens-Mbaka",
+  "repo": "Searchable-Dropdown-Menu-Jetpack-Compose",
+  "name": "Searchable-Dropdown-Menu-Jetpack-Compose",
+  "shortDescription": "A Jetpack Compose Android Library to create a dropdown menu that is searchable.",
+  "longDescription": "A Jetpack Compose Android Library to create a dropdown menu that is searchable.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "build-tools"
+  ]
+}

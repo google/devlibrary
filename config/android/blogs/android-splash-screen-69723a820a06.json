@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sridhar-sp"
+  ],
+  "author": "Sridhar Subramani",
+  "title": "Android ‘Splash Screen’",
+  "link": "https://medium.com/@sridhar-sp/android-splash-screen-69723a820a06",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "ui"
+  ]
+}

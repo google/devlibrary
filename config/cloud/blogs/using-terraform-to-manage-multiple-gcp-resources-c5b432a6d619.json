@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rafael-natali"
+  ],
+  "author": "Rafael Natali",
+  "title": "Using Terraform to manage multiple GCP resources",
+  "link": "https://medium.com/marionete/using-terraform-to-manage-multiple-gcp-resources-c5b432a6d619",
+  "tags": [
+    "operations",
+    "storage",
+    "security-identity"
+  ]
+}

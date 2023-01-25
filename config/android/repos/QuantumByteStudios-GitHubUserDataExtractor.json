@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "quantumbytestudios"
+  ],
+  "owner": "QuantumByteStudios",
+  "repo": "GitHubUserDataExtractor",
+  "name": "GitHubUserDataExtractor",
+  "shortDescription": "A tool that displays information and received events about any user on GitHub straight on your terminal screen",
+  "longDescription": "A tool that displays information and received events about any user on GitHub straight on your terminal screen",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

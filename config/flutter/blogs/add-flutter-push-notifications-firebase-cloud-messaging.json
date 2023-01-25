@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "sbis04"
+  ],
+  "author": "Souvik Biswas",
+  "title": "Add Flutter push notifications with Firebase Cloud Messaging - LogRocket Blog",
+  "link": "https://blog.logrocket.com/add-flutter-push-notifications-firebase-cloud-messaging/",
+  "tags": [
+    "mobile",
+    "firebase"
+  ]
+}

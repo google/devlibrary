@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "vinodbaste"
+  ],
+  "owner": "vinodbaste",
+  "repo": "Image-compressor",
+  "name": "Image Compressor",
+  "shortDescription": "An Android image compress library, image compressor, is small and effective. With very little or no image quality degradation, a compressor enables you to reduce the size of large photos into smaller",
+  "longDescription": "An Android image compress library, image compressor, is small and effective. With very little or no image quality degradation, a compressor enables you to reduce the size of large photos into smaller",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "build-tools"
+  ]
+}

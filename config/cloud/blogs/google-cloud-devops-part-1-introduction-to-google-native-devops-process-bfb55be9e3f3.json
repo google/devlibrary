@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["pushkarbk"],
+  "authorIds": [
+    "pushkarbk"
+  ],
   "author": "Pushkar Kothavade",
   "title": "Google Cloud DevOps Series - Part 1: End to end Google Cloud native DevOps process.",
   "link": "https://medium.com/google-cloud/google-cloud-devops-part-1-introduction-to-google-native-devops-process-bfb55be9e3f3",

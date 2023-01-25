@@ -87,7 +87,11 @@
         },
         "required": ["title", "href"]
       }
+    },
+    "expertise": {
+      "type": "string",
+      "description": "The expertise of the articles or projects"
     }
   },
-  "required": [ "owner", "repo", "name", "shortDescription", "longDescription", "content", "tags" ]
+  "required": [ "owner", "authorIds", "repo", "name", "shortDescription", "longDescription", "content", "tags", "expertise"]
 }

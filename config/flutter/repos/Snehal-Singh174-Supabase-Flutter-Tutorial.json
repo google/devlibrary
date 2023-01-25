@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "snehal-singh174"
+  ],
+  "owner": "Snehal-Singh174",
+  "repo": "Supabase-Flutter-Tutorial",
+  "name": "Supabase Flutter Authentication",
+  "shortDescription": "The Project Describes how to use the Authentication Feature provided by Supabase an open-source alternative to firebase.",
+  "longDescription": "The Project Describes how to use the Authentication Feature provided by Supabase an open-source alternative to firebase.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}

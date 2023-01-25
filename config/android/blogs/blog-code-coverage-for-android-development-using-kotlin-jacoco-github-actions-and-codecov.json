@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "wise4rmgod"
+  ],
+  "author": "wisdom nwokocha",
+  "title": "Code Coverage for Android Development Using Kotlin, JaCoCo, GitHub Actions, and Codecov - Codecov",
+  "link": "https://about.codecov.io/blog/code-coverage-for-android-development-using-kotlin-jacoco-github-actions-and-codecov/",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "build-tools"
+  ]
+}

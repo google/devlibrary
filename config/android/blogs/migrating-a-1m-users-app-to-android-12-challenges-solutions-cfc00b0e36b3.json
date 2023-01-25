@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "monikakumarjethani"
+  ],
+  "author": "Monika Kumar Jethani",
+  "title": "Migrating a 1M users app to Android 12 — Challenges & Solutions",
+  "link": "https://medium.com/walmartglobaltech/migrating-a-1m-users-app-to-android-12-challenges-solutions-cfc00b0e36b3",
+  "tags": [
+    "modern-android-development"
+  ]
+}

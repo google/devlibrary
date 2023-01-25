@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "abhineshchandra1234"
+  ],
+  "owner": "abhineshchandra1234",
+  "repo": "ViewModelApp",
+  "name": "ViewModelApp",
+  "shortDescription": "This project explains with a simple example of how to implement the view model in kotlin",
+  "longDescription": "This project explains with a simple example of how to implement the view model in kotlin",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "ui"
+  ]
+}

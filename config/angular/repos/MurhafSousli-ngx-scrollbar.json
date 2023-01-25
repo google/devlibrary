@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "murhafsousli"
+  ],
+  "owner": "MurhafSousli",
+  "repo": "ngx-scrollbar",
+  "name": "Angular Scrollbar",
+  "shortDescription": "Custom overlay-scrollbars with native scrolling mechanism, it also provides a cross-browser smooth scroll directives.",
+  "longDescription": "Custom overlay-scrollbars with native scrolling mechanism, it also provides a cross-browser smooth scroll directives.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "components",
+    "libraries",
+    "demos"
+  ]
+}

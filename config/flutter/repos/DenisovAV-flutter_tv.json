@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": ["denisovav"],
+  "owner": "DenisovAV",
+  "repo": "flutter_tv",
+  "name": "Flutter TV",
+  "shortDescription": "A new Flutter for TV project.",
+  "longDescription": "A new Flutter for TV project.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}

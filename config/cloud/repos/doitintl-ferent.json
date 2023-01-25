@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "joshuafox"
+  ],
+  "owner": "doitintl",
+  "repo": "ferent",
+  "name": "Ferent",
+  "shortDescription": "A Clojure library to calculate metrics  of dependency between projects.",
+  "longDescription": "A Clojure library to calculate metrics  of dependency between projects.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "operations"
+  ]
+}

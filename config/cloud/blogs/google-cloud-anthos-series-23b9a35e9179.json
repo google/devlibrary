@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["pushkarbk"],
+  "authorIds": [
+    "pushkarbk"
+  ],
   "author": "Pushkar Kothavade",
   "title": "Google Cloud Anthos Series –– Part 1",
   "link": "https://medium.com/google-cloud/google-cloud-anthos-series-23b9a35e9179",
