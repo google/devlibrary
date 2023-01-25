@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "immadisairaj"
+  ],
+  "author": "Sai Rajendra Immadi",
+  "title": "GitHub Actions to deploy Flutter Web to gh-pages",
+  "link": "https://www.immadisairaj.dev/blog/2022/github-actions-for-flutter-web/",
+  "tags": [
+    "web"
+  ]
+}

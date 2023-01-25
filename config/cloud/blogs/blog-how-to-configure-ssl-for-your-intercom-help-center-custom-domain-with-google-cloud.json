@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "cameronhenneke"
+  ],
+  "author": "Cameron Henneke",
+  "title": "How to configure SSL for your Intercom Help Center custom domain with Google Cloud | GQueues",
+  "link": "https://www.gqueues.com/blog/how-to-configure-ssl-for-your-intercom-help-center-custom-domain-with-google-cloud",
+  "tags": [
+    "networking"
+  ]
+}

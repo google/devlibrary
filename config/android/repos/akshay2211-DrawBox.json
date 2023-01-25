@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akshay2211"
+  ],
+  "owner": "akshay2211",
+  "repo": "DrawBox",
+  "name": "DrawBox",
+  "shortDescription": "DrawBox is a multi-purpose tool to draw anything on canvas, written completely on jetpack compose.",
+  "longDescription": "DrawBox is a multi-purpose tool to draw anything on canvas, written completely on jetpack compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "foxanna"
+  ],
+  "author": "Anna Leushchenko",
+  "title": "DartPad Workshops",
+  "link": "https://dartpad.dev/workshops.html?webserver=https://raw.githubusercontent.com/foxanna/flutter_theme_workshop/main/workshop",
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "mchaphalkar"
+  ],
+  "author": "Mandar Chaphalkar",
+  "title": "Simplify data lake management : with Dataplex (1)",
+  "link": "https://medium.com/@mchaphalkar/accelerate-data-lake-implementations-with-dataplex-1-920088c36b62",
+  "tags": [
+    "data-analytics"
+  ]
+}

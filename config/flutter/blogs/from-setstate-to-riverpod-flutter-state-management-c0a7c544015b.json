@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rohit-ra-2020"
+  ],
+  "author": "Rohit Ranjan",
+  "title": "From SetState to Riverpod: Flutter state management",
+  "link": "https://medium.com/dsc-ghrce/from-setstate-to-riverpod-flutter-state-management-c0a7c544015b",
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ]
+}

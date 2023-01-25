@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "anchitn_19522"
+  ],
+  "author": "Anchit Nishant",
+  "title": "Step by Step guide to use Anthos Service Mesh with GKE clusters.",
+  "link": "https://medium.com/google-cloud/google-cloud-anthos-series-part4-e23172b61ec9",
+  "tags": [
+    "containers",
+    "operations",
+    "management-tools"
+  ]
+}

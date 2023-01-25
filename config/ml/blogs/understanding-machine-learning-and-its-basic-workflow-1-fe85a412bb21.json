@@ -1,0 +1,21 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "gateremark"
+  ],
+  "author": "Mark Gatere",
+  "title": "Understanding Machine Learning and its Basic WorkFlow",
+  "link": "https://gateremark.medium.com/understanding-machine-learning-and-its-basic-workflow-1-fe85a412bb21",
+  "tags": [
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web",
+    "theory"
+  ]
+}

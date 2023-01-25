@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "push-based"
+  ],
+  "owner": "push-based",
+  "repo": "user-flow",
+  "name": "user-flow cli",
+  "shortDescription": "This is a library & CLI to organize and run lighthouse user flows in an organized and scalable way 🛸 with CI automation in place",
+  "longDescription": "This is a library & CLI to organize and run lighthouse user flows in an organized and scalable way 🛸 with CI automation in place",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "performance",
+    "libraries"
+  ]
+}

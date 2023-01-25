@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sbis04"
+  ],
+  "author": "Souvik Biswas",
+  "title": "Building a Chrome Extension using Flutter",
+  "link": "https://medium.com/flutter-community/building-a-chrome-extension-using-flutter-aeb100a6d6c",
+  "tags": [
+    "web",
+    "widgets",
+    "samples"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "holtskinner"
+  ],
+  "author": "Holt Skinner",
+  "title": "Automating income taxes with Document AI",
+  "link": "https://cloud.google.com/blog/topics/developers-practitioners/automating-income-taxes-document-ai",
+  "tags": [
+    "ai-ml"
+  ]
+}

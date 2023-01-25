@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "tomastrajan"
+  ],
+  "author": "Tomas Trajan",
+  "title": "Total guide to custom Angular schematics",
+  "link": "https://tomastrajan.medium.com/total-guide-to-custom-angular-schematics-5c50cf90cdb4?sk=bbdf9ca962651fecd356e98daa5f76a6",
+  "tags": [
+    "libraries"
+  ]
+}

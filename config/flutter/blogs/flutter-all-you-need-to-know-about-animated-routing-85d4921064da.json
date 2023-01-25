@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "avnishnishad"
+  ],
+  "author": "Avnish Nishad",
+  "title": "Flutter: All you need to know about Animated Routing.",
+  "link": "https://medium.com/@avnishnishad/flutter-all-you-need-to-know-about-animated-routing-85d4921064da",
+  "tags": [
+    "widgets",
+    "mobile",
+    "samples"
+  ]
+}

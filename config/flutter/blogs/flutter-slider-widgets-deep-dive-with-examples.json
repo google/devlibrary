@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "sbis04"
+  ],
+  "author": "Souvik Biswas",
+  "title": "Flutter Slider widgets: A deep dive with examples - LogRocket Blog",
+  "link": "https://blog.logrocket.com/flutter-slider-widgets-deep-dive-with-examples/",
+  "tags": [
+    "widgets",
+    "samples"
+  ]
+}

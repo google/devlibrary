@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "takrutvik"
+  ],
+  "author": "Rutvik Tak",
+  "title": "Firebase Security rules : Everything you need to know to get started",
+  "link": "https://levelup.gitconnected.com/firebase-security-rules-everything-you-need-to-know-to-get-started-c6218bce5e69",
+  "tags": [
+    "android",
+    "ios",
+    "flutter"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "zaninihugo"
+  ],
+  "author": "Hugo Zanini",
+  "title": "Real-time SKU detection in the browser using TensorFlow.js",
+  "link": "https://blog.tensorflow.org/2022/05/real-time-sku-detection-in-browser.html",
+  "tags": [
+    "tfjs",
+    "vision",
+    "industrial"
+  ]
+}

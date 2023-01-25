@@ -46,6 +46,7 @@ import { Component, Vue } from "vue-property-decorator";
 import MaterialButton from "@/components/MaterialButton.vue";
 
 import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
+import { conversionEvent } from "@/plugins/gtag";
 
 @Component({
   components: {
@@ -67,8 +68,11 @@ export default class SubmitDialog extends Vue {
 
   goToForm() {
     this.show = false;
-    window.location.href =
-      "https://devlibrary.advocu.com/home/applications/form";
+    conversionEvent("submit");
+    window.open(
+      "https://devlibrary.advocu.com/home/applications/form",
+      "_blank"
+    );
   }
 }
 </script>

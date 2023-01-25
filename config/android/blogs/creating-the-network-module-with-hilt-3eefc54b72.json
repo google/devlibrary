@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "priyansh-kedia"
+  ],
+  "author": "Priyansh Kedia",
+  "title": "Creating a Network Module with Hilt",
+  "link": "https://medium.com/codex/creating-the-network-module-with-hilt-3eefc54b72",
+  "tags": [
+    "architecture",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

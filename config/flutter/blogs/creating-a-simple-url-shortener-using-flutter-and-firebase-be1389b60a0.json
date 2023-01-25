@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "tamilkannancv"
+  ],
+  "author": "Tamil Kannan C V",
+  "title": "Creating a simple URL shortener using Flutter and Firebase",
+  "link": "https://tamilkannancv.medium.com/creating-a-simple-url-shortener-using-flutter-and-firebase-be1389b60a0",
+  "tags": [
+    "firebase",
+    "web",
+    "plugins"
+  ]
+}

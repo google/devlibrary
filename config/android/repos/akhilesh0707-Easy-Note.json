@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akhilesh0707"
+  ],
+  "owner": "akhilesh0707",
+  "repo": "Easy-Note",
+  "name": "Easy-Note",
+  "shortDescription": "Easy Note: Notes app using JetPack Compose and MVVM with a clean architecture approach.\n\nThis app shows the usage of the new Navigation Architecture Component in collaboration with the Jetpack Compose.",
+  "longDescription": "Easy Note: Notes app using JetPack Compose and MVVM with a clean architecture approach.\n\nThis app shows the usage of the new Navigation Architecture Component in collaboration with the Jetpack Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

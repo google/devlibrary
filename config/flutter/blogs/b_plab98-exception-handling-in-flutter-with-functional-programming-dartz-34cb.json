@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "biplabdutta"
+  ],
+  "author": "Biplab Dutta",
+  "title": "Exception Handling in Flutter with Functional Programming (Either type)",
+  "link": "https://dev.to/b_plab98/exception-handling-in-flutter-with-functional-programming-dartz-34cb",
+  "tags": [
+    "mobile",
+    "general",
+    "widgets"
+  ]
+}

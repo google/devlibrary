@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "abhishekdoshi"
+  ],
+  "author": "Abhishek Doshi",
+  "title": "Roadmap to learn Flutter like a pro!",
+  "link": "https://medium.com/google-developer-experts/roadmap-to-learn-flutter-like-a-pro-594f5c38e74a",
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}

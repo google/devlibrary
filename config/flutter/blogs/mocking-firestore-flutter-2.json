@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "victoreronmosele"
+  ],
+  "author": "Victor Eronmosele",
+  "title": "Mocking and Testing Firestore Operations in Flutter Unit Tests | Part 2 (Transactions and Batched Writes)",
+  "link": "https://blog.victoreronmosele.com/mocking-firestore-flutter-2",
+  "tags": [
+    "firebase",
+    "mobile"
+  ]
+}

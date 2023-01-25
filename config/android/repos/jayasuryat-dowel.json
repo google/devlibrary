@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jayasuryat"
+  ],
+  "owner": "jayasuryat",
+  "repo": "dowel",
+  "name": "Dowel",
+  "shortDescription": "A Kotlin Symbol Processor to generate Compose PreviewParameterProviders.",
+  "longDescription": "A Kotlin Symbol Processor to generate Compose PreviewParameterProviders.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin"
+  ]
+}

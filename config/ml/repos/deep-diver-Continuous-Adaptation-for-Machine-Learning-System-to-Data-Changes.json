@@ -1,0 +1,25 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "deep-diver"
+  ],
+  "owner": "deep-diver",
+  "repo": "Continuous-Adaptation-for-Machine-Learning-System-to-Data-Changes",
+  "name": "Continuous Adaptation for Machine Learning System",
+  "shortDescription": "MLOps system evolves according to the changes of the world, and that is usually caused by data/concept drift. This project shows how to combine two separate pipelines, one for batch prediction and the",
+  "longDescription": "MLOps system evolves according to the changes of the world, and that is usually caused by data/concept drift. This project shows how to combine two separate pipelines, one for batch prediction and the",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web",
+    "theory"
+  ]
+}

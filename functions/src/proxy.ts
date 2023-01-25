@@ -60,14 +60,18 @@ export const queryProxy = functions
     }
 
     // The "path" param is the collection to query
-    const path = req.query.path as string;
+    let path = req.query.path as string;
+    path = path
+      .replace(/[&]/g, "&amp;")
+      .replace(/[<]/g, "&lt;")
+      .replace(/[>]/g, "&gt;");
     if (!path) {
       res.status(400).send('Parameter "path" is required');
       return;
     }
 
     const qDecoded = JSON.parse(
-      Buffer.from(qEncoded, "base64").toString("ascii")
+      Buffer.from(qEncoded, "base64").toString("utf-8")
     ) as FirestoreQuery;
 
     // Log out the query
@@ -150,7 +154,7 @@ function diagnoseMissingDocument(path: string) {
       const id = segments[3];
       if (segments.length > 4) {
         const page = segments[5];
-        const pageDecoded = Buffer.from(page, "base64").toString("ascii");
+        const pageDecoded = Buffer.from(page, "base64").toString("utf-8");
         return `Could not find page "${pageDecoded}" on ${product} repo ${id}`;
       } else {
         return `Could not find ${product} repo ${id}`;
@@ -168,7 +172,11 @@ export const docProxy = functions.https.onRequest(async (req, res) => {
   // Cache at browser for 10 minutes (600s) and on CDN for 12 hours (43200s)
   res.set("Cache-Control", "public, max-age=600, s-maxage=43200");
 
-  const path = req.query.path as string;
+  let path = req.query.path as string;
+  path = path
+    .replace(/[&]/g, "&amp;")
+    .replace(/[<]/g, "&lt;")
+    .replace(/[>]/g, "&gt;");
   if (!path) {
     res.status(400).send('Parameter "path" is required');
     return;

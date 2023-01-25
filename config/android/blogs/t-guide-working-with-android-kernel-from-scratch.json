@@ -1,0 +1,12 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["theimpulson"],
+  "author": "Aayush Gupta",
+  "title": "[GUIDE]Working with Android Kernel from Scratch",
+  "link": "https://forum.xda-developers.com/t/guide-working-with-android-kernel-from-scratch.3909887/",
+  "tags": [
+    "build-tools"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "gursimar27"
+  ],
+  "author": "Gursimar Singh",
+  "title": "Terraform Module for Kubernetes Cluster with Google Anthos",
+  "link": "https://faun.pub/terraform-module-for-kubernetes-cluster-with-google-anthos-5f714ca3e6ff",
+  "tags": [
+    "containers",
+    "developer-tools",
+    "hybrid-multicloud"
+  ]
+}

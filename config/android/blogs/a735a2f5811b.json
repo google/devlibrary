@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "surajsau"
+  ],
+  "author": "Suraj Kumar Sau",
+  "title": "Parallax Effect with SensorManager using Jetpack Compose",
+  "link": "https://medium.com/p/a735a2f5811b",
+  "tags": [
+    "compose",
+    "ui",
+    "modern-android-development"
+  ]
+}

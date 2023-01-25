@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "anchitn_19522"
+  ],
+  "author": "Anchit Nishant",
+  "title": "A step by step hands-on guide to use Anthos Config Management.",
+  "link": "https://medium.com/google-cloud/google-cloud-anthos-series-part5-a17ce89ddc7a",
+  "tags": [
+    "containers",
+    "developer-tools",
+    "operations"
+  ]
+}

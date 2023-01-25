@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "yashdeepkumar"
+  ],
+  "author": "Yashdeep Kumar",
+  "title": "Custom Predict Routines in Vertex AI",
+  "link": "https://blog.thecloudside.com/custom-predict-routines-in-vertex-ai-46a7473c95db",
+  "tags": [
+    "ai-ml"
+  ]
+}

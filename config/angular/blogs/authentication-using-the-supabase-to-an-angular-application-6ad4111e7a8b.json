@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rodrigokamada"
+  ],
+  "author": "Rodrigo Kamada",
+  "title": "Authentication using the Supabase to an Angular application",
+  "link": "https://rodrigokamada.medium.com/authentication-using-the-supabase-to-an-angular-application-6ad4111e7a8b",
+  "tags": [
+    "demos"
+  ]
+}

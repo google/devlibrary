@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "foxanna"
+  ],
+  "author": "Anna Leushchenko",
+  "title": "Yet another localization approach in Flutter",
+  "link": "https://medium.com/flutter-community/yet-another-localization-approach-in-flutter-477cf058ba41",
+  "tags": [
+    "mobile",
+    "samples",
+    "general"
+  ]
+}

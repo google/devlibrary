@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "snehpandya"
+  ],
+  "author": "Sneh Pandya",
+  "title": "Performance improvements for mobile apps in Flutter - LogRocket Blog",
+  "link": "https://blog.logrocket.com/performance-improvements-mobile-apps-flutter/",
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ]
+}

@@ -14,21 +14,22 @@
  * limitations under the License.
  */
 import * as fs from "fs";
-import * as path from "path";
 import fetch from "node-fetch";
 import ogs from "open-graph-scraper";
+import * as path from "path";
 import { URL } from "url";
 
-import {
-  normalizeAuthorId,
-  addGithubAuthor,
-  addMediumAuthor,
-  getMediumPostAuthor,
-  authorExists,
-} from "./addauthor";
-import { writeOrUpdateJSON, getConfigDir } from "./util";
 import { BlogMetadata } from "../types/BlogMetadata";
 import { RepoMetadata } from "../types/RepoMetadata";
+
+import {
+  addGithubAuthor,
+  addMediumAuthor,
+  authorExists,
+  getMediumPostAuthor,
+  normalizeAuthorId,
+} from "./addauthor";
+import { getConfigDir, writeOrUpdateJSON } from "./util";
 
 /**
  * @returns {Promise<string>} the project ID

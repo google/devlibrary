@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sayannath"
+  ],
+  "owner": "sayannath",
+  "repo": "Blood-Cell-Detection-TFOD-2.0",
+  "name": "Blood-Cell-Detection-TFOD-2.0",
+  "shortDescription": "This project demonstrates the use of TensorFlow Object Detection API to automatically detect Red Blood Cells (RBCs), White Blood Cells (WBCs), and Platelets in each image taken via microscopic images.",
+  "longDescription": "This project demonstrates the use of TensorFlow Object Detection API to automatically detect Red Blood Cells (RBCs), White Blood Cells (WBCs), and Platelets in each image taken via microscopic images.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "vision",
+    "tf",
+    "health"
+  ]
+}

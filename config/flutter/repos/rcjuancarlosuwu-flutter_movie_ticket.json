@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rcjuancarlosuwu"
+  ],
+  "owner": "rcjuancarlosuwu",
+  "repo": "flutter_movie_ticket",
+  "name": "Movie Tickets App",
+  "shortDescription": "Flutter Movie Ticket App with implicit and explicit animations and complex custom painter animation.",
+  "longDescription": "Flutter Movie Ticket App with implicit and explicit animations and complex custom painter animation.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ]
+}

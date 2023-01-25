@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "kasem-sm"
+  ],
+  "author": "Kasem SM",
+  "title": "Animated Placeholder with Jetpack Compose.",
+  "link": "https://proandroiddev.com/animated-placeholder-with-jetpack-compose-60c85547b47a",
+  "tags": [
+    "kotlin",
+    "compose",
+    "ui"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "yash-garg"
+  ],
+  "owner": "Yash-Garg",
+  "repo": "AppCheck",
+  "name": "AppCheck - Package Availability",
+  "shortDescription": "A Flutter plugin that allows you to check if an app is installed/enabled, launch an app and get the list of installed apps.",
+  "longDescription": "A Flutter plugin that allows you to check if an app is installed/enabled, launch an app and get the list of installed apps.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "general",
+    "plugins",
+    "mobile"
+  ]
+}

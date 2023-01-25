@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "androidpoet"
+  ],
+  "owner": "AndroidPoet",
+  "repo": "Dropdown",
+  "name": "Dropdown",
+  "shortDescription": "A customizable jetpack compose dropdown menu with cascade and animations",
+  "longDescription": "A customizable jetpack compose dropdown menu with cascade and animations",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

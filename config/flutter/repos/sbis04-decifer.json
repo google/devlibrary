@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sbis04"
+  ],
+  "owner": "sbis04",
+  "repo": "decifer",
+  "name": "Decifer",
+  "shortDescription": "A cross-platform mobile app that helps you to generate transcripts either from a voice recording or by uploading an audio file. The project uses a totally serverless architecture.",
+  "longDescription": "A cross-platform mobile app that helps you to generate transcripts either from a voice recording or by uploading an audio file. The project uses a totally serverless architecture.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "firebase"
+  ]
+}

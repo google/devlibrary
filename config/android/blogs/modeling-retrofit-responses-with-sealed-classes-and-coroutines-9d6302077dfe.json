@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "skydoves"
+  ],
+  "author": "Jaewoong Eum",
+  "title": "Modeling Retrofit Responses With Sealed Classes and Coroutines",
+  "link": "https://skydoves.medium.com/modeling-retrofit-responses-with-sealed-classes-and-coroutines-9d6302077dfe",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "architecture"
+  ]
+}

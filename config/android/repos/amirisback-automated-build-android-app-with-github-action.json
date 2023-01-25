@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "amirisback"
+  ],
+  "owner": "amirisback",
+  "repo": "automated-build-android-app-with-github-action",
+  "name": "automated-build-android-app-with-github",
+  "shortDescription": "Project Github Action Script YAML\nUsing Github Workflows\nAutomated Build AAB (release)\nAutomated Build APK (release and debug)\nClear (Articfact naming)",
+  "longDescription": "Project Github Action Script YAML\nUsing Github Workflows\nAutomated Build AAB (release)\nAutomated Build APK (release and debug)\nClear (Articfact naming)",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools"
+  ]
+}

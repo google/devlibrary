@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "qamarelsafadi"
+  ],
+  "owner": "qamarelsafadi",
+  "repo": "ComposableWidgets",
+  "name": "ComposableWidgets",
+  "shortDescription": "This repo will contains all compose widgets that might help any android developer need to learn Comopoes,  hope it can help them start doing their own one with a simple, short code",
+  "longDescription": "This repo will contains all compose widgets that might help any android developer need to learn Comopoes,  hope it can help them start doing their own one with a simple, short code",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "compose",
+    "modern-android-development"
+  ]
+}

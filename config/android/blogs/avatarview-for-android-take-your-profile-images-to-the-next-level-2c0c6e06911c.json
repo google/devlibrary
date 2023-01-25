@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "skydoves"
+  ],
+  "author": "Jaewoong Eum",
+  "title": "Stream recently announced the open-source AvatarView for Android library so you can easily create and customize your own stylish profile image.",
+  "link": "https://medium.com/proandroiddev/avatarview-for-android-take-your-profile-images-to-the-next-level-2c0c6e06911c",
+  "tags": [
+    "ui"
+  ]
+}

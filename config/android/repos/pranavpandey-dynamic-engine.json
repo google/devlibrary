@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pranavpandey"
+  ],
+  "owner": "pranavpandey",
+  "repo": "dynamic-engine",
+  "name": "Dynamic Engine",
+  "shortDescription": "A collection of tasks to monitor various events including call, lock, headset, charging, dock and foreground app via service on Android 2.3 (API 9) and above.",
+  "longDescription": "A collection of tasks to monitor various events including call, lock, headset, charging, dock and foreground app via service on Android 2.3 (API 9) and above.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "build-tools"
+  ]
+}

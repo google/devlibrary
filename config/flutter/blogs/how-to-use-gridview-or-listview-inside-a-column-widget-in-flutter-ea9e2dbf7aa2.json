@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rgtechno"
+  ],
+  "author": "Rahul Gandhi",
+  "title": "How to use gridview or listview inside a column widget in Flutter?",
+  "link": "https://rgtechno.medium.com/how-to-use-gridview-or-listview-inside-a-column-widget-in-flutter-ea9e2dbf7aa2",
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ]
+}

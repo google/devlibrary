@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bbariskilic"
+  ],
+  "owner": "BBarisKilic",
+  "repo": "Animated-SVG",
+  "name": "Animated-SVG",
+  "shortDescription": "Flutter package for displaying and animating Scalable Vector Graphics 1.1 files. The package has been written solely in Dart Language.",
+  "longDescription": "Flutter package for displaying and animating Scalable Vector Graphics 1.1 files. The package has been written solely in Dart Language.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "general"
+  ]
+}

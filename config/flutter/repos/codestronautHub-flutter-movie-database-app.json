@@ -1,8 +1,9 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "github",
-  "authorIds": [],
-  "owner": "codestronautHub",
+  "authorIds": ["codestronaut"],
+  "owner": "codestronaut",
   "repo": "flutter-movie-database-app",
   "name": "Flutter Movie Database",
   "shortDescription": "Movie Database app is a Flutter app project that allows users to search for a movie or tv series, see the detail, season & episode, and save watchlist.",

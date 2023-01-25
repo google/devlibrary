@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "eng-mouaz-m-alshahmeh"
+  ],
+  "owner": "Eng-Mouaz-M-AlShahmeh",
+  "repo": "bomber_man_flutter_game",
+  "name": "Bomber Man Flutter Game",
+  "shortDescription": "Bomber Man Flutter Game was coded as famous game which put bomb to break boxes.",
+  "longDescription": "Bomber Man Flutter Game was coded as famous game which put bomb to break boxes.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": ["ngneat"],
+  "owner": "ngneat",
+  "repo": "hot-toast",
+  "name": "@ngneat/hot-toast",
+  "shortDescription": "Smoking hot Notifications for Angular. Lightweight, customizable and beautiful by default.",
+  "longDescription": "Smoking hot Notifications for Angular. Lightweight, customizable and beautiful by default.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

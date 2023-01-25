@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "gauravmadan"
+  ],
+  "author": "Gaurav Madan",
+  "title": "Enabling NetOps with GCP Network Topology",
+  "link": "https://medium.com/google-cloud/enabling-netops-with-gcp-network-topology-39bd49a66a98",
+  "tags": [
+    "networking",
+    "developer-tools"
+  ]
+}

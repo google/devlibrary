@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kojofosu"
+  ],
+  "owner": "kojofosu",
+  "repo": "TwitterApiKit",
+  "name": "TwitterApiKit",
+  "shortDescription": "Twitter's API v2 Objectified. This will save you time from creating data objects to access twitter's API v2. This library is supported on Gradle, Maven, Java, Kotlin, and Android projects.",
+  "longDescription": "Twitter's API v2 Objectified. This will save you time from creating data objects to access twitter's API v2. This library is supported on Gradle, Maven, Java, Kotlin, and Android projects.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools",
+    "kotlin"
+  ]
+}

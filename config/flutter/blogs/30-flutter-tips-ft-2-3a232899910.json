@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["lakshydeep-14"],
+  "author": "Lakshydeep Vikram Sah",
+  "title": "Messaging With Firebase In Flutter",
+  "link": "https://lakshydeep-14.medium.com/30-flutter-tips-ft-2-3a232899910",
+  "tags": [
+    "mobile",
+    "firebase",
+    "samples"
+  ]
+}

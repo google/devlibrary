@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "foxanna"
+  ],
+  "owner": "foxanna",
+  "repo": "flutter_advanced_networking",
+  "name": "Basic and advanced networking in Dart and Flutter",
+  "shortDescription": "Flutter mobile application that displays a list of comics obtained from Marvel Comic API.",
+  "longDescription": "Flutter mobile application that displays a list of comics obtained from Marvel Comic API.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "general",
+    "samples"
+  ]
+}

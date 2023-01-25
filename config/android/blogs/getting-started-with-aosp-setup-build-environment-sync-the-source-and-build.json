@@ -1,0 +1,13 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["sarthakroy2002"],
+  "author": "Sarthak Roy",
+  "title": "Getting Started with AOSP:\nSetup build environment, Sync the source and Build",
+  "link": "https://sarthakroy2002.hashnode.dev/getting-started-with-aosp-setup-build-environment-sync-the-source-and-build",
+  "tags": [
+    "modern-android-development",
+    "build-tools"
+  ]
+}

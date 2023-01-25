@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "wasabeef"
+  ],
+  "owner": "wasabeef",
+  "repo": "version_gen",
+  "name": "VersionGen",
+  "shortDescription": "The Dart code generator for your package versions.\nThere is no way to get the package version from the code in the Dart ecosystem.",
+  "longDescription": "The Dart code generator for your package versions.\nThere is no way to get the package version from the code in the Dart ecosystem.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "plugins"
+  ]
+}

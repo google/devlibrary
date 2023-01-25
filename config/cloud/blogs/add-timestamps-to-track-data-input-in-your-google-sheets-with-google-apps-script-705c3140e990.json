@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aryanirani123"
+  ],
+  "author": "Aryan Iran",
+  "title": "Add Timestamps to track data input in Google Sheets using Google Apps Script",
+  "link": "https://aryanirani123.medium.com/add-timestamps-to-track-data-input-in-your-google-sheets-with-google-apps-script-705c3140e990",
+  "tags": [
+    "developer-tools"
+  ]
+}

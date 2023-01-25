@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "shreebhagwat94"
+  ],
+  "author": "Shree Bhagwat",
+  "title": "Multi-Themes Using Riverpod InFlutter",
+  "link": "https://medium.com/@shreebhagwat94/multi-themes-using-riverpod-in-flutter-4ec5e3dbf256",
+  "tags": [
+    "widgets",
+    "mobile",
+    "general"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "capps096github"
+  ],
+  "owner": "capps096github",
+  "repo": "cupertino_icons_gallery",
+  "name": "Cupertino Icons Gallery",
+  "shortDescription": "Cupertino Icons Gallery is an Open-Source  Cross-Platform Home of over 1,335 Cupertino Icons used in Flutter.",
+  "longDescription": "Cupertino Icons Gallery is an Open-Source  Cross-Platform Home of over 1,335 Cupertino Icons used in Flutter.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "web",
+    "mobile"
+  ]
+}

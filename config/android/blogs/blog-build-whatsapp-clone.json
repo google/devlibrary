@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "skydoves"
+  ],
+  "author": "Jaewoong Eum",
+  "title": "Build a Whatsapp Clone for Android w/ Compose",
+  "link": "https://getstream.io/blog/build-whatsapp-clone/",
+  "tags": [
+    "compose",
+    "architecture",
+    "modern-android-development"
+  ]
+}

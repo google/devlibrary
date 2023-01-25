@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "murhafsousli"
+  ],
+  "owner": "MurhafSousli",
+  "repo": "ngx-sharebuttons",
+  "name": "Angular Share Buttons",
+  "shortDescription": "+15 share buttons for Angular",
+  "longDescription": "+15 share buttons for Angular",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

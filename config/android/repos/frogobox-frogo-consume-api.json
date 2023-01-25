@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "amirisback"
+  ],
+  "owner": "frogobox",
+  "repo": "frogo-consume-api",
+  "name": "frogo-consume-api",
+  "shortDescription": "Simple dummy data from famous API",
+  "longDescription": "Simple dummy data from famous API",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "ui",
+    "modern-android-development"
+  ]
+}

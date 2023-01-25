@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "getstream"
+  ],
+  "owner": "GetStream",
+  "repo": "sketchbook-compose",
+  "name": "sketchbook-compose",
+  "shortDescription": "Jetpack Compose canvas library that helps you to draw paths and images on canvas with color pickers and palettes.",
+  "longDescription": "Jetpack Compose canvas library that helps you to draw paths and images on canvas with color pickers and palettes.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui"
+  ]
+}

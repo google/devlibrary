@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "immovabledev"
+  ],
+  "author": "Nilesh Senta",
+  "title": "Flutter Resolution Aware Image Assets",
+  "link": "https://immovabledev.medium.com/flutter-resolution-aware-image-assets-234c82216cef",
+  "tags": [
+    "mobile",
+    "general",
+    "samples"
+  ]
+}

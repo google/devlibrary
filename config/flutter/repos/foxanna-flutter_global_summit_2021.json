@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "foxanna"
+  ],
+  "owner": "foxanna",
+  "repo": "flutter_global_summit_2021",
+  "name": "Yet another localization approach in Flutter",
+  "shortDescription": "Mobile application that displays the schedule of the Flutter Global Summit Vol.2 conference that was held on December 08-09, 2021. It shows how Flutter applications can be localized with i69n package.",
+  "longDescription": "Mobile application that displays the schedule of the Flutter Global Summit Vol.2 conference that was held on December 08-09, 2021. It shows how Flutter applications can be localized with i69n package.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "general",
+    "samples"
+  ]
+}

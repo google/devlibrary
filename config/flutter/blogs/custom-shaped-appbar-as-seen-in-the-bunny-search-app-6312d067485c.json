@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "daria"
+  ],
+  "author": "Daria Orlova",
+  "title": "Custom-shaped AppBar as seen in the “Bunny Search” app",
+  "link": "https://medium.com/flutter-community/custom-shaped-appbar-as-seen-in-the-bunny-search-app-6312d067485c",
+  "tags": [
+    "widgets",
+    "mobile",
+    "samples"
+  ]
+}

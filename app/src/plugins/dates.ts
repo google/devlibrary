@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 export function renderDaysAgo(lastUpdated: number) {
@@ -31,7 +30,7 @@ export function renderDaysAgo(lastUpdated: number) {
     const lastUpdatedDate = new Date(lastUpdated);
     let monthsAgo = (now.getFullYear() - lastUpdatedDate.getFullYear()) * 12;
     monthsAgo = monthsAgo + now.getMonth() - lastUpdatedDate.getMonth();
-    return `${monthsAgo} month${monthsAgo === 1 ? '' : 's'} ago`;
+    return `${monthsAgo} month${monthsAgo === 1 ? "" : "s"} ago`;
   } else {
     return `${daysAgo} days ago`;
   }

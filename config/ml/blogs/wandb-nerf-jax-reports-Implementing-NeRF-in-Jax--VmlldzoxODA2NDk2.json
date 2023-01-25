@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "soumik12345"
+  ],
+  "author": "Soumik Rakshit",
+  "title": "Implementing NeRF in JAX",
+  "link": "https://wandb.ai/wandb/nerf-jax/reports/Implementing-NeRF-in-Jax--VmlldzoxODA2NDk2",
+  "tags": [
+    "vision",
+    "game",
+    "ar"
+  ]
+}

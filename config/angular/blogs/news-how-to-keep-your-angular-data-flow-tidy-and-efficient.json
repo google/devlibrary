@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "gatwirival"
+  ],
+  "author": "Valentine Gatwiri",
+  "title": "How to Keep your Angular Data-Flow Tidy and Efficient",
+  "link": "https://www.freecodecamp.org/news/how-to-keep-your-angular-data-flow-tidy-and-efficient/",
+  "tags": [
+    "performance"
+  ]
+}

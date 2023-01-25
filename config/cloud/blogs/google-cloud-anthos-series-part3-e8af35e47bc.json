@@ -1,7 +1,8 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": [],
+  "authorIds": ["pushkarbk"],
   "author": "Pushkar Kothavade",
   "title": "AGoogle Cloud Anthos series – Part 3",
   "link": "https://medium.com/google-cloud/google-cloud-anthos-series-part3-e8af35e47bc",

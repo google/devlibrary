@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "gatwirival"
+  ],
+  "author": "Valentine Gatwiri",
+  "title": "Introduction to Google Cloud",
+  "link": "https://gatwirival.medium.com/introduction-to-google-cloud-platform-887e0d217d4b",
+  "tags": [
+    "compute"
+  ]
+}

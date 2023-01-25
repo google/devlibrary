@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ganeshajdivekar"
+  ],
+  "author": "Ganesh Divekar",
+  "title": "Exception handling in Kotlin Coroutines",
+  "link": "https://ganeshajdivekar.medium.com/exception-handling-in-kotlin-coroutines-b08c095ddea0",
+  "tags": [
+    "kotlin"
+  ]
+}

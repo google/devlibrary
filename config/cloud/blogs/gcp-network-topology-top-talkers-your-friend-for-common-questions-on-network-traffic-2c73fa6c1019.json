@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["gauravmadan"],
+  "author": "Gaurav Madan",
+  "title": "GCP Network Topology “Top Talkers” : Your friend for common questions on Network Traffic",
+  "link": "https://medium.com/google-cloud/gcp-network-topology-top-talkers-your-friend-for-common-questions-on-network-traffic-2c73fa6c1019",
+  "tags": [
+    "networking",
+    "operations",
+    "management-tools"
+  ]
+}

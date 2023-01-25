@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "shivamgupta007"
+  ],
+  "author": "shivam gupta",
+  "title": "How to implement Android App links in your android project?",
+  "link": "https://medium.com/@shivamgupta007/how-to-implement-android-app-links-in-your-android-project-b6eaac6524ad",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "skydoves"
+  ],
+  "author": "Jaewoong Eum",
+  "title": "Exploring Google’s Now in Android Open-Source Project",
+  "link": "https://medium.com/proandroiddev/exploring-googles-now-in-android-open-source-project-83be43a0a44c",
+  "tags": [
+    "modern-android-development",
+    "compose",
+    "architecture"
+  ]
+}

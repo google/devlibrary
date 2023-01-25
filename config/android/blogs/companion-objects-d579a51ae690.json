@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "abhineshchandra1234"
+  ],
+  "author": "abhinesh chandra",
+  "title": "companion objects in kotlin",
+  "link": "https://medium.com/@abhineshchandra1234/companion-objects-d579a51ae690",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}

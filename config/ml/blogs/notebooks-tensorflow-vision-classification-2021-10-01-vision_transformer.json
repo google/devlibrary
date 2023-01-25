@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "bachiirc"
+  ],
+  "author": "Bachir Chihani",
+  "title": "Vision Transformer in TensorFlow",
+  "link": "https://dzlab.github.io/notebooks/tensorflow/vision/classification/2021/10/01/vision_transformer.html",
+  "tags": [
+    "vision"
+  ]
+}

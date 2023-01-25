@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["fost"],
+  "authorIds": [
+    "fost"
+  ],
   "owner": "positive-js",
   "repo": "mosaic",
   "name": "Mosaic",

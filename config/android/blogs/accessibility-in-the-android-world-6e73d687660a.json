@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["navczydev"],
+  "authorIds": [
+    "navczydev"
+  ],
   "author": "Nav Singh",
   "title": "Accessibility in the Android world",
   "link": "https://proandroiddev.com/accessibility-in-the-android-world-6e73d687660a#584c-397790401271",

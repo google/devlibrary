@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "markostanimirovic"
+  ],
+  "author": "Marko Stanimirović",
+  "title": "Using NgRx Packages with Standalone Angular Features",
+  "link": "https://dev.to/ngrx/using-ngrx-packages-with-standalone-angular-features-53d8",
+  "tags": [
+    "demos"
+  ]
+}

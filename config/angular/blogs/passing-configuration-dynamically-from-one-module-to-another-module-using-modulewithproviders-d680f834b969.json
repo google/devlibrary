@@ -1,0 +1,14 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "madhub081011"
+  ],
+  "author": "Madhusuthanan B",
+  "title": "Passing configuration dynamically from one module to another module using ModuleWithProviders",
+  "link": "https://medium.com/@madhub081011/passing-configuration-dynamically-from-one-module-to-another-module-using-modulewithproviders-d680f834b969",
+  "tags": [
+    "performance"
+  ]
+}

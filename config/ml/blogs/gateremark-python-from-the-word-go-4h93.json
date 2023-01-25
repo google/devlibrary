@@ -1,0 +1,21 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "gateremark"
+  ],
+  "author": "Mark Gatere",
+  "title": "Python from the word ...Go",
+  "link": "https://dev.to/gateremark/python-from-the-word-go-4h93",
+  "tags": [
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web",
+    "theory"
+  ]
+}

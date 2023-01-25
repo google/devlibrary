@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "vinaygaba"
+  ],
+  "author": "Vinay Gaba",
+  "title": "How can I debug recompositions in Jetpack Compose?",
+  "link": "https://www.jetpackcompose.app/articles/how-can-I-debug-recompositions-in-jetpack-compose",
+  "tags": [
+    "compose",
+    "ui",
+    "modern-android-development"
+  ]
+}

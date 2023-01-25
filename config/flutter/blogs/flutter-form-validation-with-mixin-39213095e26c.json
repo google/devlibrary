@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "surajadkhari"
+  ],
+  "author": "Surat Adhikari",
+  "title": "Flutter: Form Validation with Mixin",
+  "link": "https://medium.com/@surajadkhari/flutter-form-validation-with-mixin-39213095e26c",
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ]
+}

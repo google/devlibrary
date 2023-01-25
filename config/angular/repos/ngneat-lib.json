@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ngneat"
+  ],
+  "owner": "ngneat",
+  "repo": "lib",
+  "name": "ngneat/lib",
+  "shortDescription": "Schematics that wrap the Angular generate library schematics and provide all the standard boilerplate you need in order to create a neat Angular open-source project.",
+  "longDescription": "Schematics that wrap the Angular generate library schematics and provide all the standard boilerplate you need in order to create a neat Angular open-source project.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries",
+    "getting-started"
+  ]
+}

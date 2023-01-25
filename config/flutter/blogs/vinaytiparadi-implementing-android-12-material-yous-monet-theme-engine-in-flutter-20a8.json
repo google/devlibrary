@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "vinaytiparadi"
+  ],
+  "author": "Vinay Tiparadi",
+  "title": "Implementing Android 12 Material You's Monet theme engine in Flutter",
+  "link": "https://dev.to/vinaytiparadi/implementing-android-12-material-yous-monet-theme-engine-in-flutter-20a8",
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ]
+}

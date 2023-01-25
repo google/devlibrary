@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "amanv8060"
+  ],
+  "owner": "amanv8060",
+  "repo": "tic-tac-toe-app",
+  "name": "Tic-Tac-Toe",
+  "shortDescription": "Unbeatable Tic Tac Toe app that showcases sample clean and tested flutter architecture for apps.",
+  "longDescription": "Unbeatable Tic Tac Toe app that showcases sample clean and tested flutter architecture for apps.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "samples",
+    "general"
+  ]
+}

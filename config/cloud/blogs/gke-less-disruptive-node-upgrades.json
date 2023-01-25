@@ -1,7 +1,8 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["tamasr"],
   "author": "tamasr",
   "title": "Use surge upgrades to decrease disruptions from GKE node upgrades",
   "link": "https://cloud.google.com/community/tutorials/gke-less-disruptive-node-upgrades",

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "caixiuji"
+  ],
+  "author": "秀吉 蔡",
+  "title": "Kubernetes (K8S) 基本介紹 | GDSC NYCU ",
+  "link": "https://ytx0605.blogspot.com/2022/06/kubernetes-k8s-gdsc-nycu.html",
+  "tags": [
+    "containers",
+    "management-tools",
+    "networking"
+  ]
+}

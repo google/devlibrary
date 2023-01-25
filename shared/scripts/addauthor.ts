@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-import * as fs from "fs";
-import * as path from "path";
-import fetch from "node-fetch";
 import * as cheerio from "cheerio";
+import * as fs from "fs";
+import fetch from "node-fetch";
 import ogs from "open-graph-scraper";
+import * as path from "path";
 
-import { writeOrUpdateJSON, getConfigDir } from "./util";
+import { getConfigDir, writeOrUpdateJSON } from "./util";
 
 // https://medium.com/@username
 const RE_AUTHOR_AT = /https:\/\/medium\.com\/@([\w]+)/;
@@ -73,29 +73,43 @@ export async function getMediumPostAuthor(
   return extractAuthorFromLink(url);
 }
 
-export async function addMediumAuthor(username: string) {
-  const options = {
-    url: `https://medium.com/@${username}`,
-  };
+async function requestAuthorPage(
+  username: string
+): Promise<{ url: string; data: ogs.SuccessResult | ogs.ErrorResult }> {
+  const urls = [
+    `https://medium.com/@${username}`,
+    `https://${username}.medium.com/`,
+  ];
 
-  // TODO: See if we can replace this with Cheerio and drop the dependency
-  const { result } = await ogs(options);
-  if (!result.success) {
+  return ogs({ url: urls[0] })
+    .then((data) => ({ url: urls[0], data }))
+    .catch(() => ogs({ url: urls[1] }).then((data) => ({ url: urls[1], data })))
+    .catch((e) => {
+      console.error(e);
+      return Promise.reject(
+        new Error(`Could not resolve any page for author ${username}`)
+      );
+    });
+}
+
+export async function addMediumAuthor(username: string) {
+  const { url, data } = await requestAuthorPage(username);
+  if (!data.result.success) {
     console.warn("Could not add author!");
     return;
   }
 
-  const title = result.ogTitle || "";
+  const title = data.result.ogTitle || "";
   const photoURL =
-    result.ogImage && "url" in result.ogImage
-      ? result.ogImage.url.replace("/max/2400/", "/max/512/")
+    data.result.ogImage && "url" in data.result.ogImage
+      ? data.result.ogImage.url.replace("/max/2400/", "/max/512/")
       : undefined;
 
   const author = {
     name: title.split(" – ")[0].trim(),
     bio: "",
     photoURL,
-    mediumURL: options.url,
+    mediumURL: url,
   };
 
   const authorId = normalizeAuthorId(username);

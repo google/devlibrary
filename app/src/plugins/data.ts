@@ -35,6 +35,9 @@ import { hostingRoot } from "./firebase";
 // eslint-disable-next-line
 const lodashGet = require("lodash.get");
 
+// Saving all authors to avoid multiple db requests
+let allAuthors: QueryResult<AuthorData>;
+
 export interface PagedResponse<T> {
   collectionPath: string;
   q: FirestoreQuery;
@@ -187,9 +190,20 @@ export async function fetchRepo(
 ): Promise<RepoData | undefined> {
   const repoPath = `/products/${product}/repos/${id}`;
   const json = await fetchDoc(repoPath);
-
   if (json) {
     return json as RepoData;
+  }
+}
+
+export async function fetchBlog(
+  product: string,
+  id: string
+): Promise<BlogData | undefined> {
+  const repoPath = `/products/${product}/blogs/${id}`;
+  const json = await fetchDoc(repoPath);
+
+  if (json) {
+    return json as BlogData;
   }
 }
 
@@ -200,7 +214,6 @@ export async function fetchRepoPage(
 ): Promise<RepoPage | undefined> {
   const pagePath = `/products/${product}/repos/${id}/pages/${pageKey}`;
   const json = await fetchDoc(pagePath);
-
   if (json) {
     return json as RepoPage;
   }
@@ -211,7 +224,7 @@ export async function queryAuthors(
 ): Promise<QueryResult<AuthorData>> {
   const collectionPath = `/authors`;
   const json = await fetchQuery(collectionPath, q);
-
+  allAuthors = json as QueryResult<AuthorData>;
   return json as QueryResult<AuthorData>;
 }
 
@@ -221,7 +234,6 @@ export async function queryBlogs(
 ): Promise<QueryResult<BlogData>> {
   const collectionPath = `/products/${product}/blogs`;
   const json = await fetchQuery(collectionPath, q);
-
   return json as QueryResult<BlogData>;
 }
 
@@ -231,13 +243,11 @@ export async function queryRepos(
 ): Promise<QueryResult<RepoData>> {
   const collectionPath = `/products/${product}/repos`;
   const json = await fetchQuery(collectionPath, q);
-
   return json as QueryResult<RepoData>;
 }
 
 export async function queryAuthorProjects(authorId: string) {
   const normalizedId = authorId.toLowerCase();
-
   const q: FirestoreQuery = {
     scope: "COLLECTION_GROUP",
     where: [
@@ -257,11 +267,38 @@ export async function queryAuthorProjects(authorId: string) {
 
   const blogs = (await fetchQuery("blogs", q)) as QueryResult<BlogData>;
   const repos = (await fetchQuery("repos", q)) as QueryResult<RepoData>;
-
   return {
     blogs,
     repos,
   };
+}
+
+export async function queryAuthorsByProduct(
+  products: string[]
+): Promise<QueryResult<AuthorData>> {
+  const authorResults: any = [];
+  for (const author of allAuthors.docs) {
+    const res = await queryAuthorProjects(author.id);
+
+    const blogProducts: string[] = [];
+    const repoProducts: string[] = [];
+
+    Object.keys(res.blogs.docs).forEach((blogIndex) => {
+      blogProducts.push(res.blogs.docs[Number(blogIndex)].data.product);
+    });
+
+    Object.keys(res.repos.docs).forEach((repoIndex) => {
+      repoProducts.push(res.repos.docs[Number(repoIndex)].data.product);
+    });
+
+    if (products.every((repo) => repoProducts.includes(repo))) {
+      authorResults.push(author);
+    }
+    if (products.every((blog) => blogProducts.includes(blog))) {
+      authorResults.push(author);
+    }
+  }
+  return authorResults as QueryResult<AuthorData>;
 }
 
 /**

@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pgollangi"
+  ],
+  "owner": "pgollangi",
+  "repo": "firestore-grafana-datasource",
+  "name": "Google Firestore data source plugin for Grafana",
+  "shortDescription": "Google Firestore Data Source Plugin for Grafana.\n\nGrafana Firestore Data Source Plugin enables integrating data on Firestore on to Grafana dashboards.",
+  "longDescription": "Google Firestore Data Source Plugin for Grafana.\n\nGrafana Firestore Data Source Plugin enables integrating data on Firestore on to Grafana dashboards.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "databases"
+  ]
+}

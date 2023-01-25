@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "patilshreyas"
+  ],
+  "owner": "PatilShreyas",
+  "repo": "permission-flow-android",
+  "name": "Permission Flow for Android",
+  "shortDescription": "Know about the real-time state of an Android app Permissions with Kotlin Flow APIs.",
+  "longDescription": "Know about the real-time state of an Android app Permissions with Kotlin Flow APIs.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "compose",
+    "modern-android-development"
+  ]
+}

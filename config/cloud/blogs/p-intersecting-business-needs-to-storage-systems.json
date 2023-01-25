@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["mustapha"],
+  "author": "Mustapha Adekunle",
+  "title": "Intersecting Business Needs to Storage Systems",
+  "link": "https://dataengineeringgcp.substack.com/p/intersecting-business-needs-to-storage-systems",
+  "tags": [
+    "databases",
+    "data-analytics",
+    "storage"
+  ]
+}

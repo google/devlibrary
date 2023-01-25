@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "markostanimirovic"
+  ],
+  "author": "Marko Stanimirović",
+  "title": "Building Reactive Angular Templates with NgRx Component",
+  "link": "https://dev.to/ngrx/building-reactive-angular-templates-with-ngrx-component-4m1e",
+  "tags": [
+    "demos"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "pritam-sahoo"
+  ],
+  "author": "Pritam Sahoo",
+  "title": "Fastrack your Homogeneous Database Migration for PostgreSQL to Cloud SQL (PostgreSQL)",
+  "link": "https://medium.com/google-cloud/fastrack-your-homogeneous-database-migration-for-postgresql-to-cloud-sql-postgresql-53a9259daca1",
+  "tags": [
+    "databases",
+    "migration"
+  ]
+}

@@ -1,7 +1,10 @@
 {
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "medium",
-  "authorIds": ["kreuzerk"],
+  "authorIds": [
+    "kreuzerk"
+  ],
   "author": "Kevin Kreuzer",
   "title": "Improve SPA performance by splitting your Angular libraries in multiple chunks",
   "link": "https://medium.com/angular-in-depth/improve-spa-performance-by-splitting-your-angular-libraries-in-multiple-chunks-8c68103692d0",

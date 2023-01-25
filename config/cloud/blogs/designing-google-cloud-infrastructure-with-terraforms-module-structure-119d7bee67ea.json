@@ -1,0 +1,12 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "chillcaley"
+  ],
+  "author": "Jaeyeon Baek",
+  "title": "Designing Google Cloud infrastructure with Terraform’s module structure",
+  "link": "https://medium.com/@chillcaley/designing-google-cloud-infrastructure-with-terraforms-module-structure-119d7bee67ea",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"]
+}

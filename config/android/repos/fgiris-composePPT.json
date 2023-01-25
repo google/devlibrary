@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "fgiris"
+  ],
+  "owner": "fgiris",
+  "repo": "composePPT",
+  "name": "composePPT",
+  "shortDescription": "An experimental UI toolkit for generating PowerPoint presentation files(.pptx) using Compose.",
+  "longDescription": "An experimental UI toolkit for generating PowerPoint presentation files(.pptx) using Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "compose"
+  ]
+}

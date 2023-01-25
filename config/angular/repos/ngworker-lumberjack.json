@@ -1,7 +1,10 @@
 {
+  "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "github",
-  "authorIds": ["santoshyadavdev"],
+  "authorIds": [
+    "santoshyadavdev"
+  ],
   "owner": "ngworker",
   "repo": "lumberjack",
   "name": "lumberjack",

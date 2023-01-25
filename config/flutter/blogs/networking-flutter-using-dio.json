@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "sbis04"
+  ],
+  "author": "Souvik Biswas",
+  "title": "Networking in Flutter using Dio - LogRocket Blog",
+  "link": "https://blog.logrocket.com/networking-flutter-using-dio/",
+  "tags": [
+    "mobile",
+    "plugins",
+    "samples"
+  ]
+}

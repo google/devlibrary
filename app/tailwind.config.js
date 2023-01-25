@@ -31,6 +31,9 @@ module.exports = {
       display: ["Google Sans", "Roboto", "ui-sans-serif", "system-ui"],
     },
     extend: {
+      zIndex: {
+        "-1": "-1",
+      },
       colors: {
         firebase: {
           accent: "#FFCA28",
@@ -112,7 +115,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      textColor: ["last"],
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "onkar17"
+  ],
+  "author": "Onkar Naik",
+  "title": "Multi-Cloud Private DNS Forwarding PART II",
+  "link": "https://blog.searce.com/multi-cloud-private-dns-forwarding-part-ii-54bb0ec5fbea",
+  "tags": [
+    "networking",
+    "hybrid-multicloud",
+    "operations"
+  ]
+}

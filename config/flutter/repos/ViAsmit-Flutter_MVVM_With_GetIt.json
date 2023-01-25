@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "viasmit"
+  ],
+  "owner": "ViAsmit",
+  "repo": "Flutter_MVVM_With_GetIt",
+  "name": "flutter_mvvm_with_getit",
+  "shortDescription": "A Flutter Boilerplate for architecting MVVM Architecture in your application with GetIt.",
+  "longDescription": "A Flutter Boilerplate for architecting MVVM Architecture in your application with GetIt.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "web",
+    "general"
+  ]
+}

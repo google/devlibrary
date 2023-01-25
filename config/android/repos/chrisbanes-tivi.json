@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "chrisbanes"
+  ],
+  "owner": "chrisbanes",
+  "repo": "tivi",
+  "name": "Tivi",
+  "shortDescription": "Tivi is a TV show tracking app that uses the latest Android libraries and tools, including Jetpack Compose.",
+  "longDescription": "Tivi is a TV show tracking app that uses the latest Android libraries and tools, including Jetpack Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui",
+    "modern-android-development"
+  ]
+}

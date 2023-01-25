@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "geekymeeky"
+  ],
+  "owner": "geekymeeky",
+  "repo": "Mausam",
+  "name": "Mausam",
+  "shortDescription": "A simple flutter weather app that can fetch weather based on the current location or city you specify.",
+  "longDescription": "A simple flutter weather app that can fetch weather based on the current location or city you specify.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}

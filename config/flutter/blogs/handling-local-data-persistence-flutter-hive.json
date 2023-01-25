@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "sbis04"
+  ],
+  "author": "Souvik Biswas",
+  "title": "Handling local data persistence in Flutter with Hive - LogRocket Blog",
+  "link": "https://blog.logrocket.com/handling-local-data-persistence-flutter-hive/",
+  "tags": [
+    "mobile",
+    "plugins",
+    "samples"
+  ]
+}

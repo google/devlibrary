@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rafaelmnatali"
+  ],
+  "owner": "rafaelmnatali",
+  "repo": "k8s-gcp",
+  "name": "https://github.com/rafaelmnatali/k8s-gcp/projects",
+  "shortDescription": "This tutorial intends to demonstrate how one can use Infrastructure as Code (IaC) to automate the provision and management of a Kubernetes cluster running on GCP.",
+  "longDescription": "This tutorial intends to demonstrate how one can use Infrastructure as Code (IaC) to automate the provision and management of a Kubernetes cluster running on GCP.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "operations",
+    "compute"
+  ]
+}

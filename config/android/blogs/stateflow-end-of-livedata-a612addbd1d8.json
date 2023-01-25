@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ganeshajdivekar"
+  ],
+  "author": "Ganesh Divekar",
+  "title": "StateFlow, End of LiveData?",
+  "link": "https://ganeshajdivekar.medium.com/stateflow-end-of-livedata-a612addbd1d8",
+  "tags": [
+    "kotlin",
+    "architecture",
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "sbis04"
+  ],
+  "author": "Souvik Biswas",
+  "title": "Networking in Flutter using the http package - LogRocket Blog",
+  "link": "https://blog.logrocket.com/networking-flutter-using-http-package/",
+  "tags": [
+    "plugins",
+    "mobile",
+    "samples"
+  ]
+}

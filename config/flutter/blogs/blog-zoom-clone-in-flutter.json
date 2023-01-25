@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["govindmaheshwari2"],
+  "author": "Govind Maheshwari",
+  "title": "Building Zoom clone in Flutter with 100ms SDK  | Blog 100mslive",
+  "link": "https://www.100ms.live/blog/zoom-clone-in-flutter",
+  "tags": [
+    "mobile",
+    "samples",
+    "plugins"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "snehpandya"
+  ],
+  "author": "Sneh Pandya",
+  "title": "How to create simple and gradient borders in Flutter - LogRocket Blog",
+  "link": "https://blog.logrocket.com/how-to-create-simple-gradient-borders-flutter/",
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ]
+}

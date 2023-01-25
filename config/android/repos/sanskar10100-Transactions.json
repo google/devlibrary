@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sanskar10100"
+  ],
+  "owner": "sanskar10100",
+  "repo": "Transactions",
+  "name": "Transactions",
+  "shortDescription": "A fast and modern zero-config transaction manager for Android developed using the MAD guidance and Material Design 3 components.",
+  "longDescription": "A fast and modern zero-config transaction manager for Android developed using the MAD guidance and Material Design 3 components.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "architecture",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

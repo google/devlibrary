@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "souvik-goria"
+  ],
+  "author": "Souvik Goria",
+  "title": "How to setup wireless debugging of flutter apps with vscode and ADB",
+  "link": "https://medium.com/@orionleo.199/flutter-and-wireless-debugging-7569224421d6",
+  "tags": [
+    "general",
+    "mobile"
+  ]
+}

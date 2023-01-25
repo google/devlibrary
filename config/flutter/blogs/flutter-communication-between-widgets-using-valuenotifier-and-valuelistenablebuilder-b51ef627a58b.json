@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "avnishnishad"
+  ],
+  "author": "Avnish Nishad",
+  "title": "ValueNotifier and ValueListenableBuilder",
+  "link": "https://medium.com/@avnishnishad/flutter-communication-between-widgets-using-valuenotifier-and-valuelistenablebuilder-b51ef627a58b",
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ]
+}

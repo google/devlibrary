@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "tamilkannancv"
+  ],
+  "author": "Tamil Kannan C V",
+  "title": "Flutter phone authorization",
+  "link": "https://tamilkannancv.medium.com/flutter-phone-auth-8e2f50ef0e41",
+  "tags": [
+    "firebase"
+  ]
+}

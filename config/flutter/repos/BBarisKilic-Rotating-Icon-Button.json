@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bbariskilic"
+  ],
+  "owner": "BBarisKilic",
+  "repo": "Rotating-Icon-Button",
+  "name": "Rotating-Icon-Button",
+  "shortDescription": "Flutter package for rotating and smoothly animating any child widget of its own when tapped. The package has been written solely in Dart language.",
+  "longDescription": "Flutter package for rotating and smoothly animating any child widget of its own when tapped. The package has been written solely in Dart language.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}

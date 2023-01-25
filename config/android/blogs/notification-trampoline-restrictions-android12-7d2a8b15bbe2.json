@@ -1,7 +1,10 @@
 {
+  "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["navczydev"],
+  "authorIds": [
+    "navczydev"
+  ],
   "author": "Nav Singh",
   "title": "Notification trampoline restrictions-Android12",
   "link": "https://navczydev.medium.com/notification-trampoline-restrictions-android12-7d2a8b15bbe2",

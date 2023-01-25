@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "lynnlangit"
+  ],
+  "owner": "lynnlangit",
+  "repo": "gcp-for-bioinformatics",
+  "name": "GCP for Bioinformatics",
+  "shortDescription": "GCP Essentials for Bioinformatics Researchers",
+  "longDescription": "GCP Essentials for Bioinformatics Researchers",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "healthcare-life-sciences",
+    "compute"
+  ]
+}

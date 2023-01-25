@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "skydoves"
+  ],
+  "author": "Jaewoong Eum",
+  "title": "We’ll look at the new Material You library available for Jetpack Compose and see how we can apply its dynamic colors to Stream Chat Compose SDK, colorful, and personalized messaging experience.",
+  "link": "https://medium.com/proandroiddev/exploring-material-you-for-jetpack-compose-c2d9e8eb3b2c",
+  "tags": [
+    "compose",
+    "ui",
+    "modern-android-development"
+  ]
+}

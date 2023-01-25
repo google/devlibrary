@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "pushkarbk"
+  ],
+  "author": "Pushkar Kothavade",
+  "title": "Google Cloud Anthos Blog Series",
+  "link": "https://medium.com/google-cloud/google-cloud-anthos-series-part7-6b85c5f7016f",
+  "tags": [
+    "containers"
+  ]
+}

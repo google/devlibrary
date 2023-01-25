@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "chrisbanes"
+  ],
+  "owner": "chrisbanes",
+  "repo": "snapper",
+  "name": "Snapper",
+  "shortDescription": "Snapper is a library which brings snapping to the Compose scrolling layouts (currently only LazyColumn and LazyRow).",
+  "longDescription": "Snapper is a library which brings snapping to the Compose scrolling layouts (currently only LazyColumn and LazyRow).",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui"
+  ]
+}

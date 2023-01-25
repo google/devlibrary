@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "initishbhatt"
+  ],
+  "owner": "initishbhatt",
+  "repo": "Quotes",
+  "name": "Quotes",
+  "shortDescription": "About\nQuotes app demonstrates some of the general use cases and demands on a typical production project using: Jetpack Compose, Functional Programming,MVVM, Kotlin Coroutines,Flow, Jetpack (Room, View",
+  "longDescription": "About\nQuotes app demonstrates some of the general use cases and demands on a typical production project using: Jetpack Compose, Functional Programming,MVVM, Kotlin Coroutines,Flow, Jetpack (Room, View",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

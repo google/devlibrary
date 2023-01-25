@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["abhisheksaxena"],
+  "author": "Abhishek Saxena",
+  "title": "SOLID Design Principles In Kotlin",
+  "link": "https://proandroiddev.com/solid-design-principles-in-kotlin-79100c670df1",
+  "tags": [
+    "architecture",
+    "kotlin"
+  ]
+}

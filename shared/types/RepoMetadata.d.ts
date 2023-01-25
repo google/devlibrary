@@ -73,5 +73,9 @@ export interface RepoMetadata {
     href: string;
     [k: string]: unknown;
   }[];
+  /**
+   * The expertise of the articles or projects
+   */
+  expertise: string;
   [k: string]: unknown;
 }

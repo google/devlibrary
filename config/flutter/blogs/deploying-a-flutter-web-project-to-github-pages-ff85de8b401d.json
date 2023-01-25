@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ayeshaiftikhar"
+  ],
+  "author": "Ayesha Iftikhar",
+  "title": "Deploying a Flutter Web project to GitHub Pages",
+  "link": "https://medium.com/flutterevo/deploying-a-flutter-web-project-to-github-pages-ff85de8b401d",
+  "tags": [
+    "mobile",
+    "firebase",
+    "web"
+  ]
+}

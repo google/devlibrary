@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "biplabdutta"
+  ],
+  "author": "Biplab Dutta",
+  "title": "Product Flavors in Flutter—Create admin and non-admin apps with distinct UI with a single codebase",
+  "link": "https://dev.to/b_plab98/product-flavors-in-flutter-create-admin-and-non-admin-apps-with-distinct-ui-with-a-single-codebase-kef",
+  "tags": [
+    "mobile",
+    "general",
+    "samples"
+  ]
+}

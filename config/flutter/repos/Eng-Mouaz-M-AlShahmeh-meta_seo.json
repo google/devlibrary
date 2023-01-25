@@ -1,0 +1,19 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "eng-mouaz-m-alshahmeh"
+  ],
+  "owner": "Eng-Mouaz-M-AlShahmeh",
+  "repo": "meta_seo",
+  "name": "MetaSEO package",
+  "shortDescription": "Meta SEO is package for adding meta data for html document in head tag which meta tags or meta data make search engine optimization for web apps.",
+  "longDescription": "Meta SEO is package for adding meta data for html document in head tag which meta tags or meta data make search engine optimization for web apps.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web",
+    "plugins"
+  ]
+}
