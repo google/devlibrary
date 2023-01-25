@@ -247,7 +247,7 @@
   }
 
   .guide-selection-heading {
-    margin-bottom: 20px;
+    margin-bottom: 4px;
   }
 
   .guide-selection-description {
@@ -264,11 +264,6 @@
     .guide-selection-heading {
       font-size: 32px;
       line-height: 40px;
-    }
-
-    .guide-selection-description {
-      font-size: 18px;
-      line-height: 24px;
     }
 
     .header-image {
