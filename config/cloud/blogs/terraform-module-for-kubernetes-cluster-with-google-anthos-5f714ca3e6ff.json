@@ -3,7 +3,7 @@
   "version": 1,
   "source": "other",
   "authorIds": [
-    "gursimar27"
+    "gursimarsm"
   ],
   "author": "Gursimar Singh",
   "title": "Terraform Module for Kubernetes Cluster with Google Anthos",
