@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bolajiayodeji"],
+  "author": "Bolaji Ayodeji",
+  "title": "How to Connect Google Colab to a Local Runtime",
+  "link": "https://blog.bolajiayodeji.com/how-to-connect-google-colab-to-a-local-runtime",
+  "tags": [
+    "ai-ml",
+    "developer-tools"
+  ]
+}
