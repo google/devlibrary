@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "cngeru"
+  ],
+  "owner": "cngeru",
+  "repo": "snippets",
+  "name": "Google Cloud Face Detection",
+  "shortDescription": "We will be using Google Cloud Vision to detect faces. The full article is available on https://medium.com/p/6f32144d08a6",
+  "longDescription": "We will be using Google Cloud Vision to detect faces. The full article is available on https://medium.com/p/6f32144d08a6",
+  "content": "https://github.com/cngeru/snippets/blob/main/face-detection/index.ts",
+  "pages": [],
+  "tags": [
+    "ai-ml"
+  ]
+}
