@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["xavidop"],
+  "author": "Xavier Portilla Edo",
+  "title": "Dialogflow CX Intents (English)",
+  "link": "https://xavidop.me/dialogflow/2023-01-24-dialogflow-cx-intents/",
+  "tags": [
+    "dialogflow",
+    "nlp"
+  ]
+}
