@@ -269,14 +269,11 @@ import {
   queryBlogs,
   shuffleArr,
   wrapInHolders,
-  fetchRepo,
-  fetchBlog,
 } from "@/plugins/data";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
 import {
   BlogData,
-  BlogOrRepoDataHolder,
   RepoData,
 } from "../../../shared/types";
 import { getPromoVideoMain, getPromoVideoPlaylist } from "../model/videos";
