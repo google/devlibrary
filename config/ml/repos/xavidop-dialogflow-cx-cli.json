@@ -1,0 +1,20 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "xavidop"
+  ],
+  "owner": "xavidop",
+  "repo": "dialogflow-cx-cli",
+  "name": "Dialogflow CX CLI",
+  "shortDescription": "Simple tool to interact with your Dialogflow CX projects from your terminal. It has TTS and STT capabilities too",
+  "longDescription": "Simple tool to interact with your Dialogflow CX projects from your terminal. It has TTS and STT capabilities too",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "dialogflow",
+    "mlops",
+    "nlp"
+  ]
+}

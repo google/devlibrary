@@ -1,0 +1,12 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["aryanirani123"],
+  "author": "Aryan Irani",
+  "title": "Automate sending emails from google sheet using Google Apps Script",
+  "link": "https://chartmat.com/blog/automate-sending-emails-from-google-sheet-using-google-apps-script",
+  "tags": [
+    "developer-tools"
+  ]
+}
