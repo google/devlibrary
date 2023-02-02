@@ -27,10 +27,12 @@
     >
       <h1 class="full-bleed-hero-heading">Authors</h1>
       <p class="mt-1 hero-description">
-        All content on Dev Library is contributed by developers from around the world. Browse through the portfolio of individual authors or connect with them !
+        All content on Dev Library is contributed by developers from around the
+        world. Browse through the portfolio of individual authors or connect
+        with them !
       </p>
     </div>
-    <img src="/img/banners/desktop/authors-clipart.png" class="hero-clipart"/>
+    <img src="/img/banners/desktop/authors-clipart.png" class="hero-clipart" />
 
     <!-- Body -->
     <div id="pagebody" class="mb-4 px-std">

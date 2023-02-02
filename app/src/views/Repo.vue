@@ -27,9 +27,7 @@
               --header-bg-image-desktop: url('/img/banners/desktop/repo-wide.png');
             "
           >
-            <div
-              class="grid"
-            >
+            <div class="grid">
               <h1>
                 {{ repo.metadata.name }}
               </h1>
@@ -66,7 +64,7 @@
             </div>
           </div>
         </div>
-        <img src="/img/banners/desktop/repo-clipart.png" class="hero-clipart"/>
+        <img src="/img/banners/desktop/repo-clipart.png" class="hero-clipart" />
 
         <!-- Header (Mobile) -->
         <div class="mobile-only">
