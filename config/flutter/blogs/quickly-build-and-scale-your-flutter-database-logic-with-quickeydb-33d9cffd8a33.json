@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "itskenzylimon"
+  ],
+  "author": "Kenzy Limon",
+  "title": "Build and scale your Flutter database logic with QuickeyDB",
+  "link": "https://medium.com/@itskenzylimon/quickly-build-and-scale-your-flutter-database-logic-with-quickeydb-33d9cffd8a33",
+  "tags": [
+    "plugins",
+    "mobile",
+    "general"
+  ]
+}
