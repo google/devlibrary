@@ -1,0 +1,12 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rubenszimbres"
+  ],
+  "author": "Rubens Zimbres",
+  "title": "Search of Brazilian Laws using Dialogflow CX and Matching Engine",
+  "link": "https://medium.com/@rubenszimbres/search-of-brazilian-laws-using-dialogflow-cx-and-matching-engine-b384c745c77e",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"]
+}
