@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aditya"
+  ],
+  "author": "Aditya Rohman",
+  "title": "How to Provide Localizations Feature to a Flutter App",
+  "link": "https://medium.com/@aditya-rohman/how-to-provide-localizations-feature-to-a-flutter-app-with-bloc-library-shared-preferences-2c2f4fc2fb8a",
+  "tags": [
+    "mobile",
+    "general",
+    "samples"
+  ]
+}
