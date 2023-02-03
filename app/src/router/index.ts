@@ -16,12 +16,12 @@
 
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
+import Authors from "../views/Authors.vue";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import ContentPolicy from "../views/ContentPolicy.vue";
 import Product from "../views/Product.vue";
 import Repo from "../views/Repo.vue";
-import Authors from "../views/Authors.vue";
 import Author from "../views/Author.vue";
 import FourOhFour from "../views/FourOhFour.vue";
 import { routeChange } from "@/plugins/gtag";
