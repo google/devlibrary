@@ -50,6 +50,11 @@ const routes: Array<RouteConfig> = [
     component: Repo,
   },
   {
+    path: "/about",
+    name: "About",
+    component: About,
+  },
+  {
     path: "/authors",
     name: "Authors",
     component: Authors,
@@ -58,11 +63,6 @@ const routes: Array<RouteConfig> = [
     path: "/authors/:author",
     name: "Author",
     component: Author,
-  },
-  {
-    path: "/about",
-    name: "About",
-    component: About,
   },
   {
     path: "/contentpolicy",
