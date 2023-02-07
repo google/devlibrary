@@ -1,0 +1,10 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["paulwilljones"],
+  "author": "Paul Jones",
+  "title": "Bootstrap GKE with Anthos | Jetstack Blog",
+  "link": "https://www.jetstack.io/blog/anthos-gke-acm-bootstrap/",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"]
+}

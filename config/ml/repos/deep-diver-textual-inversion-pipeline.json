@@ -1,0 +1,25 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "deep-diver"
+  ],
+  "owner": "deep-diver",
+  "repo": "textual-inversion-pipeline",
+  "name": "Textual Inversion Pipeline for Stable Diffusion",
+  "shortDescription": "This repository demonstrates how to manage multiple models and their prototype applications of fine-tuned Stable Diffusion on new concepts by Textual Inversion.",
+  "longDescription": "This repository demonstrates how to manage multiple models and their prototype applications of fine-tuned Stable Diffusion on new concepts by Textual Inversion.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web",
+    "theory"
+  ]
+}

@@ -159,7 +159,7 @@ export default class LargeRepoCard extends Vue {
       return `https://avatars.githubusercontent.com/${this.repo.metadata.owner}`;
     }
 
-    return '';
+    return "";
   }
 
   public async getImage() {

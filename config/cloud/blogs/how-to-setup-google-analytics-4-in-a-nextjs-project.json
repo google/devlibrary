@@ -1,0 +1,12 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bolajiayodeji"],
+  "author": "Bolaji Ayodeji",
+  "title": "How to Setup Google Analytics 4 in a Next.js Project",
+  "link": "https://blog.bolajiayodeji.com/how-to-setup-google-analytics-4-in-a-nextjs-project",
+  "tags": [
+    "data-analytics"
+  ]
+}
