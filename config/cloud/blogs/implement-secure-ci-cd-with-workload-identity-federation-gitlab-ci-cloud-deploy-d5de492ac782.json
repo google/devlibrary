@@ -3,7 +3,7 @@
   "version": 1,
   "source": "medium",
   "authorIds": [
-    "cloud"
+    "ezekiasbokove"
   ],
   "author": "EZEKIAS BOKOVE",
   "title": "Implement secure CI/CD with Workload Identity Federation, GitLab CI & Cloud Deploy.",
