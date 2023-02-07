@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["daria"],
+  "author": "Daria Orlova",
+  "title": "A pragmatic guide to BuildContext in Flutter | Codemagic Blog",
+  "link": "https://blog.codemagic.io/a-pragmatic-guide-to-buildcontext-in-flutter/",
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ]
+}
