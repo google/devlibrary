@@ -56,7 +56,7 @@
         <div class="value-prop-image">
           <img src="../../public/img/guided-learning.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Are you looking for guided learning?</h2>
+        <h2 class="text-3xl mb-6">Learn from curated content</h2>
         <p class="text-lg px-8 pb-8">
           Visit each product page to filter projects by Content Type, Category
           or Expertise level.
@@ -73,7 +73,7 @@
         <div class="value-prop-image">
           <img src="../../public/img/speakers.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Are you looking for speakers / experts?</h2>
+        <h2 class="text-3xl mb-6">Find tech speakers and experts?</h2>
         <p class="text-lg px-8 pb-8">
           Find and connect with product experts, speakers and authors in the
           community.
@@ -90,7 +90,7 @@
         <div class="value-prop-image">
           <img src="../../public/img/inspiration.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Are you looking to showcase your work?</h2>
+        <h2 class="text-3xl mb-6">Showcase your technical content</h2>
         <p class="text-lg px-8 pb-8">
           Submit your projects and blogs to Dev Library to inspire other
           developers.
