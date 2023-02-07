@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["subhadiptech"],
+  "author": "Subhadip Das",
+  "title": "kotlin basic tutorial",
+  "link": "https://learndroid.hashnode.dev/why-kotlin-sealed-class-exists",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}
