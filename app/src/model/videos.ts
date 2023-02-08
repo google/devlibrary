@@ -29,8 +29,7 @@ const PROMO_VIDEO_PLAYLIST: PromoVideoId[] = [
     videoId: "XnemWL1Ru6k?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
-    title:
-      "Meet Dev Library Flutter Author : Anna (Domashych) Leushchenko",
+    title: "Meet Dev Library Flutter Author : Anna (Domashych) Leushchenko",
     videoId: "6nls0arzRrk?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
@@ -42,8 +41,7 @@ const PROMO_VIDEO_PLAYLIST: PromoVideoId[] = [
     videoId: "qzd8KyyzfeI?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
   {
-    title:
-      "Meet Dev Library Angular Author : Vanessa Aristizabal",
+    title: "Meet Dev Library Angular Author : Vanessa Aristizabal",
     videoId: "Qd1A6JnEcuA?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ",
   },
 ];

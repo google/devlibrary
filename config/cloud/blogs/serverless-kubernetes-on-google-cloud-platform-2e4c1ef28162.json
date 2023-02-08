@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "gursimarsm"
+  ],
+  "author": "Gursimar Singh",
+  "title": "Serverless Kubernetes on Google Cloud Platform",
+  "link": "https://gursimarsm.medium.com/serverless-kubernetes-on-google-cloud-platform-2e4c1ef28162",
+  "tags": [
+    "serverless-computing",
+    "developer-tools",
+    "containers"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["foxanna"],
+  "author": "Anna Leushchenko",
+  "title": "Assertions in Dart and Flutter tests: an (now for sure) ultimate cheat sheet - Invertase",
+  "link": "https://invertase.io/blog/assertions-in-dart-and-flutter-tests-now-for-sure-an-ultimate-cheat-sheet",
+  "tags": [
+    "general",
+    "samples"
+  ]
+}

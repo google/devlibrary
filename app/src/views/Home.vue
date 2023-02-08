@@ -136,16 +136,15 @@
     <!-- Videos -->
     <div class="w-full p-6 lg:p-10 video-playlist h-max-20">
       <div class="text-center pb-10">
-      <h1 class="text-2xl lg:text-3xl pb-5">Meet our Authors</h1>
-      <a
-        href="https://www.youtube.com/playlist?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ"
-        target="_blank"
-      >
-        <MaterialButton type="primary">More Authors</MaterialButton>
-      </a></div>
-      <div
-        class="mb-5 grid gap-x-12 grid-cols-1 md:grid-cols-5"
-      >
+        <h1 class="text-2xl lg:text-3xl pb-5">Meet our Authors</h1>
+        <a
+          href="https://www.youtube.com/playlist?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ"
+          target="_blank"
+        >
+          <MaterialButton type="primary">More Authors</MaterialButton>
+        </a>
+      </div>
+      <div class="mb-5 grid gap-x-12 grid-cols-1 md:grid-cols-5">
         <div class="col-span-3 video-aspect-ratio">
           <iframe
             class="w-full h-full"
@@ -157,10 +156,16 @@
             :src="promoVideo.embedUrl"
             :title="promoVideo.title"
           ></iframe>
-          <h2 class="p-5">{{promoVideo.title}}</h2>
+          <h2 class="p-5">{{ promoVideo.title }}</h2>
         </div>
-        <ul class="playlist-list col-span-2 grid gap-4 h-full overflow-y-auto p-0">
-          <li class="z-10 align-start" v-for="v in promoVideoPlaylist" :key="v.videoUrl">
+        <ul
+          class="playlist-list col-span-2 grid gap-4 h-full overflow-y-auto p-0"
+        >
+          <li
+            class="z-10 align-start"
+            v-for="v in promoVideoPlaylist"
+            :key="v.videoUrl"
+          >
             <a
               class="grid gap-x-3 grid-cols-5"
               target="_blank"
@@ -264,17 +269,14 @@ import {
   queryBlogs,
   shuffleArr,
   wrapInHolders,
-  fetchRepo,
-  fetchBlog,
 } from "@/plugins/data";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
 import {
   BlogData,
-  BlogOrRepoDataHolder,
   RepoData,
 } from "../../../shared/types";
-import { getPromoVideoMain, getPromoVideoPlaylist} from '../model/videos';
+import { getPromoVideoMain, getPromoVideoPlaylist } from "../model/videos";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
 import { conversionEvent } from "@/plugins/gtag";

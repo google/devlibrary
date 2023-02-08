@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "itskenzylimon"
+  ],
+  "owner": "itskenzylimon",
+  "repo": "quickeydb",
+  "name": "Flutter Quickey Database ORM",
+  "shortDescription": "QuickeyDB is a fast Flutter ORM inspired by ActiveRecord and built on top of Sqflite. Made purely to be runtime only, eliminating the need to use code generators.",
+  "longDescription": "QuickeyDB is a fast Flutter ORM inspired by ActiveRecord and built on top of Sqflite. Made purely to be runtime only, eliminating the need to use code generators.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "general",
+    "plugins",
+    "samples"
+  ]
+}

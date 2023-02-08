@@ -10,7 +10,7 @@
   "name": "SimpleStore Android Library",
   "shortDescription": "A library to create either a shared preference or data store. it has the ability to encrypt on a go, by just signifying on the builder class.",
   "longDescription": "A library to create either a shared preference or data store. it has the ability to encrypt on a go, by just signifying on the builder class.",
-  "content": "readme.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "kotlin",
