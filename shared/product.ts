@@ -344,47 +344,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       {
         label: "Places",
         value: "places",
-      },
-      {
-        label: "Static maps",
-        value: "static-maps",
-      },
-      {
-        label: "Distance Matrix",
-        value: "distance-matrix",
-      },
-      {
-        label: "Geocoding",
-        value: "geocoding",
-      },
-      {
-        label: "Street view imagery",
-        value: "street-view-imagery",
-      },
-      {
-        label: "Roads",
-        value: "roads",
-      },
-      {
-        label: "Geolocation",
-        value: "geolocation",
-      },
-      {
-        label: "Elevation",
-        value: "elevation",
-      },
-      {
-        label: "Routes API",
-        value: "routes-api",
-      },
-      {
-        label: "Address Validation",
-        value: "address-validation",
-      },
-      {
-        label: "Time zones",
-        value: "time-zones",
-      },
+      }
     ],
   },
 };
