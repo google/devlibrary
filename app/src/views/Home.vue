@@ -73,7 +73,7 @@
         <div class="value-prop-image">
           <img src="../../public/img/speakers.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Find product experts and authors?</h2>
+        <h2 class="text-3xl mb-6">Find product experts and authors</h2>
         <p class="text-lg px-8 pb-8">
           Find and connect with product experts, speakers and authors in the
           community.
