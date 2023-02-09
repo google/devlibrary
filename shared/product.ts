@@ -334,8 +334,8 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     docsUrl: "https://developers.google.com/maps/documentation",
     tags: [
       {
-        label: "Maps SDKs",
-        value: "maps-sdks",
+        label: "Maps",
+        value: "maps",
       },
       {
         label: "Routes",
@@ -344,6 +344,26 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       {
         label: "Places",
         value: "places",
+      },
+      {
+        label: "Directions",
+        value: "directions",
+      },
+      {
+        label: "Geocoding",
+        value: "geocoding",
+      },
+      {
+        label: "Street View",
+        value: "street-view",
+      },
+      {
+        label: "Geolocation",
+        value: "geolocation",
+      },
+      {
+        label: "Google Maps",
+        value: "google-maps",
       }
     ],
   },
