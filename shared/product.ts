@@ -58,8 +58,8 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.ML,
     name: "Machine Learning",
     description:
-      " Google provides a wide range of Machine Learning technologies and products for developers to use and develop for their projects. These include TensorFlow, TensorFlow.js, TensorFlow Lite, TensorFlow Extended, JAX, Keras and Mediapipe. /nDev Library has a curated collection of Machine Learning blogs, open source projects, and tutorials contributed by developers around the world. Explore today for your next project!",
-    docsUrl: "https://ai.google/tools/",
+      " Google provides a wide range of Machine Learning technologies and products for developers to use and develop for their projects. These include TensorFlow, TensorFlow.js, TensorFlow Lite, TensorFlow Extended, JAX, Keras and Mediapipe. Dev Library has a curated collection of Machine Learning blogs, open source projects, and tutorials contributed by developers around the world. Explore today for your next project!",
+    docsUrl: "https://www.tensorflow.org/",
     tags: [
       {
         label: "Mobile",
@@ -136,7 +136,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.FLUTTER,
     name: "Flutter",
     description:
-      "An open-source UI toolkit that makes it easy and fast to build beautiful mobile apps. Flutter apps run natively on iOS and Android and are powered by the Dart language.",
+      "Flutter is an open source framework for building fast, beautiful apps for iOS and Android, web, desktop, and more. It uses the Dart programming language, which provides a rich set of libraries and frameworks for building responsive, high-performance apps. Dev Library has a curated collection of Flutter blogs, open source projects, and tutorials contributed by developers around the world. ",
     docsUrl: "https://flutter.dev/",
     tags: [
       {
