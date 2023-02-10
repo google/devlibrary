@@ -1,5 +1,5 @@
 {
-  "expertise": "INTERMEDIATE",
+  "expertise": "ADVANCED",
   "version": 1,
   "source": "github",
   "authorIds": [
@@ -7,10 +7,12 @@
   ],
   "owner": "sbis04",
   "repo": "flutter_maps",
-  "name": "TODO: human readable name",
-  "shortDescription": "TODO: ~10 words",
-  "longDescription": "TODO: ~2 sentences",
+  "name": "flutter_maps",
+  "shortDescription": "A Flutter app using Google Maps SDK and Directions API. You can find the supporting article for this project on Medium (https://bit.ly/3vZ7yXg).",
+  "longDescription": "A Flutter app using Google Maps SDK and Directions API. You can find the supporting article for this project on Medium (https://bit.ly/3vZ7yXg).",
   "content": "README.md",
   "pages": [],
-  "tags": []
+  "tags": ["samples",
+  "google-maps",
+  "maps"]
 }
