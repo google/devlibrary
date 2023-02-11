@@ -326,4 +326,45 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
     ],
   },
+  maps: {
+    key: ProductKey.MAPS,
+    name: "Google Maps Platform",
+    description:
+      "Google Maps Platform lets developers create real-world, real-time experiences with the latest Maps, Routes, and Places features from Google Maps.",
+    docsUrl: "https://developers.google.com/maps/documentation",
+    tags: [
+      {
+        label: "Maps",
+        value: "maps",
+      },
+      {
+        label: "Routes",
+        value: "routes",
+      },
+      {
+        label: "Places",
+        value: "places",
+      },
+      {
+        label: "Directions",
+        value: "directions",
+      },
+      {
+        label: "Geocoding",
+        value: "geocoding",
+      },
+      {
+        label: "Street View",
+        value: "street-view",
+      },
+      {
+        label: "Geolocation",
+        value: "geolocation",
+      },
+      {
+        label: "Google Maps",
+        value: "google-maps",
+      }
+    ],
+  },
 };
