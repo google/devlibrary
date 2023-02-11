@@ -12,7 +12,7 @@
   "longDescription": "A Flutter app using Google Maps SDK and Directions API. You can find the supporting article for this project on Medium (https://bit.ly/3vZ7yXg).",
   "content": "README.md",
   "pages": [],
-  "tags": [
-    "samples"
-  ]
+  "tags": ["samples",
+  "google-maps",
+  "maps"]
 }
