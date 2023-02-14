@@ -331,6 +331,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     name: "Google Maps Platform",
     description:
       "Google Maps Platform lets developers create real-world, real-time experiences with the latest Maps, Routes, and Places features from Google Maps. Dev Library has a curated collection of Google Maps Platform blogs, open source projects, and tutorials contributed by developers around the world. Explore Dev Library today for your next Google Maps project!",
+
     docsUrl: "https://developers.google.com/maps/documentation",
     tags: [
       {
