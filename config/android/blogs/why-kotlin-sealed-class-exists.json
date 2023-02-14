@@ -4,7 +4,7 @@
   "source": "other",
   "authorIds": ["subhadiptech"],
   "author": "Subhadip Das",
-  "title": "kotlin basic tutorial",
+  "title": "Why sealed class exists in Koltin",
   "link": "https://learndroid.hashnode.dev/why-kotlin-sealed-class-exists",
   "tags": [
     "kotlin",
