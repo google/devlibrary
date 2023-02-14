@@ -21,7 +21,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.FIREBASE,
     name: "Firebase",
     description:
-      "Firebase helps you build and run successful apps. Backed by Google and loved by app development teams - from startups to global enterprises.",
+      "Firebase helps you build and run successful apps. Backed by Google and loved by app development teams - from startups to global enterprises. Dev Library has a curated collection of Firebase blogs, open source projects, and tutorials contributed by developers around the world. Explore Dev Library today for your next Firebase project!",
     docsUrl: "https://firebase.google.com/docs/",
     tags: [
       {
@@ -177,7 +177,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.CLOUD,
     name: "Google Cloud",
     description:
-      "Meet your business challenges head on with cloud computing services from Google, including data management, hybrid & multi-cloud, and AI & ML.",
+      "Meet your business challenges head on with cloud computing services from Google, including data management, hybrid & multi-cloud, and AI & ML. Dev Library has a curated collection of Google Cloud blogs, open source projects, and tutorials contributed by developers around the world. Explore Dev Library today for your next Google Cloud project!",
     docsUrl: "https://cloud.google.com/docs",
     // Tags for Cloud are adapted as-needed from the "products" categories list on this page:
     // https://cloud.google.com/products
@@ -260,7 +260,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.ANDROID,
     name: "Android",
     description:
-      "Modern tools and resources to help you build experiences that people love, faster and easier, across every Android device.",
+      "Modern tools and resources to help you build experiences that people love, faster and easier, across every Android device. Dev Library has a curated collection of Android blogs, open source projects, and tutorials contributed by developers around the world. Explore Dev Library today for your next Android project!",
     docsUrl: "https://developer.android.com/",
     tags: [
       {
@@ -297,7 +297,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.ASSISTANT,
     name: "Google Assistant",
     description:
-      "Google Assistant lets developers add voice-first functionality to their apps.",
+      "Google Assistant lets developers add voice-first functionality to their apps. Dev Library has a curated collection of Google Assistant blogs, open source projects, and tutorials contributed by developers around the world. Explore Dev Library today for your next Google Assistant project!",
     docsUrl: "https://developers.google.com/assistant/docs",
     tags: [
       {
@@ -330,7 +330,8 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.MAPS,
     name: "Google Maps Platform",
     description:
-      "Google Maps Platform lets developers create real-world, real-time experiences with the latest Maps, Routes, and Places features from Google Maps.",
+      "Google Maps Platform lets developers create real-world, real-time experiences with the latest Maps, Routes, and Places features from Google Maps. Dev Library has a curated collection of Google Maps Platform blogs, open source projects, and tutorials contributed by developers around the world. Explore Dev Library today for your next Google Maps project!",
+
     docsUrl: "https://developers.google.com/maps/documentation",
     tags: [
       {
