@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ezatpanah"
+  ],
+  "author": "Reyhaneh Ezatpanah",
+  "title": "How to use Flow with Room Database (Complete Guide — Part1)",
+  "link": "https://medium.com/@ezatpanah/how-to-use-flow-with-room-database-complete-guide-part1-fd7fa0a5b2c1",
+  "tags": [
+    "kotlin",
+    "architecture",
+    "modern-android-development"
+  ]
+}
