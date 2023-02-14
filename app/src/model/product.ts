@@ -57,6 +57,11 @@ const styles: Record<string, ProductStyle> = {
     text: "text-assistant-text",
     iconBorder: "border-assistant-accent",
   },
+  maps: {
+    bg: "bg-maps-bg",
+    text: "text-maps-text",
+    iconBorder: "border-maps-accent",
+  },
 };
 
 // Listing these classes here means that PurgeCSS will not
