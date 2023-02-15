@@ -131,43 +131,43 @@
           class="grid grid-cols-10 col-span-10 lg:col-span-7"
         >
           <div class="col-span-10">
-          <template v-for="(s, i) in content.sections">
-            <!-- Only show headers for sections after the first one -->
-            <h2
-              v-if="i > 0 && s.name.length > 0"
-              class="mt-8 mb-2"
-              :key="`header-${s.name}`"
-            >
-              {{ s.name }}
-            </h2>
-            <!-- The 'prose' class comes from the Tailwind typography plugin -->
-            <div class="bg-white mt-8 ml-2 mr-2 lg:mr-0 lg:ml-4" :key="`section-${s.name}`">
-              <div
-                class="font-bold border-b pl-8 pt-3 pb-3"
+            <template v-for="(s, i) in content.sections">
+              <!-- Only show headers for sections after the first one -->
+              <h2
+                v-if="i > 0 && s.name.length > 0"
+                class="mt-8 mb-2"
                 :key="`header-${s.name}`"
               >
-                {{ content.path }}
-              </div>
+                {{ s.name }}
+              </h2>
+              <!-- The 'prose' class comes from the Tailwind typography plugin -->
               <div
-                v-if="s.content.length > 0"
-                class="prose mt-4 lg:mt-2 p-8"
-                :key="`content-${s.name}`"
-                v-html="sanitize(s.content)"
-              ></div>
-            </div>
-          </template>
+                class="bg-white mt-8 ml-2 mr-2 lg:mr-0 lg:ml-4"
+                :key="`section-${s.name}`"
+              >
+                <div
+                  class="font-bold border-b pl-8 pt-3 pb-3"
+                  :key="`header-${s.name}`"
+                >
+                  {{ content.path }}
+                </div>
+                <div
+                  v-if="s.content.length > 0"
+                  class="prose mt-4 lg:mt-2 p-8"
+                  :key="`content-${s.name}`"
+                  v-html="sanitize(s.content)"
+                ></div>
+              </div>
+            </template>
           </div>
         </div>
         <div class="grid grid-cols-10 col-span-10 px-1 pt-8 mb-8 lg:col-span-3">
-            <div 
+          <div
             class="mx-2 lg:mx-0 col-span-10 lg:col-start-1"
-            v-if="content != null && projects.length > 0">
-              <div
-                class="bg-white border-b pl-4 pb-2 pt-4"
-              >
-                Related Content
-              </div>
-              <RepoOrBlogCard
+            v-if="content != null && projects.length > 0"
+          >
+            <div class="bg-white border-b pl-4 pb-2 pt-4">Related Content</div>
+            <RepoOrBlogCard
               v-for="project in projects"
               class="bg-white"
               :key="project.data.id"
@@ -175,7 +175,7 @@
               :showLogo="true"
               :showTags="false"
             />
-            </div>
+          </div>
         </div>
 
         <!-- For debugging only: refresh content button -->
@@ -214,7 +214,13 @@ import {
   ProductConfig,
 } from "../../../shared/types";
 import * as util from "../../../shared/util";
-import { fetchAuthor, fetchRepo, fetchRepoPage, wrapInHolders, recommendedRepos} from "@/plugins/data";
+import {
+  fetchAuthor,
+  fetchRepo,
+  fetchRepoPage,
+  wrapInHolders,
+  recommendedRepos,
+} from "@/plugins/data";
 import { waitForHljsLoad } from "@/plugins/preload";
 import { getStyle, ProductStyle } from "@/model/product";
 
@@ -275,7 +281,13 @@ export default class Repo extends Vue {
     }
 
     // fetch recommended repo data for the repo
-    this.reposRecommended = await recommendedRepos(this.productKey, {}, repo.metadata.tags, repo.metadata.expertise, repo.id)    
+    this.reposRecommended = await recommendedRepos(
+      this.productKey,
+      {},
+      repo.metadata.tags,
+      repo.metadata.expertise,
+      repo.id
+    );
 
     const authorIds = this.repo.metadata.authorIds || [];
     for (const aid of authorIds) {
@@ -404,6 +416,6 @@ a {
 }
 
 .content-bg {
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
 }
 </style>

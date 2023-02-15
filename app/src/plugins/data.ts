@@ -309,7 +309,10 @@ export async function recommendedRepos(
   id: string
 ): Promise<RepoData[]> {
   const collectionPath = `/products/${product}/repos`;
-  const repoData = await fetchQuery(collectionPath, q) as QueryResult<RepoData>;
+  const repoData = (await fetchQuery(
+    collectionPath,
+    q
+  )) as QueryResult<RepoData>;
 
   let recommendedObjectList = [];
 
@@ -322,7 +325,13 @@ export async function recommendedRepos(
       }
     }
     if (doc.id != id) {
-      recommendedObjectList.push({ "index": recommendedData.indexOf(doc), "data": doc, "matches": matches, "expertise": doc.metadata.expertise, "stars": doc.stats.stars })
+      recommendedObjectList.push({
+        index: recommendedData.indexOf(doc),
+        data: doc,
+        matches: matches,
+        expertise: doc.metadata.expertise,
+        stars: doc.stats.stars,
+      });
     }
   }
 
@@ -347,9 +356,9 @@ export async function recommendedRepos(
 
   recommendedObjectList = recommendedObjectList.slice(0, 5);
 
-  const reposRecommended = []
+  const reposRecommended = [];
   for (const recommendedObj of recommendedObjectList) {
-    reposRecommended.push(recommendedObj.data)
+    reposRecommended.push(recommendedObj.data);
   }
 
   return reposRecommended;
