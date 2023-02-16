@@ -49,6 +49,9 @@
                   class="opacity-80 hover:opacity-100"
                 />
               </p>
+              <p class="text-gray-500 text-sm">
+                Approved on {{ (new Date(repo.stats.dateAdded)).toLocaleDateString('en-us', { day: "numeric" , year:"numeric", month:"long"}) }}
+              </p>
               <p class="mt-2 hero-description">
                 {{ repo.metadata.longDescription }}
               </p>
