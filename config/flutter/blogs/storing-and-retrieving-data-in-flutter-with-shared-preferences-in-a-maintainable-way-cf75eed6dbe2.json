@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "isaacadariku"
+  ],
+  "author": "Isaac Adariku",
+  "title": "Using Shared Preference in Flutter in a Maintainable way",
+  "link": "https://isaacadariku.medium.com/storing-and-retrieving-data-in-flutter-with-shared-preferences-in-a-maintainable-way-cf75eed6dbe2",
+  "tags": [
+    "plugins",
+    "general",
+    "samples"
+  ]
+}
