@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": ["dougsillars","shloka-bhalgat-unskript","jayasimha-raghavan-unskript","amit-chandak-unskript"],
+  "owner": "unskript",
+  "repo": "Awesome-CloudOps-Automation",
+  "name": "Awesome CloudOps Automation",
+  "shortDescription": "unSkript is an open source library of CloudOps tasks.  It provides a framework to orchestrate them into automated RunBooks (and handles all authentication for you). Automate away your DevOps toil.",
+  "longDescription": "unSkript is an open source library of CloudOps tasks.  It provides a framework to orchestrate them into automated RunBooks (and handles all authentication for you). Automate away your DevOps toil.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "developer-tools",
+    "management-tools",
+    "operations"
+  ]
+}

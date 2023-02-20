@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "tanzilzubair"
+  ],
+  "owner": "tanzilzubair",
+  "repo": "google_mobile_ads_manager",
+  "name": "Google Mobile Ads Manager",
+  "shortDescription": "A Flutter package that provides a simple, concise, and fully managed way of interacting with the AdMobSDK for Dart, providing automatic ad pre-loading, disposal and more.",
+  "longDescription": "A Flutter package that provides a simple, concise, and fully managed way of interacting with the AdMobSDK for Dart, providing automatic ad pre-loading, disposal and more.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "general"
+  ]
+}

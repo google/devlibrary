@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["subhadiptech"],
+  "author": "Subhadip Das",
+  "title": "Why sealed class exists in Koltin",
+  "link": "https://learndroid.hashnode.dev/why-kotlin-sealed-class-exists",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}
