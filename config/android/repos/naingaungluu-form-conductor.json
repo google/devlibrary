@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "naingaungluu"
+  ],
+  "owner": "naingaungluu",
+  "repo": "form-conductor",
+  "name": "FormConductor",
+  "shortDescription": "A declarative form validation for Jetpack Compose. It provides a handful of reusable API to construct a form in simple easy steps using annotations and validation rules.",
+  "longDescription": "A declarative form validation for Jetpack Compose. It provides a handful of reusable API to construct a form in simple easy steps using annotations and validation rules.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

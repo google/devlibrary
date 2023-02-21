@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "tkarmakar27112000"
+  ],
+  "author": "Tanmoy Karmakar",
+  "title": "CI/CD for Flutter application using Bitbucket",
+  "link": "https://medium.com/@tkarmakar27112000/ci-cd-for-flutter-application-using-bitbucket-3f2824ad8054",
+  "tags": [
+    "mobile",
+    "samples",
+    "general"
+  ]
+}

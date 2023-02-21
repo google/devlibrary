@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["jintin"],
+  "author": "Tim Lin",
+  "title": "A Closer Look at Modifier in Jetpack Compose",
+  "link": "https://medium.com/proandroiddev/a-closer-look-at-modifier-in-jetpack-compose-fdf073df92bd",
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}
