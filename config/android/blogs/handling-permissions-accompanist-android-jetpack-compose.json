@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["prithviraj2002"],
+  "author": "Prithviraj Kapil",
+  "title": "Handling permissions with Accompanist in Android with Jetpack Compose | Developers Breach",
+  "link": "https://developersbreach.com/handling-permissions-accompanist-android-jetpack-compose/",
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

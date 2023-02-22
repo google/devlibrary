@@ -1,0 +1,13 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["abhisheksaxena"],
+  "author": "Abhishek Saxena",
+  "title": "Conditionals, An Easier Design Decision But A Poor Choice",
+  "link": "https://proandroiddev.com/conditionals-an-easier-design-decision-but-a-poor-choice-16a8d65c9de1",
+  "tags": [
+    "architecture",
+    "kotlin"
+  ]
+}

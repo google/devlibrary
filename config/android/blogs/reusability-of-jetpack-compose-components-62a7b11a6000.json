@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "qamar_safadi"
+  ],
+  "author": "Qamar A. Safadi",
+  "title": "Reusability of Jetpack Compose Components",
+  "link": "https://medium.com/@qamar_safadi/reusability-of-jetpack-compose-components-62a7b11a6000",
+  "tags": [
+    "kotlin",
+    "compose",
+    "modern-android-development"
+  ]
+}

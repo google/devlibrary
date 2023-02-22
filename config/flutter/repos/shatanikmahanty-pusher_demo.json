@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "shatanikmahanty"
+  ],
+  "owner": "shatanikmahanty",
+  "repo": "pusher_demo",
+  "name": "Flutter: Realtime Participants Counter",
+  "shortDescription": "A blog on how to integrate Pusher channels with Flutter and Firebase as a backend. The blog guides learners towards creating real-time participants counter using subscription count event.",
+  "longDescription": "A blog on how to integrate Pusher channels with Flutter and Firebase as a backend. The blog guides learners towards creating real-time participants counter using subscription count event.",
+  "content": "blog.md",
+  "pages": [],
+  "tags": [
+    "firebase",
+    "mobile",
+    "plugins"
+  ]
+}

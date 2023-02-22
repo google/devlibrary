@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ethiel97"
+  ],
+  "owner": "Ethiel97",
+  "repo": "bank_cards_ui",
+  "name": "Bank Cards UI",
+  "shortDescription": "An experimental Flutter app for displaying bank cards in a sleek and enjoyable way with cool animations.",
+  "longDescription": "An experimental Flutter app for displaying bank cards in a sleek and enjoyable way with cool animations.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}

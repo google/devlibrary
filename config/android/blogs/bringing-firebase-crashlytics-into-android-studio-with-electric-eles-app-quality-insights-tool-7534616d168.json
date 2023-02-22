@@ -1,0 +1,12 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["sindkarp"],
+  "author": "Priya Sindkar",
+  "title": "Exploring Electric Ele’s App Quality Insights Tool Window",
+  "link": "https://medium.com/novumlogic/bringing-firebase-crashlytics-into-android-studio-with-electric-eles-app-quality-insights-tool-7534616d168",
+  "tags": [
+    "build-tools"
+  ]
+}
