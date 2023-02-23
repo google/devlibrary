@@ -115,8 +115,12 @@ async function refreshAllProjects() {
     const blogsToDelete = getDiff(existingIds.blogs, newBlogIds);
     for (const b of blogsToDelete) {
       console.log(`Deleting ${product} blog ${b}`);
-      await deleteBlogData(product, b);
-      await unIndexBlog(b);
+      await deleteBlogData(product, b).catch((err) => {
+        console.log(err);
+      });
+      await unIndexBlog(b).catch((err) => {
+        console.log(err);
+      });
     }
 
     const newRepoIds = Object.keys(repos);
