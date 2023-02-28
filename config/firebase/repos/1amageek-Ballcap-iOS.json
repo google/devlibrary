@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "1amageek"
+  ],
+  "owner": "1amageek",
+  "repo": "Ballcap-iOS",
+  "name": "TODO: human readable name",
+  "shortDescription": "TODO: ~10 words",
+  "longDescription": "TODO: ~2 sentences",
+  "content": "README.md",
+  "pages": [],
+  "tags": []
+}
