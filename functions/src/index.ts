@@ -305,9 +305,16 @@ export const refreshProjectsCron = functions
   });
 
 // Cron job to refresh Authors
-export const refreshAuthors = functions.https.onRequest(
+export const refreshAuthors = functions.runWith({
+  memory: "2GB",
+  timeoutSeconds: 540,
+}).https.onRequest(
   async (request, response) => {
-    await refreshAllProjects();
+    try{
+    await refreshAllAuthors();
+    } catch (e){
+      response.status(400).json({ e });
+    }
     response.json({ status: "ok" });
   }
 );
