@@ -305,13 +305,12 @@ export const refreshProjectsCron = functions
   });
 
 // Cron job to refresh Authors
-export const refreshAuthors = functions.runWith({
-  memory: "2GB",
-  timeoutSeconds: 540,
-}).pubsub.schedule("0 0 * * *")
-.onRun(async (context) => {
-  await refreshAllAuthors();
-});
+export const refreshAuthors = functions.https.onRequest(
+  async (request, response) => {
+    await refreshAllProjects();
+    response.json({ status: "ok" });
+  }
+);
 
 // When in the functions emulator we provide some simple webhooks to refresh things
 if (process.env.FUNCTIONS_EMULATOR) {
