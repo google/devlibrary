@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "abhishekdoshi26"
+  ],
+  "owner": "AbhishekDoshi26",
+  "repo": "super_extensions",
+  "name": "Super Extensions",
+  "shortDescription": "super_extensions is a package that contains different widely used extension methods. This package/project is completely open-source so anyone can freely open a PR if you feel something is missed out.",
+  "longDescription": "super_extensions is a package that contains different widely used extension methods. This package/project is completely open-source so anyone can freely open a PR if you feel something is missed out.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "plugins",
+    "samples"
+  ]
+}

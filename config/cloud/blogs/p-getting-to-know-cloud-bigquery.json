@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["mustapha"],
+  "author": "Mustapha Adekunle",
+  "title": "Getting to Know Cloud BigQuery",
+  "link": "https://dataengineeringgcp.substack.com/p/getting-to-know-cloud-bigquery",
+  "tags": [
+    "data-analytics",
+    "serverless-computing"
+  ]
+}

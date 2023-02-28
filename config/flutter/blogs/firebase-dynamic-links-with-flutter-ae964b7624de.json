@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["ayeshaiftikhar"],
+  "author": "Ayesha Iftikhar",
+  "title": "Firebase Dynamic Links with Flutter",
+  "link": "https://medium.com/flutterevo/firebase-dynamic-links-with-flutter-ae964b7624de",
+  "tags": [
+    "firebase",
+    "mobile",
+    "general"
+  ]
+}
