@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "vaibhav2002"
+  ],
+  "owner": "Vaibhav2002",
+  "repo": "NewsGo",
+  "name": "NewsGO - Your daily shot of news on the go 🚀",
+  "shortDescription": "NewsGo is a news feed application built using Kotlin Multi-platform Mobile. NewsGo currently offers Android and iOS Applications with Desktop and Website support to be added soon.",
+  "longDescription": "NewsGo is a news feed application built using Kotlin Multi-platform Mobile. NewsGo currently offers Android and iOS Applications with Desktop and Website support to be added soon.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "compose"
+  ]
+}

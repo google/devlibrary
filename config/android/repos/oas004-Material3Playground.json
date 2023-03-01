@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "oas004"
+  ],
+  "owner": "oas004",
+  "repo": "Material3Playground",
+  "name": "Material3Playground",
+  "shortDescription": "Desktop Playground to check how changing the color system can affect the different components in Material 3. Mainly used to learn and to get an overview of the Material 3 design components.",
+  "longDescription": "Desktop Playground to check how changing the color system can affect the different components in Material 3. Mainly used to learn and to get an overview of the Material 3 design components.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui",
+    "kotlin"
+  ]
+}
