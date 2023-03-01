@@ -301,6 +301,69 @@ export async function queryAuthorsByProduct(
   return authorResults as QueryResult<AuthorData>;
 }
 
+export async function recommendedRepos(
+  product: string,
+  q: FirestoreQuery,
+  tags: string[],
+  repoExpertise: string,
+  id: string
+): Promise<RepoData[]> {
+  const collectionPath = `/products/${product}/repos`;
+  const repoData = (await fetchQuery(
+    collectionPath,
+    q
+  )) as QueryResult<RepoData>;
+
+  let recommendedObjectList = [];
+
+  const recommendedData = repoData.docs.map((d) => d.data);
+  for (const doc of recommendedData) {
+    let matches = 0;
+    for (const tag of tags) {
+      if (doc.metadata.tags.includes(tag)) {
+        matches = matches + 1;
+      }
+    }
+    if (doc.id != id) {
+      recommendedObjectList.push({
+        index: recommendedData.indexOf(doc),
+        data: doc,
+        matches: matches,
+        expertise: doc.metadata.expertise,
+        stars: doc.stats.stars,
+      });
+    }
+  }
+
+  // sort the list based on matches, experise and star level
+  recommendedObjectList.sort(function (a, b) {
+    if (a.matches < b.matches) return 1;
+    if (a.matches == b.matches) {
+      if (a.expertise == repoExpertise && b.expertise != repoExpertise) {
+        return -1;
+      } else if (a.expertise != repoExpertise && b.expertise == repoExpertise) {
+        return 1;
+      } else {
+        if (a.stars > b.stars) {
+          return -1;
+        }
+        return 1;
+      }
+    }
+    if (a.matches > b.matches) return -1;
+    return 0;
+  });
+
+  recommendedObjectList = recommendedObjectList.slice(0, 5);
+
+  const reposRecommended = [];
+  for (const recommendedObj of recommendedObjectList) {
+    reposRecommended.push(recommendedObj.data);
+  }
+
+  return reposRecommended;
+}
+
 /**
  * See: https://stackoverflow.com/a/2450976/324977
  */

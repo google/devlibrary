@@ -94,7 +94,9 @@ async function deepDelete(ref: admin.firestore.DocumentReference) {
   }
 
   console.log(`Deleting ${ref.path}`);
-  await ref.delete();
+  await ref.delete().catch((err) => {
+    console.log(err);
+  });
 }
 
 export async function deleteRepoData(product: string, id: string) {

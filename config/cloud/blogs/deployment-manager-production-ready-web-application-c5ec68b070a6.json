@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "luillyfe"
+  ],
+  "author": "Fermin Blanco",
+  "title": "Deployment-manager: Production Ready Web Application",
+  "link": "https://medium.com/google-cloud/deployment-manager-production-ready-web-application-c5ec68b070a6",
+  "tags": [
+    "compute",
+    "networking",
+    "operations"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["amitshekhar"],
+  "author": "Amit Shekhar",
+  "title": "Mastering Kotlin Coroutines",
+  "link": "https://amitshekhar.me/blog/kotlin-coroutines",
+  "tags": [
+    "kotlin"
+  ]
+}

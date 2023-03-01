@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "gagan-bhirangi"
+  ],
+  "author": "Gagan Bhirangi",
+  "title": "Skeleton Screen in Flutter",
+  "link": "https://medium.com/nerd-for-tech/skeleton-screen-in-flutter-3570bf23c28e",
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}

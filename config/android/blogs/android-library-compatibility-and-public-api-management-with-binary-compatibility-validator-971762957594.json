@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "kodeflap"
+  ],
+  "author": "Pooja Shaji",
+  "title": "Android library compatibility and public API management",
+  "link": "https://medium.com/@KodeFlap/android-library-compatibility-and-public-api-management-with-binary-compatibility-validator-971762957594",
+  "tags": [
+    "build-tools",
+    "modern-android-development",
+    "kotlin"
+  ]
+}

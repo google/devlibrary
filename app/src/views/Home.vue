@@ -56,7 +56,9 @@
         <div class="value-prop-image">
           <img src="../../public/img/guided-learning.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Learn from developer community author content</h2>
+        <h2 class="text-3xl mb-6">
+          Learn from developer community author content
+        </h2>
         <p class="text-lg px-8 pb-8">
           Visit each product page to filter projects by Content Type, Category
           or Expertise level.
@@ -90,7 +92,9 @@
         <div class="value-prop-image">
           <img src="../../public/img/inspiration.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Build and showcase your technical projects</h2>
+        <h2 class="text-3xl mb-6">
+          Build and showcase your technical projects
+        </h2>
         <p class="text-lg px-8 pb-8">
           Submit your projects and blogs to Dev Library to inspire other
           developers.
@@ -272,10 +276,7 @@ import {
 } from "@/plugins/data";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
-import {
-  BlogData,
-  RepoData,
-} from "../../../shared/types";
+import { BlogData, RepoData } from "../../../shared/types";
 import { getPromoVideoMain, getPromoVideoPlaylist } from "../model/videos";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";

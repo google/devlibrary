@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "isaacadariku"
+  ],
+  "author": "Isaac Adariku",
+  "title": "Using Flutter’s built-in support for accessibility (a11y)",
+  "link": "https://isaacadariku.medium.com/using-flutters-built-in-support-for-accessibility-a11y-2d4b1268a841",
+  "tags": [
+    "mobile",
+    "plugins",
+    "widgets"
+  ]
+}

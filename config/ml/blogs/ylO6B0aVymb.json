@@ -3,7 +3,7 @@
   "version": 1,
   "source": "medium",
   "authorIds": [
-    "link"
+    "mustaphaunubi"
   ],
   "author": "Mustapha Momoh",
   "title": "This article explores the pseudocoloring issue often encountered during preprocessing for computer vision. It provides a simple fix that involves changing the default colormap of matplotlib.",
