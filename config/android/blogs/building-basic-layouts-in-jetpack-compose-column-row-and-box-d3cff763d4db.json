@@ -9,6 +9,7 @@
   "title": "Building Basic Layouts in Jetpack Compose (Column, Row, Box)",
   "link": "https://veroanggra.medium.com/building-basic-layouts-in-jetpack-compose-column-row-and-box-d3cff763d4db",
   "tags": [
-    "compose"
+    "compose",
+    "ui"
   ]
 }
