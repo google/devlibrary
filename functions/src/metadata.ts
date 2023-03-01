@@ -33,7 +33,7 @@ async function listAuthorFiles(): Promise<string[]> {
   return await github.getDirectoryContent(
     "google",
     "devlibrary",
-    "main",
+    "b/269566702",
     `config/authors`
   );
 }
