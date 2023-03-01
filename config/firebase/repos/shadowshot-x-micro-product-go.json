@@ -3,10 +3,10 @@
   "version": 1,
   "source": "github",
   "authorIds": [
-    "1amageek"
+    "shadowshot-x"
   ],
-  "owner": "1amageek",
-  "repo": "Ballcap-iOS",
+  "owner": "shadowshot-x",
+  "repo": "micro-product-go",
   "name": "TODO: human readable name",
   "shortDescription": "TODO: ~10 words",
   "longDescription": "TODO: ~2 sentences",

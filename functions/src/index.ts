@@ -313,6 +313,7 @@ export const refreshAuthors = functions.runWith({
     try{
     await refreshAllAuthors();
     } catch (e){
+      console.log(e)
       response.status(400).json({ e });
     }
     response.json({ status: "ok" });

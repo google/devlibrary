@@ -60,7 +60,7 @@ async function listConfigFiles(
   const ghFiles = await github.getDirectoryContent(
     "google",
     "devlibrary",
-    "main",
+    "b/269566702",
     `config/${product}/${type}`
   ).catch((err) => {
     console.log(err)
@@ -75,7 +75,7 @@ async function readConfigFile(filePath: string): Promise<string> {
     return fs.readFileSync(filePath).toString();
   }
 
-  return await github.getFileContent("google", "devlibrary", "main", filePath);
+  return await github.getFileContent("google", "devlibrary", "b/269566702", filePath);
 }
 
 export async function loadAuthorMetadata() {
