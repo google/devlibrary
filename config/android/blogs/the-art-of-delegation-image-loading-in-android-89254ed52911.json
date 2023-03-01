@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sachankapil"
+  ],
+  "author": "Kapil Sachan",
+  "title": "The Art of Delegation: Image Loading in Android! 🤖 🚀",
+  "link": "https://sachankapil.medium.com/the-art-of-delegation-image-loading-in-android-89254ed52911",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "architecture"
+  ]
+}

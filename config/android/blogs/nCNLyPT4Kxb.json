@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "pranaypatel"
+  ],
+  "author": "Home At",
+  "title": "Jetpack Compose Preview like a pro!",
+  "link": "https://link.medium.com/nCNLyPT4Kxb",
+  "tags": [
+    "compose",
+    "build-tools",
+    "ui"
+  ]
+}

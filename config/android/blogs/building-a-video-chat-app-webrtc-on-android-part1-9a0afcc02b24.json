@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["skydoves"],
+  "author": "Jaewoong Eum",
+  "title": "Building a Video Chat App: WebRTC on Android (Part1)",
+  "link": "https://medium.com/proandroiddev/building-a-video-chat-app-webrtc-on-android-part1-9a0afcc02b24",
+  "tags": [
+    "build-tools",
+    "ui",
+    "kotlin"
+  ]
+}
