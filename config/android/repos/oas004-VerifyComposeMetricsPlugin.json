@@ -1,0 +1,20 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "oas004"
+  ],
+  "owner": "oas004",
+  "repo": "VerifyComposeMetricsPlugin",
+  "name": "VerifyComposeMetrics",
+  "shortDescription": "Gradle plugin to verify inferred class stability by using the compose metrics report.",
+  "longDescription": "Gradle plugin to verify inferred class stability by using the compose metrics report.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui",
+    "build-tools"
+  ]
+}

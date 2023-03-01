@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "vaibhav2002"
+  ],
+  "author": "Vaibhav Jaiswal",
+  "title": "Collecting Kotlin Flows in a Lifecycle Aware Manner",
+  "link": "https://medium.com/@vaibhav3011/making-kotlin-flow-collection-lifecycle-aware-b395198720ca",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "architecture"
+  ]
+}
