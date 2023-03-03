@@ -12,6 +12,7 @@
     "nlp",
     "vision",
     "library",
-    "collection"
+    "collection",
+    "keras"
   ]
 }
