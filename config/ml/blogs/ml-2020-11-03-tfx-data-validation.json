@@ -9,6 +9,7 @@
   "title": "Data Validation with TensorFlow eXtended (TFX)",
   "link": "https://dzlab.github.io/ml/2020/11/03/tfx-data-validation/",
   "tags": [
-    "nlp"
+    "nlp",
+    "tfx"
   ]
 }

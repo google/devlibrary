@@ -10,6 +10,7 @@
   "link": "https://keras.io/examples/vision/gradient_centralization/",
   "tags": [
     "tf",
-    "vision"
+    "vision",
+    "keras"
   ]
 }

@@ -9,6 +9,7 @@
   "title": "Custom object detection in the browser using TensorFlow.js",
   "link": "https://blog.tensorflow.org/2021/01/custom-object-detection-in-browser.html",
   "tags": [
-    "web"
+    "web",
+    "tensorflow-js"
   ]
 }
