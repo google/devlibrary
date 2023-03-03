@@ -93,6 +93,42 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         label: "Theory",
         value: "theory",
       },
+      {
+        label: "TensorFlow Core",
+        value: "tensorflow-core",
+      },
+      {
+        label: "TFX",
+        value: "tfx",
+      },
+      {
+        label: "TFLite",
+        value: "tflite",
+      },
+      {
+        label: "TensorFlow.js",
+        value: "tensorflow-js",
+      },
+      {
+        label: "Keras",
+        value: "keras",
+      },
+      {
+        label: "JAX/Flax",
+        value: "jax-flax",
+      },
+      {
+        label: "BigQuery ML",
+        value: "bigquery-ml",
+      },
+      {
+        label: "TPU",
+        value: "tpu",
+      },
+      {
+        label: "Other Google ML products",
+        value: "other-google-ml-products",
+      }
     ],
   },
   angular: {
