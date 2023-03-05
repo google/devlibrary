@@ -24,11 +24,11 @@
     <!-- Tags -->
     <div v-if="showTags" class="card-tags mt-4 frc flex-wrap gap-2">
       <TagChip
-        v-for="t in repo.metadata.tags"
+        v-for="(t, index) in displayedTags"
         :key="t"
-        :label="getTag(t).label"
-        :textColor="getTag(t).textColor"
-        :bgColor="getTag(t).bgColor"
+        :label="getTag(t, index).label"
+        :textColor="getTag(t, index).textColor"
+        :bgColor="getTag(t, index).bgColor"
       />
     </div>
 
@@ -148,8 +148,18 @@ export default class LargeRepoCard extends Vue {
     return dates.renderDaysAgo(lastUpdated);
   }
 
-  public getTag(value: string) {
-    return product.getTag(this.repo.product, value);
+  get displayedTags() {
+    return this.repo.metadata.tags.slice(0, 4);
+  }
+
+  public getTag(value: string, index: number) {
+    if (index <= 2) return product.getTag(this.repo.product, value);
+
+    return {
+      label: `+${this.repo.metadata.tags.length - 3}`,
+      textColor: "text-gray-500",
+      bgColor: "bg-gray-50",
+    };
   }
 
   get authorPhotoUrl(): string {
@@ -237,3 +247,4 @@ export default class LargeRepoCard extends Vue {
 </script>
 
 <style scoped lang="postcss"></style>
+i
