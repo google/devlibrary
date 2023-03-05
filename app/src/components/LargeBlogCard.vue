@@ -145,7 +145,21 @@ export default class LargeBlogCard extends Vue {
   }
 
   get displayedTags() {
-    return this.blog.metadata.tags.slice(0, 4);
+    const filters = this.$route.query.category;
+    if (!filters) return this.blog.metadata.tags.slice(0, 4);
+    return this.blog.metadata.tags
+      .sort((a, b) => {
+        if (filters.includes(a) && filters.includes(b)) {
+          return a.localeCompare(b);
+        } else if (filters.includes(a)) {
+          return -1;
+        } else if (filters.includes(b)) {
+          return 1;
+        } else {
+          return a.localeCompare(b);
+        }
+      })
+      .slice(0, 4);
   }
 
   public getTag(value: string, index: number) {
