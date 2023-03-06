@@ -9,6 +9,7 @@
   "title": "Efficiently using TPU for image classification",
   "link": "https://medium.com/swlh/efficiently-using-tpu-for-image-classification-ed20d2970893",
   "tags": [
-    "vision"
+    "vision",
+    "tpu"
   ]
 }

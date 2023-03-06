@@ -19,6 +19,7 @@
     "library",
     "notebook",
     "collection",
-    "web"
+    "web",
+    "tensorflow-js"
   ]
 }
