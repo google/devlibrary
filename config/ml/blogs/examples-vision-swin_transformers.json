@@ -11,6 +11,7 @@
   "tags": [
     "tf",
     "vision",
-    "model"
+    "model",
+    "keras"
   ]
 }

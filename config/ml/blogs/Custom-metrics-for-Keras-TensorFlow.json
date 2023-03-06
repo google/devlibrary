@@ -9,6 +9,7 @@
   "title": "Custom metrics for Keras/TensorFlow",
   "link": "https://medium.com/analytics-vidhya/custom-metrics-for-keras-tensorflow-ae7036654e05",
   "tags": [
-    "theory"
+    "theory",
+    "keras"
   ]
 }
