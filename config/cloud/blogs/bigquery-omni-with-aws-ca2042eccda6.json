@@ -1,0 +1,29 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "chillcaley"
+  ],
+  "author": "Jaeyeon Baek",
+  "title": "BigQuery Omni with AWS",
+  "link": "https://medium.com/@chillcaley/bigquery-omni-with-aws-ca2042eccda6",
+  "tags": ["ai-ml",
+  "api-management",
+  "compute",
+  "containers",
+  "data-analytics",
+  "databases",
+  "developer-tools",
+  "healthcare-life-sciences",
+  "hybrid-multicloud",
+  "iot",
+  "management-tools",
+  "media-gaming",
+  "migration",
+  "networking",
+  "operations",
+  "security-identity",
+  "serverless-computing",
+  "storage"]
+}
