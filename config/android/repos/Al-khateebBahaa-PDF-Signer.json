@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "al-khateebbahaa"
+  ],
+  "owner": "Al-khateebBahaa",
+  "repo": "PDF-Signer",
+  "name": "PDF-Signer",
+  "shortDescription": "PDF-Signer is a Library that allows you to add Digital Signatures to Any PDF file by picking a signature from a gallery or handwriting",
+  "longDescription": "PDF-Signer is a Library that allows you to add Digital Signatures to Any PDF file by picking a signature from a gallery or handwriting",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "ui"
+  ]
+}

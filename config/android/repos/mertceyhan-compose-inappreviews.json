@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mertceyhan"
+  ],
+  "owner": "mertceyhan",
+  "repo": "compose-inappreviews",
+  "name": "compose-inappreviews",
+  "shortDescription": "In-App Reviews for Jetpack Compose\nThis library provides an interface and a default implementation to make it easy to use Android's In-App Reviews API in a Jetpack Compose project.",
+  "longDescription": "In-App Reviews for Jetpack Compose\nThis library provides an interface and a default implementation to make it easy to use Android's In-App Reviews API in a Jetpack Compose project.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools",
+    "compose",
+    "kotlin"
+  ]
+}

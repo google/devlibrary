@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "dipak1"
+  ],
+  "author": "Dipak Prasad",
+  "title": "Parsing json data in flutter",
+  "link": "https://medium.com/@dipak1/parsing-json-data-in-flutter-b16e7c3f3656",
+  "tags": [
+    "general",
+    "mobile"
+  ]
+}

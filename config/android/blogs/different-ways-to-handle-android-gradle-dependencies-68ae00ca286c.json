@@ -1,0 +1,15 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "kodeflap"
+  ],
+  "author": "Pooja Shaji",
+  "title": "Different ways to handle android gradle deendencies",
+  "link": "https://medium.com/@KodeFlap/different-ways-to-handle-android-gradle-dependencies-68ae00ca286c",
+  "tags": [
+    "modern-android-development",
+    "build-tools"
+  ]
+}

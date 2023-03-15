@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ndubuisiaso"
+  ],
+  "author": "Aso Ndubuisi",
+  "title": "Shared Preferences in Flutter: A Guide with a Demonstrative",
+  "link": "https://medium.com/@ndubuisiaso/shared-preferences-in-flutter-a-guide-with-a-demonstrative-app-e03582ccce9a",
+  "tags": [
+    "firebase",
+    "mobile"
+  ]
+}
