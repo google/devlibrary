@@ -1,0 +1,19 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ethiel97"
+  ],
+  "owner": "ethiel97",
+  "repo": "bounce_tap",
+  "name": "BounceTap",
+  "shortDescription": "Great flutter and efficacious package for an on-tap bounce animation on any flutter widget",
+  "longDescription": "Great flutter and efficacious package for an on-tap bounce animation on any flutter widget",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "plugins",
+    "mobile"
+  ]
+}

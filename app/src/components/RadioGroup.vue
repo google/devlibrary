@@ -38,7 +38,7 @@
           <div class="mdc-radio__inner-circle"></div>
         </div>
       </div>
-      <label class="text-sm">{{ entry.key }}</label>
+      <span class="text-sm">{{ entry.key }}</span>
     </label>
   </div>
 </template>

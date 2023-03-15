@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "vaibhav2002"
+  ],
+  "owner": "Vaibhav2002",
+  "repo": "DocuBox-AndroidApp",
+  "name": "DocuBox - A secure cloud based file storage app",
+  "shortDescription": "DocuBox is an app where you can securely upload your files on the cloud – from family pictures and audio recordings to spreadsheets, presentations and other confidential documents.",
+  "longDescription": "DocuBox is an app where you can securely upload your files on the cloud – from family pictures and audio recordings to spreadsheets, presentations and other confidential documents.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "architecture"
+  ]
+}

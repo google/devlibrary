@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "getstream"
+  ],
+  "owner": "GetStream",
+  "repo": "webrtc-android",
+  "name": "WebRTC Android",
+  "shortDescription": "A WebRTC pre-compiled library for Android reflects the recent WebRTC updates to facilitate real-time video chat for Android, and Compose.",
+  "longDescription": "A WebRTC pre-compiled library for Android reflects the recent WebRTC updates to facilitate real-time video chat for Android, and Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "build-tools",
+    "compose"
+  ]
+}

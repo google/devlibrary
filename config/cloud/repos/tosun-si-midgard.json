@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "tosun-si"
+  ],
+  "owner": "tosun-si",
+  "repo": "midgard",
+  "name": "Midgard",
+  "shortDescription": "Midgard is a wrapper on Beam Kotlin, allowing more concise and expressive code. It removes Beam boilerplate code and proposes more Functional Programming style",
+  "longDescription": "Midgard is a wrapper on Beam Kotlin, allowing more concise and expressive code. It removes Beam boilerplate code and proposes more Functional Programming style",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "data-analytics",
+    "serverless-computing",
+    "developer-tools"
+  ]
+}

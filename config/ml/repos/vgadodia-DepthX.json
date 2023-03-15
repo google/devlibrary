@@ -15,6 +15,7 @@
   "tags": [
     "mobile",
     "nlp",
-    "vision"
+    "vision",
+    "tensorflow-js"
   ]
 }

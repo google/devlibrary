@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["oas004"],
+  "author": "Odin Asbjornsen",
+  "title": "Utilising the Canvas in Jetpack Compose to build a SSPI",
+  "link": "https://medium.com/proandroiddev/utilising-the-canvas-in-jetpack-compose-to-build-a-squaresegmentedprogressindicator-facb7944086b",
+  "tags": [
+    "compose",
+    "ui",
+    "modern-android-development"
+  ]
+}

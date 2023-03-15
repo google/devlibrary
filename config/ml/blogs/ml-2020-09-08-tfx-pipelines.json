@@ -9,6 +9,7 @@
   "title": "Demystifying TFX Standard Components",
   "link": "https://dzlab.github.io/ml/2020/09/08/tfx-pipelines/",
   "tags": [
-    "theory"
+    "theory",
+    "tfx"
   ]
 }

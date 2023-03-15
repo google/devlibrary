@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "qamarelsafadi"
+  ],
+  "owner": "qamarelsafadi",
+  "repo": "ComposeMultiplatform",
+  "name": "Compose Multiplatform",
+  "shortDescription": "This repository will contain instructions to start your first Compose Multiplatform Project.",
+  "longDescription": "This repository will contain instructions to start your first Compose Multiplatform Project.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

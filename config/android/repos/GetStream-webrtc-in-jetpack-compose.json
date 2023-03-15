@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "getstream"
+  ],
+  "owner": "GetStream",
+  "repo": "webrtc-in-jetpack-compose",
+  "name": "WebRTC in Jetpack Compose",
+  "shortDescription": "This project demonstrates WebRTC protocol to facilitate real-time video communications with Jetpack Compose.",
+  "longDescription": "This project demonstrates WebRTC protocol to facilitate real-time video communications with Jetpack Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "kotlin"
+  ]
+}

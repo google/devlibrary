@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "cavinmac"
+  ],
+  "author": "Cavin Macwan",
+  "title": "Integrate Dialogflow(Chatbot) in Flutter — 2023",
+  "link": "https://medium.com/@CavinMac/integrate-dialogflow-chatbot-in-flutter-985d6019b819",
+  "tags": [
+    "mobile",
+    "widgets",
+    "plugins"
+  ]
+}
