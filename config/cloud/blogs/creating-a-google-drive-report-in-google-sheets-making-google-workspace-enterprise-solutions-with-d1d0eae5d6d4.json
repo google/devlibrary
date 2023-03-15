@@ -1,0 +1,10 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["mhawksey"],
+  "author": "Martin Hawksey",
+  "title": "Supercharging Google Drive reporting in Google Sheets",
+  "link": "https://medium.com/cts-technologies/creating-a-google-drive-report-in-google-sheets-making-google-workspace-enterprise-solutions-with-d1d0eae5d6d4",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"]
+}

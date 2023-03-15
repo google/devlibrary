@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ayeshaiftikhar"
+  ],
+  "author": "Ayesha Iftikhar",
+  "title": "Firebase Authentications with Flutter",
+  "link": "https://seayeshaiftikhar.medium.com/firebase-authentications-with-flutter-eed17e5b4782",
+  "tags": [
+    "flutter"
+  ]
+}

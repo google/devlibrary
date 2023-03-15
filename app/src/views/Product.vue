@@ -469,6 +469,7 @@ export default class Product extends Vue {
     }
     if (hasCategoryParams) {
       url += `&category=${categoryParams}`;
+      this.$route.query.category = categoryParams;
     }
     window.history.replaceState(null, "", url);
   }

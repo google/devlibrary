@@ -12,6 +12,7 @@
     "mobile",
     "nlp",
     "vision",
-    "library"
+    "library",
+    "tensorflow-js"
   ]
 }
