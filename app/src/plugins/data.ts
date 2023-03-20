@@ -278,7 +278,6 @@ export async function queryAuthorProjects(authorId: string) {
 export async function queryUsingAuthorData(
   products: string[], returnBlogs: boolean, returnOpenSource: boolean, sortBy: string
 ) {
-  console.log(returnBlogs, returnOpenSource)
   const res = await queryAuthors({});
   const allAuthorData = res.docs
     .map((d) => d.data)
@@ -321,16 +320,6 @@ export async function queryUsingAuthorData(
       ],
     }; 
   }
-  //   q = {
-  //     orderBy: [
-  //       {
-  //         fieldPath: "metadata.authorIds[0]",
-  //         direction: "asc",
-  //       },
-  //     ],
-  //   }; 
-  // }
-
 
     for(const product of products){ 
       if(returnBlogs){
@@ -361,7 +350,6 @@ export async function queryUsingAuthorData(
         }
       }
     }
-  console.log(authorList)
 
   if(sortBy == "name"){
     for(const auth of allAuthorData) {
@@ -401,36 +389,6 @@ export async function queryUsingAuthorData(
         }
       }
   }
-  console.log(authorResults)
-
-  // for(const author of allAuthorData) {
-  //   if(authorSet.size == 0) {
-  //     let toAdd = false
-  //     if(returnOpenSource && author.metadata.githubURL) {
-  //       toAdd = true
-  //     }
-  //     if(returnBlogs && author.metadata.mediumURL) {
-  //       toAdd = true
-  //     }
-  //     if(toAdd){
-  //       authorResults.push(author)
-  //     }
-  //   } else {
-  //     if(authorSet.has(author.id)){
-  //       let toAdd = false
-  //       if(returnOpenSource && author.metadata.githubURL) {
-  //         toAdd = true
-  //       }
-  //       if(returnBlogs && author.metadata.mediumURL) {
-  //         toAdd = true
-  //       }
-  //       if(toAdd){
-  //         authorResults.push(author)
-  //       }
-  //     }
-  //   }
-  // }
-
   return authorResults
 }
 

@@ -431,7 +431,6 @@ export default class Authors extends Vue {
     }
 
     const onlyTypeFilter = selectedProducts.every(elem => ["open-source", "blog"].includes(elem))
-    console.log("only type filter encountered", onlyTypeFilter)
 
     if(onlyTypeFilter){
       const x= Object.values(ALL_PRODUCTS).sort((a, b) =>
@@ -441,8 +440,6 @@ export default class Authors extends Vue {
         selectedProducts.push(ele.key)
       }
     }
-
-    console.log(selectedProducts)
 
 
     if(selectedProducts.length > 0){
@@ -507,7 +504,6 @@ export default class Authors extends Vue {
 
   @Watch("sortBy")
   public onSortByChanged() {
-    console.log("filter changed", this.sortBy)
     this.onFiltersTypeChanged()
   }
 
