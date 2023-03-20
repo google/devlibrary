@@ -711,4 +711,32 @@ input {
 #pagebody {
   min-height: 60vh;
 }
+
+.filter-chip {
+  @apply flex flex-row items-center;
+  @apply px-3 py-1 text-sm text-gblue-700 border border-gray-200 rounded-full;
+  @apply cursor-pointer;
+}
+
+.filter-chip:hover {
+  @apply bg-gblue-50;
+}
+
+.filter-chip:active {
+  @apply bg-gblue-100;
+}
+
+/** slide-in-left transition */
+.slide-in-left-leave-active,
+.slide-in-left-enter-active {
+  transition: 0.25s;
+}
+.slide-in-left-enter-to {
+  transform: translate(0, 0);
+}
+.slide-in-left-enter,
+.slide-in-left-leave-to {
+  transform: translate(120%, 0);
+}
+
 </style>
