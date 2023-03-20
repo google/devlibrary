@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["kaaveh"],
+  "author": "Kaaveh Mohamedi",
+  "title": "All about navigation in the Jetpack Compose-based production code-base",
+  "link": "https://proandroiddev.com/all-about-navigation-in-the-jetpack-compose-based-production-code-base-902706b8466d?source=user_profile---------1----------------------------",
+  "tags": [
+    "compose",
+    "architecture",
+    "modern-android-development"
+  ]
+}

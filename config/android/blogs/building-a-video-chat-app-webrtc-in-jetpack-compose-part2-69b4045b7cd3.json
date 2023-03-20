@@ -1,0 +1,14 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["skydoves"],
+  "author": "Jaewoong Eum",
+  "title": "Building a Video Chat App: WebRTC in Jetpack Compose (Part2)",
+  "link": "https://proandroiddev.com/building-a-video-chat-app-webrtc-in-jetpack-compose-part2-69b4045b7cd3",
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

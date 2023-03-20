@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["chillcaley"],
+  "author": "Jaeyeon Baek",
+  "title": "Build a chat server with Cloud Run | Google Cloud Blog",
+  "link": "https://cloud.google.com/blog/topics/developers-practitioners/build-chat-server-cloud-run",
+  "tags": [
+    "serverless-computing",
+    "containers"
+  ]
+}

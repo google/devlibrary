@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ahmad-hamwi"
+  ],
+  "author": "Ahmad Hamwi",
+  "title": "What happens when you run “flutter upgrade”?",
+  "link": "https://medium.com/@ahmad-hamwi/what-happens-when-you-run-flutter-upgrade-b15c99d12c2d",
+  "tags": [
+    "general"
+  ]
+}
