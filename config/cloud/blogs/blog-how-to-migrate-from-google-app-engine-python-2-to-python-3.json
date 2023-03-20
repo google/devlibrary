@@ -1,0 +1,16 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "cameronhenneke"
+  ],
+  "author": "Cameron Henneke",
+  "title": "How to Migrate from App Engine Python 2 to Python 3 with Minimal Risk | GQueues",
+  "link": "https://www.gqueues.com/blog/how-to-migrate-from-google-app-engine-python-2-to-python-3",
+  "tags": [
+    "migration",
+    "serverless-computing",
+    "compute"
+  ]
+}

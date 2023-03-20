@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "codesue"
+  ],
+  "author": "Suzen Fylke",
+  "title": "How to Visualize Custom TFX Artifacts With InteractiveContext",
+  "link": "https://codesue.com/posts/how-to-visualize-custom-tfx-artifacts-with-interactivecontext/",
+  "tags": [
+    "tfx"
+  ]
+}

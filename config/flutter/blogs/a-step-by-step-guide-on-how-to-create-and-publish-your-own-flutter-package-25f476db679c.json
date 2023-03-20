@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ndubuisiaso"
+  ],
+  "author": "Orji Aso",
+  "title": "How to Create and Publish Your Own Flutter Package",
+  "link": "https://medium.com/@ndubuisiaso/a-step-by-step-guide-on-how-to-create-and-publish-your-own-flutter-package-25f476db679c",
+  "tags": [
+    "mobile",
+    "plugins",
+    "general"
+  ]
+}

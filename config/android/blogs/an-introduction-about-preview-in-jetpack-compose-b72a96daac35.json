@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["kaaveh"],
+  "author": "Kaaveh Mohamedi",
+  "title": "An introduction about Preview in Jetpack Compose",
+  "link": "https://proandroiddev.com/an-introduction-about-preview-in-jetpack-compose-b72a96daac35",
+  "tags": [
+    "compose",
+    "architecture",
+    "modern-android-development"
+  ]
+}

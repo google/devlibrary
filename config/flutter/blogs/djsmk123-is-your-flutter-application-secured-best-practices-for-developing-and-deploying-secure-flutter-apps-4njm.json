@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["mdmobin"],
+  "author": "Md Mobin",
+  "title": "Is your Flutter application Secured? Best Practices for Developing and Deploying Secure Flutter Apps",
+  "link": "https://dev.to/djsmk123/is-your-flutter-application-secured-best-practices-for-developing-and-deploying-secure-flutter-apps-4njm",
+  "tags": [
+    "mobile",
+    "plugins",
+    "general"
+  ]
+}
