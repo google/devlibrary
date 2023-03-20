@@ -35,11 +35,50 @@
     <img src="/img/banners/desktop/authors-clipart.png" class="hero-clipart" />
 
     <!-- Body -->
-    <div id="pagebody" class="mb-4 px-std">
+    <div id="pagebody" class="grid grid-cols-10  mb-20 px-std pt-4 lg:pt-8">
+      <div v-if="$mq === 'desktop'" class="lg:col-span-2">
+        <AuthorFilters v-model="filters" :product="product"/>
+      </div>
+
+      <!-- Filters (Mobile) -->
+      <div
+          v-if="$mq === 'mobile'"
+          v-show="showFilterOverlay"
+          class="mobile-only scrim z-10"
+        >
+          <!-- scrim -->
+        </div>
+        <transition name="slide-in-left">
+          <div
+            v-if="$mq === 'mobile'"
+            v-show="showFilterOverlay"
+            class="mobile-only fixed right-0 top-0 pt-20 w-full h-full z-10"
+          >
+            <div class="bg-white rounded-l overflow-hidden w-2/3 ml-auto">
+              <AuthorFilters v-model="filters" :product="product" :mobile="true"/>
+              <div
+                class="border-t border-gray-200 flex flex-row-reverse gap-2 p-2"
+              >
+                <MaterialButton
+                  type="primary"
+                  @click.native="showFilterOverlay = false"
+                  >Done</MaterialButton
+                >
+
+                <MaterialButton type="secondary" @click.native="resetFilters()"
+                  >Reset</MaterialButton
+                >
+              </div>
+            </div>
+          </div>
+        </transition>
+
       <!-- Search bar -->
-      <div class="frc">
+      <div class="col-span-10 lg:col-span-8 pl-4 ">
+
+      <div class="frc mb-4">
         <div
-          class="mt-4 frc rounded-lg max-w-lg min-w-0 border border-gray-200 px-2 w-80"
+          class="frc rounded-lg max-w-lg min-w-0 border border-gray-200 px-2 w-80"
         >
           <font-awesome-icon
             icon="search"
@@ -64,12 +103,58 @@
         <MaterialButton
           @click.native="authorFilter = tempAuthorFilter"
           type="primary"
-          class="ml-4 mt-4"
+          class="ml-4"
           id="authorSearchButton"
         >
           Go
         </MaterialButton>
+        <div class="desktop-only">
+              <AuthorSort
+              v-model="sortBy"
+                :defaultSort="sortBy"
+              />
+        </div>
       </div>
+
+       <!-- Filter Chips -->
+       <div v-if="filters" class="flex flex-row flex-wrap">
+            <!-- Show filters button (mobile) -->
+            <div class="mobile-only">
+              <div class="flex flex-row mr-2 mb-4">
+                <div class="filter-chip" @click="showFilterOverlay = true">
+                  <font-awesome-icon icon="filter" size="sm" class="mr-2" />
+                  <span>Filters</span>
+                </div>
+                <AuthorSort
+                  v-model="sortBy"
+                  :defaultSort="sortBy"
+                />
+              </div>
+            </div>
+
+            <div v-for="item in filters.types" :key="item.value">
+              <div
+                v-if="item.checked"
+                class="mr-2 mb-4 filter-chip"
+                @click="removeFilterType(item.value)"
+              >
+                <span class="mr-2">{{ item.key }}</span>
+                <font-awesome-icon icon="times" class="ml-px" size="sm" />
+              </div>
+            </div>
+
+            <div v-for="item in filters.productAreas" :key="item.value">
+              <div
+                v-if="item.checked"
+                class="mr-2 mb-4 filter-chip"
+                @click="removeFilterProductAreas(item.value)"
+              >
+                <span class="mr-2">{{ item.key }}</span>
+                <font-awesome-icon icon="times" class="ml-px" size="sm" />
+              </div>
+            </div>
+          </div>
+
       <div
         v-if="showNoMatchesMessage"
         class="text-mgray-700 opacity-70 py-8 px-1"
@@ -80,14 +165,14 @@
 
       <!-- Author Cards -->
       <div
-        class="py-4 grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+        class="py-4 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3"
       >
         <!-- Author Card -->
         <div
           v-for="author in displayedAuthors"
           v-show="showAuthor(author)"
           :key="author.id"
-          class="card card-clickable px-5 py-4 flex flex-col items-center text-center"
+          class="card card-clickable px-5 py-4 flex flex-col items-center text-center "
         >
           <CircleImage
             v-if="
@@ -134,19 +219,7 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Pagination -->
-    <div
-      v-show="canLoadMore && authorFilter === ''"
-      class="mt-2 mb-6 flex flex-col items-center place-content-center"
-    >
-      <MaterialButton v-if="canLoadMore" type="text" @click.native="loadMore">
-        <div class="frc">
-          <span>Load more</span>
-          <font-awesome-icon icon="chevron-down" class="pt-px ml-2" />
-        </div>
-      </MaterialButton>
+      </div>
     </div>
 
     <!-- Link -->
@@ -165,14 +238,28 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import { getModule } from "vuex-module-decorators";
 
 import UIModule from "@/store/ui";
+import { ALL_PRODUCTS } from "../../../shared/product";
 
 import MaterialButton from "@/components/MaterialButton.vue";
 import CircleImage from "@/components/CircleImage.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
+import { ProductConfig } from "../../../shared/types";
+import AuthorFilters from "@/components/AuthorFilters.vue";
+import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
+
+import {
+  CheckboxGroupEntry,
+} from "@/components/CheckboxGroup.vue";
+
+import AuthorSort, {
+  SORT_ADDED,
+  SORT_NAME,
+  SORT_UPDATED
+} from "@/components/AuthorSort.vue";
 
 import { ColorJson } from "../assets/ts/profile-colors";
 import { AuthorData, BreadcrumbLink } from "../../../shared/types";
@@ -181,6 +268,7 @@ import {
   nextPage,
   PagedResponse,
   queryAuthors,
+  queryUsingAuthorData
 } from "@/plugins/data";
 
 @Component({
@@ -188,6 +276,8 @@ import {
     MaterialButton,
     CircleImage,
     Breadcrumbs,
+    AuthorFilters,
+    AuthorSort
   },
 })
 export default class Authors extends Vue {
@@ -197,13 +287,24 @@ export default class Authors extends Vue {
     return [{ name: "Authors", path: "" }];
   }
 
+  public filters = {
+    types: [] as CheckboxGroupEntry[],
+    productAreas: [] as CheckboxGroupEntry[],
+  };
+
   public authorFilter = "";
   public tempAuthorFilter = "";
+  public authorSelectFilter = "";
+  public showFilterOverlay = false;
+
+  public sortBy = SORT_NAME;
 
   public authorImageLoaded: { [key: string]: boolean } = {};
+  public urlParams = new URLSearchParams(window.location.search);
 
   private pagesToShow = 1;
   public allAuthors: AuthorData[] = [];
+  public allAuthorDetailedData = new Map();
   public authorData: PagedResponse<AuthorData> = emptyPageResponse<AuthorData>(
     `/authors`,
     {},
@@ -260,6 +361,30 @@ export default class Authors extends Vue {
       .includes(this.authorFilter.toLowerCase());
   }
 
+  public removeFilterType(value: string) {
+    const f = this.filters.types.find((x) => x.value === value);
+    if (f) {
+      f.checked = false;
+    }
+  }
+
+  public removeFilterProductAreas(value: string) {
+    const f = this.filters.productAreas.find((x) => x.value === value);
+    if (f) {
+      f.checked = false;
+    }
+  }
+
+  public resetFilters() {
+    for (const c of this.filters.productAreas) {
+      c.checked = false;
+    }
+
+    for (const t of this.filters.types) {
+      t.checked = false;
+    }
+  }
+
   get loaded() {
     return this.authors.length > 0;
   }
@@ -284,11 +409,106 @@ export default class Authors extends Vue {
   }
 
   get displayedAuthors() {
-    if (this.authorFilter != "") {
+    if (this.authorFilter != "" || this.authorSelectFilter != "") {
       return this.allAuthors;
     } else {
       return this.visibleAuthors;
     }
+  }
+
+  @Watch("queryParams")
+  public async onQueryParamsChanged(q: FirestoreQuery) {
+
+    const selectedProducts = []
+    if(q.where){
+      if(q.where.length > 0){
+        for(const condition of q.where) {
+          for(const ele of condition.value) {
+            selectedProducts.push(ele)
+          }
+        }
+      }
+    }
+
+    const onlyTypeFilter = selectedProducts.every(elem => ["open-source", "blog"].includes(elem))
+    console.log("only type filter encountered", onlyTypeFilter)
+
+    if(onlyTypeFilter){
+      const x= Object.values(ALL_PRODUCTS).sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
+      for(const ele of x) {
+        selectedProducts.push(ele.key)
+      }
+    }
+
+    console.log(selectedProducts)
+
+
+    if(selectedProducts.length > 0){
+      this.authorSelectFilter = "filter"
+
+      let returnOpenSource = false
+      let returnBlogs = false
+
+      if(selectedProducts.includes("open-source")){
+        returnOpenSource = true
+      }
+      if(selectedProducts.includes("blog")){
+        returnBlogs = true
+      }
+
+      if(!returnOpenSource && !returnBlogs){
+        returnOpenSource = true
+        returnBlogs = true
+      }
+
+      const res = await queryUsingAuthorData(selectedProducts, returnBlogs, returnOpenSource, this.sortBy)
+      this.allAuthors = res
+    } else {
+      this.authorSelectFilter = ""
+    }
+  }
+
+  @Watch("filters", { deep: true })
+  public async onFiltersTypeChanged() {
+    let hasTypeParams = false;
+    let hasProductParams = false;
+    let typeParams = "";
+    let categoryParams = "";
+    let url = `?sort=${this.sortBy}`;
+
+    for (const filterType of this.filters.types) {
+      if (filterType.checked) {
+        if (hasTypeParams) {
+          typeParams += ",";
+        }
+        typeParams += `${filterType.value}`;
+        hasTypeParams = true;
+      }
+    }
+    for (const filterCategory of this.filters.productAreas) {
+      if (filterCategory.checked) {
+        if (hasProductParams) {
+          categoryParams += ",";
+        }
+        categoryParams += `${filterCategory.value}`;
+        hasProductParams = true;
+      }
+    }
+    if (hasTypeParams) {
+      url += `&type=${typeParams}`;
+    }
+    if (hasProductParams) {
+      url += `&productareas=${categoryParams}`;
+    }
+    window.history.replaceState(null, "", url);
+  }
+
+  @Watch("sortBy")
+  public onSortByChanged() {
+    console.log("filter changed", this.sortBy)
+    this.onFiltersTypeChanged()
   }
 
   public setTempAuthorFilter(event: { target: { value: string } }) {
@@ -373,6 +593,99 @@ export default class Authors extends Vue {
   get visibleAuthors(): AuthorData[] {
     const maxToShow = 60 * this.pagesToShow;
     return this.authors.slice(0, maxToShow);
+  }
+
+  get queryTags(): string[] | null {
+    // If no selection, consider them all checked
+    const noneCategoryChecked = this.filters.productAreas.every(
+      (c) => !c.checked
+    );
+    if (noneCategoryChecked) {
+      return null;
+    }
+
+    return this.filters.productAreas.filter((x) => x.checked).map((x) => x.value);
+  }
+
+  get queryOrderBy(): string {
+    switch (this.sortBy) {
+      case SORT_UPDATED:
+        return "stats.lastUpdated";
+      case SORT_NAME:
+        return "metadata.author";
+      case SORT_ADDED:
+      default:
+        return "stats.dateAdded";
+    }
+  }
+
+  get queryTypes(): string[] | null {
+    // If no selection, consider them all checked
+    const noneCategoryChecked = this.filters.types.every(
+      (c) => !c.checked
+    );
+    if (noneCategoryChecked) {
+      return null;
+    }
+
+    return this.filters.types.filter((x) => x.checked).map((x) => x.value);
+  }
+
+
+  get product(): ProductConfig[] {
+    const x= Object.values(ALL_PRODUCTS).sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
+    return x
+  }
+
+  get queryParams(): FirestoreQuery {
+    const orderBy = this.queryOrderBy;
+    const tags = this.queryTags;
+    const types = this.queryTypes;
+
+    const q: FirestoreQuery = {orderBy: [
+        {
+          fieldPath: orderBy,
+          direction: "desc",
+        },
+      ],};
+
+    if (tags) {
+      if (tags.length > 0) {
+        q.where = [
+          {
+            fieldPath: "metadata.tags",
+            operator: "array-contains-any",
+            value: tags,
+          },
+        ];
+      }
+    }
+
+    if (types) {
+      if (types.length > 0) {
+        if(q.where){
+          q.where.push(
+          {
+            fieldPath: "metadata.tags",
+            operator: "array-contains-any",
+            value: types,
+          },
+        );
+        } else {
+          q.where = [
+          {
+            fieldPath: "metadata.tags",
+            operator: "array-contains-any",
+            value: types,
+          },
+        ];
+        }
+      }
+    }
+
+    return q;
   }
 }
 </script>

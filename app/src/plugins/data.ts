@@ -25,6 +25,8 @@ import {
   SearchResult,
 } from "../../../shared/types";
 
+import { ALL_PRODUCTS } from "../../../shared/product";
+
 import {
   FirestoreQuery,
   QueryResult,
@@ -273,32 +275,163 @@ export async function queryAuthorProjects(authorId: string) {
   };
 }
 
-export async function queryAuthorsByProduct(
-  products: string[]
-): Promise<QueryResult<AuthorData>> {
-  const authorResults: any = [];
-  for (const author of allAuthors.docs) {
-    const res = await queryAuthorProjects(author.id);
-
-    const blogProducts: string[] = [];
-    const repoProducts: string[] = [];
-
-    Object.keys(res.blogs.docs).forEach((blogIndex) => {
-      blogProducts.push(res.blogs.docs[Number(blogIndex)].data.product);
+export async function queryUsingAuthorData(
+  products: string[], returnBlogs: boolean, returnOpenSource: boolean, sortBy: string
+) {
+  console.log(returnBlogs, returnOpenSource)
+  const res = await queryAuthors({});
+  const allAuthorData = res.docs
+    .map((d) => d.data)
+    .sort((a, b) => {
+      return a.metadata.name
+        .toLowerCase()
+        .localeCompare(b.metadata.name.toLowerCase());
     });
+  const authorResults = [];
 
-    Object.keys(res.repos.docs).forEach((repoIndex) => {
-      repoProducts.push(res.repos.docs[Number(repoIndex)].data.product);
-    });
+  const authorSet = new Set();
+  const authorList = [];
 
-    if (products.every((repo) => repoProducts.includes(repo))) {
-      authorResults.push(author);
-    }
-    if (products.every((blog) => blogProducts.includes(blog))) {
-      authorResults.push(author);
-    }
+  products = products.filter(function(products) {
+    return products !== "open-source"
+  })
+
+  products = products.filter(function(products) {
+    return products !== "blog"
+  })
+
+  let q: FirestoreQuery = {};
+
+  if(sortBy == "lastUpdated") {
+   q = {
+    orderBy: [
+      {
+        fieldPath: "stats.lastUpdated",
+        direction: "desc",
+      },
+    ],
+  }; 
+  } else if(sortBy == "lastAdded") {
+    q = {
+      orderBy: [
+        {
+          fieldPath: "stats.dateAdded",
+          direction: "desc",
+        },
+      ],
+    }; 
   }
-  return authorResults as QueryResult<AuthorData>;
+  //   q = {
+  //     orderBy: [
+  //       {
+  //         fieldPath: "metadata.authorIds[0]",
+  //         direction: "asc",
+  //       },
+  //     ],
+  //   }; 
+  // }
+
+
+    for(const product of products){ 
+      if(returnBlogs){
+        const resBlog = await queryBlogs(product, q)
+        for(const blog of resBlog.docs){
+          if(blog.data.metadata.authorIds){
+            for(const author of blog.data.metadata.authorIds){
+              if(!authorSet.has(author)){
+                authorSet.add(author)
+                authorList.push(author)
+              }
+            }
+          }
+        }
+      }
+  
+      if(returnOpenSource) {
+        const resRepo =  await queryRepos(product, q)
+        for(const repo of resRepo.docs){
+          if(repo.data.metadata.authorIds){
+            for(const author of repo.data.metadata.authorIds){
+              if(!authorSet.has(author)){
+                authorSet.add(author)
+                authorList.push(author)
+              }
+            }
+          }
+        }
+      }
+    }
+  console.log(authorList)
+
+  if(sortBy == "name"){
+    for(const auth of allAuthorData) {
+      for(const author of authorList) {
+        
+          if(author == auth.id){
+            let toAdd = false;
+            if(returnOpenSource && auth.metadata.githubURL) {
+              toAdd = true;
+            }
+            if(returnBlogs && auth.metadata.mediumURL) {
+              toAdd = true;
+            }
+            if(toAdd){
+              authorResults.push(auth)
+            }
+            break;
+          }
+        }
+      }
+  } else {
+    for(const author of authorList) {
+      for(const auth of allAuthorData) {
+          if(author == auth.id){
+            let toAdd = false;
+            if(returnOpenSource && auth.metadata.githubURL) {
+              toAdd = true;
+            }
+            if(returnBlogs && auth.metadata.mediumURL) {
+              toAdd = true;
+            }
+            if(toAdd){
+              authorResults.push(auth)
+            }
+            break;
+          }
+        }
+      }
+  }
+  console.log(authorResults)
+
+  // for(const author of allAuthorData) {
+  //   if(authorSet.size == 0) {
+  //     let toAdd = false
+  //     if(returnOpenSource && author.metadata.githubURL) {
+  //       toAdd = true
+  //     }
+  //     if(returnBlogs && author.metadata.mediumURL) {
+  //       toAdd = true
+  //     }
+  //     if(toAdd){
+  //       authorResults.push(author)
+  //     }
+  //   } else {
+  //     if(authorSet.has(author.id)){
+  //       let toAdd = false
+  //       if(returnOpenSource && author.metadata.githubURL) {
+  //         toAdd = true
+  //       }
+  //       if(returnBlogs && author.metadata.mediumURL) {
+  //         toAdd = true
+  //       }
+  //       if(toAdd){
+  //         authorResults.push(author)
+  //       }
+  //     }
+  //   }
+  // }
+
+  return authorResults
 }
 
 export async function recommendedRepos(
