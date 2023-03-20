@@ -1,0 +1,12 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["ahmad-hamwi"],
+  "author": "Ahmad Hamwi",
+  "title": "Synchronize RecyclerView with TabLayout using TabSync",
+  "link": "https://medium.com/proandroiddev/synchronize-recyclerview-with-tablayout-3c5da4f3b18b",
+  "tags": [
+    "ui"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "navczydev"
+  ],
+  "author": "Nav Singh",
+  "title": "Emulating S23+ using a skin — Android Studio",
+  "link": "https://navczydev.medium.com/emulating-s23-using-a-skin-android-studio-4527e538f757",
+  "tags": [
+    "build-tools",
+    "modern-android-development"
+  ]
+}
