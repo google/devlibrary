@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          (npm use 12 && cd shared && npm install)
+          (cd shared && npm --openssl-legacy-provider install)
           (cd app && npm install && npm run build:staging)
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
