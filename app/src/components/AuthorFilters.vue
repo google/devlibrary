@@ -117,16 +117,6 @@ export default class AuthorFilters extends Vue {
     this.filtersChanged = false;
   }
 
-  // @Watch("value", { deep: true })
-  // public onValueChange() {
-  //   if (
-  //     Array.isArray(this.value.expertiseLevel) &&
-  //     this.value.expertiseLevel.length === 0
-  //   ) {
-  //     this.expertiseLevel = "";
-  //   }
-  // }
-
   @Watch("filterValues", { deep: true })
   public onFilterValuesChange() {
     if (!this.loaded) {

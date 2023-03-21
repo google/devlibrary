@@ -629,10 +629,9 @@ export default class Authors extends Vue {
 
 
   get product(): ProductConfig[] {
-    const x= Object.values(ALL_PRODUCTS).sort((a, b) =>
+    return Object.values(ALL_PRODUCTS).sort((a, b) =>
       a.name.localeCompare(b.name)
     );
-    return x
   }
 
   get queryParams(): FirestoreQuery {

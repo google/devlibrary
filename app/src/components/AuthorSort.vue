@@ -63,7 +63,6 @@
     },
   })
   export default class AuthorSort extends Vue {
-    // @Prop() product!: ProductConfig;
     @Prop({ default: false }) mobile!: boolean;
     @Prop() defaultSort!: string;
   
