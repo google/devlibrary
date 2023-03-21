@@ -165,7 +165,7 @@
 
       <!-- Author Cards -->
       <div
-        class="py-4 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3"
+        class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3"
       >
         <!-- Author Card -->
         <div
