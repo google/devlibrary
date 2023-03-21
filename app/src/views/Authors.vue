@@ -76,7 +76,7 @@
       <!-- Search bar -->
       <div class="col-span-10 lg:col-span-8 pl-4 ">
 
-      <div class="frc mb-4">
+      <div class="frc mb-3">
         <div
           class="frc rounded-lg max-w-lg min-w-0 border border-gray-200 px-2 w-80"
         >
