@@ -2,7 +2,7 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["IdrisAdeyemi01"],
+  "authorIds": ["idrisadeyemi01"],
   "author": "Idris Idris",
   "title": "How to integrate Firebase in a Flutter app using FlutterFire CLI",
   "link": "https://idrisadeyemi.hashnode.dev/integrating-firebase-to-your-flutter-app-using-flutterfire-cli",
