@@ -276,7 +276,7 @@ export async function queryAuthorProjects(authorId: string) {
 }
 
 export async function queryUsingAuthorData(
-  products: string[], returnBlogs: boolean, returnOpenSource: boolean, sortBy: string
+  products: string[], returnBlogs: boolean, returnOpenSource: boolean
 ) {
   const res = await queryAuthors({});
   const allAuthorData = res.docs
@@ -299,27 +299,7 @@ export async function queryUsingAuthorData(
     return products !== "blog"
   })
 
-  let q: FirestoreQuery = {};
-
-  if(sortBy == "lastUpdated") {
-   q = {
-    orderBy: [
-      {
-        fieldPath: "stats.lastUpdated",
-        direction: "desc",
-      },
-    ],
-  }; 
-  } else if(sortBy == "lastAdded") {
-    q = {
-      orderBy: [
-        {
-          fieldPath: "stats.dateAdded",
-          direction: "desc",
-        },
-      ],
-    }; 
-  }
+  const q: FirestoreQuery = {};
 
     for(const product of products){ 
       if(returnBlogs){
@@ -351,7 +331,6 @@ export async function queryUsingAuthorData(
       }
     }
 
-  if(sortBy == "name"){
     for(const auth of allAuthorData) {
       for(const author of authorList) {
         
@@ -370,25 +349,7 @@ export async function queryUsingAuthorData(
           }
         }
       }
-  } else {
-    for(const author of authorList) {
-      for(const auth of allAuthorData) {
-          if(author == auth.id){
-            let toAdd = false;
-            if(returnOpenSource && auth.metadata.githubURL) {
-              toAdd = true;
-            }
-            if(returnBlogs && auth.metadata.mediumURL) {
-              toAdd = true;
-            }
-            if(toAdd){
-              authorResults.push(auth)
-            }
-            break;
-          }
-        }
-      }
-  }
+  
   return authorResults
 }
 

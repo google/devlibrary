@@ -108,12 +108,6 @@
         >
           Go
         </MaterialButton>
-        <div class="desktop-only">
-              <AuthorSort
-              v-model="sortBy"
-                :defaultSort="sortBy"
-              />
-        </div>
       </div>
 
        <!-- Filter Chips -->
@@ -125,10 +119,6 @@
                   <font-awesome-icon icon="filter" size="sm" class="mr-2" />
                   <span>Filters</span>
                 </div>
-                <AuthorSort
-                  v-model="sortBy"
-                  :defaultSort="sortBy"
-                />
               </div>
             </div>
 
@@ -255,12 +245,6 @@ import {
   CheckboxGroupEntry,
 } from "@/components/CheckboxGroup.vue";
 
-import AuthorSort, {
-  SORT_ADDED,
-  SORT_NAME,
-  SORT_UPDATED
-} from "@/components/AuthorSort.vue";
-
 import { ColorJson } from "../assets/ts/profile-colors";
 import { AuthorData, BreadcrumbLink } from "../../../shared/types";
 import {
@@ -276,8 +260,7 @@ import {
     MaterialButton,
     CircleImage,
     Breadcrumbs,
-    AuthorFilters,
-    AuthorSort
+    AuthorFilters
   },
 })
 export default class Authors extends Vue {
@@ -296,8 +279,6 @@ export default class Authors extends Vue {
   public tempAuthorFilter = "";
   public authorSelectFilter = "";
   public showFilterOverlay = false;
-
-  public sortBy = SORT_NAME;
 
   public authorImageLoaded: { [key: string]: boolean } = {};
   public urlParams = new URLSearchParams(window.location.search);
@@ -460,7 +441,7 @@ export default class Authors extends Vue {
         returnBlogs = true
       }
 
-      const res = await queryUsingAuthorData(selectedProducts, returnBlogs, returnOpenSource, this.sortBy)
+      const res = await queryUsingAuthorData(selectedProducts, returnBlogs, returnOpenSource)
       this.allAuthors = res
     } else {
       this.authorSelectFilter = ""
@@ -473,7 +454,7 @@ export default class Authors extends Vue {
     let hasProductParams = false;
     let typeParams = "";
     let categoryParams = "";
-    let url = `?sort=${this.sortBy}`;
+    let url = `?sort=name`;
 
     for (const filterType of this.filters.types) {
       if (filterType.checked) {
@@ -603,17 +584,6 @@ export default class Authors extends Vue {
     return this.filters.productAreas.filter((x) => x.checked).map((x) => x.value);
   }
 
-  get queryOrderBy(): string {
-    switch (this.sortBy) {
-      case SORT_UPDATED:
-        return "stats.lastUpdated";
-      case SORT_NAME:
-        return "metadata.author";
-      case SORT_ADDED:
-      default:
-        return "stats.dateAdded";
-    }
-  }
 
   get queryTypes(): string[] | null {
     // If no selection, consider them all checked
@@ -635,16 +605,10 @@ export default class Authors extends Vue {
   }
 
   get queryParams(): FirestoreQuery {
-    const orderBy = this.queryOrderBy;
     const tags = this.queryTags;
     const types = this.queryTypes;
 
-    const q: FirestoreQuery = {orderBy: [
-        {
-          fieldPath: orderBy,
-          direction: "desc",
-        },
-      ],};
+    const q: FirestoreQuery = {orderBy: [],};
 
     if (tags) {
       if (tags.length > 0) {
