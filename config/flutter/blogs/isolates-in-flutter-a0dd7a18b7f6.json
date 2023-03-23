@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["dhruvam"],
+  "author": "Dhruvam sharma",
+  "title": "Isolates in Flutter",
+  "link": "https://medium.com/flutter-community/isolates-in-flutter-a0dd7a18b7f6",
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}

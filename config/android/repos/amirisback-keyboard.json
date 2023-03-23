@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "amirisback"
+  ],
+  "owner": "amirisback",
+  "repo": "keyboard",
+  "name": "Keyboard",
+  "shortDescription": "Research Create Custom Keyboard",
+  "longDescription": "Research Create Custom Keyboard",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "ui"
+  ]
+}

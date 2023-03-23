@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "jesuseguncaleb"
+  ],
+  "author": "Caleb Jesusegun",
+  "title": "How to Integrate Firebase Crashlytics in your Flutter App",
+  "link": "https://medium.com/@jesuseguncaleb/how-to-integrate-firebase-crashlytics-in-your-flutter-app-711087fe030d",
+  "tags": [
+    "firebase",
+    "mobile"
+  ]
+}

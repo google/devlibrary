@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["patilshreyas"],
+  "author": "Shreyas Patil",
+  "title": "Mastering Android App Performance: Analyzing Bottlenecks with Perfetto",
+  "link": "https://blog.shreyaspatil.dev/mastering-android-app-performance-analyzing-bottlenecks-with-perfetto",
+  "tags": [
+    "modern-android-development",
+    "build-tools"
+  ]
+}
