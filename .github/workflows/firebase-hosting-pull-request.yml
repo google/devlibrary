@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           (cd shared && npm install)
-          (cd app && npm install && npm run build:staging)
+          (export NODE_OPTIONS=--openssl-legacy-provider && cd app && npm install && npm run build:staging)
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
