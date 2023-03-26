@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "isaacadariku"
+  ],
+  "author": "Isaac Adariku",
+  "title": "Intermediate Flutter Developer guide to Expert",
+  "link": "https://isaacadariku.medium.com/the-ultimate-guide-to-becoming-a-flutter-expert-part-4-intermediate-flutter-developer-guide-eddbf016310d",
+  "tags": [
+    "general",
+    "samples",
+    "widgets"
+  ]
+}

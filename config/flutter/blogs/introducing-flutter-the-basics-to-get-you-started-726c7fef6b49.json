@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "developerjamiu"
+  ],
+  "author": "Jamiu Okanlawon",
+  "title": "Introducing Flutter: The basics to get you started",
+  "link": "https://medium.com/@developerjamiu/introducing-flutter-the-basics-to-get-you-started-726c7fef6b49",
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ]
+}

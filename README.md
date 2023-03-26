@@ -13,6 +13,7 @@ If you are a developer who has built an open-source project, or has written abou
 - Google Cloud
 - Machine Learning
 - Google Assistant
+- Google Maps Platform
 
 ### Dev Library Letters : Our Newsletter
 The official newsletter by Dev Library highlights some of the best submissions of the month, spotlights our authors and shares events of interest for Google developer communities.
@@ -38,6 +39,8 @@ To get started, here are some blog posts detailing on how developers have used t
 - [What is Google’s Dev Library––a new open-source platform for developers](https://developers.googleblog.com/2021/10/what-is-the-dev-library.html)
 - [How is Dev Library useful to the open-source community?](https://developers.googleblog.com/2022/04/dev-library-open-source.html)
 - [Interview with Doug Duhaime, contributor to Google's Dev Library](https://developers.googleblog.com/2022/10/interview-with-doug-duhaime-contributor-to-google-dev-library.html)
+- [Interview with Top Kotlin Contributors - Highlighting their Contributions to the Google Dev Library](https://developers.googleblog.com/2023/02/interview-with-top-kotlin-contributors-google-dev-library.html)
+- [Useful Android projects from Google Dev Library to help you #DevelopwithGoogle](https://developers.googleblog.com/2023/01/useful-android-projects-from-google-dev-library-to-help-you-develop-with-google.html)
 
 ### How to get started: 
 

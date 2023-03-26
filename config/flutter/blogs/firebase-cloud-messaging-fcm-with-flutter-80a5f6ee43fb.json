@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ayeshaiftikhar"
+  ],
+  "author": "Ayesha Iftikhar",
+  "title": "Firebase Cloud Messaging (FCM) with Flutter",
+  "link": "https://seayeshaiftikhar.medium.com/firebase-cloud-messaging-fcm-with-flutter-80a5f6ee43fb",
+  "tags": [
+    "firebase",
+    "samples",
+    "mobile"
+  ]
+}

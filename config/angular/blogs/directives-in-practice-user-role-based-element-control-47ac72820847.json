@@ -1,0 +1,14 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "pawel-kubiak-dev"
+  ],
+  "author": "Paweł Kubiak",
+  "title": "Directives in practice: user role-based element control",
+  "link": "https://medium.com/@pawel.kubiak.dev/directives-in-practice-user-role-based-element-control-47ac72820847",
+  "tags": [
+    "demos"
+  ]
+}
