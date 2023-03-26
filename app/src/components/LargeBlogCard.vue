@@ -33,7 +33,7 @@
     </div>
 
     <!-- Author photo and name -->
-    <div class="frc mt-6 mb-4">
+    <div class="frc mt-6" :class="{ 'mb-4': !blog.metadata.description }">
       <!-- Link to author (if present) -->
       <template v-if="authorId">
         <router-link :to="`/authors/${authorId}`" class="frc">
@@ -65,6 +65,11 @@
         :productKey="blog.product"
         class="product-logo ml-auto"
       />
+    </div>
+
+    <!-- Description -->
+    <div v-if="blog.metadata.description" class="mt-4 wrap-lines-3">
+      {{ blog.metadata.description }}
     </div>
 
     <span class="flex-grow"><!-- spacer --></span>
