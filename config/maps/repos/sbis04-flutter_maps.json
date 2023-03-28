@@ -14,5 +14,9 @@
   "pages": [],
   "tags": ["samples",
   "google-maps",
-  "maps"]
+  "google-maps-platform",
+  "maps-sdk-for-android",
+  "maps-sdk-for-ios",
+  "directions-api"
+]
 }
