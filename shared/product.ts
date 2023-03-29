@@ -375,34 +375,6 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "google-maps-platform",
       },
       {
-        label: "Routes",
-        value: "routes",
-      },
-      {
-        label: "Places",
-        value: "places",
-      },
-      {
-        label: "Directions",
-        value: "directions",
-      },
-      {
-        label: "Geocoding",
-        value: "geocoding",
-      },
-      {
-        label: "Street View",
-        value: "street-view",
-      },
-      {
-        label: "Geolocation",
-        value: "geolocation",
-      },
-      {
-        label: "Google Maps",
-        value: "google-maps",
-      },
-      {
         label: "Maps JavaScript API",
         value: "maps-javascript-api",
       },
