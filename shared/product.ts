@@ -371,36 +371,76 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     docsUrl: "https://developers.google.com/maps/documentation",
     tags: [
       {
-        label: "Maps",
-        value: "maps",
+        label: "Google Maps Platform",
+        value: "google-maps-platform",
       },
       {
-        label: "Routes",
-        value: "routes",
+        label: "Maps JavaScript API",
+        value: "maps-javascript-api",
       },
       {
-        label: "Places",
-        value: "places",
+        label: "Maps SDK for Android",
+        value: "maps-sdk-for-android",
       },
       {
-        label: "Directions",
-        value: "directions",
+        label: "Maps SDK for iOS",
+        value: "maps-sdk-for-ios",
       },
       {
-        label: "Geocoding",
-        value: "geocoding",
+        label: "Places API",
+        value: "places-api",
       },
       {
-        label: "Street View",
-        value: "street-view",
+        label: "Places SDK for Android",
+        value: "places-sdk-for-android",
       },
       {
-        label: "Geolocation",
-        value: "geolocation",
+        label: "Places SDK for iOS",
+        value: "places-sdk-for-ios",
       },
       {
-        label: "Google Maps",
-        value: "google-maps",
+        label: "Geocoding API",
+        value: "geocoding-api",
+      },
+      {
+        label: "Geolocation API",
+        value: "geolocation-api",
+      },
+      {
+        label: "Elevation API",
+        value: "elevation-api",
+      },
+      {
+        label: "Maps Static API",
+        value: "maps-static-api",
+      },
+      {
+        label: "Maps Embed API",
+        value: "maps-embed-api",
+      },
+      {
+        label: "Routes API",
+        value: "routes-api",
+      },
+      {
+        label: "Roads API",
+        value: "roads-api",
+      },
+      {
+        label: "Directions API",
+        value: "directions-api",
+      },
+      {
+        label: "Distance Matrix API",
+        value: "distance-matrix-api",
+      },
+      {
+        label: "Address Validation API",
+        value: "address-validation-api",
+      },
+      {
+        label: "Time Zone API",
+        value: "time-zone-api",
       }
     ],
   },
