@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "navczydev"
+  ],
+  "author": "Nav Singh",
+  "title": "Extending the Android SDK — SDKExtensions",
+  "link": "https://navczydev.medium.com/extending-the-android-sdk-sdkextensions-429ef9cca743",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "build-tools"
+  ]
+}

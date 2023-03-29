@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "olugbohunmijoseph"
+  ],
+  "author": "Joseph Olugbohunmi",
+  "title": "Implementing Splash Screens the Recommended Way",
+  "link": "https://olugbohunmijoseph.medium.com/implementing-splash-screens-the-recommended-way-5a866ae4d114",
+  "tags": [
+    "modern-android-development",
+    "ui",
+    "kotlin"
+  ]
+}

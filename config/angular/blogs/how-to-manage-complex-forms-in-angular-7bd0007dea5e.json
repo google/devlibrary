@@ -1,0 +1,12 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["robenkr"],
+  "author": "Roland Tubongye Wabubindja",
+  "title": "How to Manage Complex Forms in Angular",
+  "link": "https://medium.com/javascript-in-plain-english/how-to-manage-complex-forms-in-angular-7bd0007dea5e",
+  "tags": [
+    "performance"
+  ]
+}
