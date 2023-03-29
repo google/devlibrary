@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "karunganessh"
+  ],
+  "author": "Arun Ganessh",
+  "title": "A Guide to Creating Streaming XR Applications",
+  "link": "https://medium.com/@karunganessh/streaming-xr-android-a-guide-to-creating-streaming-xr-applications-c900903f1f8c",
+  "tags": [
+    "modern-android-development",
+    "compose"
+  ]
+}
