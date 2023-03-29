@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "navczydev"
+  ],
+  "author": "Nav Singh",
+  "title": "Regional Preferences-Android14",
+  "link": "https://navczydev.medium.com/regional-preferences-android14-c3e90a01e65f",
+  "tags": [
+    "modern-android-development",
+    "compose"
+  ]
+}

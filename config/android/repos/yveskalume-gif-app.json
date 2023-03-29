@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "yveskalume"
+  ],
+  "owner": "yveskalume",
+  "repo": "gif-app",
+  "name": "Gif App",
+  "shortDescription": "An Android application showing trending gifs from Giphy, built using jetpack compose and other modern Android technology stacks and the MVVM architecture.",
+  "longDescription": "An Android application showing trending gifs from Giphy, built using jetpack compose and other modern Android technology stacks and the MVVM architecture.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

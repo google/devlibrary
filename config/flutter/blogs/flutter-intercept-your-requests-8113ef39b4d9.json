@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "theutsavg1"
+  ],
+  "author": "Utsav Ghimire",
+  "title": "Flutter: Interceptors in Dio",
+  "link": "https://medium.com/@theutsavg1/flutter-intercept-your-requests-8113ef39b4d9",
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}

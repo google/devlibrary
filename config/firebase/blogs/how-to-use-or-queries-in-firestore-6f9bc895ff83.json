@@ -1,0 +1,12 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["alex-mamo"],
+  "author": "Alex Mamo",
+  "title": "How to use OR queries in Firestore?",
+  "link": "https://medium.com/firebase-tips-tricks/how-to-use-or-queries-in-firestore-6f9bc895ff83",
+  "tags": [
+    "android"
+  ]
+}

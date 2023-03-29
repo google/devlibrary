@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["mkobuolys"],
+  "author": "Mangirdas Kazlauskas",
+  "title": "Control your Flutter app on the fly with Firebase Remote Config | kazlauskas.dev",
+  "link": "https://kazlauskas.dev/control-your-flutter-app-with-firebase-remote-config/",
+  "tags": [
+    "flutter",
+    "ios",
+    "android"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["jonathanmonga"],
+  "author": "Jonathan Monga",
+  "title": "Parsing HTML in Dart with Html package.",
+  "link": "https://medium.com/flutter-community/parsing-html-in-dart-with-html-package-cd43c29cc460",
+  "tags": [
+    "mobile",
+    "web"
+  ]
+}
