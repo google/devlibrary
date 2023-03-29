@@ -2,12 +2,15 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["dhruvam"],
+  "authorIds": [
+    "dhruvam"
+  ],
   "author": "Dhruvam sharma",
   "title": "Isolates in Flutter",
   "link": "https://medium.com/flutter-community/isolates-in-flutter-a0dd7a18b7f6",
   "tags": [
     "mobile",
     "widgets"
-  ]
+  ],
+  "description": "Running parallel code in Flutter has never been easy since the introduction of Dart 2.19"
 }

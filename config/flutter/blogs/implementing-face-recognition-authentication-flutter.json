@@ -2,11 +2,14 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["dev-tayy"],
+  "authorIds": [
+    "dev-tayy"
+  ],
   "author": "Ahmed Yusuf",
   "title": "Implementing face recognition and authentication in Flutter - LogRocket Blog",
   "link": "https://blog.logrocket.com/implementing-face-recognition-authentication-flutter/",
   "tags": [
     "mobile"
-  ]
+  ],
+  "description": "This article describes how you can implement biometric authentication using facial recognition and Touch ID in Flutter applications."
 }
