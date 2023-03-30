@@ -11,6 +11,5 @@
   "tags": [
     "firebase",
     "mobile"
-  ],
-  "description": "Firebase Crashlytics provides you with a platform to track, monitor, and prioritize these unexpected crash issues that arise in your mobile apps. Here is an article post on a deep dive into how to integrate Firebase Crashlytics into a sample flutter app."
+  ]
 }

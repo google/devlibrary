@@ -11,6 +11,5 @@
   "tags": [
     "ui",
     "architecture"
-  ],
-  "description": "How nice would it be to display your app content before the user thinks about opening it? Guess what? This is possible with the Channels API!"
+  ]
 }

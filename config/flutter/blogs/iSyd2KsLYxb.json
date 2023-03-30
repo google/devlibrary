@@ -12,6 +12,5 @@
     "web",
     "firebase",
     "mobile"
-  ],
-  "description": "Simple steps on how to host Flutter Web with Firebase using Firebase CLI to make a developer's life easier."
+  ]
 }

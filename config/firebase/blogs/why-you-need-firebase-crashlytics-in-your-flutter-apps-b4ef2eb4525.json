@@ -11,6 +11,5 @@
   "tags": [
     "flutter",
     "ios"
-  ],
-  "description": "A user expectation is to have a seamless experience while engaging a mobile app. This fundamentally creates a need for a stable app that is bug-free (crash-free). Therefore a real-time crash reporter is needed to monitor such crashes hence the need for Firebase Crashlytics."
+  ]
 }

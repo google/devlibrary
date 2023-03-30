@@ -12,6 +12,5 @@
     "mobile",
     "widgets",
     "samples"
-  ],
-  "description": "This blog explains the differences between Navigator 1.0 and Navigator 2.0 and why do you need for Navigator 2.0. Also how you can implement Navigator 2.0 using the Auto Route package in Flutter. Examples and GitHub repo are included in this Blog."
+  ]
 }

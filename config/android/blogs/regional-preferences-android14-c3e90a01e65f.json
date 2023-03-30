@@ -11,6 +11,5 @@
   "tags": [
     "modern-android-development",
     "compose"
-  ],
-  "description": "Introducing Android14’s Regional Preferences API, which allows users to set their regional preferences.\n\nWith regional preferences, users can customize temperature units, date formats, and numbering systems."
+  ]
 }

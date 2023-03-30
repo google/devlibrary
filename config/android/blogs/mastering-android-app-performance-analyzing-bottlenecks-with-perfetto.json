@@ -2,15 +2,12 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": [
-    "patilshreyas"
-  ],
+  "authorIds": ["patilshreyas"],
   "author": "Shreyas Patil",
   "title": "Mastering Android App Performance: Analyzing Bottlenecks with Perfetto",
   "link": "https://blog.shreyaspatil.dev/mastering-android-app-performance-analyzing-bottlenecks-with-perfetto",
   "tags": [
     "modern-android-development",
     "build-tools"
-  ],
-  "description": "In this article, we will learn to investigate performance bottlenecks in the application that might cause UI slowness or janks with the help of Perfetto."
+  ]
 }

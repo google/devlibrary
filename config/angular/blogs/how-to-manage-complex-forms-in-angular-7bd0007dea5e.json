@@ -2,14 +2,11 @@
   "expertise": "ADVANCED",
   "version": 1,
   "source": "medium",
-  "authorIds": [
-    "robenkr"
-  ],
+  "authorIds": ["robenkr"],
   "author": "Roland Tubongye Wabubindja",
   "title": "How to Manage Complex Forms in Angular",
   "link": "https://medium.com/javascript-in-plain-english/how-to-manage-complex-forms-in-angular-7bd0007dea5e",
   "tags": [
     "performance"
-  ],
-  "description": "This guide show how to store values in a FormArray and also update them using previously initialized data."
+  ]
 }

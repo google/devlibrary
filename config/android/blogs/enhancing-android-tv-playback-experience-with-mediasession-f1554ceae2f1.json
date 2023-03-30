@@ -11,6 +11,5 @@
   "tags": [
     "architecture",
     "modern-android-development"
-  ],
-  "description": "Enabling playback voice control using Google Assistant, Alexa, and any other integrated voice assistant using the MediaSession API"
+  ]
 }

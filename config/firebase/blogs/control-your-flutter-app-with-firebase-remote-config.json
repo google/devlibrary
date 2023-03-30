@@ -2,9 +2,7 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": [
-    "mkobuolys"
-  ],
+  "authorIds": ["mkobuolys"],
   "author": "Mangirdas Kazlauskas",
   "title": "Control your Flutter app on the fly with Firebase Remote Config | kazlauskas.dev",
   "link": "https://kazlauskas.dev/control-your-flutter-app-with-firebase-remote-config/",
@@ -12,6 +10,5 @@
     "flutter",
     "ios",
     "android"
-  ],
-  "description": "Real-time updates, feature flagging and A/B testing - what if I told you that you could enable these powerful features in your Flutter application easily for free? In this article, I will cover multiple real-world use cases where Firebase Remote Config could help you while building Flutter apps."
+  ]
 }

@@ -11,6 +11,5 @@
   "tags": [
     "modern-android-development",
     "compose"
-  ],
-  "description": "\"A Guide to Creating Streaming XR Applications\" is a blog post that provides an overview of how to create streaming XR (Extended Reality) applications. The blog focuses on developing streaming XR applications using edge cloud computing and WebRTC technology."
+  ]
 }
