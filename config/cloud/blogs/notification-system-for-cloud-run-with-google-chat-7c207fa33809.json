@@ -11,5 +11,6 @@
   "tags": [
     "serverless-computing",
     "developer-tools"
-  ]
+  ],
+  "description": "Imagine being notified every time there is an action (updated, deleted, and more) on your various Cloud Run services."
 }

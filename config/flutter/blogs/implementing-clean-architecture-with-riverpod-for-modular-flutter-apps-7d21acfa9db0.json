@@ -12,5 +12,6 @@
     "mobile",
     "widgets",
     "samples"
-  ]
+  ],
+  "description": "The article provides practical tips for implementation and explores how to create independent modules for easy maintenance and scalability."
 }

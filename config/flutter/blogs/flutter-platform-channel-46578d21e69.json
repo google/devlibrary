@@ -12,5 +12,6 @@
     "mobile",
     "widgets",
     "plugins"
-  ]
+  ],
+  "description": "This blog describes how you can create a communication between Flutter and Native code to access new features in your Flutter app."
 }

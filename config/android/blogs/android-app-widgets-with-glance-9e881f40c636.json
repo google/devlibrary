@@ -12,5 +12,6 @@
     "compose",
     "modern-android-development",
     "ui"
-  ]
+  ],
+  "description": "Modern approach to build android app widgets using Jetpack Glance."
 }

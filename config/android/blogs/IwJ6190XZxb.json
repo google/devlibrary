@@ -10,5 +10,6 @@
   "link": "https://link.medium.com/IwJ6190XZxb",
   "tags": [
     "ui"
-  ]
+  ],
+  "description": "Understanding the internals of the Leanback APIs is sometimes quite tricky, but it's something we, as developers, must do to make sure we're able to create apps that look and behave correctly to our users. In this post, we'll dive deep into the HeadersSupportFragment."
 }

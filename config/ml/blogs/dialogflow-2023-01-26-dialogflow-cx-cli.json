@@ -2,9 +2,21 @@
   "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["xavidop"],
+  "authorIds": [
+    "xavidop"
+  ],
   "author": "Xavier Portilla Edo",
   "title": "Dialogflow CX CLI: The missing CLI to interact with your agents (English)",
   "link": "https://xavidop.me/dialogflow/2023-01-26-dialogflow-cx-cli/",
-  "tags": ["mobile","nlp","vision","library","notebook","collection","web","theory"]
+  "tags": [
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web",
+    "theory"
+  ],
+  "description": "An introduction to he most powerful Dialogflow CX CLI ever made"
 }

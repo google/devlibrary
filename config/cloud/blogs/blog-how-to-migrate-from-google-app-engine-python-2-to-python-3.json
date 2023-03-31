@@ -12,5 +12,6 @@
     "migration",
     "serverless-computing",
     "compute"
-  ]
+  ],
+  "description": "Learn our strategy for migrating over 75,000 lines of code over 5 months with no downtime"
 }

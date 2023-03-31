@@ -11,5 +11,6 @@
   "tags": [
     "general",
     "samples"
-  ]
+  ],
+  "description": "This is the first article of 24 article series about OOP design patterns and their implementation in Dart and Flutter."
 }

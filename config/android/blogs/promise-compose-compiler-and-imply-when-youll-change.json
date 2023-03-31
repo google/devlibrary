@@ -12,5 +12,6 @@
     "modern-android-development",
     "kotlin",
     "compose"
-  ]
+  ],
+  "description": "Let's learn to improve the performance of Composables by taking care and promising some things to the Compose Compiler."
 }

@@ -10,5 +10,6 @@
   "link": "https://seayeshaiftikhar.medium.com/firebase-authentications-with-flutter-eed17e5b4782",
   "tags": [
     "flutter"
-  ]
+  ],
+  "description": "Firebase Authentication is a powerful tool for adding user authentication to Flutter applications. With Firebase Authentication, developers can quickly and easily implement secure user authentication and authorization, allowing users to sign in with a variety of providers."
 }

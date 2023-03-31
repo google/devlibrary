@@ -12,5 +12,6 @@
     "mobile",
     "widgets",
     "web"
-  ]
+  ],
+  "description": "In the previous article, “Getting to know the Widgetscape — Part I 💙” I have mentioned about widgets that are used for App/Page setup, Layout widgets, the difference between them, and so much more.\nIn this article, I have talked about some commonly used important widgets in a Flutter application."
 }

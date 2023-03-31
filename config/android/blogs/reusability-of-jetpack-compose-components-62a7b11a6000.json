@@ -12,5 +12,6 @@
     "kotlin",
     "compose",
     "modern-android-development"
-  ]
+  ],
+  "description": "One of Jetpack Compose key features is the ability to create reusable components that can be easily shared and reused across different parts of an app."
 }

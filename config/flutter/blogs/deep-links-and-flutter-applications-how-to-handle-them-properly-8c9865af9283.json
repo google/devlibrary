@@ -2,11 +2,14 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["denisovav"],
+  "authorIds": [
+    "denisovav"
+  ],
   "author": "Aleksandr Denisov",
   "title": "Deep Links and Flutter applications. How to handle them properly.",
   "link": "https://medium.com/flutter-community/deep-links-and-flutter-applications-how-to-handle-them-properly-8c9865af9283",
   "tags": [
     "mobile"
-  ]
+  ],
+  "description": null
 }

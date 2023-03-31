@@ -12,5 +12,6 @@
     "kotlin",
     "architecture",
     "modern-android-development"
-  ]
+  ],
+  "description": "Guide to the Room database"
 }

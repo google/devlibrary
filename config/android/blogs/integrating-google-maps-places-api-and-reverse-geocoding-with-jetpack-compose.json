@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["sanskar10100"],
+  "authorIds": [
+    "sanskar10100"
+  ],
   "author": "Sanskar Agrawal",
   "title": "Integrating Google Maps, Places API, and Reverse Geocoding with Jetpack Compose",
   "link": "https://sanskar10100.hashnode.dev/integrating-google-maps-places-api-and-reverse-geocoding-with-jetpack-compose",
@@ -10,5 +12,6 @@
     "compose",
     "kotlin",
     "modern-android-development"
-  ]
+  ],
+  "description": "Integrating Google maps into Android apps has been somewhat of a tough nut to crack for developers. With the advent of Jetpack Compose for building native UI on Android, the Google Maps team announced a Map SDK for Compose, available here. However, it is only a piece of the puzzle."
 }

@@ -12,5 +12,6 @@
     "widgets",
     "mobile",
     "general"
-  ]
+  ],
+  "description": "In this blog post, you will learn how to add multiple themes to your Flutter app. Integrated the latest version of Riverpod which will help you to switch between selected themes in a seamless manner."
 }

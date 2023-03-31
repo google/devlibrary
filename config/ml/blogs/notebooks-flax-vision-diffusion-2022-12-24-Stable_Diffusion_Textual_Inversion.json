@@ -2,7 +2,9 @@
   "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["bachiirc"],
+  "authorIds": [
+    "bachiirc"
+  ],
   "author": "Bachir Chihani",
   "title": "Textual Inversion inference with diffusers and Flax",
   "link": "https://dzlab.github.io/notebooks/flax/vision/diffusion/2022/12/24/Stable_Diffusion_Textual_Inversion.html",
@@ -10,5 +12,6 @@
     "vision",
     "gan",
     "nlp"
-  ]
+  ],
+  "description": null
 }

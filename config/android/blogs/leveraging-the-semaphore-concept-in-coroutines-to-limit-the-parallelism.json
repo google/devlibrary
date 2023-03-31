@@ -10,5 +10,6 @@
   "link": "https://blog.shreyaspatil.dev/leveraging-the-semaphore-concept-in-coroutines-to-limit-the-parallelism",
   "tags": [
     "kotlin"
-  ]
+  ],
+  "description": null
 }

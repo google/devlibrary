@@ -12,5 +12,6 @@
     "compose",
     "kotlin",
     "ui"
-  ]
+  ],
+  "description": "A detailed blog on constraint layout implementation in Jetpack-Compose. I have also added visuals wherever possible for a better understanding."
 }

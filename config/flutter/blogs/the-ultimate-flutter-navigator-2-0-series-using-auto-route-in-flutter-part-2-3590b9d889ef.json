@@ -12,5 +12,6 @@
     "mobile",
     "web",
     "samples"
-  ]
+  ],
+  "description": "This. blog explains how can you pass data between 2 screens using auto route. Also how can you implement route redirection, page transition and navigation bar implementation using Auto Route that works for both mobile and web."
 }

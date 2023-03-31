@@ -12,5 +12,6 @@
     "plugins",
     "widgets",
     "samples"
-  ]
+  ],
+  "description": "Server-driven UI in Flutter (An experiment on remote widgets.)"
 }
