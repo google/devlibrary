@@ -2,12 +2,15 @@
   "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["danascape"],
+  "authorIds": [
+    "danascape"
+  ],
   "author": "Saalim Quadri",
   "title": "Introduction to AOSP",
   "link": "https://blog.realogs.in/getting-started-with-aosp/",
   "tags": [
     "architecture",
     "modern-android-development"
-  ]
+  ],
+  "description": null
 }

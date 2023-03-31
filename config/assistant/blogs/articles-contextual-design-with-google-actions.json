@@ -12,5 +12,6 @@
     "assistant-conversation",
     "actions-on-google",
     "google-assistant"
-  ]
+  ],
+  "description": null
 }

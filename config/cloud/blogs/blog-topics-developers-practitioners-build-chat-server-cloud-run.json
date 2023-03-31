@@ -2,12 +2,15 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["chillcaley"],
+  "authorIds": [
+    "chillcaley"
+  ],
   "author": "Jaeyeon Baek",
   "title": "Build a chat server with Cloud Run | Google Cloud Blog",
   "link": "https://cloud.google.com/blog/topics/developers-practitioners/build-chat-server-cloud-run",
   "tags": [
     "serverless-computing",
     "containers"
-  ]
+  ],
+  "description": "This section introduces how to build a chat server with Cloud Run."
 }

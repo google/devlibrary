@@ -11,5 +11,6 @@
   "tags": [
     "general",
     "mobile"
-  ]
+  ],
+  "description": "JSON data parsing is a common task in any app. You can do this manually or through a code generator. If the data size is small you can do it manually but if the size is large it will be difficult to do it manually. I will show you both the way to do it."
 }

@@ -12,5 +12,6 @@
     "modern-android-development",
     "kotlin",
     "build-tools"
-  ]
+  ],
+  "description": "Android team released a new framework called SDKExtensions which helps to make development more flexible using new APIs that will be available for older Android versions.\n\nUsing this framework helps developers integrate new APIs like Photo picker, introduced in Android 13, with older versions too."
 }

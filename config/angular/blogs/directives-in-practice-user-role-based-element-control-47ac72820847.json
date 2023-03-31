@@ -10,5 +10,6 @@
   "link": "https://medium.com/@pawel.kubiak.dev/directives-in-practice-user-role-based-element-control-47ac72820847",
   "tags": [
     "demos"
-  ]
+  ],
+  "description": "Directives are one of the core elements of the Angular framework however, for some reason they are underrated and underused. In a series of articles `Directives in practice`, I would like to elaborate on real-life use cases where you could consider the usage of directives."
 }

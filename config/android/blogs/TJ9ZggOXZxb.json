@@ -11,5 +11,6 @@
   "tags": [
     "ui",
     "architecture"
-  ]
+  ],
+  "description": "In the first part of this series, we learned about the building blocks of media playback and control using the Android Leanback library and how to add and handle the basic playback controls. We also enhanced the UX of our App by following Google’s Playback controls on TV recommendations."
 }

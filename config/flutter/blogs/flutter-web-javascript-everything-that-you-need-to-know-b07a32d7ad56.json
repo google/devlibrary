@@ -12,5 +12,6 @@
     "mobile",
     "web",
     "samples"
-  ]
+  ],
+  "description": "You will get to know about:\n- How do I pass the values from Flutter to JavaScript?\n- How to get a response from JavaScript to Flutter?\n- How can I wait for a response from JavaScript?"
 }

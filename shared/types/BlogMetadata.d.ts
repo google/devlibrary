@@ -32,7 +32,7 @@ export interface BlogMetadata {
   /**
    * The description of the blog post
    */
-  description?: string;
+  description?: string | null;
   /**
    * Full external link to the post
    */

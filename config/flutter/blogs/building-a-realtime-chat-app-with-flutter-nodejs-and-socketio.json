@@ -2,11 +2,14 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["dev-tayy"],
+  "authorIds": [
+    "dev-tayy"
+  ],
   "author": "Ahmed Yusuf",
   "title": "Building a Realtime Chat App with Flutter, Node.js & Socket.IO",
   "link": "https://taycodes.hashnode.dev/building-a-realtime-chat-app-with-flutter-nodejs-and-socketio",
   "tags": [
     "mobile"
-  ]
+  ],
+  "description": "The article describes how to build a real-time chat application leveraging the power of Socket.IO, Flutter and NodeJS"
 }

@@ -11,5 +11,6 @@
   "tags": [
     "containers",
     "management-tools"
-  ]
+  ],
+  "description": "This Blog will explain how we have integrated Cloud Build With ArgoCD to Setup CI/CD Pipeline"
 }

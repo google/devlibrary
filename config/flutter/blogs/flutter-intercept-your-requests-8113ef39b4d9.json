@@ -11,5 +11,6 @@
   "tags": [
     "mobile",
     "samples"
-  ]
+  ],
+  "description": "Making the most out of interceptors by modifying the requests and responses intercepting the HTTP request in Flutter."
 }

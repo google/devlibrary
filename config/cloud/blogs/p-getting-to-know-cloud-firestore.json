@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["mustapha"],
+  "authorIds": [
+    "mustapha"
+  ],
   "author": "Mustapha Adekunle",
   "title": "Getting to know Cloud Firestore.",
   "link": "https://dataengineeringgcp.substack.com/p/getting-to-know-cloud-firestore",
@@ -10,5 +12,6 @@
     "databases",
     "serverless-computing",
     "storage"
-  ]
+  ],
+  "description": null
 }

@@ -11,5 +11,6 @@
   "tags": [
     "modern-android-development",
     "architecture"
-  ]
+  ],
+  "description": "There was no guide that explain Paging3 with just Room, without Network Remote Mediator so I wrote this one and it now ranks well on Google search too. Listing it to devlibrary would be nice!"
 }

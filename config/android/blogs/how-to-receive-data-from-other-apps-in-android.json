@@ -2,12 +2,15 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["shivam-gupta007"],
+  "authorIds": [
+    "shivam-gupta007"
+  ],
   "author": "shivam gupta",
   "title": "How to receive data from other apps in android studio",
   "link": "https://shivam-gupta.hashnode.dev/how-to-receive-data-from-other-apps-in-android",
   "tags": [
     "kotlin",
     "build-tools"
-  ]
+  ],
+  "description": null
 }

@@ -12,5 +12,6 @@
     "mobile",
     "firebase",
     "general"
-  ]
+  ],
+  "description": "This article talks about building an infinite pagination feature in flutter apps. We are using various community packages like Riverpod, Freezed and Firebase along with Slivers to build this feature."
 }

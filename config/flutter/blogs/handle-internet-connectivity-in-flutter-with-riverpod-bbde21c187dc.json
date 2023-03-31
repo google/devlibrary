@@ -12,5 +12,6 @@
     "mobile",
     "general",
     "samples"
-  ]
+  ],
+  "description": "Explains how to create a Network Connectivity class that handles the changes in the Connectivity status of the device and Updates the User with the help of Riverpod."
 }

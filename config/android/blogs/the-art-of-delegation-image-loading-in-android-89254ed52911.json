@@ -12,5 +12,6 @@
     "modern-android-development",
     "kotlin",
     "architecture"
-  ]
+  ],
+  "description": "When it comes to displaying images in Android, there are a lot of ways to do it. However, with so many options, it can be tough to choose the right one and even tougher to manage it in the long run. That’s where Image Loading Delegation comes into play! 🎉"
 }

@@ -2,11 +2,14 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["tom"],
+  "authorIds": [
+    "tom"
+  ],
   "author": "Tom Eustace",
   "title": "Angular Named RouterOutlets",
   "link": "https://country-code.ghost.io/angular-router-outlets/",
   "tags": [
     "performance"
-  ]
+  ],
+  "description": "This post aims to help readers understand how to use named routes in their Angular application."
 }

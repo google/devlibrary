@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["kaaveh"],
+  "authorIds": [
+    "kaaveh"
+  ],
   "author": "Kaaveh Mohamedi",
   "title": "An introduction about Preview in Jetpack Compose",
   "link": "https://proandroiddev.com/an-introduction-about-preview-in-jetpack-compose-b72a96daac35",
@@ -10,5 +12,6 @@
     "compose",
     "architecture",
     "modern-android-development"
-  ]
+  ],
+  "description": "The @Preview annotation has several capabilities to help manage previewing composable functions. This article, going deep dive and covering the power of @Preview! 🔥"
 }

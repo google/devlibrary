@@ -12,5 +12,6 @@
     "serverless-computing",
     "developer-tools",
     "containers"
-  ]
+  ],
+  "description": null
 }

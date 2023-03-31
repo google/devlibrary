@@ -12,5 +12,6 @@
     "mobile",
     "samples",
     "general"
-  ]
+  ],
+  "description": "Learn how to handle complex HTML data containing nested tables using flutter_html"
 }

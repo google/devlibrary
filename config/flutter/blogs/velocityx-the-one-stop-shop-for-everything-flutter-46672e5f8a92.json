@@ -12,5 +12,6 @@
     "plugins",
     "general",
     "widgets"
-  ]
+  ],
+  "description": "This blog gives a brief overview of how the velocity_x package can be used in a Flutter app and the various features which the package provides."
 }

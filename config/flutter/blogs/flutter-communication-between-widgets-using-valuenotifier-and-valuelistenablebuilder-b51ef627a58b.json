@@ -12,5 +12,6 @@
     "mobile",
     "widgets",
     "samples"
-  ]
+  ],
+  "description": "ValueNotifier is a special type of class that extends Changenotifier, which can hold a single value and notifies the widgets which are listening to it whenever its holding value gets change."
 }

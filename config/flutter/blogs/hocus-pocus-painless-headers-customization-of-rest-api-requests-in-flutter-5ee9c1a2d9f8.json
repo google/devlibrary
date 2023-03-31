@@ -11,5 +11,6 @@
   "tags": [
     "mobile",
     "general"
-  ]
+  ],
+  "description": "Below you’ll discover how to provide different headers to individual, selected, most, or all REST API requests without explicitly passing them as parameters when using retrofit code generating package"
 }

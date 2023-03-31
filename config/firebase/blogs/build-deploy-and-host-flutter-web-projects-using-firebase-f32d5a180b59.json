@@ -11,5 +11,6 @@
   "tags": [
     "web",
     "flutter"
-  ]
+  ],
+  "description": "This is all about hosting flutter web project using Firebase."
 }

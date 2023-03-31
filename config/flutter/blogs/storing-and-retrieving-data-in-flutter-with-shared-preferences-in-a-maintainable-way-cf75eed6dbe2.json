@@ -12,5 +12,6 @@
     "plugins",
     "general",
     "samples"
-  ]
+  ],
+  "description": "In Flutter apps, storing and retrieving small data, such as user preferences or login information, is often necessary. One way to do this is through the use of Shared Preferences. This allows you to store key-value pairs of data as simple strings, and they are persisted across app launch."
 }

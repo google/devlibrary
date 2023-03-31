@@ -2,11 +2,20 @@
   "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["danywalls"],
+  "authorIds": [
+    "danywalls"
+  ],
   "author": "Dany Paredes",
   "title": "Composition and inheritance in Angular.",
   "link": "https://www.danywalls.com/composition-and-inheritance-in-angular-1",
   "tags": [
-    "components","frameworks","router","performance","gettingstarted","libraries","demos"
-  ]
+    "components",
+    "frameworks",
+    "router",
+    "performance",
+    "gettingstarted",
+    "libraries",
+    "demos"
+  ],
+  "description": "How handling constructor over-injection code smells"
 }

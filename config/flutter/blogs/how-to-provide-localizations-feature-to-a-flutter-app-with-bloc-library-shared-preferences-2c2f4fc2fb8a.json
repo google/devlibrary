@@ -12,5 +12,6 @@
     "mobile",
     "general",
     "samples"
-  ]
+  ],
+  "description": "Step-by-step of how to create app localizations in Flutter with the help of Bloc as the state management and Shared Preferences for caching the user language preference."
 }

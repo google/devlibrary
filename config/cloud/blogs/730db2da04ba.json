@@ -2,7 +2,9 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["austennovis"],
+  "authorIds": [
+    "austennovis"
+  ],
   "author": "Austen Novis",
   "title": "Serverless Python APIs made simple on GCP with Goblet backed by Cloud Functions and Cloud Run",
   "link": "https://medium.com/p/730db2da04ba",
@@ -10,5 +12,6 @@
     "serverless-computing",
     "api-management",
     "developer-tools"
-  ]
+  ],
+  "description": null
 }

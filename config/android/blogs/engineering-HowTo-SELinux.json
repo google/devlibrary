@@ -2,11 +2,14 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["theimpulson"],
+  "authorIds": [
+    "theimpulson"
+  ],
   "author": "Aayush Gupta",
   "title": "Working with SELinux on Android",
   "link": "https://lineageos.org/engineering/HowTo-SELinux/",
   "tags": [
     "build-tools"
-  ]
+  ],
+  "description": "Gerrit, where my submission was reviewed: https://review.lineageos.org/c/LineageOS/www/+/290814"
 }

@@ -12,5 +12,6 @@
     "containers",
     "management-tools",
     "networking"
-  ]
+  ],
+  "description": "Introduction to Kubernetes"
 }
