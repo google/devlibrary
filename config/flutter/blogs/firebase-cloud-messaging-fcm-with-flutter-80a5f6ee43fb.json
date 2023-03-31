@@ -12,5 +12,6 @@
     "firebase",
     "samples",
     "mobile"
-  ]
+  ],
+  "description": "Firebase Cloud Messaging (FCM) is a powerful tool for sending push notifications to mobile devices. With FCM, developers can send notifications to individual devices or to groups of devices, allowing them to engage users and keep them informed of important updates in real-time. In this article, we w"
 }

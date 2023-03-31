@@ -2,12 +2,15 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["jonathanmonga"],
+  "authorIds": [
+    "jonathanmonga"
+  ],
   "author": "Jonathan Monga",
   "title": "Parsing HTML in Dart with Html package.",
   "link": "https://medium.com/flutter-community/parsing-html-in-dart-with-html-package-cd43c29cc460",
   "tags": [
     "mobile",
     "web"
-  ]
+  ],
+  "description": "Itlooks like that, an HTML code on a website. Look again at the photo, I admit that the search for a yellow wreck will be difficult, and it is the same for the search for data in an HTML code."
 }

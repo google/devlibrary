@@ -10,5 +10,6 @@
   "link": "https://link.medium.com/M3ncdkQNdxb",
   "tags": [
     "mobile"
-  ]
+  ],
+  "description": "How to work with MaterialColor? Here is the answer..\nNow no more type errors! Define your custom Swatch and use it in theme for Flutter app."
 }

@@ -12,5 +12,6 @@
     "containers",
     "operations",
     "management-tools"
-  ]
+  ],
+  "description": "This Article is based on how to set up Jenkins Distributed Cluster in GKE with Dynamic Build Agents on Kubernetes Pods."
 }

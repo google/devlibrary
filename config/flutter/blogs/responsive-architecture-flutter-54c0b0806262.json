@@ -12,5 +12,6 @@
     "web",
     "mobile",
     "widgets"
-  ]
+  ],
+  "description": "This article resolves issues with a responsive design for your cross-platform application and makes it easy to frame your application’s widgets according to screen size, orientation, device type."
 }

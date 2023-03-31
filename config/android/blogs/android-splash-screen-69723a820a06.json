@@ -12,5 +12,6 @@
     "kotlin",
     "modern-android-development",
     "ui"
-  ]
+  ],
+  "description": "This blog talks about android new splash screen API"
 }

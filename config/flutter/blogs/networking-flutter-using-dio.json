@@ -12,5 +12,6 @@
     "mobile",
     "plugins",
     "samples"
-  ]
+  ],
+  "description": "Learn how to easily and gracefully handle your REST API requests in Flutter using the Dio package in this detailed tutorial."
 }

@@ -2,7 +2,9 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["yveskalume"],
+  "authorIds": [
+    "yveskalume"
+  ],
   "author": "Yves Kalume",
   "title": "Jetpack Compose state deconstructed",
   "link": "https://medium.com/proandroiddev/jetpack-compose-state-deconstructed-68c6b957f0be",
@@ -10,5 +12,6 @@
     "compose",
     "ui",
     "kotlin"
-  ]
+  ],
+  "description": null
 }

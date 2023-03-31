@@ -2,7 +2,9 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["abhisheksaxena"],
+  "authorIds": [
+    "abhisheksaxena"
+  ],
   "author": "Abhishek Saxena",
   "title": "Jetpack Compose Migration: Best Practices and Strategies",
   "link": "https://proandroiddev.com/migration-to-jetpack-compose-for-a-legacy-application-3bf256df2ebe#5a6d-3dc64cafdbdf",
@@ -10,5 +12,6 @@
     "compose",
     "kotlin",
     "architecture"
-  ]
+  ],
+  "description": "This article is all about my experience, the challenges I faced, the thought process behind the migration, and the design decisions I took while migrating my View-based application written in Java."
 }

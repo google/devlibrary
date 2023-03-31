@@ -10,5 +10,6 @@
   "link": "https://ganeshajdivekar.medium.com/exception-handling-in-kotlin-coroutines-b08c095ddea0",
   "tags": [
     "kotlin"
-  ]
+  ],
+  "description": "Exception handling in Kotlin Coroutines"
 }

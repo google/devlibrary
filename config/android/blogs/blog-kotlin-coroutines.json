@@ -2,11 +2,14 @@
   "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["amitshekhar"],
+  "authorIds": [
+    "amitshekhar"
+  ],
   "author": "Amit Shekhar",
   "title": "Mastering Kotlin Coroutines",
   "link": "https://amitshekhar.me/blog/kotlin-coroutines",
   "tags": [
     "kotlin"
-  ]
+  ],
+  "description": "This article is for anyone who is curious about the Kotlin Coroutines but has no idea what it is exactly. The goal is to make you understand what are Kotlin Coroutines which means that there are few simplifications done while writing this."
 }

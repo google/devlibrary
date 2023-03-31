@@ -11,5 +11,6 @@
   "tags": [
     "mobile",
     "firebase"
-  ]
+  ],
+  "description": "Improve user engagement by implementing push notifications in Flutter with Firebase Cloud Messaging, a free service that manages your backend infrastructure."
 }

@@ -12,5 +12,6 @@
     "mobile",
     "general",
     "samples"
-  ]
+  ],
+  "description": "This six-part series presents tools and approaches that facilitate API layer implementation in Flutter and Dart applications we use at Tide."
 }

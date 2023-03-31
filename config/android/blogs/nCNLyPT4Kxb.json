@@ -12,5 +12,6 @@
     "compose",
     "build-tools",
     "ui"
-  ]
+  ],
+  "description": "Let’s discuss a smarter way to use Jetpack Compose Preview while app development!\nthis is a blog where we’ll discuss how we can use JetpackCompose @Preview in a different way to make our app development more productive!"
 }

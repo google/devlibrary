@@ -12,5 +12,6 @@
     "mobile",
     "plugins",
     "samples"
-  ]
+  ],
+  "description": "In this tutorial, learn how to use Hive, which helps manage all of your Flutter apps' CRUD operations and handles persistent local data."
 }

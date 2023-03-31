@@ -2,12 +2,15 @@
   "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["xavidop"],
+  "authorIds": [
+    "xavidop"
+  ],
   "author": "Xavier Portilla Edo",
   "title": "How to properly test your Dialogflow CX Agents (English)",
   "link": "https://xavidop.me/dialogflow/2023-01-24-dialogflow-cx-tests/",
   "tags": [
     "dialogflow",
     "nlp"
-  ]
+  ],
+  "description": "In this article you will learn how to properly test your Dialogflow CX Agents"
 }

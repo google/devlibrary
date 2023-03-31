@@ -12,5 +12,6 @@
     "plugins",
     "mobile",
     "samples"
-  ]
+  ],
+  "description": "In this tutorial, you'll learn how to elegantly handle your REST API calls in Flutter using the http package."
 }

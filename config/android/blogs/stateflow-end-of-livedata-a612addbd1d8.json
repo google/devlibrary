@@ -12,5 +12,6 @@
     "kotlin",
     "architecture",
     "modern-android-development"
-  ]
+  ],
+  "description": "StateFlow, End of LiveData?"
 }

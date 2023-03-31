@@ -12,5 +12,6 @@
     "kotlin",
     "modern-android-development",
     "architecture"
-  ]
+  ],
+  "description": "Flow Collection is most of the time done in a wrong way, causing unnecessary resource usages with is just waste. Collection flow might get tricky as its not lifecycle supported.\nSo lets dive into this article and understand the common problems in collecting flows the wrong way and how to fix them."
 }

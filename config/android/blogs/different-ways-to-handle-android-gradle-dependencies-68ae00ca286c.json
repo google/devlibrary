@@ -11,5 +11,6 @@
   "tags": [
     "modern-android-development",
     "build-tools"
-  ]
+  ],
+  "description": "The blog contains information on how to handle gradle dependencies in android and how to implement in your project"
 }

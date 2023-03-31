@@ -12,5 +12,6 @@
     "hybrid-multicloud",
     "containers",
     "operations"
-  ]
+  ],
+  "description": "Anthos Multi Cloud: Step by step guide to deploy Anthos on AWS."
 }

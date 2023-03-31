@@ -12,5 +12,6 @@
     "compose",
     "modern-android-development",
     "ui"
-  ]
+  ],
+  "description": "Modern toolkit for building native user interfaces for Android apps. Compose makes it easier and faster to build UIs on Android."
 }
