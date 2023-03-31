@@ -28,6 +28,10 @@
       "type": "string",
       "description": "The title of the blog post"
     },
+    "description": {
+      "type": "string",
+      "description": "The description of the blog post"
+    },
     "link": {
       "type": "string",
       "description": "Full external link to the post"
@@ -46,5 +50,5 @@
       "description": "The expertise of the articles or projects"
     }
   },
-  "required": [ "author", "title", "link", "tags", "expertise", "authorIds"]
+  "required": ["author", "title", "link", "tags", "expertise"]
 }
