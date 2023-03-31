@@ -29,7 +29,7 @@
       "description": "The title of the blog post"
     },
     "description": {
-      "type": "string",
+      "type": ["string", "null"],
       "description": "The description of the blog post"
     },
     "link": {
