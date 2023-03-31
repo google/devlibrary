@@ -30,7 +30,7 @@
       <p class="mt-1 hero-description">
         Dev Library is a curated platform for technical content written or built
         using Google technologies like Android, Angular, Flutter, Firebase,
-        Google Cloud, Machine Learning and Google Assistant.
+        Google Cloud, Machine Learning, Google Assistant and Google Maps Platform.
       </p>
     </div>
     <img src="/img/banners/desktop/about-clipart.png" class="hero-clipart" />
@@ -40,25 +40,7 @@
     >
       <div class="section">
         <div class="mt-6 lg:mt-10 lg:text-lg">
-          <p>
-            <span
-              ><strong>Dev Library</strong> is a curated platform for technical
-              content written or built using any of the following Google
-              technologies:</span
-            >
-          </p>
-
-          <ul class="ml-6 mt-2 list-disc">
-            <li>Android</li>
-            <li>Angular</li>
-            <li>Flutter</li>
-            <li>Firebase</li>
-            <li>Google Cloud</li>
-            <li>Machine Learning</li>
-            <li>Google Assistant</li>
-            <li>Google Maps Platform</li>
-          </ul>
-          <p class="mt-4">Currently we accept two kinds of content:</p>
+          <p class="mt-4">Currently DevLibrary accepts two kinds of content:</p>
 
           <ul class="ml-6 mt-2 list-disc">
             <li>GitHub repositories</li>
@@ -128,32 +110,6 @@
         <h1>Frequently Asked Questions</h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg mb-16">
-          <div
-            class="mt-2 relative border-b faq-title justify-between flex"
-            @click="toggleFaq(0)"
-          >
-            <p class="pb-2">What is Dev Library?</p>
-            <font-awesome-icon
-              :icon="FaqData[0] ? 'angle-up' : 'angle-down'"
-              class="ml-1"
-            />
-          </div>
-          <div v-show="FaqData[0]" class="pb-2 border-b">
-            <p class="mt-4">
-              Dev Library is a platform for showcasing open-source projects and
-              technical blogs featuring Google technologies.
-            </p>
-            <p class="mt-2">
-              Any developer who has built an open-source project using Google's
-              technologies, or has written about a solution they solved using
-              Google's tools, can apply to have their project or content
-              featured on the site.
-            </p>
-            <p class="mt-2">
-              Google experts then review each submission for quality, relevance
-              and uniqueness. If approved, the project is included on the site.
-            </p>
-          </div>
           <div
             class="mt-2 relative border-b faq-title justify-between flex"
             @click="toggleFaq(1)"
