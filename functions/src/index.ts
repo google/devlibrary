@@ -293,12 +293,18 @@ async function refreshRepoInternal(
 }
 
 // Cron job to refresh all projects each day
+
+let cronString = "0 0 * * *";
+if(process.env.NODE_ENV === "development") {
+  cronString = "0 2 * * *";
+}
+
 export const refreshProjectsCron = functions
   .runWith({
     memory: "2GB",
     timeoutSeconds: 540,
   })
-  .pubsub.schedule("0 0 * * *")
+  .pubsub.schedule(cronString)
   .onRun(async (context) => {
     await refreshAllProjects();
     await refreshAllAuthors();
@@ -322,6 +328,7 @@ export const refreshAuthors = functions.runWith({
 
 // When in the functions emulator we provide some simple webhooks to refresh things
 if (process.env.FUNCTIONS_EMULATOR) {
+
   exports.refreshProjects = functions.https.onRequest(
     async (request, response) => {
       await refreshAllProjects();
