@@ -293,22 +293,45 @@ async function refreshRepoInternal(
 }
 
 // Cron job to refresh all projects each day
-
-let cronString = "0 0 * * *";
-if(process.env.NODE_ENV === "development") {
-  cronString = "0 2 * * *";
+let cronString = "0 0 * * *"
+if(process.env.FIREBASE_PROJECT?.includes("dev")) {
+  cronString = "0 2 * * *"
 }
 
+// let refreshProjectsCronConditional = functions
+//   .runWith({
+//     memory: "2GB",
+//     timeoutSeconds: 540,
+//   })
+//   .pubsub.schedule("0 0 * * *")
+//   .onRun(async (context) => {
+//     await refreshAllProjects();
+//     await refreshAllAuthors();
+//   });
+
+// if(process.env.NODE_ENV === "development") {
+//   refreshProjectsCronConditional = functions
+//   .runWith({
+//     memory: "2GB",
+//     timeoutSeconds: 540,
+//   })
+//   .pubsub.schedule("0 2 * * *")
+//   .onRun(async () => {
+//     await refreshAllProjects();
+//     await refreshAllAuthors();
+//   });
+//   }
+
 export const refreshProjectsCron = functions
-  .runWith({
-    memory: "2GB",
-    timeoutSeconds: 540,
-  })
-  .pubsub.schedule(cronString)
-  .onRun(async (context) => {
-    await refreshAllProjects();
-    await refreshAllAuthors();
-  });
+.runWith({
+  memory: "2GB",
+  timeoutSeconds: 540,
+})
+.pubsub.schedule(cronString)
+.onRun(async () => {
+  await refreshAllProjects();
+  await refreshAllAuthors();
+});
 
 // Cron job to refresh Authors
 export const refreshAuthors = functions.runWith({
