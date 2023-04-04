@@ -2,11 +2,14 @@
   "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["shhdharmen"],
+  "authorIds": [
+    "shhdharmen"
+  ],
   "author": "Dharmen Shah",
   "title": "How to manage object in Angular FormControl",
   "link": "https://blog.shhdharmen.me/how-to-manage-object-in-angular-formcontrol",
   "tags": [
     "performance"
-  ]
+  ],
+  "description": "In this tutorial, we will learn how to manage object in FormControl and handle conversion for input"
 }

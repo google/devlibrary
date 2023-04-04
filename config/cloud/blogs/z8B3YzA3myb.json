@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "hannydevelop"
+  ],
+  "author": "Ugochi Ukpai",
+  "title": "Create a Database with GoogleSheet and Rust - Series 2",
+  "link": "https://link.medium.com/z8B3YzA3myb",
+  "tags": [
+    "databases",
+    "data-analytics"
+  ],
+  "description": "One important factor for choosing a database, is the ease to post (send) and get (retrieve) data from your database. The GoogleSheet API, allows users to send and retrieve data easily.\n\nFor this section, we will explore how to add new data into our Spreadsheet, using Rust."
+}

@@ -12,5 +12,6 @@
     "mobile",
     "widgets",
     "plugins"
-  ]
+  ],
+  "description": "This blog contains a complete guide for integrating Dialogflow into your Flutter app. It contains all the steps from configuring Dialogflow to integrating into your Flutter App.\n\nIt also has a link to the project on GitHub so that you can test it out."
 }

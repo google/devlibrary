@@ -88,6 +88,7 @@ interface Application {
     linkToReadme: string;
   } | null;
   tags: string[];
+  comments: string;
 }
 
 function assertNonEmpty<T>(arr: T[]): arr is NonEmptyArray<T> {
@@ -131,6 +132,7 @@ function applicationToBlogMetadata(a: Application): BlogMetadata {
     title: a.blogPost.description,
     link: a.blogPost.url,
     tags: a.tags,
+    description: a.comments,
     expertise: a.expertise, //"INTERMEDIATE",
   };
 }

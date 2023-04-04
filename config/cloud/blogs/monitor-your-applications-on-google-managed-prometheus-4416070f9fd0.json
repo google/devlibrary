@@ -12,5 +12,6 @@
     "migration",
     "management-tools",
     "developer-tools"
-  ]
+  ],
+  "description": null
 }

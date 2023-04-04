@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "shubham"
+  ],
+  "author": "Shubham Narkhede",
+  "title": "Google Map with Direction",
+  "link": "https://medium.com/@shubham.narkhede8/flutter-google-map-with-direction-6a26ad875083",
+  "tags": [
+    "mobile",
+    "google-maps"
+  ],
+  "description": "How to add route on google map."
+}

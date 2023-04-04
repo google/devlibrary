@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["ayeshaiftikhar"],
+  "authorIds": [
+    "ayeshaiftikhar"
+  ],
   "author": "Ayesha Iftikhar",
   "title": "Firebase Dynamic Links with Flutter",
   "link": "https://medium.com/flutterevo/firebase-dynamic-links-with-flutter-ae964b7624de",
@@ -10,5 +12,6 @@
     "firebase",
     "mobile",
     "general"
-  ]
+  ],
+  "description": "Firebase Dynamic Links is a powerful feature that allows developers to create links that work seamlessly across multiple platforms, including Android, iOS, web, and desktop. In combination with Flutter, it provides a powerful toolset for developing performant apps with optimized user experiences."
 }

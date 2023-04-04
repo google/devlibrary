@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "cavinmac"
+  ],
+  "author": "Cavin Macwan",
+  "title": "Navigator 2.0 series using Auto Route in Flutter Part:2",
+  "link": "https://medium.com/@CavinMac/the-ultimate-flutter-navigator-2-0-series-using-auto-route-in-flutter-part-2-3590b9d889ef",
+  "tags": [
+    "mobile",
+    "web",
+    "samples"
+  ],
+  "description": "This. blog explains how can you pass data between 2 screens using auto route. Also how can you implement route redirection, page transition and navigation bar implementation using Auto Route that works for both mobile and web."
+}

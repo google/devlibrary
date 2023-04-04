@@ -2,7 +2,9 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["hanneshapke"],
+  "authorIds": [
+    "hanneshapke"
+  ],
   "author": "Hannes Hapke",
   "title": "ChatGPT for Accounting: How Digits is using Generative Machine Learning to transform finance",
   "link": "https://digits.com/developer/posts/assisting-accountants-with-generative-machine-learning/",
@@ -10,5 +12,6 @@
     "tfx",
     "tf-core",
     "keras"
-  ]
+  ],
+  "description": "Train your own generative models using Google's T5 model, fine-tune it with Keras, and deploy it using Tf Text, TensorFlow Serving and TFX."
 }

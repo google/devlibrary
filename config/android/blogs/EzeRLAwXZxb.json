@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "admqueiroga"
+  ],
+  "author": "Ademir Queiroga",
+  "title": "Android TV Leanback: Updating Rows in RowsSupportFragment",
+  "link": "https://link.medium.com/EzeRLAwXZxb",
+  "tags": [
+    "ui"
+  ],
+  "description": "In this post, we'll learn how to update the rows of a RowsSupportFragment leveraging the power of the DiffUtil class and how to update only the specific content that changed in the row."
+}

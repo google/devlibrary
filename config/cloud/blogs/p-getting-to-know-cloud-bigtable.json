@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["mustapha"],
+  "authorIds": [
+    "mustapha"
+  ],
   "author": "Mustapha Adekunle",
   "title": "Getting to Know Cloud Bigtable",
   "link": "https://dataengineeringgcp.substack.com/p/getting-to-know-cloud-bigtable",
@@ -10,5 +12,6 @@
     "databases",
     "migration",
     "storage"
-  ]
+  ],
+  "description": "Building and Operationalizing Storage Systems."
 }

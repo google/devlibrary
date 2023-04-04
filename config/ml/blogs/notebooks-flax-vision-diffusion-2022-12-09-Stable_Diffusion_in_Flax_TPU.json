@@ -2,7 +2,9 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["bachiirc"],
+  "authorIds": [
+    "bachiirc"
+  ],
   "author": "Bachir Chihani",
   "title": "Get started with Stable Diffusion using Flax and TPU",
   "link": "https://dzlab.github.io/notebooks/flax/vision/diffusion/2022/12/09/Stable_Diffusion_in_Flax_TPU.html",
@@ -11,5 +13,6 @@
     "vision",
     "gan",
     "tpu"
-  ]
+  ],
+  "description": null
 }

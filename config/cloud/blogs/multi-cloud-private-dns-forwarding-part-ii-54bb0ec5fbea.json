@@ -12,5 +12,6 @@
     "networking",
     "hybrid-multicloud",
     "operations"
-  ]
+  ],
+  "description": "You can set up a Hybrid kind of Private DNS forwarding for the multi-cloud infrastructure or hybrid cloud environment where multiple applications or services need to connect private endpoints."
 }

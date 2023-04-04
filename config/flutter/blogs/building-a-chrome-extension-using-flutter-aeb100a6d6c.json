@@ -12,5 +12,6 @@
     "web",
     "widgets",
     "samples"
-  ]
+  ],
+  "description": "Walkthrough of building a full-fledged Chrome extension using Flutter."
 }

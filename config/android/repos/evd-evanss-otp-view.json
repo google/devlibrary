@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "evd-evanss"
+  ],
+  "owner": "evd-evanss",
+  "repo": "otp-view",
+  "name": "Otp View",
+  "shortDescription": "A custom text field to enter a code usually used in cases of authentication.",
+  "longDescription": "A custom text field to enter a code usually used in cases of authentication.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "kotlin"
+  ]
+}

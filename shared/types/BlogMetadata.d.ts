@@ -30,6 +30,10 @@ export interface BlogMetadata {
    */
   title: string;
   /**
+   * The description of the blog post
+   */
+  description?: string | null;
+  /**
    * Full external link to the post
    */
   link: string;

@@ -12,5 +12,6 @@
     "plugins",
     "mobile",
     "samples"
-  ]
+  ],
+  "description": "If you're looking to add a custom UI to the camera view in your Flutter app, look no further than this in-depth, thorough tutorial."
 }

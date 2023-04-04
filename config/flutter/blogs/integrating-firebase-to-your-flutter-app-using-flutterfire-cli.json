@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "idrisadeyemi01"
+  ],
+  "author": "Idris Idris",
+  "title": "How to integrate Firebase in a Flutter app using FlutterFire CLI",
+  "link": "https://idrisadeyemi.hashnode.dev/integrating-firebase-to-your-flutter-app-using-flutterfire-cli",
+  "tags": [
+    "firebase",
+    "mobile",
+    "general"
+  ],
+  "description": "One of the nice features of Flutter is its easy integration with Firebase. But sometimes, integrating Firebase into a Flutter project might be time-consuming because of the several configurations to be made.\nThis article explains how to easily integrate Firebase into Flutter using FlutterFireCLI."
+}

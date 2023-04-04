@@ -12,5 +12,6 @@
     "mobile",
     "plugins",
     "general"
-  ]
+  ],
+  "description": "The blog explains the ways to build and monetize apps using Flutter."
 }

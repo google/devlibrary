@@ -13,5 +13,6 @@
     "vision",
     "industrial",
     "tensorflow-js"
-  ]
+  ],
+  "description": "Recognizing SKUs in densely packed scenes is a well-known and challenging problem in the CPG industry. This post shows how to train and end2end pipeline to solve it."
 }

@@ -11,5 +11,6 @@
   "tags": [
     "firebase",
     "mobile"
-  ]
+  ],
+  "description": "Atomic operations are important in database operations when data accuracy and data concurrency are required. \nIn this article, Victor Eronmosele examines how to unit test Firestore atomic operations."
 }

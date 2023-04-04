@@ -2,12 +2,15 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["abhisheksaxena"],
+  "authorIds": [
+    "abhisheksaxena"
+  ],
   "author": "Abhishek Saxena",
   "title": "Strategy Design Pattern In Kotlin",
   "link": "https://proandroiddev.com/strategy-design-pattern-in-kotlin-afaa5ed90932",
   "tags": [
     "architecture",
     "kotlin"
-  ]
+  ],
+  "description": "Android community focusing on Clean Architecture & Clean Code. My article on Strategy Design Pattern in Kotlin shows how to impl' them efficiently with Kotlin with practical examples in Android cxt."
 }

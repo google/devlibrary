@@ -2,12 +2,15 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["abhisheksaxena"],
+  "authorIds": [
+    "abhisheksaxena"
+  ],
   "author": "Abhishek Saxena",
   "title": "SOLID Design Principles In Kotlin",
   "link": "https://proandroiddev.com/solid-design-principles-in-kotlin-79100c670df1",
   "tags": [
     "architecture",
     "kotlin"
-  ]
+  ],
+  "description": "Android community has recently been placing a strong emphasis on Clean Architecture. My article on SOLID principles shows how to use Kotlin for practical, efficient impl' with examples in Android cxt."
 }

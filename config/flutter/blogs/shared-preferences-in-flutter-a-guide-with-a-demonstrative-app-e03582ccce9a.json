@@ -11,5 +11,6 @@
   "tags": [
     "firebase",
     "mobile"
-  ]
+  ],
+  "description": "In this article, we will be discussing the basics of shared preferences in Flutter and building a simple app to demonstrate their usage."
 }

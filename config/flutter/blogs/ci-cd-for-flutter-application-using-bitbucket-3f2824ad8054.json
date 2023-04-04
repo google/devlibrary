@@ -12,5 +12,6 @@
     "mobile",
     "samples",
     "general"
-  ]
+  ],
+  "description": "In this article we will see how we can build Flutter apps using the pipeline feature in Bitbucket."
 }

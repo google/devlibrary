@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "nada"
+  ],
+  "author": "Nada Feteiha",
+  "title": "A Guide to State Management Functions in Jetpack Compose",
+  "link": "https://medium.com/@nada.feteiha/a-guide-to-state-management-functions-in-jetpack-compose-73c27f3f8dfe",
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "This article provides an overview of state management functions available in Jetpack Compose, a modern toolkit for building native Android UIs. Specifically, it explores remember, rememberSaveable, and derivedStateOf functions and provides guidelines on when to use them effectively."
+}

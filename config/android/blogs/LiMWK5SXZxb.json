@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "admqueiroga"
+  ],
+  "author": "Ademir Queiroga",
+  "title": "Android TV Preview Channels: A Beginner's Guide",
+  "link": "https://link.medium.com/LiMWK5SXZxb",
+  "tags": [
+    "ui",
+    "architecture"
+  ],
+  "description": "How nice would it be to display your app content before the user thinks about opening it? Guess what? This is possible with the Channels API!"
+}

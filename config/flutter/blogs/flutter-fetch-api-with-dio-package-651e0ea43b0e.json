@@ -11,5 +11,6 @@
   "tags": [
     "mobile",
     "widgets"
-  ]
+  ],
+  "description": "Flutter fetch API with Dio Package"
 }
