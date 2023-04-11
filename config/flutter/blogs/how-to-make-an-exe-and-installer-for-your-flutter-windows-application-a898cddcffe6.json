@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "daviesmanueltamunotonye"
+  ],
+  "author": "Tamunotonye Davies-manuel",
+  "title": "How to make your Flutter Windows app installable",
+  "link": "https://medium.com/@daviesmanueltamunotonye/how-to-make-an-exe-and-installer-for-your-flutter-windows-application-a898cddcffe6",
+  "tags": [
+    "mobile",
+    "widgets",
+    "plugins"
+  ],
+  "description": "Creating an .exe file and installer for your Flutter Windows application is an essential step in the distribution process. In this guide, we’ll show you how to create an .exe file and installer for your app"
+}

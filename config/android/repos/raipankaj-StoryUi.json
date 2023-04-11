@@ -1,0 +1,19 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "raipankaj"
+  ],
+  "owner": "raipankaj",
+  "repo": "StoryUi",
+  "name": "StoryUi",
+  "shortDescription": "Add story UI to app built with Jetpack Compose by calling a single composable - Story",
+  "longDescription": "Add story UI to app built with Jetpack Compose by calling a single composable - Story",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin"
+  ]
+}

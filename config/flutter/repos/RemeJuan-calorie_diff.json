@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "remejuan"
+  ],
+  "owner": "RemeJuan",
+  "repo": "calorie_diff",
+  "name": "Calorie Diff",
+  "shortDescription": "A simple application to integrate with Apple Health in order to provide clearer insight into your daily calorie and macro intake to better facilitate training nutrition",
+  "longDescription": "A simple application to integrate with Apple Health in order to provide clearer insight into your daily calorie and macro intake to better facilitate training nutrition",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}

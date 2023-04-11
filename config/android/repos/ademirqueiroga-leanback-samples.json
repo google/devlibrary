@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ademirqueiroga"
+  ],
+  "owner": "ademirqueiroga",
+  "repo": "leanback-samples",
+  "name": "leanback-samples",
+  "shortDescription": "A well-thought list of Android TV sample projects on the main topics around Android TV development. The project follows Google's best practices with a few experience-based insights.",
+  "longDescription": "A well-thought list of Android TV sample projects on the main topics around Android TV development. The project follows Google's best practices with a few experience-based insights.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "architecture",
+    "ui",
+    "kotlin"
+  ]
+}

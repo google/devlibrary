@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["harshmanvar"],
+  "author": "Harsh Manvar",
+  "title": "Cloud Build notification to Slack",
+  "link": "https://medium.com/google-cloud/google-cloud-build-slack-4eb0e6dd0226",
+  "tags": [
+    "compute",
+    "serverless-computing",
+    "networking"
+  ],
+  "description": "Cloud Build notification to Slack"
+}
