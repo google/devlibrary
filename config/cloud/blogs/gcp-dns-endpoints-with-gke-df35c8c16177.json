@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["harshmanvar"],
+  "author": "Harsh Manvar",
+  "title": "GCP DNS Endpoints With GKE",
+  "link": "https://medium.com/google-cloud/gcp-dns-endpoints-with-gke-df35c8c16177",
+  "tags": [
+    "operations",
+    "networking",
+    "hybrid-multicloud"
+  ],
+  "description": "Get a Free Domain name with GCP DNS for testing"
+}

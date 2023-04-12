@@ -1,0 +1,15 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["harshmanvar"],
+  "author": "Harsh Manvar",
+  "title": "Manage EKS cluster with GCP Anthos config management",
+  "link": "https://awstip.com/manage-eks-cluster-with-gcp-anthos-config-management-215a84da6989",
+  "tags": [
+    "containers",
+    "hybrid-multicloud",
+    "networking"
+  ],
+  "description": "Manage EKS cluster with GCP Anthos config management"
+}

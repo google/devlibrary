@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "cavinmac"
+  ],
+  "author": "Cavin Macwan",
+  "title": "Mastering Hooks in Flutter",
+  "link": "https://medium.com/@CavinMac/mastering-hooks-in-flutter-dca896d97d47",
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ],
+  "description": "Code reusability is the best practice in software development. But sometimes, we end up cluttering so much code inside the lifecycle methods of widgets and it becomes hard to reuse the methods inside it.\n\nThis issue can be solved by using Flutter Hooks. This blog contains the full tutorial of Hooks."
+}

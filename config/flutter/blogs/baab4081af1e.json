@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["tkarmakar27112000"],
+  "author": "Tanmoy Karmakar",
+  "title": "Ultimate Codemagic CI/CD guide for Flutter",
+  "link": "https://medium.com/p/baab4081af1e",
+  "tags": [
+    "mobile",
+    "general"
+  ],
+  "description": "Complete guide on how to automate your production level Flutter application using Codemagic CI/CD. Generate .env file on run time and build your app."
+}

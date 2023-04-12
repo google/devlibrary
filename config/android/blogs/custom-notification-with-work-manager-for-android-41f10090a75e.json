@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["alibahaabadii"],
+  "author": "Ali Baha",
+  "title": "Custom Notification with Work manager for Android",
+  "link": "https://proandroiddev.com/custom-notification-with-work-manager-for-android-41f10090a75e",
+  "tags": [
+    "kotlin"
+  ],
+  "description": "Notifications provide short, timely information about events in your app while it’s not in use. This article shows you how to fetch data that includes your notification contents every 15 minutes using Work Manager and create a notification to show."
+}

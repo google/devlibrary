@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["irvifa"],
+  "author": "Irvi Firqotul Aini",
+  "title": "Monitoring UI: A Way to Understand Bigtable Performance",
+  "link": "https://medium.com/google-cloud/monitoring-ui-a-way-to-understan-bigtable-performance-61e351edaeee",
+  "tags": [
+    "management-tools",
+    "operations",
+    "developer-tools"
+  ],
+  "description": "When we are using Bigtable, there’s some things that needs to be considered including its health and performance. Depending on what kind of application that we build, there will be different degree of importance of what metrics we’d like to monitor."
+}
