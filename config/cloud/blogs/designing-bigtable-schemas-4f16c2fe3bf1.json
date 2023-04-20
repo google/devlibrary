@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["irvifa"],
+  "author": "Irvi Firqotul Aini",
+  "title": "Designing Bigtable Schemas",
+  "link": "https://medium.com/google-cloud/designing-bigtable-schemas-4f16c2fe3bf1",
+  "tags": [
+    "databases"
+  ],
+  "description": "Bigtable is a NoSQL database service provided by Google Cloud Platform. In Bigtable, each row represents a single entity which labeled with a unique row key. Each column stores attribute values for each row, and column families can be used to organize related columns. At the intersection of a row an"
+}

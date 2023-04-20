@@ -1,0 +1,15 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["harshmanvar"],
+  "author": "Harsh Manvar",
+  "title": "Deploy to EKS from GCP Anthos",
+  "link": "https://medium.com/google-cloud/deploy-to-eks-from-gcp-anthos-61b1dea304bb",
+  "tags": [
+    "containers",
+    "hybrid-multicloud",
+    "networking"
+  ],
+  "description": "Deploy to EKS from GCP Anthos"
+}

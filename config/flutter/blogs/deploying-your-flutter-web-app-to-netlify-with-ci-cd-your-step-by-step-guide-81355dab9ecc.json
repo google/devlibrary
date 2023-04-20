@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "daviesmanueltamunotonye"
+  ],
+  "author": "Tamunotonye Davies-manuel",
+  "title": "Deploying Your Flutter Web App to Netlify with CI/CD — Your",
+  "link": "https://medium.com/@daviesmanueltamunotonye/deploying-your-flutter-web-app-to-netlify-with-ci-cd-your-step-by-step-guide-81355dab9ecc",
+  "tags": [
+    "web",
+    "general"
+  ],
+  "description": "Flutters versatility allows you build and deploy applications for Mobile, Wen, Desktop and embedded systems, this means you can build for these platforms with a single codebase relatively trivially, Here we'll be focusing on deploying your Flutter Web App with Netlify."
+}

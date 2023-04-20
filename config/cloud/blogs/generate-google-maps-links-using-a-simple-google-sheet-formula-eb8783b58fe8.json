@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aryanirani123"
+  ],
+  "author": "Aryan Irani",
+  "title": "Generate Google Maps Links using Google Sheet Formulas",
+  "link": "https://aryanirani123.medium.com/generate-google-maps-links-using-a-simple-google-sheet-formula-eb8783b58fe8",
+  "tags": [
+    "developer-tools"
+  ],
+  "description": "Learn how to generate custom Google Maps links effortlessly using a simple Google Sheet formula. Simplify your mapping process and save time today!"
+}

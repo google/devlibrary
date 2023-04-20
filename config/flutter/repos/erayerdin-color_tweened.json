@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "erayerdin"
+  ],
+  "owner": "erayerdin",
+  "repo": "color_tweened",
+  "name": "Color Tweened",
+  "shortDescription": "Create widgets with color tweened animations.",
+  "longDescription": "Create widgets with color tweened animations.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}

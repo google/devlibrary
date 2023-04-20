@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["alibahaabadii"],
+  "author": "Ali Baha",
+  "title": "Zero To Hero in Android Kotlin Creational Design Patterns",
+  "link": "https://proandroiddev.com/zero-to-hero-in-android-kotlin-creational-design-patterns-a972375c352a",
+  "tags": [
+    "kotlin"
+  ],
+  "description": "Design patterns are a set of solutions to common software development problems that have been proven to be effective through years of experience. In the world of Android development, these patterns can be especially useful when working with the Kotlin programming language"
+}
