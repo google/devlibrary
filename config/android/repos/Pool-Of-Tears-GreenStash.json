@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "pool-of-tears"
+  ],
+  "owner": "Pool-Of-Tears",
+  "repo": "GreenStash",
+  "name": "GreenStash",
+  "shortDescription": "Simple FOSS android app to help you plan and manage your savings goals easily and establish the habit of saving money.",
+  "longDescription": "Simple FOSS android app to help you plan and manage your savings goals easily and establish the habit of saving money.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "compose",
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["luillyfe"],
+  "author": "Fermin Blanco",
+  "title": "Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.",
+  "link": "https://www.notion.so/luillyfe/Production-Grade-GKE-Storage-Provisioning-using-Cloud-SQL-0a5dfe3cefdf4ea5973998bf63e43949?pvs=4",
+  "tags": [
+    "containers",
+    "databases",
+    "operations"
+  ],
+  "description": "Storage provisioning to a GKE Cluster in a matter of seconds and with consistent results can be portable though any GCP project."
+}

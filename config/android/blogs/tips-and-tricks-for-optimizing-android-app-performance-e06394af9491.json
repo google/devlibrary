@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ezatpanah"
+  ],
+  "author": "Reyhaneh Ezatpanah",
+  "title": "Tips and Tricks for optimizing Android app performance",
+  "link": "https://medium.com/@ezatpanah/tips-and-tricks-for-optimizing-android-app-performance-e06394af9491",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "architecture"
+  ],
+  "description": "AndroidGeek.co provides you everything you are looking for, from short best-practices videos up to complete beginner courses and advanced courses."
+}

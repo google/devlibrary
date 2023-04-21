@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["zaninihugo"],
+  "author": "Hugo Zanini",
+  "title": "Custom YOLOv7 Object Detection with TensorFlow.js",
+  "link": "https://medium.com/p/96a5ecd7a530",
+  "tags": [
+    "tfjs",
+    "tf-core"
+  ],
+  "description": "Training a custom YOLOv7 model for object detection and converting it to TensorFlow.js using Google Colab."
+}
