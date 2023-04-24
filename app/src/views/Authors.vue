@@ -34,6 +34,73 @@
     </div>
     <img src="/img/banners/desktop/authors-clipart.png" class="hero-clipart" />
 
+    <div class="grid grid-cols-10 px-std pt-4 lg:pt-8" v-if="featuredAuthors.length>0"> 
+      <h2 class="col-span-10 pt-2">
+        Featured Authors
+      </h2>
+      <p class="col-span-3 pt-2 pb-5 text-gray-500 text-sm">
+        View a selection of our featured authors. Click “View profile” to view their featured author page and preferred way to connect.
+      </p>
+      <div class="border-b border-gray-100 col-span-10 pb-10 grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
+        <div v-for="author in featuredAuthors"
+        :key="author.id"
+        class="card card-clickable px-5 py-4 flex flex-col items-center text-center ">
+
+        <CircleImage
+              v-if="
+                authorImageLoaded[author.id] ||
+                authorImageLoaded[author.id] == undefined
+              "
+              :src="author.metadata.photoURL"
+              :lazy="true"
+              class="flex-shrink-0 avatar border-none"
+              size="small"
+            />
+            <div v-else v-html="getDynamicAuthorImage(author)"></div>
+            <div>
+              <div class="mt-2 wrap-lines-1 font-medium font-display">
+                {{ author.metadata.name }}
+              </div>
+
+              <!-- Icons -->
+              <div class="mt-2 flex flex-row justify-center gap-2 text-sm">
+                <a
+                  v-if="author.metadata.githubURL"
+                  :href="author.metadata.githubURL"
+                  target="_blank"
+                  class="icon-link"
+                >
+                  <font-awesome-icon :icon="['fab', 'github']" />
+                </a>
+                <a
+                  v-if="author.metadata.mediumURL"
+                  :href="author.metadata.mediumURL"
+                  target="_blank"
+                  class="icon-link"
+                >
+                  <font-awesome-icon :icon="['fab', 'medium']" />
+                </a>
+              </div>
+
+              <router-link
+                :to="`/authors/${author.id}`"
+                class="mt-2 flex flex-row justify-center"
+              >
+                <MaterialButton type="text">View profile</MaterialButton>
+              </router-link>
+            </div>
+
+        </div>
+      </div>
+
+      <h2 class="col-span-10 pt-10">
+        All Authors
+      </h2>
+      <p class="col-span-3 pb-5 pt-2 text-gray-500 text-sm">
+        View all of our authors. Click “View profile” to view their author page and preferred way to connect.
+      </p>
+    </div>
+
     <!-- Body -->
     <div id="pagebody" class="grid grid-cols-10  mb-20 px-std pt-4 lg:pt-8">
       <div v-if="$mq === 'desktop'" class="lg:col-span-2">
@@ -252,7 +319,8 @@ import {
   nextPage,
   PagedResponse,
   queryAuthors,
-  queryUsingAuthorData
+  queryUsingAuthorData,
+  fetchFeaturedAuthors
 } from "@/plugins/data";
 
 @Component({
@@ -285,6 +353,7 @@ export default class Authors extends Vue {
 
   private pagesToShow = 1;
   public allAuthors: AuthorData[] = [];
+  public featuredAuthors: AuthorData[] = [];
   public allAuthorDetailedData = new Map();
   public authorData: PagedResponse<AuthorData> = emptyPageResponse<AuthorData>(
     `/authors`,
@@ -307,6 +376,14 @@ export default class Authors extends Vue {
       },
       60
     );
+    const featuredRes = await fetchFeaturedAuthors()
+    this.featuredAuthors = featuredRes.docs.map((d) => d.data)
+      .sort((a, b) => {
+        return a.metadata.name
+          .toLowerCase()
+          .localeCompare(b.metadata.name.toLowerCase());
+      });
+    console.log(this.featuredAuthors)
     const authorsPromise = nextPage(authorData);
     const reloadPromise = Promise.all([authorsPromise]).then(async () => {
       this.pagesToShow = 1;
