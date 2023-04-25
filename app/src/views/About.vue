@@ -177,12 +177,7 @@
           </div>
           <div v-show="FaqData[3]" class="pb-2 border-b">
             <p class="mt-4">
-              No. If you are completely new to computer programming, Google
-              <a target="_blank" href="https://grasshopper.app/">Grasshopper</a>
-              teaches adult learners to write JavaScript, free of charge.
-            </p>
-            <p class="mt-2">
-              If you're a beginner with some basic coding knowledge, we
+              No. If you're a beginner with some basic coding knowledge, we
               encourage you to browse the site. You may learn something useful
               from the open source projects and libraries.
             </p>
