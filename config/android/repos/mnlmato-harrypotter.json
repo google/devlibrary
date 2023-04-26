@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mnlmato"
+  ],
+  "owner": "mnlmato",
+  "repo": "harrypotter",
+  "name": "Harry Potter sample app",
+  "shortDescription": "Android Sample app to fetch data from an API using MVVM, Repository Pattern and a lot of test: Unit test, Integration test and Instrumented test with the Page Object Pattern",
+  "longDescription": "Android Sample app to fetch data from an API using MVVM, Repository Pattern and a lot of test: Unit test, Integration test and Instrumented test with the Page Object Pattern",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "architecture",
+    "kotlin"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["irvifa"],
+  "author": "Irvi Aini",
+  "title": "Managing Streaming Dataflow Job using KCC",
+  "link": "https://medium.com/google-cloud/managing-streaming-dataflow-job-using-kubernetes-config-connector-cb6422b770ac",
+  "tags": [
+    "data-analytics",
+    "developer-tools"
+  ],
+  "description": "Kubernetes config connector (KCC) is an open source addon that allows us to manage GCP resources through Kubernetes, thus preserving it as infrastructure as a code. Whenever changes are applied through the cluster, the Config Connector Custom Resource (CR) will create and manage a Kubernetes resourc"
+}

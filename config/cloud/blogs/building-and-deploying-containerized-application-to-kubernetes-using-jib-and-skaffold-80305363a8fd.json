@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["irvifa"],
+  "author": "Irvi Aini",
+  "title": "Building Containerized Application to Kubernetes",
+  "link": "https://medium.com/google-cloud/building-and-deploying-containerized-application-to-kubernetes-using-jib-and-skaffold-80305363a8fd",
+  "tags": [
+    "containers",
+    "developer-tools"
+  ],
+  "description": "Jib allow Java/Kotlin developers to integrate the step of containerization using their tools of choice like Maven or Gradle by adding a plugin to the build script. Jib basically handles all of the steps of packaging your application into Dockerimage without using Dockerfile 🎉."
+}

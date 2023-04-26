@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sebaslogen"
+  ],
+  "owner": "sebaslogen",
+  "repo": "resaca",
+  "name": "Resaca",
+  "shortDescription": "Android library to scope ViewModels (or any other object) to a Composable, surviving configuration changes and navigation.",
+  "longDescription": "Android library to scope ViewModels (or any other object) to a Composable, surviving configuration changes and navigation.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "architecture",
+    "compose"
+  ]
+}

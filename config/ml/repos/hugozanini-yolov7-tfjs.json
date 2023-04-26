@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "hugozanini"
+  ],
+  "owner": "hugozanini",
+  "repo": "yolov7-tfjs",
+  "name": "YoloV7 in Tensorflow.js",
+  "shortDescription": "This repository is an implementation of Yolov7 using Tensorflow.js. The code runs directly on the browser and the detector was trained on the MS COCO dataset to recognizes up to 80 different classes.",
+  "longDescription": "This repository is an implementation of Yolov7 using Tensorflow.js. The code runs directly on the browser and the detector was trained on the MS COCO dataset to recognizes up to 80 different classes.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile","nlp","vision","library","notebook","collection","web","theory","tensorflow-core","tfx","tflite","tensorflow-js","keras","jax-flax","bigquery-ml","tpu","other-google-ml-products"
+  ]
+}

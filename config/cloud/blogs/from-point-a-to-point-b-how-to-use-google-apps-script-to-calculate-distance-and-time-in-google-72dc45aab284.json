@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aryanirani123"
+  ],
+  "author": "Aryan Irani",
+  "title": "Calculate Distance and Time in Google Sheets with Google App",
+  "link": "https://aryanirani123.medium.com/from-point-a-to-point-b-how-to-use-google-apps-script-to-calculate-distance-and-time-in-google-72dc45aab284",
+  "tags": [
+    "developer-tools",
+    "api-management"
+  ],
+  "description": "Learn how to use Google Apps Script to automate the process of calculating distance and time between two points in Google Sheets."
+}

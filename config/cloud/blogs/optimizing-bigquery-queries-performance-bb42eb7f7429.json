@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["irvifa"],
+  "author": "Irvi Aini",
+  "title": "Optimizing BigQuery Queries Performance",
+  "link": "https://medium.com/google-cloud/optimizing-bigquery-queries-performance-bb42eb7f7429",
+  "tags": [
+    "data-analytics",
+    "databases"
+  ],
+  "description": "Performance tuning of BigQuery is usually carried out because we want to reduce the number of query execution runtime or cost."
+}

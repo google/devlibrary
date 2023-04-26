@@ -1,0 +1,15 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["kaaveh"],
+  "author": "Kaaveh Mohamedi",
+  "title": "Migrate from MVVM to MVI",
+  "link": "https://proandroiddev.com/migrate-from-mvvm-to-mvi-f938c27c214f",
+  "tags": [
+    "architecture",
+    "compose",
+    "modern-android-development"
+  ],
+  "description": "Recently after starting to migrate to Jetpack Compose, we decided to migrate the CLEAN + MVVM architecture to the CLEAN + MVI architecture. For this purpose, we launched a playground project on Github to test it in action. This article explains the approach we took."
+}

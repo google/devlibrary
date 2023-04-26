@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["dbriane208"],
+  "author": "Daniel Brian",
+  "title": "Mastering Kotlin's Object-Oriented Programming 101: Unleashing the Full Potential of Your Code.",
+  "link": "https://dev.to/dbriane208/mastering-kotlins-object-oriented-programming-101-unleashing-the-full-potential-of-your-code-kbf",
+  "tags": [
+    "kotlin",
+    "build-tools",
+    "modern-android-development"
+  ],
+  "description": "This article delves into Kotlin's object-oriented programming (OOP) concepts, explaining the basics of classes, objects, inheritance, and other key OOP principles. Readers will learn how to harness the full potential of Kotlin's OOP features to create robust and efficient code, making their software"
+}

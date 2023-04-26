@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "veroanggra"
+  ],
+  "author": "Veronica Putri Anggraini",
+  "title": "Implement the Simplest Way of Managing State in Compose UIs",
+  "link": "https://veroanggra.medium.com/understanding-the-role-of-state-and-implement-the-simplest-way-of-managing-state-in-jetpack-compose-ebceca6eb579",
+  "tags": [
+    "compose",
+    "ui",
+    "kotlin"
+  ],
+  "description": "State management is an essential aspect of creating UI with declarative approach. In this article will break down the role of state in Compose UI and explore some of the simplest techniques for managing it effectively."
+}
