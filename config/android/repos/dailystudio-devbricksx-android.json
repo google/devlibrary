@@ -1,0 +1,20 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "dailystudio"
+  ],
+  "owner": "dailystudio",
+  "repo": "devbricksx-android",
+  "name": "DevBricksX - Android",
+  "shortDescription": "DevBricksX provides plenty of useful classes that will be used in Modern Android development. It also uses the KSP compiler to generate code to simplify the usage of these classes.",
+  "longDescription": "DevBricksX provides plenty of useful classes that will be used in Modern Android development. It also uses the KSP compiler to generate code to simplify the usage of these classes.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "ui",
+    "build-tools"
+  ]
+}

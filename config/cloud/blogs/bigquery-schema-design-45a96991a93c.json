@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["irvifa"],
+  "author": "Irvi Aini",
+  "title": "BigQuery Schema Design",
+  "link": "https://medium.com/google-cloud/bigquery-schema-design-45a96991a93c",
+  "tags": [
+    "databases"
+  ],
+  "description": "Designing a schema will require us to think about how to create an algorithm to access the data. There could be several different access methods, such as access by rows, access by columns, etc. Different approache, in general, will behave differently and we should notice that the approach may not"
+}

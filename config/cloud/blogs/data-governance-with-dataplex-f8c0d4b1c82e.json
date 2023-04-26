@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "murari045"
+  ],
+  "author": "Murari Ramuka",
+  "title": "Data Governance with Dataplex",
+  "link": "https://medium.com/@murari045/data-governance-with-dataplex-f8c0d4b1c82e",
+  "tags": [
+    "data-analytics"
+  ],
+  "description": "Data Governance is now mandatory for every organization. In this blog I have covered how Dataplex can enable end to end data governance."
+}

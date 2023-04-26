@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["farmaker47"],
+  "author": "Georgios Soloupis",
+  "title": "Segmentation task inside android using different APIs",
+  "link": "https://medium.com/p/4e7cffc86e79",
+  "tags": [
+    "mobile","nlp","vision","library","notebook","collection","web","theory","tensorflow-core","tfx","tflite","tensorflow-js","keras","jax-flax","bigquery-ml","tpu","other-google-ml-products"
+  ],
+  "description": "This is a blog post to demonstrate the usage of different APIs for a common machine learning task, the segmentation. We are going to showcase implementations with TensorFlow Lite Interpreter, Task Library and the latest MediaPipe’s API."
+}

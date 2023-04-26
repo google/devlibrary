@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ateeqrehman33"
+  ],
+  "owner": "ateeqrehman33",
+  "repo": "ValSports",
+  "name": "ValSports",
+  "shortDescription": "ValSports - A One Stop Solution for all Valorant Esports Community",
+  "longDescription": "ValSports - A One Stop Solution for all Valorant Esports Community",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "ui"
+  ]
+}
