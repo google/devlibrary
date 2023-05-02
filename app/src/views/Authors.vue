@@ -96,9 +96,6 @@
       <h2 class="col-span-10 pt-10">
         All Authors
       </h2>
-      <p class="col-span-3 pb-5 pt-2 text-gray-500 text-sm">
-        View all of our authors. Click “View profile” to view their author page and preferred way to connect.
-      </p>
     </div>
 
     <!-- Body -->
