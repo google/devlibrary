@@ -39,9 +39,9 @@ import {
 import * as content from "./content";
 import * as github from "./github";
 
-import { BlogMetadata } from "../../shared/types/BlogMetadata";
-import { RepoMetadata } from "../../shared/types/RepoMetadata";
-import { AuthorData, ProductKey, RepoPage } from "../../shared/types";
+import { BlogMetadata } from "./shared/types/BlogMetadata";
+import { RepoMetadata } from "./shared/types/RepoMetadata";
+import { AuthorData, ProductKey, RepoPage } from "./shared/types";
 import {
   index,
   indexAuthor,
