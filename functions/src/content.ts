@@ -20,8 +20,8 @@ import * as path from "path";
 import * as url from "url";
 import urljoin from "url-join";
 
-import { RepoData, RepoPageSection } from "../../shared/types";
-import { cleanPagePath } from "../../shared/util";
+import { RepoData, RepoPageSection } from "./shared/types";
+import { cleanPagePath } from "./shared/util";
 
 const BADGE_PATTERNS = [
   "travis-ci.org",

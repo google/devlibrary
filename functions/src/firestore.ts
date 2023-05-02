@@ -15,8 +15,8 @@
  */
 
 import * as admin from "firebase-admin";
-import { AuthorData, BlogData, RepoData, RepoPage } from "../../shared/types";
-import { cleanPagePath } from "../../shared/util";
+import { AuthorData, BlogData, RepoData, RepoPage } from "./shared/types";
+import { cleanPagePath } from "./shared/util";
 
 function authorRef(id: string) {
   const db = admin.firestore();

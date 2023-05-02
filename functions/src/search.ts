@@ -18,15 +18,15 @@ import * as functions from "firebase-functions";
 import { Client } from "@elastic/elasticsearch";
 
 import * as config from "./config";
-import { RepoMetadata } from "../../shared/types/RepoMetadata";
-import { BlogMetadata } from "../../shared/types/BlogMetadata";
+import { RepoMetadata } from "./shared/types/RepoMetadata";
+import { BlogMetadata } from "./shared/types/BlogMetadata";
 import {
   AuthorData,
   AuthorSearchResult,
   BlogSearchResult,
   RepoSearchResult,
   SearchResult,
-} from "../../shared/types";
+} from "./shared/types";
 
 const INDEX_AUTHORS = "authors";
 const INDEX_REPOS = "repos";

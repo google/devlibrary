@@ -19,7 +19,7 @@ import * as admin from "firebase-admin";
 
 import fetch from "node-fetch";
 
-import { FirestoreQuery, QueryResult } from "../../shared/types/FirestoreQuery";
+import { FirestoreQuery, QueryResult } from "./shared/types/FirestoreQuery";
 
 function isValidCollectionPath(path: string): boolean {
   const db = admin.firestore();
