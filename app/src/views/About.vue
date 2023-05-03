@@ -108,8 +108,7 @@
       <!-- Frequently asked questions -->
       <div class="section mt-6 lg:mt-10">
         <h1>Frequently Asked Questions</h1>
-        <h1>General</h1>
-
+        <p class="mt-6 font-bold">General</p>
         <div class="mt-6 lg:mt-10 lg:text-lg mb-16">
           <div
             class="mt-2 relative border-b faq-title justify-between flex"
@@ -143,6 +142,7 @@
               <a target="_blank" href="https://forms.gle/Wco9K4ePqgCW5sre6">Subscribe</a> to our newsletter to stay up to date with the latest projects added to the platform. Our newsletter features some of the best submissions from each product every month. Also, you can check out the <a href="https://developers.googleblog.com/search/label/Google%20Dev%20Library">Dev Library blog archives</a> for past highlights.
             </p>
           </div>
+          <p class="mt-6 font-bold">Contributing to Dev Library</p>
           <div
             class="mt-2 relative border-b faq-title justify-between flex"
             @click="toggleFaq(4)"
@@ -285,7 +285,7 @@
               Yes, you can update your blog content or repository after submission. Contributors are encouraged to frequently revise their content to include the latest tech updates and releases. Developers visiting the site can sort projects based on the "Recently Updated" sorting option available on each product page. So, we encourage contributors to take advantage of this feature and keep their content up-to-date to ensure its relevance and visibility.
             </p>
           </div>
-
+          <p class="mt-6 font-bold">My profile</p>
           <div
             class="mt-2 relative border-b faq-title justify-between flex"
             @click="toggleFaq(11)"
