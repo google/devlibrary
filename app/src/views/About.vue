@@ -122,7 +122,7 @@
           </div>
           <div v-show="FaqData[1]" class="pb-2 border-b">
             <p class="mt-4">
-              Dev Library has been created to showcase the amazing open source projects being built with Google's tools and technologies by developers around the world.With Google Dev Library we want to provide visibility for the talented developers behind the projects, and introduce high quality projects to the broader developer community to find inspiration.
+              Dev Library has been created to showcase the amazing open source projects being built with Google's tools and technologies by developers around the world. Through Google Dev Library we want to provide visibility for the talented developers behind the projects, and introduce high quality projects to the broader developer community to find inspiration.
             </p>
           </div>
           <div
@@ -159,9 +159,9 @@
             <p class="mt-4">
               Developers and tech writers are encouraged to contribute to the platform for :-
               <ol class="ml-6 mt-2 list-disc">
-                <li>A dedicated author’s page</li>
-                <li>A shiny contributor badge for your Google Developer Profile</li>
-                <li>Spotlights in our monthly newsletter</li>
+                <li>Their own author profile page</li>
+                <li>A shiny contributor badge for their Google Developer profile</li>
+                <li>Spotlights in the Dev Library monthly newsletter</li>
                 <li>Inspiring developers to build with Google!</li>
               </ol>
             </p>
@@ -180,18 +180,18 @@
           </div>
           <div v-show="FaqData[5]" class="pb-2 border-b">
             <p>
-              Before you submit, it’s a good idea to familiarize yourself with the <a href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf">contribution guidelines</a> in addition to the official documentation of every product. After doing so, follow these simple steps.
+              Before you submit, it’s a good idea to familiarize yourself with the <a href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf">contribution guidelines</a> in addition to the official documentation of every product. After doing so, follow these simple steps :-
             
             <ol class="ml-6 mt-2 list-disc">
-              <li>Find the Submit button on the DevLibrary Homepage.</li>
-              <li>You will be redirected to the Advocu Form link.</li>
-              <li>Fill in your personal and content details.</li>
-              <li>Click Submit.</li>
-              <li>
-                You will receive an email informing you that your submission has been received.
-              </li>
+              <li>Find the Submit button on the top navigation bar</li>
+              <li>You will be redirected to the advocu form link</li>
+              <li>Fill in your personal and content details</li>
+              <li>Click Submit</li>
+              <li>You will receive an email informing you that your submission has been received</li>
             </ol>
-            <i>*Note: Once submitted, you can't edit the form.</i>
+            </p>
+            <p>
+            <i>*Note: Once submitted, you can't edit the form.</i><br>
             You can make as many submissions as you want to showcase your work in your Author profile.
           </p>
           </div>
@@ -208,7 +208,7 @@
           </div>
           <div v-show="FaqData[6]" class="pb-2 border-b">
             <p class="mt-4">
-              Googlers review each submission for product relevance, alignment with current coding practice, technical writing, and product standards. If approved, the project is included on the site and the contributor gets a profile page which features their approved submissions.
+              Googlers review each submission for product relevance, alignment with current coding best practices, technical writing, and product standards. If approved, the project is included on the site and the contributor gets an author profile page which features their approved submissions.
             </p>
           </div>
 
@@ -224,15 +224,17 @@
           </div>
           <div v-show="FaqData[7]" class="pb-2 border-b">
             <p class="mt-4">
-              There can be various reasons for submissions to get rejected. When the curator decides to reject the submission, you will get the following broad reasoning in the rejection email:
+              There can be various reasons for submissions to get rejected. When the curator decides to reject the submission, it may be due to one or more of the following reasons:
               <ol class="ml-6 mt-2 list-disc">
                 <li><b>Low alignment with current coding, technical writing, or product standards:</b> Your submission may have been rejected because it did not meet the current standards for coding, technical writing, or product updates.</li>
                 <li><b>Low product relevance:</b> Your submission may not have been relevant to the product or topic for which it was submitted.</li>
                 <li><b>Low community usefulness:</b> Your submission may not have provided value to the community or audience for which it was intended.</li>
-                <li><b>Possibility of spam:</b> Your submission may have been flagged as potential spam, which could include promotional or irrelevant links.</li>
+                <li><b>Possibility of spam:</b> Your submission may have been flagged as potential spam for including promotional or irrelevant links.</li>
                 <li><b>Content not in English:</b> Your submission may have been rejected because it was not in English.</li>
               </ol>
-              We encourage you to review the feedback provided and make any necessary changes before re-submitting your content. Please note that specific feedback cannot be provided for all submissions due to the large number of submissions received.
+              </p>
+              <p>
+              Please note that feedback may not be provided for all submissions due to the large number of submissions we receive.
             </p>
           </div>
 
@@ -248,7 +250,7 @@
           </div>
           <div v-show="FaqData[8]" class="pb-2 border-b">
             <p class="mt-4">
-              The submission to publication process takes around one month’s time. As soon as you submit your content, you will receive an email confirming your submission has been successfully received. It takes 2-4 weeks for your content to be reviewed. After the review, you will receive an email stating whether the project was accepted or not. ( If you don’t see an email, make sure to check your spam or promotions folder). Post the approval email, it can take another 1-2 weeks for the submission to be published to your author profile.
+              The submission to publication process takes around one month. As soon as you submit your content, you will receive an email confirming your submission has been successfully received. It takes 2-4 weeks for your content to be reviewed. After the review, you will receive an email stating whether the project was accepted or not. ( If you don’t see an email, make sure to check your spam or promotions folder). Post the approval email, it can take another 1-2 weeks for the submission to be published to your author profile.
             </p>
           </div>
 
@@ -264,7 +266,7 @@
           </div>
           <div v-show="FaqData[9]" class="pb-2 border-b">
             <p class="mt-4">
-              Once approved, the content is published to the website within one week.
+              Once approved, the content is published to the website within 1-2 weeks.
             </p>
           </div>
 
@@ -298,7 +300,7 @@
           </div>
           <div v-show="FaqData[11]" class="pb-2 border-b">
             <p class="mt-4">
-              Content that was last updated more than 18 months ago is grayed out to help users understand what is new and relevant. We encourage you to keep your content updated as per the latest product guidelines.
+              Content that was last updated more than 18 months ago is grayed out to help readers understand what is new and relevant. We encourage you to keep your content updated as per the latest product guidelines.
             </p>
           </div>
 
@@ -315,8 +317,8 @@
           <div v-show="FaqData[12]" class="pb-2 border-b">
             <p class="mt-4">
               To remove or update your content, please open a Pull request or raise an issue on the 
-              <a target="_blank" href="https://github.com/google/devlibrary">
-                Dev Library's GitHub repo </a>.
+              <a target="_blank" href="https://github.com/google/devlibrary/issues/new">
+                Dev Library's GitHub repo</a>.
             </p>
           </div>
 
@@ -334,7 +336,7 @@
           </div>
           <div v-show="FaqData[13]" class="pb-2 border-b">
             <p class="mt-4">
-              If your content has been accepted, you are eligible for the Dev Library contributor badge. You’ll receive email instructions to claim your contributor badge. Contributor badges are sent out once every 2-3 months
+              If your content has been accepted, you are eligible for the Dev Library contributor badge. You’ll receive email instructions to claim your contributor badge. Contributor badges are sent out once every 2-3 months.
             </p>
           </div>
         </div>
