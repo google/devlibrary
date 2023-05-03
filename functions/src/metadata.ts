@@ -19,9 +19,9 @@ import * as path from "path";
 
 import * as github from "./github";
 
-import { BlogMetadata } from "../../shared/types/BlogMetadata";
-import { RepoMetadata } from "../../shared/types/RepoMetadata";
-import { AuthorMetadata } from "../../shared/types/AuthorMetadata";
+import { BlogMetadata } from "./shared/types/BlogMetadata";
+import { RepoMetadata } from "./shared/types/RepoMetadata";
+import { AuthorMetadata } from "./shared/types/AuthorMetadata";
 
 async function listAuthorFiles(): Promise<string[]> {
   if (process.env.FUNCTIONS_EMULATOR) {

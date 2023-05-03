@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-import { BlogMetadata } from "../../shared/types/BlogMetadata";
-import { BlogData, BlogStats, RepoData, RepoStats } from "../../shared/types";
+import { BlogMetadata } from "./shared/types/BlogMetadata";
+import { BlogData, BlogStats, RepoData, RepoStats } from "./shared/types";
 
 import { GitHubRepo } from "./github";
 
