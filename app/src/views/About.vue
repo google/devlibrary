@@ -108,13 +108,14 @@
       <!-- Frequently asked questions -->
       <div class="section mt-6 lg:mt-10">
         <h1>Frequently Asked Questions</h1>
+        <h1>General</h1>
 
         <div class="mt-6 lg:mt-10 lg:text-lg mb-16">
           <div
             class="mt-2 relative border-b faq-title justify-between flex"
             @click="toggleFaq(1)"
           >
-            <p class="pb-2">What is the purpose of this site?</p>
+            <p class="pb-2">What is Dev Library and what can I do on it?</p>
             <font-awesome-icon
               :icon="FaqData[1] ? 'angle-up' : 'angle-down'"
               class="ml-1"
@@ -122,46 +123,11 @@
           </div>
           <div v-show="FaqData[1]" class="pb-2 border-b">
             <p class="mt-4">
-              We noticed all of the amazing open-source projects being built
-              with Google's tools and technologies. We wanted to create a place
-              that would provide visibility for the talented developers behind
-              the projects, and introduce high-quality projects to a wide
-              audience of developers.
+              Dev Library has been created to showcase the amazing open source projects being built with Google's tools and technologies by developers around the world.With Google Dev Library we want to provide visibility for the talented developers behind the projects, and introduce high quality projects to the broader developer community to find inspiration.
             </p>
             <p class="mt-2">
-              You can browse through the projects and content featured on the
-              site for inspiration, search for a particular product or keyword,
-              or submit your project for review and the possibility of being
-              included on the site.
+              You can browse through the product categories to find amazing projects and technical content featured on the site for inspiration, search for a particular product or keyword, or submit your project for review and the possibility of being included on the site.
             </p>
-          </div>
-          <div
-            class="mt-2 relative border-b faq-title justify-between flex"
-            @click="toggleFaq(2)"
-          >
-            <p class="pb-2">
-              Are there any benefits to contributing to the site?
-            </p>
-            <font-awesome-icon
-              :icon="FaqData[2] ? 'angle-up' : 'angle-down'"
-              class="ml-1"
-            />
-          </div>
-          <div v-show="FaqData[2]" class="pb-2 border-b">
-            <p class="mt-4">
-              What is hard work without any recognition! Recognizing talented
-              developers is one of the intended goals of this site. Contributors
-              are rewarded with:
-            </p>
-            <ul class="ml-6 mt-2 list-disc">
-              <li>Dedicated Author page</li>
-              <li>Contributor badge on their Google Developer Profile</li>
-              <li>Feature in our monthly newsletter</li>
-              <li>Content reviewed by Google engineers</li>
-              <li>
-                Amplification to inspire & help developers to build with Google
-              </li>
-            </ul>
           </div>
           <div
             class="mt-2 relative border-b faq-title justify-between flex"
@@ -179,7 +145,7 @@
             <p class="mt-4">
               No. If you are completely new to computer programming, Google
               <a target="_blank" href="https://grasshopper.app/">Grasshopper</a>
-              teaches adult learners to write JavaScript, free of charge.
+              teaches learners to write JavaScript, free of charge.
             </p>
             <p class="mt-2">
               If you're a beginner with some basic coding knowledge, we
@@ -192,7 +158,7 @@
             @click="toggleFaq(4)"
           >
             <p class="pb-2">
-              Will this remove the need for documentation and guides?
+              Does Dev Library remove the need for documentation and guides?
             </p>
             <font-awesome-icon
               :icon="FaqData[4] ? 'angle-up' : 'angle-down'"
@@ -201,9 +167,7 @@
           </div>
           <div v-show="FaqData[4]" class="pb-2 border-b">
             <p class="mt-4">
-              No. We hope you'll find inspiring and useful pieces of code built
-              by developers worldwide, but this site is not meant to replace
-              Google's official documentation.
+              No. We hope you'll find inspiring and useful pieces of code built by developers worldwide, but this site is not meant to replace Google's official documentation. You can however  think of it as supplementary support.
             </p>
           </div>
           <div
