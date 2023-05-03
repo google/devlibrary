@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["an_14796"],
+  "author": "Artem Nikulchenko",
+  "title": "Hidden gems of BigQuery — Part 3",
+  "link": "https://medium.com/google-developer-experts/hidden-gems-of-bigquery-part-3-b9dd1f7861f4",
+  "tags": ["data-analytics"],
+  "description": "Series about amazing BigQuery features that many may have missed. In this post: Data Lineage, Routines and Authorized routines"
+}
