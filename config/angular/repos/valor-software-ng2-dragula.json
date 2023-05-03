@@ -1,0 +1,18 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "valor-software"
+  ],
+  "owner": "valor-software",
+  "repo": "ng2-dragula",
+  "name": "ng2-dragula",
+  "shortDescription": "Easy to use Angular components on top of dragula to add drag and drop to your application",
+  "longDescription": "Easy to use Angular components on top of dragula to add drag and drop to your application",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

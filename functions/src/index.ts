@@ -39,9 +39,9 @@ import {
 import * as content from "./content";
 import * as github from "./github";
 
-import { BlogMetadata } from "../../shared/types/BlogMetadata";
-import { RepoMetadata } from "../../shared/types/RepoMetadata";
-import { AuthorData, ProductKey, RepoPage } from "../../shared/types";
+import { BlogMetadata } from "./shared/types/BlogMetadata";
+import { RepoMetadata } from "./shared/types/RepoMetadata";
+import { AuthorData, ProductKey, RepoPage } from "./shared/types";
 import {
   index,
   indexAuthor,
@@ -293,16 +293,21 @@ async function refreshRepoInternal(
 }
 
 // Cron job to refresh all projects each day
+let cronString = "0 0 * * *"
+if(process.env.FIREBASE_PROJECT?.includes("dev")) {
+  cronString = "0 2 * * *"
+}
+
 export const refreshProjectsCron = functions
-  .runWith({
-    memory: "2GB",
-    timeoutSeconds: 540,
-  })
-  .pubsub.schedule("0 0 * * *")
-  .onRun(async (context) => {
-    await refreshAllProjects();
-    await refreshAllAuthors();
-  });
+.runWith({
+  memory: "2GB",
+  timeoutSeconds: 540,
+})
+.pubsub.schedule(cronString)
+.onRun(async () => {
+  await refreshAllProjects();
+  await refreshAllAuthors();
+});
 
 // Cron job to refresh Authors
 export const refreshAuthors = functions.runWith({
@@ -322,6 +327,7 @@ export const refreshAuthors = functions.runWith({
 
 // When in the functions emulator we provide some simple webhooks to refresh things
 if (process.env.FUNCTIONS_EMULATOR) {
+
   exports.refreshProjects = functions.https.onRequest(
     async (request, response) => {
       await refreshAllProjects();

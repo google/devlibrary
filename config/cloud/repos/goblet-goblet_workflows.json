@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "anovis"
+  ],
+  "owner": "goblet",
+  "repo": "goblet_workflows",
+  "name": "Goblet Workflows",
+  "shortDescription": "Goblet Workflows is a wrapper around GCP Workflows, which is a fully-managed orchestration platform that executes services in an order that you define: a workflow. These workflows can combine services",
+  "longDescription": "Goblet Workflows is a wrapper around GCP Workflows, which is a fully-managed orchestration platform that executes services in an order that you define: a workflow. These workflows can combine services",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "developer-tools",
+    "serverless-computing"
+  ]
+}

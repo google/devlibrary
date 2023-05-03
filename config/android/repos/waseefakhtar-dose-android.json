@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "waseefakhtar"
+  ],
+  "owner": "waseefakhtar",
+  "repo": "dose-android",
+  "name": "Dose",
+  "shortDescription": "Dose is a reminder app for people to take their medications on time.",
+  "longDescription": "Dose is a reminder app for people to take their medications on time.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "compose"
+  ]
+}

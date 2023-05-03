@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["erayerdin"],
+  "author": "Eray Erdin",
+  "title": "Integrating Dart's Build Runner with VSCode",
+  "link": "https://erayerdin.com/integrating-darts-build-runner-with-vscode",
+  "tags": [
+    "general"
+  ],
+  "description": "dev doing stuff"
+}

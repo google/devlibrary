@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Reme Le Hane",
+  "title": "Flutter: Up your testing game",
+  "link": "https://remelehane.dev/posts/up-your-testing-game/",
+  "tags": [
+    "general",
+    "widgets"
+  ],
+  "description": "A look at working with some more advanced methods around unit testing widgets."
+}
