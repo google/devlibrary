@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "irvifa"
+  ],
+  "author": "Irvi Firqotul Aini",
+  "title": "OpenTelemetry and Cloud Trace: Usage and More",
+  "link": "https://irvifa.medium.com/opentelemetry-and-cloud-trace-usage-and-more-4e61b8a0586f",
+  "tags": [
+    "developer-tools",
+    "operations",
+    "management-tools"
+  ],
+  "description": "Google Cloud Trace (GCP Cloud Trace) is a performance tool provided by Google Cloud Platform that allows developers to analyze and troubleshoot the latency of their application’s operations. It collects latency data from applications deployed in the Google Cloud and presents it in near real-time"
+}

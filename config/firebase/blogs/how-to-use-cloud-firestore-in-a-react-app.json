@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["snehasish-konger"],
+  "author": "Snehasish Konger",
+  "title": "How To Use Cloud Firestore In A React App? • Scientyfic World",
+  "link": "https://scientyficworld.org/how-to-use-cloud-firestore-in-a-react-app/",
+  "tags": [
+    "web",
+    "node"
+  ],
+  "description": "In this article, we'll guide you through the process of setting up Cloud Firestore in your React app and show you how to perform basic CRUD operations, as well as more advanced querying. We will also cover how to implement real-time data synchronization and secure your database with security rules."
+}
