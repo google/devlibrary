@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "abimelsbkulumala"
+  ],
+  "author": "ABIMEL S B KULUMALA",
+  "title": "Google cloud Platform for medical students and professionals",
+  "link": "https://medium.com/@abimelsbkulumala/google-cloud-platform-for-medical-students-and-professionals-da77bef5e072",
+  "tags": [
+    "compute",
+    "data-analytics",
+    "storage"
+  ],
+  "description": "While Google Cloud Platform is known for its use in the business world, it can also be a valuable tool for medical students and professionals. GCP can be used for Storing and Sharing Medical Data, developing medical related Machine Learning Models, and in Analytics."
+}

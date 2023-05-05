@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "harsh4870"
+  ],
+  "owner": "harsh4870",
+  "repo": "basic-ci-cd-cloudbuild",
+  "name": "Cloudbuild basic CI/CD to GKE cluster",
+  "shortDescription": "Cloudbuild basic CI/CD to GKE cluster",
+  "longDescription": "Cloudbuild basic CI/CD to GKE cluster",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "containers",
+    "networking",
+    "operations"
+  ]
+}

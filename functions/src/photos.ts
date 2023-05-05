@@ -17,7 +17,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 
-import { AuthorData } from "../../shared/types";
+import { AuthorData } from "./shared/types";
 
 export const authorPhoto = functions
   .runWith({

@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["morfly"],
+  "author": "Pavlo Stavytskyi",
+  "title": "How we reduced our Android startup time by 77%",
+  "link": "https://medium.com/turo-engineering/how-we-reduced-our-android-startup-time-by-77-650cc113c3dc",
+  "tags": [
+    "modern-android-development"
+  ],
+  "description": "In this blog post, I describe how I reduced the cold startup time of the Turo Android app by 77%. If you would like to learn about best practices and Android developer tools to improve the startup time of your Android apps, check it out!"
+}

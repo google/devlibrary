@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "neutrollized"
+  ],
+  "owner": "Neutrollized",
+  "repo": "hashicorp-vault-with-cloud-run",
+  "name": "HashiCorp Vault on Cloud Run",
+  "shortDescription": "Deploying popular open-source secrets management tool using all GCP cloud-native services: Cloud Run, Artifact Registry (GAR, GCS), Secret Manager, Cloud KMS and Cloud Build to tie it all together.",
+  "longDescription": "Deploying popular open-source secrets management tool using all GCP cloud-native services: Cloud Run, Artifact Registry (GAR, GCS), Secret Manager, Cloud KMS and Cloud Build to tie it all together.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "containers",
+    "serverless-computing"
+  ]
+}

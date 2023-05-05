@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "anovis"
+  ],
+  "owner": "goblet",
+  "repo": "goblet_gcp_client",
+  "name": "Goblet GCP Client",
+  "shortDescription": "Goblet GCP Client is a util library with support for creating GCP resource clients, GCP integration tests, and other related utils.",
+  "longDescription": "Goblet GCP Client is a util library with support for creating GCP resource clients, GCP integration tests, and other related utils.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "developer-tools"
+  ]
+}

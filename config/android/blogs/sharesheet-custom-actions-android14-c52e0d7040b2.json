@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "navczydev"
+  ],
+  "author": "Nav Singh",
+  "title": "Sharesheet custom actions-Android14",
+  "link": "https://navczydev.medium.com/sharesheet-custom-actions-android14-c52e0d7040b2",
+  "tags": [
+    "modern-android-development",
+    "ui",
+    "kotlin"
+  ],
+  "description": "With the release of the first beta of Android14, we got a new feature called CustomActions for Sharesheet.\n\nHere we will explore this new feature and see how we can add our own custom actions to Sharesheet."
+}

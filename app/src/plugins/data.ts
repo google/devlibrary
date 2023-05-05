@@ -197,6 +197,37 @@ export async function fetchRepo(
   }
 }
 
+export async function queryAuthors(
+  q: FirestoreQuery
+): Promise<QueryResult<AuthorData>> {
+  const collectionPath = `/authors`;
+  const json = await fetchQuery(collectionPath, q);
+  allAuthors = json as QueryResult<AuthorData>;
+  return json as QueryResult<AuthorData>;
+}
+
+
+export async function fetchFeaturedAuthors(
+): Promise<QueryResult<AuthorData>> {
+  const collectionPath = `/featuredAuthors`;
+  const json = await fetchQuery(collectionPath, {});
+  const featuredAuthorData = [];
+  for(const ele of json.docs) {
+    featuredAuthorData.push(ele.data.id)
+  }
+  const q: FirestoreQuery = {where: [
+    {
+      fieldPath: "id",
+      operator: "in",
+      value: featuredAuthorData,
+    },
+  ],}
+  const featuredAuthors = await queryAuthors(q)
+  
+  return featuredAuthors as QueryResult<AuthorData>;
+}
+
+
 export async function fetchBlog(
   product: string,
   id: string
@@ -219,15 +250,6 @@ export async function fetchRepoPage(
   if (json) {
     return json as RepoPage;
   }
-}
-
-export async function queryAuthors(
-  q: FirestoreQuery
-): Promise<QueryResult<AuthorData>> {
-  const collectionPath = `/authors`;
-  const json = await fetchQuery(collectionPath, q);
-  allAuthors = json as QueryResult<AuthorData>;
-  return json as QueryResult<AuthorData>;
 }
 
 export async function queryBlogs(

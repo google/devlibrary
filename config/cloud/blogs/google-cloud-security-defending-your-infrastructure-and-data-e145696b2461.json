@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "itsanjalich"
+  ],
+  "author": "Anjali Chaudhary",
+  "title": "Google Cloud Security: Defending Your Infrastructure and Dat",
+  "link": "https://itsanjalich.medium.com/google-cloud-security-defending-your-infrastructure-and-data-e145696b2461",
+  "tags": [
+    "security-identity",
+    "ai-ml",
+    "serverless-computing"
+  ],
+  "description": "🔒💻🛡️ With confidence, safeguard your Google Cloud infrastructure and data! You'll learn about the most recent security best practises and strategies in this course to fight off cyberattacks. This course covers everything, from network security to access control. Take action right once to protect"
+}

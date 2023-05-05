@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "joreilly"
+  ],
+  "owner": "joreilly",
+  "repo": "Confetti",
+  "name": "Confetti",
+  "shortDescription": "Kotlin Multiplatform GraphQL project (backend and clients) to allow viewing of conference information for a range of conferences.  Includes Android, Wear OS, Compose for Desktop and iOS clients.",
+  "longDescription": "Kotlin Multiplatform GraphQL project (backend and clients) to allow viewing of conference information for a range of conferences.  Includes Android, Wear OS, Compose for Desktop and iOS clients.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

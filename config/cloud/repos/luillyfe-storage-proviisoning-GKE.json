@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "luillyfe"
+  ],
+  "owner": "luillyfe",
+  "repo": "storage-proviisoning-GKE",
+  "name": "storage-provisoning-GKE",
+  "shortDescription": "Having the need for a production ready GKE cluster? Need not to worry, this solution makes you ready to go in a matter of seconds. #MaintainerMarch",
+  "longDescription": "Having the need for a production ready GKE cluster? Need not to worry, this solution makes you ready to go in a matter of seconds. #MaintainerMarch",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "containers",
+    "databases",
+    "operations"
+  ]
+}
