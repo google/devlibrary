@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["robingenz"],
+  "author": "Robin Genz",
+  "title": "The Push Notifications Guide for Capacitor - Capawesome",
+  "link": "https://capawesome.io/blog/the-push-notifications-guide-for-capacitor/",
+  "tags": [
+    "android",
+    "ios",
+    "web"
+  ],
+  "description": "Push notifications are one of the most commonly used features for mobile apps. In this guide, we will add push notifications to a Capacitor app with support for Android, iOS and the Web using the Firebase Cloud Messaging SDK."
+}
