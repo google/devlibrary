@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["tanaikech"],
+  "author": "Kanshi Tanaike",
+  "title": "Enriched Management of Rich Text on Google Spreadsheet using Google Apps Script · tanaike",
+  "link": "https://tanaikech.github.io/2023/04/02/enriched-management-of-rich-text-on-google-spreadsheet-using-google-apps-script/",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "In this post, I would like to introduce the enriched management of rich text on Google Spreadsheet using Google Apps Script."
+}

@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["neutrollized"],
+  "author": "Glen Yu",
+  "title": "Workload Identity with kaniko",
+  "link": "https://cloud.google.com/blog/products/containers-kubernetes/open-source-tools-can-help-gke-work-with-cloud-apis",
+  "tags": ["containers",
+  "networking",
+  "security-identity"],
+  "description": "Advocating for the use of Workload Identity in GKE workload using open source tool, kaniko as a use case."
+}
