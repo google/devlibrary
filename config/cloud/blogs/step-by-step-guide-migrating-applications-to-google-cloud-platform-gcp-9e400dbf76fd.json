@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "adityadj"
+  ],
+  "author": "Aditya D. Jati",
+  "title": "Migrating Applications to Google Cloud Platform (GCP)",
+  "link": "https://medium.com/@adityadj/step-by-step-guide-migrating-applications-to-google-cloud-platform-gcp-9e400dbf76fd",
+  "tags": [
+    "databases",
+    "migration",
+    "storage"
+  ],
+  "description": "Migrating applications to the cloud has become a common practice for organizations seeking scalability, flexibility, and cost-efficiency. Google Cloud Platform (GCP) offers a robust set of services and features that enable seamless application migration."
+}

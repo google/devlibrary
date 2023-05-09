@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "tkko"
+  ],
+  "owner": "Tkko",
+  "repo": "Flutter_dismissible_page",
+  "name": "Dismissible Page",
+  "shortDescription": "Flutter widget that allows you to dismiss page to any direction, forget the boring back button and plain transitions.",
+  "longDescription": "Flutter widget that allows you to dismiss page to any direction, forget the boring back button and plain transitions.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "widgets",
+    "mobile"
+  ]
+}

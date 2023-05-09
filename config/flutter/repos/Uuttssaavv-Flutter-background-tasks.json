@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "uuttssaavv"
+  ],
+  "owner": "Uuttssaavv",
+  "repo": "Flutter-background-tasks",
+  "name": "Background Tasks in Flutter",
+  "shortDescription": "Performing the background tasks in Flutter with flutter_background_services.",
+  "longDescription": "Performing the background tasks in Flutter with flutter_background_services.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "general",
+    "samples"
+  ]
+}
