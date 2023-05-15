@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gqueues"
+  ],
+  "owner": "GQueues",
+  "repo": "build-a-google-chat-bot-with-chatgpt",
+  "name": "Build a Google Chat Bot Powered by ChatGPT",
+  "shortDescription": "A code lab that walks you through all the steps to build a Google Chat bot on Google Cloud that uses OpenAI APIs to power the bot.",
+  "longDescription": "A code lab that walks you through all the steps to build a Google Chat bot on Google Cloud that uses OpenAI APIs to power the bot.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ai-ml",
+    "media-gaming",
+    "serverless-computing"
+  ]
+}

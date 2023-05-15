@@ -12,5 +12,6 @@
     "networking",
     "hybrid-multicloud",
     "operations"
-  ]
+  ],
+  "description": "Networking is an essential phase in all cloud domains & one needs to take proper care while configuring Network connectivity so that the desired connectivity is established. If we want to establish connectivity for any network stack where the source network is residing on one public cloud/on-premise and the destination networks are residing on another public cloud. In order to establish networking, we can use the conventional VPN approach. There are 2 challenges with this approach: 1. Cost 2. Management overhead Transit connectivity is a solution where we can connect a network with multiple peered networks, it can act as a centralise transit hub through which we can route traffic to multiple VPCs together so it will save overall cost to set up multiple VPNs between networks."
 }

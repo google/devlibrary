@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["vishalbulbule"],
+  "author": "Vishal Bulbule",
+  "title": "Data Encryption techniques in Google Cloud (GMEK/CMEK/CSEK)",
+  "link": "https://medium.com/google-cloud/data-encryption-techniques-in-google-cloud-gmek-cmek-csek-928d072a1e9d",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "This article provide details with steps for different Data Encryption techniques provided  in Google cloud"
+}

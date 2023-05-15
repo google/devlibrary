@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "gursimarsm"
+  ],
+  "author": "Gursimar Singh",
+  "title": "From Data Chaos to Data Insights with Google Cloud and GitLa",
+  "link": "https://gursimarsm.medium.com/from-data-chaos-to-data-insights-with-google-cloud-and-gitlab-ci-a-cutting-edge-solution-e8f5cc9f625c",
+  "tags": [
+    "containers",
+    "storage",
+    "hybrid-multicloud"
+  ],
+  "description": "Simplify data deployment and analysis with GCP and GitLab. Download and store datasets using Python, extract specific data, and display it on an HTML page over GCP. Automate deployment with GCP, DockerFile, Terraform, and Gitlab CI. Gain valuable insights with ease."
+}

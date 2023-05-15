@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["rubenszimbres"],
+  "author": "Rubens Zimbres",
+  "title": "Setup of NVIDIA Merlin and Tensorflow for Recommendation Models",
+  "link": "https://medium.com/google-developer-experts/setup-of-nvidia-merlin-and-tensorflow-for-recommendation-models-3a56f288f8aa",
+  "tags": ["ai-ml"],
+  "description": "The article presents various types of recommenders, including Two Towers and multi-task learning and also provides the guidelines to install NVIDIA Merlin on premises via container and Anaconda, and in Vertex AI."
+}

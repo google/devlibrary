@@ -8,5 +8,25 @@
   "author": "Rubens Zimbres",
   "title": "Google Cloud Contact Center Artificial Intelligence (CCAI): A Managerial View",
   "link": "https://medium.com/@rubenszimbres/google-cloud-contact-center-artificial-intelligence-ccai-a-managerial-view-97776f3cd97",
-  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"]
+  "tags": [
+    "ai-ml",
+    "api-management",
+    "compute",
+    "containers",
+    "data-analytics",
+    "databases",
+    "developer-tools",
+    "healthcare-life-sciences",
+    "hybrid-multicloud",
+    "iot",
+    "management-tools",
+    "media-gaming",
+    "migration",
+    "networking",
+    "operations",
+    "security-identity",
+    "serverless-computing",
+    "storage"
+  ],
+  "description": "This article presents a managerial view of the Center Artificial Intelligence (CCAI) solution, presenting useful statistics regarding cloud adoption in contact centers, as well as benefits provided by CCAI. Security, Machine Learning and architecture aspects are also approached."
 }
