@@ -313,7 +313,7 @@ export default class Product extends Vue {
     categories: [] as CheckboxGroupEntry[],
     expertiseLevel: [] as CheckboxGroupEntry[],
   };
-  public sortBy = SORT_UPDATED;
+  public sortBy = SORT_ADDED;
   public searchFilter = "";
   public tempSearchFilter = "";
 
