@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["o-ifeanyi"],
+  "author": "Ifeanyi Onuoha",
+  "title": "Flutter + Fastlane + GitHub Actions (Part 2)",
+  "link": "https://o-ifeanyi.hashnode.dev/flutter-fastlane-github-actions-part-2",
+  "tags": [
+    "mobile",
+    "samples"
+  ],
+  "description": "A step-by-step guide to setup a local CI/CD Fastlane pipeline with GitHub Actions."
+}

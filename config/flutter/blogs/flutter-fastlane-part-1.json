@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["o-ifeanyi"],
+  "author": "Ifeanyi Onuoha",
+  "title": "Flutter + Fastlane (Part 1)",
+  "link": "https://o-ifeanyi.hashnode.dev/flutter-fastlane-part-1",
+  "tags": [
+    "mobile",
+    "samples"
+  ],
+  "description": "A step-by-step guide to setting up CI/CD using Fastlane."
+}

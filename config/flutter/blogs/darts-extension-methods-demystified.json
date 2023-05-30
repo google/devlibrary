@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["betapundit"],
+  "author": "Aditya Sharma",
+  "title": "Dart's Extension Methods: Demystified",
+  "link": "https://blog.adityasharma.co/darts-extension-methods-demystified",
+  "tags": [
+    "mobile"
+  ],
+  "description": "Unleash the power of Dart's Extension Methods with this simple guide"
+}

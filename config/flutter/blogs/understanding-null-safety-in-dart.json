@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["betapundit"],
+  "author": "Aditya Sharma",
+  "title": "Understanding null safety in Dart",
+  "link": "https://blog.adityasharma.co/understanding-null-safety-in-dart",
+  "tags": [
+    "mobile"
+  ],
+  "description": "What is sound null safety and how to achieve it in Dart"
+}

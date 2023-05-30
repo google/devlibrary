@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ricknout"
+  ],
+  "owner": "ricknout",
+  "repo": "compose-sensors",
+  "name": "Compose Sensors",
+  "shortDescription": "A thin wrapper around the Android Sensor APIs, designed to make it easier to work with them in Jetpack Compose.",
+  "longDescription": "A thin wrapper around the Android Sensor APIs, designed to make it easier to work with them in Jetpack Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

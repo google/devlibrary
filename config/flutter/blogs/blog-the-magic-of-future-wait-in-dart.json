@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["dominuskelvin"],
+  "author": "Kelvin Oghenerhoro Omereshone",
+  "title": "The magic of Future.wait() in Dart",
+  "link": "https://dominuskelvin.dev/blog/the-magic-of-future-wait-in-dart",
+  "tags": [
+    "mobile"
+  ],
+  "description": "I spent some excruciating amount of time trying to figure out how to satisfy a feature request in a flutter codebase I am working on. This article is to help anyone or my future self easily solve this problem. Here we go…"
+}
