@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "satantime"
+  ],
+  "owner": "help-me-mom",
+  "repo": "ng-mocks",
+  "name": "Angular testing library for mocking components, directives, pipes, services and facilitating TestBed setup",
+  "shortDescription": "It’s a mocking library for angular unit testing. Also, website includes examples of different tests. How to test a component, etc.",
+  "longDescription": "It’s a mocking library for angular unit testing. Also, website includes examples of different tests. How to test a component, etc.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["libraries","demos"]
+}
