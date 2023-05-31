@@ -10,7 +10,7 @@
   "name": "BannerX",
   "shortDescription": "BannerX is a Kotlin library which provides an intuitive way to display advertisements and slideshows.",
   "longDescription": "BannerX is a Kotlin library which provides an intuitive way to display advertisements and slideshows.",
-  "content": "https://github.com/IODevBlue/BannerX/blob/main/README.md",
+  "content": "README.md",
   "pages": [],
   "tags": [
     "kotlin",

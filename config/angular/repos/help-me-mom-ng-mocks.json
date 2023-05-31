@@ -7,10 +7,10 @@
   ],
   "owner": "help-me-mom",
   "repo": "ng-mocks",
-  "name": "TODO: human readable name",
-  "shortDescription": "TODO: ~10 words",
-  "longDescription": "TODO: ~2 sentences",
+  "name": "Angular testing library for mocking components, directives, pipes, services and facilitating TestBed setup",
+  "shortDescription": "It’s a mocking library for angular unit testing. Also, website includes examples of different tests. How to test a component, etc.",
+  "longDescription": "It’s a mocking library for angular unit testing. Also, website includes examples of different tests. How to test a component, etc.",
   "content": "README.md",
   "pages": [],
-  "tags": []
+  "tags": ["libraries","demos"]
 }
