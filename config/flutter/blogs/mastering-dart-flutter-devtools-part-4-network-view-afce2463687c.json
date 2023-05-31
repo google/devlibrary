@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "fluttergems"
+  ],
+  "author": "Ashita Prasad",
+  "title": "Mastering Dart & Flutter DevTools - Network View",
+  "link": "https://medium.com/@fluttergems/mastering-dart-flutter-devtools-part-4-network-view-afce2463687c",
+  "tags": [
+    "general"
+  ],
+  "description": "This is the fourth article in the “Mastering Dart & Flutter DevTools” series where you will learn about the DevTools’ Network View tool using a real-life example."
+}

@@ -1,0 +1,19 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "raipankaj"
+  ],
+  "owner": "raipankaj",
+  "repo": "countdowntimer",
+  "name": "Jetpack Compose Countdown Timer",
+  "shortDescription": "A Jetpack Compose countdown timer library that allows you to easily add a customizable countdown timer to your Android app.",
+  "longDescription": "A Jetpack Compose countdown timer library that allows you to easily add a customizable countdown timer to your Android app.",
+  "content": "https://github.com/raipankaj/countdowntimer/blob/main/README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "modern-android-development"
+  ]
+}

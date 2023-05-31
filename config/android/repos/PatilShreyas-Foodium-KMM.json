@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "patilshreyas"
+  ],
+  "owner": "PatilShreyas",
+  "repo": "Foodium-KMM",
+  "name": "Foodium-KMM",
+  "shortDescription": "Sample application built to demonstrate the use of Kotlin Multiplatform Mobile for developing Android and iOS applications using Jetpack Compose",
+  "longDescription": "Sample application built to demonstrate the use of Kotlin Multiplatform Mobile for developing Android and iOS applications using Jetpack Compose",
+  "content": null,
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

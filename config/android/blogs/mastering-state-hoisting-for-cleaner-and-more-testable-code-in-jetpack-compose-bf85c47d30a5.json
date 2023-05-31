@@ -1,0 +1,15 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [],
+  "author": "Veronica Putri Anggraini",
+  "title": "Mastering State Hoisting for Cleaner and More Testable Code",
+  "link": "https://medium.com/bootcampers/mastering-state-hoisting-for-cleaner-and-more-testable-code-in-jetpack-compose-bf85c47d30a5",
+  "tags": [
+    "compose",
+    "ui",
+    "kotlin"
+  ],
+  "description": "State closely tied with Jetpack Compose, so the use of stateful composable is unavoidable. That’s why we need to make the stateful composable function become stateless. To realize that, we can use State Hoisting pattern to move the state to parent on it, so the composable became stateless."
+}

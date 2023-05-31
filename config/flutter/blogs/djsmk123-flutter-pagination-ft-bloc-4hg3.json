@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Md Mobin",
+  "title": "Flutter pagination ft. Bloc",
+  "link": "https://dev.to/djsmk123/flutter-pagination-ft-bloc-4hg3",
+  "tags": [
+    "mobile",
+    "general",
+    "plugins"
+  ],
+  "description": "We are going to learn how to integrate pagination in flutter using Bloc as state management solution"
+}

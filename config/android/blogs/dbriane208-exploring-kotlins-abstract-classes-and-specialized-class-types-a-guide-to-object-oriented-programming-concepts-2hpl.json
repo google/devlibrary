@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Daniel Brian",
+  "title": "Exploring Kotlin's Abstract Classes and Specialized Class Types: A Guide to Object-Oriented Programming Concepts.",
+  "link": "https://dev.to/dbriane208/exploring-kotlins-abstract-classes-and-specialized-class-types-a-guide-to-object-oriented-programming-concepts-2hpl",
+  "tags": [
+    "kotlin",
+    "build-tools",
+    "modern-android-development"
+  ],
+  "description": "\"Exploring Abstract and Specialized Classes in Kotlin: A Comprehensive Guide\" is a must-read article for Kotlin developers. The article delves into abstract classes and specialized classes, including data, enum, sealed, exceptions, and annotation classes."
+}

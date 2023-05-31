@@ -1,0 +1,14 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Ubiratan Soares",
+  "title": "Enabling fault-tolerant HTTP abstractions in Android apps with Resilience4j, Testcontainers, and Toxiproxy",
+  "link": "https://ubiratansoares.dev/posts/enabling-http-resilience-for-android/",
+  "tags": [
+    "architecture",
+    "modern-android-development"
+  ],
+  "description": "In this article, I share an overview of HTTP resilience patterns, elaborating on which ones fit best for Mobile/Front-end applications. I also show a practical example of implementing a fault-tolerant HTTP abstraction for an Android project using Resilience4j and testing simulated networking issues"
+}

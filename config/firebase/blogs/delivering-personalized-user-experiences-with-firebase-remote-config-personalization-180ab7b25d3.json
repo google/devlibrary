@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [],
+  "author": "Pankaj Rai",
+  "title": "Delivering Personalized User Experiences with Firebase",
+  "link": "https://medium.com/proandroiddev/delivering-personalized-user-experiences-with-firebase-remote-config-personalization-180ab7b25d3",
+  "tags": [
+    "android",
+    "web"
+  ],
+  "description": "Firebase Remote Config Personalization is a powerful tool that allows developers to deliver personalized experiences to their users without the need for server-side code. In this blog post, we explore the benefits of using Firebase Remote Config Personalization."
+}

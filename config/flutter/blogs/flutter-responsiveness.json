@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Collins Olokpedje",
+  "title": "Flutter: Build a responsive design",
+  "link": "https://collicle.hashnode.dev/flutter-responsiveness",
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ],
+  "description": "In this article, we will explore how to use a widget to achieve responsiveness in Flutter for all screen sizes. We will discuss the importance of responsive design and how it can improve the user experience. We will then introduce the Expanded widget and explain how it can be used"
+}
