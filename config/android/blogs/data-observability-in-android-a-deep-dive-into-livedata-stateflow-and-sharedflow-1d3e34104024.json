@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "nada"
+  ],
+  "author": "Nada Feteiha",
+  "title": "Data Observability in Android: A Deep Dive",
+  "link": "https://medium.com/@nada.feteiha/data-observability-in-android-a-deep-dive-into-livedata-stateflow-and-sharedflow-1d3e34104024",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "This article compares and contrasts the three common options available in Android for managing and observing data changes - LiveData, StateFlow, and SharedFlow."
+}

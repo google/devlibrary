@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "1jgabriel"
+  ],
+  "author": "João Gabriel",
+  "title": "How to use Jetpack Navigation in multi module projects",
+  "link": "https://1jgabriel.medium.com/how-to-use-jetpack-navigation-in-multi-module-projects-fd26beb5d377",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "architecture"
+  ],
+  "description": "Post to show how to use jetpack navigation to navigate between modules that dont know each other"
+}

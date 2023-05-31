@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["harshmanvar"],
+  "author": "Harsh Manvar",
+  "title": "Google Cloud Build Conditional Step",
+  "link": "https://medium.com/google-cloud/google-cloud-build-conditional-step-d60058d257c0",
+  "tags": [
+    "containers",
+    "developer-tools",
+    "operations"
+  ],
+  "description": "Conditional step in Google Cloud Build"
+}

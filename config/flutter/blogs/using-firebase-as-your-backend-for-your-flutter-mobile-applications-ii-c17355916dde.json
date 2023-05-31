@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aderibigbejesutoni860"
+  ],
+  "author": "Jesutoni Aderibigbe",
+  "title": "Using Firebase as your Backend for your Flutter Mobile Appli",
+  "link": "https://aderibigbejesutoni860.medium.com/using-firebase-as-your-backend-for-your-flutter-mobile-applications-ii-c17355916dde",
+  "tags": [
+    "firebase",
+    "mobile"
+  ],
+  "description": "In our last tutorial, we tried syncing our Flutter mobile application with Firebase. Today, we will be moving forward by building a simple login and sign-up screen while using Firebase Authentication as our backend."
+}

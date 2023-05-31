@@ -2,7 +2,7 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["remejuan"],
   "author": "Reme Le Hane",
   "title": "Flutter: Up your testing game",
   "link": "https://remelehane.dev/posts/up-your-testing-game/",
