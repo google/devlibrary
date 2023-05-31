@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "nuelluiz"
+  ],
+  "author": "KING IMMANUEL E.",
+  "title": "View Binding — Kotlin",
+  "link": "https://medium.com/@nuelluiz/view-binding-kotlin-6cb9462dd129",
+  "tags": [
+    "kotlin",
+    "build-tools",
+    "modern-android-development"
+  ],
+  "description": "View Binding is a convenient feature introduced in Android Studio 3.6 that simplifies the process of working with UI components in Android applications."
+}

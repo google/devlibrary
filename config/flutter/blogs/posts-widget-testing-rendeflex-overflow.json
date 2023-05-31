@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["remejuan"],
+  "author": "Reme Le Hane",
+  "title": "Widget testing: Dealing with Renderflex Overflow Errors",
+  "link": "https://remelehane.dev/posts/widget-testing-rendeflex-overflow/",
+  "tags": [
+    "general"
+  ],
+  "description": "Looking into an option for dealing with RenderFlex overflow within the context of widget testing."
+}

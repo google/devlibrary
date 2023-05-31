@@ -1,0 +1,15 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["ubiratansoares"],
+  "author": "Ubiratan Soares",
+  "title": "The landscape of Android screenshot testing in 2023",
+  "link": "https://ubiratansoares.dev/posts/screenshot-testing-for-android-landscape/",
+  "tags": [
+    "build-tools",
+    "modern-android-development",
+    "ui"
+  ],
+  "description": "In this article, I share a couple of considerations about existing libraries that enable screenshot testing for Android projects, comparing the capabilities and trade-offs of Shot, Paparazzi, and Dropshots."
+}

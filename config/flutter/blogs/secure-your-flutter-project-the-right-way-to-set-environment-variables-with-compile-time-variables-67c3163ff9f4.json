@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["codefarmer"],
+  "author": "Samuel Abada",
+  "title": "Right Way to Set Flutter Env Variables but at Compile-Time",
+  "link": "https://medium.com/codefarmer/secure-your-flutter-project-the-right-way-to-set-environment-variables-with-compile-time-variables-67c3163ff9f4",
+  "tags": [
+    "mobile",
+    "samples",
+    "general"
+  ],
+  "description": "Learn how to set environment variables in your Flutter app using compile-time variables, with examples for both Android and iOS platforms."
+}

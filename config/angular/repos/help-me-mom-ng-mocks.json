@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "satantime"
+  ],
+  "owner": "help-me-mom",
+  "repo": "ng-mocks",
+  "name": "TODO: human readable name",
+  "shortDescription": "TODO: ~10 words",
+  "longDescription": "TODO: ~2 sentences",
+  "content": "README.md",
+  "pages": [],
+  "tags": []
+}

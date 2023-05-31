@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aryanirani123"
+  ],
+  "author": "Aryan Irani",
+  "title": "Blog Summarisation with Google Apps Script, ChatGPT, OPEN AI",
+  "link": "https://aryanirani123.medium.com/automating-blog-summarisation-with-google-apps-script-chatgpt-and-open-ai-api-f28ac42915b3",
+  "tags": [
+    "ai-ml",
+    "developer-tools"
+  ],
+  "description": "Discover how to automate blog summarisation using Google Apps Script, ChatGPT, and OpenAI API for enhanced content creation efficiency."
+}
