@@ -16,6 +16,6 @@
     "ai-ml",
     "serverless-computing",
     "data-analytics",
-    "bigquery-ml"
+    "bqml"
   ]
 }
