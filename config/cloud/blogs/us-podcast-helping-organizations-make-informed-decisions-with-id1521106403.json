@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["manav-doshi"],
+  "author": "Manav Doshi",
+  "title": "Cloud Transformation Approach with a focus on Security , Data Lifecyclement and Availablity ",
+  "link": "https://podcasts.apple.com/us/podcast/helping-organizations-make-informed-decisions-with/id1521106403?i=1000557435683",
+  "tags": ["data-analytics","security-identity","serverless-computing"],
+  "description": "Equifax Australia embarked on a AUD2 billion journey with Google Cloud to migrate 100% of its key platforms and credit bureaus into the cloud. In this episode of the Google Cloud Digital Show podcast Manav Doshi, GM of Technology Solutions and Keith Junius, Enterprise Architect, both of Equifax Australia, to talk about the organization’s ambitious cloud transformation and their approach to it."
+}

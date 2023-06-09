@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["cloud-jake"],
+  "author": "Jake Holmquist",
+  "title": "Maximize learning and build a reusable code repository with Google Cloud Skills Boost Quests and Challenge Labs",
+  "link": "https://cloud-jake.medium.com/maximize-learning-and-build-a-reusable-code-repository-with-google-cloud-skills-boost-quests-and-9733737b36da",
+  "tags": ["api-management"],
+  "description": "One of the best things about Google Cloud is the pace of innovation and growth — with new features and solutions made available seemingly on a daily basis. As a technology professional, it can be difficult keeping up — which is why it’s important to have a growth mindset and be continually learning by participating in workshops, trainings, and hands-on labs through Qwiklabs and Google Cloud Skills Boost."
+}

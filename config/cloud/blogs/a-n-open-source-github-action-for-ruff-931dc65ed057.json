@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["whatwouldaustindo"],
+  "author": "Austin Bennett",
+  "title": "A(n Open Source) GitHub Action for Ruff",
+  "link": "https://engineering.chartboost.com/a-n-open-source-github-action-for-ruff-931dc65ed057",
+  "tags": ["data-analytics","databases"],
+  "description": "Ruff is a great tool for the Python Ecosystem.  This articles shares how we use it, and how we use it within GitHub actions. "
+}

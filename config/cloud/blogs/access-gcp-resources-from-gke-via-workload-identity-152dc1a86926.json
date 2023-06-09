@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["rohankalhans"],
+  "author": "Rohan Singh",
+  "title": "Access GCP resources from GKE via Workload Identity",
+  "link": "https://faun.pub/access-gcp-resources-from-gke-via-workload-identity-152dc1a86926",
+  "tags": ["security-identity","networking"],
+  "description": "Introduction to GKE Workload Identity with Primary and add-on use-cases. Primary Use-case: Access Cloud SQL DB secrets stored in Secret Manager from applications deployed on Google Kubernetes Engine via Workload Identity."
+}
