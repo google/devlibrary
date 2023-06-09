@@ -107,7 +107,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
       {
         label: "TensorFlow.js",
-        value: "tensorflow-js",
+        value: "tfjs",
       },
       {
         label: "Keras",
@@ -119,7 +119,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
       {
         label: "BigQuery ML",
-        value: "bigquery-ml",
+        value: "bqml",
       },
       {
         label: "TPU",

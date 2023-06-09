@@ -13,6 +13,6 @@
     "nlp",
     "vision",
     "library",
-    "tensorflow-js"
+    "tfjs"
   ]
 }

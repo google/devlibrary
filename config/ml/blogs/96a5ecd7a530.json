@@ -7,7 +7,7 @@
   "title": "Custom YOLOv7 Object Detection with TensorFlow.js",
   "link": "https://medium.com/p/96a5ecd7a530",
   "tags": [
-    "mobile","nlp","vision","library","notebook","collection","web","theory","tensorflow-core","tfx","tflite","tensorflow-js","keras","jax-flax","bigquery-ml","tpu","other-google-ml-products"
+    "mobile","nlp","vision","library","notebook","collection","web","theory","tensorflow-core","tfx","tflite","tfjs","keras","jax-flax","bqml","tpu","other-google-ml-products"
   ],
   "description": "Training a custom YOLOv7 model for object detection and converting it to TensorFlow.js using Google Colab."
 }

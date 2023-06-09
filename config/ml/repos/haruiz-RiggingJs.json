@@ -16,6 +16,6 @@
     "mobile",
     "library",
     "theory",
-    "tensorflow-js"
+    "tfjs"
   ]
 }

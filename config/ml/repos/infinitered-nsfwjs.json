@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "infinitered"
+  ],
+  "owner": "infinitered",
+  "repo": "nsfwjs",
+  "name": "NSFWJS",
+  "shortDescription": "A simple JavaScript library to help you quickly identify unseemly images; all in the client's browser. NSFWJS isn't perfect, but it's pretty accurate (~90% with small and ~93% with midsized model).",
+  "longDescription": "A simple JavaScript library to help you quickly identify unseemly images; all in the client's browser. NSFWJS isn't perfect, but it's pretty accurate (~90% with small and ~93% with midsized model).",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "tfjs"
+  ]
+}
