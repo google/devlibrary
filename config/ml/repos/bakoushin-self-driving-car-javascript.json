@@ -20,6 +20,6 @@
     "notebook",
     "collection",
     "web",
-    "tensorflow-js"
+    "tfjs"
   ]
 }

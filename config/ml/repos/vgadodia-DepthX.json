@@ -16,6 +16,6 @@
     "mobile",
     "nlp",
     "vision",
-    "tensorflow-js"
+    "tfjs"
   ]
 }
