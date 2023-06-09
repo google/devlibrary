@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["paulwilljones"],
+  "author": "Paul Jones",
+  "title": "FleetOps with Anthos Config Controller - Clusters, Config and Meshes | Jetstack Blog",
+  "link": "https://www.jetstack.io/blog/anthos-gke-config-controller/",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences", "hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "FleetOps can enhance how organisations create, configure and control Kubernetes clusters in Google Cloud. This first in a series of posts looking at Config Controller shows how to create a GKE Fleet with Anthos Config Management and Anthos Service Mesh to standardise compliance, security and cluster add-ons at scale."
+}
