@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["an_14796"],
+  "author": "Artem Nikulchenko",
+  "title": "Hidden Gems of BigQuery — Part 4– Five types of “Views”",
+  "link": "https://medium.com/google-cloud/hidden-gems-of-bigquery-part-4-five-types-of-views-ddfbc05118fb",
+  "tags": ["data-analytics","databases"],
+  "description": "This post is about Views, Caching, Scheduled Queries, Materialized Views and Non-incremental Materialized Views"
+}

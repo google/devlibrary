@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mustafaksr"
+  ],
+  "owner": "mustafaksr",
+  "repo": "streaming_data_pipelines",
+  "name": "streaming_data_pipelines",
+  "shortDescription": "This project is a pipeline that streams data from MongoDB to Google Cloud PubSub. It uses a custom Dataflow job to process and transform the data in real-time.",
+  "longDescription": "This project is a pipeline that streams data from MongoDB to Google Cloud PubSub. It uses a custom Dataflow job to process and transform the data in real-time.",
+  "content": "readme.md",
+  "pages": [],
+  "tags": [
+    "data-analytics"
+  ]
+}

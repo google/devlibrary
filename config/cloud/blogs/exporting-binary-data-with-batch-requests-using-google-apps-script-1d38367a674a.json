@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["tanaikech"],
+  "author": "Kanshi Tanaike",
+  "title": "Exporting Binary Data with Batch Requests using Google Apps Script",
+  "link": "https://medium.com/google-cloud/exporting-binary-data-with-batch-requests-using-google-apps-script-1d38367a674a",
+  "tags": ["developer-tools","management-tools"],
+  "description": "When the batch requests for Google APIs are used, the API can be used efficiently. There are the string data and the binary data in the response values from the batch requests. The data can be obtained in the case of the string data. However, in the case of binary data, it isn’t easy to parse the data using Google Apps Script. In this report, it is introduced the method for parsing the response values including the binary data from the batch requests using a sample script."
+}
