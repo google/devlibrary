@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "baimamboukar"
+  ],
+  "author": "BAIMAM BOUKAR JEAN JACQUES",
+  "title": "Add dynamic theming support to your flutter apps using Hive",
+  "link": "https://baimamboukar.medium.com/dynamic-theming-in-flutter-using-hive-e9d59527f440",
+  "tags": [
+    "mobile",
+    "samples"
+  ],
+  "description": "Integrating a light-dark mode option in flutter can be time-consuming. Having to handle providers and shared preferences, as well as loading configurations when the app launches, is quite difficult. But in this blog, we will explore a straightforward technique to easily implement dynamic theming"
+}

@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "cavinmac"
+  ],
+  "author": "Cavin Macwan",
+  "title": "WidgetBook in Flutter: Crash Course in Code Generation Appro",
+  "link": "https://medium.com/@CavinMac/widgetbook-in-flutter-crash-course-in-code-generation-approach-3f057cafac74",
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ],
+  "description": "In this blog, I will cover how you can leverage code generation to generate all the boilerplate code for WidgetBook along with all the examples and tutorials."
+}

@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["manikandank276"],
+  "author": "Manikandan Krishnamurthy",
+  "title": "How to deploy ArgoCD on Google Kubernetes Engine (GKE)?",
+  "link": "https://manikandank276.hashnode.dev/how-to-deploy-argocd-on-google-kubernetes-engine-gke",
+  "tags": [
+    "compute"
+  ],
+  "description": "Step by step procedure to deploy ArgoCD (Cloud Native Continuous Delivery Tool) on Google Kubernetes Engine (GKE)."
+}
