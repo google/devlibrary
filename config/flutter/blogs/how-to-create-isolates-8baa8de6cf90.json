@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "hardik9850"
+  ],
+  "author": "Hardik Mehta",
+  "title": "How to create Dart isolates",
+  "link": "https://hardik9850.medium.com/how-to-create-isolates-8baa8de6cf90",
+  "tags": [
+    "mobile",
+    "samples"
+  ],
+  "description": "This article aims to shed light on what an isolate is, why it is crucial to have separate instances for parallel programming, and how we can effectively spawn an isolate to handle resource-intensive operations."
+}

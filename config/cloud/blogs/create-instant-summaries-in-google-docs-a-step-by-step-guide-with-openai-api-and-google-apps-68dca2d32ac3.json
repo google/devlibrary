@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aryanirani123"
+  ],
+  "author": "Aryan Irani",
+  "title": "Create Summaries in Google Docs using Google Apps Script, AI",
+  "link": "https://aryanirani123.medium.com/create-instant-summaries-in-google-docs-a-step-by-step-guide-with-openai-api-and-google-apps-68dca2d32ac3",
+  "tags": [
+    "ai-ml",
+    "developer-tools"
+  ],
+  "description": "Use Google Apps Script, CHATGPT and the Open AI API to generate instant summaries in Google Docs."
+}

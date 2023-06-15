@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["rafalbednarczuk"],
+  "author": "Rafal Bednarczuk",
+  "title": "How I won Telegram's $50,000 Sticker App Contest using Flutter",
+  "link": "https://telegra.ph/How-I-won-50000-Telegram-Sticker-App-Contest-using-Flutter-04-06",
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ],
+  "description": "An overview of flutter app development that took less than 10 days and won 1st place in $50.000 Telegram App Contest."
+}
