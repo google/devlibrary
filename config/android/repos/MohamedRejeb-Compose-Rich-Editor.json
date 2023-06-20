@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mohamedrejeb"
+  ],
+  "owner": "MohamedRejeb",
+  "repo": "Compose-Rich-Editor",
+  "name": "Compose Rich Editor",
+  "shortDescription": "A Rich text editor library for both Jetpack Compose, fully customizable and supports the common rich text editor features.",
+  "longDescription": "A Rich text editor library for both Jetpack Compose, fully customizable and supports the common rich text editor features.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui",
+    "kotlin"
+  ]
+}

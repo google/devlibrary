@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jays0606"
+  ],
+  "owner": "jays0606",
+  "repo": "mediapipe-facelandmark-demo",
+  "name": "Mediapipe Facelandmarker Demo",
+  "shortDescription": "This project is a web-based AR facial filter demo leveraging Google's MediaPipe FaceLandmarker and ReadyPlayerMe's Avatar.",
+  "longDescription": "This project is a web-based AR facial filter demo leveraging Google's MediaPipe FaceLandmarker and ReadyPlayerMe's Avatar.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "tfjs",
+    "tf-core",
+    "tf-lite"
+  ]
+}

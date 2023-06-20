@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["gursimarsm"],
+  "author": "Gursimar Singh",
+  "title": "Creating a Scalable Flask App with HarperDB and Deploying on",
+  "link": "https://medium.com/google-cloud/creating-a-scalable-flask-app-with-harperdb-and-deploying-on-google-cloud-a-step-by-step-guide-2e99e5f3df7f",
+  "tags": [
+    "containers",
+    "developer-tools",
+    "serverless-computing"
+  ],
+  "description": "In this guide, we’ll walk you through the process of creating a Flask app with HarperDB and deploying it on the Google Cloud Platform. You will learn how to set up a HarperDB instance, create a CI/CD pipeline with GitHub Actions, and deploy the Flask app on Google Cloud Run."
+}
