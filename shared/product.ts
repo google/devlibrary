@@ -95,7 +95,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
       {
         label: "TensorFlow Core",
-        value: "tensorflow-core",
+        value: "tf-core",
       },
       {
         label: "TFX",
