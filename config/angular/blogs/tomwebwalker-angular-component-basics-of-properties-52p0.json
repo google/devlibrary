@@ -2,7 +2,7 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["tomwebwalker"],
   "author": "Tomasz Flis",
   "title": "Angular component - basics of properties",
   "link": "https://dev.to/tomwebwalker/angular-component-basics-of-properties-52p0",

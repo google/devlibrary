@@ -13,6 +13,8 @@
   "content": "README.md",
   "pages": [],
   "tags": [
-    "maps-sdk-android"
+    "maps-sdk-android",
+    "kotlin",
+    "compose"
   ]
 }
