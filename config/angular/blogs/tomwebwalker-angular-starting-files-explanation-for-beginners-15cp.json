@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["tomwebwalker"],
+  "author": "Tomasz Flis",
+  "title": "Angular starting files explanation for beginners",
+  "link": "https://dev.to/tomwebwalker/angular-starting-files-explanation-for-beginners-15cp",
+  "tags": [
+    "getting-started"
+  ],
+  "description": "Angular is a powerful framework for single-page applications. During the initialization of a new project, the CLI creates some configuration and initialization files to allow the Angular project works nicely and in the desired way."
+}
