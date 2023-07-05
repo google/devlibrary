@@ -7,7 +7,7 @@
   "title": "Angular.json structure for beginners - what we can set",
   "link": "https://dev.to/tomwebwalker/angularjson-structure-for-beginners-what-we-can-set-27f3",
   "tags": [
-    "gettingstarted"
+    "getting-started"
   ],
   "description": "During the creation of an Angular project in the root directory, the angular.json file is created. It contains some properties which allow us to configure how the project behaves and how the CLI generates new parts of the project."
 }
