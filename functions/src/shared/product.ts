@@ -156,7 +156,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
       {
         label: "Getting Started",
-        value: "gettingstarted",
+        value: "getting-started",
       },
       {
         label: "Libraries",

@@ -156,7 +156,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
       {
         label: "Getting Started",
-        value: "gettingstarted",
+        value: "getting-started",
       },
       {
         label: "Libraries",
@@ -380,11 +380,11 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
       },
       {
         label: "Maps SDK for Android",
-        value: "maps-sdk-for-android",
+        value: "maps-sdk-android",
       },
       {
         label: "Maps SDK for iOS",
-        value: "maps-sdk-for-ios",
+        value: "maps-sdk-ios",
       },
       {
         label: "Places API",
