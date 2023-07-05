@@ -7,7 +7,7 @@
   "title": "Angular component - basics of properties",
   "link": "https://dev.to/tomwebwalker/angular-component-basics-of-properties-52p0",
   "tags": [
-    "getting-started"
+    "gettingstarted"
   ],
   "description": "The essential element of the Angular framework is a Component. Each Angular application must have at least one component to run and serve the view. Behind the scene, the component is a typescript class with a particular decorator Component added. This article will explain the basics of component."
 }

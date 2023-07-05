@@ -7,7 +7,7 @@
   "title": "Angular routing - route to success for beginners",
   "link": "https://dev.to/tomwebwalker/angular-routing-route-to-success-for-beginners-3bec",
   "tags": [
-    "getting-started"
+    "gettingstarted"
   ],
   "description": "In the current frontend development approach, most web applications are SPA which stands for Single Page applications. It means the browser won't refresh the page whenever we redirect from one page to another. Instead, the proper content of the page is replaced."
 }
