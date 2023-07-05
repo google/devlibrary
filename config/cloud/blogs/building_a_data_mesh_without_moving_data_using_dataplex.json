@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["tkachovsergii"],
+  "author": "Sergii Tkachov",
+  "title": "Exploring Dataplex functionality. Part 1: Building a data mesh without moving data using Dataplex - Masthead",
+  "link": "https://mastheadata.com/building_a_data_mesh_without_moving_data_using_dataplex/",
+  "tags": [
+    "data-analytics",
+    "developer-tools"
+  ],
+  "description": "Dataplex. Road to data mesh architecture"
+}
