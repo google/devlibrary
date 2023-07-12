@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["achingachris"],
+  "author": "Chris Ndanyi",
+  "title": "How to Fetch Data from an API in Angular",
+  "link": "https://chrisdevcode.hashnode.dev/how-to-fetch-data-from-an-api-in-angular",
+  "tags": [
+    "getting-started"
+  ],
+  "description": "This is a technical guide on ow to fetch and display data from an external API in an Angular applicatiom"
+}

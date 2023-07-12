@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["talhafaki"],
+  "author": "Talha Fakıoğlu",
+  "title": "Accessibility & Testing in Jetpack Compose",
+  "link": "https://medium.com/proandroiddev/accessibility-testing-in-jetpack-compose-2ecdcc392c52",
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "This article explains what is accessibility, how to use jetpack compose and how to write a test."
+}

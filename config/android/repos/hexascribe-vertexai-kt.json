@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "hexascribe"
+  ],
+  "owner": "hexascribe",
+  "repo": "vertexai-kt",
+  "name": "VertexAI-KT",
+  "shortDescription": "VertexAI-KT is a Kotlin multiplatform library that simplifies integration with Google Cloud's Vertex AI PaLM API for generative model creation and training.",
+  "longDescription": "VertexAI-KT is a Kotlin multiplatform library that simplifies integration with Google Cloud's Vertex AI PaLM API for generative model creation and training.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin"
+  ]
+}

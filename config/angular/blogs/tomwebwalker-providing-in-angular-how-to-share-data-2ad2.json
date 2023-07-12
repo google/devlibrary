@@ -1,0 +1,13 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["tomwebwalker"],
+  "author": "Tomasz Flis",
+  "title": "Providing in Angular - how to share data",
+  "link": "https://dev.to/tomwebwalker/providing-in-angular-how-to-share-data-2ad2",
+  "tags": [
+    "performance"
+  ],
+  "description": "In the angular framework, dependency injection, and providers are one of the core features. This feature allows us to use a single data source in many places. In this article, I will explain the providers, how to define them, and how to use them in many places."
+}

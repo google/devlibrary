@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["arturschaefer"],
+  "author": "Artur Schaefer",
+  "title": "How to Use the Android Studio Network Inspector to Debug and",
+  "link": "https://medium.com/better-programming/how-to-use-the-android-studio-network-inspector-to-debug-and-optimize-your-apps-network-requests-22f98dd02349",
+  "tags": [
+    "build-tools",
+    "modern-android-development"
+  ],
+  "description": "Join me on a journey through the world of Kotlin and native Android development. Explore insightful articles and tutorials as I share my expertise and experiences in crafting exceptional Android apps. Stay up-to-date with the latest trends, best practices, and cutting-edge techniques in the ever-evo"
+}

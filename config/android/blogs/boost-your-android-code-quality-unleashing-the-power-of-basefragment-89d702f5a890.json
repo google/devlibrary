@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "debz_exe"
+  ],
+  "author": "Debayan Dastider",
+  "title": "Boost Your Android Code Quality: Unleashing the Power of Bas",
+  "link": "https://medium.com/@debz_exe/boost-your-android-code-quality-unleashing-the-power-of-basefragment-89d702f5a890",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "architecture"
+  ],
+  "description": "Explore the power of using BaseFragment in your code and reduce boilerplate code by tenfolds and increase reusability."
+}
