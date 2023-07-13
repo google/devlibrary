@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "williamxyz"
+  ],
+  "author": "william alves",
+  "title": "Monitoring Network on Android with mitmproxy",
+  "link": "https://medium.com/@williamxyz/monitoring-network-on-android-with-mitmproxy-bfb8722191ee",
+  "tags": [
+    "build-tools"
+  ],
+  "description": "Using mitmproxy for inspecting and editing API calls in Android app development, including setup and usage instructions."
+}

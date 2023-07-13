@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "iamjosephmj"
+  ],
+  "author": "Joseph James",
+  "title": "Biometric Encryption and Decryption with AndroidX.Biometric",
+  "link": "https://medium.com/@iamjosephmj/biometric-encryption-and-decryption-with-androidx-biometric-13741a5b0583",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "Explore AndroidX.Biometric, a powerful library empowering Android developers with robust security and seamless user experience. Implement biometric encryption and decryption to protect sensitive data. Discover its capabilities, benefits, and practical implementation."
+}

@@ -1,0 +1,17 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "pranaypatel"
+  ],
+  "author": "Pranay Patel",
+  "title": "Using Lint pre-commit hook in Android project",
+  "link": "https://medium.com/@pranaypatel/using-lint-pre-commit-hook-in-android-project-31e2b9baff5d",
+  "tags": [
+    "kotlin",
+    "build-tools",
+    "modern-android-development"
+  ],
+  "description": "Automate your Kotlin code lint checking process and valid code before committing to the repository"
+}

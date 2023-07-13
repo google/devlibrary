@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["vinitfreakk"],
+  "author": "vinit hanabar",
+  "title": "Simplifying Network Requests in Kotlin with Retrofit and MVVM",
+  "link": "https://droidadox.hashnode.dev/simplifying-network-requests-in-kotlin-with-retrofit-and-mvvm",
+  "tags": [
+    "kotlin",
+    "architecture",
+    "modern-android-development"
+  ],
+  "description": "Building and manufacturing an app is like building and manufacturing a Car. Just like when you build a car, you need to use different parts and tools to make it strong and fun to drive. In the world of apps, developers use special patterns and libraries to make their apps strong and work well."
+}
