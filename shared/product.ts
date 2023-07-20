@@ -56,9 +56,9 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
   },
   ml: {
     key: ProductKey.ML,
-    name: "Machine Learning",
+    name: "Machine Learning Projects",
     description:
-      " Google provides a wide range of Machine Learning technologies and products for developers to use and develop for their projects. These include TensorFlow, TensorFlow.js, TensorFlow Lite, TensorFlow Extended, JAX, Keras and Mediapipe. Dev Library has a curated collection of Machine Learning blogs, open source projects, and tutorials contributed by developers around the world. Explore today for your next project!",
+      " Google provides a wide range of technologies and products for developers to use and develop for their machine learning and AI projects. These include TensorFlow, TensorFlow.js, TensorFlow Lite, TensorFlow Extended, JAX, Keras and Mediapipe. Dev Library has a curated collection of Machine Learning and AI blogs, open source projects, and tutorials contributed by developers around the world. Explore today for your next project!",
     docsUrl: "https://www.tensorflow.org/",
     tags: [
       {
@@ -211,9 +211,9 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
   },
   cloud: {
     key: ProductKey.CLOUD,
-    name: "Google Cloud",
+    name: "Google Cloud Dev",
     description:
-      "Meet your business challenges head on with cloud computing services from Google, including data management, hybrid & multi-cloud, and AI & ML. Dev Library has a curated collection of Google Cloud blogs, open source projects, and tutorials contributed by developers around the world. Explore Dev Library today for your next Google Cloud project!",
+      "Meet your business challenges head on with cloud computing services from Google, including data management, hybrid & multi-cloud, and AI & ML. Dev Library has a curated collection of Google Cloud blogs, open source projects, and cloud computing tutorials contributed by developers around the world. Explore Dev Library today for your next Google Cloud project!",
     docsUrl: "https://cloud.google.com/docs",
     // Tags for Cloud are adapted as-needed from the "products" categories list on this page:
     // https://cloud.google.com/products
@@ -296,7 +296,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.ANDROID,
     name: "Android",
     description:
-      "Modern tools and resources to help you build experiences that people love, faster and easier, across every Android device. Dev Library has a curated collection of Android blogs, open source projects, and tutorials contributed by developers around the world. Explore Dev Library today for your next Android project!",
+      "Modern mobile development tools and resources to help you build experiences that people love, faster and easier, across every Android device. Dev Library has a curated collection of Android mobile development blogs, open source projects, and tutorials contributed by developers around the world. Explore Dev Library today for your next Android project!",
     docsUrl: "https://developer.android.com/",
     tags: [
       {
