@@ -12,6 +12,6 @@
     "web",
     "nlp",
     "vision",
-    "tensorflow-js"
+    "tfjs"
   ]
 }

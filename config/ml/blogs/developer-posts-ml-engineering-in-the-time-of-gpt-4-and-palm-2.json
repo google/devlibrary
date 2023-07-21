@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["hanneshapke"],
+  "author": "Hannes Hapke",
+  "title": "ML Engineering in the Time of GPT-4 & PaLM 2",
+  "link": "https://digits.com/developer/posts/ml-engineering-in-the-time-of-gpt-4-and-palm-2/",
+  "tags": [
+    "tf-core",
+    "pose"
+  ],
+  "description": "The blog post describes the potential future of ML engineering in the time of GPT-4."
+}

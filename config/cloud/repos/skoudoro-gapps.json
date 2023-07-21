@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skoudoro"
+  ],
+  "owner": "skoudoro",
+  "repo": "gapps",
+  "name": "GAPPS: Google Workspace add-ons in Python",
+  "shortDescription": "GAPPS is a library to helps you to build add-ons for Google Workspace using Python 🐍. It provides a syntax similar to AppScript, making it easier for Python developer to create add-ons.",
+  "longDescription": "GAPPS is a library to helps you to build add-ons for Google Workspace using Python 🐍. It provides a syntax similar to AppScript, making it easier for Python developer to create add-ons.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "developer-tools"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["acromondx"],
+  "author": "Gideon Acromond",
+  "title": "How to Create Download Progress Animation in Flutter",
+  "link": "https://acromondx.hashnode.dev/create-download-progress-animation-in-flutter",
+  "tags": [
+    "mobile",
+    "widgets"
+  ],
+  "description": "Learn how to enhance your Flutter app's user experience by implementing a download progress animation."
+}

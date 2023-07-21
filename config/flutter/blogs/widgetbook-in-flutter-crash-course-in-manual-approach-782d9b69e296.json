@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "cavinmac"
+  ],
+  "author": "Cavin Macwan",
+  "title": "Widgetbook in Flutter: Crash Course in Manual Approach",
+  "link": "https://medium.com/@CavinMac/widgetbook-in-flutter-crash-course-in-manual-approach-782d9b69e296",
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ],
+  "description": "If you’re into Flutter development for some time then I’m sure you must have heard about WidgetBook at some point. But do you know what actually is a WidgetBook and why do you need it?\n\nIn this blog, I’m gonna walk you through all of the terminologies along with the practical example."
+}

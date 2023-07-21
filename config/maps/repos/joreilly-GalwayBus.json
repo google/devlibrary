@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "joreilly"
+  ],
+  "owner": "joreilly",
+  "repo": "GalwayBus",
+  "name": "GalwayBus",
+  "shortDescription": "Kotlin Multiplatform bus information related project using Jetpack Compose and SwiftUI.  Includes use of Maps Compose for showing maps with bus stops and realtime bus positions.",
+  "longDescription": "Kotlin Multiplatform bus information related project using Jetpack Compose and SwiftUI.  Includes use of Maps Compose for showing maps with bus stops and realtime bus positions.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "maps-sdk-android",
+    "kotlin",
+    "compose"
+  ]
+}

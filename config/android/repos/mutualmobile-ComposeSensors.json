@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mutualmobile"
+  ],
+  "owner": "mutualmobile",
+  "repo": "ComposeSensors",
+  "name": "ComposeSensors",
+  "shortDescription": "This library provides a convenience wrapper over the Sensor APIs for Android to be used with Jetpack Compose.",
+  "longDescription": "This library provides a convenience wrapper over the Sensor APIs for Android to be used with Jetpack Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

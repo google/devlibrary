@@ -25,13 +25,13 @@
     >
       <div class="col-span-12 lg:col-span-6 px-1">
         <h1 class="text-4xl">
-          The platform for Google curated open-source projects
+          The platform for Google curated open-source dev projects
         </h1>
 
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
-            Explore open-source projects and content featuring Google tools and
+            Explore open-source dev projects and content library featuring Google tools and
             technologies contributed by developers from around the world. Find
             the inspiration you need for your next project!
           </p>
@@ -214,7 +214,7 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-std py-8"
     >
       <div class="col-span-1 lg:col-span-2 lg:px-2">
-        <h2 class="text-3xl">Latest projects</h2>
+        <h2 class="text-3xl">Latest dev projects</h2>
         <div class="desktop-only">
           <p class="mt-2 mb-4 lg:w-3/4 leading-6">
             Check out the latest projects we've added to the Dev Library. To see
