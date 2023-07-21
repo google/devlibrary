@@ -6,6 +6,6 @@
   "author": "Gerardo Lopez Falcón",
   "title": "GKE autopilot for beginners",
   "link": "https://medium.com/google-cloud/gke-autopilot-for-beginners-53c0bec3f31e",
-  "tags": ["app-development, cloud-ml, modern-architecture, serverless"],
+  "tags": ["ai-ml", "serverless-computing"],
   "description": "When working with Google Kubernetes Engine (GKE) Autopilot, it offers a fully managed, serverless option for running your Kubernetes workloads. Autopilot manages the underlying infrastructure and cluster operations, allowing you to focus solely on deploying and managing your applications."
 }
