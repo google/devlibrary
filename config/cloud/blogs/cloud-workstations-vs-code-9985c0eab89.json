@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["gelopfalcon"],
+  "author": "Gerardo López Falcón",
+  "title": "Cloud workstations — VS code",
+  "link": "https://medium.com/google-cloud/cloud-workstations-vs-code-9985c0eab89",
+  "tags": ["modern-architecture, serverless"],
+  "description": "At Google Cloud Next 22, Google introduced Cloud Workstations, which provides integrated and fully managed development environments on Google Cloud. In other words, Cloud Workstations is a service focused on increasing the productivity of developers’ daily workflows in a secure manner and accelerating developer onboarding."
+}

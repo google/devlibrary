@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["tanaikech"],
+  "author": "Kanshi Tanaike",
+  "title": "Converting Relative Reference to Absolute Reference and vice versa of A1Notation on Google Spreadsheet using Google Apps Script",
+  "link": "https://medium.com/google-cloud/converting-relative-reference-to-absolute-reference-and-vice-versa-of-a1notation-on-google-f9a908bde904",
+  "tags": ["workspace"],
+  "description": "This is a sample script for converting the relative reference to the absolute reference and vice versa of A1Notation on Google Spreadsheet using Google Apps Script."
+}

@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["abhisheksharma7389"],
+  "author": "Abhishek Sharma",
+  "title": "Google Cloud Anthos Series - 2: Setting up Multi-Cloud between AWS & Google Cloud",
+  "link": "https://medium.com/google-cloud/google-cloud-anthos-series-2-anthos-installation-configuration-anthos-on-aws-da6e4a5ac6cc",
+  "tags": ["modern-architecture, networking, serverless"],
+  "description": "This blog provides a comprehensive guide on How to set up multi-cloud between AWS & Google Cloud. The post includes the following:1️⃣ Step-by-step video explanation: I guide you through the setup process, sharing valuable insights and tips along the way. The video provides a visual demonstration to enhance understanding. 2️⃣ Terraform repository: You can access a ready-to-use Terraform repository that simplifies the implementation process, making it smoother and more efficient. 3️⃣ Detailed screenshots and instructions: Visualize each step of the setup through screenshots and comprehensive instructions, ensuring a clear and straightforward implementation experience. Follow the knowledge and resources shared in this blog to harness the power of a unified cloud strategy & Implement Multi-Cloud between AWS and Google Cloud using Anthos and unlock the potential of hybrid and multi-cloud environments."
+}
