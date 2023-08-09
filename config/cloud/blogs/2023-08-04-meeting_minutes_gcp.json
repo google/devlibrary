@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachr Chi",
+  "title": "Meeting minutes generator on GCP with Vertex AI and Cloud Run",
+  "link": "https://dzlab.github.io/2023/08/04/meeting_minutes_gcp/",
+  "tags": [
+    "ai-ml",
+    "containers"
+  ],
+  "description": "Learn how to use create a meeting minutes generator on GCP with Vertex AI (Chirp and PaLM) and Cloud Run"
+}

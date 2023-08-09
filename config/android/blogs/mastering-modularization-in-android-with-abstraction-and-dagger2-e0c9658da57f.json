@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "iamjosephmj"
+  ],
+  "author": "Joseph James",
+  "title": "Mastering Abstraction over Modularization in Android Dagger2",
+  "link": "https://iamjosephmj.medium.com/mastering-modularization-in-android-with-abstraction-and-dagger2-e0c9658da57f",
+  "tags": [
+    "modern-android-development",
+    "architecture"
+  ],
+  "description": "The blog showcases the benefits of using abstractions for modularization, resulting in improved testability and maintainability."
+}

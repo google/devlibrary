@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "iamjosephmj"
+  ],
+  "author": "Joseph James",
+  "title": "Eliminating Common Pitfalls in Clean Architecture Implementa",
+  "link": "https://iamjosephmj.medium.com/navigating-pitfalls-in-android-clean-architecture-implementation-4057a1ad4053",
+  "tags": [
+    "architecture",
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "Overcoming pitfalls in Android clean architecture: Exploring common issues, sharing insights, and best practices for effective implementation."
+}

@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jvrni"
+  ],
+  "owner": "Jvrni",
+  "repo": "FilterOption",
+  "name": "Filter Option",
+  "shortDescription": "Filter Option is a custom inline filter component built for Xml and Compose.",
+  "longDescription": "Filter Option is a custom inline filter component built for Xml and Compose.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}
