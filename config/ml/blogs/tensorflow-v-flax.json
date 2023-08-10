@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["wkambale"],
+  "author": "Wesley Kambale",
+  "title": "TensorFlow v FLAX: The Framework to Use",
+  "link": "https://kambale.dev/tensorflow-v-flax",
+  "tags": [
+    "jax-flax",
+    "tfx",
+    "tf-core"
+  ],
+  "description": "A comprehensive comparison between TensorFlow and FLAX deep learning frameworks."
+}

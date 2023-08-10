@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "eng-mouaz-m-alshahmeh"
+  ],
+  "author": "Mouaz M. Al-Shahmeh",
+  "title": "Running Flutter on Apple Vision Pro",
+  "link": "https://medium.com/@m.m.shahmeh/running-flutter-on-apple-vision-pro-5ccbe96fdd55",
+  "tags": [
+    "widgets",
+    "general"
+  ],
+  "description": "Apple VisionOS is a powerful new operating system that is designed for AR and VR applications. Flutter is a great choice for developing AR and VR applications for VisionOS. It is fast, efficient, beautiful, easy to learn, and cross-platform. If you are looking to develop AR and VR applications for V"
+}

@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["aryanirani123"],
+  "author": "Aryan Irani",
+  "title": "Extend the capabilities of PaLM API with Google Apps Script",
+  "link": "https://medium.com/p/7ff56475c1cc",
+  "tags": [
+    "ai-ml",
+    "developer-tools"
+  ],
+  "description": "We will be taking a look at how we use the PaLM API and Google Apps Script. We will be passing basic prompts and getting the appropriate responses using Google Apps Script."
+}
