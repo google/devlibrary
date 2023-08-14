@@ -17,6 +17,7 @@
 import * as fs from "fs";
 import fetch from "node-fetch";
 import * as path from "path";
+import sendgrid from "@sendgrid/mail";
 
 import { BlogMetadata } from "../types/BlogMetadata";
 import { RepoMetadata } from "../types/RepoMetadata";
@@ -89,6 +90,40 @@ interface Application {
   } | null;
   tags: string[];
   comments: string;
+}
+
+const sendAutomatedEmail = (email: string, firstName: string, lastName: string) => {
+  const sendGridKey = process.env.DEVLIBRARYKEY;
+  if (!sendGridKey) {
+    exitWithError("Error: must set 'SENDGRID_API_KEY' environment variable");
+  }
+  sendgrid.setApiKey(sendGridKey || "");
+
+  const text = "Dear " + firstName + ", Congratulations, your content has been published"
+    + " on the Google Dev Library platform. You can view it in your Dev Library author profile"
+    + "https://devlibrary.withgoogle.com/authors/" + firstName + lastName +
+    " As next steps, you can also: Subscribe to our newsletter to stay updated with the latest"
+    + "projects added to Dev Library. Join the Dev Library authors' channel Google Developers"
+    + " Online Discord public server to connect with other Dev Library authors."
+    + " Share your success on social media using the hashtag #GoogleDevLibrary"
+
+  const html = `<p>Dear ${firstName},</p><br><p>Congratulations, your content has been publish on the <a href="http://devlibrary.withgoogle.com" target="_blank">Google Dev Library platform</a>. You can view it in your Dev Library author profile: https://devlibrary.withgoogle.com/authors/${firstName}${lastName}</p><br><p>As next steps, you can also:</p><br><ul><li><a href="https://forms.gle/chWDtT5sbxaE2knZ6" target="_blank">Subscribe</a> to our newsletter to stay updated with the latest projects added to Dev Library.</li><li><a href="https://discord.com/invite/AbwzvEqdCu" target="_blank">Join</a> the Dev Library authors’ channel Google Developers Online Discord public server to connect with other Dev Library authors.</li><li><b>Share your success</b> on social media using the hashtag #GoogleDevLibrary</li></ul><br><p>Happy contributing!</p><br><p>Regards,</p><p>Google Dev Library Team</p>`
+
+  const finalEmail = {
+    from: "library-google-dev@google.com",
+    to: email,
+    subject: "[Google Dev Library] Congratulations your content is live",
+    text: text,
+    html: html
+  }
+
+  sendgrid.send(finalEmail)
+    .then((response) => {
+      console.log('SendGrid Email sent: ' + response)
+    })
+    .catch((error) => {
+      console.error(error)
+    })
 }
 
 function assertNonEmpty<T>(arr: T[]): arr is NonEmptyArray<T> {
@@ -186,6 +221,7 @@ export async function main() {
 
       console.log(`Adding ${product} repo ${projectUrl}`);
       await addRepo(product, projectUrl, /* projectId= */ undefined, metadata);
+      await sendAutomatedEmail(a.email, a.firstName, a.lastName);
     }
 
     if (a.blogPost) {
@@ -201,6 +237,7 @@ export async function main() {
             /* projectId= */ undefined,
             metadata
           );
+          await sendAutomatedEmail(a.email, a.firstName, a.lastName);
         } else {
           await addOtherBlog(
             product,
@@ -208,6 +245,7 @@ export async function main() {
             /* projectId= */ undefined,
             metadata
           );
+          await sendAutomatedEmail(a.email, a.firstName, a.lastName);
         }
       } catch (e) {
         console.error(`Problem occurred when adding a project: ${e}`);
