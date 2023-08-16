@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mirzemehdi"
+  ],
+  "owner": "mirzemehdi",
+  "repo": "quotesapp",
+  "name": "QuotesApp - Multiplatform (Android, iOS, Desktop)",
+  "shortDescription": "Quotes app targets Android, iOS and Desktop platforms, and is developed using  only Kotlin language (even for UI) using modularization and TDD.",
+  "longDescription": "Quotes app targets Android, iOS and Desktop platforms, and is developed using  only Kotlin language (even for UI) using modularization and TDD.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "compose"
+  ]
+}
