@@ -3,7 +3,7 @@
   "version": 1,
   "source": "other",
   "authorIds": ["bachiirc"],
-  "author": "Bachr Chi",
+  "author": "Bachir Chihani",
   "title": "Deploy Elasticsearch on GCP using Terraform",
   "link": "https://dzlab.github.io/2023/05/14/elastic-gcp-deployment/",
   "tags": [
