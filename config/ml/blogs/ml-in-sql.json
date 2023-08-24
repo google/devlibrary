@@ -7,7 +7,7 @@
   "title": "Train ML Model in SQL with BigQuery",
   "link": "https://kambale.dev/ml-in-sql",
   "tags": [
-    "bigquery-ml"
+    "bqml"
   ],
   "description": "A guide to training machine learning models with SQL using Google's BigQuery ML."
 }
