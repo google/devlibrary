@@ -1,0 +1,19 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "dennis-forero"
+  ],
+  "owner": "dennis-forero",
+  "repo": "3D-drone-route-planner",
+  "name": "Drone Route Planner and Simulator",
+  "shortDescription": "Web app to create and simulate drone flight paths, define camera tasks and persist routes to a real-time database",
+  "longDescription": "Web app to create and simulate drone flight paths, define camera tasks and persist routes to a real-time database",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "maps-js-api",
+    "google-maps-platform"
+  ]
+}
