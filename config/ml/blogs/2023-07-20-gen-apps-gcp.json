@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Deploy Generative applications on GCP with Cloud Run",
+  "link": "https://dzlab.github.io/2023/07/20/gen-apps-gcp/",
+  "tags": [
+    "other-google-ml-products"
+  ],
+  "description": "Learn how to deploy generative applications on Google Cloud Platform with Cloud Run"
+}
