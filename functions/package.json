@@ -8,7 +8,7 @@
     "serve": "tsc-watch --onFirstSuccess 'npm run emulate'"
   },
   "engines": {
-    "node": "18"
+    "node": "16"
   },
   "main": "lib/index.js",
   "dependencies": {
