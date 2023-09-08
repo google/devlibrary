@@ -12,5 +12,6 @@
     "android",
     "ios",
     "flutter"
-  ]
+  ],
+  "description": "Learn about how Firebase security rules work and how you can use them to protect your data."
 }

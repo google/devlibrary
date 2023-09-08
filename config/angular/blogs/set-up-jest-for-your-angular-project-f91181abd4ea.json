@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "mwendwawinfred8"
+  ],
+  "author": "Winfred Mwendwa",
+  "title": "Set up jest for your angular app",
+  "link": "https://medium.com/@mwendwawinfred8/set-up-jest-for-your-angular-project-f91181abd4ea",
+  "tags": [
+    "getting-started"
+  ],
+  "description": "Set up Jest for your unit tests in your Angular App"
+}

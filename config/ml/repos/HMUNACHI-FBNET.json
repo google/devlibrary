@@ -1,0 +1,18 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "hmunachi"
+  ],
+  "owner": "HMUNACHI",
+  "repo": "FBNET",
+  "name": "Modelling The Brain's Response To Natural Scenes.",
+  "shortDescription": "The official repository for the paper “ Modelling The Brain's Response To Natural Scenes In The Bottleneck Space.”",
+  "longDescription": "The official repository for the paper “ Modelling The Brain's Response To Natural Scenes In The Bottleneck Space.”",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "jax-flax"
+  ]
+}

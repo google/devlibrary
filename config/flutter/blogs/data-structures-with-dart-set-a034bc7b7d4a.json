@@ -11,5 +11,6 @@
   "tags": [
     "mobile",
     "general"
-  ]
+  ],
+  "description": "This is the first article in the upcoming series in Data Structures with Dart."
 }

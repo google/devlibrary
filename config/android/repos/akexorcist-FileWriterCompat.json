@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "akexorcist"
+  ],
+  "owner": "akexorcist",
+  "repo": "FileWriterCompat",
+  "name": "File Writer Compat",
+  "shortDescription": "Android file writing helper library for API Level 21+",
+  "longDescription": "Android file writing helper library for API Level 21+",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin"
+  ]
+}

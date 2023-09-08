@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "jesuseguncaleb"
+  ],
+  "author": "Caleb Jesusegun",
+  "title": "Understanding App Localization in Flutter",
+  "link": "https://medium.com/@jesuseguncaleb/understanding-app-localization-in-flutter-b1dbb79a6ccc",
+  "tags": [
+    "mobile",
+    "general"
+  ],
+  "description": "One major factor to address when it comes to reaching a global audience with your mobile app is the language barrier for users in different locations.\n\nApp Localization answers the question of adopting a mobile app’s language, text, currency symbols, or date to match the user’s current location."
+}

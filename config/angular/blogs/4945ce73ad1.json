@@ -1,0 +1,13 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["paul-chesa"],
+  "author": "Paul Chesa",
+  "title": "Dynamic Component Loading in Angular",
+  "link": "https://medium.com/p/4945ce73ad1",
+  "tags": [
+    "performance"
+  ],
+  "description": "Exploring Dynamic Component Loading in Angular"
+}

@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "codesue"
+  ],
+  "author": "Suzen Fylke",
+  "title": "How to Visualize Custom TFX Artifacts With InteractiveContext",
+  "link": "https://codesue.com/posts/how-to-visualize-custom-tfx-artifacts-with-interactivecontext/",
+  "tags": [
+    "tfx"
+  ],
+  "description": "The ability to visually inspect TFX artifacts with InteractiveContext is invaluable for debugging. Learn how to visualize custom TFX artifacts with InteractiveContext in this tutorial."
+}

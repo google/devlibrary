@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "nada"
+  ],
+  "owner": "NadaFeteiha",
+  "repo": "QuoteWire-multiplatform",
+  "name": "Quote Wire Kotlin Multiplatform",
+  "shortDescription": "Quote Wire is a simple application that showcases the capabilities of Kotlin Multiplatform. It has been developed using Kotlin Multiplatform, which is compatible with both Android and iOS.",
+  "longDescription": "Quote Wire is a simple application that showcases the capabilities of Kotlin Multiplatform. It has been developed using Kotlin Multiplatform, which is compatible with both Android and iOS.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "compose"
+  ]
+}

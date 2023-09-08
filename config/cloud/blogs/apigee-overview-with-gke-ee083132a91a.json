@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["harshmanvar"],
+  "author": "Harsh Manvar",
+  "title": "APIGEE Overview with GKE",
+  "link": "https://medium.com/google-cloud/apigee-overview-with-gke-ee083132a91a",
+  "tags": [
+    "compute",
+    "api-management",
+    "containers"
+  ],
+  "description": "Manage API with APIGEE — Gcloud solution"
+}

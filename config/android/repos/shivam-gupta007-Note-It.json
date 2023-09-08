@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "shivam-gupta007"
+  ],
+  "owner": "shivam-gupta007",
+  "repo": "Note-It",
+  "name": "Note It - A note-taking app.",
+  "shortDescription": "This note-taking app has an attractive interface that allows password protection and color customization. \n\nIt was developed using Jetpack Compose, Room, Navigation Components, Kotlin Coroutines,",
+  "longDescription": "This note-taking app has an attractive interface that allows password protection and color customization. \n\nIt was developed using Jetpack Compose, Room, Navigation Components, Kotlin Coroutines,",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

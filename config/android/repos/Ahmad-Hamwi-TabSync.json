@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ahmad-hamwi"
+  ],
+  "owner": "Ahmad-Hamwi",
+  "repo": "TabSync",
+  "name": "TabSync",
+  "shortDescription": "A lightweight synchronizer between Android's Tabs and Lists. Available on the View system (RecyclerView with TabLayout) and Jetpack Compose (LazyListState composable with an index based composable).",
+  "longDescription": "A lightweight synchronizer between Android's Tabs and Lists. Available on the View system (RecyclerView with TabLayout) and Jetpack Compose (LazyListState composable with an index based composable).",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui",
+    "compose"
+  ]
+}

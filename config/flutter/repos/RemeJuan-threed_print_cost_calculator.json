@@ -1,0 +1,19 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "remejuan"
+  ],
+  "owner": "RemeJuan",
+  "repo": "threed_print_cost_calculator",
+  "name": "Threed Print Cost Calculator",
+  "shortDescription": "A small app to help you calculate the cost of printing your 3D models.",
+  "longDescription": "A small app to help you calculate the cost of printing your 3D models.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "web",
+    "mobile"
+  ]
+}

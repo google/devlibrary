@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["charles-xavier-verleyen"],
+  "author": "Charles Verleyen",
+  "title": "Google Cloud Expenses Summary Report",
+  "link": "https://medium.com/astrafy/google-cloud-expenses-summary-report-9a6091cba5ae",
+  "tags": [
+    "data-analytics"
+  ],
+  "description": "This article will go over a mechanism that dispatches every morning a detailed cloud expenses report in a slack channel."
+}

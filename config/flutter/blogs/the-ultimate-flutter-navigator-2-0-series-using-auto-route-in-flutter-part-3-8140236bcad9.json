@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "cavinmac"
+  ],
+  "author": "Cavin Macwan",
+  "title": "Navigator 2.0 series using Auto Route in Flutter Part:3",
+  "link": "https://medium.com/@CavinMac/the-ultimate-flutter-navigator-2-0-series-using-auto-route-in-flutter-part-3-8140236bcad9",
+  "tags": [
+    "mobile",
+    "web",
+    "widgets"
+  ],
+  "description": "This blog contains a tutorial on advanced features that are presented in Auto Route like nested navigation, declarative routing, wrapped routes and Firebase analytics"
+}

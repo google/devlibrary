@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "mukundjogi"
+  ],
+  "author": "Mukund Jogi",
+  "title": "Flutter Interview Questions - Mukund Jogi's Blog",
+  "link": "https://mukundjogi.hashnode.dev/series/flutter-interview",
+  "tags": [
+    "mobile",
+    "widgets"
+  ],
+  "description": "This article series will help you in cracking the Flutter interviews as this article contains deep explanation with examples."
+}

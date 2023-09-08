@@ -12,5 +12,6 @@
     "build-tools",
     "kotlin",
     "modern-android-development"
-  ]
+  ],
+  "description": "The article talks in-depth on building a feature where anyone can switch the app pointing to any backend service right from within the app without requiring multiple builds."
 }

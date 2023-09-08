@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["techyminati"],
+  "authorIds": [
+    "techyminati"
+  ],
   "author": "Aryan Sinha",
   "title": "Introduction to Android Kernel Development",
   "link": "https://techyminati.hashnode.dev/android-kernel-dev",
@@ -10,5 +12,6 @@
     "modern-android-development",
     "build-tools",
     "architecture"
-  ]
+  ],
+  "description": null
 }

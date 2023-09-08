@@ -11,5 +11,6 @@
   "tags": [
     "data-analytics",
     "databases"
-  ]
+  ],
+  "description": "This blog consists of real-time analytics with redis on GCP"
 }

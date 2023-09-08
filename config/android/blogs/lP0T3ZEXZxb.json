@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "admqueiroga"
+  ],
+  "author": "Ademir Queiroga",
+  "title": "Android TV Leanback: Playback Controls — Part 1. The Basics",
+  "link": "https://link.medium.com/lP0T3ZEXZxb",
+  "tags": [
+    "ui"
+  ],
+  "description": "If you are developing a media app, you will certainly need a way to control your content playback, and it's no different on Android TV."
+}

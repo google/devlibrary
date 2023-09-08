@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "amitshekhar"
+  ],
+  "author": "Amit Shekhar",
+  "title": "Mastering Flow API in Kotlin",
+  "link": "https://amitshekhar.me/blog/flow-api-in-kotlin",
+  "tags": [
+    "kotlin"
+  ],
+  "description": "In this blog, we are going to learn what is Flow API in Kotlin. Kotlin provides many features out of the box that we can use to perform various tasks in our project."
+}

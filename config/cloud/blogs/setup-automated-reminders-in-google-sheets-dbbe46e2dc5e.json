@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "eric_koleda"
+  ],
+  "author": "Eric Koleda",
+  "title": "Setup automated reminders in Google Sheets",
+  "link": "https://medium.com/@eric_koleda/setup-automated-reminders-in-google-sheets-dbbe46e2dc5e",
+  "tags": [
+    "serverless-computing"
+  ],
+  "description": "Learn how to setup automated reminders in your Google Sheets, using Apps Script."
+}

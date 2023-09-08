@@ -1,0 +1,18 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ahsanayaz"
+  ],
+  "owner": "ahsanayaz",
+  "repo": "ngx-device-detector",
+  "name": "Ngx Device Detector",
+  "shortDescription": "An Angular 6+ powered AOT compatible device detector that helps to identify browser, os and other useful information regarding the device using the app. The processing is based on user-agent.",
+  "longDescription": "An Angular 6+ powered AOT compatible device detector that helps to identify browser, os and other useful information regarding the device using the app. The processing is based on user-agent.",
+  "content": "README.MD",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

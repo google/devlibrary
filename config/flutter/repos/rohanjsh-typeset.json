@@ -1,0 +1,19 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rohanjsh"
+  ],
+  "owner": "rohanjsh",
+  "repo": "typeset",
+  "name": "TypeSet",
+  "shortDescription": "Whatsapp like text formatting for you!! \nThis supports the input to be formatted with different formatters. \nText style that will support bold, italic and underline text.",
+  "longDescription": "Whatsapp like text formatting for you!! \nThis supports the input to be formatted with different formatters. \nText style that will support bold, italic and underline text.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets"
+  ]
+}

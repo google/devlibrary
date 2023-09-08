@@ -12,5 +12,6 @@
     "vision",
     "game",
     "ar"
-  ]
+  ],
+  "description": "In this report, we attempt to create a minimal implementation of 3D volumetric rendering of scenes represented by Neural Radiance Fields."
 }

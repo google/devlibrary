@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "harshmanvar"
+  ],
+  "author": "Harsh Manvar",
+  "title": "Updating existing disk size on google cloud",
+  "link": "https://medium.com/@harsh.manvar111/updating-existing-disk-size-on-google-cloud-6a9b52788a65",
+  "tags": [
+    "compute",
+    "databases",
+    "storage"
+  ],
+  "description": "Updating existing disk size on google cloud.\nResize disk size on GCP without restart"
+}

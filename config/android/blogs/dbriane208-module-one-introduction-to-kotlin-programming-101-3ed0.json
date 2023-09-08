@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "dbriane208"
+  ],
+  "author": "Daniel Brian",
+  "title": "MODULE ONE: INTRODUCTION TO KOTLIN PROGRAMMING 101.",
+  "link": "https://dev.to/dbriane208/module-one-introduction-to-kotlin-programming-101-3ed0",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "build-tools"
+  ],
+  "description": "\"Unlocking the Power of Kotlin: Introduction to Kotlin programming 101\" is a comprehensive blog post that introduces readers to the versatile and efficient Kotlin programming language. This beginner-friendly article covers the basics of Kotlin syntax, data types,  and control flows."
+}

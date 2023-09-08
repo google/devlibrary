@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sakethpathike"
+  ],
+  "owner": "sakethpathike",
+  "repo": "JetSpacer",
+  "name": "JetSpacer",
+  "shortDescription": "JetSpacer is an android client that merges multiple space-related APIs including NASA's APOD and Mars Rover's API into a single, simple application with a good UI.",
+  "longDescription": "JetSpacer is an android client that merges multiple space-related APIs including NASA's APOD and Mars Rover's API into a single, simple application with a good UI.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

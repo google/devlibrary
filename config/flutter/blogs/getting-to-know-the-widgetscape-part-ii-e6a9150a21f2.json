@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "akansha"
+  ],
+  "author": "Akansha Jain",
+  "title": "Getting to know the Widgetscape — Part II 💙",
+  "link": "https://medium.com/@akansha.jain1611/getting-to-know-the-widgetscape-part-ii-e6a9150a21f2",
+  "tags": [
+    "mobile",
+    "widgets",
+    "web"
+  ],
+  "description": "In the previous article, “Getting to know the Widgetscape — Part I 💙” I have mentioned about widgets that are used for App/Page setup, Layout widgets, the difference between them, and so much more.\nIn this article, I have talked about some commonly used important widgets in a Flutter application."
+}

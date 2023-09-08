@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "vinaygaba"
+  ],
+  "author": "Vinay Gaba",
+  "title": "Space Hoisting: Should I use the padding Modifier or the Spacer composable?",
+  "link": "https://www.jetpackcompose.app/articles/space-hoisting-should-I-use-the-padding-modifier-or-the-spacer-composable",
+  "tags": [
+    "compose",
+    "ui",
+    "modern-android-development"
+  ],
+  "description": "🤔 The padding Modifier and the Spacer composable are both valid ways of adding space to a component. Surely, this must be a mistake. Why else would Jetpack Compose expose two ways of doing the same thing?"
+}

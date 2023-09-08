@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "chinmaykb"
+  ],
+  "author": "Chinmay Kabi",
+  "title": "Build a Chrome Extension with Stream's Flutter Chat SDK",
+  "link": "https://getstream.io/blog/build-flutter-chrome-extension/",
+  "tags": [
+    "web"
+  ],
+  "description": "Flutter can be used to make Chrome extensions as well. In this article I explain the nuances of an extension while building a small project"
+}

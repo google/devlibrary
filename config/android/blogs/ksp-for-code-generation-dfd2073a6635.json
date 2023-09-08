@@ -1,0 +1,15 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "jintin"
+  ],
+  "author": "Tim Lin",
+  "title": "KSP for Code-Generation",
+  "link": "https://medium.com/google-developer-experts/ksp-for-code-generation-dfd2073a6635",
+  "tags": [
+    "kotlin"
+  ],
+  "description": "KSP stands for Kotlin Symbol Processing. As the name suggests, it’s not just a code generation tool but a compiler plugin API that helps you to get complete source code information during compile time. Let's see how magical it is together!"
+}

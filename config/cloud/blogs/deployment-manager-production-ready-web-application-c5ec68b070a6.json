@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "luillyfe"
+  ],
+  "author": "Fermin Blanco",
+  "title": "Deployment-manager: Production Ready Web Application",
+  "link": "https://medium.com/google-cloud/deployment-manager-production-ready-web-application-c5ec68b070a6",
+  "tags": [
+    "compute",
+    "networking",
+    "operations"
+  ],
+  "description": "We’ll be using Google Cloud Deployment Manager to create a set of Google Cloud Resources, Google Cloud Storage along with HTTPS Load Balancing and managed them as a unit to serve static content from a custom domain."
+}

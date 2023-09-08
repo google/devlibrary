@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Network observability with Elasticsearch on GCP",
+  "link": "https://dzlab.github.io/2023/04/17/elastic-network-observability-gcp/",
+  "tags": [
+    "networking",
+    "storage",
+    "serverless-computing"
+  ],
+  "description": "Article details how to setup a comprehensive Network observability platform on GCP with the Elastic stack"
+}

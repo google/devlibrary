@@ -1,0 +1,19 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "xxfast"
+  ],
+  "owner": "xxfast",
+  "repo": "KStore",
+  "name": "KStore",
+  "shortDescription": "A tiny Kotlin multiplatform library that assists in saving and restoring objects to and from disk",
+  "longDescription": "A tiny Kotlin multiplatform library that assists in saving and restoring objects to and from disk",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "build-tools"
+  ]
+}

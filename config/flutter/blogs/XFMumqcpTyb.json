@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aderibigbejesutoni860"
+  ],
+  "author": "Jesutoni Aderibigbe",
+  "title": "Using Firebase as your Backend for your Flutter Application",
+  "link": "https://link.medium.com/XFMumqcpTyb",
+  "tags": [
+    "mobile",
+    "firebase"
+  ],
+  "description": "Using Firebase as your Backend for your Flutter Mobile applications in making it fully functional."
+}

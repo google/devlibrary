@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "neutrollized"
+  ],
+  "owner": "Neutrollized",
+  "repo": "packer-gcp-with-githubactions",
+  "name": "Packer with GCP & GitHub Actions",
+  "shortDescription": "Here we'll be using HashiCorp Packer to build VM images in Google Cloud.  We will also be showing how to securely authenticate with Google Cloud with GitHub Actions.",
+  "longDescription": "Here we'll be using HashiCorp Packer to build VM images in Google Cloud.  We will also be showing how to securely authenticate with Google Cloud with GitHub Actions.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compute",
+    "security-identity"
+  ]
+}

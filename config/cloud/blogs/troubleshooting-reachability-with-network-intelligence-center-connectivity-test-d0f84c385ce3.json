@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["gauravmadan"],
+  "author": "Gaurav Madan",
+  "title": "Troubleshooting Reachability with Network Intelligence Cente",
+  "link": "https://medium.com/google-cloud/troubleshooting-reachability-with-network-intelligence-center-connectivity-test-d0f84c385ce3",
+  "tags": [
+    "networking",
+    "operations",
+    "hybrid-multicloud"
+  ],
+  "description": "Network Troubleshooting is a skill which is complimented by useful tools at your fingertips. When it comes to network troubleshooting on GCP platform, the native service of ‘Connectivity test’ proves to be a useful tool that helps connectivity in a more visual representation"
+}

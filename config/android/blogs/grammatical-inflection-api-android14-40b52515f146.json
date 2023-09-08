@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "navczydev"
+  ],
+  "author": "Nav Singh",
+  "title": "Grammatical Inflection API-Android14",
+  "link": "https://navczydev.medium.com/grammatical-inflection-api-android14-40b52515f146",
+  "tags": [
+    "modern-android-development",
+    "compose"
+  ],
+  "description": "Grammatical Inflection API provides a more personalized, natural-sounding user experience for users speaking languages where grammatical gender changes the sentence based on the addressee.\n\nGrammatical Inflection API introduce in Android14 which helps us to accommodate this."
+}

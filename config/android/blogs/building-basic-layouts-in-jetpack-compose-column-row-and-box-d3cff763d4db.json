@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "veroanggra"
+  ],
+  "author": "Veronica Putri Anggraini",
+  "title": "Building Basic Layouts in Jetpack Compose (Column, Row, Box)",
+  "link": "https://veroanggra.medium.com/building-basic-layouts-in-jetpack-compose-column-row-and-box-d3cff763d4db",
+  "tags": [
+    "compose",
+    "ui"
+  ],
+  "description": "Build UI with Compose makes the UI building easier and faster, because it is enough to describe the desired appearance in a Composable Function which is written like a function and Compose will handle it behind the scenes. This article discuss about the Column, Row, Box as basic layout component."
+}

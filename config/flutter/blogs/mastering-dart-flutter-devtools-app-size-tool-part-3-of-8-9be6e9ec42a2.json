@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ashitaprasad"
+  ],
+  "author": "Ashita Prasad",
+  "title": "Mastering Dart & Flutter DevTools - App Size Tool",
+  "link": "https://medium.com/@fluttergems/mastering-dart-flutter-devtools-app-size-tool-part-3-of-8-9be6e9ec42a2",
+  "tags": [
+    "general"
+  ],
+  "description": "This is the third article in the “Mastering Dart & Flutter DevTools” series where you will learn how to analyze an app’s size using the DevTools’ App Size Tool on a real-world open-source app."
+}

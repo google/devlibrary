@@ -1,0 +1,18 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "valor-software"
+  ],
+  "owner": "valor-software",
+  "repo": "ng2-file-upload",
+  "name": "ng2-file-upload",
+  "shortDescription": "Easy to use Angular components for files upload",
+  "longDescription": "Easy to use Angular components for files upload",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

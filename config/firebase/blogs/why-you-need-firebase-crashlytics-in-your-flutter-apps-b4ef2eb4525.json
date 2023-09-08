@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "jesuseguncaleb"
+  ],
+  "author": "Caleb Jesusegun",
+  "title": "Why you need Firebase Crashlytics in your Flutter Apps",
+  "link": "https://medium.com/@jesuseguncaleb/why-you-need-firebase-crashlytics-in-your-flutter-apps-b4ef2eb4525",
+  "tags": [
+    "flutter",
+    "ios"
+  ],
+  "description": "A user expectation is to have a seamless experience while engaging a mobile app. This fundamentally creates a need for a stable app that is bug-free (crash-free). Therefore a real-time crash reporter is needed to monitor such crashes hence the need for Firebase Crashlytics."
+}

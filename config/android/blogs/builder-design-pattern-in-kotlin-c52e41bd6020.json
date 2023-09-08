@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["abhisheksaxena"],
+  "author": "Abhishek Saxena",
+  "title": "Builder Design Pattern In Kotlin",
+  "link": "https://proandroiddev.com/builder-design-pattern-in-kotlin-c52e41bd6020",
+  "tags": [
+    "kotlin",
+    "architecture"
+  ],
+  "description": "Explore how the Builder Design Pattern in Kotlin simplifies complex object creation, enhances code maintainability, and improves readability. Level up your Kotlin skills with practical Android-focused examples. Discover the power of the Builder pattern!"
+}

@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "isaacadariku"
+  ],
+  "author": "Isaac Adariku",
+  "title": "Using Shared Preference in Flutter in a Maintainable way",
+  "link": "https://isaacadariku.medium.com/storing-and-retrieving-data-in-flutter-with-shared-preferences-in-a-maintainable-way-cf75eed6dbe2",
+  "tags": [
+    "plugins",
+    "general",
+    "samples"
+  ],
+  "description": "In Flutter apps, storing and retrieving small data, such as user preferences or login information, is often necessary. One way to do this is through the use of Shared Preferences. This allows you to store key-value pairs of data as simple strings, and they are persisted across app launch."
+}

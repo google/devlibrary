@@ -1,0 +1,20 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "touchlane"
+  ],
+  "owner": "touchlane",
+  "repo": "gridpad_flutter",
+  "name": "grid_pad",
+  "shortDescription": "grid_pad is a Flutter library that allows you to place UI elements in a predefined grid, manage spans in two dimensions, have flexible controls to manage row and column sizes.",
+  "longDescription": "grid_pad is a Flutter library that allows you to place UI elements in a predefined grid, manage spans in two dimensions, have flexible controls to manage row and column sizes.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ]
+}

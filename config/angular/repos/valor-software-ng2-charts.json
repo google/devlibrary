@@ -1,0 +1,18 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "valor-software"
+  ],
+  "owner": "valor-software",
+  "repo": "ng2-charts",
+  "name": "ng2-charts",
+  "shortDescription": "Beautiful charts for Angular based on Chart.js",
+  "longDescription": "Beautiful charts for Angular based on Chart.js",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "libraries"
+  ]
+}

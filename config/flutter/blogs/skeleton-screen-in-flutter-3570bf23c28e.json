@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "gagan-bhirangi"
+  ],
+  "author": "Gagan Bhirangi",
+  "title": "Skeleton Screen in Flutter",
+  "link": "https://medium.com/nerd-for-tech/skeleton-screen-in-flutter-3570bf23c28e",
+  "tags": [
+    "mobile",
+    "widgets"
+  ],
+  "description": "Have you ever wondered how apps like Netflix, Linkedin, etc. show their loading page while fetching data?\nThe Flutter community is very grateful that we have the package to do so in a few steps.\nIn this blog, I have covered steps to implement the shimmer effect."
+}

@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ashitaprasad"
+  ],
+  "author": "Ashita Prasad",
+  "title": "Mastering Dart & Flutter DevTools - Flutter Inspector",
+  "link": "https://medium.com/@fluttergems/mastering-dart-flutter-devtools-part-2-flutter-inspector-bbff40692fc7",
+  "tags": [
+    "general"
+  ],
+  "description": "This is the second article in the “Mastering Dart & Flutter DevTools” series of in-depth articles. In this article, you will learn about DevTools’ Flutter Inspector via an example app case study."
+}

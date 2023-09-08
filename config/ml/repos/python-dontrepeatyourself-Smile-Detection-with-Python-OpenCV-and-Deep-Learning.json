@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "python-dontrepeatyourself"
+  ],
+  "owner": "python-dontrepeatyourself",
+  "repo": "Smile-Detection-with-Python-OpenCV-and-Deep-Learning",
+  "name": "Smile Detection with OpenCV and Deep Learning",
+  "shortDescription": "In this project, we will use deep learning to build a more robust smile detector.\nWe will use the SMILES dataset to train our convolutional neural network.",
+  "longDescription": "In this project, we will use deep learning to build a more robust smile detector.\nWe will use the SMILES dataset to train our convolutional neural network.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "keras",
+    "tf-core"
+  ]
+}

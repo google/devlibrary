@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "manojbhadane"
+  ],
+  "author": "Manoj Bhadane",
+  "title": "Building Bottom Tabs with Jetpack Compose: A Step-by-Step Gu",
+  "link": "https://medium.com/@manojbhadane/building-bottom-tabs-with-jetpack-compose-a-step-by-step-guide-7360cfd015b4",
+  "tags": [
+    "compose",
+    "ui",
+    "modern-android-development"
+  ],
+  "description": "One of the common UI patterns in mobile app development is the bottom tab navigation, which allows users to switch between different sections or features of an application with a single tap. In this blog, we’ll explore how to implement bottom tabs using Jetpack Compose."
+}

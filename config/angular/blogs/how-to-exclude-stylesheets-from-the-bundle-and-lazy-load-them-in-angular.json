@@ -2,11 +2,14 @@
   "expertise": "ADVANCED",
   "version": 1,
   "source": "other",
-  "authorIds": ["shhdharmen"],
+  "authorIds": [
+    "shhdharmen"
+  ],
   "author": "Dharmen Shah",
   "title": "How to exclude stylesheets from angular bundle?",
   "link": "https://blog.shhdharmen.me/how-to-exclude-stylesheets-from-the-bundle-and-lazy-load-them-in-angular",
   "tags": [
     "performance"
-  ]
+  ],
+  "description": "Let’s learn how we can load stylesheets only when needed without making them part of the application bundle."
 }

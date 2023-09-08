@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rubenszimbres"
+  ],
+  "author": "Rubens Zimbres",
+  "title": "Two Towers Model: A Custom Pipeline in Vertex AI Using Kubeflow",
+  "link": "https://medium.com/@rubenszimbres/two-towers-model-a-custom-pipeline-in-vertex-ai-using-kubeflow-3451cd1ca8d5",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "In this article, I present some basics of MLOps and also the necessary code to successfully implement CI/CD of the Two Towers model in Vertex AI, using Kubeflow on Google Cloud."
+}

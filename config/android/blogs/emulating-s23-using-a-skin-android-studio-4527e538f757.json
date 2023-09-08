@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "navczydev"
+  ],
+  "author": "Nav Singh",
+  "title": "Emulating S23+ using a skin — Android Studio",
+  "link": "https://navczydev.medium.com/emulating-s23-using-a-skin-android-studio-4527e538f757",
+  "tags": [
+    "build-tools",
+    "modern-android-development"
+  ],
+  "description": "In Samsung's February Developers Newsletter, I found an announcement about the availability of Galaxy S23 Emulator skins.\n\nUntil now, I have not used any custom skins in Android Studio. As a result, I have decided to use these skins.\n\nWe will go through all the steps 🪜 required to use these skins"
+}

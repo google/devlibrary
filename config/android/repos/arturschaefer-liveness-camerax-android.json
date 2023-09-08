@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "arturschaefer"
+  ],
+  "owner": "arturschaefer",
+  "repo": "liveness-camerax-android",
+  "name": "Liveness detection with CameraX and Firebase ML",
+  "shortDescription": "An easy way to consume results from CameraX and Firebase Face Detection as an API. With simple steps, you can challenge your user before sending pictures to your services.",
+  "longDescription": "An easy way to consume results from CameraX and Firebase Face Detection as an API. With simple steps, you can challenge your user before sending pictures to your services.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "harshmanvar"
+  ],
+  "author": "Harsh Manvar",
+  "title": "Resizing PVC disk in GKE",
+  "link": "https://medium.com/@harsh.manvar111/resizing-pvc-disk-in-gke-c5b882c90f7b",
+  "tags": [
+    "containers",
+    "compute",
+    "storage"
+  ],
+  "description": "Resizing PVC disk in GKE"
+}

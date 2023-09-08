@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["yogeshhk"],
+  "author": "Yogesh Kulkarni÷",
+  "title": "SaaS GPT",
+  "link": "https://medium.com/google-developer-experts/saasgpt-84ba80265d0f",
+  "tags": ["ai-ml"],
+  "description": "Software-as-a-Service Generative Pretrained Transformers"
+}

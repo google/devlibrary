@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["aseemwangoo"],
+  "author": "Aseem Wangoo",
+  "title": "Dart Frog — Zero to Production",
+  "link": "https://flatteredwithflutter.com/dart-frog-zero-to-production/",
+  "tags": [
+    "mobile",
+    "web",
+    "samples"
+  ],
+  "description": "This article provides a step-by-step guide on utilizing Dart as a backend for API development using the DartFrog framework, which is built on top of shelf and mason.\nWe create an endpoint that accepts user-uploaded images from a client application and performs celebrity detection and host it on GCP."
+}

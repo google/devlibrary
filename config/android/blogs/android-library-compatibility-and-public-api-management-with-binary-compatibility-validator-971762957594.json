@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "kodeflap"
+  ],
+  "author": "Pooja Shaji",
+  "title": "Android library compatibility and public API management",
+  "link": "https://medium.com/@KodeFlap/android-library-compatibility-and-public-api-management-with-binary-compatibility-validator-971762957594",
+  "tags": [
+    "build-tools",
+    "modern-android-development",
+    "kotlin"
+  ],
+  "description": "Android library compatibility is a major concern for developers, as it affects the performance and stability of the applications they create. It is essential to ensure that the libraries used are compatible with the Android platform, so as to ensure a smooth and successful user experience."
+}

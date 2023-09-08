@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["mirzemehdi"],
+  "author": "Mirzamehdi Karimov",
+  "title": "Achieving iOS Compatibility for my Quotes App with Kotlin",
+  "link": "https://medium.com/proandroiddev/achieving-ios-compatibility-for-my-quotes-app-with-kotlin-edd364854a0d",
+  "tags": [
+    "compose",
+    "architecture",
+    "kotlin"
+  ],
+  "description": "In this article, I will walk you through my personal experience and the strategies I followed to successfully make my Android Quotes app to work on iOS too without writing any Swift code using Kotlin Multiplatform and JetBrains Multiplatform Compose🚀."
+}

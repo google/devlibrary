@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["manikandank276"],
+  "author": "Manikandan Krishnamurthy",
+  "title": "How to configure Google Kubernetes Engine (GKE) using ArgoCD?",
+  "link": "https://manikandank276.hashnode.dev/how-to-configure-google-kubernetes-engine-gke-using-argocd",
+  "tags": [
+    "compute"
+  ],
+  "description": "Step by step procedure to configure Google Kubernetes Engine (GKE) using ArgoCD (Cloud Native Continuous Delivery Tool)."
+}

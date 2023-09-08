@@ -15,8 +15,8 @@
  */
 
 import * as admin from "firebase-admin";
-import { AuthorData, BlogData, RepoData, RepoPage } from "../../shared/types";
-import { cleanPagePath } from "../../shared/util";
+import { AuthorData, BlogData, RepoData, RepoPage } from "./shared/types";
+import { cleanPagePath } from "./shared/util";
 
 function authorRef(id: string) {
   const db = admin.firestore();
@@ -94,7 +94,9 @@ async function deepDelete(ref: admin.firestore.DocumentReference) {
   }
 
   console.log(`Deleting ${ref.path}`);
-  await ref.delete();
+  await ref.delete().catch((err) => {
+    console.log(err);
+  });
 }
 
 export async function deleteRepoData(product: string, id: string) {

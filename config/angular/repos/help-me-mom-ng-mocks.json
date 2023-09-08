@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "satantime"
+  ],
+  "owner": "help-me-mom",
+  "repo": "ng-mocks",
+  "name": "ng-mocks",
+  "shortDescription": "Angular testing library for mocking components, directives, pipes, services and facilitating TestBed setup",
+  "longDescription": "An Angular testing library for creating mock services, components, directives, pipes and modules in unit tests. It provides shallow rendering, precise stubs to fake child dependencies. ng-mocks works with Angular 5 6 7 8 9 10 11 12 13 14 15 16, jasmine and jest.",
+  "content": "README.md",
+  "pages": [],
+  "tags": ["libraries","demos"]
+}

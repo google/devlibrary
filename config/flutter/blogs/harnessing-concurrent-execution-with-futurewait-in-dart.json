@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["afolabiolaoluwa"],
+  "author": "Olaoluwa Afolabi",
+  "title": "Harnessing Concurrent Execution with “Future.wait()” in Dart | HackerNoon",
+  "link": "https://hackernoon.com/harnessing-concurrent-execution-with-futurewait-in-dart",
+  "tags": [
+    "general",
+    "mobile",
+    "samples"
+  ],
+  "description": "In Dart, there exists a powerful utility known as `Future.wait()`. This often-overlooked gem enables developers to orchestrate concurrent execution of multiple asynchronous tasks. In this blog, we will explore the problem domain where 'Future.Wait()` can save the day and delve into best practices."
+}

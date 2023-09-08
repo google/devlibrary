@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "bolajiayodeji"
+  ],
+  "author": "Bolaji Ayodeji",
+  "title": "How to Setup Google Analytics 4 in a Next.js Project",
+  "link": "https://blog.bolajiayodeji.com/how-to-setup-google-analytics-4-in-a-nextjs-project",
+  "tags": [
+    "data-analytics"
+  ],
+  "description": "I recently had to set up GA4 on a Nextjs project and thought to document the steps. This will be a concise tutorial and I'd highlight the steps you need to set up the gtag.js script."
+}

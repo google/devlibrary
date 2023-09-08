@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aderibigbejesutoni860"
+  ],
+  "author": "Jesutoni Aderibigbe",
+  "title": "Hosting your Flutter Web with Firebase",
+  "link": "https://link.medium.com/iSyd2KsLYxb",
+  "tags": [
+    "web",
+    "firebase",
+    "mobile"
+  ],
+  "description": "Simple steps on how to host Flutter Web with Firebase using Firebase CLI to make a developer's life easier."
+}

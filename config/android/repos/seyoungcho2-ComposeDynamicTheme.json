@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "seyoungcho2"
+  ],
+  "owner": "seyoungcho2",
+  "repo": "ComposeDynamicTheme",
+  "name": "Compose Dynamic Theme",
+  "shortDescription": "Dynamic Theme is a Material Design-based Theme Management System for Android Jetpack Compose. Dynamic Theme was created to make Android's theme management easy.",
+  "longDescription": "Dynamic Theme is a Material Design-based Theme Management System for Android Jetpack Compose. Dynamic Theme was created to make Android's theme management easy.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ui",
+    "modern-android-development",
+    "compose"
+  ]
+}

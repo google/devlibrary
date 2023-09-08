@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "sakethpathike"
+  ],
+  "owner": "sakethpathike",
+  "repo": "Linkora",
+  "name": "Linkora",
+  "shortDescription": "From saving a single link individually to saving links in a folder for respective use cases, Linkora has all of them with a simpler UI for Android.",
+  "longDescription": "From saving a single link individually to saving links in a folder for respective use cases, Linkora has all of them with a simpler UI for Android.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

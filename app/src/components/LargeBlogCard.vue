@@ -24,16 +24,16 @@
     <!-- Tags -->
     <div v-if="showTags" class="card-tags frc mt-4 flex-wrap gap-2">
       <TagChip
-        v-for="t in blog.metadata.tags"
+        v-for="(t, index) in displayedTags"
         :key="t"
-        :label="getTag(t).label"
-        :textColor="getTag(t).textColor"
-        :bgColor="getTag(t).bgColor"
+        :label="getTag(t, index).label"
+        :textColor="getTag(t, index).textColor"
+        :bgColor="getTag(t, index).bgColor"
       />
     </div>
 
     <!-- Author photo and name -->
-    <div class="frc mt-6 mb-4">
+    <div class="frc mt-6" :class="{ 'mb-4': !blog.metadata.description }">
       <!-- Link to author (if present) -->
       <template v-if="authorId">
         <router-link :to="`/authors/${authorId}`" class="frc">
@@ -65,6 +65,11 @@
         :productKey="blog.product"
         class="product-logo ml-auto"
       />
+    </div>
+
+    <!-- Description -->
+    <div v-if="blog.metadata.description" class="mt-4 wrap-lines-3">
+      {{ blog.metadata.description }}
     </div>
 
     <span class="flex-grow"><!-- spacer --></span>
@@ -144,8 +149,32 @@ export default class LargeBlogCard extends Vue {
     return dates.renderDaysAgo(lastUpdated);
   }
 
-  public getTag(value: string) {
-    return product.getTag(this.blog.product, value);
+  get displayedTags() {
+    const filters = this.$route.query.category;
+    if (!filters) return this.blog.metadata.tags.slice(0, 4);
+    return this.blog.metadata.tags
+      .sort((a, b) => {
+        if (filters.includes(a) && filters.includes(b)) {
+          return a.localeCompare(b);
+        } else if (filters.includes(a)) {
+          return -1;
+        } else if (filters.includes(b)) {
+          return 1;
+        } else {
+          return a.localeCompare(b);
+        }
+      })
+      .slice(0, 4);
+  }
+
+  public getTag(value: string, index: number) {
+    if (index <= 2) return product.getTag(this.blog.product, value);
+
+    return {
+      label: `+${this.blog.metadata.tags.length - 3}`,
+      textColor: "text-gray-500",
+      bgColor: "bg-gray-50",
+    };
   }
 
   public async getImage() {

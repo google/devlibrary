@@ -19,9 +19,9 @@ import * as path from "path";
 
 import * as github from "./github";
 
-import { BlogMetadata } from "../../shared/types/BlogMetadata";
-import { RepoMetadata } from "../../shared/types/RepoMetadata";
-import { AuthorMetadata } from "../../shared/types/AuthorMetadata";
+import { BlogMetadata } from "./shared/types/BlogMetadata";
+import { RepoMetadata } from "./shared/types/RepoMetadata";
+import { AuthorMetadata } from "./shared/types/AuthorMetadata";
 
 async function listAuthorFiles(): Promise<string[]> {
   if (process.env.FUNCTIONS_EMULATOR) {
@@ -46,10 +46,15 @@ async function listConfigFiles(
     const configPath = path.resolve(`../config/${product}`);
     const typePath = path.join(configPath, type);
 
+    try{
     const typeFiles = fs.readdirSync(typePath);
     return typeFiles
       .filter((f) => f.endsWith(".json"))
       .map((f) => path.join(typePath, f));
+    } catch(err) {
+      console.log(err)
+      return []
+    }
   }
 
   const ghFiles = await github.getDirectoryContent(
@@ -57,7 +62,10 @@ async function listConfigFiles(
     "devlibrary",
     "main",
     `config/${product}/${type}`
-  );
+  ).catch((err) => {
+    console.log(err)
+    return []
+  });
 
   return ghFiles.filter((f) => f.endsWith(".json"));
 }

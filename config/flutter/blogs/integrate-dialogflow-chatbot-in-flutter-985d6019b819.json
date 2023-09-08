@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "cavinmac"
+  ],
+  "author": "Cavin Macwan",
+  "title": "Integrate Dialogflow(Chatbot) in Flutter — 2023",
+  "link": "https://medium.com/@CavinMac/integrate-dialogflow-chatbot-in-flutter-985d6019b819",
+  "tags": [
+    "mobile",
+    "widgets",
+    "plugins"
+  ],
+  "description": "This blog contains a complete guide for integrating Dialogflow into your Flutter app. It contains all the steps from configuring Dialogflow to integrating into your Flutter App.\n\nIt also has a link to the project on GitHub so that you can test it out."
+}

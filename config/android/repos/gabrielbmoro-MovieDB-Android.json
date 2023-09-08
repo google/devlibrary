@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gabrielbmoro"
+  ],
+  "owner": "gabrielbmoro",
+  "repo": "MovieDB-Android",
+  "name": "MovieDB-Android",
+  "shortDescription": "This repository provides an Android project that uses the Movie DB API. The main idea is to practice the latest libraries recommended by Google to build Android apps.",
+  "longDescription": "This repository provides an Android project that uses the Movie DB API. The main idea is to practice the latest libraries recommended by Google to build Android apps.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "compose",
+    "kotlin"
+  ]
+}

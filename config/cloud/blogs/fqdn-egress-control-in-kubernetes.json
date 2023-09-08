@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "joshuafox"
+  ],
+  "author": "Joshua Fox",
+  "title": "FQDN Egress Control in Kubernetes",
+  "link": "https://www.tfir.io/fqdn-egress-control-in-kubernetes/",
+  "tags": [
+    "compute",
+    "containers"
+  ],
+  "description": "Allowing access only to specific domains from your Kubernetes application; limiting this access to pods in certain namespaces or with certain labels."
+}

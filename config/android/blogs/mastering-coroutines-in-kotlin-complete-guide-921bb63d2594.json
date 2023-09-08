@@ -2,7 +2,9 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "other",
-  "authorIds": ["ezatpanah"],
+  "authorIds": [
+    "ezatpanah"
+  ],
   "author": "Reyhaneh Ezatpanah",
   "title": "Mastering Coroutines in Kotlin — Complete guide",
   "link": "https://androidgeek.co/mastering-coroutines-in-kotlin-complete-guide-921bb63d2594",
@@ -10,5 +12,6 @@
     "modern-android-development",
     "kotlin",
     "architecture"
-  ]
+  ],
+  "description": null
 }

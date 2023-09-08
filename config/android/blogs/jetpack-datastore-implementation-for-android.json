@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["daniel-waiguru"],
+  "author": "Daniel Waiguru",
+  "title": "Jetpack DataStore Implementation for Android",
+  "link": "https://danielwaiguru.hashnode.dev/jetpack-datastore-implementation-for-android",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "This blog post gives you a hands-on introduction to implementing Jepatck Datastore in your Android app and also migrating from SharedPrefereces."
+}

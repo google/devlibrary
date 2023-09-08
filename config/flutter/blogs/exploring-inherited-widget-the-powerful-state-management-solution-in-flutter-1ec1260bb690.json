@@ -1,0 +1,17 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "salmanbediya"
+  ],
+  "author": "Muhammad Salman",
+  "title": "Exploring Inherited Widget: The Powerful State Management So",
+  "link": "https://medium.com/@salmanbediya/exploring-inherited-widget-the-powerful-state-management-solution-in-flutter-1ec1260bb690",
+  "tags": [
+    "mobile",
+    "widgets",
+    "general"
+  ],
+  "description": "Flutter comes with a unique feature called “state management” that allows to manage and update the application state with ease. In this article, we will take a deep dive into the back story of state management and explore one of the most important concepts of state management, the Inherited Widget."
+}

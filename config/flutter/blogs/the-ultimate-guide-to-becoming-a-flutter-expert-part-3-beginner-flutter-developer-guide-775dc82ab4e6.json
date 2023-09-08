@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "isaacadariku"
+  ],
+  "author": "Isaac Adariku",
+  "title": "Beginner Flutter Developer guide to Expert",
+  "link": "https://isaacadariku.medium.com/the-ultimate-guide-to-becoming-a-flutter-expert-part-3-beginner-flutter-developer-guide-775dc82ab4e6",
+  "tags": [
+    "general",
+    "widgets",
+    "samples"
+  ],
+  "description": "In this article, I will share with you who is a beginner Flutter developer, what you should know as a beginner Flutter developer and what you should do to become a beginner Flutter developer if you are not yet one."
+}

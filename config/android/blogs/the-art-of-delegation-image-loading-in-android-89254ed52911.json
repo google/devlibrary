@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sachankapil"
+  ],
+  "author": "Kapil Sachan",
+  "title": "The Art of Delegation: Image Loading in Android! 🤖 🚀",
+  "link": "https://sachankapil.medium.com/the-art-of-delegation-image-loading-in-android-89254ed52911",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "architecture"
+  ],
+  "description": "When it comes to displaying images in Android, there are a lot of ways to do it. However, with so many options, it can be tough to choose the right one and even tougher to manage it in the long run. That’s where Image Loading Delegation comes into play! 🎉"
+}

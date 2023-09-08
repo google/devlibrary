@@ -1,6 +1,6 @@
 import * as admin from "firebase-admin";
 import * as functions from "firebase-functions";
-import { ALL_PRODUCTS } from "../../shared/product";
+import { ALL_PRODUCTS } from "./shared/product";
 
 const BASE_URL = "https://devlibrary.withgoogle.com";
 

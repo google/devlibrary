@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ruben-blazquez"
+  ],
+  "author": "Ruben Blazquez Cob",
+  "title": "Triggering GKE Jobs from Pub/Sub",
+  "link": "https://medium.com/@ruben.blazquez/using-argo-events-with-pub-sub-to-trigger-kubernetes-jobs-in-google-cloud-e712035ce42d",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "Argo Events allows us to connect our GKE cluster to Pub/Sub, listen for incoming messages, and trigger containerized jobs."
+}

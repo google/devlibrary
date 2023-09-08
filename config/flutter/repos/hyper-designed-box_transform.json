@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "hyper-designed"
+  ],
+  "owner": "hyper-designed",
+  "repo": "box_transform",
+  "name": "Box Transform",
+  "shortDescription": "BoxTransform allows you to programmatically handle box resizing and dragging with high flexibility and customizability for your Flutter and Dart projects.",
+  "longDescription": "BoxTransform allows you to programmatically handle box resizing and dragging with high flexibility and customizability for your Flutter and Dart projects.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "general",
+    "mobile",
+    "web"
+  ]
+}

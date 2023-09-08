@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "iamjosephmj"
+  ],
+  "author": "Joseph James",
+  "title": "Fortifying Your Android App with R8: Lessons from My Recent",
+  "link": "https://iamjosephmj.medium.com/fortifying-your-android-app-with-r8-lessons-from-my-recent-security-project-7d49882418b5",
+  "tags": [
+    "modern-android-development",
+    "build-tools"
+  ],
+  "description": "The blog explains some basic security optimizations which are provided by R8"
+}

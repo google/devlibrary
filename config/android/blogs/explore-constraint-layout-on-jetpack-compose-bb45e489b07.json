@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "veroanggra"
+  ],
+  "author": "Veronica Putri Anggraini",
+  "title": "Explore Constraint Layout on Jetpack Compose",
+  "link": "https://veroanggra.medium.com/explore-constraint-layout-on-jetpack-compose-bb45e489b07",
+  "tags": [
+    "compose",
+    "ui"
+  ],
+  "description": "This article will discussed about ConstraintLayout on Jetpack Compose. ConstraintLayout is a layout manager that allows you to create complex layouts by defining constraints between views. In Compose, you can use ConstraintLayout to create layouts using a similar approach."
+}

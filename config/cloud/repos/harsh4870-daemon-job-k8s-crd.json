@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "harshmanvar"
+  ],
+  "owner": "harsh4870",
+  "repo": "daemon-job-k8s-crd",
+  "name": "Daemon job GKE CRD",
+  "shortDescription": "Meta Controller Custom Composite Controller to create the Daemonjob extending the Daemonset",
+  "longDescription": "Meta Controller Custom Composite Controller to create the Daemonjob extending the Daemonset",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "containers",
+    "compute",
+    "operations"
+  ]
+}

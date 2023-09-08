@@ -25,6 +25,8 @@ import {
   SearchResult,
 } from "../../../shared/types";
 
+import { ALL_PRODUCTS } from "../../../shared/product";
+
 import {
   FirestoreQuery,
   QueryResult,
@@ -195,6 +197,37 @@ export async function fetchRepo(
   }
 }
 
+export async function queryAuthors(
+  q: FirestoreQuery
+): Promise<QueryResult<AuthorData>> {
+  const collectionPath = `/authors`;
+  const json = await fetchQuery(collectionPath, q);
+  allAuthors = json as QueryResult<AuthorData>;
+  return json as QueryResult<AuthorData>;
+}
+
+
+export async function fetchFeaturedAuthors(
+): Promise<QueryResult<AuthorData>> {
+  const collectionPath = `/featuredAuthors`;
+  const json = await fetchQuery(collectionPath, {});
+  const featuredAuthorData = [];
+  for(const ele of json.docs) {
+    featuredAuthorData.push(ele.data.id)
+  }
+  const q: FirestoreQuery = {where: [
+    {
+      fieldPath: "id",
+      operator: "in",
+      value: featuredAuthorData,
+    },
+  ],}
+  const featuredAuthors = await queryAuthors(q)
+  
+  return featuredAuthors as QueryResult<AuthorData>;
+}
+
+
 export async function fetchBlog(
   product: string,
   id: string
@@ -217,15 +250,6 @@ export async function fetchRepoPage(
   if (json) {
     return json as RepoPage;
   }
-}
-
-export async function queryAuthors(
-  q: FirestoreQuery
-): Promise<QueryResult<AuthorData>> {
-  const collectionPath = `/authors`;
-  const json = await fetchQuery(collectionPath, q);
-  allAuthors = json as QueryResult<AuthorData>;
-  return json as QueryResult<AuthorData>;
 }
 
 export async function queryBlogs(
@@ -273,32 +297,145 @@ export async function queryAuthorProjects(authorId: string) {
   };
 }
 
-export async function queryAuthorsByProduct(
-  products: string[]
-): Promise<QueryResult<AuthorData>> {
-  const authorResults: any = [];
-  for (const author of allAuthors.docs) {
-    const res = await queryAuthorProjects(author.id);
-
-    const blogProducts: string[] = [];
-    const repoProducts: string[] = [];
-
-    Object.keys(res.blogs.docs).forEach((blogIndex) => {
-      blogProducts.push(res.blogs.docs[Number(blogIndex)].data.product);
+export async function queryUsingAuthorData(
+  products: string[], returnBlogs: boolean, returnOpenSource: boolean
+) {
+  const res = await queryAuthors({});
+  const allAuthorData = res.docs
+    .map((d) => d.data)
+    .sort((a, b) => {
+      return a.metadata.name
+        .toLowerCase()
+        .localeCompare(b.metadata.name.toLowerCase());
     });
+  const authorResults = [];
 
-    Object.keys(res.repos.docs).forEach((repoIndex) => {
-      repoProducts.push(res.repos.docs[Number(repoIndex)].data.product);
-    });
+  const authorSet = new Set();
+  const authorList = [];
 
-    if (products.every((repo) => repoProducts.includes(repo))) {
-      authorResults.push(author);
+  products = products.filter(function(products) {
+    return products !== "open-source"
+  })
+
+  products = products.filter(function(products) {
+    return products !== "blog"
+  })
+
+  const q: FirestoreQuery = {};
+
+    for(const product of products){ 
+      if(returnBlogs){
+        const resBlog = await queryBlogs(product, q)
+        for(const blog of resBlog.docs){
+          if(blog.data.metadata.authorIds){
+            for(const author of blog.data.metadata.authorIds){
+              if(!authorSet.has(author)){
+                authorSet.add(author)
+                authorList.push(author)
+              }
+            }
+          }
+        }
+      }
+  
+      if(returnOpenSource) {
+        const resRepo =  await queryRepos(product, q)
+        for(const repo of resRepo.docs){
+          if(repo.data.metadata.authorIds){
+            for(const author of repo.data.metadata.authorIds){
+              if(!authorSet.has(author)){
+                authorSet.add(author)
+                authorList.push(author)
+              }
+            }
+          }
+        }
+      }
     }
-    if (products.every((blog) => blogProducts.includes(blog))) {
-      authorResults.push(author);
+
+    for(const auth of allAuthorData) {
+      for(const author of authorList) {
+        
+          if(author == auth.id){
+            let toAdd = false;
+            if(returnOpenSource && auth.metadata.githubURL) {
+              toAdd = true;
+            }
+            if(returnBlogs && auth.metadata.mediumURL) {
+              toAdd = true;
+            }
+            if(toAdd){
+              authorResults.push(auth)
+            }
+            break;
+          }
+        }
+      }
+  
+  return authorResults
+}
+
+export async function recommendedRepos(
+  product: string,
+  q: FirestoreQuery,
+  tags: string[],
+  repoExpertise: string,
+  id: string
+): Promise<RepoData[]> {
+  const collectionPath = `/products/${product}/repos`;
+  const repoData = (await fetchQuery(
+    collectionPath,
+    q
+  )) as QueryResult<RepoData>;
+
+  let recommendedObjectList = [];
+
+  const recommendedData = repoData.docs.map((d) => d.data);
+  for (const doc of recommendedData) {
+    let matches = 0;
+    for (const tag of tags) {
+      if (doc.metadata.tags.includes(tag)) {
+        matches = matches + 1;
+      }
+    }
+    if (doc.id != id) {
+      recommendedObjectList.push({
+        index: recommendedData.indexOf(doc),
+        data: doc,
+        matches: matches,
+        expertise: doc.metadata.expertise,
+        stars: doc.stats.stars,
+      });
     }
   }
-  return authorResults as QueryResult<AuthorData>;
+
+  // sort the list based on matches, experise and star level
+  recommendedObjectList.sort(function (a, b) {
+    if (a.matches < b.matches) return 1;
+    if (a.matches == b.matches) {
+      if (a.expertise == repoExpertise && b.expertise != repoExpertise) {
+        return -1;
+      } else if (a.expertise != repoExpertise && b.expertise == repoExpertise) {
+        return 1;
+      } else {
+        if (a.stars > b.stars) {
+          return -1;
+        }
+        return 1;
+      }
+    }
+    if (a.matches > b.matches) return -1;
+    return 0;
+  });
+
+  recommendedObjectList = recommendedObjectList.slice(0, 5);
+
+  const reposRecommended = [];
+  for (const recommendedObj of recommendedObjectList) {
+    reposRecommended.push(recommendedObj.data);
+  }
+
+  return reposRecommended;
 }
 
 /**

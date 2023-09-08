@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "pranaypatel"
+  ],
+  "author": "Home At",
+  "title": "Jetpack Compose Preview like a pro!",
+  "link": "https://link.medium.com/nCNLyPT4Kxb",
+  "tags": [
+    "compose",
+    "build-tools",
+    "ui"
+  ],
+  "description": "Let’s discuss a smarter way to use Jetpack Compose Preview while app development!\nthis is a blog where we’ll discuss how we can use JetpackCompose @Preview in a different way to make our app development more productive!"
+}

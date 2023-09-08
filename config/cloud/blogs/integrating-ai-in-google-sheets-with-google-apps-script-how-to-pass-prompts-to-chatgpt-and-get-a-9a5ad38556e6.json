@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aryanirani123"
+  ],
+  "author": "Aryan Irani",
+  "title": "Integrating AI in Google Sheets with Google Apps Script: How",
+  "link": "https://aryanirani123.medium.com/integrating-ai-in-google-sheets-with-google-apps-script-how-to-pass-prompts-to-chatgpt-and-get-a-9a5ad38556e6",
+  "tags": [
+    "api-management",
+    "ai-ml",
+    "developer-tools"
+  ],
+  "description": "Learn how to integrate Chat GPT using the Open AI API and Google Apps Script"
+}

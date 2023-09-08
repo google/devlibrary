@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ndubuisiaso"
+  ],
+  "author": "Orji Aso",
+  "title": "How to Create and Publish Your Own Flutter Package",
+  "link": "https://medium.com/@ndubuisiaso/a-step-by-step-guide-on-how-to-create-and-publish-your-own-flutter-package-25f476db679c",
+  "tags": [
+    "mobile",
+    "plugins",
+    "general"
+  ],
+  "description": "If you’re interested in contributing to the Flutter community, writing and publishing your own Flutter packages is a great way to do it. In this article, we’ll walk you through the process of creating a Flutter package from scratch and publishing it to pub.dev, so you can share your own code with ot"
+}

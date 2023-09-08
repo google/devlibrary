@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": [
+    "mdmobin"
+  ],
+  "author": "Md Mobin",
+  "title": "Is your Flutter application Secured? Best Practices for Developing and Deploying Secure Flutter Apps",
+  "link": "https://dev.to/djsmk123/is-your-flutter-application-secured-best-practices-for-developing-and-deploying-secure-flutter-apps-4njm",
+  "tags": [
+    "mobile",
+    "plugins",
+    "general"
+  ],
+  "description": "I have been working on flutter for more than 2 years and I have seen many flutter developers who are not aware of the security issues in a flutter. So I have decided to write this article to make flutter developers aware of the security issues in flutter and how can you make your application secure"
+}

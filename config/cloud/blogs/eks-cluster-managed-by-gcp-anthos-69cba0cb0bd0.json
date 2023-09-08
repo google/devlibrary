@@ -1,0 +1,15 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["harshmanvar"],
+  "author": "Harsh Manvar",
+  "title": "EKS cluster managed by GCP Anthos",
+  "link": "https://medium.com/google-cloud/eks-cluster-managed-by-gcp-anthos-69cba0cb0bd0",
+  "tags": [
+    "containers",
+    "hybrid-multicloud",
+    "networking"
+  ],
+  "description": "EKS cluster managed by GCP Anthos"
+}

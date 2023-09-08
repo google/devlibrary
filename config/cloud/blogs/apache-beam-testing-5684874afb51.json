@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["irvifa"],
+  "author": "Irvi Firqotul Aini",
+  "title": "Apache Beam: Testing",
+  "link": "https://medium.com/google-cloud/apache-beam-testing-5684874afb51",
+  "tags": [
+    "developer-tools"
+  ],
+  "description": "Writing tests for our pipeline is an important step towards efficient and effective data-processing software development. Unit tests in beam usually being done using DirectRunner which included in both Java and Python SDK."
+}

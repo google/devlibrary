@@ -11,5 +11,6 @@
   "tags": [
     "widgets",
     "samples"
-  ]
+  ],
+  "description": "In this deep dive tutorial on the Flutter Slider widget, learn how to customize your sliders by applying custom themes and designing your own."
 }

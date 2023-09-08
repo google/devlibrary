@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "olexale"
+  ],
+  "owner": "olexale",
+  "repo": "bdd_widget_test",
+  "name": "bdd_widget_test",
+  "shortDescription": "An open-source project that combines BDD-style Gherkin language with widget testing, enabling mobile app development in natural language for enhanced team collaboration and productivity",
+  "longDescription": "An open-source project that combines BDD-style Gherkin language with widget testing, enabling mobile app development in natural language for enhanced team collaboration and productivity",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "plugins",
+    "general"
+  ]
+}

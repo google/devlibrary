@@ -12,5 +12,6 @@
     "mobile",
     "samples",
     "general"
-  ]
+  ],
+  "description": "An article published in Flutter Community medium publication"
 }

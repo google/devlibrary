@@ -36,4 +36,7 @@ steps:
     - 'FIREBASE_PROJECT=$PROJECT_ID'
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   dir: 'app'
+  args: ['gcloud', '--project=$PROJECT_ID', 'functions', 'call', 'refreshAuthors']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  dir: 'app'
   args: ['gcloud', '--project=$PROJECT_ID', 'app', 'deploy', '--stop-previous-version']

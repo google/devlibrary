@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "sahuinnovator"
+  ],
+  "author": "A Sahu",
+  "title": "InApp update for android app jetpack compose",
+  "link": "https://medium.com/@SahuInnovator/inapp-update-for-android-app-jetpack-compose-168cbdf36ba5",
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "In-app updates are a feature that allows developers to provide their users with the latest version of their app directly within the app itself."
+}

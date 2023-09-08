@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["debz-g"],
+  "author": "Debayan Ghosh Dastider",
+  "title": "Boost Your Android Code Quality With BaseFragment",
+  "link": "https://blog.realogs.in/why-base-fragment-is-a-life-saver/",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "architecture"
+  ],
+  "description": "Fragments play a crucial role in Android development, enabling modular and reusable UI components within an application. However, working with Fragments can sometimes be repetitive and time-consuming. But fear not! BaseFragment is here to help with that."
+}

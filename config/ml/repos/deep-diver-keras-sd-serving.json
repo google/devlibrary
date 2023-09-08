@@ -12,5 +12,15 @@
   "longDescription": "This repository shows a various ways to deploy Stable Diffusion  with TF Serving, Hugging Face Endpoint, and FastAPI.",
   "content": "README.md",
   "pages": [],
-  "tags": ["mobile","nlp","vision","library","notebook","collection","web","theory"]
+  "tags": [
+    "mobile",
+    "nlp",
+    "vision",
+    "library",
+    "notebook",
+    "collection",
+    "web",
+    "theory",
+    "keras"
+  ]
 }

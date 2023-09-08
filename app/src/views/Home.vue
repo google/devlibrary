@@ -25,13 +25,13 @@
     >
       <div class="col-span-12 lg:col-span-6 px-1">
         <h1 class="text-4xl">
-          The platform for Google curated open-source projects
+          The platform for Google curated open-source dev projects
         </h1>
 
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
-            Explore open-source projects and content featuring Google tools and
+            Explore open-source dev projects and content library featuring Google tools and
             technologies contributed by developers from around the world. Find
             the inspiration you need for your next project!
           </p>
@@ -56,7 +56,9 @@
         <div class="value-prop-image">
           <img src="../../public/img/guided-learning.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Are you looking for guided learning?</h2>
+        <h2 class="text-3xl mb-6">
+          Learn from developer community author content
+        </h2>
         <p class="text-lg px-8 pb-8">
           Visit each product page to filter projects by Content Type, Category
           or Expertise level.
@@ -73,7 +75,7 @@
         <div class="value-prop-image">
           <img src="../../public/img/speakers.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Are you looking for speakers / experts?</h2>
+        <h2 class="text-3xl mb-6">Find product experts and authors</h2>
         <p class="text-lg px-8 pb-8">
           Find and connect with product experts, speakers and authors in the
           community.
@@ -90,7 +92,9 @@
         <div class="value-prop-image">
           <img src="../../public/img/inspiration.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Are you looking to showcase your work?</h2>
+        <h2 class="text-3xl mb-6">
+          Build and showcase your technical projects
+        </h2>
         <p class="text-lg px-8 pb-8">
           Submit your projects and blogs to Dev Library to inspire other
           developers.
@@ -136,16 +140,15 @@
     <!-- Videos -->
     <div class="w-full p-6 lg:p-10 video-playlist h-max-20">
       <div class="text-center pb-10">
-      <h1 class="text-2xl lg:text-3xl pb-5">Meet our Authors</h1>
-      <a
-        href="https://www.youtube.com/playlist?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ"
-        target="_blank"
-      >
-        <MaterialButton type="primary">More Authors</MaterialButton>
-      </a></div>
-      <div
-        class="mb-5 grid gap-x-12 grid-cols-1 md:grid-cols-5"
-      >
+        <h1 class="text-2xl lg:text-3xl pb-5">Meet our Authors</h1>
+        <a
+          href="https://www.youtube.com/playlist?list=PLOU2XLYxmsIJ590o0oAKUBJTrhAp6A2eJ"
+          target="_blank"
+        >
+          <MaterialButton type="primary">More Authors</MaterialButton>
+        </a>
+      </div>
+      <div class="mb-5 grid gap-x-12 grid-cols-1 md:grid-cols-5">
         <div class="col-span-3 video-aspect-ratio">
           <iframe
             class="w-full h-full"
@@ -157,10 +160,16 @@
             :src="promoVideo.embedUrl"
             :title="promoVideo.title"
           ></iframe>
-          <h2 class="p-5">{{promoVideo.title}}</h2>
+          <h2 class="p-5">{{ promoVideo.title }}</h2>
         </div>
-        <ul class="playlist-list col-span-2 grid gap-4 h-full overflow-y-auto p-0">
-          <li class="z-10 align-start" v-for="v in promoVideoPlaylist" :key="v.videoUrl">
+        <ul
+          class="playlist-list col-span-2 grid gap-4 h-full overflow-y-auto p-0"
+        >
+          <li
+            class="z-10 align-start"
+            v-for="v in promoVideoPlaylist"
+            :key="v.videoUrl"
+          >
             <a
               class="grid gap-x-3 grid-cols-5"
               target="_blank"
@@ -205,7 +214,7 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-std py-8"
     >
       <div class="col-span-1 lg:col-span-2 lg:px-2">
-        <h2 class="text-3xl">Latest projects</h2>
+        <h2 class="text-3xl">Latest dev projects</h2>
         <div class="desktop-only">
           <p class="mt-2 mb-4 lg:w-3/4 leading-6">
             Check out the latest projects we've added to the Dev Library. To see
@@ -264,17 +273,11 @@ import {
   queryBlogs,
   shuffleArr,
   wrapInHolders,
-  fetchRepo,
-  fetchBlog,
 } from "@/plugins/data";
 
 import { ALL_PRODUCTS } from "../../../shared/product";
-import {
-  BlogData,
-  BlogOrRepoDataHolder,
-  RepoData,
-} from "../../../shared/types";
-import { getPromoVideoMain, getPromoVideoPlaylist} from '../model/videos';
+import { BlogData, RepoData } from "../../../shared/types";
+import { getPromoVideoMain, getPromoVideoPlaylist } from "../model/videos";
 import { FirestoreQuery } from "../../../shared/types/FirestoreQuery";
 import { EVENT_BUS, NAME_SHOW_SUBMIT_DIALOG } from "@/plugins/events";
 import { conversionEvent } from "@/plugins/gtag";

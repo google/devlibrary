@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "admqueiroga"
+  ],
+  "author": "Ademir Queiroga",
+  "title": "Enhancing Android TV Playback Experience with MediaSession",
+  "link": "https://medium.com/@admqueiroga/enhancing-android-tv-playback-experience-with-mediasession-f1554ceae2f1",
+  "tags": [
+    "architecture",
+    "modern-android-development"
+  ],
+  "description": "Enabling playback voice control using Google Assistant, Alexa, and any other integrated voice assistant using the MediaSession API"
+}

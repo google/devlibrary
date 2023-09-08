@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "karya-inc"
+  ],
+  "owner": "karya-inc",
+  "repo": "RawAudioRecorder",
+  "name": "RawAudioRecorder",
+  "shortDescription": "About\nA lightweight audio recording library that records in .wav format",
+  "longDescription": "About\nA lightweight audio recording library that records in .wav format",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "build-tools",
+    "compose"
+  ]
+}

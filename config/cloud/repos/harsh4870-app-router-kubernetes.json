@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "harshmanvar"
+  ],
+  "owner": "harsh4870",
+  "repo": "app-router-kubernetes",
+  "name": "Service discovery with app router for kubernetes",
+  "shortDescription": "Internal application routing between microservices managed by nginx",
+  "longDescription": "Internal application routing between microservices managed by nginx",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compute",
+    "networking",
+    "operations"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kpotehin","vladd-g","x401om"
+  ],
+  "owner": "adaptyteam",
+  "repo": "AdaptySDK-Flutter",
+  "name": "AdaptySDK-Flutter",
+  "shortDescription": "Adapty SDK is a user-friendly, open-source framework that empowers Flutter developers to implement in-app subscriptions quickly and easily.",
+  "longDescription": "Adapty SDK is a user-friendly, open-source framework that empowers Flutter developers to implement in-app subscriptions quickly and easily.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile"
+  ]
+}
