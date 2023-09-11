@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Run LLMs from Hugging Face on GCP with Cloud Run and Cloud Storage",
+  "link": "https://dzlab.github.io/2023/08/20/gcp-run-hf/",
+  "tags": [
+    "ai-ml",
+    "serverless-computing",
+    "storage"
+  ],
+  "description": "How to run custom LLMs on GCP with Cloud Run and how to use Cloud Storage to host the weights downloaded from Hugging Face Hub"
+}

@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "doggy8088"
+  ],
+  "owner": "doggy8088",
+  "repo": "PaLM",
+  "name": "PaLM.NET",
+  "shortDescription": "A PaLM API wrapper for .NET that supports .NET Standard 2.0.",
+  "longDescription": "A PaLM API wrapper for .NET that supports .NET Standard 2.0.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "pose"
+  ]
+}

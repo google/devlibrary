@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "luillyfe"
+  ],
+  "author": "Fermin Blanco",
+  "title": "Building REST APIs in Google Cloud",
+  "link": "https://luillyfe.medium.com/building-rest-apis-in-google-cloud-6498aea274ea",
+  "tags": [
+    "api-management",
+    "serverless-computing"
+  ],
+  "description": "Cloud Endpoints and App Engine Flex are a powerful combination for API Management. By using these two platforms together, you can create scalable, secure, and performant APIs that are easy to manage."
+}

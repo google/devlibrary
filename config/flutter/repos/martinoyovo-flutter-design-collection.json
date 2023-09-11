@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "martinoyovo"
+  ],
+  "owner": "martinoyovo",
+  "repo": "flutter-design-collection",
+  "name": "Flutter Design Collection",
+  "shortDescription": "A collection of top Flutter UI designs and animations",
+  "longDescription": "A collection of top Flutter UI designs and animations",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "widgets",
+    "samples"
+  ]
+}
