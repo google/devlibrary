@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "skydoves"
+  ],
+  "owner": "skydoves",
+  "repo": "compose-stable-marker",
+  "name": "Compose Stable Marker",
+  "shortDescription": "Compose stable markers were originated Compose runtime, which improves Compose performance by telling stable and skippable guarantees to the compose compiler from non-compose dependent modules.",
+  "longDescription": "Compose stable markers were originated Compose runtime, which improves Compose performance by telling stable and skippable guarantees to the compose compiler from non-compose dependent modules.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "build-tools",
+    "compose",
+    "kotlin"
+  ]
+}

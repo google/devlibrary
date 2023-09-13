@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["hmadhsan"],
+  "author": "Hammad Hassan",
+  "title": "How to deploy Next.js application on google cloud using docker",
+  "link": "https://hmadhsan.hashnode.dev/how-to-deploy-nextjs-application-on-google-cloud-using-docker",
+  "tags": [
+    "developer-tools",
+    "containers"
+  ],
+  "description": "To deploy a Next.js application on Google Cloud using Docker, encapsulate your app within a Docker container, store the image on Google Cloud Registry, then employ Google Kubernetes Engine for orchestrated container deployment; set up load balancing, domain configuration, SSL/TLS, and monitoring to"
+}

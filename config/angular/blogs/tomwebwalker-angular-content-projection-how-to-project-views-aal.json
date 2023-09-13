@@ -1,0 +1,13 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["tomwebwalker"],
+  "author": "Tomasz Flis",
+  "title": "Angular content projection - how to project views",
+  "link": "https://dev.to/tomwebwalker/angular-content-projection-how-to-project-views-aal",
+  "tags": [
+    "performance"
+  ],
+  "description": "The angular framework is used to develop single-page applications. Its views are a combination of components, including the smallest one, like, for example, buttons up to whole pages. Content projection is a technology that allows us to project one component into another."
+}
