@@ -31,7 +31,7 @@
     "@types/node-fetch": "^2.5.11",
     "@types/url-join": "^4.0.0",
     "firebase-functions-test": "^0.2.0",
-    "firebase-tools": "^0.1.6",
+    "firebase-tools": "^12.5.4",
     "prettier": "^2.2.1",
     "tsc-watch": "^4.5.0",
     "typescript": "~3.9.3"

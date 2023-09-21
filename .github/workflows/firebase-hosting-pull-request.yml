@@ -27,8 +27,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          (cd shared && npm install --legacy-peer-deps)
-          (export NODE_OPTIONS=--openssl-legacy-provider && cd app && npm install --legacy-peer-deps && npm run build:staging)
+          (cd shared && npm install)
+          (export NODE_OPTIONS=--openssl-legacy-provider && cd app && npm install && npm run build:staging)
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
