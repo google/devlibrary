@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "romanejaquez"
+  ],
+  "author": "ROMAN JAQUEZ",
+  "title": "On-Device ML using Flutter and TensorFlow Lite (pt.2)",
+  "link": "https://medium.com/@romanejaquez/on-device-ml-using-flutter-and-tensorflow-lite-pt-2-consume-your-trained-model-in-flutter-470bf314cd2d",
+  "tags": [
+    "mobile"
+  ],
+  "description": "This is a 2-part blog post about how to implement On-Device ML using Flutter and tapping into a pre-trained Tensorflow Lite AI Model to get predictions on Celsius temperature data. This post deals with building a Flutter App that consumes the inference performed against the Tensorflow Lite model."
+}
