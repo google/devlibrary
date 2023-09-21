@@ -6,7 +6,7 @@ This file is *only* for Googlers. External contributors will not be able to succ
 
 ## Setup / Install
 
-  * Make sure you have Node.js 12 installed
+  * Make sure you have Node.js 16 installed
   * In the `app`, `functions` and `shared` directory:
     * `npm install`
 
