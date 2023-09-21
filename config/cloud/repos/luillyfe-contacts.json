@@ -1,0 +1,19 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "luillyfe"
+  ],
+  "owner": "luillyfe",
+  "repo": "contacts",
+  "name": "Contacts API",
+  "shortDescription": "This repository contains a simple API that allows users to create, read, update, and delete contacts. Then uses Cloud Endpoints and App Engine Flexible Environment to deploy it.",
+  "longDescription": "This repository contains a simple API that allows users to create, read, update, and delete contacts. Then uses Cloud Endpoints and App Engine Flexible Environment to deploy it.",
+  "content": "Readme.md",
+  "pages": [],
+  "tags": [
+    "api-management",
+    "serverless-computing"
+  ]
+}
