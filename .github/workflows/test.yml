@@ -41,7 +41,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Build Shared
-        run: (cd shared && npm install)
+        run: (cd shared && npm install --legacy-peer-deps)
 
       - name: Validate Schemas
         run: (cd shared && npm run validate)
