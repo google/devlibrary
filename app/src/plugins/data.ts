@@ -59,7 +59,9 @@ export function getApiHost(): string {
     : hostingRoot();
 }
 
-async function fetchDoc(docPath: string): Promise<object | undefined> {
+async function fetchDoc(
+  docPath: string
+): Promise<Record<string, unknown> | undefined> {
   const params = new URLSearchParams({
     path: docPath,
   });
@@ -182,7 +184,7 @@ export async function fetchAuthor(id: string): Promise<AuthorData | undefined> {
   const authorPath = `/authors/${normalizedId}`;
   const json = await fetchDoc(authorPath);
   if (json) {
-    return json as AuthorData;
+    return json as unknown as AuthorData;
   }
 }
 
@@ -193,7 +195,7 @@ export async function fetchRepo(
   const repoPath = `/products/${product}/repos/${id}`;
   const json = await fetchDoc(repoPath);
   if (json) {
-    return json as RepoData;
+    return json as unknown as RepoData;
   }
 }
 
@@ -236,7 +238,7 @@ export async function fetchBlog(
   const json = await fetchDoc(repoPath);
 
   if (json) {
-    return json as BlogData;
+    return json as unknown as BlogData;
   }
 }
 
@@ -248,7 +250,7 @@ export async function fetchRepoPage(
   const pagePath = `/products/${product}/repos/${id}/pages/${pageKey}`;
   const json = await fetchDoc(pagePath);
   if (json) {
-    return json as RepoPage;
+    return json as unknown as RepoPage;
   }
 }
 
