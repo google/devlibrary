@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "aritra-tech"
+  ],
+  "owner": "aritra-tech",
+  "repo": "Notify",
+  "name": "Notify",
+  "shortDescription": "📝Notify is a simple note application that is built with Modern Android development tools. This project showcases the Good implementation of Android with proper architecture design.",
+  "longDescription": "📝Notify is a simple note application that is built with Modern Android development tools. This project showcases the Good implementation of Android with proper architecture design.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "architecture",
+    "compose"
+  ]
+}

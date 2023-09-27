@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["xprilion"],
+  "author": "Anubhav Singh",
+  "title": "Job Scheduling on Google Cloud Platform",
+  "link": "https://xprilion.com/job-scheduling-on-google-cloud-platform/",
+  "tags": [
+    "developer-tools"
+  ],
+  "description": "In this article, we’ll explore what job scheduling is, the different types of scheduled jobs and how to implement job scheduling using different available methods. We’ll mostly be focusing on the tools and services available for Job Scheduling on Google Cloud Platform."
+}

@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["xprilion"],
+  "author": "Anubhav Singh",
+  "title": "Getting Started with Google MakerSuite",
+  "link": "https://www.packtpub.com/article-hub/getting-started-with-google-makersuite",
+  "tags": [
+    "ai-ml"
+  ],
+  "description": "Prototyping Generative AI ideas with Google's new product for rapid development and testing of LLM prompts."
+}

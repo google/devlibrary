@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gigamole"
+  ],
+  "owner": "GIGAMOLE",
+  "repo": "ComposeShadowsPlus",
+  "name": "ComposeShadowsPlus",
+  "shortDescription": "ComposeShadowsPlus: Elevate your Android Compose UI with stunning custom shadows",
+  "longDescription": "ComposeShadowsPlus: Elevate your Android Compose UI with stunning custom shadows",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "ui",
+    "kotlin"
+  ]
+}
