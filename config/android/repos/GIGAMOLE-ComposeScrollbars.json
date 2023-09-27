@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gigamole"
+  ],
+  "owner": "GIGAMOLE",
+  "repo": "ComposeScrollbars",
+  "name": "ComposeScrollbars",
+  "shortDescription": "The ComposeScrollbars is a feature-rich Android Compose UI library that seamlessly incorporates customizable scrollbars, including size, animations, background/knob layer style, and scroll behavior.",
+  "longDescription": "The ComposeScrollbars is a feature-rich Android Compose UI library that seamlessly incorporates customizable scrollbars, including size, animations, background/knob layer style, and scroll behavior.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

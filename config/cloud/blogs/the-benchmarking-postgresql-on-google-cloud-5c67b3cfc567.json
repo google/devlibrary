@@ -1,0 +1,14 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["weiyuan-liu"],
+  "author": "Weiyuan Liu",
+  "title": "The Benchmarking — PostgreSQL on Google Cloud",
+  "link": "https://medium.com/dev-genius/the-benchmarking-postgresql-on-google-cloud-5c67b3cfc567",
+  "tags": [
+    "storage",
+    "databases"
+  ],
+  "description": "Let's benchmark Google Cloud'S PostgreSQL products using Pgbench and HammerDB!"
+}

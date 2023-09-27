@@ -1,0 +1,15 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["otsembo"],
+  "author": "Ian Okumu",
+  "title": "K2 Compiler with Jetpack Compose",
+  "link": "https://otsembo.hashnode.dev/k2-compiler-chronicles-jetpack-compose",
+  "tags": [
+    "compose",
+    "kotlin",
+    "build-tools"
+  ],
+  "description": "Discover the capabilities of the latest Kotlin compiler and Kotlin 1.9 in developing your Jetpack Compose apps. Learn about the advantages of the fast building speeds it provides and how to experiment with the new compiler to integrate it with your project."
+}

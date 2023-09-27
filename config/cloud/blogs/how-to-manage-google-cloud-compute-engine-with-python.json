@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["pratikkalein"],
+  "author": "Pratik Kale",
+  "title": "How to Manage Google Cloud Compute Engine with Python",
+  "link": "https://blog.pratikkale.in/how-to-manage-google-cloud-compute-engine-with-python",
+  "tags": [
+    "compute",
+    "developer-tools"
+  ],
+  "description": "Compute Engine is an IaaS offering by Google Cloud. It is a powerful platform that can be used to create and manage virtual machines. However, managing Compute Engine can be a complex task. In this blog post, I will show you how to use Python to automate the management of Compute Engine instances"
+}

@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["weiyuan-liu"],
+  "author": "Weiyuan Liu",
+  "title": "Google Translate API — Should you use V2 or V3? And what coo",
+  "link": "https://weiyuan-liu.medium.com/google-translate-api-should-you-use-v2-or-v3-and-what-cool-stuff-are-there-in-v3-f3a94a3353d3",
+  "tags": [
+    "ai-ml",
+    "media-gaming"
+  ],
+  "description": "Have you heard about \"Glossary\" in translations? Or looking to use batch translations with Google translate? We'll discuss these topics here!"
+}
