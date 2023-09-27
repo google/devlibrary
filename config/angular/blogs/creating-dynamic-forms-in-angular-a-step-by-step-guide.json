@@ -1,0 +1,13 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["danywalls"],
+  "author": "Dany Paredes",
+  "title": "Angular Dynamic Forms: Step-by-Step Tutorial",
+  "link": "https://www.danywalls.com/creating-dynamic-forms-in-angular-a-step-by-step-guide",
+  "tags": [
+    "performance"
+  ],
+  "description": "Blog about my adventure in Angular"
+}

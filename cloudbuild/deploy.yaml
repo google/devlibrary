@@ -14,22 +14,22 @@
 
 timeout: 1800s
 steps:
-- name: 'node:12'
+- name: 'node:16'
   entrypoint: 'npm'
   args: ['--prefix=shared', 'install']
-- name: 'node:12'
+- name: 'node:16'
   entrypoint: 'npm'
   args: ['--prefix=app', 'install']
-- name: 'node:12'
+- name: 'node:16'
   entrypoint: 'npm'
   args: ['--prefix=functions', 'install']
-- name: 'node:12'
+- name: 'node:16'
   entrypoint: 'npm'
   args: ['--prefix=functions', 'run', 'build']
-- name: 'node:12'
+- name: 'node:16'
   entrypoint: 'npm'
   args: ['--prefix=app', 'run', 'build:$PROJECT_ID']
-- name: 'node:12'
+- name: 'node:16'
   entrypoint: 'npm'
   args: ['--prefix=shared', 'run', 'deploy:firebase']
   env:

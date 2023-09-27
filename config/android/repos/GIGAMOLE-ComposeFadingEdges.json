@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gigamole"
+  ],
+  "owner": "GIGAMOLE",
+  "repo": "ComposeFadingEdges",
+  "name": "ComposeFadingEdges",
+  "shortDescription": "The ComposeFadingEdges is a powerful Android Compose library that seamlessly incorporates fading edges with horizontal or vertical orientations, static or scrollable content, clip or color draw",
+  "longDescription": "The ComposeFadingEdges is a powerful Android Compose library that seamlessly incorporates fading edges with horizontal or vertical orientations, static or scrollable content, clip or color draw",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

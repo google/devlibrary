@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "weiyuan-liu"
+  ],
+  "author": "Weiyuan Liu",
+  "title": "PostgreSQL, GCP — AlloyDB, Cloud SQL, or Cloud Spanner",
+  "link": "https://medium.com/@weiyuan-liu/postgresql-on-google-cloud-alloydb-cloud-sql-or-cloud-spanner-b03c391bd853",
+  "tags": [
+    "storage",
+    "databases"
+  ],
+  "description": "AlloyDB, Cloud SQL, or Cloud Spanner  -  what would meet your needs?"
+}

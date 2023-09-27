@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "bilalmohib7896"
+  ],
+  "author": "Muhammad Bilal",
+  "title": "Implement Social media SignUp/Login in React JS using fireba",
+  "link": "https://bilalmohib7896.medium.com/implement-social-media-signup-login-in-react-js-using-firebase-pre-built-ui-10b9b63d8580",
+  "tags": [
+    "web",
+    "node",
+    "admin"
+  ],
+  "description": "Firebase pre-built UI is a great way to get yourself free to implement social media authentication in your web applications. You can implement any social media authentication using that as Twitter, Facebook, Google, Github, Linkedin, etc. In this article we will see how to implement social logins."
+}

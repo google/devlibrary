@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Building an Article Recommender App in Java with llm4j, PaLM and Elasticsearch",
+  "link": "https://dzlab.github.io/2023/09/01/palm-recommendation/",
+  "tags": [
+    "ai-ml"
+  ],
+  "description": "Learn how to Build a News article recommendation App in Java with llm4j, PaLM and Elasticsearch"
+}

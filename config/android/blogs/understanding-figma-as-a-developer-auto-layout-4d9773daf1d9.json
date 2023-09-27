@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["karishmababu"],
+  "author": "Karishma Babu",
+  "title": "Translate Figma Properties to Jetpack Compose",
+  "link": "https://medium.com/better-programming/understanding-figma-as-a-developer-auto-layout-4d9773daf1d9",
+  "tags": [
+    "compose",
+    "ui"
+  ],
+  "description": "As a developer, bridging the gap between design and development is crucial for creating pixel-perfect user interfaces. This post delves into the fundamentals of Auto layout in Figma and how it translates to Jetpack Compose."
+}

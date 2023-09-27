@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Ryan Kiprotich cheruiyot",
+  "title": "Deploying Tensorflow Model on a Microcontroller",
+  "link": "https://ryantalkstinyml.hashnode.dev/deploying-tensorflow-model-on-a-microcontroller",
+  "tags": [
+    "tf-lite",
+    "keras",
+    "tf-core"
+  ],
+  "description": "Explore the realm of Tiny Ml and Edge AI in this guide, deploying TensorFlow models on micro-controllers for efficient, real-time processing. Uncover the potential of AI at the edge with TensorFlow !"
+}
