@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-import * as cheerio from "cheerio";
-import marked from "marked";
-import * as path from "path";
-import * as url from "url";
-import urljoin from "url-join";
+import * as cheerio from "cheerio"
+import marked from "marked"
+import * as path from "path"
+import * as url from "url"
+import urljoin from "url-join"
 
-import { RepoData, RepoPageSection } from "./shared/types";
-import { cleanPagePath } from "./shared/util";
+import { RepoData, RepoPageSection } from "./shared/types"
+import { cleanPagePath } from "./shared/util"
 
 const BADGE_PATTERNS = [
   "travis-ci.org",
@@ -37,14 +37,14 @@ const BADGE_PATTERNS = [
   "release-notes.com",
   "awesome.re",
   /github\.com\/.*\/workflows\/.*\.svg/,
-];
+]
 
 marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: true,
   headerIds: true,
   breaks: false,
-});
+})
 
 export function renderContent(
   product: string,
@@ -54,35 +54,40 @@ export function renderContent(
   branch: string,
   emojis: Record<string, string> = {}
 ) {
-  const withEmojis = replaceEmojis(content, emojis);
-  const html = marked(withEmojis);
-  const sanitizedHtml = sanitizeHtml(product, repo, page, html, branch);
+  const withEmojis = replaceEmojis(content, emojis)
+  const html = marked(withEmojis)
+  const sanitizedHtml = sanitizeHtml(product, repo, page, html, branch)
 
   // TODO: We no longer use the concept of "sections" at all so we could
   //       eventually remove this but there's no need to do that urgently.
-  const sections = htmlToSections(repo, sanitizedHtml);
+  const sections = htmlToSections(repo, sanitizedHtml)
 
-  return sections;
+  return sections
 }
 
 function replaceEmojis(md: string, emojis: Record<string, string>): string {
-  let content = md.split("\n");
-  let isInCodeBlock = false;
+  let content = md.split("\n")
+  let isInCodeBlock = false
 
   for (const k of Object.keys(emojis)) {
-    const withColons = `:${k}:`;
-    const asEmoji = emojis[k];
+    const withColons = `:${k}:`
+    const asEmoji = emojis[k]
     content.forEach((val, ind) => {
       if (val.trim().startsWith("```")) {
-        isInCodeBlock = !isInCodeBlock;
+        isInCodeBlock = !isInCodeBlock
       }
       if (!isInCodeBlock) {
-        content[ind] = val.replace(new RegExp(withColons, "g"), asEmoji);
+        content[ind] = val.replace(new RegExp(withColons, "g"), asEmoji)
       }
-    });
+    })
   }
 
-  return content.join("\n");
+  return content.join("\n")
+}
+
+// https://stackoverflow.com/questions/69464845/property-attribs-does-not-exist-on-type-element-cheerio
+const isTagElement = (element: any): element is cheerio.TagElement => {
+  return element?.attribs !== undefined
 }
 
 /**
@@ -104,174 +109,180 @@ function sanitizeHtml(
   // * Remove badges
 
   // TODO: What is this!
-  let pageDir = "";
+  let pageDir = ""
   if (page) {
-    const lastSlash = page.lastIndexOf("/");
-    pageDir = page.substring(0, lastSlash);
+    const lastSlash = page.lastIndexOf("/")
+    pageDir = page.substring(0, lastSlash)
     if (lastSlash >= 0) {
-      pageDir = page.substring(0, lastSlash);
+      pageDir = page.substring(0, lastSlash)
     }
   }
 
   // URL path to this project pages on devlibrary.withgoogle.com
-  const pagesBaseUrl = `/products/${product}/repos/${repo.id}/pages/`;
+  const pagesBaseUrl = `/products/${product}/repos/${repo.id}/pages/`
 
   // URL path to this project on github
-  const renderedBaseUrl = `https://github.com/${repo.metadata.owner}/${repo.metadata.repo}/tree/${branch}/`;
+  const renderedBaseUrl = `https://github.com/${repo.metadata.owner}/${repo.metadata.repo}/tree/${branch}/`
 
   // URL path to this project dir on github (raw)
-  const rawBaseUrl = `https://raw.githubusercontent.com/${repo.metadata.owner}/${repo.metadata.repo}/${branch}/${pageDir}`;
+  const rawBaseUrl = `https://raw.githubusercontent.com/${repo.metadata.owner}/${repo.metadata.repo}/${branch}/${pageDir}`
 
   // Paths to all pages within this repo
-  const pagePaths = (repo.metadata.pages || []).map((page) => page.path);
+  const pagePaths = (repo.metadata.pages || []).map((page) => page.path)
 
-  const $: cheerio.Root = cheerio.load(html);
+  const $: cheerio.Root = cheerio.load(html)
 
   // Make all code sections prettyprinted
   $("pre > code").each((_: number, el: cheerio.Element) => {
-    $(el).addClass("prettyprint");
-  });
+    $(el).addClass("prettyprint")
+  })
 
   // Fix checkbox lists by adding 'li-task' class to target
   $('li > input[type="checkbox"]').each((_: number, el: cheerio.Element) => {
-    $(el).parent().addClass("li-task");
-  });
+    $(el).parent().addClass("li-task")
+  })
 
   // Workaround for:
   // https://github.com/tailwindlabs/tailwindcss/issues/506
   $("img[height]").each((_: number, el: cheerio.Element) => {
     if (el.type === "text") {
-      return;
+      return
     }
-
-    modifyAttr(el, "style", (style) => {
-      let height = el.attribs["height"];
-      if (!height.endsWith("px")) {
-        height += "px";
-      }
-      return `height: ${height};` + style;
-    });
-  });
+    if (isTagElement(el)) {
+      modifyAttr(el, "style", (style) => {
+        let height = el.attribs["height"]
+        if (!height.endsWith("px")) {
+          height += "px"
+        }
+        return `height: ${height};` + style
+      })
+    }
+  })
 
   // Resolve all relative links to github
   $("a").each((_: number, el: cheerio.Element) => {
     if (el.type === "text") {
-      return;
+      return
     }
+    if (isTagElement(el)) {
+      const href = el.attribs["href"]
+      if (!href) {
+        return
+      }
 
-    const href = el.attribs["href"];
-    if (!href) {
-      return;
-    }
+      // TODO: We should handle links to github.com in addition to relative links
 
-    // TODO: We should handle links to github.com in addition to relative links
+      if (isRelativeLink(href)) {
+        // Check if the link is to a page within the repo
+        const repoRelative = path.join(pageDir, href)
+        el.attribs["href"] = repoRelative
 
-    if (isRelativeLink(href)) {
-      // Check if the link is to a page within the repo
-      const repoRelative = path.join(pageDir, href);
-      el.attribs["href"] = repoRelative;
+        const repoRelativeWithoutHash =
+          repoRelative.indexOf("#") >= 0
+            ? repoRelative.substring(0, repoRelative.indexOf("#"))
+            : repoRelative
 
-      const repoRelativeWithoutHash =
-        repoRelative.indexOf("#") >= 0
-          ? repoRelative.substring(0, repoRelative.indexOf("#"))
-          : repoRelative;
+        const isProjectPage = pagePaths.indexOf(repoRelativeWithoutHash) >= 0
+        if (isProjectPage) {
+          modifyAttr(el, "href", (h: string) => {
+            let res = h
+            res = cleanPagePath(res)
+            res = urljoin(pagesBaseUrl, res)
 
-      const isProjectPage = pagePaths.indexOf(repoRelativeWithoutHash) >= 0;
-      if (isProjectPage) {
-        modifyAttr(el, "href", (h: string) => {
-          let res = h;
-          res = cleanPagePath(res);
-          res = urljoin(pagesBaseUrl, res);
-
-          return res;
-        });
-      } else {
-        modifyAttr(el, "href", (h) => urljoin(renderedBaseUrl, h));
+            return res
+          })
+        } else {
+          modifyAttr(el, "href", (h) => urljoin(renderedBaseUrl, h))
+        }
       }
     }
-  });
+  })
 
   // Resolve all relative images, add class to parent
   $("img").each((_: number, el: cheerio.Element) => {
     if (el.type === "text") {
-      return;
+      return
     }
 
-    const src = el.attribs["src"];
-    if (!src) {
-      return;
-    }
-
-    const isBadge = BADGE_PATTERNS.some((pattern) => {
-      return !!src.match(pattern);
-    });
-
-    // Hide all known badges
-    if (isBadge) {
-      $(el).addClass("hidden");
-    }
-
-    // If the image link is relative, make sure it's pointing to GH
-    modifyAttr(el, "src", (s) => {
-      let res = s;
-
-      // Upgrade http:// images to https:// to avoid mixed content
-      // security issues
-      res = res.replace("http://", "https://");
-
-      if (!isRelativeLink(res)) {
-        return res;
+    if (isTagElement(el)) {
+      const src = el.attribs["src"]
+      if (!src) {
+        return
       }
 
-      res = urljoin(rawBaseUrl, res);
-      return res;
-    });
-  });
+      const isBadge = BADGE_PATTERNS.some((pattern) => {
+        return !!src.match(pattern)
+      })
 
-  return $.html();
+      // Hide all known badges
+      if (isBadge) {
+        $(el).addClass("hidden")
+      }
+
+      // If the image link is relative, make sure it's pointing to GH
+      modifyAttr(el, "src", (s) => {
+        let res = s
+
+        // Upgrade http:// images to https:// to avoid mixed content
+        // security issues
+        res = res.replace("http://", "https://")
+
+        if (!isRelativeLink(res)) {
+          return res
+        }
+
+        res = urljoin(rawBaseUrl, res)
+        return res
+      })
+    }
+  })
+
+  return $.html()
 }
 
 function modifyAttr(
-  el: cheerio.TagElement,
+  el: cheerio.Element,
   attrib: string,
   fn: (a: string) => string
 ) {
-  const val = el.attribs[attrib] || "";
-  el.attribs[attrib] = fn(val);
+  if (isTagElement(el)) {
+    const val = el.attribs[attrib] || ""
+    el.attribs[attrib] = fn(val)
+  }
 }
 
 /**
  * Determine if a link is relative.
  */
 function isRelativeLink(href: string): boolean {
-  const hrefUrl = url.parse(href);
+  const hrefUrl = url.parse(href)
 
   // Relative link has a pathname but not a host
-  return !hrefUrl.host && !!hrefUrl.pathname;
+  return !hrefUrl.host && !!hrefUrl.pathname
 }
 
 /**
  * Turn HTML into a sections objects.
  */
 function htmlToSections(repo: RepoData, html: string): RepoPageSection[] {
-  const $ = cheerio.load(html);
+  const $ = cheerio.load(html)
 
   // We want to remove any big headers on the page where the content is
   // equal to either the project name or the repo name
-  const $h1s = $("h1");
-  const $h2s = $("h2");
+  const $h1s = $("h1")
+  const $h2s = $("h2")
 
-  const headers = [...$h1s.toArray(), ...$h2s.toArray()];
+  const headers = [...$h1s.toArray(), ...$h2s.toArray()]
   for (const h of headers) {
-    const el = $(h);
-    const hText = el.text().trim().toLowerCase();
+    const el = $(h)
+    const hText = el.text().trim().toLowerCase()
 
     if (
       hText === repo.metadata.repo.toLowerCase() ||
       hText === repo.metadata.name.toLowerCase()
     ) {
-      console.log(`Removing header ${el.html()}`);
-      el.remove();
+      console.log(`Removing header ${el.html()}`)
+      el.remove()
     }
   }
 
@@ -280,5 +291,5 @@ function htmlToSections(repo: RepoData, html: string): RepoPageSection[] {
       name: "README",
       content: $.html(),
     },
-  ];
+  ]
 }
