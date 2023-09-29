@@ -124,7 +124,7 @@
       >
 
       <router-link class="block nav-item nav-item-link" to="/learning-guides"
-        ><span class="header">Learning Guides</span>
+        ><span class="header">Hero Content</span>
       </router-link>
 
       <router-link class="block nav-item nav-item-link" to="/about"
