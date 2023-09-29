@@ -24,8 +24,8 @@
             <div class="sections">
                 <div class="section">
                     <PillGroup prefix="guideGroup"
-                        :keys="['Injecting machine learning into your web apps', 'Group two', 'Group three']"
-                        :values="['Injecting machine learning into your web apps', 'Group two', 'Group three']" v-model="guideGroup"
+                        :keys="['September 2023','August 2023']"
+                        :values="['September 2023','August 2023']" v-model="guideGroup"
                         :start-empty="false" />
                 </div>
             </div>
@@ -47,7 +47,7 @@ export default class GuidesMenu extends Vue {
     public guideGroup = "";
     public filtersChanged = false;
     public defaultFilters = {
-        guideGroup: "Injecting machine learning into your web apps",
+        guideGroup: "'September 2023'",
     };
     public loaded = false;
 
