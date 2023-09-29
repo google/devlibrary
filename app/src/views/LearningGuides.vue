@@ -22,10 +22,9 @@
         --header-bg-image-desktop: url('/img/banners/desktop/learning-guides-wide.png');
         --header-bg-image-mobile: url('img/banners/mobile/authors-wide.png');
         ">
-            <h1 class="full-bleed-hero-heading">Learning Guides</h1>
+            <h1 class="full-bleed-hero-heading">Hero Content</h1>
             <p class="mt-1 hero-description">
-                Browse through curated collections of high quality resources contributed and authored by
-                developers.
+                Check out the content handpicked by curators and highlighted developer topics from Google technologies and developer solutions.
             </p>
         </div>
         <img src="/img/banners/desktop/learning-guides-clipart.png" class="hero-clipart" />
@@ -137,30 +136,33 @@ export default class LearningGuides extends Vue {
         }
 
         // Conditional logic to show projects based on Guide Menu selection
-        if (guideGroup === "Injecting machine learning into your web apps") {
-            this.description = "Discover different ways to add ML into your web apps with the help of community authored projects.";
-            const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
-            if (repoData1) repos.push(repoData1);
-            const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
-            if (repoData2) repos.push(repoData2);
-            const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
-            if (repoData3) repos.push(repoData3);
-            const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
-            if (blogData) blogs.push(blogData);
+        if (guideGroup === "August 2023") {
+            this.description = "Hero Content from August 2023 : Spotlights from Google Cloud, Makersuite, Bard and Jetpack Compose !";
+            const blogData1 = await fetchRepo("ml", "2023-08-07-meeting_minutes_gcp_serverless");
+            if (blogData1) repos.push(blogData1);
+            const blogData2 = await fetchRepo("cloud", "article-hub-getting-started-with-google-makersuite");
+            if (blogData2) repos.push(blogData2);
+            const blogData3 = await fetchRepo("cloud", "let-bard-answer-your-questions-from-google-sheets-with-the-palm-api-and-google-apps-script-3867e4680c0f");
+            if (blogData3) repos.push(blogData3);
+            const blogData4 = await fetchBlog("android", "mastering-jetpack-compose-state-management-a-deep-dive-into-modern-ui-data-flow-8392e298e56");
+            if (blogData4) blogs.push(blogData4);
+            const blogData5 = await fetchBlog("android", "understanding-figma-as-a-developer-auto-layout-4d9773daf1d9");
+            if (blogData5) blogs.push(blogData5);
             addAndSortProjects(blogs, repos);
-        } else if (guideGroup === "Group two") {
-            this.description = "Group two description";
-            const repoData3 = await fetchRepo("firebase", "radi-cho-tfjs-firebase");
-            if (repoData3) repos.push(repoData3);
-            const blogData = await fetchBlog("cloud", "blog-topics-developers-practitioners-automating-income-taxes-document-ai");
-            if (blogData) blogs.push(blogData);
-            addAndSortProjects(blogs, repos);
-        } else if (guideGroup === "Group three") {
-            this.description = "Group three description";
-            const repoData1 = await fetchRepo("ml", "YaleDHLab-pix-plot");
+        } else if (guideGroup === "September 2023") {
+            this.description = "Hero Content from September  2023: Spotlights from Google Cloud, MediaPipe and Jetpack Compose!";
+            const repoData1 = await fetchRepo("ml", "KevKibe-RealTime-Gesture-Recognition-using-Mediapipe");
             if (repoData1) repos.push(repoData1);
-            const repoData2 = await fetchRepo("ml", "victordibia-handtrack");
-            if (repoData2) repos.push(repoData2);
+            const blogData1 = await fetchBlog("ml", "deploying-tensorflow-model-on-a-microcontroller");
+            if (blogData1) blogs.push(blogData1);
+            const blogData2 = await fetchBlog("cloud", "2023-09-01-palm-recommendation");
+            if (blogData2) blogs.push(blogData2);
+            const blogData3 = await fetchBlog("cloud", "how-to-manage-google-cloud-compute-engine-with-python");
+            if (blogData3) blogs.push(blogData3);
+            const repoData2 = await fetchBlog("android", "GIGAMOLE-ComposeLevitation");
+            if (repoData2) blogs.push(repoData2);
+            const repoData3 = await fetchBlog("android", "ErfanSn-AR-Touch");
+            if (repoData3) blogs.push(repoData3);
             addAndSortProjects(blogs, repos);
         } else {
             this.projects = [];
