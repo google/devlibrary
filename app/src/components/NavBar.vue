@@ -60,7 +60,7 @@
           </router-link>
 
           <router-link to="/learning-guides" class="section">
-            <span class="header">Learning Guides</span>
+            <span class="header">Hero Content</span>
           </router-link>
 
           <router-link to="/about" class="section">

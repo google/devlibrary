@@ -95,7 +95,7 @@ import { wrapInHolders, fetchBlog, fetchRepo } from "@/plugins/data";
 
 export default class LearningGuides extends Vue {
     public getBreadcrumbs(): BreadcrumbLink[] {
-        return [{ name: "Learning Guides", path: "" }];
+        return [{ name: "Hero Content", path: "" }];
     }
 
     public showFilterOverlay = false;

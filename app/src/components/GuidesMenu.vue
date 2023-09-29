@@ -18,7 +18,7 @@
     <div class="flex flex-col bg-white" :class="{ mobile, desktop: !mobile }">
         <div class="rounded-lg flex-shrink" :class="{ border: !mobile }">
             <div class="px-5 py-4 uppercase border-b border-gray-200 text-gray-500 font-medium text-xs tracking-widest">
-                GUIDES MENU
+                Month
             </div>
 
             <div class="sections">
