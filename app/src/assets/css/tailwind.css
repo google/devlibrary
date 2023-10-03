@@ -229,11 +229,41 @@
     margin-top: auto;
   }
 
+  .pill-selection {
+    position: absolute;
+    width: 100%;
+    margin-left: -10px;
+  }
+
+  .pill-text {
+    border-radius: 16px;
+    padding : 6px 16px;
+    width: 100%;
+  }
+
+  .pill-selected-text {
+    color: #041E49;
+    background: #D3E3FD;
+  }
+
+  .guide-selection-heading {
+    margin-bottom: 4px;
+  }
+
+  .guide-selection-description {
+    margin-bottom: 32px;
+  }
+
   @screen lg {
     .homepage-header h1, 
     .full-bleed-header-image h1 {
       font-size: 44px;
       line-height: 52px;
+    }
+
+    .guide-selection-heading {
+      font-size: 32px;
+      line-height: 40px;
     }
 
     .header-image {
