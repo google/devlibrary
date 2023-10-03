@@ -10,3 +10,4 @@ functions/firebase-export-1655100519347QhDJMF
 
 shared/package-lock.json
 .github/workflows/firebase-hosting-merge.yml
+.github/workflows/firebase-hosting-pull-request.yml
