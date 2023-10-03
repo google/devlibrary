@@ -143,11 +143,11 @@ export default class LearningGuides extends Vue {
             const repoData1 = await fetchRepo("ml", "KevKibe-RealTime-Gesture-Recognition-using-Mediapipe");
             if (repoData1) repos.push(repoData1);
             const repoData2 = await fetchBlog("android", "GIGAMOLE-ComposeLevitation");
-            if (repoData2) blogs.push(repoData2);
+            if (repoData2) repos.push(repoData2);
             const repoData3 = await fetchBlog("android", "ErfanSn-AR-Touch");
-            if (repoData3) blogs.push(repoData3);
+            if (repoData3) repos.push(repoData3);
             const repoData4 = await fetchBlog("ml", "doggy8088-PaLM.json");
-            if (repoData4) blogs.push(repoData4);
+            if (repoData4) repos.push(repoData4);
             const blogData1 = await fetchBlog("cloud", "2023-09-01-palm-recommendation");
             if (blogData1) blogs.push(blogData1);
             const blogData2 = await fetchBlog("cloud", "how-to-manage-google-cloud-compute-engine-with-python");
@@ -156,11 +156,11 @@ export default class LearningGuides extends Vue {
         } else if (guideGroup === "August 2023") {
             this.description = "Discover content from Makersuite, Bard and Jetpack Compose published in August!";
             const blogData1 = await fetchRepo("ml", "2023-08-07-meeting_minutes_gcp_serverless");
-            if (blogData1) repos.push(blogData1);
+            if (blogData1) blogs.push(blogData1);
             const blogData2 = await fetchRepo("cloud", "article-hub-getting-started-with-google-makersuite");
-            if (blogData2) repos.push(blogData2);
+            if (blogData2) blogs.push(blogData2);
             const blogData3 = await fetchRepo("cloud", "let-bard-answer-your-questions-from-google-sheets-with-the-palm-api-and-google-apps-script-3867e4680c0f");
-            if (blogData3) repos.push(blogData3);
+            if (blogData3) blogs.push(blogData3);
             const blogData4 = await fetchBlog("android", "mastering-jetpack-compose-state-management-a-deep-dive-into-modern-ui-data-flow-8392e298e56");
             if (blogData4) blogs.push(blogData4);
             const blogData5 = await fetchBlog("android", "understanding-figma-as-a-developer-auto-layout-4d9773daf1d9");
