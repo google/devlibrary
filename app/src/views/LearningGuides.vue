@@ -65,7 +65,9 @@
                     <h2 class="guide-selection-heading">{{ filters.guideGroup.toString() }}</h2>
                     <p class="guide-selection-description">{{ description }}</p>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                        <RepoOrBlogCard v-for="project in projects" :key="project.data.id" :project="project" />
+                        <RepoOrBlogCard v-for="project in projects" 
+                        :key="project.data.id" 
+                        :project="project" />
                     </div>
                 </div>
             </div>
