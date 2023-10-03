@@ -59,8 +59,8 @@
             <span class="header">Authors</span>
           </router-link>
 
-          <router-link to="/learning-guides" class="section">
-            <span class="header">Hero Content</span>
+          <router-link to="/featured-content" class="section">
+            <span class="header">Featured Content</span>
           </router-link>
 
           <router-link to="/about" class="section">
@@ -123,8 +123,8 @@
         ><span>Authors</span></router-link
       >
 
-      <router-link class="block nav-item nav-item-link" to="/learning-guides"
-        ><span class="header">Hero Content</span>
+      <router-link class="block nav-item nav-item-link" to="/featured-content"
+        ><span class="header">Featured Content</span>
       </router-link>
 
       <router-link class="block nav-item nav-item-link" to="/about"

@@ -246,11 +246,11 @@
     background: #D3E3FD;
   }
 
-  .guide-selection-heading {
+  .featured-content-selection-heading {
     margin-bottom: 4px;
   }
 
-  .guide-selection-description {
+  .featured-content-selection-description {
     margin-bottom: 32px;
   }
 
@@ -261,7 +261,7 @@
       line-height: 52px;
     }
 
-    .guide-selection-heading {
+    .featured-content-selection-heading {
       font-size: 32px;
       line-height: 40px;
     }
