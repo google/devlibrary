@@ -24,7 +24,7 @@
         ">
             <h1 class="full-bleed-hero-heading">Featured Content</h1>
             <p class="mt-1 hero-description">
-                Check out inspiring projects build by developers using the latest Google technologies and developer solutions. Featured content includes handpicked projects from curators and in- focus developer topics.
+                Check out inspiring projects build by developers using the latest Google technologies and developer solutions. Featured content includes handpicked projects from curators and in-focus developer topics.
             </p>
         </div>
         <img src="/img/banners/desktop/featured-content-clipart.png" class="hero-clipart" />
