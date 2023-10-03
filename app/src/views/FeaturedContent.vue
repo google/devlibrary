@@ -109,19 +109,19 @@ export default class FeaturedContent extends Vue {
 
     @Watch("filters", { deep: true })
     public async onFiltersTypeChanged() {
-        let hasGuideParams = false;
-        let guideParams = "";
+        let hasContentParams = false;
+        let contentParams = "";
 
         if (
             typeof this.filters.contentGroup === "string" &&
             this.filters.contentGroup != ""
         ) {
-            hasGuideParams = true;
-            guideParams += `${this.filters.contentGroup}`;
+            hasContentParams = true;
+            contentParams += `${this.filters.contentGroup}`;
         }
 
-        if (hasGuideParams) {
-            this.displayProjects(guideParams);
+        if (hasContentParams) {
+            this.displayProjects(contentParams);
         }
     }
 
