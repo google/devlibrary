@@ -163,6 +163,8 @@ export default class LearningGuides extends Vue {
             if (blogData4) blogs.push(blogData4);
             const blogData5 = await fetchBlog("android", "understanding-figma-as-a-developer-auto-layout-4d9773daf1d9");
             if (blogData5) blogs.push(blogData5);
+            const blogData6 = await fetchBlog("ml", "config/ml/blogs/pulse-discover-how-googles-automl-can-help-define-problems-improve-manor.json");
+            if (blogData6) blogs.push(blogData6);
             const repoData1 = await fetchRepo("ml", "python-dontrepeatyourself-Smile-Detection-with-Python-OpenCV-and-Deep-Learning.json");
             if (repoData1) repos.push(repoData1);
             addAndSortProjects(blogs, repos);
