@@ -23,9 +23,9 @@
 
             <div class="sections">
                 <div class="section">
-                    <PillGroup prefix="guideGroup"
+                    <PillGroup prefix="contentGroup"
                         :keys="['September 2023','August 2023']"
-                        :values="['September 2023','August 2023']" v-model="guideGroup"
+                        :values="['September 2023','August 2023']" v-model="contentGroup"
                         :start-empty="false" />
                 </div>
             </div>
@@ -41,19 +41,19 @@ import PillGroup from "@/components/PillGroup.vue";
         PillGroup,
     },
 })
-export default class GuidesMenu extends Vue {
+export default class FeaturedContentMenu extends Vue {
     @Prop({ default: false }) mobile!: boolean;
-    @Prop() value!: { guideGroup: string | string[] };
-    public guideGroup = "";
+    @Prop() value!: { contentGroup: string | string[] };
+    public contentGroup = "";
     public filtersChanged = false;
     public defaultFilters = {
-        guideGroup: "'September 2023'",
+        contentGroup: "'September 2023'",
     };
     public loaded = false;
 
     get filterValues() {
         return {
-            guideGroup: this.guideGroup,
+            contentGroup: this.contentGroup,
         };
     }
 
@@ -61,10 +61,10 @@ export default class GuidesMenu extends Vue {
     @Watch("value", { deep: true })
     public onValueChange() {
         if (
-            Array.isArray(this.value.guideGroup) &&
-            this.value.guideGroup.length === 0
+            Array.isArray(this.value.contentGroup) &&
+            this.value.contentGroup.length === 0
         ) {
-            this.guideGroup = "";
+            this.contentGroup = "";
         }
     }
 
