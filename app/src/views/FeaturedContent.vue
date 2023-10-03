@@ -32,7 +32,7 @@
         <div class="grid grid-cols-10 gap-4 mb-20 px-std pt-4 lg:pt-8">
             <!-- Featured Content Menu (Desktop) -->
             <div v-if="$mq === 'desktop'" class="lg:col-span-2">
-                <GuidesMenu v-model="filters" />
+                <FeaturedContentMenu v-model="filters" />
             </div>
             <!-- Featured Content Menu (Mobile) -->
             <div v-if="$mq === 'mobile'" v-show="showFilterOverlay" class="mobile-only scrim z-10">
@@ -42,7 +42,7 @@
                 <div v-if="$mq === 'mobile'" v-show="showFilterOverlay"
                     class="mobile-only fixed right-0 top-0 pt-20 w-full h-full z-10">
                     <div class="bg-white rounded-l overflow-hidden w-2/3 ml-auto">
-                        <GuidesMenu :mobile="true" v-model="filters" />
+                        <FeaturedContentMenu :mobile="true" v-model="filters" />
                         <div class="border-t border-gray-200 flex flex-row-reverse gap-2 p-2">
                             <MaterialButton type="primary" @click.native="showFilterOverlay = false">Done
                             </MaterialButton>
