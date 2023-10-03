@@ -51,7 +51,7 @@
                 </div>
             </transition>
             <!-- Cards -->
-            <div class="col-span-10 lg:col-span-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 <!-- Show guides menu button (mobile) -->
                 <div class="mobile-only">
                     <div class="flex flex-row mr-2 mb-4">
