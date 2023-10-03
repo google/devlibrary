@@ -137,22 +137,22 @@ export default class LearningGuides extends Vue {
 
         // Conditional logic to show projects based on Guide Menu selection
         if (guideGroup === "September 2023") {
-            this.description = "Hero Content from September  2023: Spotlights from Google Cloud, MediaPipe and Jetpack Compose!";
+            this.description = "Discover projects published in September from Google Cloud, MediaPipe and Jetpack Compose!";
             const repoData1 = await fetchRepo("ml", "KevKibe-RealTime-Gesture-Recognition-using-Mediapipe");
             if (repoData1) repos.push(repoData1);
-            const blogData1 = await fetchBlog("ml", "deploying-tensorflow-model-on-a-microcontroller");
-            if (blogData1) blogs.push(blogData1);
-            const blogData2 = await fetchBlog("cloud", "2023-09-01-palm-recommendation");
-            if (blogData2) blogs.push(blogData2);
-            const blogData3 = await fetchBlog("cloud", "how-to-manage-google-cloud-compute-engine-with-python");
-            if (blogData3) blogs.push(blogData3);
             const repoData2 = await fetchBlog("android", "GIGAMOLE-ComposeLevitation");
             if (repoData2) blogs.push(repoData2);
             const repoData3 = await fetchBlog("android", "ErfanSn-AR-Touch");
             if (repoData3) blogs.push(repoData3);
+            const repoData4 = await fetchBlog("ml", "doggy8088-PaLM.json");
+            if (repoData4) blogs.push(repoData4);
+            const blogData1 = await fetchBlog("cloud", "2023-09-01-palm-recommendation");
+            if (blogData1) blogs.push(blogData1);
+            const blogData2 = await fetchBlog("cloud", "how-to-manage-google-cloud-compute-engine-with-python");
+            if (blogData2) blogs.push(blogData2);
             addAndSortProjects(blogs, repos);
         } else if (guideGroup === "August 2023") {
-            this.description = "Hero Content from August 2023 : Spotlights from Google Cloud, Makersuite, Bard and Jetpack Compose !";
+            this.description = "Discover content from Makersuite, Bard and Jetpack Compose published in August!";
             const blogData1 = await fetchRepo("ml", "2023-08-07-meeting_minutes_gcp_serverless");
             if (blogData1) repos.push(blogData1);
             const blogData2 = await fetchRepo("cloud", "article-hub-getting-started-with-google-makersuite");
@@ -163,6 +163,8 @@ export default class LearningGuides extends Vue {
             if (blogData4) blogs.push(blogData4);
             const blogData5 = await fetchBlog("android", "understanding-figma-as-a-developer-auto-layout-4d9773daf1d9");
             if (blogData5) blogs.push(blogData5);
+            const repoData1 = await fetchRepo("ml", "python-dontrepeatyourself-Smile-Detection-with-Python-OpenCV-and-Deep-Learning.json");
+            if (repoData1) repos.push(repoData1);
             addAndSortProjects(blogs, repos);
         } else {
             this.projects = [];
