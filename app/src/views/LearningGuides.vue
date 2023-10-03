@@ -24,7 +24,7 @@
         ">
             <h1 class="full-bleed-hero-heading">Hero Content</h1>
             <p class="mt-1 hero-description">
-                Check out the content handpicked by curators and highlighted developer topics from Google technologies and developer solutions.
+                Check out latest projects build by developers using the latest Google technologies and developer solutions.
             </p>
         </div>
         <img src="/img/banners/desktop/learning-guides-clipart.png" class="hero-clipart" />
