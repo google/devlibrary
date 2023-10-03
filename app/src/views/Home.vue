@@ -54,7 +54,7 @@
         class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
       >
         <div class="value-prop-image">
-          <img src="../../public/img/guided-learning.svg" class="w-1/3" />
+          <img src="../../public/img/featured-content.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">
           Learn from developer community author content

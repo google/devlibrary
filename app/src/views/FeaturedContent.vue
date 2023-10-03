@@ -62,8 +62,8 @@
                     </div>
                 </div>
                 <div id="projects">
-                    <h2 class="guide-selection-heading">{{ filters.contentGroup.toString() }}</h2>
-                    <p class="guide-selection-description">{{ description }}</p>
+                    <h2 class="featured-content-selection-heading">{{ filters.contentGroup.toString() }}</h2>
+                    <p class="featured-content-selection-description">{{ description }}</p>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                         <RepoOrBlogCard v-for="project in projects" 
                         :key="project.data.id" 
