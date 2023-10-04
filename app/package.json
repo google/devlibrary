@@ -49,7 +49,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
     "firebase-tools": "^9.3.0",
-    "postcss": "^7.0.35",
+    "postcss": "^8.4.31",
     "prettier": "^2.2.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "typescript": "~3.9.3",
