@@ -254,6 +254,16 @@
     margin-bottom: 32px;
   }
 
+  .impact-number {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .impact-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
   @screen lg {
     .homepage-header h1, 
     .full-bleed-header-image h1 {
@@ -304,6 +314,14 @@
       width: 252px;
       top: 64px;
       left: 64vw;
+    }
+
+    .impact-number {
+      font-size: 64px;
+    }
+  
+    .impact-text {
+      font-size: 20px;
     }
   }
 
