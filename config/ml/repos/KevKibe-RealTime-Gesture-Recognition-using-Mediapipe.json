@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kevkibe"
+  ],
+  "owner": "KevKibe",
+  "repo": "RealTime-Gesture-Recognition-using-Mediapipe",
+  "name": "Gesture Recognition of 21 gestures using MediaPipe",
+  "shortDescription": "This is a project that showcases finetuning a model and performing real-time gesture recognition of 21 different gestures using MediaPipe Model Maker from Google.",
+  "longDescription": "This is a project that showcases finetuning a model and performing real-time gesture recognition of 21 different gestures using MediaPipe Model Maker from Google.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "other-google-ml-products"
+  ]
+}

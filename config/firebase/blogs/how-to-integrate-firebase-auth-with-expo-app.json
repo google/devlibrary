@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["snehasish-konger"],
+  "author": "Snehasish Konger",
+  "title": "How To Integrate Firebase Auth With an Expo App",
+  "link": "https://scientyficworld.org/how-to-integrate-firebase-auth-with-expo-app/",
+  "tags": [
+    "android",
+    "ios",
+    "web"
+  ],
+  "description": "In this comprehensive guide, we will walk you through the process of integrating Firebase Authentication with an Expo (React Native) app."
+}

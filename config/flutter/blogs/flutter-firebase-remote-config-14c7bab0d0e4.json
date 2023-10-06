@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "martinoyovo"
+  ],
+  "author": "Kossi Martino Yovo",
+  "title": "Firebase Remote Config in Flutter",
+  "link": "https://medium.com/@martinoyovo/flutter-firebase-remote-config-14c7bab0d0e4",
+  "tags": [
+    "mobile",
+    "firebase"
+  ],
+  "description": "Updating an app in production often takes a lot of time and effort, and especially the waiting time for the review process to complete. With Remote Config we can change the behaviour and appearance of our app without requiring user to download updates."
+}

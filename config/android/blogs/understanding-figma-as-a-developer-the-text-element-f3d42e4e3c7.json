@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["karishmababu"],
+  "author": "Karishma Babu",
+  "title": "Understanding Figma as a developer: The text element",
+  "link": "https://medium.com/design-bootcamp/understanding-figma-as-a-developer-the-text-element-f3d42e4e3c7",
+  "tags": [
+    "compose",
+    "ui"
+  ],
+  "description": "This post decodes the nuances of Figma's Text Element, empowering developers to build pixel-perfect user interfaces."
+}

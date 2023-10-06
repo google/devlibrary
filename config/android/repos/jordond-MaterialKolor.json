@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jordond"
+  ],
+  "owner": "jordond",
+  "repo": "MaterialKolor",
+  "name": "MaterialKolor",
+  "shortDescription": "A Compose Multiplatform library for creating dynamic Material Design 3 color palettes from any color.",
+  "longDescription": "A Compose Multiplatform library for creating dynamic Material Design 3 color palettes from any color.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

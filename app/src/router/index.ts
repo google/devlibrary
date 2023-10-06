@@ -17,6 +17,7 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
+import FeaturedContent from "../views/FeaturedContent.vue"
 import About from "../views/About.vue";
 import ContentPolicy from "../views/ContentPolicy.vue";
 import Product from "../views/Product.vue";
@@ -48,6 +49,11 @@ const routes: Array<RouteConfig> = [
     path: "/products/:product/repos/:repo/pages/:page(.*)",
     name: "RepoPage",
     component: Repo,
+  },
+  {
+    path: "/featured-content",
+    name: "Featured Content",
+    component: FeaturedContent,
   },
   {
     path: "/authors",

@@ -82,6 +82,12 @@
               >https://policies.google.com/privacy</a
             >
           </p>
+          <p class="mt-6 font-bold">Content Policy</p>
+          <p class="mt-4">
+            <a href="https://devlibrary.withgoogle.com/contentpolicy" target="_blank"
+              >https://devlibrary.withgoogle.com/contentpolicy</a
+            >
+          </p>
           <p class="mt-6 font-bold">Copyright Infringement</p>
           <p class="mt-4">
             If you think someone is infringing your intellectual property

@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["patilshreyas"],
+  "author": "Shreyas Patil",
+  "title": "Sleepless Concurrency: delay() vs. Thread.sleep()",
+  "link": "https://blog.shreyaspatil.dev/sleepless-concurrency-delay-vs-threadsleep",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "There's no doubt that Kotlin coroutines have made developer's life easy for asynchronous programming. Coroutine comes with feature-packed powerful APIs by which developers don't need extra effort for achieving something. Just need to know which API to use where and that's all! When it comes to JVM,"
+}
