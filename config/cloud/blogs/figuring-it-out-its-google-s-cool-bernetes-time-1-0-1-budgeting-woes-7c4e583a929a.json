@@ -2,7 +2,9 @@
   "expertise": "INTERMEDIATE",
   "version": 1,
   "source": "medium",
-  "authorIds": ["weiyuan-liu"],
+  "authorIds": [
+    "weiyuan-liu"
+  ],
   "author": "Weiyuan Liu",
   "title": "It’s Google’s Cool-bernetes time | #1.0.1Budgeting woes",
   "link": "https://medium.com/google-cloud/figuring-it-out-its-google-s-cool-bernetes-time-1-0-1-budgeting-woes-7c4e583a929a",

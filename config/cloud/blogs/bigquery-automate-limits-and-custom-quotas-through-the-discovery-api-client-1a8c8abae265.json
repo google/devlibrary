@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["mesmacosta"],
+  "author": "Marcelo Costa",
+  "title": "BigQuery: Automate limits and custom quotas through the Discovery API client",
+  "link": "https://medium.com/google-cloud/bigquery-automate-limits-and-custom-quotas-through-the-discovery-api-client-1a8c8abae265",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "Leveraging the Google API Discovery service to use undocumented Google APIs"
+}
