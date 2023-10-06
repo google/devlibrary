@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "bhoomivaghasiya"
+  ],
+  "author": "Bhoomi Vaghasiya",
+  "title": "Side Effects in Jetpack Compose",
+  "link": "https://medium.com/@bhoomivaghasiya/side-effects-in-jetpack-compose-a-beginners-guide-249ba977e4d2",
+  "tags": [
+    "compose",
+    "kotlin"
+  ],
+  "description": "This is an article about the Side Effects in Jetpack Compose. It discusses what side effects are and when to use them. It also details different side effect handlers like SideEffect, LaunchedEffect, DisposableEffect, and ProduceState."
+}
