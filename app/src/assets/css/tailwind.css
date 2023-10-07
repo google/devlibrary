@@ -178,7 +178,7 @@
     padding-top: 2.5rem;
   }
 
-  .hero-clipart {
+  .hero-clipart, .product-hero-clipart {
     display: none;
   }
 
@@ -308,12 +308,19 @@
       max-width: 600px;
     }
 
-    .hero-clipart {
+    .hero-clipart, .product-hero-clipart {
       position: absolute;
       display: block;
       width: 252px;
-      top: 64px;
       left: 64vw;
+    }
+
+    .hero-clipart {
+      top: 64px;
+    }
+
+    .product-hero-clipart {
+      top: 44px;
     }
 
     .impact-number {

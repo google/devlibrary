@@ -24,7 +24,7 @@
           <div
             class="header-image full-bleed-header-image repo-hero px-std border-b border-gray-100"
             style="
-              --header-bg-image-desktop: url('/img/banners/desktop/repo-wide.png');
+              --header-bg-image-desktop: url('/img/banners/desktop/product-wide.png');
             "
           >
             <div class="grid">
@@ -67,7 +67,10 @@
             </div>
           </div>
         </div>
-        <img src="/img/banners/desktop/repo-clipart.png" class="hero-clipart" />
+        <img
+          src="/img/banners/desktop/product-clipart.png"
+          class="product-hero-clipart"
+        />
 
         <!-- Header (Mobile) -->
         <div class="mobile-only">

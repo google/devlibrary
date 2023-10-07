@@ -62,6 +62,10 @@
             </div>
           </div>
         </div>
+        <img
+          src="/img/banners/desktop/product-clipart.png"
+          class="product-hero-clipart"
+        />
       </template>
 
       <!-- Body -->
