@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["weiyuan-liu"],
+  "author": "Weiyuan Liu",
+  "title": "It's Google's Cool-bernetes time | #1  Getting Started Again",
+  "link": "https://medium.com/google-cloud/figuring-it-out-its-google-s-cool-bernetes-time-1-getting-started-again-c5f150109253",
+  "tags": [
+    "compute",
+    "containers"
+  ],
+  "description": "Let's get started with GKE!"
+}

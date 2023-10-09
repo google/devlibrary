@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "yveskalume"
+  ],
+  "owner": "yveskalume",
+  "repo": "eventcademy",
+  "name": "EventCademy",
+  "shortDescription": "About An event app designed for local tech and cultural communities. Showcasing the modern android development and the use of Material You, Firebase,etc.",
+  "longDescription": "About An event app designed for local tech and cultural communities. Showcasing the modern android development and the use of Material You, Firebase,etc.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "architecture",
+    "compose"
+  ]
+}

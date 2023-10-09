@@ -1,0 +1,20 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rubylichtenstein"
+  ],
+  "owner": "RubyLichtenstein",
+  "repo": "Dogiz",
+  "name": "Dogiz",
+  "shortDescription": "🐾🐶 \"Dogiz\": Explore modern Android with Kotlin, Jetpack Compose, Flow, and clean architecture principles.",
+  "longDescription": "🐾🐶 \"Dogiz\": Explore modern Android with Kotlin, Jetpack Compose, Flow, and clean architecture principles.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "architecture",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "luillyfe"
+  ],
+  "author": "Fermin Blanco",
+  "title": "Securing Cloud Endpoints APIs with API Keys",
+  "link": "https://luillyfe.medium.com/securing-cloud-endpoints-with-api-keys-d16c00f77e5c",
+  "tags": [
+    "api-management",
+    "serverless-computing"
+  ],
+  "description": "API keys are not meant to be a powerful mechanism to protect your APIs from malicious actors but definitely a good one for limiting your APIs access using quotas, possible charge your users with some fees (billing) and understanding how your users are using your API (monitoring)."
+}

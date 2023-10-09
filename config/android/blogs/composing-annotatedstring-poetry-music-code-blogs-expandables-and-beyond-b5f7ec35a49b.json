@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["pherwani37"],
+  "author": "Nirbhay Pherwani",
+  "title": "Composing AnnotatedString — Poetry, Music, Code, Blogs, Expa",
+  "link": "https://proandroiddev.com/composing-annotatedstring-poetry-music-code-blogs-expandables-and-beyond-b5f7ec35a49b",
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "ui"
+  ],
+  "description": "A Dive into Text Styling with Annotated String in Jetpack Compose"
+}
