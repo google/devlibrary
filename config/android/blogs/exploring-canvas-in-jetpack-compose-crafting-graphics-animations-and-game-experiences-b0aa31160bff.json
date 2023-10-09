@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["pherwani37"],
+  "author": "Nirbhay Pherwani",
+  "title": "Exploring Canvas in Jetpack Compose",
+  "link": "https://proandroiddev.com/exploring-canvas-in-jetpack-compose-crafting-graphics-animations-and-game-experiences-b0aa31160bff",
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "ui"
+  ],
+  "description": "Finessing Subtle and Refined Aesthetics in User Interfaces through Canvas within Compose"
+}

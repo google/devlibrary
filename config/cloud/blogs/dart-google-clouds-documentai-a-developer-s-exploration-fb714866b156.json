@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "bwnyasse"
+  ],
+  "author": "Boris-Wilfried Nyasse",
+  "title": "Dart & Google Cloud’s DocumentAI: A Developer’s Exploration",
+  "link": "https://medium.com/@bwnyasse/dart-google-clouds-documentai-a-developer-s-exploration-fb714866b156",
+  "tags": [
+    "ai-ml",
+    "developer-tools"
+  ],
+  "description": "Dive deep into the fusion of Dart and Google Cloud's DocumentAI. Experience a developer's quest to bridge the gap, unveiling the power and potential of this unique combination."
+}

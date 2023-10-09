@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "luillyfe"
+  ],
+  "author": "Fermin Blanco",
+  "title": "Automatic ID token verification using Cloud Endpoints",
+  "link": "https://luillyfe.medium.com/automatic-firebase-id-token-verification-with-cloud-endpoints-2e6c386f22b7",
+  "tags": [
+    "api-management",
+    "security-identity"
+  ],
+  "description": "The main purpose here is to avoid implementing any authentication logic in your backend services. Achieving effectively decoupling the authorization layer from the backend code.\nIt essentially will keep us from written the following backend logic. But also will bring additional features to our APIs"
+}
