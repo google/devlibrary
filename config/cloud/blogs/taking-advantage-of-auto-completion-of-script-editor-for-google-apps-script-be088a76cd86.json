@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["tanaikech"],
+  "author": "Kanshi Tanaike",
+  "title": "Taking Advantage of Auto-completion of Script Editor for Google Apps Script",
+  "link": "https://medium.com/google-cloud/taking-advantage-of-auto-completion-of-script-editor-for-google-apps-script-be088a76cd86",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "This is a report for taking advantage of the auto-completion of the script editor for Google Apps Script."
+}
