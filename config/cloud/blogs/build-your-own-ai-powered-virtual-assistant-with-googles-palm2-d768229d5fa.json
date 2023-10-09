@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "syedsajjad62"
+  ],
+  "author": "Syed Sajjad Askari",
+  "title": "Build  own AI-powered virtual assistant with Google’s Palm2",
+  "link": "https://medium.com/@syedsajjad62/build-your-own-ai-powered-virtual-assistant-with-googles-palm2-d768229d5fa",
+  "tags": [
+    "ai-ml",
+    "api-management"
+  ],
+  "description": "PaLM2 is next generation large language model that builds on Google’s legacy of breakthrough research in machine learning and responsible AI. It outperforms previous models, including PaLM, in various reasoning tasks such as code and math, classification, question answering, translation, and natura."
+}

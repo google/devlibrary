@@ -178,7 +178,7 @@
     padding-top: 2.5rem;
   }
 
-  .hero-clipart {
+  .hero-clipart, .product-hero-clipart {
     display: none;
   }
 
@@ -254,6 +254,16 @@
     margin-bottom: 32px;
   }
 
+  .impact-number {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .impact-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
   @screen lg {
     .homepage-header h1, 
     .full-bleed-header-image h1 {
@@ -298,12 +308,27 @@
       max-width: 600px;
     }
 
-    .hero-clipart {
+    .hero-clipart, .product-hero-clipart {
       position: absolute;
       display: block;
       width: 252px;
-      top: 64px;
       left: 64vw;
+    }
+
+    .hero-clipart {
+      top: 64px;
+    }
+
+    .product-hero-clipart {
+      top: 44px;
+    }
+
+    .impact-number {
+      font-size: 64px;
+    }
+  
+    .impact-text {
+      font-size: 20px;
     }
   }
 

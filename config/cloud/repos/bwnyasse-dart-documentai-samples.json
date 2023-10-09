@@ -1,0 +1,19 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bwnyasse"
+  ],
+  "owner": "bwnyasse",
+  "repo": "dart-documentai-samples",
+  "name": "A Document AI Sample CLI Tool for Dart Developers",
+  "shortDescription": "A hands-on CLI tool sample showcasing the integration of Dart with Google Cloud's DocumentAI.",
+  "longDescription": "A hands-on CLI tool sample showcasing the integration of Dart with Google Cloud's DocumentAI.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ai-ml",
+    "developer-tools"
+  ]
+}

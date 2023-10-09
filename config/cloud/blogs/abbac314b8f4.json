@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["gelopfalcon"],
+  "author": "Gerardo Lopez Falcón",
+  "title": "Developers can love K8s if you help them",
+  "link": "https://medium.com/p/abbac314b8f4",
+  "tags": ["ai-ml", "serverless-computing"],
+  "description": "Involving developers in using Kubernetes (K8s) effectively requires a combination of education, collaboration, and providing the right tools. Here’s a step-by-step guide on how to achieve this."
+}

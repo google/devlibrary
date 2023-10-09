@@ -191,21 +191,28 @@
         </ul>
       </div>
     </div>
-    <!-- Newsletter banner -->
+    <!-- Impact banner -->
     <div class="w-full p-6 lg:p-10 bg-gblue-600">
-      <h1 class="text-white text-center text-2xl lg:text-3xl">
-        Subscribe to our newsletter to stay up to date:
-      </h1>
-      <div class="flex flex-row justify-center text-base mt-6 mb-2">
-        <input
-          class="flex-grow max-w-md rounded-sm px-2 mr-2"
-          type="email"
-          v-model="newsletterEmail"
-          placeholder="Email Address"
-        />
-        <a :href="newsletterLink" target="_blank">
-          <MaterialButton type="secondary">Subscribe</MaterialButton>
-        </a>
+      <h1 class="text-white text-center text-2xl lg:text-3xl">Our impact</h1>
+      <div
+        class="grid grid-cols-4 justify-center text-center text-white w-75 mt-6 mb-2"
+      >
+        <div class="flex flex-col">
+          <span class="impact-number">700+</span>
+          <span class="impact-text">Authors</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="impact-number">80+</span>
+          <span class="impact-text">Countries</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="impact-number">800+</span>
+          <span class="impact-text">Blogs</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="impact-number">700+</span>
+          <span class="impact-text">Projects</span>
+        </div>
       </div>
     </div>
 
