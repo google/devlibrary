@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bhoomivaghasiya"
+  ],
+  "owner": "bhoomi0104",
+  "repo": "XML-To-Compose",
+  "name": "XML to Compose Converter",
+  "shortDescription": "The XML to Compose Converter is a tool that assists you in transitioning from classic Android XML layouts to Jetpack Compose UI components effortlessly.",
+  "longDescription": "The XML to Compose Converter is a tool that assists you in transitioning from classic Android XML layouts to Jetpack Compose UI components effortlessly.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin"
+  ]
+}

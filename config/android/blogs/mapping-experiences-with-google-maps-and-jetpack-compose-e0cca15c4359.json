@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["pherwani37"],
+  "author": "Nirbhay Pherwani",
+  "title": "Mapping Experiences with Google Maps and Jetpack Compose",
+  "link": "https://proandroiddev.com/mapping-experiences-with-google-maps-and-jetpack-compose-e0cca15c4359",
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "ui"
+  ],
+  "description": "Exploring, Mapping, and Creating in the Digital Cartography Realm with Jet Pack Compose and Google Maps"
+}

@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["tatocaster"],
+  "author": "Merab Tato Kutalia",
+  "title": "Compose Modifier.Node and where to find it",
+  "link": "https://proandroiddev.com/compose-modifier-node-and-where-to-find-it-merab-tato-kutalia-66f891c0e8",
+  "tags": [
+    "compose",
+    "modern-android-development"
+  ],
+  "description": "In the recent release of Jetpack Compose 1.5 we got Modifier.Node as stable. There was some hype around this change, so let’s see what this new API can offer and how we can implement it. This API is not well-documented yet, so it is kind of wild west for now."
+}

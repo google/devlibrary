@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "taaveez"
+  ],
+  "owner": "Taaveez",
+  "repo": "Taaveez-android",
+  "name": "Taaveez",
+  "shortDescription": "Say hello to Taaveez, the innovative and thrilling mobile app tailored for artists and entertainers. Effortlessly preserve your creative expressions on this highly user-friendly platform.",
+  "longDescription": "Say hello to Taaveez, the innovative and thrilling mobile app tailored for artists and entertainers. Effortlessly preserve your creative expressions on this highly user-friendly platform.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "ui",
+    "modern-android-development"
+  ]
+}

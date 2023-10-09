@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "bwnyasse"
+  ],
+  "author": "Boris-Wilfried Nyasse",
+  "title": "AI-Powered Flutter App with Google MakerSuite and PaLM API",
+  "link": "https://medium.com/@bwnyasse/ai-powered-flutter-app-with-google-makersuite-and-palm-api-2504ae7da5fe",
+  "tags": [
+    "general"
+  ],
+  "description": "Explore the world of coffee with an AI-powered Flutter app. Learn about MakerSuite & PaLM API in this tech journey."
+}

@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["prateeksharma"],
+  "author": "Prateek Sharma",
+  "title": "Pie Chart in Flutter",
+  "link": "https://techieblossom.hashnode.dev/animated-n-pie-chart-in-flutter",
+  "tags": [
+    "ui"
+  ],
+  "description": "This article discusses how to create a pie chart animation in Flutter. It covers topics such as creating arcs using the CustomPaint widget, calculating sweep angles for each section, handling multiple sections, and animating the arcs using AnimationController and tweens."
+}
