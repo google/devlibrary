@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["loicmathieu"],
+  "author": "Loïc Mathieu",
+  "title": "Explore how to use Bard, Google's AI experiment, to get daily jokes by email. Step-by-step guide for a humorous start to your day.",
+  "link": "https://kestra.io/blogs/2023-08-24-using-google-bard-ai-with-kestra",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "Explore how to use Bard, Google's AI experiment, to get daily jokes by email. Step-by-step guide for a humorous start to your day."
+}

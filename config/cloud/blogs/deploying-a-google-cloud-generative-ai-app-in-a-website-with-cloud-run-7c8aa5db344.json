@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["rubenszimbres"],
+  "author": "Rubens Zimbres",
+  "title": "Deploying a Google Cloud Generative AI App in a Website with Cloud Run",
+  "link": "https://medium.com/google-cloud/deploying-a-google-cloud-generative-ai-app-in-a-website-with-cloud-run-7c8aa5db344",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "In this article I provide the details of the process to create and deploy a Generative AI application, including costs and some cybersecurity aspects to ensure the safety of the web application."
+}

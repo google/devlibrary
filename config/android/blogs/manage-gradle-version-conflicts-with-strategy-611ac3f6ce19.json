@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["tatocaster"],
+  "author": "Merab Tato Kutalia",
+  "title": "Manage Gradle version conflicts with resolution strategy",
+  "link": "https://proandroiddev.com/manage-gradle-version-conflicts-with-strategy-611ac3f6ce19",
+  "tags": [
+    "build-tools"
+  ],
+  "description": "Gradle dependency resolution, conflict types and how to resolve accidental dependency version upgrades?"
+}

@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "navczydev"
+  ],
+  "author": "Nav Singh",
+  "title": "3-step guide to adding emojis — Jetpack Emoji Picker",
+  "link": "https://navczydev.medium.com/3-step-guide-to-adding-emojis-jetpack-emoji-picker-7ee3753d8afd",
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "ui"
+  ],
+  "description": "Today, we will learn how we can add an emoji picker in Android applications using the Jetpack Emoji Picker\n\nThree steps are all we need to incorporate EmojiPickerView into our application."
+}

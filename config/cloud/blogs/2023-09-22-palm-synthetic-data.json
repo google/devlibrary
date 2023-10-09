@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Generating Synthetic Data for NLP tasks in Java with llm4j and PaLM",
+  "link": "https://dzlab.github.io/2023/09/22/palm-synthetic-data/",
+  "tags": [
+    "ai-ml"
+  ],
+  "description": "How to Build a Java-based Synthetic Data generator for your NLP task with llm4j and PaLM"
+}

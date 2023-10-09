@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["utsmannn"],
+  "author": "Muhammad Utsman",
+  "title": "Mavericks Style Architecture on Kotlin Compose Multiplatform",
+  "link": "https://medium.com/gravel-engineering/mavericks-style-architecture-on-kotlin-compose-multiplatform-a-tutorial-1903844812d3",
+  "tags": [
+    "kotlin",
+    "compose",
+    "architecture"
+  ],
+  "description": "This post explains how to imitate the Mavericks architecture style for Kotlin Multiplatform with Compose."
+}

@@ -178,7 +178,7 @@
     padding-top: 2.5rem;
   }
 
-  .hero-clipart {
+  .hero-clipart, .product-hero-clipart {
     display: none;
   }
 
@@ -229,11 +229,51 @@
     margin-top: auto;
   }
 
+  .pill-selection {
+    position: absolute;
+    width: 100%;
+    margin-left: -10px;
+  }
+
+  .pill-text {
+    border-radius: 16px;
+    padding : 6px 16px;
+    width: 100%;
+  }
+
+  .pill-selected-text {
+    color: #041E49;
+    background: #D3E3FD;
+  }
+
+  .featured-content-selection-heading {
+    margin-bottom: 4px;
+  }
+
+  .featured-content-selection-description {
+    margin-bottom: 32px;
+  }
+
+  .impact-number {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .impact-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
   @screen lg {
     .homepage-header h1, 
     .full-bleed-header-image h1 {
       font-size: 44px;
       line-height: 52px;
+    }
+
+    .featured-content-selection-heading {
+      font-size: 32px;
+      line-height: 40px;
     }
 
     .header-image {
@@ -268,12 +308,27 @@
       max-width: 600px;
     }
 
-    .hero-clipart {
+    .hero-clipart, .product-hero-clipart {
       position: absolute;
       display: block;
       width: 252px;
-      top: 64px;
       left: 64vw;
+    }
+
+    .hero-clipart {
+      top: 64px;
+    }
+
+    .product-hero-clipart {
+      top: 44px;
+    }
+
+    .impact-number {
+      font-size: 64px;
+    }
+  
+    .impact-text {
+      font-size: 20px;
     }
   }
 

@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["gelopfalcon"],
+  "author": "Gerardo Lopez Falcón",
+  "title": "Super Prometheus in Google Cloud",
+  "link": "https://medium.com/p/91ef9da6fd87",
+  "tags": ["ai-ml", "serverless-computing"],
+  "description": "Prometheus offers a wide range of monitoring features, including data scraping, metric collection, alerting, and powerful querying capabilities. It provides a flexible and robust monitoring solution for applications and infrastructure."
+}

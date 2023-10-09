@@ -59,6 +59,10 @@
             <span class="header">Authors</span>
           </router-link>
 
+          <router-link to="/featured-content" class="section">
+            <span class="header">Featured Content</span>
+          </router-link>
+
           <router-link to="/about" class="section">
             <span class="header">About</span>
           </router-link>
@@ -118,6 +122,10 @@
       <router-link class="block nav-item nav-item-link" to="/authors"
         ><span>Authors</span></router-link
       >
+
+      <router-link class="block nav-item nav-item-link" to="/featured-content"
+        ><span class="header">Featured Content</span>
+      </router-link>
 
       <router-link class="block nav-item nav-item-link" to="/about"
         ><span>About</span></router-link
