@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [],
+  "author": "Saurabh Mishra",
+  "title": "Application Modernization Agility on Google Cloud",
+  "link": "https://medium.com/google-cloud/application-modernization-agility-on-google-cloud-e50ad2b930ed",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "Application modernization is the process of refactoring an organization’s legacy apps to a cloud-native approach. It is process of taking existing organization on-premises apps to modernize may involve migrating those apps to a various cloud type i.e., private, public, hybrid in other words migrating from Monolithic to Microservices architecture."
+}
