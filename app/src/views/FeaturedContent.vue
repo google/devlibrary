@@ -146,7 +146,7 @@ export default class FeaturedContent extends Vue {
             if (repoData2) repos.push(repoData2);
             const repoData3 = await fetchRepo("android", "ErfanSn-AR-Touch");
             if (repoData3) repos.push(repoData3);
-            const repoData4 = await fetchRepo("ml", "doggy8088-PaLM.json");
+            const repoData4 = await fetchRepo("ml", "doggy8088-PaLM");
             if (repoData4) repos.push(repoData4);
             const blogData1 = await fetchBlog("cloud", "2023-09-01-palm-recommendation");
             if (blogData1) blogs.push(blogData1);
@@ -167,8 +167,14 @@ export default class FeaturedContent extends Vue {
             if (blogData5) blogs.push(blogData5);
             const blogData6 = await fetchBlog("ml", "config/ml/blogs/pulse-discover-how-googles-automl-can-help-define-problems-improve-manor.json");
             if (blogData6) blogs.push(blogData6);
+            const blogData7 = await fetchBlog("cloud", "2023-08-07-meeting_minutes_gcp_serverless");
+            if (blogData7) blogs.push(blogData7);
             const repoData1 = await fetchRepo("ml", "python-dontrepeatyourself-Smile-Detection-with-Python-OpenCV-and-Deep-Learning.json");
             if (repoData1) repos.push(repoData1);
+            const repoData2 = await fetchRepo("ml", "python-dontrepeatyourself-Smile-Detection-with-Python-OpenCV-and-Deep-Learning");
+            if (repoData2) repos.push(repoData2);
+            const repoData3 = await fetchRepo("ml", "jays0606-mediapipe-facelandmark-demo");
+            if (repoData3) repos.push(repoData3);
             addAndSortProjects(blogs, repos);
         } else {
             this.projects = [];
