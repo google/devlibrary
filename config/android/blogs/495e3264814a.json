@@ -1,0 +1,14 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["debanshu777"],
+  "author": "Debanshu Datta",
+  "title": "Kotlin / Native —How to use C in Kotlin [Part 1]",
+  "link": "https://medium.com/p/495e3264814a",
+  "tags": [
+    "kotlin",
+    "build-tools"
+  ],
+  "description": "Kotlin/Native is a technology for compiling Kotlin code to native binaries which can run without a virtual machine. Kotlin/Native includes an LLVM-based backend for the Kotlin compiler and a native implementation of the Kotlin standard library. We will deep dive into all of these and much more…"
+}

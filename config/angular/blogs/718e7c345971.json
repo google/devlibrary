@@ -1,0 +1,13 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["marcinmilewicz"],
+  "author": "Marcin Milewicz",
+  "title": "APP_INITIALIZER for dynamic environment configuration",
+  "link": "https://medium.com/p/718e7c345971",
+  "tags": [
+    "performance"
+  ],
+  "description": "When we develop an application designed to run on multiple environments, we have to decide how to provide a configuration of appropriate variables depending on those environments. APP_INITIALIZER allows for convenient implementation of this."
+}

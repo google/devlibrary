@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["nora-soderlund"],
+  "author": "Nora Söderlund",
+  "title": "Integrating the new Solar API in Google Maps",
+  "link": "https://nora-soderlund.se/articles/integrating-the-new-solar-api-in-google-maps",
+  "tags": [
+    "google-maps-platform"
+  ],
+  "description": "The new Solar API from Google Maps Platform was just released the other day. This is how you can integrate it with dynamic maps!"
+}

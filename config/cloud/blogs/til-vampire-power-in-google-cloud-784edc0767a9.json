@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["weiyuan-liu"],
+  "author": "Weiyuan Liu",
+  "title": "TIL — “Vampire Power” In Google Cloud? Debugging and underst",
+  "link": "https://weiyuan-liu.medium.com/til-vampire-power-in-google-cloud-784edc0767a9",
+  "tags": [
+    "developer-tools",
+    "networking"
+  ],
+  "description": "TL;DR - I found a resource billed in an empty project for - \"Networking Service Directory Registered Resource, and here's how I removed it!"
+}

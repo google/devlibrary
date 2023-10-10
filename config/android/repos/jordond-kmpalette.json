@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jordond"
+  ],
+  "owner": "jordond",
+  "repo": "kmpalette",
+  "name": "kmPalette",
+  "shortDescription": "A Compose multiplatform port for Androidx Palette. Generate a color palette from an image.",
+  "longDescription": "A Compose multiplatform port for Androidx Palette. Generate a color palette from an image.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development",
+    "compose",
+    "ui"
+  ]
+}

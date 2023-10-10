@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "bhoomivaghasiya"
+  ],
+  "author": "Bhoomi Vaghasiya",
+  "title": "Jetpack Compose in existing project",
+  "link": "https://medium.com/@bhoomivaghasiya/use-jetpack-compose-in-your-existing-project-6f12631c8018",
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "Jetpack Compose makes it easy to migrate from XML to Compose, so let's migrate your Android UI to Jetpack Compose gradually and seamlessly, with this step-by-step guide."
+}

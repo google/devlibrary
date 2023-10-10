@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["aryanirani123"],
+  "author": "Aryan Irani",
+  "title": "Build a Language Converter using Google Bard",
+  "link": "https://www.packtpub.com/article-hub/build-a-language-converter-using-google-bard",
+  "tags": [
+    "ai-ml",
+    "developer-tools"
+  ],
+  "description": "This blogs takes you through the process of building a language converter using Google Bard and Google Apps Script."
+}
