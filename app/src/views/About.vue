@@ -28,8 +28,8 @@
     >
       <h1 class="full-bleed-hero-heading">About</h1>
       <p class="mt-1 hero-description">
-        Dev Library is a curated platform for technical content written or built
-        using Google technologies like Android, Angular, Flutter, Firebase,
+        Dev Library is a community platform which showcases technical content featuring
+        Google technologies and developer solutions like Android, Angular, Flutter, Firebase,
         Google Cloud, Machine Learning, Google Assistant and Google Maps Platform.
       </p>
     </div>
