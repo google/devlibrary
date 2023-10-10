@@ -57,10 +57,10 @@
           <img src="../../public/img/featured-content.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">
-          Learn from developer community author content
+          Learn from community authored content
         </h2>
         <p class="text-lg px-8 pb-8">
-          Visit each product page to filter projects by Content Type, Category
+          Visit each product page to find projects by Content Type, Tags
           or Expertise level.
         </p>
         <MaterialButton type="text" class="mb-12">
@@ -77,7 +77,7 @@
         </div>
         <h2 class="text-3xl mb-6">Find product experts and authors</h2>
         <p class="text-lg px-8 pb-8">
-          Find and connect with product experts, speakers and authors in the
+          Connect with product experts, content creators and authors in the
           community.
         </p>
         <MaterialButton type="text" class="mb-12">

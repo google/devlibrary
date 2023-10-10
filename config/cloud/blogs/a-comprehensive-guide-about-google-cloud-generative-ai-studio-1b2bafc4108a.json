@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["rubenszimbres"],
+  "author": "Rubens Zimbres",
+  "title": "A Comprehensive Guide about Google Cloud Generative AI Studio",
+  "link": "https://medium.com/google-cloud/a-comprehensive-guide-about-google-cloud-generative-ai-studio-1b2bafc4108a",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "Here I present most options, including Python code for the server and for the client for many applications, that can be easily tested locally and implemented. The last part of this article presents the Fine Tuning of a Large Language Model in Generative AI Studio."
+}

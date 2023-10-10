@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["nathalyalarcont"],
+  "author": "Nathaly Alarcón",
+  "title": "How to use Gen AI for Social Media Marketing with PaLM API and Maker Suite",
+  "link": "https://medium.com/google-cloud/how-to-use-gen-ai-for-social-media-marketing-with-palm-api-and-maker-suite-6ab7bf515d0d",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "Generative Artificial Intelligence allows us to generate new creative content in text, code, images, etc. This time, we are going to create a web application that allows us to create marketing content."
+}
