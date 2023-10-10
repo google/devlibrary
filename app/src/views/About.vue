@@ -128,7 +128,7 @@
           </div>
           <div v-show="FaqData[1]" class="pb-2 border-b">
             <p class="mt-4">
-              Dev Library has been created to showcase the amazing open source projects being built with Google's tools and technologies by developers around the world. Through Google Dev Library we want to provide visibility for the talented developers behind the projects, and introduce high quality projects to the broader developer community to find inspiration.
+              Dev Library has been created to showcase the amazing open source projects being built with Google's tools and technologies by developers around the world. Through Google Dev Library we want to provide visibility for the talented developers behind the projects, and introduce useful projects to the broader developer community to find inspiration.
             </p>
           </div>
           <div
@@ -145,7 +145,7 @@
           </div>
           <div v-show="FaqData[3]" class="pb-2 border-b">
             <p class="mt-4">
-              <a target="_blank" href="https://forms.gle/Wco9K4ePqgCW5sre6">Subscribe</a> to our newsletter to stay up to date with the latest projects added to the platform. Our newsletter features some of the best submissions from each product every month. Also, you can check out the <a href="https://developers.googleblog.com/search/label/Google%20Dev%20Library">Dev Library blog archives</a> for past highlights.
+              <a target="_blank" href="https://devlibrary.withgoogle.com/featured-content"> Check out</a> our Featured Content page to stay up to date with the latest projects added to the platform. This page features some of the best submissions from each product every month. Also, you can check out the <a href="https://developers.googleblog.com/search/label/Google%20Dev%20Library">Dev Library blog archives</a> for past highlights.
             </p>
           </div>
           <p class="mt-6 font-bold">Contributing to Dev Library</p>
@@ -167,7 +167,7 @@
               <ol class="ml-6 mt-2 list-disc">
                 <li>Their own author profile page</li>
                 <li>A shiny contributor badge for their Google Developer profile</li>
-                <li>Spotlights in the Dev Library monthly newsletter</li>
+                <li>Spotlights in the Dev Library Featured Content page</li>
                 <li>Inspiring developers to build with Google!</li>
               </ol>
             </p>
@@ -198,7 +198,7 @@
             </p>
             <p>
             <i>*Note: Once submitted, you can't edit the form.</i><br>
-            You can make as many submissions as you want to showcase your work in your Author profile.
+            You can make as many submissions as you want to showcase your work in your Dev Library Author profile.
           </p>
           </div>
 
@@ -214,7 +214,7 @@
           </div>
           <div v-show="FaqData[6]" class="pb-2 border-b">
             <p class="mt-4">
-              Googlers review each submission for product relevance, alignment with current coding best practices, technical writing, and product standards. If approved, the project is included on the site and the contributor gets an author profile page which features their approved submissions.
+              Googlers go through each submission for usefulness, product relevance and basic alignment with current coding best practices, technical writing standards. If approved, the project is included on the site and the contributor gets an author profile page which features their approved submissions.
             </p>
           </div>
 
@@ -342,7 +342,7 @@
           </div>
           <div v-show="FaqData[13]" class="pb-2 border-b">
             <p class="mt-4">
-              If your content has been accepted, you are eligible for the Dev Library contributor badge. You’ll receive email instructions to claim your contributor badge. Contributor badges are sent out once every 2-3 months.
+              If your content has been accepted, you are eligible for the Dev Library contributor badge. You’ll receive email instructions to claim your contributor badge. Contributor badges are sent out once every quarter.
             </p>
           </div>
         </div>
