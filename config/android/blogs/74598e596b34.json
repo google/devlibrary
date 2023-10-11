@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["debanshu777"],
+  "author": "Debanshu Datta",
+  "title": "Getting Started with Kotlin Multiplatform",
+  "link": "https://medium.com/p/74598e596b34",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "compose"
+  ],
+  "description": "KMP is the modern SDK designed by JetBrains to simplify the development of cross-platform mobile applications. The main goal of this blog is to give you an overall understanding of data flow. I will be sharing a step-by-step hands-on project that will help you understand the basics of the KMP."
+}

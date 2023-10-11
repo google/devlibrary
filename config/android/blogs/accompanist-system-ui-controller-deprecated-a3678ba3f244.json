@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "stefanoq21"
+  ],
+  "author": "Stefano Natali",
+  "title": "Accompanist System UI Controller Deprecated",
+  "link": "https://medium.com/@stefanoq21/accompanist-system-ui-controller-deprecated-a3678ba3f244",
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ],
+  "description": "In this article I will explore how to replace  SystemUIController library, which has been deprecated due to potential issues with the WindowsInsets and the inability to always guarantee behavior."
+}

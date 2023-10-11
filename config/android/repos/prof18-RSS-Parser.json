@@ -1,0 +1,18 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "prof18"
+  ],
+  "owner": "prof18",
+  "repo": "RSS-Parser",
+  "name": "RSS-Parser",
+  "shortDescription": "RSS Parser is a Kotlin Multiplatform library for parsing RSS and Atom feeds. It supports Android, iOS, and the JVM.\n\nWith RSS Parser, you can fetch plenty of useful information from any RSS channel, b",
+  "longDescription": "RSS Parser is a Kotlin Multiplatform library for parsing RSS and Atom feeds. It supports Android, iOS, and the JVM.\n\nWith RSS Parser, you can fetch plenty of useful information from any RSS channel, b",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin"
+  ]
+}

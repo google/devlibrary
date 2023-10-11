@@ -1,0 +1,14 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["debanshu777"],
+  "author": "Debanshu Datta",
+  "title": "Kotlin/Native — Use Kotlin In C and Apple Framework [Part 2]",
+  "link": "https://medium.com/p/495a7952f831",
+  "tags": [
+    "build-tools",
+    "kotlin"
+  ],
+  "description": "In the previous article, we embarked on a journey into the world of Kotlin/Native, uncovering its capabilities in compiling Kotlin code to native binaries, free from the constraints of virtual machines. We explored the architecture of Kotlin/Native, delving into its LLVM-based backend and the crucia"
+}
