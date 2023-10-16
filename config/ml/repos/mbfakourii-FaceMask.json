@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mbfakourii"
+  ],
+  "owner": "mbfakourii",
+  "repo": "FaceMask",
+  "name": "FaceMask",
+  "shortDescription": "Implement Face Mask detection",
+  "longDescription": "Implement Face Mask detection",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "tf-core",
+    "keras"
+  ]
+}
