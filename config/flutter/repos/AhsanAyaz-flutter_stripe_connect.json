@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ahsanayaz"
+  ],
+  "owner": "AhsanAyaz",
+  "repo": "flutter_stripe_connect",
+  "name": "Flutter Stripe Connect Demo",
+  "shortDescription": "Code for the Flutter Marketplace Application named Panda Gums used in the tutorial \"Flutter Marketplace app with Stripe Connect\".",
+  "longDescription": "Code for the Flutter Marketplace Application named Panda Gums used in the tutorial \"Flutter Marketplace app with Stripe Connect\".",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}

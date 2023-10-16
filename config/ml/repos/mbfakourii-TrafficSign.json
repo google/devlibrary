@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "mbfakourii"
+  ],
+  "owner": "mbfakourii",
+  "repo": "TrafficSign",
+  "name": "Traffic sign",
+  "shortDescription": "Implement Traffic Sign Detection",
+  "longDescription": "Implement Traffic Sign Detection",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "tf-core",
+    "kaggle"
+  ]
+}
