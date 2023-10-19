@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["pherwani37"],
+  "author": "Nirbhay Pherwani",
+  "title": "Building the Flappy Musk.eteer Arcade Game (Jetpack Compose)",
+  "link": "https://medium.com/proandroiddev/building-the-flappy-musk-eteer-arcade-game-with-jetpack-compose-d2af63a634ea",
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "In this article, we embark on a journey to construct Flappy Musk.eteer from scratch using Jetpack Compose. We’ll dissect the code, logic, and design decisions that bring this mobile game to life, guiding you through the process of creating an immersive Android gaming experience."
+}

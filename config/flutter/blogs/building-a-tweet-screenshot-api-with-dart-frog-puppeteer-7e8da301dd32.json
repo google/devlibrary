@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "zfinix"
+  ],
+  "author": "Chiziaruhoma Ogbonda",
+  "title": "Building a Tweet Screenshot API with Dart Frog & Puppeteer",
+  "link": "https://medium.com/@zfinix/building-a-tweet-screenshot-api-with-dart-frog-puppeteer-7e8da301dd32",
+  "tags": [
+    "web",
+    "plugins"
+  ],
+  "description": "This is a short intro on how to use Dart Frog Server Side to build a Tweet Screenshot API"
+}

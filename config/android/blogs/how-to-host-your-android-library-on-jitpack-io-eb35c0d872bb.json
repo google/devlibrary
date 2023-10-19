@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "rhymezxcode"
+  ],
+  "author": "Samuel Awodire",
+  "title": "How to host your Android library on Jitpack.io",
+  "link": "https://rhymezxcode.medium.com/how-to-host-your-android-library-on-jitpack-io-eb35c0d872bb",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "build-tools"
+  ],
+  "description": "This is a step by step way to host your Android Library on jitpack.io"
+}

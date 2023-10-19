@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "nstiwari"
+  ],
+  "owner": "NSTiwari",
+  "repo": "Video-Game-Control-using-Pose-Classification-and-TensorFlow-Lite",
+  "name": "Video Game Control using Pose Classification",
+  "shortDescription": "This project showcases a captivating implementation of video game control (Ashes Cricket 2009) through pose classification using TF Lite, allowing the users to play the game without using a keyboard.",
+  "longDescription": "This project showcases a captivating implementation of video game control (Ashes Cricket 2009) through pose classification using TF Lite, allowing the users to play the game without using a keyboard.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "tf-lite",
+    "tf-core"
+  ]
+}

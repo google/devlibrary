@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["aseemwangoo"],
+  "author": "Aseem Wangoo",
+  "title": "Integrate Google Bard in Flutter",
+  "link": "https://flatteredwithflutter.com/integrate-google-bard-in-flutter/",
+  "tags": [
+    "ai-ml"
+  ],
+  "description": "Discover the essentials of integrating Google Bard seamlessly into your Flutter projects. Dive into the capabilities of Google Bard and its effortless integration with the Flutter user interface. Harness the potential of the Google Bard API to elevate your Flutter applications, and gain insights."
+}

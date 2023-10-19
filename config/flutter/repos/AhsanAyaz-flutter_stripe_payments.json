@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "ahsanayaz"
+  ],
+  "owner": "AhsanAyaz",
+  "repo": "flutter_stripe_payments",
+  "name": "Flutter Stripe Payments",
+  "shortDescription": "A flutter project demonstrating STRIPE implementation with Flutter.",
+  "longDescription": "A flutter project demonstrating STRIPE implementation with Flutter.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "mobile",
+    "samples"
+  ]
+}
