@@ -1,0 +1,16 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "bhoomivaghasiya"
+  ],
+  "author": "Bhoomi Vaghasiya",
+  "title": "Android 14 : Privacy & Security Upgrade for Developers",
+  "link": "https://medium.com/@bhoomivaghasiya/developers-take-note-android-14s-privacy-security-upgrades-37d379c3d005",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "Android 14 is here! so it's time to upgrade our apps! I know upgrades can be bit of headache for developers, but it's all worth it for user privacy. In this article, we will explore the privacy and security features of Android 14 that developers should know."
+}
