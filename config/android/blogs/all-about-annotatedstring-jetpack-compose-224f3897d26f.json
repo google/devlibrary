@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "ranjanrukhaya"
+  ],
+  "author": "Ranjan Rukhaya",
+  "title": "All about AnnotatedString (Jetpack Compose)",
+  "link": "https://medium.com/@ranjanrukhaya/all-about-annotatedstring-jetpack-compose-224f3897d26f",
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ],
+  "description": "AnnotatedString is the basic data structure of text with multiple styles. We can use AnnotatedString for creating all special texts like text with multiple styles, clickable text, text with some icon & much more"
+}
