@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["aritra-tech"],
+  "author": "Aritra Das",
+  "title": "Why Migrate Your Build Configurations from Groovy to Kotlin",
+  "link": "https://medium.com/stackademic/why-migrate-your-build-configurations-from-groovy-to-kotlin-dsl-kts-17bd229e4170",
+  "tags": [
+    "modern-android-development",
+    "kotlin"
+  ],
+  "description": "Let's understand the migration of build.gradle from Groovy to Kotlin DSL(KTS)"
+}

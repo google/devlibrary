@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["nateebel"],
+  "author": "Nate Ebel",
+  "title": "Publishing Kotlin Multiplatform Swift Packages Using Google Cloud Storage and Cloud Run",
+  "link": "https://engineering.premise.com/publishing-kotlin-multiplatform-swift-packages-to-google-cloud-storage-be5c6987e5d",
+  "tags": [
+    "storage",
+    "serverless-computing"
+  ],
+  "description": "A detailed walkthrough of how we publish, and consume, Swift Packages generated from Kotlin Multiplatform libraries using Cloud Storage and Cloud Run."
+}

@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "thedirone"
+  ],
+  "owner": "theDIRone",
+  "repo": "T3",
+  "name": "T3",
+  "shortDescription": "T3 is a multiplayer real-time Tic-Tac-Toe game that uses the Socket Programming internally. In simple, this app demonstrates a real-world application of socket programming in Kotlin.",
+  "longDescription": "T3 is a multiplayer real-time Tic-Tac-Toe game that uses the Socket Programming internally. In simple, this app demonstrates a real-world application of socket programming in Kotlin.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}
