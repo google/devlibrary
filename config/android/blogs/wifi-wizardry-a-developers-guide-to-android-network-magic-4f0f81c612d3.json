@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["jamescullimore"],
+  "author": "James Cullimore",
+  "title": "WiFi Wizardry",
+  "link": "https://levelup.gitconnected.com/wifi-wizardry-a-developers-guide-to-android-network-magic-4f0f81c612d3",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "A guide on how to connect to WiFi networks programatcally"
+}

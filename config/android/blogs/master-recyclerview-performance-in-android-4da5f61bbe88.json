@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "bansal-yogesh940"
+  ],
+  "author": "yogesh bansal",
+  "title": "Master RecyclerView Performance in Android",
+  "link": "https://medium.com/@bansal.yogesh940/master-recyclerview-performance-in-android-4da5f61bbe88",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "ui"
+  ],
+  "description": "RecyclerView is essential in Android app development for efficient display of large data sets. However, poor optimization can result in performance problems like stuttering, slow scrolling, and high memory usage. In this blog, we'll discuss tips to enhance RecyclerView performance in Kotlin. Topics"
+}

@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "bhoomivaghasiya"
+  ],
+  "author": "Bhoomi Vaghasiya",
+  "title": "Best Practices in Jetpack Compose for beginners",
+  "link": "https://medium.com/@bhoomivaghasiya/best-practices-in-jetpack-compose-for-beginners-949d2b90a1b1",
+  "tags": [
+    "kotlin",
+    "modern-android-development",
+    "compose"
+  ],
+  "description": "In this article, I will discuss best practices to follow when building an application using Jetpack Compose. These best practices are especially useful for beginners who may find it challenging to improve their app’s performance and code readability."
+}
