@@ -138,7 +138,27 @@ export default class FeaturedContent extends Vue {
         }
 
         // Conditional logic to show projects based on Featured Content Menu selection
-        if (contentGroup === "September 2023") {
+        if (contentGroup === "October 2023") {
+            this.description = "Discover content from Google Cloud, Android 14 and GenAI published in October!";
+            const blogData1 = await fetchBlog("cloud", "integrate-google-bard-in-flutter");
+            if (blogData1) blogs.push(blogData1);
+            const blogData2 = await fetchBlog("cloud", "serverless-data-pipelines-in-gcp-using-dataform-and-bigquery-remote-functions-9ee235d0cb18");
+            if (blogData2) blogs.push(blogData2);
+            const blogData3 = await fetchBlog("cloud", "dltips-en-tensorflow-callback-gpu-memory-consumption");
+            if (blogData3) blogs.push(blogData3);
+            const blogData4 = await fetchBlog("ml", "how-generative-ai-improves-the-productivity-of-software-developers-821e8453bd8d");
+            if (blogData4) blogs.push(blogData4);
+            const blogData5 = await fetchBlog("android", "jetpack-compose-for-maps");
+            if (blogData5) blogs.push(blogData5);
+            const blogData6 = await fetchBlog("android", "developers-take-note-android-14s-privacy-security-upgrades-37d379c3d005");
+            if (blogData6) blogs.push(blogData6);
+            const repoData1 = await fetchRepo("android", "Taaveez-Taaveez-android");
+            if (repoData1) repos.push(repoData1);
+            const repoData2 = await fetchRepo("android", "getspherelabs-anypass-kmp");
+            if (repoData2) repos.push(repoData2);
+            addAndSortProjects(blogs, repos);
+        }
+        else if (contentGroup === "September 2023") {
             this.description = "Discover projects published in September from Google Cloud, MediaPipe and Jetpack Compose!";
             const repoData1 = await fetchRepo("ml", "KevKibe-RealTime-Gesture-Recognition-using-Mediapipe");
             if (repoData1) repos.push(repoData1);
@@ -146,12 +166,14 @@ export default class FeaturedContent extends Vue {
             if (repoData2) repos.push(repoData2);
             const repoData3 = await fetchRepo("android", "ErfanSn-AR-Touch");
             if (repoData3) repos.push(repoData3);
-            const repoData4 = await fetchRepo("ml", "doggy8088-PaLM");
-            if (repoData4) repos.push(repoData4);
             const blogData1 = await fetchBlog("cloud", "2023-09-01-palm-recommendation");
             if (blogData1) blogs.push(blogData1);
             const blogData2 = await fetchBlog("cloud", "how-to-manage-google-cloud-compute-engine-with-python");
             if (blogData2) blogs.push(blogData2);
+            const blogData3 = await fetchBlog("cloud", "deploying-a-google-cloud-generative-ai-app-in-a-website-with-cloud-run-7c8aa5db344");
+            if (blogData3) blogs.push(blogData3);
+            const blogData4 = await fetchBlog("cloud", "how-to-use-gen-ai-for-social-media-marketing-with-palm-api-and-maker-suite-6ab7bf515d0d");
+            if (blogData4) blogs.push(blogData4);
             addAndSortProjects(blogs, repos);
         } else if (contentGroup === "August 2023") {
             this.description = "Discover content from Makersuite, Bard and Jetpack Compose published in August!";
@@ -165,7 +187,7 @@ export default class FeaturedContent extends Vue {
             if (blogData4) blogs.push(blogData4);
             const blogData5 = await fetchBlog("android", "understanding-figma-as-a-developer-auto-layout-4d9773daf1d9");
             if (blogData5) blogs.push(blogData5);
-            const blogData6 = await fetchBlog("ml", "config/ml/blogs/pulse-discover-how-googles-automl-can-help-define-problems-improve-manor.json");
+            const blogData6 = await fetchBlog("ml", "pulse-discover-how-googles-automl-can-help-define-problems-improve-manor");
             if (blogData6) blogs.push(blogData6);
             const blogData7 = await fetchBlog("cloud", "2023-08-07-meeting_minutes_gcp_serverless");
             if (blogData7) blogs.push(blogData7);
