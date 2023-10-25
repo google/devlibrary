@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": [],
+  "author": "Arthur Kaza",
+  "title": "TensorBoard is an open-source service launched by Google packaged TF",
+  "link": "https://arthurkaza.hashnode.dev/taking-advantage-of-tensorboard-part-i?source=more_series_bottom_blogs",
+  "tags": [
+    "tfx",
+    "pose"
+  ],
+  "description": "TensorBoard is a powerful open-source tool developed by Google as part of the TensorFlow project. It allows machine learning engineers and researchers to understand, debug, and optimize machine learning models simply by providing visual insight into the training, visualization and performance"
+}
