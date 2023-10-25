@@ -126,6 +126,14 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
         value: "tpu",
       },
       {
+        label:"Vertex AI",
+        value:"vertex-ai"
+      },
+      {
+        label:"MakerSuite",
+        value:"makersuite"
+      },
+      {
         label: "Other Google ML products",
         value: "other-google-ml-products",
       }

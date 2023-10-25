@@ -24,8 +24,8 @@
             <div class="sections">
                 <div class="section">
                     <PillGroup prefix="contentGroup"
-                        :keys="['September 2023','August 2023']"
-                        :values="['September 2023','August 2023']" v-model="contentGroup"
+                        :keys="['October 2023','September 2023','August 2023']"
+                        :values="['October 2023','September 2023','August 2023']" v-model="contentGroup"
                         :start-empty="false" />
                 </div>
             </div>
@@ -47,7 +47,7 @@ export default class FeaturedContentMenu extends Vue {
     public contentGroup = "";
     public filtersChanged = false;
     public defaultFilters = {
-        contentGroup: "'September 2023'",
+        contentGroup: "'October 2023'",
     };
     public loaded = false;
 
