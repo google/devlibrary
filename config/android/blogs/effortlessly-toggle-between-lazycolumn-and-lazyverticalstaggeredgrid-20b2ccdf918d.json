@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "aritra-tech"
+  ],
+  "author": "Aritra Das",
+  "title": "Effortlessly Toggle Between LazyColumn and LazyVerticalStagg",
+  "link": "https://medium.com/@aritradas20/effortlessly-toggle-between-lazycolumn-and-lazyverticalstaggeredgrid-20b2ccdf918d",
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ],
+  "description": "So, today we will see how can we convert a LazyColumn to a LazyVerticalStaggeredGrid & vice-versa using a button."
+}

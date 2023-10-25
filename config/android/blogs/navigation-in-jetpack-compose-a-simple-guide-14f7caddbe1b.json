@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "bhoomivaghasiya"
+  ],
+  "author": "Bhoomi Vaghasiya",
+  "title": "Navigation in Jetpack Compose : A Simple Guide",
+  "link": "https://medium.com/@bhoomivaghasiya/navigation-in-jetpack-compose-a-simple-guide-14f7caddbe1b",
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "In this article, we will explore the Navigation Component and how to use it to navigate between screens in Jetpack Compose. This also covers the key concepts of Navigation Component."
+}
