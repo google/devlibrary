@@ -2,7 +2,7 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": [],
+  "authorIds": ["arthurstarks"],
   "author": "Arthur Kaza",
   "title": "TensorBoard is an open-source service launched by Google packaged TF",
   "link": "https://arthurkaza.hashnode.dev/taking-advantage-of-tensorboard-part-i?source=more_series_bottom_blogs",
