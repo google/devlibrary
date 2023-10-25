@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "nortln"
+  ],
+  "owner": "nortln",
+  "repo": "Brain_MRI_Classification",
+  "name": "Brain MRI Classification",
+  "shortDescription": "A brain mri classification projects. Takes a brain mri scan as input and classifies the tumor disease associated with the scan.",
+  "longDescription": "A brain mri classification projects. Takes a brain mri scan as input and classifies the tumor disease associated with the scan.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "tf-core",
+    "pose"
+  ]
+}
