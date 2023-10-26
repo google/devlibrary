@@ -154,8 +154,6 @@ export default class FeaturedContent extends Vue {
             if (blogData6) blogs.push(blogData6);
             const repoData1 = await fetchRepo("android", "Taaveez-Taaveez-android");
             if (repoData1) repos.push(repoData1);
-            const repoData2 = await fetchRepo("android", "getspherelabs-anypass-kmp");
-            if (repoData2) repos.push(repoData2);
             addAndSortProjects(blogs, repos);
         }
         else if (contentGroup === "September 2023") {
