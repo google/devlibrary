@@ -12,5 +12,5 @@
   "longDescription": "This is a patch to allow you run Python 3 Apps on Windows using dev_appserver.py (ONLY for GAE Standard Environment).",
   "content": "README.md",
   "pages": [],
-  "tags": []
+  "tags": ["developer-tools"]
 }
