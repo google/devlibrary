@@ -180,7 +180,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     key: ProductKey.FLUTTER,
     name: "Flutter",
     description:
-      "Flutter is an open source framework for building fast, beautiful apps for iOS and Android, web, desktop, and more. It uses the Dart programming language, which provides a rich set of libraries and frameworks for building responsive, high-performance apps. Dev Library has a curated collection of Flutter blogs, open source projects, and tutorials contributed by developers around the world.</b>Please note community submissions to the Flutter product category are currently paused",
+      "Flutter is an open source framework for building fast, beautiful apps for iOS and Android, web, desktop, and more. It uses the Dart programming language, which provides a rich set of libraries and frameworks for building responsive, high-performance apps. Dev Library has a curated collection of Flutter blogs, open source projects, and tutorials contributed by developers around the world.<\n>Please note community submissions to the Flutter product category are currently paused",
     docsUrl: "https://flutter.dev/",
     tags: [
       {
