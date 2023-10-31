@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["bgiri-gcloud"],
+  "author": "Biswanath Giri",
+  "title": "How to design a landing zone on Google Cloud",
+  "link": "https://medium.com/google-cloud/customer-onboarding-best-practices-gcp-foundations-zone-265c1d25fe1",
+  "tags": [
+    "hybrid-multicloud",
+    "networking",
+    "security-identity"
+  ],
+  "description": "Technical GCP Onboarding Overview\n\nAs we all know, a smooth and secure onboarding process is a key step for our customers in their digital transformation journey. Our focus is on an accelerated onboarding approach for our global customers, emphasizing speed and scale, powered by automation processes"
+}
