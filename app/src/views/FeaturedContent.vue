@@ -138,7 +138,7 @@ export default class FeaturedContent extends Vue {
         }
 
         // Conditional logic to show projects based on Featured Content Menu selection
-        if (contentGroup === "October 202") {
+        if (contentGroup === "October 2023") {
             this.description = "Discover content from Google Cloud, Android 14 and GenAI published in October!";
             const blogData1 = await fetchBlog("cloud", "integrate-google-bard-in-flutter");
             if (blogData1) blogs.push(blogData1);
