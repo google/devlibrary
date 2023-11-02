@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "xavidop"
+  ],
+  "owner": "xavidop",
+  "repo": "dialogflow-cx-webhook-pokedex",
+  "name": "Dialogflow CX Pokedex",
+  "shortDescription": "Dialogflow CX Webhook that fetches information from PokeAPI",
+  "longDescription": "Dialogflow CX Webhook that fetches information from PokeAPI",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "pose"
+  ]
+}

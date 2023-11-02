@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "dimitreoliveira"
+  ],
+  "owner": "dimitreOliveira",
+  "repo": "stable-diffusion-textual-inversion-app",
+  "name": "StableDiffusion - Textual-Inversion",
+  "shortDescription": "This APP loads a pre-trained StableDiffusion model using the Keras framework and fine-tunes it using the Textual Inversion process.",
+  "longDescription": "This APP loads a pre-trained StableDiffusion model using the Keras framework and fine-tunes it using the Textual Inversion process.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "keras",
+    "tf-core"
+  ]
+}

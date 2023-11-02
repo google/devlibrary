@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["arthurstarks"],
+  "author": "Arthur Kaza",
+  "title": "For machine learning engineers, fitting is a particularly challenge",
+  "link": "https://arthurkaza.hashnode.dev/build-compile-and-fit-models-in-tensorflow-part-ii",
+  "tags": [
+    "tfx",
+    "pose"
+  ],
+  "description": "Similar to playing Jenga, fitting a model is a process. We begin with a shaky skyscraper made of blocks (the model). After feeding the model data, we begin removing bricks to determine if the tower still stands (the model is accurate in its predictions)."
+}
