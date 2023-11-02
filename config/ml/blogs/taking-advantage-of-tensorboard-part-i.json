@@ -8,7 +8,7 @@
   "link": "https://arthurkaza.hashnode.dev/taking-advantage-of-tensorboard-part-i?source=more_series_bottom_blogs",
   "tags": [
     "tfx",
-    "pose"
+    "other-google-ml-products"
   ],
   "description": "TensorBoard is a powerful open-source tool developed by Google as part of the TensorFlow project. It allows machine learning engineers and researchers to understand, debug, and optimize machine learning models simply by providing visual insight into the training, visualization and performance"
 }
