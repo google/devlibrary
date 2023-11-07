@@ -30,7 +30,7 @@
 
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
-          <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
+          <p class="text-xl mt-9 mb-4 pr-4 lg:pr-0">
             Explore open-source dev projects and content library featuring Google 
             technologies and developer solutions contributed by developers from around the world and find
             the inspiration you need for your next project.
