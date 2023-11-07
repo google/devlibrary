@@ -31,7 +31,6 @@
         <MaterialButton type="text" @click.native="show = false"
           >Cancel</MaterialButton
         >
-        >
       </div>
     </div>
   </div>
