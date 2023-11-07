@@ -38,9 +38,6 @@
              <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
             Please we are not accepting any new submissions currently.
             </p>
-            <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
-            Please note we are not accepting any new submissions currently.
-          </p>
           <div class="mt-4 lg:mt-6">
             <MaterialButton type="primary">
               <a href="#all-products" class="section">
