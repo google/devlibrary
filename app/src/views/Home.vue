@@ -33,7 +33,10 @@
           <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
             Explore open-source dev projects and content library featuring Google tools and
             technologies contributed by developers from around the world. Find
-            the inspiration you need for your next project!
+            the inspiration you need for your next project! 
+            </p>
+            <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
+            Please note we are not accepting any new submissions currently.
           </p>
           <div class="mt-4 lg:mt-6">
             <MaterialButton type="primary">
@@ -60,8 +63,7 @@
           Learn from community authored content
         </h2>
         <p class="text-lg px-8 pb-8">
-          Visit each product page to find projects by Content Type, Tags
-          or Expertise level.
+          Learn from projects and blogs created by fellow developers.
         </p>
         <MaterialButton type="text" class="mb-12">
           <div class="frc">
@@ -75,9 +77,9 @@
         <div class="value-prop-image">
           <img src="../../public/img/speakers.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Find product experts and authors</h2>
+        <h2 class="text-3xl mb-6">Connect with product experts and authors</h2>
         <p class="text-lg px-8 pb-8">
-          Connect with product experts, content creators and authors in the
+          Find dev experts, content creators and authors in the
           community.
         </p>
         <MaterialButton type="text" class="mb-12">
@@ -93,15 +95,14 @@
           <img src="../../public/img/inspiration.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">
-          Build and showcase your technical projects
+          Discover latest and in-focus topics
         </h2>
         <p class="text-lg px-8 pb-8">
-          Submit your projects and blogs to Dev Library to inspire other
-          developers.
+          Check out inspiring projects build with Google developer solutions.
         </p>
         <MaterialButton type="text" class="mb-12">
           <div class="frc">
-            <a href="/about" class="text-lg">Learn more</a>
+            <a href="/featured-content" class="text-lg">Learn more</a>
           </div>
         </MaterialButton>
       </div>
