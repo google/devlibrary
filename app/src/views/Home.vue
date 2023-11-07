@@ -31,12 +31,12 @@
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
-            Explore open-source dev projects and content library featuring Google tools and
-            technologies contributed by developers from around the world. Find
-            the inspiration you need for your next project! 
+            Explore open-source dev projects and content library featuring Google 
+            technologies and developer solutions contributed by developers from around the world and find
+            the inspiration you need for your next project.
             </p>
-             <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
-            *We are currently closed for new submissions.
+             <p class="mt-2 mb-4 lg:w-3/4 leading-6">
+            We are currently not accepting new submissions from the community, please check back later!
             </p>
           <div class="mt-4 lg:mt-6">
             <MaterialButton type="primary">
