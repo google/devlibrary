@@ -35,6 +35,9 @@
             technologies contributed by developers from around the world. Find
             the inspiration you need for your next project! 
             </p>
+             <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
+            Please we are not accepting any new submissions currently.
+            </p>
             <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
             Please note we are not accepting any new submissions currently.
           </p>
