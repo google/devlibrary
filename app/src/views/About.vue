@@ -48,8 +48,7 @@
           </ul>
 
           <p class="mt-4">
-            This platform will evolve as we receive more submissions and we are
-            working to accept a wider range of content, so stay tuned!
+            We are currently not accepting new submissions from the community, please check back later!
           </p>
           <p class="mt-8 flex flex-wrap gap-4">
             <a href="mailto:library-google-dev@google.com">
