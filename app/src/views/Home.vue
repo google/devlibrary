@@ -31,11 +31,10 @@
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="text-xl mt-9 mb-4 pr-4 lg:pr-0">
-            Explore open-source dev projects and content library featuring Google 
-            technologies and developer solutions contributed by developers from around the world and find
+            Explore open-source dev projects featuring Google developer solutions contributed by developers from around the world and find
             the inspiration you need for your next project.
             </p>
-             <p class="text-m mt-9 mb-8 pr-4 lg:pr-0">
+             <p class="text-m mt-4 mb-4 pr-4 lg:pr-0">
             We are currently not accepting new submissions from the community, please check back later!
             </p>
           <div class="mt-4 lg:mt-6">
