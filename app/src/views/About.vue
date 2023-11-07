@@ -185,8 +185,11 @@
           </div>
           <div v-show="FaqData[5]" class="pb-2 border-b">
             <p>
+            Please note we are currently not accepting new submissions from the community, please check back later!
+            </p>
+            <p>
               Before you submit, it’s a good idea to familiarize yourself with the <a href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf">contribution guidelines</a> in addition to the official documentation of every product. After doing so, follow these simple steps :-
-            
+
             <ol class="ml-6 mt-2 list-disc">
               <li>Find the Submit button on the top navigation bar</li>
               <li>You will be redirected to the advocu form link</li>

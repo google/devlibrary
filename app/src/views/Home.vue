@@ -94,7 +94,7 @@
           <img src="../../public/img/inspiration.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">
-          Discover latest and in-focus topics
+          Discover latest projects from in-focus dev topics
         </h2>
         <p class="text-lg px-8 pb-8">
           Check out inspiring projects build with Google developer solutions.
