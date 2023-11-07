@@ -59,7 +59,7 @@
           <img src="../../public/img/featured-content.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">
-          Learn from community authored content
+          Learn from community content
         </h2>
         <p class="text-lg px-8 pb-8">
           Learn from projects and blogs created by fellow developers.
@@ -76,7 +76,7 @@
         <div class="value-prop-image">
           <img src="../../public/img/speakers.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Connect with product experts and authors</h2>
+        <h2 class="text-3xl mb-6">Connect with experts and authors</h2>
         <p class="text-lg px-8 pb-8">
           Find dev experts, content creators and authors in the
           community.
@@ -224,8 +224,8 @@
         <h2 class="text-3xl">Latest dev projects</h2>
         <div class="desktop-only">
           <p class="mt-2 mb-4 lg:w-3/4 leading-6">
-            Check out the latest projects we've added to the Dev Library. To see
-            all projects, choose one of the product areas below.
+            Check out the latest projects added to Dev Library. To see
+            all projects, choose one of the products below.
           </p>
           <div class="flex flex-row gap-1 mb-3">
             <div
