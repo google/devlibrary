@@ -35,7 +35,7 @@
             technologies and developer solutions contributed by developers from around the world and find
             the inspiration you need for your next project.
             </p>
-             <p class="mt-2 mb-4 lg:w-3/4 leading-6">
+             <p class="text-m mt-9 mb-8 pr-4 lg:pr-0">
             We are currently not accepting new submissions from the community, please check back later!
             </p>
           <div class="mt-4 lg:mt-6">
