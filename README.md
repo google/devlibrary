@@ -15,8 +15,6 @@ If you are a developer who has built an open-source project, or has written abou
 - Google Assistant
 - Google Maps Platform
 
-[Subscribe here](https://forms.gle/jXM3sCqnjSbkrWWz5).
-
 ### Dev Library Interview with Authors : Our Youtube Playlist
 Watch interviews of some of our contributors talking about their open source projects and why they contributed to Dev Library. You can access the [complete playlist here](https://youtube.com/playlist?list=PLxNYxgaZ8RseRNZYtcMBq6SfAuQkE0Fci). 
 
@@ -36,6 +34,5 @@ The official newsletter by Dev Library highlights some of the best submissions o
 
 ### How to get started: 
 
-Headover to [our product website](https://devlibrary.withgoogle.com/), and click the __Submit Your Content__ button. You can also learn more about the submission process using the [contribution guidelines](https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf) to get started.
-
-Lastly, "Watch" the repository for any future updates. If you have specific questions about the roadmap and [create an issue](https://github.com/google/devlibrary/issues).
+Headover to [our product website](https://devlibrary.withgoogle.com/), and browse through the various projects contributed by the developer community. 
+ "Watch" the repository for any future updates. If you have specific questions about the roadmap and [create an issue](https://github.com/google/devlibrary/issues).

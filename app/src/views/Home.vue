@@ -30,11 +30,13 @@
 
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
-          <p class="text-xl mt-9 mb-8 pr-4 lg:pr-0">
-            Explore open-source dev projects and content library featuring Google tools and
-            technologies contributed by developers from around the world. Find
-            the inspiration you need for your next project!
-          </p>
+          <p class="text-xl mt-9 mb-4 pr-4 lg:pr-0">
+            Explore open-source dev projects featuring Google developer solutions contributed by developers from around the world and find
+            the inspiration you need for your next project.
+            </p>
+             <p class="text-m mt-4 mb-4 pr-4 lg:pr-0">
+            We are currently not accepting new submissions from the community, please check back later!
+            </p>
           <div class="mt-4 lg:mt-6">
             <MaterialButton type="primary">
               <a href="#all-products" class="section">
@@ -57,11 +59,10 @@
           <img src="../../public/img/featured-content.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">
-          Learn from community authored content
+          Learn from community content
         </h2>
         <p class="text-lg px-8 pb-8">
-          Visit each product page to find projects by Content Type, Tags
-          or Expertise level.
+          Learn from projects and blogs created by fellow developers.
         </p>
         <MaterialButton type="text" class="mb-12">
           <div class="frc">
@@ -75,9 +76,9 @@
         <div class="value-prop-image">
           <img src="../../public/img/speakers.svg" class="w-1/3" />
         </div>
-        <h2 class="text-3xl mb-6">Find product experts and authors</h2>
+        <h2 class="text-3xl mb-6">Connect with experts and authors</h2>
         <p class="text-lg px-8 pb-8">
-          Connect with product experts, content creators and authors in the
+          Find dev experts, content creators and authors in the
           community.
         </p>
         <MaterialButton type="text" class="mb-12">
@@ -93,15 +94,14 @@
           <img src="../../public/img/inspiration.svg" class="w-1/3" />
         </div>
         <h2 class="text-3xl mb-6">
-          Build and showcase your technical projects
+          Discover latest projects from in-focus dev topics
         </h2>
         <p class="text-lg px-8 pb-8">
-          Submit your projects and blogs to Dev Library to inspire other
-          developers.
+          Check out inspiring projects build with Google developer solutions.
         </p>
         <MaterialButton type="text" class="mb-12">
           <div class="frc">
-            <a href="/about" class="text-lg">Learn more</a>
+            <a href="/featured-content" class="text-lg">Learn more</a>
           </div>
         </MaterialButton>
       </div>
@@ -224,8 +224,8 @@
         <h2 class="text-3xl">Latest dev projects</h2>
         <div class="desktop-only">
           <p class="mt-2 mb-4 lg:w-3/4 leading-6">
-            Check out the latest projects we've added to the Dev Library. To see
-            all projects, choose one of the product areas below.
+            Check out the latest projects added to Dev Library. To see
+            all projects, choose one of the products below.
           </p>
           <div class="flex flex-row gap-1 mb-3">
             <div
