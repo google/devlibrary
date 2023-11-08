@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["dimitreoliveira"],
+  "author": "Dimitre Oliveira",
+  "title": "Shortening model deployment with TensorFlow",
+  "link": "https://medium.com/towards-data-science/shortening-model-deployment-with-tensorflow-d5a11044d0d",
+  "tags": [
+    "keras",
+    "tf-core"
+  ],
+  "description": "How to make ML model deployment and serving easier with Keras.\nThis blog post will help you easily experiment with TensorFlow models and then deploy them to production without having to worry about complex additional pre-processing steps, you will learn how to embed all that logic into the model."
+}

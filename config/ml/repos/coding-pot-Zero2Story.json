@@ -1,0 +1,19 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "coding-pot"
+  ],
+  "owner": "coding-pot",
+  "repo": "Zero2Story",
+  "name": "Zero2Story",
+  "shortDescription": "Zero2Story is a framework built on top of PaLM API, Stable Diffusion, MusicGen for ordinary people to create their own stories.",
+  "longDescription": "Zero2Story is a framework built on top of PaLM API, Stable Diffusion, MusicGen for ordinary people to create their own stories.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "makersuite",
+    "other-google-ml-products"
+  ]
+}

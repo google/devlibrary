@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["uvaishnav"],
+  "author": "Vaishnav Uppalapati",
+  "title": "Save Your Peach Crops from Infection with This Simple TensorFlow CNN Model",
+  "link": "https://uvaishnav.hashnode.dev/save-your-peach-crops-from-infection-with-this-simple-tensorflow-cnn-model",
+  "tags": [
+    "tf-core",
+    "keras",
+    "kaggle"
+  ],
+  "description": "Peach crop plants are susceptible to several diseases, which can have a significant impact on yield.🥲\nDo you want to learn how to use a simple TensorFlow CNN model to detect and classify peach diseases?☺️\nIf yes, then you should check out my latest blog post on Hashnode."
+}

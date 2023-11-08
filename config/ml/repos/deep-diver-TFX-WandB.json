@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "deep-diver"
+  ],
+  "owner": "deep-diver",
+  "repo": "TFX-WandB",
+  "name": "TFX + W&B Integration",
+  "shortDescription": "This repository is designed to contain the following implementations towards TensorFlow Extended(TFX) and Weights and Biases(W&B) integrations.",
+  "longDescription": "This repository is designed to contain the following implementations towards TensorFlow Extended(TFX) and Weights and Biases(W&B) integrations.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "tfx",
+    "tf-core",
+    "keras"
+  ]
+}

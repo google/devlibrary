@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["dimitreoliveira"],
+  "author": "Dimitre Oliveira",
+  "title": "Content creation using MakerSuite and PaLM API",
+  "link": "https://medium.com/google-developer-experts/content-creation-using-makersuite-and-palm-api-3dfc3a924510",
+  "tags": [
+    "other-google-ml-products"
+  ],
+  "description": "How to use LLMs to create content and engage with your audience.\n\nThis blob post will help you to create product prototypes with MakerSuite, then use PaLM API to create real products ready for production."
+}
