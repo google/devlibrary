@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["arthurstarks"],
+  "authorIds": [
+    "arthurstarks"
+  ],
   "author": "Arthur Kaza",
   "title": "TFX and TF-DF  for MLOps are ML pipelines game changer",
   "link": "https://arthurkaza.hashnode.dev/mlops-using-tensorflow-extended-tfx-and-tensorflow-decision-forest-tf-df",

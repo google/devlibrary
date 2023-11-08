@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["uvaishnav"],
+  "authorIds": [
+    "uvaishnav"
+  ],
   "author": "Vaishnav Uppalapati",
   "title": "Save Your Peach Crops from Infection with This Simple TensorFlow CNN Model",
   "link": "https://uvaishnav.hashnode.dev/save-your-peach-crops-from-infection-with-this-simple-tensorflow-cnn-model",
