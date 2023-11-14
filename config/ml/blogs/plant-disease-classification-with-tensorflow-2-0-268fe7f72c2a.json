@@ -9,7 +9,7 @@
   "title": "Plant Disease Classification with TensorFlow Lite on Android",
   "link": "https://yannicksergeobam.medium.com/plant-disease-classification-with-tensorflow-2-0-268fe7f72c2a",
   "tags": [
-    "tf-lite"
+    "tflite"
   ],
   "description": "For this project, we are going to create an end-to-end Android application with TFLite. We opte to develop an Android application that detects plant diseases.\nThe project is broken down into two steps:\n1- Building and creating a machine learning \n2- Deploying the model to an Android application"
 }
