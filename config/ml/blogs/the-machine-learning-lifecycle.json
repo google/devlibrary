@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "other",
-  "authorIds": ["arthurstarks"],
+  "authorIds": [
+    "arthurstarks"
+  ],
   "author": "Arthur Kaza",
   "title": "The ML lifecycle consists of several precise phases that help us turn",
   "link": "https://arthurkaza.hashnode.dev/the-machine-learning-lifecycle?source=more_series_bottom_blogs",

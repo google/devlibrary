@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Scalable RAG applications on GCP with Serverless architecture - Part 2",
+  "link": "https://dzlab.github.io/2023/11/12/gcp_serverless_rag-ii/",
+  "tags": [
+    "ai-ml",
+    "databases",
+    "serverless-computing"
+  ],
+  "description": "Learn how to deploy a scalable Retrieval augmented generation (RAG) applications on GCP with a Serverless architecture"
+}
