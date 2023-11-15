@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["dimitreoliveira"],
+  "authorIds": [
+    "dimitreoliveira"
+  ],
   "author": "Dimitre Oliveira",
   "title": "Shortening model deployment with TensorFlow",
   "link": "https://medium.com/towards-data-science/shortening-model-deployment-with-tensorflow-d5a11044d0d",
