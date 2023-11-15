@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["snehasish-konger"],
+  "author": "Snehasish Konger",
+  "title": "How To Implement Firebase Offline Support In A React Native App? • Scientyfic World",
+  "link": "https://scientyficworld.org/firebase-offline-support-in-reactnative-app/",
+  "tags": [
+    "node"
+  ],
+  "description": "In this blog, I've discussed the implementation of Firebase offline support in your React Native app. I explore aspects such as offline data caching and real-time data synchronization, along with the significance of network status indicators for a reliable user experience."
+}

@@ -2,7 +2,9 @@
   "expertise": "BEGINNER",
   "version": 1,
   "source": "medium",
-  "authorIds": ["dimitreoliveira"],
+  "authorIds": [
+    "dimitreoliveira"
+  ],
   "author": "Dimitre Oliveira",
   "title": "Content creation using MakerSuite and PaLM API",
   "link": "https://medium.com/google-developer-experts/content-creation-using-makersuite-and-palm-api-3dfc3a924510",
