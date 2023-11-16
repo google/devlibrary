@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["esther-irawati"],
+  "author": "Esther Irawati Setiawan",
+  "title": "Creating a Q&A Bot Quickly in Google Colab with Makersuite a",
+  "link": "https://medium.com/google-developer-experts/creating-a-q-a-bot-quickly-in-google-colab-with-makersuite-and-palm-api-a516a0713403",
+  "tags": [
+    "makersuite"
+  ],
+  "description": "Building Q&A bots is easier using Google's PaLM API, accessible via MakerSuite. PaLM offers language models for various use cases. MakerSuite simplifies AI prototyping, providing templates, tools, and examples for quick development"
+}

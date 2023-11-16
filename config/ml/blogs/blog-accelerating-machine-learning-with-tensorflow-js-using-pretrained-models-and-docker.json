@@ -9,7 +9,7 @@
   "tags": [
     "tfjs",
     "tf-core",
-    "pose"
+    "other-google-ml-products"
   ],
   "description": "Accelerating Machine Learning with TensorFlow.js: Using Pretrained Models and Docker"
 }

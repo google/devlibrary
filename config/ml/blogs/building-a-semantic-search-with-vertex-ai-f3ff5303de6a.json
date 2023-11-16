@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "luillyfe"
+  ],
+  "author": "Fermin Blanco",
+  "title": "Building a Semantic Search with Vertex AI",
+  "link": "https://luillyfe.medium.com/building-a-semantic-search-with-vertex-ai-f3ff5303de6a",
+  "tags": [
+    "other-google-ml-products"
+  ],
+  "description": "Semantic search is a more sophisticated mechanism to find relevant content to a search rather than traditionally keyword-based. It takes relevant information that it may be not be present in the query. It does so by understanding the context of the input text that the user types on the search box."
+}

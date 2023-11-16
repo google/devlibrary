@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["darrylbayliss"],
+  "author": "Darryl Bayliss",
+  "title": "Jetpack Compose for Maps",
+  "link": "https://www.youtube.com/watch?v=FSpP5DfwO8g",
+  "tags": [
+    "google-maps-platform",
+    "maps-sdk-android"
+  ],
+  "description": "A talk about Jetpack Compose for Maps featuring the Maps Compose library for Maps SDK for Android, presented at Londroid Meetup in 2023."
+}

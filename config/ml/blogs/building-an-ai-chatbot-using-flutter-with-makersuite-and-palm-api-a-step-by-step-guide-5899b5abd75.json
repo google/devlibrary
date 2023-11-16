@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["esther-irawati"],
+  "author": "Esther Irawati Setiawan",
+  "title": "Building an AI Chatbot using Flutter with Makersuite and Pal",
+  "link": "https://medium.com/google-developer-experts/building-an-ai-chatbot-using-flutter-with-makersuite-and-palm-api-a-step-by-step-guide-5899b5abd75",
+  "tags": [
+    "makersuite"
+  ],
+  "description": "This article will guide you through creating a user-friendly AI chatbot application using Flutter. We’ll walk you through the development process from start to finish, including implementing AI to comprehend and respond to user conversations."
+}
