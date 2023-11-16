@@ -138,7 +138,27 @@ export default class FeaturedContent extends Vue {
         }
 
         // Conditional logic to show projects based on Featured Content Menu selection
-        if (contentGroup === "October 2023") {
+        if (contentGroup === "November 2023") {
+            this.description = "Checkout what developers have been building this month with Vertext AI, TensorFlow, Firebase and Jetpack Compose!";
+            const blogData1 = await fetchBlog("ml", "content-creation-using-makersuite-and-palm-api-3dfc3a924510");
+            if (blogData1) blogs.push(blogData1);
+            const blogData2 = await fetchBlog("ml","building-a-semantic-search-with-vertex-ai-f3ff5303de6a");
+            if (blogData2) blogs.push(blogData2);
+            const blogData3 = await fetchBlog("android", "effortlessly-toggle-between-lazycolumn-and-lazyverticalstaggeredgrid-20b2ccdf918d");
+            if (blogData3) blogs.push(blogData3);
+            const blogData4 = await fetchBlog("firebase", "how-to-use-firebase-cloud-messaging-on-android-d92cb4b53cfe");
+            if (blogData4) blogs.push(blogData4);
+            const blogData5 = await fetchBlog("firebase", "delivering-personalized-user-experiences-with-firebase-remote-config-personalization-180ab7b25d3");
+            if (blogData5) blogs.push(blogData5);
+            const blogData6 = await fetchBlog("cloud", "article-hub-build-a-language-converter-using-google-bard");
+            if (blogData6) blogs.push(blogData6);
+            const blogData7 = await fetchBlog("ml", "save-your-peach-crops-from-infection-with-this-simple-tensorflow-cnn-model");
+            if (blogData7) blogs.push(blogData7);
+            const repoData1 = await fetchRepo("ml", "coding-pot-Zero2Story");
+            if (repoData1) repos.push(repoData1);
+            addAndSortProjects(blogs, repos);
+        }
+        else if (contentGroup === "October 2023") {
             this.description = "Discover content from Google Cloud, Android 14 and GenAI published in October!";
             const blogData1 = await fetchBlog("cloud", "integrate-google-bard-in-flutter");
             if (blogData1) blogs.push(blogData1);
