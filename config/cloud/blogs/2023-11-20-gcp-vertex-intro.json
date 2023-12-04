@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "ML Pipelines on GCP with Vertex AI",
+  "link": "https://dzlab.github.io/2023/11/20/gcp-vertex-intro/",
+  "tags": [
+    "ai-ml",
+    "serverless-computing",
+    "storage"
+  ],
+  "description": "Get started building training pipelines on GCP with Vertex AI"
+}

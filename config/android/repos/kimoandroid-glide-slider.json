@@ -1,0 +1,19 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "kimoandroid"
+  ],
+  "owner": "kimoandroid",
+  "repo": "glide-slider",
+  "name": "glide-slider",
+  "shortDescription": "Create a slider view inside your app without viewpager or complex adapters.",
+  "longDescription": "Create a slider view inside your app without viewpager or complex adapters.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ]
+}

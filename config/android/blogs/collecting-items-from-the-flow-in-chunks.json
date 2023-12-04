@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["patilshreyas"],
+  "author": "Shreyas Patil",
+  "title": "Collecting items from the Flow in chunks💦",
+  "link": "https://blog.shreyaspatil.dev/collecting-items-from-the-flow-in-chunks",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "We create a extension on the coroutine Flow API by which we can consume flow items in the chunks"
+}

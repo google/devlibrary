@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["kaushalvasava"],
+  "author": "Kaushal Vasava",
+  "title": "Constraint Layout in Jetpack Compose",
+  "link": "https://medium.com/stackademic/constraint-layout-in-jetpack-compose-f0a620845e01",
+  "tags": [
+    "compose",
+    "ui",
+    "kotlin"
+  ],
+  "description": "I will show you, how can you use constraint layout to build complex UI with less-code."
+}

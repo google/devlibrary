@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["jamescullimore"],
+  "author": "James Cullimore",
+  "title": "Crafting Agile Apps with Interface-Driven Decoupling",
+  "link": "https://levelup.gitconnected.com/beyond-tight-coupling-crafting-agile-apps-with-interface-driven-decoupling-e3c605d6f1e9",
+  "tags": [
+    "architecture",
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "A guide on how to decouple an app using interfaces."
+}

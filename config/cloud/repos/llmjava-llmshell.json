@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "bachiirc"
+  ],
+  "owner": "llmjava",
+  "repo": "llmshell",
+  "name": "llm.sh",
+  "shortDescription": "CLI utilities for interacting with PaLM from the terminal",
+  "longDescription": "CLI utilities for interacting with PaLM from the terminal",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "ai-ml"
+  ]
+}

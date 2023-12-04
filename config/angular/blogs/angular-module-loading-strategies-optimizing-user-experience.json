@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["rubenperegrina"],
+  "author": "Rubén Peregrina",
+  "title": "Angular module loading strategies, optimizing user experience",
+  "link": "https://rubenperegrina.com/angular-module-loading-strategies-optimizing-user-experience",
+  "tags": [
+    "performance"
+  ],
+  "description": "When developing Angular applications, one of the key considerations is how to efficiently load and manage modules. How we handle module loading can have a significant impact on user experience and overall performance. In this post, we'll explore various module loading strategies in Angular."
+}

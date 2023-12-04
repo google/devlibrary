@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["eevajonna"],
+  "author": "Eeva-Jonna Panula",
+  "title": "Improving Android Accessibility with Modifiers in Jetpack Co",
+  "link": "https://medium.com/proandroiddev/improving-android-accessibility-with-modifiers-in-jetpack-compose-5a34b82c8ddc",
+  "tags": [
+    "compose",
+    "ui"
+  ],
+  "description": "Modifiers can be used to improve Android accessibility. In this blog post we look at how to improve your apps accessibility with clickable, selectable, toggleable and magnifier."
+}

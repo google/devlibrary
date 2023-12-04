@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["lucasluizss"],
+  "author": "Lucas Silva",
+  "title": "Lucas Lab — Platform",
+  "link": "https://lucaslab.dev/post/Understanding-OnPush-Change-Detection-Strategy-in-Angular-a8bc9038-2d24-493b-ae9e-6946d5725690",
+  "tags": [
+    "demos",
+    "libraries"
+  ],
+  "description": "Understanding Onpush Change Detection Strategy In Angular: How To Use It Effectively In Your Projects"
+}
