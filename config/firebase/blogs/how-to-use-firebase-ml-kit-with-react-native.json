@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["snehasish-konger"],
+  "author": "Snehasish Konger",
+  "title": "How To Use Firebase ML Kit With React Native? • Scientyfic World",
+  "link": "https://scientyficworld.org/how-to-use-firebase-ml-kit-with-react-native/",
+  "tags": [
+    "android",
+    "ios"
+  ],
+  "description": "In this guide, I'll walk you through the essential steps to successfully add Firebase ML Kit to your React Native app."
+}

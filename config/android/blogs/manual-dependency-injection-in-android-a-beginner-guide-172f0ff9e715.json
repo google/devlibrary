@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "kaushalvasava"
+  ],
+  "author": "Kaushal Vasava",
+  "title": "Manual Dependency Injection in Android",
+  "link": "https://medium.com/@KaushalVasava/manual-dependency-injection-in-android-a-beginner-guide-172f0ff9e715",
+  "tags": [
+    "modern-android-development",
+    "architecture",
+    "kotlin"
+  ],
+  "description": "I will show you how can you do manual dependency injection and why we need any library for it."
+}

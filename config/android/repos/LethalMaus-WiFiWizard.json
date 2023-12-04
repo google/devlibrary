@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "lethalmaus"
+  ],
+  "owner": "LethalMaus",
+  "repo": "WiFiWizard",
+  "name": "WiFiWizard",
+  "shortDescription": "An example Android project using Jetpack Compose showing how to a WiFi programmatically.",
+  "longDescription": "An example Android project using Jetpack Compose showing how to a WiFi programmatically.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}

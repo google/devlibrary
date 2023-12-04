@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "kaushalvasava"
+  ],
+  "author": "Kaushal Vasava",
+  "title": "Navigation in Jetpack Compose. Guide Beginner to Advanced.",
+  "link": "https://medium.com/@KaushalVasava/navigation-in-jetpack-compose-full-guide-beginner-to-advanced-950c1133740",
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "ui"
+  ],
+  "description": "I'll show you how to use Jetpack Compose Navigation to use in your projects."
+}

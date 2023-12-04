@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "takahirom"
+  ],
+  "owner": "takahirom",
+  "repo": "roborazzi",
+  "name": "Roborazzi",
+  "shortDescription": "Roborazzi is an Android library that lets you take screenshots on your local machine without the need for real devices or emulators.",
+  "longDescription": "Roborazzi is an Android library that lets you take screenshots on your local machine without the need for real devices or emulators.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "modern-android-development"
+  ]
+}
