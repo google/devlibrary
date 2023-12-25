@@ -1,0 +1,16 @@
+{
+    "expertise": "INTERMEDIATE",
+    "version": 1,
+    "source": "medium",
+    "authorIds": [
+      "tiwarinitin1999"
+    ],
+    "author": "Nitin Tiwari",
+    "title": "Machine Learning on the browser: TF Lite meets TF.js",
+    "link": "https://medium.com/google-developer-experts/ml-story-machine-learning-on-the-browser-tf-lite-meets-tf-js-fafc391fed09",
+    "tags": [
+      "tf-lite",
+      "tfjs"
+    ],
+    "description": "This blog post showcases the implementation of real-time object detection through the deployment of a TF Lite model on a web browser using the TF.js-TFLite API. The content includes a practical example illustrating the identification of various waste categories, including open litter, plastic waste, biodegradable waste, medical waste, and an overflowing dustbin."
+}
