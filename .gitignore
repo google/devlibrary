@@ -1,5 +1,5 @@
 .firebase/
-*-debug.log
+run
 node_modules
 
 .DS_Store
