@@ -62,7 +62,8 @@
             </div>
           </div>
         </div>
-        <img
+        <img v-if="product.key == mlProductType" src="/img/ai-banner.png" class="product-hero-clipart ai-hero-clipart"/>
+        <img v-else
           src="/img/banners/desktop/product-clipart.png"
           class="product-hero-clipart"
         />
@@ -254,6 +255,7 @@ import {
   BlogData,
   RepoData,
   BlogOrRepoDataHolder,
+  ProductKey,
 } from "../../../shared/types";
 
 import UIModule from "@/store/ui";
@@ -336,6 +338,8 @@ export default class Product extends Vue {
     {},
     this.perPage
   );
+
+  public mlProductType = ProductKey.ML;
 
   mounted() {
     // Loading will be handled by the first "onQueryParamsChanged" firing

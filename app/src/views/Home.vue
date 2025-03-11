@@ -63,11 +63,11 @@
             Gemini API
           </h2>
           <p class="text-lg px-8 pb-8">
-            Build and deploy production ready generative AI experiences, enhanced by Gemini models. Get started for free!
+            Build and deploy production-ready generative AI experiences using Gemini models, APIs, and GenAI frameworks.
           </p>
           <MaterialButton type="primary" class="mb-12">
             <div class="frc">
-              <a href="#all-products">Get started</a>
+              <a href="https://ai.google.dev/gemini-api/docs">Learn more</a>
             </div>
           </MaterialButton>
         </div>
@@ -83,7 +83,7 @@
           </p>
           <MaterialButton type="primary" class="mb-12">
             <div class="frc">
-              <a href="/authors">Get started</a>
+              <a href="https://aistudio.google.com">Learn more</a>
             </div>
           </MaterialButton>
         </div>
@@ -97,11 +97,11 @@
             JAX
           </h2>
           <p class="text-lg px-8 pb-8">
-            JAX is a library for array-oriented numerical computation to enable high-performance machine learning research.
+            Accelerate numerical code and machine learning with JAX's automatic differentiation and high-performance compilation.
           </p>
           <MaterialButton type="primary" class="mb-12">
             <div class="frc">
-              <a href="/featured-content">Get started</a>
+              <a href="https://docs.jax.dev/en/latest/index.html">Learn more</a>
             </div>
           </MaterialButton>
         </div>
