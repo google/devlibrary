@@ -213,8 +213,29 @@
     width: 24px;
   }
 
-  .value-prop-cards {
+  .dev-tools-cards {
     background: #f1f3f4;
+  }
+
+  .dev-tools-cards .card,
+  .value-prop-cards .card {
+    justify-content: flex-start;
+  }
+
+  .dev-tools-cards .card button,
+  .value-prop-cards .card button {
+    margin-block: auto 16px;
+  }
+
+  .section-inner {
+    max-width: 1488px;
+    margin: 0 auto;
+  }
+
+  .dev-tools-image img {
+    height: 96px;
+    width: auto;
+    margin-block: 16px 24px;
   }
 
   .value-prop-image {
@@ -222,7 +243,7 @@
   }
 
   .value-prop-image img {
-    width: 200px;
+    width: 80px;
   }
 
   .value-prop-cards button {
@@ -265,7 +286,7 @@
   }
 
   @screen lg {
-    .homepage-header h1, 
+    .homepage-header h1,
     .full-bleed-header-image h1 {
       font-size: 44px;
       line-height: 52px;
@@ -300,7 +321,7 @@
     }
 
     .repo-item {
-      border-radius: 4px;   
+      border-radius: 4px;
       padding: 4px 6px;
     }
 
@@ -326,7 +347,7 @@
     .impact-number {
       font-size: 64px;
     }
-  
+
     .impact-text {
       font-size: 20px;
     }

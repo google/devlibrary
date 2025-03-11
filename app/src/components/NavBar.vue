@@ -140,7 +140,7 @@
           type="primary"
           v-if="!showSideMenu"
         >
-          Submit your content
+          Submit your AI project
         </MaterialButton>
       </transition>
     </div>

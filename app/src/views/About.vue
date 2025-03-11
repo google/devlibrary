@@ -47,15 +47,10 @@
             <li>Blog posts</li>
           </ul>
 
-          <p class="mt-4">
-            We are currently not accepting new submissions from the community, please check back later!
-          </p>
           <p class="mt-8 flex flex-wrap gap-4">
-            <a href="mailto:library-google-dev@google.com">
-              <MaterialButton @click.native="showSubmitDialog" type="primary"
-                >Submit your content</MaterialButton
-              >
-            </a>
+            <MaterialButton @click.native="showSubmitDialog" type="primary"
+              >Submit your AI project</MaterialButton
+            >
           </p>
         </div>
       </div>
@@ -324,7 +319,7 @@
           </div>
           <div v-show="FaqData[12]" class="pb-2 border-b">
             <p class="mt-4">
-              To remove or update your content, please open a Pull request or raise an issue on the 
+              To remove or update your content, please open a Pull request or raise an issue on the
               <a target="_blank" href="https://github.com/google/devlibrary/issues/new">
                 Dev Library's GitHub repo</a>.
             </p>
