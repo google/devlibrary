@@ -214,7 +214,7 @@
                 :icon="['fas', 'exclamation-circle']"
                 class="mr-2"
               />
-              <span>No projects matching your filters.</span>
+              <span>No Dev Library projects for this category yet - we'd love for you to <a class="no-projects-link" target="_blank" href="https://forms.gle/S61NStowwwTjVrHT7">submit one</a>!</span>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">

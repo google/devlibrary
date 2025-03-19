@@ -285,6 +285,10 @@
     font-weight: 500;
   }
 
+  .no-projects-link {
+    color: rgb(26, 115, 232);
+  }
+
   @screen lg {
     .homepage-header h1,
     .full-bleed-header-image h1 {
