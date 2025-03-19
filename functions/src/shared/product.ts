@@ -59,7 +59,7 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
     name: "AI Projects",
     description:
       "Unlock AI models to build innovative apps and transform development workflows with tools across platforms.",
-    docsUrl: "https://www.tensorflow.org/",
+    docsUrl: "",
     tags: [
       {
         label: "Mobile",

@@ -103,7 +103,7 @@
                 >All Projects</router-link
               >
             </li>
-            <li>
+            <li v-if="product.docsUrl.length > 0">
               <a :href="product.docsUrl" target="_blank">Official Docs</a>
             </li>
           </ul>

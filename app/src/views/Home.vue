@@ -32,7 +32,7 @@
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="text-xl mt-9 mb-4 pr-4 lg:pr-0">
-            Dev Library highlights Google-curated open source dev projects. Submissions are open for projects using Google AI tools and technologies until April 30, 2025.
+            Dev Library highlights Google-curated open source dev projects. Submissions are open for projects using Google AI tools and technologies until <b>April 30, 2025</b>.
           </p>
           <div class="mt-4 lg:mt-6">
             <MaterialButton
@@ -161,7 +161,7 @@
           </p>
           <MaterialButton type="secondary" class="mb-12">
             <div class="frc">
-              <a href="/featured-content">Learn more</a>
+              <a href="/products/ml">Learn more</a>
             </div>
           </MaterialButton>
         </div>

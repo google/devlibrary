@@ -53,7 +53,7 @@
               </div>
 
               <p class="mt-2">{{ product.description }}</p>
-              <a :href="product.docsUrl" target="blank">
+              <a v-if="product.docsUrl.length > 0" :href="product.docsUrl" target="blank">
                 <MaterialButton type="secondary" class="mt-8">
                   Official docs
                   <font-awesome-icon icon="external-link-alt" class="ml-1" />
