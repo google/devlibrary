@@ -19,7 +19,7 @@ steps:
   args: ['--prefix=shared', 'install']
 - name: 'node:18'
   entrypoint: 'npm'
-  args: ['--prefix=app', 'install']
+  args: ['--prefix=app', '--legacy-peer-deps', 'install']
 - name: 'node:18'
   entrypoint: 'npm'
   args: ['--prefix=functions', 'install']
