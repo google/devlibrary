@@ -56,10 +56,10 @@ export const ALL_PRODUCTS: Record<string, ProductConfig> = {
   },
   ml: {
     key: ProductKey.ML,
-    name: "Machine Learning Projects",
+    name: "AI Projects",
     description:
-      " Google provides a wide range of technologies and products for developers to use and develop for their machine learning and AI projects. These include TensorFlow, TensorFlow.js, TensorFlow Lite, TensorFlow Extended, JAX, Keras and Mediapipe. Dev Library has a curated collection of Machine Learning and AI blogs, open source projects, and tutorials contributed by developers around the world. Explore today for your next project!",
-    docsUrl: "https://www.tensorflow.org/",
+      "Unlock AI models to build innovative apps and transform development workflows with tools across platforms.",
+    docsUrl: "",
     tags: [
       {
         label: "Mobile",
