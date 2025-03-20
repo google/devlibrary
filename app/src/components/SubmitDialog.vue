@@ -54,7 +54,7 @@ export default class SubmitDialog extends Vue {
 
   mounted() {
     EVENT_BUS.$on(NAME_SHOW_SUBMIT_DIALOG, () => {
-      this.show = true;
+      this.goToForm()
     });
   }
 
@@ -66,7 +66,7 @@ export default class SubmitDialog extends Vue {
     this.show = false;
     conversionEvent("submit");
     window.open(
-      "https://devlibrary.advocu.com/home/applications/form",
+      "https://forms.gle/S61NStowwwTjVrHT7",
       "_blank"
     );
   }

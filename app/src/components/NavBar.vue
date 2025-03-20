@@ -59,10 +59,6 @@
             <span class="header">Authors</span>
           </router-link>
 
-          <router-link to="/featured-content" class="section">
-            <span class="header">Featured Content</span>
-          </router-link>
-
           <router-link to="/about" class="section">
             <span class="header">About</span>
           </router-link>
@@ -123,10 +119,6 @@
         ><span>Authors</span></router-link
       >
 
-      <router-link class="block nav-item nav-item-link" to="/featured-content"
-        ><span class="header">Featured Content</span>
-      </router-link>
-
       <router-link class="block nav-item nav-item-link" to="/about"
         ><span>About</span></router-link
       >
@@ -140,7 +132,7 @@
           type="primary"
           v-if="!showSideMenu"
         >
-          Submit your content
+          Submit your AI project
         </MaterialButton>
       </transition>
     </div>

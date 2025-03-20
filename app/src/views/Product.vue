@@ -53,7 +53,7 @@
               </div>
 
               <p class="mt-2">{{ product.description }}</p>
-              <a :href="product.docsUrl" target="blank">
+              <a v-if="product.docsUrl.length > 0" :href="product.docsUrl" target="blank">
                 <MaterialButton type="secondary" class="mt-8">
                   Official docs
                   <font-awesome-icon icon="external-link-alt" class="ml-1" />
@@ -62,7 +62,8 @@
             </div>
           </div>
         </div>
-        <img
+        <img v-if="product.key == mlProductType" src="/img/ai-banner.png" class="product-hero-clipart ai-hero-clipart"/>
+        <img v-else
           src="/img/banners/desktop/product-clipart.png"
           class="product-hero-clipart"
         />
@@ -213,7 +214,7 @@
                 :icon="['fas', 'exclamation-circle']"
                 class="mr-2"
               />
-              <span>No projects matching your filters.</span>
+              <span>No Dev Library projects for this category yet - we'd love for you to <a class="no-projects-link" target="_blank" href="https://forms.gle/S61NStowwwTjVrHT7">submit one</a>!</span>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -254,6 +255,7 @@ import {
   BlogData,
   RepoData,
   BlogOrRepoDataHolder,
+  ProductKey,
 } from "../../../shared/types";
 
 import UIModule from "@/store/ui";
@@ -336,6 +338,8 @@ export default class Product extends Vue {
     {},
     this.perPage
   );
+
+  public mlProductType = ProductKey.ML;
 
   mounted() {
     // Loading will be handled by the first "onQueryParamsChanged" firing

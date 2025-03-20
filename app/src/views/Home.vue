@@ -16,6 +16,7 @@
 
 <template>
   <div>
+    <div class="section-inner">
     <div
       class="homepage-header header-image grid grid-cols-12 py-8 lg:pt-14 lg:pb-12 xl:pt-14 xl:pb-16 px-std border-b border-gray-100"
       style="
@@ -25,90 +26,151 @@
     >
       <div class="col-span-12 lg:col-span-6 px-1">
         <h1 class="text-4xl">
-          The platform for Google curated open-source dev projects
+          Now accepting AI project submissions
         </h1>
 
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="text-xl mt-9 mb-4 pr-4 lg:pr-0">
-            Explore open-source dev projects featuring Google developer solutions contributed by developers from around the world and find
-            the inspiration you need for your next project.
-            </p>
-             <p class="text-m mt-4 mb-4 pr-4 lg:pr-0">
-            We are currently not accepting new submissions from the community, please check back later!
-            </p>
+            Dev Library highlights Google-curated open source dev projects. Submissions are open for projects using Google AI tools and technologies until <b>April 30, 2025</b>.
+          </p>
           <div class="mt-4 lg:mt-6">
-            <MaterialButton type="primary">
-              <a href="#all-products" class="section">
-                <span>Browse by product</span>
-              </a>
-            </MaterialButton>
+            <MaterialButton
+              @click.native="showSubmitDialog"
+              type="primary"
+            >
+            Submit your AI project
+          </MaterialButton>
           </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Featured developer tools -->
+    <div
+      class="dev-tools-cards"
+    >
+      <h2 class="text-3xl text-center pt-20">Featured developer tools</h2>
+      <div class="section-inner grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-10 pb-20 px-std">
+        <div
+          class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
+        >
+          <div class="dev-tools-image">
+            <img src="../../public/img/gemini-icon.png" class="w-1/3" />
+          </div>
+          <h2 class="text-2xl mb-6">
+            Gemini API
+          </h2>
+          <p class="text-lg px-8 pb-8">
+            Build and deploy production-ready generative AI experiences using Gemini models, APIs, and GenAI frameworks.
+          </p>
+          <MaterialButton type="primary" class="mb-12">
+            <div class="frc">
+              <a href="https://ai.google.dev/gemini-api/docs">Learn more</a>
+            </div>
+          </MaterialButton>
+        </div>
+        <div
+          class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
+        >
+          <div class="dev-tools-image">
+            <img src="../../public/img/ai-studio-icon.png" class="w-1/3" />
+          </div>
+          <h2 class="text-2xl mb-6">Google AI Studio</h2>
+          <p class="text-lg px-8 pb-8">
+            Build generative AI applications quickly with Gemini in Google AI studio.
+          </p>
+          <MaterialButton type="primary" class="mb-12">
+            <div class="frc">
+              <a href="https://aistudio.google.com">Learn more</a>
+            </div>
+          </MaterialButton>
+        </div>
+        <div
+          class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
+        >
+          <div class="dev-tools-image">
+            <img src="../../public/img/gemma-logo.png" class="w-1/3" />
+          </div>
+          <h2 class="text-2xl mb-6">
+            Gemma
+          </h2>
+          <p class="text-lg px-8 pb-8">
+            Built on the same cutting-edge research and technology as Gemini, Gemma is a family of lightweight, open models, meticulously crafted for you.
+          </p>
+          <MaterialButton type="primary" class="mb-12">
+            <div class="frc">
+              <a href="https://ai.google.dev/gemma">Learn more</a>
+            </div>
+          </MaterialButton>
         </div>
       </div>
     </div>
 
     <!-- Value Prop Cards -->
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 px-std md:px-20 lg:px-32 xl:px-44 value-prop-cards"
-    >
-      <div
-        class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
-      >
-        <div class="value-prop-image">
-          <img src="../../public/img/featured-content.svg" class="w-1/3" />
-        </div>
-        <h2 class="text-3xl mb-6">
-          Learn from community content
-        </h2>
-        <p class="text-lg px-8 pb-8">
-          Learn from projects and blogs created by fellow developers.
-        </p>
-        <MaterialButton type="text" class="mb-12">
-          <div class="frc">
-            <a href="#all-products" class="text-lg">See all products</a>
+    <div>
+      <h2 class="text-3xl text-center pt-20">Why contribute to Dev Library</h2>
+      <div class="section-inner grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-10 px-std">
+        <div
+          class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
+        >
+          <div class="value-prop-image">
+            <img src="../../public/img/featured-content.svg" class="w-1/3" />
           </div>
-        </MaterialButton>
-      </div>
-      <div
-        class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
-      >
-        <div class="value-prop-image">
-          <img src="../../public/img/speakers.svg" class="w-1/3" />
+          <h2 class="text-2xl mb-6">
+            Learn from community content
+          </h2>
+          <p class="text-lg px-8 pb-8">
+            Learn from projects and blogs created by fellow developers.
+          </p>
+          <MaterialButton type="secondary" class="mb-12">
+            <div class="frc">
+              <a href="#all-products">See all products</a>
+            </div>
+          </MaterialButton>
         </div>
-        <h2 class="text-3xl mb-6">Connect with experts and authors</h2>
-        <p class="text-lg px-8 pb-8">
-          Find dev experts, content creators and authors in the
-          community.
-        </p>
-        <MaterialButton type="text" class="mb-12">
-          <div class="frc">
-            <a href="/authors" class="text-lg"> Browse authors </a>
+        <div
+          class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
+        >
+          <div class="value-prop-image">
+            <img src="../../public/img/speakers.svg" class="w-1/3" />
           </div>
-        </MaterialButton>
-      </div>
-      <div
-        class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
-      >
-        <div class="value-prop-image">
-          <img src="../../public/img/inspiration.svg" class="w-1/3" />
+          <h2 class="text-2xl mb-6">Connect with experts and authors</h2>
+          <p class="text-lg px-8 pb-8">
+            Find dev experts, content creators and authors in the
+            community.
+          </p>
+          <MaterialButton type="secondary" class="mb-12">
+            <div class="frc">
+              <a href="/authors"> Browse authors </a>
+            </div>
+          </MaterialButton>
         </div>
-        <h2 class="text-3xl mb-6">
-          Discover latest projects from in-focus dev topics
-        </h2>
-        <p class="text-lg px-8 pb-8">
-          Check out inspiring projects build with Google developer solutions.
-        </p>
-        <MaterialButton type="text" class="mb-12">
-          <div class="frc">
-            <a href="/featured-content" class="text-lg">Learn more</a>
+        <div
+          class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
+        >
+          <div class="value-prop-image">
+            <img src="../../public/img/inspiration.svg" class="w-1/3" />
           </div>
-        </MaterialButton>
+          <h2 class="text-2xl mb-6">
+            Discover latest projects from in-focus dev topics
+          </h2>
+          <p class="text-lg px-8 pb-8">
+            Check out inspiring projects build with Google developer solutions.
+          </p>
+          <MaterialButton type="secondary" class="mb-12">
+            <div class="frc">
+              <a href="/products/ml">Learn more</a>
+            </div>
+          </MaterialButton>
+        </div>
       </div>
     </div>
 
     <!-- Products -->
     <div id="all-products"></div>
+    <div class="section-inner">
     <h1 class="ml-12 mt-10">All products</h1>
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-std">
       <div
@@ -136,9 +198,11 @@
         </div>
       </div>
     </div>
+    </div>
 
     <!-- Videos -->
     <div class="w-full p-6 lg:p-10 video-playlist h-max-20">
+      <div class="section-inner px-std">
       <div class="text-center pb-10">
         <h1 class="text-2xl lg:text-3xl pb-5">Meet our Authors</h1>
         <a
@@ -190,9 +254,11 @@
           </li>
         </ul>
       </div>
+      </div>
     </div>
     <!-- Impact banner -->
     <div class="w-full p-6 lg:p-10 bg-gblue-600">
+      <div class="section-inner">
       <h1 class="text-white text-center text-2xl lg:text-3xl">Our impact</h1>
       <div
         class="grid grid-cols-4 justify-center text-center text-white w-75 mt-6 mb-2"
@@ -214,11 +280,12 @@
           <span class="impact-text">Projects</span>
         </div>
       </div>
+      </div>
     </div>
 
     <!-- Recently Added projects -->
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-std py-8"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-std py-8 section-inner"
     >
       <div class="col-span-1 lg:col-span-2 lg:px-2">
         <h2 class="text-3xl">Latest dev projects</h2>

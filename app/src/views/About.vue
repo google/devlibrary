@@ -47,15 +47,10 @@
             <li>Blog posts</li>
           </ul>
 
-          <p class="mt-4">
-            We are currently not accepting new submissions from the community, please check back later!
-          </p>
           <p class="mt-8 flex flex-wrap gap-4">
-            <a href="mailto:library-google-dev@google.com">
-              <MaterialButton @click.native="showSubmitDialog" type="primary"
-                >Submit your content</MaterialButton
-              >
-            </a>
+            <MaterialButton @click.native="showSubmitDialog" type="primary"
+              >Submit your AI project</MaterialButton
+            >
           </p>
         </div>
       </div>
@@ -144,7 +139,7 @@
           </div>
           <div v-show="FaqData[3]" class="pb-2 border-b">
             <p class="mt-4">
-              <a target="_blank" href="https://devlibrary.withgoogle.com/featured-content"> Check out</a> our Featured Content page to stay up to date with the latest projects added to the platform. This page features some of the best submissions from each product every month. Also, you can check out the <a href="https://developers.googleblog.com/search/label/Google%20Dev%20Library">Dev Library blog archives</a> for past highlights.
+              <a target="_blank" href="https://devlibrary.withgoogle.com/products/ml"> Check out</a> our AI products page to stay up to date with the latest projects added to the platform. Also, you can check out the <a href="https://developers.googleblog.com/search/label/Google%20Dev%20Library">Dev Library blog archives</a> for past highlights.
             </p>
           </div>
           <p class="mt-6 font-bold">Contributing to Dev Library</p>
@@ -166,7 +161,6 @@
               <ol class="ml-6 mt-2 list-disc">
                 <li>Their own author profile page</li>
                 <li>A shiny contributor badge for their Google Developer profile</li>
-                <li>Spotlights in the Dev Library Featured Content page</li>
                 <li>Inspiring developers to build with Google!</li>
               </ol>
             </p>
@@ -324,7 +318,7 @@
           </div>
           <div v-show="FaqData[12]" class="pb-2 border-b">
             <p class="mt-4">
-              To remove or update your content, please open a Pull request or raise an issue on the 
+              To remove or update your content, please open a Pull request or raise an issue on the
               <a target="_blank" href="https://github.com/google/devlibrary/issues/new">
                 Dev Library's GitHub repo</a>.
             </p>
