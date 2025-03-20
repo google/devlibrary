@@ -91,17 +91,17 @@
           class="card bg-white px-3 lg:px-6 py-2 lg:py-6 flex flex-col text-center items-center place-content-center"
         >
           <div class="dev-tools-image">
-            <img src="../../public/img/jax-logo.png" class="w-1/3" />
+            <img src="../../public/img/gemma-logo.png" class="w-1/3" />
           </div>
           <h2 class="text-2xl mb-6">
-            JAX
+            Gemma
           </h2>
           <p class="text-lg px-8 pb-8">
-            Accelerate numerical code and machine learning with JAX's automatic differentiation and high-performance compilation.
+            Built on the same cutting-edge research and technology as Gemini, Gemma is a family of lightweight, open models, meticulously crafted for you.
           </p>
           <MaterialButton type="primary" class="mb-12">
             <div class="frc">
-              <a href="https://docs.jax.dev/en/latest/index.html">Learn more</a>
+              <a href="https://ai.google.dev/gemma">Learn more</a>
             </div>
           </MaterialButton>
         </div>
