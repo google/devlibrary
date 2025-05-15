@@ -32,15 +32,17 @@
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="text-xl mt-9 mb-4 pr-4 lg:pr-0">
-            Dev Library highlights Google-curated open source dev projects. Submissions are open for projects using Google AI tools and technologies until <b>April 30, 2025</b>.
+            Explore open source AI projects The Dev Library showcases a growing collection of Google-curated open source projects. See how developers are leveraging Google AI tools and technologies to build amazing things.
           </p>
           <div class="mt-4 lg:mt-6">
-            <MaterialButton
-              @click.native="showSubmitDialog"
-              type="primary"
-            >
-            Submit your AI project
-          </MaterialButton>
+            <a
+                target="blank"
+                :href="`https://devlibrary.withgoogle.com/products/ml?sort=added`"
+              >
+              <MaterialButton type="primary"
+                >Start exploring today</MaterialButton
+              >
+            </a>
           </div>
         </div>
       </div>
