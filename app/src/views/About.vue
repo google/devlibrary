@@ -42,15 +42,16 @@
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p class="mt-4">Currently DevLibrary accepts two kinds of content:</p>
 
-          <ul class="ml-6 mt-2 list-disc">
-            <li>GitHub repositories</li>
-            <li>Blog posts</li>
-          </ul>
 
           <p class="mt-8 flex flex-wrap gap-4">
-            <MaterialButton @click.native="showSubmitDialog" type="primary"
-              >Submit your AI project</MaterialButton
-            >
+            <a
+                target="blank"
+                :href="`https://devlibrary.withgoogle.com/products/ml?sort=added`"
+              >
+              <MaterialButton type="primary"
+                >Start exploring today</MaterialButton
+              >
+            </a>
           </p>
         </div>
       </div>
