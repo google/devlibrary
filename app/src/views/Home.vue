@@ -25,10 +25,6 @@
       "
     >
       <div class="col-span-12 lg:col-span-6 px-1">
-        <h1 class="text-4xl">
-          Now accepting AI project submissions
-        </h1>
-
         <div>
           <!-- Right-padding added on mobile to improve text flow -->
           <p class="text-xl mt-9 mb-4 pr-4 lg:pr-0">
