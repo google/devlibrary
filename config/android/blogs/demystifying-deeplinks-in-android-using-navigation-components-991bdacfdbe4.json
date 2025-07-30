@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "gabriel_thecode"
+  ],
+  "author": "Gabriel TEKOMBO",
+  "title": "Demystifying Deeplinks in Android using Navigation Component",
+  "link": "https://medium.com/@gabriel_theCode/demystifying-deeplinks-in-android-using-navigation-components-991bdacfdbe4",
+  "tags": [
+    "modern-android-development",
+    "kotlin",
+    "architecture"
+  ],
+  "description": "Advanced Tips for Custom Deeplinks Implementation"
+}

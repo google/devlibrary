@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["austennovis"],
+  "author": "Austen Novis",
+  "title": "Serverless Data Pipelines in GCP using Dataform and BigQuery",
+  "link": "https://medium.com/engineering-at-premise/serverless-data-pipelines-in-gcp-using-dataform-and-bigquery-remote-functions-9ee235d0cb18",
+  "tags": [
+    "data-analytics",
+    "developer-tools",
+    "serverless-computing"
+  ],
+  "description": "Combining Dataform and BigQuery Remote Functions allows you to call external services running in Cloudrun or Cloudfunctions, making it possible to have a serverless data pipeline that can run custom logic in any programming language that you may need."
+}

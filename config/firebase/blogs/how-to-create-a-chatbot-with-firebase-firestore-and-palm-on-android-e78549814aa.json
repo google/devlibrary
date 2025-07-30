@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["alex-mamo"],
+  "author": "Alex Mamo",
+  "title": "How to create a chatbot with Firebase Firestore and PaLM on",
+  "link": "https://medium.com/firebase-developers/how-to-create-a-chatbot-with-firebase-firestore-and-palm-on-android-e78549814aa",
+  "tags": [
+    "android",
+    "admin"
+  ],
+  "description": "A simple solution for integrating Cloud Firestore with PaLM API on Android using Jetpack Compose"
+}

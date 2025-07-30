@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["jamescullimore"],
+  "author": "James Cullimore",
+  "title": "Decoding Android’s Encrypted Preferences Arsenal",
+  "link": "https://levelup.gitconnected.com/locking-in-data-confidence-decoding-androids-encrypted-preferences-arsenal-c4a039eec452",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "A tutorial on how to use Encrypted Shared Preferences."
+}

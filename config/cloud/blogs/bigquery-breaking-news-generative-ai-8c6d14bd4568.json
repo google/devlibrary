@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["an_14796"],
+  "author": "Artem Nikulchenko",
+  "title": "BigQuery Breaking News — Generative AI",
+  "link": "https://medium.com/google-cloud/bigquery-breaking-news-generative-ai-8c6d14bd4568",
+  "tags": ["ai-ml", "data-analytics"],
+  "description": "This post starts with the latest news - Palm2 model is now available directly in BigQuery. After that post reviews all ML options inside BigQuery."
+}

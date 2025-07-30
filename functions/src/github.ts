@@ -64,7 +64,7 @@ export async function getRepoLicense(owner: string, repo: string) {
       repo,
     });
 
-    const content = Buffer.from(res.data.content, res.data.encoding).toString();
+    const content = Buffer.from(res.data.content, <BufferEncoding>res.data.encoding).toString();
 
     return {
       key: res.data.license?.key,

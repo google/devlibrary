@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["wkambale"],
+  "author": "Wesley Kambale",
+  "title": "Machine Learning with TensorFlow",
+  "link": "https://kambale.dev/machine-learning-with-tensorflow",
+  "tags": [
+    "tfx",
+    "tf-lite"
+  ],
+  "description": "Get to know the basics of machine learning and cover the basic steps to train a machine learning model using TensorFlow"
+}

@@ -47,4 +47,8 @@ import SubmitDialog from "@/components/SubmitDialog.vue";
 export default class App extends Vue {}
 </script>
 
-<style lang="postcss"></style>
+<style lang="postcss">
+  p {
+    white-space: pre-line;
+  }
+</style>

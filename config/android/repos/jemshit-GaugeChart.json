@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "jemshit"
+  ],
+  "owner": "jemshit",
+  "repo": "GaugeChart",
+  "name": "Gauge Chart",
+  "shortDescription": "Gauge Chart / Speedometer Chart written in Jetpack Compose",
+  "longDescription": "Gauge Chart / Speedometer Chart written in Jetpack Compose",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

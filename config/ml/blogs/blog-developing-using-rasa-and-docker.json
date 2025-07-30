@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["harshmanvar"],
+  "author": "Harsh Manvar",
+  "title": "Conversational AI Made Easy: Developing an ML FAQ Model Demo from Scratch Using Rasa and Docker",
+  "link": "https://www.docker.com/blog/developing-using-rasa-and-docker/",
+  "tags": [
+    "other-google-ml-products"
+  ],
+  "description": "Conversational AI Made Easy: Developing an ML FAQ Model Demo from Scratch Using Rasa and Docker"
+}

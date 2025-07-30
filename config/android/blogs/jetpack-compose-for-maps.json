@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["darrylbayliss"],
+  "author": "Darryl Bayliss",
+  "title": "Jetpack Compose for Maps",
+  "link": "https://www.darrylbayliss.net/jetpack-compose-for-maps/",
+  "tags": [
+    "compose",
+    "ui",
+    "modern-android-development"
+  ],
+  "description": "Learn how Jetpack Compose is speeding up development for map based apps using the new Google Maps SDK for Compose!"
+}

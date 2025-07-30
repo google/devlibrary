@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["danywalls"],
+  "author": "Dany Paredes",
+  "title": "How To Debug Angular Applications Easy",
+  "link": "https://www.danywalls.com/how-to-debug-angular-applications-easy",
+  "tags": [
+    "performance"
+  ],
+  "description": "Three Ways to Debug Angular Application"
+}

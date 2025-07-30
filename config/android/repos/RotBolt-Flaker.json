@@ -1,0 +1,20 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "rotbolt"
+  ],
+  "owner": "RotBolt",
+  "repo": "Flaker",
+  "name": "Flaker",
+  "shortDescription": "Flaker is a powerful network simulator designed to emulate a wide range of network conditions, enabling you to fine-tune your app's performance and test your app under flaky network situations.",
+  "longDescription": "Flaker is a powerful network simulator designed to emulate a wide range of network conditions, enabling you to fine-tune your app's performance and test your app under flaky network situations.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "compose",
+    "modern-android-development"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["lucasluizss"],
+  "author": "Lucas Silva",
+  "title": "Lucas Lab — Platform",
+  "link": "https://lucaslab.dev/post/Route-Reuse-Strategy-in-Angular-Applications-4d2790cb-ca5b-4047-9711-56fec2dd88ff",
+  "tags": [
+    "libraries",
+    "demos"
+  ],
+  "description": "Let's Gain A Clear Understanding Of What The Routereusestrategy Is And Why It's Important"
+}

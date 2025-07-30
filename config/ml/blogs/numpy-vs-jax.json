@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["wkambale"],
+  "author": "Wesley Kambale",
+  "title": "NumPy vs JAX: Optimizing Performance and Functionality",
+  "link": "https://kambale.dev/numpy-vs-jax",
+  "tags": [
+    "jax-flax"
+  ],
+  "description": "A beginner's guide and comparison of NumPy and JAX for scientific computing and machine learning"
+}

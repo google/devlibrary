@@ -178,7 +178,7 @@
     padding-top: 2.5rem;
   }
 
-  .hero-clipart {
+  .hero-clipart, .product-hero-clipart {
     display: none;
   }
 
@@ -213,8 +213,29 @@
     width: 24px;
   }
 
-  .value-prop-cards {
+  .dev-tools-cards {
     background: #f1f3f4;
+  }
+
+  .dev-tools-cards .card,
+  .value-prop-cards .card {
+    justify-content: flex-start;
+  }
+
+  .dev-tools-cards .card button,
+  .value-prop-cards .card button {
+    margin-block: auto 16px;
+  }
+
+  .section-inner {
+    max-width: 1488px;
+    margin: 0 auto;
+  }
+
+  .dev-tools-image img {
+    height: 96px;
+    width: auto;
+    margin-block: 16px 24px;
   }
 
   .value-prop-image {
@@ -222,18 +243,62 @@
   }
 
   .value-prop-image img {
-    width: 200px;
+    width: 80px;
   }
 
   .value-prop-cards button {
     margin-top: auto;
   }
 
+  .pill-selection {
+    position: absolute;
+    width: 100%;
+    margin-left: -10px;
+  }
+
+  .pill-text {
+    border-radius: 16px;
+    padding : 6px 16px;
+    width: 100%;
+  }
+
+  .pill-selected-text {
+    color: #041E49;
+    background: #D3E3FD;
+  }
+
+  .featured-content-selection-heading {
+    margin-bottom: 4px;
+  }
+
+  .featured-content-selection-description {
+    margin-bottom: 32px;
+  }
+
+  .impact-number {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .impact-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .no-projects-link {
+    color: rgb(26, 115, 232);
+  }
+
   @screen lg {
-    .homepage-header h1, 
+    .homepage-header h1,
     .full-bleed-header-image h1 {
       font-size: 44px;
       line-height: 52px;
+    }
+
+    .featured-content-selection-heading {
+      font-size: 32px;
+      line-height: 40px;
     }
 
     .header-image {
@@ -260,7 +325,7 @@
     }
 
     .repo-item {
-      border-radius: 4px;   
+      border-radius: 4px;
       padding: 4px 6px;
     }
 
@@ -268,12 +333,32 @@
       max-width: 600px;
     }
 
-    .hero-clipart {
+    .hero-clipart, .product-hero-clipart {
       position: absolute;
       display: block;
       width: 252px;
-      top: 64px;
       left: 64vw;
+    }
+
+    .hero-clipart {
+      top: 64px;
+    }
+
+    .product-hero-clipart {
+      top: 44px;
+    }
+
+    .ai-hero-clipart {
+      width: 308px;
+      top: 0;
+    }
+
+    .impact-number {
+      font-size: 64px;
+    }
+
+    .impact-text {
+      font-size: 20px;
     }
   }
 

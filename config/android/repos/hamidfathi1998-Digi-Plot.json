@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "hamidfathi1998"
+  ],
+  "owner": "hamidfathi1998",
+  "repo": "Digi-Plot",
+  "name": "Digi-Plot",
+  "shortDescription": "Digi Plot is an intuitive and user-friendly chart library designed for both Android and iOS platforms, featuring seamless gesture detection for enhanced interactivity.",
+  "longDescription": "Digi Plot is an intuitive and user-friendly chart library designed for both Android and iOS platforms, featuring seamless gesture detection for enhanced interactivity.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "kotlin",
+    "ui"
+  ]
+}

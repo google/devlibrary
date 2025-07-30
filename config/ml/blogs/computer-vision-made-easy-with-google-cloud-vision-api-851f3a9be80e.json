@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "tiwarinitin1999"
+  ],
+  "author": "Nitin Tiwari",
+  "title": "Computer Vision made easy with Google Cloud Vision API",
+  "link": "https://medium.com/@tiwarinitin1999/computer-vision-made-easy-with-google-cloud-vision-api-851f3a9be80e",
+  "tags": [
+    "other-google-ml-products",
+    "tf-core"
+  ],
+  "description": "This blog serves as a comprehensive guide to perform Computer Vision tasks like image classification, object localization, face detection, landmark detection, etc. using the Vision API on Google Cloud and visualizing inferences, thereby enabling beginners to start their ML journey on Google Cloud."
+}

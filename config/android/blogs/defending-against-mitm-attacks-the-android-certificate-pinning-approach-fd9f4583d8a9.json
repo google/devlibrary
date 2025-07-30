@@ -1,0 +1,16 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "jamescullimore"
+  ],
+  "author": "James Cullimore",
+  "title": "Defending Against MITM Attacks with Certificate Pinning",
+  "link": "https://jamescullimore.medium.com/defending-against-mitm-attacks-the-android-certificate-pinning-approach-fd9f4583d8a9",
+  "tags": [
+    "modern-android-development",
+    "kotlin"
+  ],
+  "description": "A tutorial on how to add certificate pinning using Retrofit"
+}

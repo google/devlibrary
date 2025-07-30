@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["jamescullimore"],
+  "author": "James Cullimore",
+  "title": "An Android Odyssey through Font, Image, and Library Licenses",
+  "link": "https://levelup.gitconnected.com/diving-into-the-license-abyss-an-android-odyssey-through-font-image-and-library-licenses-a7b1caaec6e0",
+  "tags": [
+    "kotlin",
+    "modern-android-development"
+  ],
+  "description": "An informative guide on understanding and managing font, image and library licences in the context of Android development."
+}

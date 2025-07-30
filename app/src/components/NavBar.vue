@@ -125,16 +125,6 @@
 
       <span class="flex-grow"><!-- spacer --></span>
 
-      <!-- Search Bar -->
-      <transition name="appear">
-        <MaterialButton
-          @click.native="showSubmitDialog"
-          type="primary"
-          v-if="!showSideMenu"
-        >
-          Submit your content
-        </MaterialButton>
-      </transition>
     </div>
   </div>
 </template>

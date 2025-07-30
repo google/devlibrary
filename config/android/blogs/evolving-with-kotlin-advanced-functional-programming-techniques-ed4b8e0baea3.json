@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["pherwani37"],
+  "author": "Nirbhay Pherwani",
+  "title": "Evolving with Kotlin — Advanced Functional Programming",
+  "link": "https://proandroiddev.com/evolving-with-kotlin-advanced-functional-programming-techniques-ed4b8e0baea3",
+  "tags": [
+    "kotlin"
+  ],
+  "description": "Deep Dive with Real World Examples for More Expressive and Efficient Code"
+}

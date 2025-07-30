@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Extracting structured data from unstructured text with PaLM",
+  "link": "https://dzlab.github.io/2023/11/13/palm-extraction/",
+  "tags": [
+    "ai-ml"
+  ],
+  "description": "PaLM example showing how to extract detailed job description from unstructured text taken from HN 'Who is Hiring?' tread"
+}

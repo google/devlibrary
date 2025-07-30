@@ -24,16 +24,12 @@
       class="my-8 mx-6 px-6 py-5 rounded-lg shadow-lg bg-white border-gray-100 max-w-md"
     >
       <p>
-        You are about to be redirected to <b class="font-bold">Advocu</b>, an
-        external platform which we use to curate submissions to Dev Library.
+        We are currently not accepting new submissions from the community, please check back later!
       </p>
       <div class="flex flex-row gap-2 mt-2">
         <span class="flex-grow"><!-- spacer --></span>
         <MaterialButton type="text" @click.native="show = false"
           >Cancel</MaterialButton
-        >
-        <MaterialButton type="primary" @click.native="goToForm"
-          >Continue</MaterialButton
         >
       </div>
     </div>
@@ -58,7 +54,7 @@ export default class SubmitDialog extends Vue {
 
   mounted() {
     EVENT_BUS.$on(NAME_SHOW_SUBMIT_DIALOG, () => {
-      this.show = true;
+      this.goToForm()
     });
   }
 
@@ -70,7 +66,7 @@ export default class SubmitDialog extends Vue {
     this.show = false;
     conversionEvent("submit");
     window.open(
-      "https://devlibrary.advocu.com/home/applications/form",
+      "https://forms.gle/S61NStowwwTjVrHT7",
       "_blank"
     );
   }

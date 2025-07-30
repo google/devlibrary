@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["wkambale"],
+  "author": "Wesley Kambale",
+  "title": "Train ML Model in SQL with BigQuery",
+  "link": "https://kambale.dev/ml-in-sql",
+  "tags": [
+    "bqml"
+  ],
+  "description": "A guide to training machine learning models with SQL using Google's BigQuery ML."
+}

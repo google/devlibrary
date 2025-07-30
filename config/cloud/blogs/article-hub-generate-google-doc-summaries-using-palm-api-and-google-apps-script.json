@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["aryanirani123"],
+  "author": "Aryan Irani",
+  "title": "Generate Google Doc summaries using PaLM API and Google Apps Script",
+  "link": "https://www.packtpub.com/article-hub/generate-google-doc-summaries-using-palm-api-and-google-apps-script",
+  "tags": [
+    "ai-ml",
+    "developer-tools"
+  ],
+  "description": "Learn how to generate Google Doc summaries using the PaLM API and Google Apps Script."
+}

@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "erfansn"
+  ],
+  "owner": "ErfanSn",
+  "repo": "SiliconeCalculator",
+  "name": "Silicone Calculator",
+  "shortDescription": "🎨 Simple but attractive graphic a calculator built with Jetpack Compose",
+  "longDescription": "🎨 Simple but attractive graphic a calculator built with Jetpack Compose",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "compose",
+    "modern-android-development",
+    "ui"
+  ]
+}

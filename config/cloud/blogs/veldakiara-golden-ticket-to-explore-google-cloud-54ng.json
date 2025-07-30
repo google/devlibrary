@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["veldakiara"],
+  "author": "Velda Kiara",
+  "title": "Golden Ticket To Explore Google Cloud",
+  "link": "https://dev.to/veldakiara/golden-ticket-to-explore-google-cloud-54ng",
+  "tags": [
+    "serverless-computing",
+    "compute",
+    "security-identity"
+  ],
+  "description": "The blog highlights the evolution and history of Cloud computing, the structure and organization of Google Cloud in terms of hierarchy. Additionally, the security features that are provided on each layer as well as how to gain access the Cloud platform."
+}

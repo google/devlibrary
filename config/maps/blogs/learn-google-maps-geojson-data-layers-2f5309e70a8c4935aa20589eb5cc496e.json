@@ -1,0 +1,14 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["jzzfs"],
+  "author": "Jozef Sorocin",
+  "title": "GeoJSON Data Layers",
+  "link": "https://gmapsbook.com/learn-google-maps/geojson-data-layers-2f5309e70a8c4935aa20589eb5cc496e",
+  "tags": [
+    "maps-js-api",
+    "google-maps-platform"
+  ],
+  "description": "In this chapter, we’ll add a transit layer to a map using publicly available GeoJSON data and learn a thing or two about Google Maps’ interactive data layers."
+}

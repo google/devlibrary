@@ -24,7 +24,7 @@
           <div
             class="header-image full-bleed-header-image repo-hero px-std border-b border-gray-100"
             style="
-              --header-bg-image-desktop: url('/img/banners/desktop/repo-wide.png');
+              --header-bg-image-desktop: url('/img/banners/desktop/product-wide.png');
             "
           >
             <div class="grid">
@@ -50,7 +50,7 @@
                 />
               </p>
               <p class="text-gray-500 text-sm">
-                Approved on {{ (new Date(repo.stats.dateAdded)).toLocaleDateString('en-us', { day: "numeric" , year:"numeric", month:"long"}) }}
+                Added on {{ (new Date(repo.stats.dateAdded)).toLocaleDateString('en-us', { day: "numeric" , year:"numeric", month:"long"}) }}
               </p>
               <p class="mt-2 hero-description">
                 {{ repo.metadata.longDescription }}
@@ -67,7 +67,10 @@
             </div>
           </div>
         </div>
-        <img src="/img/banners/desktop/repo-clipart.png" class="hero-clipart" />
+        <img
+          src="/img/banners/desktop/product-clipart.png"
+          class="product-hero-clipart"
+        />
 
         <!-- Header (Mobile) -->
         <div class="mobile-only">
@@ -100,7 +103,7 @@
                 >All Projects</router-link
               >
             </li>
-            <li>
+            <li v-if="product.docsUrl.length > 0">
               <a :href="product.docsUrl" target="_blank">Official Docs</a>
             </li>
           </ul>

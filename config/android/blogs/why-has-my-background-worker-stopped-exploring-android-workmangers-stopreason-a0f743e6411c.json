@@ -1,0 +1,14 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["paolorotolo"],
+  "author": "Paolo Rotolo",
+  "title": "Why has my background Worker stopped? Exploring Android Work",
+  "link": "https://proandroiddev.com/why-has-my-background-worker-stopped-exploring-android-workmangers-stopreason-a0f743e6411c",
+  "tags": [
+    "modern-android-development",
+    "build-tools"
+  ],
+  "description": "StopReason is a new powerful tool to gain useful info about the unexpected behavior of background workers in our app. Let's explore how it works."
+}

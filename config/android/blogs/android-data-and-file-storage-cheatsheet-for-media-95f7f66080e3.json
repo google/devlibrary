@@ -1,0 +1,17 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "arifaizin"
+  ],
+  "author": "Ahmad Arif Faizin",
+  "title": "Android Data and File Storage Cheatsheet for Media",
+  "link": "https://arifaizin.medium.com/android-data-and-file-storage-cheatsheet-for-media-95f7f66080e3",
+  "tags": [
+    "modern-android-development",
+    "architecture",
+    "kotlin"
+  ],
+  "description": "Know the result of each method of Saving File in Storage is confusing and take time. In this blog, I summarize all the things that you need to learn about Data and File."
+}

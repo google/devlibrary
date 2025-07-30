@@ -1,0 +1,17 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "kaushalvasava"
+  ],
+  "author": "Kaushal Vasava",
+  "title": "ViewModel's Internal Working in Android",
+  "link": "https://medium.com/@KaushalVasava/viewmodels-internal-working-in-android-a-full-guide-757afaf6510",
+  "tags": [
+    "architecture",
+    "modern-android-development",
+    "kotlin"
+  ],
+  "description": "I will show you how the ViewModel works internally in Android. In this article, we are going to cover ViewModel and its working under the hood in the following sequence."
+}

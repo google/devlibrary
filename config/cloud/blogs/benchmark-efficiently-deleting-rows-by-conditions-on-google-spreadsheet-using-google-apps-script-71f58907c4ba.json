@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["tanaikech"],
+  "author": "Kanshi Tanaike",
+  "title": "Benchmark: Efficiently Deleting Rows by Conditions on Google Spreadsheet using Google Apps Script",
+  "link": "https://medium.com/google-cloud/benchmark-efficiently-deleting-rows-by-conditions-on-google-spreadsheet-using-google-apps-script-71f58907c4ba",
+  "tags": ["ai-ml","api-management","compute","containers","data-analytics","databases","developer-tools","healthcare-life-sciences","hybrid-multicloud","iot","management-tools","media-gaming","migration","networking","operations","security-identity","serverless-computing","storage"],
+  "description": "In this report, I would like to introduce a sample script for efficiently deleting rows by conditions on Google Spreadsheet using Google Apps Script. Recently, I had a situation for being required to achieve this situation. In my report, it has already known that when Sheets API is used, the rows can be efficiently deleted by a condition. Ref However, in that case, Sheets API couldn’t be used. Under this situation, I came up with a method. In this report, I would like to introduce this method."
+}

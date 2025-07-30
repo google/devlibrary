@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "dimitreoliveira"
+  ],
+  "owner": "dimitreOliveira",
+  "repo": "cryptogans",
+  "name": "CryptoGANs",
+  "shortDescription": "This is a simple TensorFlow implementation of a DCGAN to generate CryptoPunks.",
+  "longDescription": "This is a simple TensorFlow implementation of a DCGAN to generate CryptoPunks.",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "keras"
+  ]
+}

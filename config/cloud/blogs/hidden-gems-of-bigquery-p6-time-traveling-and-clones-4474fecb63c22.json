@@ -1,0 +1,11 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["an_14796"],
+  "author": "Artem Nikulchenko",
+  "title": "Hidden Gems of BigQuery — P6 — Time-traveling and clones",
+  "link": "https://medium.com/google-cloud/hidden-gems-of-bigquery-p6-time-traveling-and-clones-4474fecb63c22",
+  "tags": ["data-analytics"],
+  "description": "This is a series of posts about amazing BigQuery features. Since there are so many of them, some of them can get lost. So, I’ve decided to cover my favorite: Auto, Transactions and Indexes — Hidden gems of BigQuery; Change History and Defaults — Hidden gems of BigQuery — Part 2; Data Lineage and Routines — Hidden gems of BigQuery — Part 3; Views, Caching; Scheduled Queries, Materialized Views — Hidden Gems of BigQuery — Part 4– Five types of “Views”; ML in BigQuery, including new ;Generative AI — BigQuery Breaking News — Generative AI; And this post is about: Time-travel window; Fail-safe period; Snapshots;Clones"
+}

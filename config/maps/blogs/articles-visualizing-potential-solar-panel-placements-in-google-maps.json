@@ -1,0 +1,13 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["nora-soderlund"],
+  "author": "Nora Söderlund",
+  "title": "Visualizing potential solar panel placements in Google Maps",
+  "link": "https://nora-soderlund.se/articles/visualizing-potential-solar-panel-placements-in-google-maps",
+  "tags": [
+    "google-maps-platform"
+  ],
+  "description": "This is how you can visualize potential solar panel placements with the building insights in the new Solar API, on dynamic maps!"
+}

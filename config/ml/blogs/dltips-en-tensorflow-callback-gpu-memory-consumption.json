@@ -1,0 +1,14 @@
+{
+  "expertise": "ADVANCED",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["bachiirc"],
+  "author": "Bachir Chihani",
+  "title": "Track your TF model GPU memory consumption during training",
+  "link": "https://dzlab.github.io/dltips/en/tensorflow/callback-gpu-memory-consumption/",
+  "tags": [
+    "tf-core",
+    "keras"
+  ],
+  "description": "Learn how to track your model GPU memory consumption during training using get_memory_info"
+}

@@ -1,0 +1,15 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "other",
+  "authorIds": ["subhadiptech"],
+  "author": "Subhadip Das",
+  "title": "Effect handlers in compose",
+  "link": "https://learndroid.hashnode.dev/jetpack-compose-effect-handlers",
+  "tags": [
+    "kotlin",
+    "compose",
+    "modern-android-development"
+  ],
+  "description": "While diving into Jetpack Compose, developers often prioritize clean UIs over side effects. However, considering side effects is crucial to prevent resource waste, memory leaks, and boost performance. Let's explore why they matter in building efficient and stunning projects."
+}

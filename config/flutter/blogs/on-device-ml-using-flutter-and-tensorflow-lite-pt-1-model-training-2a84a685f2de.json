@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "romanejaquez"
+  ],
+  "author": "ROMAN JAQUEZ",
+  "title": "On-Device ML using Flutter and TensorFlow Lite (pt.1)",
+  "link": "https://medium.com/@romanejaquez/on-device-ml-using-flutter-and-tensorflow-lite-pt-1-model-training-2a84a685f2de",
+  "tags": [
+    "mobile"
+  ],
+  "description": "This is a 2-part blog post about how to implement On-Device ML using Flutter and tapping into a pre-trained Tensorflow Lite AI Model to get predictions on Celsius temperature data."
+}

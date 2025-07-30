@@ -1,0 +1,13 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "medium",
+  "authorIds": ["devenes"],
+  "author": "Enes Turan",
+  "title": "Recovering Deleted Default Service Account in Google Cloud P",
+  "link": "https://medium.com/p/e0fe1fb37033",
+  "tags": [
+    "security-identity"
+  ],
+  "description": "Google Cloud Platform (GCP) offers powerful services and resources for cloud computing, including the Compute Engine. However, errors can occur while working with these services, such as the \"Operation type [start] failed\" error."
+}

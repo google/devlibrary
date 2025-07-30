@@ -1,0 +1,15 @@
+{
+  "expertise": "INTERMEDIATE",
+  "version": 1,
+  "source": "medium",
+  "authorIds": [
+    "gspmoreira"
+  ],
+  "author": "Gabriel de Souza Pereira Moreira",
+  "title": "Photo StoryTelling - Leveraging Generative AI and Google API",
+  "link": "https://gspmoreira.medium.com/photo-storytelling-leveraging-generative-ai-and-google-apis-to-compose-posts-from-your-photo-cce8e30f4d57",
+  "tags": [
+    "vertex-ai"
+  ],
+  "description": "What if we could use Generative AI to express with words what our photos represent, and have AI composing a storytelling about your moments?\n\nIn this post you'll learn how you can get a blog post automatically generated from a photo album using Google APIs: Maps, Vertex Imagen, and Palm."
+}

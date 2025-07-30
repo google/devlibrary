@@ -28,8 +28,8 @@
     >
       <h1 class="full-bleed-hero-heading">About</h1>
       <p class="mt-1 hero-description">
-        Dev Library is a curated platform for technical content written or built
-        using Google technologies like Android, Angular, Flutter, Firebase,
+        Dev Library is a community platform which showcases technical content featuring
+        Google technologies and developer solutions like Android, Angular, Flutter, Firebase,
         Google Cloud, Machine Learning, Google Assistant and Google Maps Platform.
       </p>
     </div>
@@ -42,19 +42,14 @@
         <div class="mt-6 lg:mt-10 lg:text-lg">
           <p class="mt-4">Currently DevLibrary accepts two kinds of content:</p>
 
-          <ul class="ml-6 mt-2 list-disc">
-            <li>GitHub repositories</li>
-            <li>Blog posts</li>
-          </ul>
 
-          <p class="mt-4">
-            This platform will evolve as we receive more submissions and we are
-            working to accept a wider range of content, so stay tuned!
-          </p>
           <p class="mt-8 flex flex-wrap gap-4">
-            <a href="mailto:library-google-dev@google.com">
-              <MaterialButton @click.native="showSubmitDialog" type="primary"
-                >Submit your content</MaterialButton
+            <a
+                target="blank"
+                :href="`https://devlibrary.withgoogle.com/products/ml?sort=added`"
+              >
+              <MaterialButton type="primary"
+                >Start exploring today</MaterialButton
               >
             </a>
           </p>
@@ -80,6 +75,12 @@
           <p class="mt-4">
             <a href="https://policies.google.com/privacy" target="_blank"
               >https://policies.google.com/privacy</a
+            >
+          </p>
+          <p class="mt-6 font-bold">Content Policy</p>
+          <p class="mt-4">
+            <a href="https://devlibrary.withgoogle.com/contentpolicy" target="_blank"
+              >https://devlibrary.withgoogle.com/contentpolicy</a
             >
           </p>
           <p class="mt-6 font-bold">Copyright Infringement</p>
@@ -122,7 +123,7 @@
           </div>
           <div v-show="FaqData[1]" class="pb-2 border-b">
             <p class="mt-4">
-              Dev Library has been created to showcase the amazing open source projects being built with Google's tools and technologies by developers around the world. Through Google Dev Library we want to provide visibility for the talented developers behind the projects, and introduce high quality projects to the broader developer community to find inspiration.
+              Dev Library has been created to showcase the amazing open source projects being built with Google's tools and technologies by developers around the world. Through Google Dev Library we want to provide visibility for the talented developers behind the projects, and introduce useful projects to the broader developer community to find inspiration.
             </p>
           </div>
           <div
@@ -139,7 +140,7 @@
           </div>
           <div v-show="FaqData[3]" class="pb-2 border-b">
             <p class="mt-4">
-              <a target="_blank" href="https://forms.gle/Wco9K4ePqgCW5sre6">Subscribe</a> to our newsletter to stay up to date with the latest projects added to the platform. Our newsletter features some of the best submissions from each product every month. Also, you can check out the <a href="https://developers.googleblog.com/search/label/Google%20Dev%20Library">Dev Library blog archives</a> for past highlights.
+              <a target="_blank" href="https://devlibrary.withgoogle.com/products/ml"> Check out</a> our AI products page to stay up to date with the latest projects added to the platform. Also, you can check out the <a href="https://developers.googleblog.com/search/label/Google%20Dev%20Library">Dev Library blog archives</a> for past highlights.
             </p>
           </div>
           <p class="mt-6 font-bold">Contributing to Dev Library</p>
@@ -161,7 +162,6 @@
               <ol class="ml-6 mt-2 list-disc">
                 <li>Their own author profile page</li>
                 <li>A shiny contributor badge for their Google Developer profile</li>
-                <li>Spotlights in the Dev Library monthly newsletter</li>
                 <li>Inspiring developers to build with Google!</li>
               </ol>
             </p>
@@ -180,8 +180,11 @@
           </div>
           <div v-show="FaqData[5]" class="pb-2 border-b">
             <p>
+            Please note we are currently not accepting new submissions from the community, please check back later!
+            </p>
+            <p>
               Before you submit, it’s a good idea to familiarize yourself with the <a href="https://devlibrary.advocu.com/assets/docs/contributors_guidelines.pdf">contribution guidelines</a> in addition to the official documentation of every product. After doing so, follow these simple steps :-
-            
+
             <ol class="ml-6 mt-2 list-disc">
               <li>Find the Submit button on the top navigation bar</li>
               <li>You will be redirected to the advocu form link</li>
@@ -192,7 +195,7 @@
             </p>
             <p>
             <i>*Note: Once submitted, you can't edit the form.</i><br>
-            You can make as many submissions as you want to showcase your work in your Author profile.
+            You can make as many submissions as you want to showcase your work in your Dev Library Author profile.
           </p>
           </div>
 
@@ -208,7 +211,7 @@
           </div>
           <div v-show="FaqData[6]" class="pb-2 border-b">
             <p class="mt-4">
-              Googlers review each submission for product relevance, alignment with current coding best practices, technical writing, and product standards. If approved, the project is included on the site and the contributor gets an author profile page which features their approved submissions.
+              Googlers go through each submission for usefulness, product relevance and basic alignment with current coding best practices, technical writing standards. If approved, the project is included on the site and the contributor gets an author profile page which features their approved submissions.
             </p>
           </div>
 
@@ -316,7 +319,7 @@
           </div>
           <div v-show="FaqData[12]" class="pb-2 border-b">
             <p class="mt-4">
-              To remove or update your content, please open a Pull request or raise an issue on the 
+              To remove or update your content, please open a Pull request or raise an issue on the
               <a target="_blank" href="https://github.com/google/devlibrary/issues/new">
                 Dev Library's GitHub repo</a>.
             </p>
@@ -336,7 +339,7 @@
           </div>
           <div v-show="FaqData[13]" class="pb-2 border-b">
             <p class="mt-4">
-              If your content has been accepted, you are eligible for the Dev Library contributor badge. You’ll receive email instructions to claim your contributor badge. Contributor badges are sent out once every 2-3 months.
+              If your content has been accepted, you are eligible for the Dev Library contributor badge. You’ll receive email instructions to claim your contributor badge. Contributor badges are sent out once every quarter.
             </p>
           </div>
         </div>

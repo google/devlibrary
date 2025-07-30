@@ -1,0 +1,20 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "gigamole"
+  ],
+  "owner": "GIGAMOLE",
+  "repo": "ComposeLevitation",
+  "name": "ComposeLevitation",
+  "shortDescription": "ComposeLevitation: Empower your Android Compose UI with mesmerizing levitation effects",
+  "longDescription": "ComposeLevitation: Empower your Android Compose UI with mesmerizing levitation effects",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "kotlin",
+    "compose",
+    "ui"
+  ]
+}
