@@ -40,9 +40,9 @@
     >
       <div class="section">
         <div class="mt-6 lg:mt-10 lg:text-lg">
-          <p class="mt-4">Currently DevLibrary accepts two kinds of content:</p>
-
-
+          <p class="mt-4">
+            While new submissions are temporarily closed, you can still explore our extensive project library for inspiration.
+          </p>
           <p class="mt-8 flex flex-wrap gap-4">
             <a
                 target="blank"
