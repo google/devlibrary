@@ -1,0 +1,6 @@
+{
+    "gitlens.statusBar.format": "${author}, ${agoOrDate}${' via 'pullRequest}${id}${author}",
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ]
+}
