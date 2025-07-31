@@ -1,0 +1,18 @@
+{
+  "expertise": "BEGINNER",
+  "version": 1,
+  "source": "github",
+  "authorIds": [
+    "priyavkaneria"
+  ],
+  "owner": "priyavkaneria",
+  "repo": "LocalLock",
+  "name": "LocalLock",
+  "shortDescription": "An Android app with the only goal of being a secure, locked, no-third party, completely local open source password saving app",
+  "longDescription": "An Android app with the only goal of being a secure, locked, no-third party, completely local open source password saving app",
+  "content": "README.md",
+  "pages": [],
+  "tags": [
+    "modern-android-development"
+  ]
+}
