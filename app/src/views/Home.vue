@@ -26,7 +26,7 @@
     >
       <div class="col-span-12 lg:col-span-6 px-1">
         <h1 class="text-4xl">
-          Now accepting AI project submissions
+          Explore open source AI projects
         </h1>
 
         <div>
